@@ -1503,9 +1503,9 @@
   // 4. OVERPASS CLIENT
   // ─────────────────────────────────────────
   const OverpassClient = (() => {
-    const LS_KEY = 'scran-area-cache-v2';
-    const RADIUS = 0.012; // ~1.3km radius
-    const CACHE_PRECISION = 3; // round to 3dp (~110m grid) for cache key
+    const LS_KEY = 'scran-area-cache-v3';
+    const RADIUS = 0.022; // ~2.4km radius — larger tile = fewer cache misses on pan
+    const CACHE_PRECISION = 2; // round to 2dp (~1.1km grid) for cache key
 
     let _cache = {};
     try { _cache = JSON.parse(localStorage.getItem(LS_KEY) || '{}'); } catch { _cache = {}; }
@@ -1521,17 +1521,17 @@
       const cuisineFilter = (cuisines && cuisines.length)
         ? `["cuisine"~"${cuisines.map(c => c.toLowerCase()).join('|')}",i]`
         : '';
-      return `[out:json][timeout:15];
+      return `[out:json][timeout:20];
 (
   node["amenity"="restaurant"]${cuisineFilter}(${bbox});
   way["amenity"="restaurant"]${cuisineFilter}(${bbox});
 );
-out center 80;`;
+out center 50;`;
     }
 
     async function _fetchFrom(endpoint, query) {
       const controller = new AbortController();
-      const timer = setTimeout(() => controller.abort(), 16000);
+      const timer = setTimeout(() => controller.abort(), 22000);
       try {
         const resp = await fetch(endpoint, {
           method: 'POST',
@@ -2297,12 +2297,12 @@ out center 80;`;
       } catch (e) {
         console.error('[SCRAN] fetch error:', e.name, e.message, e);
         UI.setLoading(false);
-        if (e.name === 'AbortError') {
-          UI.showError('Request timed out — try zooming in more.');
+        if (e.name === 'AbortError' || e.message === 'all_endpoints_failed') {
+          UI.showError('Servers are busy — zoom in or use Search Here to retry.');
         } else if (e.message?.includes('Failed to fetch') || e.message?.includes('network')) {
           UI.showError('Network error — check your connection.');
         } else if (e.message !== 'rate_limited') {
-          UI.showError(`Could not load restaurants (${e.message}). Check the console.`);
+          UI.showError(`Could not load restaurants (${e.message}). Try Search Here.`);
         }
       } finally {
         _isFetching = false;
@@ -2342,7 +2342,13 @@ out center 80;`;
       document.getElementById('zoom-in').addEventListener('click', () => _map.zoomIn());
       document.getElementById('zoom-out').addEventListener('click', () => _map.zoomOut());
       document.getElementById('redo-search-btn').addEventListener('click', () => {
-        if (!_allActive) return;
+        if (!_allActive) {
+          _allActive = true;
+          const allBtn = document.getElementById('all-restaurants-btn');
+          if (allBtn) allBtn.classList.add('active');
+          const cuisine = FilterBar.getCuisine();
+          _currentFilter = cuisine ? [cuisine] : [];
+        }
         OverpassClient.clearCache();
         MarkerManager.clearAll();
         _fetchForCurrentView();
