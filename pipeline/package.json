@@ -4,6 +4,7 @@
   "type": "module",
   "description": "Builds SCRAN's creator data (data/<creator>.json) from YouTube restaurant reviews",
   "scripts": {
+    "places": "node places.js",
     "scrape:tod": "node scrape-tod.js",
     "scrape:topjaw": "node scrape-topjaw.js",
     "geocode": "node geocode.js",
@@ -13,6 +14,7 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0",
+    "@duckdb/node-api": "^1.5.6-r.2",
     "dotenv": "^16.4.0"
   },
   "engines": {

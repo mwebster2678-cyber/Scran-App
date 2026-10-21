@@ -1,6 +1,16 @@
 # SCRAN data pipeline
 
-Turns YouTube restaurant reviews into the creator pins SCRAN shows (`../data/<creator>.json`).
+Builds the data files SCRAN loads from `../data/`.
+
+## All places (`places.json`)
+
+`node places.js` — every restaurant, pub, bar and café inside the M25 from the latest
+[Overture Maps](https://overturemaps.org) release (Meta, Microsoft, Foursquare and others).
+No API keys or cost; takes about 20 seconds. Re-run monthly to pick up new openings.
+
+## Creator pins (`<creator>.json`)
+
+Turns YouTube restaurant reviews into the creator pins SCRAN shows.
 Creators are configured in `shared.js` (`tod`, `topjaw`).
 
 Setup: `npm install`, then copy `.env.example` to `.env` and fill in the keys.

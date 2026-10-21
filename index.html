@@ -38,6 +38,16 @@
 
 <div id="filter-sidebar">
   <div class="fs-section">
+    <button class="fs-toggle collapsed" data-target="fs-kind-list">Type <span class="fs-arrow">▾</span></button>
+    <div class="fs-collapsible collapsed" id="fs-kind-list">
+      <button class="fs-chip selected" data-filter="kind" data-value="">Everything</button>
+      <button class="fs-chip" data-filter="kind" data-value="eat"><span class="kind-dot kind-eat"></span>Restaurants</button>
+      <button class="fs-chip" data-filter="kind" data-value="pub"><span class="kind-dot kind-pub"></span>Pubs &amp; bars</button>
+      <button class="fs-chip" data-filter="kind" data-value="cafe"><span class="kind-dot kind-cafe"></span>Caf&eacute;s</button>
+    </div>
+  </div>
+  <div class="fs-divider"></div>
+  <div class="fs-section">
     <button class="fs-toggle collapsed" data-target="fs-area-list">Area <span class="fs-arrow">▾</span></button>
     <div class="fs-collapsible collapsed" id="fs-area-list">
       <button class="fs-chip selected" data-filter="area" data-value="">All London</button>
@@ -138,8 +148,6 @@
 
 <div id="error-toast"></div>
 
-<button id="redo-search-btn" aria-label="Search this area">&#x21BA; Search here</button>
-
 <div id="zoom-controls">
   <button id="zoom-in" aria-label="Zoom in">+</button>
   <button id="zoom-out" aria-label="Zoom out">−</button>
@@ -179,6 +187,7 @@
       <div id="panel-name">Restaurant Name</div>
       <button id="panel-close" aria-label="Close">&#x2715;</button>
     </div>
+    <div id="panel-address"></div>
     <div id="panel-cuisine"></div>
     <div class="rating-label">Tap to rate out of 10</div>
     <div id="rating-buttons"></div>

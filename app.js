@@ -22,18 +22,10 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     mapCenter: [51.5074, -0.1278],
     defaultZoom: 13,
     minZoom: 10,
-    minZoomForFetch: 13,
-    debounceMs: 600,
-    fetchTimeoutMs: 30000,
-    resultsCapPerType: 100,
+    minZoomForPlaces: 13,
+    placesUrl: 'data/places.json',
     storageKey: 'london-eats-ratings',
     bookmarkKey: 'london-eats-bookmarks',
-    overpassEndpoints: [
-      'https://overpass-api.de/api/interpreter',
-      'https://overpass.kumi.systems/api/interpreter',
-      'https://maps.mail.ru/osm/tools/overpass/api/interpreter',
-      'https://overpass.openstreetmap.ru/api/interpreter',
-    ],
     // Approximate M25 polygon, clockwise from South Mimms
     m25Polygon: [
       [51.716, -0.198],
@@ -267,189 +259,143 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
   })();
 
   // ─────────────────────────────────────────
-  // 4. OVERPASS CLIENT
+  // 4. PLACES (restaurants, pubs, cafés — data/places.json, built by pipeline/places.js)
   // ─────────────────────────────────────────
-  const OverpassClient = (() => {
-    const LS_KEY = 'scran-area-cache-v3';
-    const RADIUS = 0.022; // ~2.4km radius — larger tile = fewer cache misses on pan
-    const CACHE_PRECISION = 2; // round to 2dp (~1.1km grid) for cache key
+  const PLACE_TYPE = 'place'; // Storage/Supabase type for places from this file
 
-    let _cache = {};
-    try { _cache = JSON.parse(localStorage.getItem(LS_KEY) || '{}'); } catch { _cache = {}; }
+  const Places = (() => {
+    let _places = [];
+    let _byId   = new Map();
+    let _loaded = null;
 
-    function _saveCache() {
-      try { localStorage.setItem(LS_KEY, JSON.stringify(_cache)); } catch { /* storage full */ }
-    }
-
-    function _buildQuery(clat, clon, cuisines) {
-      const s = (clat - RADIUS).toFixed(5), n = (clat + RADIUS).toFixed(5);
-      const w = (clon - RADIUS).toFixed(5), e = (clon + RADIUS).toFixed(5);
-      const bbox = `${s},${w},${n},${e}`;
-      const cuisineFilter = (cuisines && cuisines.length)
-        ? `["cuisine"~"${cuisines.map(c => c.toLowerCase()).join('|')}",i]`
-        : '';
-      return `[out:json][timeout:20];
-(
-  node["amenity"="restaurant"]${cuisineFilter}(${bbox});
-  way["amenity"="restaurant"]${cuisineFilter}(${bbox});
-);
-out center 50;`;
-    }
-
-    async function _fetchFrom(endpoint, query) {
-      const controller = new AbortController();
-      const timer = setTimeout(() => controller.abort(), 22000);
-      try {
-        const resp = await fetch(endpoint, {
-          method: 'POST',
-          body: `data=${encodeURIComponent(query)}`,
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          signal: controller.signal,
-        });
-        clearTimeout(timer);
-        if (resp.status === 429) throw new Error('rate_limited');
-        if (!resp.ok) throw new Error(`http_${resp.status}`);
-        return await resp.json();
-      } catch (e) {
-        clearTimeout(timer);
-        throw e;
+    // Loads the file once; later calls reuse the same promise (or retry after a failure)
+    function load() {
+      if (!_loaded) {
+        _loaded = fetch(CONFIG.placesUrl)
+          .then(r => { if (!r.ok) throw new Error(`http_${r.status}`); return r.json(); })
+          .then(data => {
+            _places = data.places.map(([id, name, lat, lon, kind, cuisine, address]) =>
+              ({ id, name, lat, lon, kind, cuisine: cuisine.map(i => data.cuisines[i]), address }));
+            _byId = new Map(_places.map(p => [p.id, p]));
+          })
+          .catch(e => { _loaded = null; throw e; });
       }
+      return _loaded;
     }
 
-    async function query(bounds, cuisines) {
-      const clat = parseFloat(((bounds.getNorth() + bounds.getSouth()) / 2).toFixed(CACHE_PRECISION));
-      const clon = parseFloat(((bounds.getEast() + bounds.getWest()) / 2).toFixed(CACHE_PRECISION));
-      const cuisineKey = (cuisines || []).join(',');
-      const cacheKey = `${clat},${clon},${cuisineKey}`;
-
-      if (_cache[cacheKey]) return { elements: _cache[cacheKey] };
-
-      const q = _buildQuery(clat, clon, cuisines);
-
-      // Race all endpoints — use whichever responds first
-      const elements = await new Promise((resolve, reject) => {
-        let settled = false;
-        let errors = 0;
-        const total = CONFIG.overpassEndpoints.length;
-        CONFIG.overpassEndpoints.forEach(endpoint => {
-          _fetchFrom(endpoint, q).then(data => {
-            if (!settled) {
-              settled = true;
-              resolve((data && data.elements) ? data.elements : []);
-            }
-          }).catch(() => {
-            errors++;
-            if (errors === total && !settled) {
-              settled = true;
-              reject(new Error('all_endpoints_failed'));
-            }
-          });
-        });
-      });
-
-      _cache[cacheKey] = elements;
-      _saveCache();
-      return { elements };
+    // Places inside `bounds` matching the kind ('eat' | 'pub' | 'cafe') and cuisine filters
+    function query(bounds, { kind, cuisine }) {
+      return _places.filter(p =>
+        bounds.contains([p.lat, p.lon]) &&
+        (!kind || p.kind === kind) &&
+        (!cuisine || p.cuisine.includes(cuisine)));
     }
 
-    function clearCache() {
-      _cache = {};
-      try { localStorage.removeItem(LS_KEY); } catch { /* ignore */ }
-    }
+    function get(id) { return _byId.get(id) || null; }
 
-    return { query, clearCache };
+    return { load, query, get };
   })();
+
+  // What the rating panel and storage need to know about a place
+  function placeRef(place) {
+    const { id, name, cuisine, lat, lon, address } = place;
+    return { type: PLACE_TYPE, id, name, cuisine, lat, lon, address };
+  }
 
   // ─────────────────────────────────────────
   // 5. MARKER MANAGER
   // ─────────────────────────────────────────
+  // Unrated places are small canvas dots (fast for thousands); rated or
+  // bookmarked places get a full pin.
   const MarkerManager = (() => {
-    const seenIds = new Set();
-    const markers = new Map();
-    let _map = null;
+    const KIND_COLOURS = { eat: '#8E44AD', pub: '#A0522D', cafe: '#E67E22' };
+    const markers = new Map(); // place id → marker
+    let _map      = null;
+    let _renderer = null;
+    let _zoom     = null; // zoom the dots were last sized for
 
-    function init(map) { _map = map; }
+    // Dots shrink as you zoom out so dense areas stay readable
+    function _dotSize(zoom) {
+      if (zoom <= 13) return { radius: 2.5, weight: 0 };
+      if (zoom === 14) return { radius: 3.5, weight: 1 };
+      return { radius: 5, weight: 1.5 };
+    }
 
-    function _buildIcon(osmType, osmId) {
-      const stored = Storage.get(osmType, osmId);
-      let cls = 'pin-unrated';
-      let rated = false;
+    function init(map) {
+      _map = map;
+      _renderer = L.canvas({ padding: 0.5 });
+    }
 
+    function _pinIcon(id) {
+      const stored = Storage.get(PLACE_TYPE, id);
       if (stored) {
-        cls = stored.rating >= 8 ? 'pin-high' : stored.rating >= 4 ? 'pin-mid' : 'pin-low';
-        rated = true;
-      } else if (BookmarkStorage.get(osmType, osmId)) {
-        cls = 'pin-bookmarked';
+        const cls = stored.rating >= 8 ? 'pin-high' : stored.rating >= 4 ? 'pin-mid' : 'pin-low';
+        return L.divIcon({
+          className: '',
+          html: `<div class="map-pin ${cls} pin-rated"><span class="pin-rating">${stored.rating}</span></div>`,
+          iconSize: [34, 44], iconAnchor: [17, 44], popupAnchor: [0, -46],
+        });
       }
-
-      const inner = rated
-        ? `<span class="pin-rating">${stored.rating}</span>`
-        : '';
-
-      return L.divIcon({
-        className: '',
-        html: `<div class="map-pin ${cls}${rated ? ' pin-rated' : ''}">${inner}</div>`,
-        iconSize:   rated ? [34, 44] : [28, 36],
-        iconAnchor: rated ? [17, 44] : [14, 36],
-        popupAnchor: [0, rated ? -46 : -38],
-      });
+      if (BookmarkStorage.get(PLACE_TYPE, id)) {
+        return L.divIcon({
+          className: '',
+          html: '<div class="map-pin pin-bookmarked"></div>',
+          iconSize: [28, 36], iconAnchor: [14, 36], popupAnchor: [0, -38],
+        });
+      }
+      return null;
     }
 
-    function addElements(elements) {
-      elements.forEach(el => {
-        const osmType = el.type; // 'node' or 'way'
-        const osmId   = el.id;
-        const uid     = `${osmType}/${osmId}`;
-
-        if (seenIds.has(uid)) return;
-        seenIds.add(uid);
-
-        const lat = el.type === 'node' ? el.lat : el.center?.lat;
-        const lon = el.type === 'node' ? el.lon : el.center?.lon;
-        if (!lat || !lon) return;
-
-        const name    = el.tags?.name || 'Unnamed Restaurant';
-        const cuisine = el.tags?.cuisine
-          ? el.tags.cuisine.split(';').map(c => c.trim().replace(/_/g, ' ')).filter(Boolean)
-          : [];
-
-        const marker = L.marker([lat, lon], {
-          icon: _buildIcon(osmType, osmId),
-          riseOnHover: true,
-        });
-
-        marker.osmType = osmType;
-        marker.osmId   = osmId;
-        marker.osmName = name;
-        marker.osmCuisine = cuisine;
-
-        marker.on('click', (e) => {
-          L.DomEvent.stopPropagation(e);
-          RatingPanel.open({ type: osmType, id: osmId, name, cuisine, lat, lon });
-        });
-
-        marker.addTo(_map);
-        markers.set(uid, marker);
+    function _createMarker(place) {
+      const icon = _pinIcon(place.id);
+      const marker = icon
+        ? L.marker([place.lat, place.lon], { icon, riseOnHover: true })
+        : L.circleMarker([place.lat, place.lon], {
+            renderer: _renderer, ..._dotSize(_map.getZoom()),
+            color: '#fff', fillColor: KIND_COLOURS[place.kind], fillOpacity: 0.9,
+          });
+      marker.on('click', (e) => {
+        L.DomEvent.stopPropagation(e);
+        CreatorPanel.close();
+        RatingPanel.open(placeRef(place));
       });
+      return marker.addTo(_map);
     }
 
-    function refreshMarkerIcon(osmType, osmId) {
-      const uid = `${osmType}/${osmId}`;
-      const marker = markers.get(uid);
-      if (marker) marker.setIcon(_buildIcon(osmType, osmId));
+    // Show exactly these places, keeping markers that are already on the map
+    function show(places) {
+      const zoom = _map.getZoom();
+      if (zoom !== _zoom) {
+        _zoom = zoom;
+        const size = _dotSize(zoom);
+        markers.forEach(m => { if (m instanceof L.CircleMarker) m.setStyle(size).setRadius(size.radius); });
+      }
+      const wanted = new Set(places.map(p => p.id));
+      markers.forEach((marker, id) => {
+        if (!wanted.has(id)) { marker.remove(); markers.delete(id); }
+      });
+      places.forEach(p => { if (!markers.has(p.id)) markers.set(p.id, _createMarker(p)); });
+    }
+
+    // Swap dot ↔ pin after a rating or bookmark changes
+    function refreshMarkerIcon(type, id) {
+      if (type !== PLACE_TYPE || !markers.has(id)) return;
+      const place = Places.get(id);
+      if (!place) return;
+      markers.get(id).remove();
+      markers.set(id, _createMarker(place));
     }
 
     function clearAll() {
       markers.forEach(m => m.remove());
       markers.clear();
-      seenIds.clear();
     }
 
-    function getMarker(osmType, osmId) {
-      return markers.get(`${osmType}/${osmId}`) || null;
+    function getMarker(type, id) {
+      return type === PLACE_TYPE ? markers.get(id) || null : null;
     }
 
-    return { init, addElements, refreshMarkerIcon, clearAll, getMarker };
+    return { init, show, refreshMarkerIcon, clearAll, getMarker };
   })();
 
   // ─────────────────────────────────────────
@@ -458,6 +404,7 @@ out center 50;`;
   const RatingPanel = (() => {
     const panel       = document.getElementById('rating-panel');
     const nameEl      = document.getElementById('panel-name');
+    const addressEl   = document.getElementById('panel-address');
     const cuisineEl   = document.getElementById('panel-cuisine');
     const btnsEl      = document.getElementById('rating-buttons');
     const closeBtn    = document.getElementById('panel-close');
@@ -501,15 +448,16 @@ out center 50;`;
 
     let _hideTimer = null;
 
-    function open({ type, id, name, cuisine, lat, lon }) {
+    function open({ type, id, name, cuisine, lat, lon, address }) {
       // Cancel any pending hide from a previous close()
       clearTimeout(_hideTimer);
 
       _current = { type, id, name, cuisine, lat, lon };
       nameEl.textContent = name;
-      cuisineEl.innerHTML = cuisine.length
-        ? cuisine.map(c => `<span class="cuisine-tag">${escapeHtml(c)}</span>`).join('')
-        : '';
+      addressEl.textContent = address || '';
+      // Cuisines run general → specific (European, Italian, Pizza); show the specific end
+      cuisineEl.innerHTML = cuisine.slice(-2)
+        .map(c => `<span class="cuisine-tag">${escapeHtml(c)}</span>`).join('');
       const stored = Storage.get(type, id);
       _renderRatingButtons(stored ? stored.rating : null);
       noteEl.value = stored?.note || '';
@@ -610,12 +558,8 @@ out center 50;`;
 
       Object.entries(Storage.getAll()).forEach(([key, data]) => {
         if (!data.lat || !data.lon) return;
-        if (cuisineLc) {
-          const tags = (data.cuisine || []).map(c => c.toLowerCase());
-          if (!tags.some(c => c.includes(cuisineLc))) return;
-        }
-        const [type, rawId] = key.split('/');
-        const id = parseInt(rawId);
+        if (cuisineLc && !(data.cuisine || []).some(c => c.toLowerCase() === cuisineLc)) return;
+        const [type, id] = key.split('/');
         const marker = L.marker([data.lat, data.lon], { icon: _buildIcon(data.rating), zIndexOffset: 510 });
         marker.on('click', (e) => {
           L.DomEvent.stopPropagation(e);
@@ -629,12 +573,8 @@ out center 50;`;
       Object.entries(BookmarkStorage.getAll()).forEach(([key, data]) => {
         if (ratedKeys.has(key)) return;
         if (!data.lat || !data.lon) return;
-        if (cuisineLc) {
-          const tags = (data.cuisine || []).map(c => c.toLowerCase());
-          if (!tags.some(c => c.includes(cuisineLc))) return;
-        }
-        const [type, rawId] = key.split('/');
-        const id = parseInt(rawId);
+        if (cuisineLc && !(data.cuisine || []).some(c => c.toLowerCase() === cuisineLc)) return;
+        const [type, id] = key.split('/');
         const marker = L.marker([data.lat, data.lon], { icon: _buildIcon(null), zIndexOffset: 505 });
         marker.on('click', (e) => {
           L.DomEvent.stopPropagation(e);
@@ -653,7 +593,7 @@ out center 50;`;
     function refresh() {
       if (!_active) return;
       _removePins();
-      _addPins(document.getElementById('cuisine-select')?.value || '');
+      _addPins(FilterBar.getCuisine());
     }
 
     function filter(cuisine) {
@@ -667,7 +607,7 @@ out center 50;`;
       btn.addEventListener('click', () => {
         _active = !_active;
         btn.classList.toggle('active', _active);
-        _active ? _addPins(document.getElementById('cuisine-select')?.value || '') : _removePins();
+        _active ? _addPins(FilterBar.getCuisine()) : _removePins();
       });
     }
 
@@ -708,8 +648,10 @@ out center 50;`;
 
     let _selectedArea    = '';
     let _selectedCuisine = '';
+    let _selectedKind    = '';
     let _onArea    = null;
     let _onCuisine = null;
+    let _onKind    = null;
 
     function _highlight(filterType, value) {
       document.querySelectorAll(`.fs-chip[data-filter="${filterType}"]`).forEach(btn => {
@@ -717,9 +659,18 @@ out center 50;`;
       });
     }
 
-    function init(onAreaFn, onCuisineFn) {
+    function init(onAreaFn, onCuisineFn, onKindFn) {
       _onArea    = onAreaFn;
       _onCuisine = onCuisineFn;
+      _onKind    = onKindFn;
+
+      document.querySelectorAll('.fs-chip[data-filter="kind"]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          _selectedKind = btn.dataset.value;
+          _highlight('kind', _selectedKind);
+          _onKind(_selectedKind);
+        });
+      });
 
       document.querySelectorAll('.fs-chip[data-filter="area"]').forEach(btn => {
         btn.addEventListener('click', () => {
@@ -745,8 +696,9 @@ out center 50;`;
 
     function getCuisine() { return _selectedCuisine; }
     function getArea()    { return _selectedArea; }
+    function getKind()    { return _selectedKind; }
 
-    return { init, getCuisine, getArea };
+    return { init, getCuisine, getArea, getKind };
   })();
 
   // ─────────────────────────────────────────
@@ -936,81 +888,67 @@ out center 50;`;
   // ─────────────────────────────────────────
   const App = (() => {
     const creatorLayers = CREATORS.map(CreatorLayer);
-    let _map           = null;
-    let _isFetching    = false;
-    let _debounce      = null;
-    let _allActive     = false;
-    let _currentFilter = []; // [] = any cuisine
-    let _pendingShare  = null; // { type, id, name, lat, lon } — open panel after share-link fetch
+    let _map          = null;
+    let _allActive    = false;
+    let _pendingShare = null; // { type, id, name, lat, lon } — open once places have loaded
 
-    function _debounced(fn, delay) {
-      return function (...args) {
-        clearTimeout(_debounce);
-        _debounce = setTimeout(() => fn.apply(this, args), delay);
-      };
-    }
-
-    async function _fetchForCurrentView() {
+    async function _showPlacesInView() {
       if (!_allActive) return;
-      if (_isFetching) return;
 
-      if (_map.getZoom() < CONFIG.minZoomForFetch) {
-        UI.setStatus('Zoom in to see restaurants');
+      if (_map.getZoom() < CONFIG.minZoomForPlaces) {
+        MarkerManager.clearAll();
+        UI.setStatus('Zoom in to see places');
         return;
       }
 
-      _isFetching = true;
-      UI.setLoading(true);
-
       try {
-        const data = await OverpassClient.query(_map.getBounds(), _currentFilter);
-        if (data && data.elements) {
-          MarkerManager.addElements(data.elements);
-        }
-        if (_pendingShare) {
-          const { type, id, name, lat, lon } = _pendingShare;
-          _pendingShare = null;
-          const marker = MarkerManager.getMarker(type, id);
-          if (marker) {
-            marker.fire('click');
-          } else {
-            RatingPanel.open({ type, id, name, cuisine: [], lat, lon });
-          }
-        }
-        UI.setLoading(false, `${data?.elements?.length || 0} restaurants found`);
+        UI.setLoading(true);
+        await Places.load();
       } catch (e) {
-        console.error('[SCRAN] fetch error:', e.name, e.message, e);
+        console.error('[SCRAN] places failed to load:', e);
         UI.setLoading(false);
-        if (e.name === 'AbortError' || e.message === 'all_endpoints_failed') {
-          UI.showError('Servers are busy — zoom in or use Search Here to retry.');
-        } else if (e.message?.includes('Failed to fetch') || e.message?.includes('network')) {
-          UI.showError('Network error — check your connection.');
-        } else if (e.message !== 'rate_limited') {
-          UI.showError(`Could not load restaurants (${e.message}). Try Search Here.`);
-        }
-      } finally {
-        _isFetching = false;
+        UI.showError('Could not load restaurants — check your connection and try again.');
+        return;
       }
+      if (!_allActive) return; // toggled off while loading
+
+      const places = Places.query(_map.getBounds(), { kind: FilterBar.getKind(), cuisine: FilterBar.getCuisine() });
+      MarkerManager.show(places);
+      UI.setLoading(false, `${places.length.toLocaleString()} places in view`);
+      _openPendingShare();
     }
 
-    const _debouncedFetch = _debounced(_fetchForCurrentView, CONFIG.debounceMs);
+    function _openPendingShare() {
+      if (!_pendingShare) return;
+      const { type, id, name, lat, lon } = _pendingShare;
+      _pendingShare = null;
+      const place = type === PLACE_TYPE ? Places.get(id) : null;
+      RatingPanel.open(place ? placeRef(place) : { type, id, name, cuisine: [], lat, lon });
+    }
+
+    function _setAllActive(active) {
+      _allActive = active;
+      document.getElementById('all-restaurants-btn').classList.toggle('active', active);
+      if (active) {
+        _showPlacesInView();
+      } else {
+        MarkerManager.clearAll();
+        UI.setStatus('');
+      }
+    }
 
     function _handleShareLink() {
       const params = new URLSearchParams(window.location.search);
       const lat  = parseFloat(params.get('lat'));
       const lon  = parseFloat(params.get('lon'));
       const type = params.get('type');
-      const id   = parseInt(params.get('id'), 10);
+      const id   = params.get('id');
       const name = params.get('name') || 'Restaurant';
-      if (!lat || !lon || !type || !id) return false;
-      _pendingShare  = { type, id, name, lat, lon };
-      _currentFilter = [];
-      _allActive     = true;
-      const allBtn   = document.getElementById('all-restaurants-btn');
-      if (allBtn) allBtn.classList.add('active');
+      if (!lat || !lon || !type || !id) return;
+      _pendingShare = { type, id, name, lat, lon };
       _map.setView([lat, lon], 16);
-      _fetchForCurrentView();
-      return true;
+      if (_allActive) _showPlacesInView();
+      else _setAllActive(true);
     }
 
     function init() {
@@ -1025,18 +963,6 @@ out center 50;`;
 
       document.getElementById('zoom-in').addEventListener('click', () => _map.zoomIn());
       document.getElementById('zoom-out').addEventListener('click', () => _map.zoomOut());
-      document.getElementById('redo-search-btn').addEventListener('click', () => {
-        if (!_allActive) {
-          _allActive = true;
-          const allBtn = document.getElementById('all-restaurants-btn');
-          if (allBtn) allBtn.classList.add('active');
-          const cuisine = FilterBar.getCuisine();
-          _currentFilter = cuisine ? [cuisine] : [];
-        }
-        OverpassClient.clearCache();
-        MarkerManager.clearAll();
-        _fetchForCurrentView();
-      });
 
       // Esri Light Gray canvas (no API key needed) — base + label layers
       const esriCanvas = 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas';
@@ -1049,6 +975,8 @@ out center 50;`;
         maxNativeZoom: 16,
         maxZoom: 19,
       }).addTo(_map);
+      _map.attributionControl.addAttribution(
+        'Places &copy; <a href="https://overturemaps.org">Overture Maps Foundation</a>');
 
       // Dim everything outside the M25
       L.polygon(
@@ -1084,47 +1012,20 @@ out center 50;`;
           creatorLayers.forEach(layer => layer.filter(FilterBar.getArea(), FilterBar.getCuisine()));
         },
         (cuisine) => {
-          // All Restaurants: re-fetch with new cuisine filter
-          if (_allActive) {
-            _currentFilter = cuisine ? [cuisine] : [];
-            OverpassClient.clearCache();
-            MarkerManager.clearAll();
-            _fetchForCurrentView();
-          }
-          // Creators / My Restaurants: keyword-filter existing pins
+          _showPlacesInView();
           creatorLayers.forEach(layer => layer.filter(FilterBar.getArea(), cuisine));
           MyListManager.filter(cuisine);
-        }
+        },
+        () => _showPlacesInView()
       );
 
-      // All Restaurants toggle
-      const allBtn = document.getElementById('all-restaurants-btn');
-      allBtn.addEventListener('click', () => {
-        _allActive = !_allActive;
-        allBtn.classList.toggle('active', _allActive);
-        if (_allActive) {
-          const cuisine = FilterBar.getCuisine();
-          _currentFilter = cuisine ? [cuisine] : [];
-          _fetchForCurrentView();
-        } else {
-          MarkerManager.clearAll();
-          UI.setStatus('');
-        }
-      });
+      document.getElementById('all-restaurants-btn')
+        .addEventListener('click', () => _setAllActive(!_allActive));
 
-      // Hide loading overlay; check for share links
-      _map.once('load', () => {
-        UI.hideFirstLoadOverlay();
-        _handleShareLink();
-      });
+      setTimeout(UI.hideFirstLoadOverlay, 1500);
+      _handleShareLink();
 
-      setTimeout(() => {
-        UI.hideFirstLoadOverlay();
-        _handleShareLink();
-      }, 1500);
-
-      _map.on('moveend', _debouncedFetch);
-      _map.on('zoomend', _debouncedFetch);
+      _map.on('moveend', _showPlacesInView);
 
       // Close panel on map click
       _map.on('click', () => {
