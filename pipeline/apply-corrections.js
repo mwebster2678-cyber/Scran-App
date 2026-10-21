@@ -1,30 +1,28 @@
-// Reads corrections.json, updates tod-restaurants.json, then re-injects into SCRAN
-import 'dotenv/config';
+// Applies corrections exported from the review page, then re-exports to SCRAN.
+// Usage: node apply-corrections.js <creator>
 import fs from 'fs';
 import { execFile } from 'child_process';
 import { promisify } from 'util';
+import { creatorFromArgs, nameKey, geocodeLondon } from './shared.js';
 const execFileAsync = promisify(execFile);
 
-const GOOGLE_MAPS_API_KEY = process.env.GOOGLE_MAPS_API_KEY;
-
-const CORRECTIONS_FILE = 'corrections.json';
-const TOD_DATA_FILE    = 'tod-restaurants.json';
+const creator          = creatorFromArgs();
+const CORRECTIONS_FILE = creator.files.corrections;
+const GEOCODED_FILE    = creator.files.geocoded;
 
 if (!fs.existsSync(CORRECTIONS_FILE)) {
-  console.error(`No ${CORRECTIONS_FILE} found — export from review.html first.`);
+  console.error(`No ${CORRECTIONS_FILE} found — export from ${creator.files.review} first.`);
   process.exit(1);
 }
 
 const corrections = JSON.parse(fs.readFileSync(CORRECTIONS_FILE, 'utf8'));
-const restaurants  = JSON.parse(fs.readFileSync(TOD_DATA_FILE, 'utf8'));
+const restaurants  = JSON.parse(fs.readFileSync(GEOCODED_FILE, 'utf8'));
 
 let approved = 0, removed = 0;
 
 for (const c of corrections) {
-  const key = c.originalName.toLowerCase().replace(/[^a-z0-9]/g, '');
-  const idx = restaurants.findIndex(r =>
-    r.name.toLowerCase().replace(/[^a-z0-9]/g, '') === key
-  );
+  const key = nameKey(c.originalName);
+  const idx = restaurants.findIndex(r => nameKey(r.name) === key);
   if (idx === -1) { console.log(`  Not found in data: "${c.originalName}"`); continue; }
 
   if (c.action === 'approve') {
@@ -53,13 +51,10 @@ const toGeocode = restaurants.filter(r => r.needsGeocode);
 if (toGeocode.length) {
   console.log(`\nGeocoding ${toGeocode.length} manually-corrected restaurants...`);
   for (const r of toGeocode) {
-    const url  = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(r.name + ' London')}&region=gb&key=${GOOGLE_MAPS_API_KEY}`;
-    const res  = await fetch(url);
-    const data = await res.json();
-    if (data.results?.length) {
-      const { lat, lng } = data.results[0].geometry.location;
-      r.lat = lat;
-      r.lon = lng;
+    const [best] = await geocodeLondon(r.name + ' London');
+    if (best) {
+      r.lat = best.lat;
+      r.lon = best.lon;
       console.log(`  ✓ Geocoded: ${r.name} → ${r.lat.toFixed(4)}, ${r.lon.toFixed(4)}`);
     } else {
       console.log(`  ✗ Still not found: ${r.name}`);
@@ -68,10 +63,10 @@ if (toGeocode.length) {
   }
 }
 
-fs.writeFileSync(TOD_DATA_FILE, JSON.stringify(restaurants, null, 2));
-console.log(`\nSaved ${TOD_DATA_FILE} (${approved} updated, ${removed} removed)`);
+fs.writeFileSync(GEOCODED_FILE, JSON.stringify(restaurants, null, 2));
+console.log(`\nSaved ${GEOCODED_FILE} (${approved} updated, ${removed} removed)`);
 
-// Re-inject into SCRAN
-console.log('Re-injecting into SCRAN...');
-await execFileAsync('node', ['inject.js', 'tod']);
-console.log('Done. Refresh SCRAN to see the updated Tod Mode pins.');
+console.log('Exporting to SCRAN...');
+const { stdout } = await execFileAsync('node', ['inject.js', creator.key]);
+process.stdout.write(stdout);
+console.log(`Done. Refresh SCRAN to see the updated ${creator.name} pins.`);

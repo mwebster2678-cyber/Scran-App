@@ -1,15 +1,12 @@
-import 'dotenv/config';
+// Builds a review page for restaurants geocode.js couldn't place, with
+// suggested locations to approve. Export the result and run apply-corrections.js.
+// Usage: node build-review.js <creator>
 import fs from 'fs';
+import { creatorFromArgs, nameKey, geocodeLondon } from './shared.js';
 
-const INPUT  = 'tod-restaurants.json';
-const OUTPUT = 'review.html';
-
-const GOOGLE_MAPS_API_KEY = process.env.GOOGLE_MAPS_API_KEY;
-const LONDON = { minLat: 51.2, maxLat: 51.75, minLon: -0.55, maxLon: 0.35 };
-const GENERIC_TYPES = new Set([
-  'locality', 'administrative_area_level_1', 'administrative_area_level_2',
-  'administrative_area_level_3', 'country', 'postal_code', 'political',
-]);
+const creator = creatorFromArgs();
+const INPUT   = creator.files.geocoded;
+const OUTPUT  = creator.files.review;
 
 async function getCandidates(name, location) {
   const seen = new Map();
@@ -21,24 +18,10 @@ async function getCandidates(name, location) {
   for (const q of queries) {
     if (seen.size >= 3) break;
     try {
-      const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(q.trim())}&region=gb&key=${GOOGLE_MAPS_API_KEY}`;
-      const res  = await fetch(url);
-      const data = await res.json();
-      for (const result of (data.results || [])) {
+      for (const result of await geocodeLondon(q)) {
         if (seen.size >= 3) break;
-        const types = result.types || [];
-        if (types.every(t => GENERIC_TYPES.has(t))) continue;
-        const { lat, lng } = result.geometry.location;
-        if (lat < LONDON.minLat || lat > LONDON.maxLat || lng < LONDON.minLon || lng > LONDON.maxLon) continue;
-        const key = `${lat.toFixed(4)},${lng.toFixed(4)}`;
-        if (!seen.has(key)) {
-          seen.set(key, {
-            name:    result.address_components?.[0]?.long_name || name,
-            address: result.formatted_address,
-            lat,
-            lon: lng,
-          });
-        }
+        const key = `${result.lat.toFixed(4)},${result.lon.toFixed(4)}`;
+        if (!seen.has(key)) seen.set(key, { ...result, name: result.name || name });
       }
     } catch { /* skip failed queries */ }
   }
@@ -48,12 +31,12 @@ async function getCandidates(name, location) {
 async function main() {
   const all         = JSON.parse(fs.readFileSync(INPUT, 'utf8'));
   const ungeocoded  = all.filter(r => !r.lat);
-  console.log(`Building review page for ${ungeocoded.length} ungeocoded restaurants...\n`);
+  console.log(`Building ${creator.name} review page for ${ungeocoded.length} ungeocoded restaurants...\n`);
 
   const reviewData = [];
   for (let i = 0; i < ungeocoded.length; i++) {
     const r = ungeocoded[i];
-    const key = r.name.toLowerCase().replace(/[^a-z0-9]/g, '');
+    const key = nameKey(r.name);
     process.stdout.write(`[${i + 1}/${ungeocoded.length}] "${r.name}"... `);
     const candidates = await getCandidates(r.name, r.location);
     console.log(`${candidates.length} candidates`);
@@ -72,19 +55,20 @@ function buildHtml(data) {
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Tod Mode — Restaurant Approval</title>
+<title>${creator.name} Mode — Restaurant Approval</title>
 <style>
+  :root { --c: ${creator.colour}; --c-text: ${creator.textColour}; }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f0ede8; color: #1a1a1a; min-height: 100vh; }
 
   /* Header */
   .site-header { position: sticky; top: 0; z-index: 100; background: rgba(244,241,237,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(0,0,0,0.08); padding: 14px 24px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
-  .site-header h1 { font-size: 1.1rem; font-weight: 800; color: #A07D00; flex: 1; }
+  .site-header h1 { font-size: 1.1rem; font-weight: 800; color: var(--c-text); flex: 1; }
   .progress-text { font-size: 0.8rem; color: #666; }
   .progress-text b { color: #1a1a1a; }
   .tabs { display: flex; gap: 6px; }
   .tab { padding: 6px 12px; border-radius: 20px; border: 1.5px solid rgba(0,0,0,0.12); background: none; cursor: pointer; font-size: 0.78rem; font-weight: 600; color: #666; }
-  .tab.active { background: #D4AC0D; border-color: #D4AC0D; color: #fff; }
+  .tab.active { background: var(--c); border-color: var(--c); color: #fff; }
   #export-btn { padding: 8px 16px; background: #6C3483; color: #fff; border: none; border-radius: 20px; font-size: 0.8rem; font-weight: 600; cursor: pointer; }
   #export-btn:hover { background: #5a2a6e; }
 
@@ -99,7 +83,7 @@ function buildHtml(data) {
 
   /* Card header */
   .card-top { padding: 14px 16px 10px; border-bottom: 1px solid #f0ede8; }
-  .mishear-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #A07D00; margin-bottom: 3px; }
+  .mishear-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--c-text); margin-bottom: 3px; }
   .mishear-name  { font-size: 1.05rem; font-weight: 800; color: #1a1a1a; }
   .mishear-loc   { font-size: 0.78rem; color: #888; margin-top: 2px; }
 
@@ -109,27 +93,27 @@ function buildHtml(data) {
   .mention-block { font-size: 0.78rem; }
   .mention-video { font-weight: 600; color: #6C3483; text-decoration: none; display: block; margin-bottom: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .mention-video:hover { text-decoration: underline; }
-  .mention-rating { display: inline-block; background: #D4AC0D; color: #fff; border-radius: 10px; padding: 1px 8px; font-size: 0.72rem; font-weight: 700; margin-bottom: 3px; }
+  .mention-rating { display: inline-block; background: var(--c); color: #fff; border-radius: 10px; padding: 1px 8px; font-size: 0.72rem; font-weight: 700; margin-bottom: 3px; }
   .mention-notes { color: #444; line-height: 1.4; }
-  .show-more { font-size: 0.72rem; color: #A07D00; cursor: pointer; border: none; background: none; padding: 0; margin-top: 4px; }
+  .show-more { font-size: 0.72rem; color: var(--c-text); cursor: pointer; border: none; background: none; padding: 0; margin-top: 4px; }
 
   /* Candidates */
   .candidates { padding: 12px 16px; border-bottom: 1px solid #f0ede8; }
   .candidates-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #888; margin-bottom: 8px; }
   .candidate-option { display: flex; align-items: flex-start; gap: 8px; padding: 8px 10px; border-radius: 10px; cursor: pointer; border: 1.5px solid transparent; margin-bottom: 5px; transition: border-color 0.1s, background 0.1s; }
   .candidate-option:hover { background: #faf9f7; }
-  .candidate-option input[type=radio] { margin-top: 3px; accent-color: #D4AC0D; flex-shrink: 0; }
-  .candidate-option.selected { border-color: #D4AC0D; background: rgba(212,172,13,0.06); }
+  .candidate-option input[type=radio] { margin-top: 3px; accent-color: var(--c); flex-shrink: 0; }
+  .candidate-option.selected { border-color: var(--c); background: color-mix(in srgb, var(--c) 6%, transparent); }
   .candidate-name    { font-size: 0.85rem; font-weight: 600; display: block; }
   .candidate-address { font-size: 0.75rem; color: #666; display: block; margin-top: 1px; }
-  .candidate-map { font-size: 0.7rem; color: #A07D00; text-decoration: none; display: inline-block; margin-top: 3px; }
+  .candidate-map { font-size: 0.7rem; color: var(--c-text); text-decoration: none; display: inline-block; margin-top: 3px; }
   .no-candidates { font-size: 0.78rem; color: #888; font-style: italic; }
 
   /* Manual */
   .manual { padding: 10px 16px; border-bottom: 1px solid #f0ede8; }
   .manual label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #888; display: block; margin-bottom: 6px; }
   .manual input { width: 100%; padding: 8px 10px; border: 1.5px solid rgba(0,0,0,0.1); border-radius: 8px; font-size: 0.82rem; font-family: inherit; outline: none; }
-  .manual input:focus { border-color: #D4AC0D; }
+  .manual input:focus { border-color: var(--c); }
 
   /* Actions */
   .actions { padding: 12px 16px; display: flex; gap: 8px; }
@@ -145,7 +129,7 @@ function buildHtml(data) {
 <body>
 
 <header class="site-header">
-  <h1>⭐ Tod Mode — Restaurant Approvals</h1>
+  <h1>${creator.emoji} ${creator.name} Mode — Restaurant Approvals</h1>
   <div class="progress-text">
     <b id="count-approved">0</b> approved &nbsp;·&nbsp;
     <b id="count-removed">0</b> removed &nbsp;·&nbsp;
@@ -164,9 +148,9 @@ function buildHtml(data) {
 
 <script>
 const DATA = ${dataJson};
-const state = JSON.parse(localStorage.getItem('scran-review-state') || '{}');
+const state = JSON.parse(localStorage.getItem('scran-${creator.key}-review-state') || '{}');
 
-function save() { localStorage.setItem('scran-review-state', JSON.stringify(state)); }
+function save() { localStorage.setItem('scran-${creator.key}-review-state', JSON.stringify(state)); }
 
 function buildCard(r) {
   const card = document.createElement('div');
@@ -339,7 +323,7 @@ document.getElementById('export-btn').addEventListener('click', () => {
   const blob = new Blob([JSON.stringify(corrections, null, 2)], { type: 'application/json' });
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = 'corrections.json';
+  a.download = '${creator.files.corrections}';
   a.click();
 });
 </script>

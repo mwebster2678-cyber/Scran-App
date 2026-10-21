@@ -1,19 +1,11 @@
-import 'dotenv/config';
+// Groups scraped mentions into one entry per restaurant and finds each one's location.
+// Usage: node geocode.js <creator>
 import fs from 'fs';
+import { creatorFromArgs, nameKey, geocodeLondon } from './shared.js';
 
-const INPUT  = 'restaurants.json';
-const OUTPUT = 'tod-restaurants.json';
-
-const GOOGLE_MAPS_API_KEY = process.env.GOOGLE_MAPS_API_KEY;
-
-// Result types that indicate Google fell back to a generic city/region result
-const GENERIC_TYPES = new Set([
-  'locality', 'administrative_area_level_1', 'administrative_area_level_2',
-  'administrative_area_level_3', 'country', 'postal_code', 'political',
-]);
-
-// Rough M25 bounding box — discard results clearly outside London
-const LONDON = { minLat: 51.2, maxLat: 51.75, minLon: -0.55, maxLon: 0.35 };
+const creator = creatorFromArgs();
+const INPUT   = creator.files.scraped;
+const OUTPUT  = creator.files.geocoded;
 
 async function geocode(name, location) {
   // Try progressively looser queries until we get a specific establishment hit
@@ -23,19 +15,8 @@ async function geocode(name, location) {
     `${name} London`,
   ];
   for (const q of queries) {
-    const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(q.trim())}&region=gb&key=${GOOGLE_MAPS_API_KEY}`;
-    const res  = await fetch(url);
-    const data = await res.json();
-    if (data.results?.length) {
-      const result = data.results[0];
-      const types  = result.types || [];
-      // Skip if Google returned a generic city/region rather than a specific place
-      if (types.every(t => GENERIC_TYPES.has(t))) continue;
-      const { lat, lng } = result.geometry.location;
-      // Skip if result is outside the M25
-      if (lat < LONDON.minLat || lat > LONDON.maxLat || lng < LONDON.minLon || lng > LONDON.maxLon) continue;
-      return { lat, lon: lng };
-    }
+    const [best] = await geocodeLondon(q);
+    if (best) return { lat: best.lat, lon: best.lon };
   }
   return { lat: null, lon: null };
 }
@@ -53,7 +34,7 @@ async function main() {
   // Deduplicate by lowercase name — aggregate multiple video mentions
   const byName = new Map();
   for (const r of mentions) {
-    const key = r.name.toLowerCase().replace(/[^a-z0-9]/g, '');
+    const key = nameKey(r.name);
     if (!byName.has(key)) {
       byName.set(key, { name: r.name, location: r.location, mentions: [] });
     }
@@ -66,8 +47,6 @@ async function main() {
       notes:         r.notes,
     });
   }
-
-  if (!GOOGLE_MAPS_API_KEY) throw new Error('GOOGLE_MAPS_API_KEY is missing from .env');
 
   const unique = [...byName.values()];
   console.log(`${unique.length} unique restaurants to geocode\n`);

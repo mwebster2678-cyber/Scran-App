@@ -5,7 +5,7 @@ import fs from 'fs';
 // ─── Config ──────────────────────────────────────────────────────────────────
 
 const CHANNEL_HANDLE   = 'topjaw';
-const OUTPUT_FILE      = 'topjaw-restaurants.json';
+const OUTPUT_FILE      = 'topjaw-scraped.json';
 const DELAY_BETWEEN_MS = 300;    // no yt-dlp bottleneck — can run faster
 const MAX_DESC         = 3_000;  // descriptions are shorter than transcripts
 const MIN_DESC_LENGTH  = 80;     // skip very short descriptions (Shorts / teasers)

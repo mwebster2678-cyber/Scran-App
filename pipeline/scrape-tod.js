@@ -10,7 +10,7 @@ const YT_DLP = '/Users/matthew.webster/Library/Python/3.9/bin/yt-dlp';
 // ─── Config ──────────────────────────────────────────────────────────────────
 
 const CHANNEL_HANDLE   = 'eatingwithtod';
-const OUTPUT_FILE      = 'restaurants.json';
+const OUTPUT_FILE      = 'tod-scraped.json';
 const DELAY_BETWEEN_MS = 1000;        // pause between Claude calls to avoid rate-limiting
 const MAX_TRANSCRIPT   = 15_000;      // chars — keeps costs reasonable while capturing full context
 

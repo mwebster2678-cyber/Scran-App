@@ -1,16 +1,19 @@
 {
-  "name": "tod-scraper",
+  "name": "scran-pipeline",
   "version": "1.0.0",
   "type": "module",
-  "description": "Scrape restaurant data from @eatingwithtod YouTube channel",
+  "description": "Builds SCRAN's creator data (data/<creator>.json) from YouTube restaurant reviews",
   "scripts": {
-    "start": "node scrape.js"
+    "scrape:tod": "node scrape-tod.js",
+    "scrape:topjaw": "node scrape-topjaw.js",
+    "geocode": "node geocode.js",
+    "review": "node build-review.js",
+    "apply": "node apply-corrections.js",
+    "export": "node inject.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0",
-    "dotenv": "^16.4.0",
-    "youtube-transcript": "^1.2.1",
-    "youtubei.js": "^16.0.1"
+    "dotenv": "^16.4.0"
   },
   "engines": {
     "node": ">=18.0.0"
