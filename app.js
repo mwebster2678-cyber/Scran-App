@@ -24,6 +24,8 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     minZoom: 10,
     minZoomForPlaces: 13,
     placesUrl: 'data/places.json',
+    // Browser key — public by design; restricted to SCRAN's web addresses in Google Cloud
+    googleMapsKey: 'AIzaSyAP7wkccKRKXO1DhpUbfghTcvW5pH5N7V8',
     storageKey: 'london-eats-ratings',
     bookmarkKey: 'london-eats-bookmarks',
     // Approximate M25 polygon, clockwise from South Mimms
@@ -884,7 +886,150 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
   }
 
   // ─────────────────────────────────────────
-  // 10. APP (main controller)
+  // 10. BASE MAP (Google Map Tiles API, Esri if Google is unavailable)
+  // ─────────────────────────────────────────
+  const BaseMap = (() => {
+    const API         = 'https://tile.googleapis.com';
+    const SESSION_KEY = 'scran-google-tile-session';
+
+    // Muted grey map so the coloured place dots stand out
+    const STYLES = [
+      { stylers: [{ saturation: -100 }, { lightness: 40 }] },
+      { featureType: 'poi', stylers: [{ visibility: 'off' }] },
+      { featureType: 'poi.park', stylers: [{ visibility: 'on' }, { color: '#e4e9de' }] },
+      { featureType: 'poi.park', elementType: 'labels', stylers: [{ visibility: 'off' }] },
+      { featureType: 'water', stylers: [{ color: '#d5dee5' }] },
+      { featureType: 'transit', stylers: [{ visibility: 'simplified' }] },
+    ];
+
+    const MAX_FAILED_TILES = 5; // in a row, before giving up on the current tiles
+
+    let _map = null;
+    let _copyright = '';
+    let _logo = null;
+    let _onZoom = null; // refreshes the copyright for the current session
+
+    // Google sessions last two weeks; reuse one until a day before it expires
+    async function _session(forceNew = false) {
+      const hiDpi = window.devicePixelRatio > 1;
+      const request = {
+        mapType: 'roadmap', language: 'en-GB', region: 'GB',
+        scale: hiDpi ? 'scaleFactor2x' : 'scaleFactor1x', highDpi: hiDpi,
+        styles: STYLES,
+      };
+      const requestKey = JSON.stringify(request);
+      try {
+        const cached = forceNew ? null : JSON.parse(localStorage.getItem(SESSION_KEY) || 'null');
+        if (cached?.requestKey === requestKey && cached.expiry * 1000 > Date.now() + 864e5) return cached.session;
+      } catch { /* ignore */ }
+
+      const resp = await fetch(`${API}/v1/createSession?key=${CONFIG.googleMapsKey}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: requestKey,
+      });
+      if (!resp.ok) throw new Error(`createSession http_${resp.status}`);
+      const { session, expiry } = await resp.json();
+      try { localStorage.setItem(SESSION_KEY, JSON.stringify({ session, expiry, requestKey })); } catch { /* ignore */ }
+      return session;
+    }
+
+    // Google requires the copyright text for the visible area
+    async function _updateCopyright(session) {
+      const b = _map.getBounds();
+      const params = new URLSearchParams({
+        session, key: CONFIG.googleMapsKey, zoom: _map.getZoom(),
+        north: b.getNorth(), south: b.getSouth(), east: b.getEast(), west: b.getWest(),
+      });
+      try {
+        const { copyright } = await (await fetch(`${API}/tile/v1/viewport?${params}`)).json();
+        if (copyright && copyright !== _copyright) {
+          if (_copyright) _map.attributionControl.removeAttribution(_copyright);
+          _copyright = copyright;
+          _map.attributionControl.addAttribution(copyright);
+        }
+      } catch { /* keep the previous text */ }
+    }
+
+    function _addGoogleLogo() {
+      if (_logo) return;
+      const Logo = L.Control.extend({
+        onAdd() {
+          const img = L.DomUtil.create('img', 'google-logo');
+          img.src = 'images/google-logo.svg';
+          img.alt = 'Google';
+          return img;
+        },
+      });
+      _logo = new Logo({ position: 'bottomleft' }).addTo(_map);
+    }
+
+    function _removeGoogleBranding() {
+      if (_logo) { _logo.remove(); _logo = null; }
+      if (_copyright) { _map.attributionControl.removeAttribution(_copyright); _copyright = ''; }
+      if (_onZoom) { _map.off('zoomend', _onZoom); _onZoom = null; }
+    }
+
+    function _addEsri() {
+      const esri = 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas';
+      L.tileLayer(`${esri}/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}`, {
+        attribution: 'Tiles &copy; <a href="https://www.esri.com">Esri</a> &mdash; Esri, HERE, Garmin, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        maxNativeZoom: 16, maxZoom: 20,
+      }).addTo(_map);
+      L.tileLayer(`${esri}/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}`, {
+        maxNativeZoom: 16, maxZoom: 20,
+      }).addTo(_map);
+    }
+
+    // Adds Google tiles; calls onFail if tiles keep failing (expired session, daily cap reached…)
+    function _addGoogle(session, onFail) {
+      let failedInARow = 0;
+      const layer = L.tileLayer(`${API}/v1/2dtiles/{z}/{x}/{y}?session=${session}&key=${CONFIG.googleMapsKey}`, {
+        maxZoom: 20,
+      });
+      layer.on('tileload', () => { failedInARow = 0; });
+      layer.on('tileerror', () => {
+        if (++failedInARow === MAX_FAILED_TILES) {
+          _map.removeLayer(layer);
+          onFail();
+        }
+      });
+      layer.addTo(_map);
+      _addGoogleLogo();
+      if (_onZoom) _map.off('zoomend', _onZoom);
+      _onZoom = () => _updateCopyright(session);
+      _map.on('zoomend', _onZoom);
+      _onZoom();
+    }
+
+    function _useEsri(reason) {
+      console.warn('[SCRAN] Google map unavailable, using Esri:', reason);
+      try { localStorage.removeItem(SESSION_KEY); } catch { /* ignore */ }
+      _removeGoogleBranding();
+      _addEsri();
+    }
+
+    // Try the saved Google session, then a fresh one, then fall back to Esri
+    async function init(map) {
+      _map = map;
+      try {
+        _addGoogle(await _session(), async () => {
+          try {
+            _addGoogle(await _session(true), () => _useEsri('tiles failing'));
+          } catch (e) {
+            _useEsri(e.message);
+          }
+        });
+      } catch (e) {
+        _useEsri(e.message);
+      }
+    }
+
+    return { init };
+  })();
+
+  // ─────────────────────────────────────────
+  // 11. APP (main controller)
   // ─────────────────────────────────────────
   const App = (() => {
     const creatorLayers = CREATORS.map(CreatorLayer);
@@ -964,17 +1109,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       document.getElementById('zoom-in').addEventListener('click', () => _map.zoomIn());
       document.getElementById('zoom-out').addEventListener('click', () => _map.zoomOut());
 
-      // Esri Light Gray canvas (no API key needed) — base + label layers
-      const esriCanvas = 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas';
-      L.tileLayer(`${esriCanvas}/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}`, {
-        attribution: 'Tiles &copy; <a href="https://www.esri.com">Esri</a> &mdash; Esri, HERE, Garmin, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-        maxNativeZoom: 16,
-        maxZoom: 19,
-      }).addTo(_map);
-      L.tileLayer(`${esriCanvas}/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}`, {
-        maxNativeZoom: 16,
-        maxZoom: 19,
-      }).addTo(_map);
+      BaseMap.init(_map);
       _map.attributionControl.addAttribution(
         'Places &copy; <a href="https://overturemaps.org">Overture Maps Foundation</a>');
 

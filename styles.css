@@ -964,3 +964,8 @@ html, body {
 .leaflet-control-zoom a {
   color: var(--text) !important;
 }
+
+/* Map credits and Google logo sit just above the bottom mode bar so they stay visible */
+.leaflet-bottom { bottom: calc(56px + env(safe-area-inset-bottom, 0px)); }
+.leaflet-bottom.leaflet-left { left: 76px; } /* clear of the zoom buttons */
+.google-logo { display: block; width: 59px; height: 18px; margin: 0 0 4px 0 !important; pointer-events: none; }
