@@ -1,0 +1,11 @@
+# Secrets — never commit
+.env
+cookies.txt
+*.txt
+
+node_modules/
+*.log
+
+# Generated review pages and raw scrape output
+review*.html
+restaurants.json
