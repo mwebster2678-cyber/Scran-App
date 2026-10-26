@@ -998,3 +998,17 @@ html, body {
 .leaflet-bottom { bottom: calc(56px + env(safe-area-inset-bottom, 0px)); }
 .leaflet-bottom.leaflet-left { left: 76px; } /* clear of the zoom buttons */
 .google-logo { display: block; width: 59px; height: 18px; margin: 0 0 4px 0 !important; pointer-events: none; }
+
+/* Numbered bubble for nearby creator pins (creatorPinGroup in app.js) */
+.creator-cluster {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--cluster-colour);
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+}

@@ -22,7 +22,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     mapCenter: [51.5074, -0.1278],
     defaultZoom: 13,
     minZoom: 10,
-    minZoomForPlaces: 13,
+    minZoomForAllPlaces: 16, // below this, only creator picks and your own places show
     placesUrl: 'data/places.json',
     // Browser key — public by design; restricted to SCRAN's web addresses in Google Cloud
     googleMapsKey: 'AIzaSyAP7wkccKRKXO1DhpUbfghTcvW5pH5N7V8',
@@ -208,11 +208,9 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
     function setLoading(bool, statusMsg) {
       if (firstLoad) {
-        if (!bool) {
-          overlay.classList.add('hidden');
-          firstLoad = false;
-        }
-        return;
+        if (bool) return; // the first-load overlay is already showing
+        overlay.classList.add('hidden');
+        firstLoad = false;
       }
       clearTimeout(statusTimer);
       if (bool) {
@@ -316,11 +314,9 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     let _renderer = null;
     let _zoom     = null; // zoom the dots were last sized for
 
-    // Dots shrink as you zoom out so dense areas stay readable
+    // Dots only appear from street level (CONFIG.minZoomForAllPlaces) and grow as you zoom in
     function _dotSize(zoom) {
-      if (zoom <= 13) return { radius: 2.5, weight: 0 };
-      if (zoom === 14) return { radius: 3.5, weight: 1 };
-      return { radius: 5, weight: 1.5 };
+      return zoom <= 16 ? { radius: 4, weight: 1 } : { radius: 5, weight: 1.5 };
     }
 
     function init(map) {
@@ -354,7 +350,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         ? L.marker([place.lat, place.lon], { icon, riseOnHover: true })
         : L.circleMarker([place.lat, place.lon], {
             renderer: _renderer, ..._dotSize(_map.getZoom()),
-            color: '#fff', fillColor: KIND_COLOURS[place.kind], fillOpacity: 0.9,
+            color: '#fff', fillColor: KIND_COLOURS[place.kind], fillOpacity: 0.55, // a quiet background to the creator pins
           });
       marker.on('click', (e) => {
         L.DomEvent.stopPropagation(e);
@@ -859,8 +855,6 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     {
       key: 'topjaw',
       name: 'Topjaw',
-      label: '📷 Topjaw',
-      activeLabel: '✕ Topjaw',
       avatar: 'images/topjaw.jpg',
       colour: '#0e7490',
       textColour: '#0e7490',
@@ -869,8 +863,6 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     {
       key: 'tod',
       name: 'Tod',
-      label: '⭐ Tod Mode',
-      activeLabel: '✕ Tod Mode',
       avatar: 'images/tod.jpg',
       colour: '#D4AC0D',
       textColour: '#A07D00',
@@ -886,6 +878,28 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       .map(m => normalizeRating(m.rating, m.rating_out_of))
       .filter(r => r != null);
     return ratings.length ? Math.max(...ratings) : null;
+  }
+
+  // Nearby creator pins merge into a numbered bubble until street level.
+  // The bubble takes the creator's colour when every pin in it is theirs.
+  function creatorPinGroup() {
+    return L.markerClusterGroup({
+      maxClusterRadius: 45,
+      disableClusteringAtZoom: CONFIG.minZoomForAllPlaces,
+      showCoverageOnHover: false,
+      iconCreateFunction(cluster) {
+        const children = cluster.getAllChildMarkers();
+        const colours = new Set(children.map(m => m.options.creatorColour));
+        const colour = colours.size === 1 ? [...colours][0] : 'var(--primary)';
+        const count = children.length;
+        const size = count < 10 ? 34 : count < 50 ? 40 : 46;
+        return L.divIcon({
+          className: '',
+          html: `<div class="creator-cluster" style="--cluster-colour:${colour};width:${size}px;height:${size}px">${count}</div>`,
+          iconSize: [size, size],
+        });
+      },
+    });
   }
 
   // One bottom panel shared by every creator, recoloured per creator
@@ -952,7 +966,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         return null;
       });
 
-    let _map     = null;
+    let _pins    = null; // cluster group shared by all creators
     let _active  = false;
     let _entries = []; // [{ marker, restaurant }]
 
@@ -979,19 +993,20 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         const marker = L.marker([restaurant.lat, restaurant.lon], {
           icon: _icon(restaurant),
           zIndexOffset: creator.zIndexOffset,
+          creatorColour: creator.colour, // read by creatorPinGroup's bubbles
         });
         marker.on('click', (e) => {
           L.DomEvent.stopPropagation(e);
           RatingPanel.close();
           CreatorPanel.open(creator, restaurant);
         });
-        marker.addTo(_map);
         _entries.push({ marker, restaurant });
       });
+      _pins.addLayers(_entries.map(e => e.marker));
     }
 
     function _removePins() {
-      _entries.forEach(e => e.marker.remove());
+      _pins.removeLayers(_entries.map(e => e.marker));
       _entries = [];
     }
 
@@ -1006,27 +1021,30 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         const okArea    = !areaLc    || loc.includes(areaLc);
         const okCuisine = !cuisineLc || text.includes(cuisineLc);
         if (okArea && okCuisine) {
-          if (!_map.hasLayer(marker)) marker.addTo(_map);
+          if (!_pins.hasLayer(marker)) _pins.addLayer(marker);
         } else {
-          if (_map.hasLayer(marker)) marker.remove();
+          if (_pins.hasLayer(marker)) _pins.removeLayer(marker);
         }
       });
     }
 
-    function init(map) {
-      _map = map;
-      btn.addEventListener('click', async () => {
-        _active = !_active;
-        btn.classList.toggle('active', _active);
-        btn.textContent = _active ? creator.activeLabel : creator.label;
-        if (_active) {
-          await _addPins();
-          filter(FilterBar.getArea(), FilterBar.getCuisine());
-        } else {
-          _removePins();
-          CreatorPanel.close();
-        }
-      });
+    async function _setActive(active) {
+      _active = active;
+      btn.classList.toggle('active', _active);
+      if (_active) {
+        await _addPins();
+        filter(FilterBar.getArea(), FilterBar.getCuisine());
+      } else {
+        _removePins();
+        CreatorPanel.close();
+      }
+    }
+
+    // Creator picks are SCRAN's headline, so they start switched on
+    function init(pins) {
+      _pins = pins;
+      btn.addEventListener('click', () => _setActive(!_active));
+      _setActive(true);
     }
 
     return { init, filter };
@@ -1198,12 +1216,6 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     async function _showPlacesInView() {
       if (!_allActive) return;
 
-      if (_map.getZoom() < CONFIG.minZoomForPlaces) {
-        MarkerManager.clearAll();
-        UI.setStatus('Zoom in to see places');
-        return;
-      }
-
       try {
         UI.setLoading(true);
         await Places.load();
@@ -1215,9 +1227,12 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       }
       if (!_allActive) return; // toggled off while loading
 
-      const places = Places.query(_map.getBounds(), { kind: FilterBar.getKind(), cuisine: FilterBar.getCuisine() });
+      // Zoomed out, the 50k places would bury the creator picks: show only ones you've rated or saved
+      const zoomedIn = _map.getZoom() >= CONFIG.minZoomForAllPlaces;
+      let places = Places.query(_map.getBounds(), { kind: FilterBar.getKind(), cuisine: FilterBar.getCuisine() });
+      if (!zoomedIn) places = places.filter(p => Storage.get(PLACE_TYPE, p.id) || BookmarkStorage.get(PLACE_TYPE, p.id));
       MarkerManager.show(places);
-      UI.setLoading(false, `${places.length.toLocaleString()} places in view`);
+      UI.setLoading(false, zoomedIn ? `${places.length.toLocaleString()} places in view` : 'Zoom in to see all places');
       _openPendingShare();
     }
 
@@ -1250,8 +1265,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       if (!lat || !lon || !type || !id) return;
       _pendingShare = { type, id, name, lat, lon };
       _map.setView([lat, lon], 16);
-      if (_allActive) _showPlacesInView();
-      else _setAllActive(true);
+      if (!_allActive) _setAllActive(true);
     }
 
     function init() {
@@ -1259,6 +1273,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         center: CONFIG.mapCenter,
         zoom: CONFIG.defaultZoom,
         minZoom: CONFIG.minZoom,
+        maxZoom: 20, // same as the base map layers
         maxBounds: CONFIG.m25Bounds,
         maxBoundsViscosity: 1.0,
         zoomControl: false,
@@ -1295,7 +1310,8 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       }).addTo(_map);
 
       MarkerManager.init(_map);
-      creatorLayers.forEach(layer => layer.init(_map));
+      const creatorPins = creatorPinGroup().addTo(_map);
+      creatorLayers.forEach(layer => layer.init(creatorPins));
       MyListManager.init(_map);
       UI.updateStatsCount();
 
@@ -1316,6 +1332,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         .addEventListener('click', () => _setAllActive(!_allActive));
 
       setTimeout(UI.hideFirstLoadOverlay, 1500);
+      _setAllActive(true);
       _handleShareLink();
 
       _map.on('moveend', _showPlacesInView);
