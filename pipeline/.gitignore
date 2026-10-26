@@ -4,6 +4,8 @@ cookies.txt
 *.txt
 
 node_modules/
+# verify.js downloads: video details and transcripts
+cache/
 *.log
 
 # Generated review pages

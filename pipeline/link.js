@@ -3,7 +3,7 @@
 // Used by inject.js; re-run `node inject.js <creator>` for each creator after `node places.js`.
 import fs from 'fs';
 
-const PLACES = '../data/places.json';
+export const PLACES_FILE = '../data/places.json';
 
 // Words that say what a place is rather than which one it is
 const GENERIC = new Set((
@@ -14,14 +14,14 @@ const GENERIC = new Set((
   'lane wine deli joint express'
 ).split(' '));
 
-const normalise   = s => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
+const normalise   = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
   .replace(/&/g, ' and ').replace(/['’]/g, '');
 const words       = s => normalise(s).split(/[^a-z0-9]+/).filter(Boolean);
-const squash      = s => words(s).filter(w => w !== 'the' && w !== 'and').join('');
+export const squash = s => words(s).filter(w => w !== 'the' && w !== 'and').join('');
 const distinctive = s => words(s).filter(w => w.length >= 3 && !GENERIC.has(w));
 
 // Share of letter pairs two strings have in common (0–1); tolerates misheard spellings
-function similarity(a, b) {
+export function similarity(a, b) {
   const pairs = s => Array.from({ length: s.length - 1 }, (_, i) => s.slice(i, i + 2));
   const pa = pairs(a), pb = pairs(b);
   if (!pa.length || !pb.length) return 0;
@@ -52,17 +52,18 @@ function nameMatch(a, b) {
   return null;
 }
 
-function metres(a, b) {
+export function metres(a, b) {
   const dy = (a.lat - b.lat) * 111320;
   const dx = (a.lon - b.lon) * 111320 * Math.cos(a.lat * Math.PI / 180);
   return Math.hypot(dx, dy);
 }
 
-// Adds `placeId` (or null) to each restaurant. Returns the names that couldn't be linked.
+// Adds `placeId` (or null) to each restaurant that doesn't have one yet. Returns the names that couldn't be linked.
 export function linkToPlaces(restaurants) {
-  const { places } = JSON.parse(fs.readFileSync(PLACES, 'utf8'));
+  const { places } = JSON.parse(fs.readFileSync(PLACES_FILE, 'utf8'));
   const unlinked = [];
   for (const r of restaurants) {
+    if (r.placeId) continue; // already confirmed by verify.js
     let best = null;
     for (const [id, name, lat, lon] of places) {
       if (Math.abs(lat - r.lat) > 0.003 || Math.abs(lon - r.lon) > 0.005) continue; // ~300 m box
