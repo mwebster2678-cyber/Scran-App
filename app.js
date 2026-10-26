@@ -354,7 +354,6 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
           });
       marker.on('click', (e) => {
         L.DomEvent.stopPropagation(e);
-        CreatorPanel.close();
         RatingPanel.open(placeRef(place));
       });
       return marker.addTo(_map);
@@ -384,16 +383,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       markers.set(id, _createMarker(place));
     }
 
-    function clearAll() {
-      markers.forEach(m => m.remove());
-      markers.clear();
-    }
-
-    function getMarker(type, id) {
-      return type === PLACE_TYPE ? markers.get(id) || null : null;
-    }
-
-    return { init, show, refreshMarkerIcon, clearAll, getMarker };
+    return { init, show, refreshMarkerIcon };
   })();
 
   // ─────────────────────────────────────────
@@ -549,6 +539,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     const nameEl      = document.getElementById('panel-name');
     const addressEl   = document.getElementById('panel-address');
     const cuisineEl   = document.getElementById('panel-cuisine');
+    const creatorsEl  = document.getElementById('panel-creators');
     const btnsEl      = document.getElementById('rating-buttons');
     const closeBtn    = document.getElementById('panel-close');
     const clearBtn    = document.getElementById('clear-rating-btn');
@@ -605,6 +596,10 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       _renderRatingButtons(stored ? stored.rating : null);
       noteEl.value = stored?.note || '';
       _updateStatusBtns(type, id);
+      creatorsEl.innerHTML = '';
+      CreatorPicks.load().then(() => {
+        if (_current?.id === id) creatorsEl.innerHTML = creatorVerdictsHtml(CreatorPicks.forPlace(id));
+      });
       GooglePlaceInfo.show({ key: `${type}/${id}`, name, lat, lon });
 
       panel.classList.remove('hidden');
@@ -902,73 +897,95 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     });
   }
 
-  // One bottom panel shared by every creator, recoloured per creator
-  const CreatorPanel = (() => {
-    const panel      = document.getElementById('creator-panel');
-    const nameEl     = document.getElementById('creator-panel-name');
-    const locEl      = document.getElementById('creator-panel-location');
-    const ratingEl   = document.getElementById('creator-panel-rating');
-    const mentionsEl = document.getElementById('creator-panel-mentions');
-    const rateBtn    = document.getElementById('creator-rate-btn');
+  // Every creator's picks, loaded once. Picks the pipeline linked to places.json share
+  // that place's ID; the rest get one from their name and rough location, so two
+  // creators reviewing the same unlinked restaurant still share a card.
+  const CreatorPicks = (() => {
+    const byPlace = new Map(); // place id → [{ creator, restaurant }]
+    let _loading  = null;
 
-    function open(creator, restaurant) {
-      panel.style.setProperty('--creator-colour', creator.colour);
-      panel.style.setProperty('--creator-text', creator.textColour);
+    function placeIdFor(restaurant) {
+      if (restaurant.placeId) return restaurant.placeId;
+      const name = restaurant.name.toLowerCase().replace(/[^a-z0-9]/g, '');
+      return `pick-${name}-${restaurant.lat.toFixed(2)},${restaurant.lon.toFixed(2)}`;
+    }
 
-      nameEl.textContent = restaurant.name;
-      locEl.textContent  = restaurant.location || '';
+    function load() {
+      // Resolves to { tod: [restaurant…], topjaw: […] }
+      _loading = _loading || Promise.all(CREATORS.map(async creator => {
+        try {
+          const res = await fetch(`data/${creator.key}.json`);
+          if (!res.ok) throw new Error(`http_${res.status}`);
+          const restaurants = await res.json();
+          restaurants.forEach(restaurant => {
+            restaurant.id = placeIdFor(restaurant);
+            if (!byPlace.has(restaurant.id)) byPlace.set(restaurant.id, []);
+            byPlace.get(restaurant.id).push({ creator, restaurant });
+          });
+          return [creator.key, restaurants];
+        } catch (e) {
+          console.error(`[SCRAN] ${creator.key} data failed:`, e);
+          UI.showError(`Could not load ${creator.name} restaurants.`);
+          return [creator.key, []];
+        }
+      })).then(Object.fromEntries);
+      return _loading;
+    }
 
+    function forPlace(id) {
+      return byPlace.get(id) || [];
+    }
+
+    return { load, forPlace };
+  })();
+
+  // Opens the place card for a creator pick: the place from places.json when linked,
+  // otherwise one made from the pick itself
+  async function openCreatorPick(restaurant) {
+    try { await Places.load(); } catch { /* fall back to the pick's own details */ }
+    const place = Places.get(restaurant.id);
+    RatingPanel.open(place ? placeRef(place) : {
+      type: PLACE_TYPE, id: restaurant.id, name: restaurant.name,
+      cuisine: [], lat: restaurant.lat, lon: restaurant.lon, address: restaurant.location,
+    });
+  }
+
+  // What each creator said about a place, for the top of the place card
+  function creatorVerdictsHtml(picks) {
+    return picks.map(({ creator, restaurant }) => {
       const rating = creatorRating(restaurant);
-      ratingEl.innerHTML = rating != null ? `<div class="creator-rating-badge">&#11088; ${rating}/10</div>` : '';
-
-      mentionsEl.innerHTML = restaurant.mentions.map(m => {
-        const ratingStr = m.rating != null
-          ? `<div class="creator-mention-rating">&#11088; ${normalizeRating(m.rating, m.rating_out_of)}/10</div>`
-          : '';
+      const mentions = restaurant.mentions.map(m => {
+        // Other platforms can supply `url`; YouTube picks only have the video ID
+        const url = m.url || `https://youtube.com/watch?v=${encodeURIComponent(m.videoId)}`;
+        const mentionRating = m.rating != null
+          ? `<div class="creator-mention-rating">&#11088; ${normalizeRating(m.rating, m.rating_out_of)}/10</div>` : '';
         return `<div class="creator-mention">
           <div class="creator-mention-title">
-            <a href="https://youtube.com/watch?v=${encodeURIComponent(m.videoId)}" target="_blank" rel="noopener">&#9654; ${escapeHtml(m.videoTitle)}</a>
+            <a href="${escapeHtml(url)}" target="_blank" rel="noopener">&#9654; ${escapeHtml(m.videoTitle)}</a>
           </div>
-          ${ratingStr}
+          ${mentionRating}
           <div class="creator-mention-notes">${escapeHtml(m.notes)}</div>
         </div>`;
       }).join('');
-
-      const id = `${creator.key}_` + restaurant.name.toLowerCase().replace(/\s+/g, '_');
-      const existing = Storage.get(creator.key, id);
-      rateBtn.innerHTML = existing ? `&#9733; Your rating: ${existing.rating}/10` : '&#9733; Rate this restaurant';
-      rateBtn.classList.toggle('has-rating', !!existing);
-      rateBtn.onclick = (e) => {
-        e.stopPropagation();
-        close();
-        RatingPanel.open({ type: creator.key, id, name: restaurant.name, cuisine: [], lat: restaurant.lat, lon: restaurant.lon });
-      };
-
-      panel.classList.add('open');
-    }
-
-    function close() {
-      panel.classList.remove('open');
-    }
-
-    document.getElementById('creator-panel-close').addEventListener('click', close);
-
-    return { open, close };
-  })();
+      return `<div class="creator-verdict" style="--creator-colour:${creator.colour};--creator-text:${creator.textColour}">
+        <div class="creator-verdict-head">
+          <img class="creator-verdict-avatar" src="${creator.avatar}" alt="">
+          <span class="creator-verdict-name">${escapeHtml(creator.name)}</span>
+          ${rating != null ? `<span class="creator-rating-badge">&#11088; ${rating}/10</span>` : ''}
+        </div>
+        ${mentions}
+      </div>`;
+    }).join('');
+  }
 
   // A toggleable set of map pins for one creator
   function CreatorLayer(creator) {
     const btn = document.getElementById(`${creator.key}-mode-btn`);
-    const dataPromise = fetch(`data/${creator.key}.json`)
-      .then(r => { if (!r.ok) throw new Error(`http_${r.status}`); return r.json(); })
-      .catch(e => {
-        console.error(`[SCRAN] ${creator.key} data failed:`, e);
-        return null;
-      });
 
-    let _pins    = null; // cluster group shared by all creators
-    let _active  = false;
-    let _entries = []; // [{ marker, restaurant }]
+    let _pins     = null; // cluster group shared by all creators
+    let _onToggle = null;
+    let _active   = false;
+    let _entries  = [];   // [{ marker, restaurant }]
 
     function _icon(restaurant) {
       const rating = creatorRating(restaurant);
@@ -983,13 +1000,9 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     }
 
     async function _addPins() {
-      const data = await dataPromise;
-      if (!data) {
-        UI.showError(`Could not load ${creator.name} restaurants.`);
-        return;
-      }
+      const restaurants = (await CreatorPicks.load())[creator.key];
       if (!_active || _entries.length) return; // toggled off, or already added, while loading
-      data.forEach(restaurant => {
+      restaurants.forEach(restaurant => {
         const marker = L.marker([restaurant.lat, restaurant.lon], {
           icon: _icon(restaurant),
           zIndexOffset: creator.zIndexOffset,
@@ -997,8 +1010,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         });
         marker.on('click', (e) => {
           L.DomEvent.stopPropagation(e);
-          RatingPanel.close();
-          CreatorPanel.open(creator, restaurant);
+          openCreatorPick(restaurant);
         });
         _entries.push({ marker, restaurant });
       });
@@ -1036,18 +1048,20 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         filter(FilterBar.getArea(), FilterBar.getCuisine());
       } else {
         _removePins();
-        CreatorPanel.close();
       }
+      _onToggle();
     }
 
-    // Creator picks are SCRAN's headline, so they start switched on
-    function init(pins) {
+    // Creator picks are SCRAN's headline, so they start switched on.
+    // onToggle runs after the pins change, so the map can hide or show the plain dots under them.
+    function init(pins, onToggle) {
       _pins = pins;
+      _onToggle = onToggle;
       btn.addEventListener('click', () => _setActive(!_active));
       _setActive(true);
     }
 
-    return { init, filter };
+    return { key: creator.key, init, filter, isActive: () => _active };
   }
 
   // ─────────────────────────────────────────
@@ -1210,12 +1224,15 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
   const App = (() => {
     const creatorLayers = CREATORS.map(CreatorLayer);
     let _map          = null;
-    let _allActive    = false;
     let _pendingShare = null; // { type, id, name, lat, lon } — open once places have loaded
 
-    async function _showPlacesInView() {
-      if (!_allActive) return;
+    // A creator pin already marks this place, so it needs no dot or pin of its own
+    function _hasCreatorPin(id) {
+      return CreatorPicks.forPlace(id).some(({ creator }) =>
+        creatorLayers.find(layer => layer.key === creator.key).isActive());
+    }
 
+    async function _showPlacesInView() {
       try {
         UI.setLoading(true);
         await Places.load();
@@ -1225,11 +1242,10 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         UI.showError('Could not load restaurants — check your connection and try again.');
         return;
       }
-      if (!_allActive) return; // toggled off while loading
-
       // Zoomed out, the 50k places would bury the creator picks: show only ones you've rated or saved
       const zoomedIn = _map.getZoom() >= CONFIG.minZoomForAllPlaces;
-      let places = Places.query(_map.getBounds(), { kind: FilterBar.getKind(), cuisine: FilterBar.getCuisine() });
+      let places = Places.query(_map.getBounds(), { kind: FilterBar.getKind(), cuisine: FilterBar.getCuisine() })
+        .filter(p => !_hasCreatorPin(p.id));
       if (!zoomedIn) places = places.filter(p => Storage.get(PLACE_TYPE, p.id) || BookmarkStorage.get(PLACE_TYPE, p.id));
       MarkerManager.show(places);
       UI.setLoading(false, zoomedIn ? `${places.length.toLocaleString()} places in view` : 'Zoom in to see all places');
@@ -1244,17 +1260,6 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       RatingPanel.open(place ? placeRef(place) : { type, id, name, cuisine: [], lat, lon });
     }
 
-    function _setAllActive(active) {
-      _allActive = active;
-      document.getElementById('all-restaurants-btn').classList.toggle('active', active);
-      if (active) {
-        _showPlacesInView();
-      } else {
-        MarkerManager.clearAll();
-        UI.setStatus('');
-      }
-    }
-
     function _handleShareLink() {
       const params = new URLSearchParams(window.location.search);
       const lat  = parseFloat(params.get('lat'));
@@ -1265,7 +1270,6 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       if (!lat || !lon || !type || !id) return;
       _pendingShare = { type, id, name, lat, lon };
       _map.setView([lat, lon], 16);
-      if (!_allActive) _setAllActive(true);
     }
 
     function init() {
@@ -1311,7 +1315,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
       MarkerManager.init(_map);
       const creatorPins = creatorPinGroup().addTo(_map);
-      creatorLayers.forEach(layer => layer.init(creatorPins));
+      creatorLayers.forEach(layer => layer.init(creatorPins, _showPlacesInView));
       MyListManager.init(_map);
       UI.updateStatsCount();
 
@@ -1328,20 +1332,14 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         () => _showPlacesInView()
       );
 
-      document.getElementById('all-restaurants-btn')
-        .addEventListener('click', () => _setAllActive(!_allActive));
-
       setTimeout(UI.hideFirstLoadOverlay, 1500);
-      _setAllActive(true);
+      _showPlacesInView();
       _handleShareLink();
 
       _map.on('moveend', _showPlacesInView);
 
       // Close panel on map click
-      _map.on('click', () => {
-        RatingPanel.close();
-        CreatorPanel.close();
-      });
+      _map.on('click', () => RatingPanel.close());
 
       // Keyboard — close panel on Escape, block browser zoom shortcuts
       document.addEventListener('keydown', (e) => {

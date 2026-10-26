@@ -787,46 +787,25 @@ html, body {
 #mode-bar button:hover { background: rgba(0,0,0,0.04); }
 
 /* Active states — each keeps its own brand colour */
-#all-restaurants-btn.active { color: #16a34a; border-top-color: #16a34a; background: rgba(22,163,74,0.06); }
 #topjaw-mode-btn.active     { color: #0e7490; border-top-color: #0e7490; background: rgba(14,116,144,0.06); }
 #tod-mode-btn.active        { color: #A07D00; border-top-color: #D4AC0D; background: rgba(212,172,13,0.06); }
 #list-toggle.active         { color: var(--primary); border-top-color: var(--primary); background: rgba(108,52,131,0.06); }
 
-/* ── Creator Info Panel (Tod, Topjaw…) — colours set per creator from app.js ── */
-#creator-panel {
+/* ── What creators said, at the top of the place card (creatorVerdictsHtml in app.js) ── */
+#panel-creators:empty { display: none; }
+#panel-creators { margin: -6px 0 14px; }
+.creator-verdict {
   --creator-colour: var(--primary);
   --creator-text: var(--primary);
-  position: fixed;
-  bottom: 0; left: 0; right: 0;
-  z-index: 1600;
-  background: var(--surface);
-  border-radius: var(--panel-radius) var(--panel-radius) 0 0;
-  box-shadow: 0 -4px 32px rgba(0,0,0,0.14);
-  transform: translateY(100%);
-  transition: transform 0.35s cubic-bezier(0.32,0.72,0,1);
-  max-height: 70vh;
-  overflow-y: auto;
+  margin-bottom: 12px;
 }
-#creator-panel.open { transform: translateY(0); }
-
-#creator-panel .panel-handle {
-  width: 36px; height: 4px;
-  background: rgba(0,0,0,0.15);
-  border-radius: 2px;
-  margin: 12px auto 0;
+.creator-verdict-head { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.creator-verdict-avatar {
+  width: 30px; height: 30px; border-radius: 50%;
+  border: 2px solid var(--creator-colour); object-fit: cover;
 }
-#creator-panel .panel-inner { padding: 16px 20px 32px; }
-
-#creator-panel .panel-header {
-  display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 4px;
-}
-#creator-panel-name { font-size: 1.1rem; font-weight: 700; }
-#creator-panel-close {
-  background: none; border: none; font-size: 1.1rem;
-  cursor: pointer; color: var(--text-muted); padding: 2px 4px;
-}
-#creator-panel-location { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px; }
-
+.creator-verdict-name { font-weight: 700; color: var(--creator-text); flex: 1; }
+.creator-verdict .creator-rating-badge { margin-bottom: 0; }
 .creator-rating-badge {
   display: inline-flex; align-items: center; gap: 6px;
   background: var(--creator-colour); color: #fff;
@@ -965,29 +944,6 @@ html, body {
 .kind-eat  { background: #8E44AD; }
 .kind-pub  { background: #A0522D; }
 .kind-cafe { background: #E67E22; }
-
-/* ── Creator panel rate button ── */
-.creator-rate-btn {
-  display: block;
-  width: 100%;
-  margin: 10px 0 14px;
-  padding: 10px;
-  background: var(--primary);
-  color: #fff;
-  border: none;
-  border-radius: 10px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  font-family: inherit;
-  cursor: pointer;
-  transition: background 0.15s;
-}
-
-.creator-rate-btn:hover { background: var(--accent); }
-
-.creator-rate-btn.has-rating {
-  background: var(--green);
-}
 
 /* ── Leaflet overrides ── */
 .leaflet-control-zoom a {

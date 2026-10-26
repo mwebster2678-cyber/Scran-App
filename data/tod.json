@@ -15,7 +15,8 @@
     "sentiment": "positive",
     "notes": "Chef and owner Jason Atherton's restaurant serving roast dinners at £29pp with exceptional bread brushed in beef dripping, insane pies including bone marrow, and perfectly executed roasts with crispy potatoes and excellent gravy."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "40 Dean Street",
@@ -33,7 +34,8 @@
     "sentiment": "positive",
     "notes": "A 16-year-old Italian institution run by Nema, featuring fresh pasta made 24/7 downstairs. Tod praised multiple dishes including Oene Parmesana, spaghetti with tomato sauce and breaded chicken schnitzel, bone marrow pasta, and handmade lobster ravioli, finishing with pistachio tiramisu."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Fletchers",
@@ -51,7 +53,8 @@
     "sentiment": "positive",
     "notes": "Tod mentions Fletchers as a burger chain comparison in London, suggesting Boring Burger's quality is on par with it."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Black Bear",
@@ -69,7 +72,8 @@
     "sentiment": "positive",
     "notes": "Tod references Black Bear as another London burger chain for comparison, indicating Boring Burger matches its quality."
    }
-  ]
+  ],
+  "placeId": "2cb231cda060"
  },
  {
   "name": "Brigaders",
@@ -87,7 +91,8 @@
     "sentiment": "positive",
     "notes": "Known for arguably the best mixed grill in London, cooked in a charcoal tandoor with distinct smoky flavor. The standout dish was the woodfired Indian suckling pig with glass-like skin, tender meat, and served with goon curry sauce and sides including fennel paw buns and vindaloo sauce."
    }
-  ]
+  ],
+  "placeId": "8fa33b6eb2a8"
  },
  {
   "name": "Fume",
@@ -105,7 +110,8 @@
     "sentiment": "positive",
     "notes": "A barbecue competition and festival that started two years ago in a Peckham car park. Tod describes it as having the best lineup he's ever seen at a UK festival with over 30 pit masters competing."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Cafe Francois",
@@ -131,7 +137,8 @@
     "sentiment": "positive",
     "notes": "Offers unlimited chocolate mousse for £5 with a trolley service and unlimited toppings including hazelnuts, chocolate flakes, and caramel sauce. Tod praised the quality of the mousse, describing it as excellent in texture and flavor, comparing it favorably to chocolate mousse he's had anywhere in the world."
    }
-  ]
+  ],
+  "placeId": "8cfa514018a0"
  },
  {
   "name": "Rat City Ribs",
@@ -149,7 +156,8 @@
     "sentiment": "positive",
     "notes": "Specializes in Caribbean style barbecue with exceptional oxtail, fried chicken, and ribs. Tod praised the tender, melt-in-mouth meat with sweet and sticky glaze, and the pineapple jerk sauce on the fried chicken."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Beast",
@@ -175,7 +183,8 @@
     "sentiment": "positive",
     "notes": "An exceptional surf and turf restaurant featuring Norwegian king crab from tanks and steaks from around the world, with theatrical open kitchen and communal long table dining in a cellar setting. Offers multiple high-quality steak options (Japanese A5 Wagyu, Australian, UK ribeye, Italian) alongside hand-diver scallops and spectacular king crab, with excellent value considering the premium quality and presentation."
    }
-  ]
+  ],
+  "placeId": "06265b5b9d6f"
  },
  {
   "name": "Electric Diner",
@@ -193,7 +202,8 @@
     "sentiment": "positive",
     "notes": "Teaming up with Interstellar to bring their famous pork belly bites to the Fume BBQ festival."
    }
-  ]
+  ],
+  "placeId": "cb221f406e9d"
  },
  {
   "name": "Cafe Continental",
@@ -211,7 +221,8 @@
     "sentiment": "positive",
     "notes": "Manchester's hottest restaurant coming to London to serve their famous prawns at the Fume festival."
    }
-  ]
+  ],
+  "placeId": "281c9bb1fdee"
  },
  {
   "name": "Rack City Ribs",
@@ -237,7 +248,8 @@
     "sentiment": "positive",
     "notes": "Known for Caribbean style fried chicken, bringing exclusive jumbo smoked turkey wings dunked in cranberry bourbon glaze. Tod expresses enthusiasm with \"Oh my god\" at the size of the wings."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Ashes",
@@ -255,7 +267,8 @@
     "sentiment": "positive",
     "notes": "Returning to the festival with new specials; their ox cheat was Tod's favorite bite from the last festival."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Hungry Boys",
@@ -281,7 +294,8 @@
     "sentiment": "positive",
     "notes": "They have reinvented the Buffalo wing by adding beef fat and finishing with a blowtorch bone marrow dripping. Tod expresses amazement at their creative wing invention."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Acador",
@@ -299,7 +313,8 @@
     "sentiment": "positive",
     "notes": "Argentinian steak restaurant serving steak with chimichurri and chips with cheese. Tod describes it as one of his favorite eats in the market, though prices have increased from £10 to £13.50."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Funky Chips",
@@ -317,7 +332,8 @@
     "sentiment": "positive",
     "notes": "Fresh-cut chips with various sauces including pickle juice, garlic sauce, and Sriracha, topped with double cheese for £14. Tod appreciates the fun, over-the-top nature of the offering."
    }
-  ]
+  ],
+  "placeId": "327258239cb7"
  },
  {
   "name": "Peckish Burgers",
@@ -335,7 +351,8 @@
     "sentiment": "positive",
     "notes": "Tod's favorite burger in the market, featuring the double chili with thick smashed beef patties, pickle relish, and a crispy crust that he praises enthusiastically."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Mac and Cheese Factory",
@@ -353,7 +370,8 @@
     "sentiment": "mixed",
     "notes": "Mac and cheese that Tod found bland on its own but enjoyed when paired with the Yorkshire burrito next door."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Octopus Kebab (unnamed vendor)",
@@ -371,7 +389,8 @@
     "sentiment": "negative",
     "notes": "Priced at £16.50, Tod describes this as probably the worst thing he's ever eaten and notes the vendor has a one-star hygiene rating."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Guacamole",
@@ -389,7 +408,8 @@
     "sentiment": "positive",
     "notes": "Mexican restaurant run by Manny, located in Riley Market. Tod praised the carnitas tacos, birria tacos, quesadillas, and homemade guacamole, noting that everything is made fresh to order including corn tacos and quesadillas prepared in a press imported from Mexico."
    }
-  ]
+  ],
+  "placeId": "d5dab60d911c"
  },
  {
   "name": "Shwamaha",
@@ -407,7 +427,8 @@
     "sentiment": "positive",
     "notes": "Tod praised the exceptional quality of fresh, homemade ingredients at incredibly low prices (£4.99 for a meal deal). He highlighted the owner Alli's commitment to the community, including 20% discounts for people on Universal Credit, and described the chicken shawama as some of the best he's had in London."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Royal China",
@@ -425,7 +446,8 @@
     "sentiment": "positive",
     "notes": "Tod praised their Peking duck (£58 for a whole duck, described as one of the cheapest in London) for its juicy meat and crispy fat layer. He also highlighted their fresh dim sum made to order, particularly the crispy prawn chung fun, and standout mains including salt and pepper seabream and creamy barbecue short ribs."
    }
-  ]
+  ],
+  "placeId": "1cbba8ff8f87"
  },
  {
   "name": "Costco",
@@ -443,7 +465,8 @@
     "sentiment": "mixed",
     "notes": "Cheapest pizza in London at £1.99. Fresh, made daily but heavy and lacking structural integrity; they gave it credit for not using frozen dough despite the poor quality."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Breadto",
@@ -461,7 +484,8 @@
     "sentiment": "positive",
     "notes": "Widely regarded as the best slice shop in the city. Exceptional sourdough crust with perfect balance of Neapolitan and New York styles; the beef shin pizza was described as defying gravity and some of the best pizza in the world."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Gracies",
@@ -479,7 +503,8 @@
     "sentiment": "positive",
     "notes": "Founded during the pandemic, recently opened in Central London. Makes their own stracciatella in-house; praised for perfectly baked grandma slice and sausage pizza with exceptional flavour balance."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Crazy Pizza",
@@ -497,7 +522,8 @@
     "sentiment": "negative",
     "notes": "London's most expensive pizza at £65 (salmon and caviar). Underwhelming presentation, butterly texture, and confusing flavour profile; described as a warm salmon wrap rather than pizza."
    }
-  ]
+  ],
+  "placeId": "89eb337bd218"
  },
  {
   "name": "Crisp Pizza",
@@ -515,7 +541,8 @@
     "sentiment": "positive",
     "notes": "Called by Dave Portnoy 'by far the best pizza I've had in London.' The grandma pie was described as thick but supremely light and airy inside with impressive execution."
    }
-  ]
+  ],
+  "placeId": "95c774a3d6f7"
  },
  {
   "name": "Tuna Fight Club",
@@ -549,7 +576,8 @@
     "sentiment": "positive",
     "notes": "A grocery store by day that transforms into an exclusive dining experience at 7 p.m. featuring a 9-course tasting menu (£250 per person) centered around a live butchered 350kg bluefin tuna. Tod describes it as \"one of the most sought after experiences in the whole of London\" with every single bite being a \"10/10,\" praising the progression through multiple tuna cuts, scallops, lobster, and caviar served in an immersive, theatrical atmosphere."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Darby's",
@@ -567,7 +595,8 @@
     "sentiment": "positive",
     "notes": "An Irish grill house by Robin Gil offering a £38 'holy trinity' roast with dry-aged beef, lamb shoulder, and suckling pig. Tod praised the buttery fat cap, incredible crackling, layered potatoes, and cheesy collie, describing the experience as exceptional with standout in-house preparations and techniques."
    }
-  ]
+  ],
+  "placeId": "d1011ce0e42e"
  },
  {
   "name": "Otto",
@@ -585,7 +614,8 @@
     "sentiment": "positive",
     "notes": "A super high-end French restaurant specializing in tableside theater. They serve the second most expensive burger in the world at £2,600, featuring premium beef and lamb, truffle, gold leaf, lobster, and caviar on a custom gold-plated plate."
    }
-  ]
+  ],
+  "placeId": "a1ba19dfd3c8"
  },
  {
   "name": "Bun and Sum",
@@ -603,7 +633,8 @@
     "sentiment": "positive",
     "notes": "Offers a £3.99 double smash burger with amazing value for money. Tod is impressed by the crispy, caramelized crust on the beef patties and notes it's difficult to beat the value proposition, even calling it better than a Tesco meal deal."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "The Star in Shoreditch",
@@ -621,7 +652,8 @@
     "sentiment": "positive",
     "notes": "London's smallest restaurant—a two-person burger counter run by Ryan from Poked Burger and Delirium Dining Club. The £100 nine-course burger tasting menu includes innovative dishes like layered potato chips with duck fat and wagyu, smash burgers on crumpets, and Spanish wagyu with truffle."
    }
-  ]
+  ],
+  "placeId": "a409e4540a0d"
  },
  {
   "name": "Otto's Restaurant",
@@ -639,7 +671,8 @@
     "sentiment": "positive",
     "notes": "An extravagant French fine dining establishment where Tod tries the £2,600 gold-plated burger (second most expensive in the world). Made with lamb, ribeye, fillet, sirloin, truffle, caviar, lobster, and 24-karat gold leaf; Tod praises the distinct flavors from dry-aged beef over wagyu."
    }
-  ]
+  ],
+  "placeId": "a1ba19dfd3c8"
  },
  {
   "name": "Reuben's",
@@ -657,7 +690,8 @@
     "sentiment": "positive",
     "notes": "Featured their festive Frank sausage at a Christmas market in London. Tod praised it highly, commenting on the size, smoke flavor, and quality."
    }
-  ]
+  ],
+  "placeId": "942e17a1c513"
  },
  {
   "name": "Roll Boys",
@@ -699,7 +733,8 @@
     "sentiment": "positive",
     "notes": "Offers homemade cinnamon buns baked fresh and eaten within the hour, with a bacon and maple syrup variety highlighted."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Reuben's Ruben",
@@ -717,7 +752,8 @@
     "sentiment": "positive",
     "notes": "Serves smoked hot dogs wrapped in bacon with beef gravy. Tod described it as \"the best sausage I've ever put in my mouth\" with smoky, wholesome, and festive qualities."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "From the Ashes",
@@ -743,7 +779,8 @@
     "sentiment": "positive",
     "notes": "Serving barbecue pork and hog roast donuts with chili jam using a bespoke hog roast smoker."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Cornicopia",
@@ -761,7 +798,8 @@
     "sentiment": "positive",
     "notes": "A luxury bistro helmed by three Michelin-style chef Cla Smith, featuring London's most expensive fish and chips with Dover sole and lobster bisque, plus an innovative 13-type potato tasting menu. Tod expresses extreme enthusiasm throughout, suggesting the restaurant deserves multiple Michelin stars."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Fighter",
@@ -779,7 +817,8 @@
     "sentiment": "positive",
     "notes": "A new fried chicken specialist that's been running since 2014 and just opened their first physical location. Tod praised their crispy fried chicken, homemade sauces (especially the Korean glaze), grilled chicken with Thai sauce, and their buffalo burger, which he called \"one of the greatest fried chicken burgers of all time.\""
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Fleet Atelier",
@@ -797,7 +836,8 @@
     "sentiment": "positive",
     "notes": "A Belgian frites restaurant opened by three Michelin star chef Sergio Herman from the Netherlands. Fries are twice-fried until extra crispy and served with various toppings including Flemish beef stew, cheddar with bacon, and parmesan with truffle sauce."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Leopard Pies",
@@ -815,7 +855,8 @@
     "sentiment": "positive",
     "notes": "Offers honey butter rings for 50p, covered with hot honey and parmesan cheese, available in multiple flavors including pistachio and bara."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Jimmy Smashburgers",
@@ -833,7 +874,8 @@
     "sentiment": "positive",
     "notes": "Offers double smash burgers for £3. Tod's favorite was the double smash with duya and parmesan cheese, which he described as a ridiculously good deal compared to meal deals."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "M Thai",
@@ -851,7 +893,8 @@
     "sentiment": "positive",
     "notes": "Serves spicy noodles that came with a free pot of chili dipping oil, which Tod enjoyed."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Tower Bridge Collective",
@@ -869,7 +912,8 @@
     "sentiment": "positive",
     "notes": "A food market featuring multiple vendors offering diverse cuisines, with most items under £5. Tod praised the variety, noting they've covered every single cuisine."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "The Clink",
@@ -887,7 +931,8 @@
     "sentiment": "positive",
     "notes": "Tod was impressed by the restaurant's full-service setup and the quality of the food. He noted that the bevette steak with shoestring fries and bonet sauce would have him walking out with a smile if served for £24 in any London restaurant, highlighting the high quality of the meal cooked by prison inmates."
    }
-  ]
+  ],
+  "placeId": "56f053794c1d"
  },
  {
   "name": "Toshiba",
@@ -905,7 +950,8 @@
     "sentiment": "positive",
     "notes": "The most awarded Indian restaurant on Brick Lane with a tiny kitchen. Tod highlighted their £1 butter chicken cheesy naan bread, describing the combination of cheese, garlic, and butter chicken as \"a match made in heaven.\""
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Dilpasand",
@@ -923,7 +969,8 @@
     "sentiment": "positive",
     "notes": "An authentic Pakistani restaurant offering a £5 mixed grill with fresh kebabs grilled to order. Tod praised the sea kebab for being \"so fatty, juicy\" with \"a kiss of smoke.\""
    }
-  ]
+  ],
+  "placeId": "81a6d8761dba"
  },
  {
   "name": "BKC",
@@ -941,7 +988,8 @@
     "sentiment": "positive",
     "notes": "They offer a £1 biryani made fresh daily with huge chunks of chicken. Tod presented this as an affordable dining option available through Neotaste."
    }
-  ]
+  ],
+  "placeId": "53bde4da71f2"
  },
  {
   "name": "Chin Chin",
@@ -967,7 +1015,8 @@
     "sentiment": "positive",
     "notes": "Makes their own marshmallow fluff that gets blowtorched on top of thick, milky hot chocolate, adding intense sweetness. Tod named it his favorite chocolate spot of the day."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Reuben's Reuben",
@@ -985,7 +1034,8 @@
     "sentiment": "positive",
     "notes": "Described as \"the barbecue king\" who has reinvented the hot dog, served with a gravy dunk pot on the side that will \"beat your Christmas dinner.\""
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Breadhead Bakery",
@@ -1003,7 +1053,8 @@
     "sentiment": "positive",
     "notes": "Brought their famous creme brulee donut alongside classics including pistachio varieties."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Duck Shed",
@@ -1021,7 +1072,8 @@
     "sentiment": "positive",
     "notes": "Serving Christmas sandwich with jam, stuffing, duck, and camembert that Tod looks forward to every Christmas."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Truffle Burger",
@@ -1039,7 +1091,8 @@
     "sentiment": "positive",
     "notes": "Offering dry-aged beef patties with truffle mayo and crispy onions."
    }
-  ]
+  ],
+  "placeId": "eb6f91c62549"
  },
  {
   "name": "My Diesel",
@@ -1057,7 +1110,8 @@
     "sentiment": "positive",
     "notes": "Bringing Mexican flair to the Christmas market."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Crisp Pizza / The Mulra",
@@ -1075,7 +1129,8 @@
     "sentiment": "positive",
     "notes": "A new pub opening in Mayfair featuring a candle-lit New York style basement pizzeria. Tod praised the pints (10/10, super creamy) and the pizzas, highlighting the crisp W6 with its perfect base and the grandma style veteran with its meaty pepperoni and hot honey, describing the quality as exceptional and noting that no one else is doing it like this."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Italian Bear Chocolate",
@@ -1093,7 +1148,8 @@
     "sentiment": "mixed",
     "notes": "They coat cups with white, milk, and dark chocolate then fill with more chocolate at £10-20 per cup. Tod found it unbelievably rich with a lot of wastage."
    }
-  ]
+  ],
+  "placeId": "9b5037ccfeb5"
  },
  {
   "name": "Danieli",
@@ -1111,7 +1167,8 @@
     "sentiment": "positive",
     "notes": "Serves London's thickest hot chocolate for £4-5 with a lovely tartness. Tod recommends pairing it with their pistachio dunk cakes."
    }
-  ]
+  ],
+  "placeId": "79e0ba69e48c"
  },
  {
   "name": "Lint",
@@ -1129,7 +1186,8 @@
     "sentiment": "positive",
     "notes": "They pour melted chocolate into a milk frother allowing customers to customize their drink to taste perfectly sweet, chocolatey, and milky."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Dark Sugars",
@@ -1147,7 +1205,8 @@
     "sentiment": "positive",
     "notes": "Loads hot chocolate with chocolate flakes and a mix of dark, milk, and white chocolate, creating an indulgent experience."
    }
-  ]
+  ],
+  "placeId": "82d88a28edcf"
  },
  {
   "name": "Sandwich Sandwich",
@@ -1181,7 +1240,8 @@
     "sentiment": "positive",
     "notes": "Tod praised the monster sandwiches highly, describing them as \"unbelievable\" and \"bang in.\" He was impressed with the new menu items including the chicken Caesar salad sandwich, Scotch egg sandwich, and Reuben, stating he was \"in love with every sandwich\" he tried from the restaurant."
    }
-  ]
+  ],
+  "placeId": "3dec3be33a97"
  },
  {
   "name": "Arthur's Market",
@@ -1199,7 +1259,8 @@
     "sentiment": "positive",
     "notes": "A newly opened grocery store featuring a fish counter with live tuna cutting twice weekly, a sushi bar in the center, a Japanese produce section, a butchery with specialist steaks from the Basque country, and an in-house Basque restaurant where customers can have their chosen meat or fish cooked on a charcoal grill. Tod was impressed by the raw prawn sushi roll and the langustines and Ruby Gala steak prepared at the restaurant."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Manzi",
@@ -1217,7 +1278,8 @@
     "sentiment": "positive",
     "notes": "The oldest pie mash shop in London with an unchanged recipe dating back to the early 1800s. Tod highlights the quality of the traditional beef mince pies, creamy mash, and liquor gravy, emphasizing the historical significance and craftsmanship of the freshly made pies baked in antique ovens."
    }
-  ]
+  ],
+  "placeId": "f009884469cd"
  },
  {
   "name": "The Dorchester Grill Room",
@@ -1235,7 +1297,8 @@
     "sentiment": "positive",
     "notes": "Tod praised the lamb chops as his favorite part of the meal, rating them 10 out of 10. He was impressed with the beef Wellington cooked to perfection, tableside beef tartare, grilled shellfish platter, and heritage breed tomahawk steak with exceptional bone marrow, though he found the baked Alaska dessert disappointing."
    }
-  ]
+  ],
+  "placeId": "31066178f2ed"
  },
  {
   "name": "Poor Boys",
@@ -1253,7 +1316,8 @@
     "sentiment": "positive",
     "notes": "Known for their poor boy subs, bringing southern fried chicken and a Christmas special to the festival. They are one of the highlighted traders at Wing Jam."
    }
-  ]
+  ],
+  "placeId": "d3c9124d27d5"
  },
  {
   "name": "Chicken Bandits",
@@ -1271,7 +1335,8 @@
     "sentiment": "positive",
     "notes": "Returning trader known for their popping candy wing. Tod expresses amazement at their inventive wing creations."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Foul",
@@ -1289,7 +1354,8 @@
     "sentiment": "positive",
     "notes": "From the creators of chicken head pie, pioneering fried chicken in London. Tod highlights them as a notable addition to the festival."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "The Guinea Grill",
@@ -1307,7 +1373,8 @@
     "sentiment": "positive",
     "notes": "Historic pub dating back to 1675 famous for its Sunday roast and lamb chops cooked on the grill. Tod praised the perfectly executed roast dinner with great beef, fluffy roast potatoes, savory pancake, and crackling, noting it reminds him of his grandma's cooking and that the Guinness is creamy and excellent."
    }
-  ]
+  ],
+  "placeId": "af779f1eb805"
  },
  {
   "name": "Empire",
@@ -1325,7 +1392,8 @@
     "sentiment": "positive",
     "notes": "A boutique Punjabi restaurant famous for their lobster biryani. Tod describes it as a potential new favourite, praising the fresh tandoor-roasted meats, crispy masala chips, moist and flavourful biryani with whole lobster, perfectly balanced paneer maccani, and a standout galop meringue cheesecake that ranks among his top five meals of the year."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Mother Flipper",
@@ -1343,7 +1411,8 @@
     "sentiment": "positive",
     "notes": "Uses 30-day dry-aged beef patties that are pressed to retain juices. Offers burgers like the double dirty barbie with candied bacon, American cheese, caramelized onions, and homemade BBQ sauce, plus exclusive Uber Eats deals and in-house fried chicken with homemade Korean sauce."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Regency",
@@ -1361,7 +1430,8 @@
     "sentiment": "positive",
     "notes": "Described as the best desi pub in London with exceptional mixed grill and tandoori dishes. The 2.5kg leg of lamb sharing dish (£64.50 for six people) was called the best value for money lamb sharing dish Tod has had, with meat that falls apart and incredible flavour from approximately 50 spices."
    }
-  ]
+  ],
+  "placeId": "7782a8e21e29"
  },
  {
   "name": "Teml Crown",
@@ -1379,7 +1449,8 @@
     "sentiment": "positive",
     "notes": "A desi pub serving Indian-British fusion roasts. Tod praised their handmade onion bhajees as \"the best onion bargie I've ever put in my mouth,\" the masala lamb shank roast cooked for 6 hours with incredible depth of flavor, and their soft, crispy, buttery rotties."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Ebby",
@@ -1405,7 +1476,8 @@
     "sentiment": "positive",
     "notes": "London's highest-rated steakhouse and 11th best steakhouse in the world. Specializes in Basque steak perfection with dry-aged Galician blonde beef, led by meat master Richard Foster. Tod and Adam were extremely impressed with the quality, tenderness, and flavor of the steaks, describing them as exceptional and comparing the experience to 'primordial steak.'"
    }
-  ]
+  ],
+  "placeId": "2272e59a90c6"
  },
  {
   "name": "Smacks",
@@ -1423,7 +1495,8 @@
     "sentiment": "positive",
     "notes": "Tod praised their in-house minced beef patties with amazing crust, creamy homemade sauce, and soft buttery Martins potato rolls. He also highlighted their new Nashville fried chicken range, featuring crispy battered chicken marinated in buttermilk and coated with a punchy, fiery Nashville seasoning rub."
    }
-  ]
+  ],
+  "placeId": "2fbb29ee101e"
  },
  {
   "name": "Electric Collection",
@@ -1441,7 +1514,8 @@
     "sentiment": "positive",
     "notes": "Tod tried 12 fruit pastries costing £86 total. He was impressed by the crunch, variety of flavours (mango, apple, lemon, raspberry, strawberry, coconut), and intricate design, though he didn't enjoy the coconut pastry."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Cedric Relay",
@@ -1459,7 +1533,8 @@
     "sentiment": "neutral",
     "notes": "Mentioned as a reference point for viral fruit pastries, charging £25 for an edible fruit pastry. No direct review or sentiment expressed."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Handpulled Noodle Shop",
@@ -1477,7 +1552,8 @@
     "sentiment": "positive",
     "notes": "The most famous handpulled noodle shop in London serving noodles until 5am with a Chinese buffet at front and noodle makers at back. Tod praised the handpulled noodles with beef for perfect texture and braised beef, calling the hand-cut noodles with charu pork 'a steal' at £10, though found some dishes slightly slimy."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "From the Ashes at the Ned",
@@ -1495,7 +1571,8 @@
     "sentiment": "positive",
     "notes": "Hosting a collaboration with Interstellar, a Texas smokehouse, featuring pit masters from Austin serving Texas barbecue classics including 12-hour smoked Australian Wagyu brisket, short ribs, peach tea glazed pork belly bites, slow-cooked lamb, cowboy beans, jalapeño and cheddar sausage, and smoked duck legs. Tod praised the food highly and expressed gratitude to the owner John for bringing this experience to London."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Legado",
@@ -1513,7 +1590,8 @@
     "sentiment": "positive",
     "notes": "A new Spanish restaurant featuring woodfired ovens imported from Spain and multiple cooking stations. Tod praised the grilled octopus, stewed oxtails, suckling pig, and woodfired milkfed lamb's leg as exceptional dishes, calling the suckling pig \"hands down one of the best\" he's ever had."
    }
-  ]
+  ],
+  "placeId": "70e429903a86"
  },
  {
   "name": "Lura",
@@ -1531,7 +1609,8 @@
     "sentiment": "positive",
     "notes": "A Spanish institution in London famous for their Basque cheesecake. Tod praised multiple dishes including the 40-day dry-aged ribeye, lobster with smoky pepper sauce, and the cheesecake which he described as one of the best he's ever had."
    }
-  ]
+  ],
+  "placeId": "0d9893f04dcc"
  },
  {
   "name": "Vanilla",
@@ -1549,7 +1628,8 @@
     "sentiment": "positive",
     "notes": "A new banana pudding shop serving fresh puddings made daily in the window at around £7 per portion. Tod was extremely impressed with the classic banana pudding, praising its layers, creamy vanilla custard texture, and mousselike pudding, and found it comparable to the original Magnolia Bakery in New York."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Humo",
@@ -1567,7 +1647,8 @@
     "sentiment": "positive",
     "notes": "A unique fire experience featuring a 4m bespoke grill with handmade cooking tools, led by chef Robbie Jameson who achieved a Michelin star within 8 months of opening. Tod praised multiple dishes including hand-dived scallops, Scottish lobster, 30-day aged wood-fired lamb, and innovative preparations like year-aged tuna and black truffle cauliflower cheese."
    }
-  ]
+  ],
+  "placeId": "138e337f1897"
  },
  {
   "name": "Yangop Malatang",
@@ -1585,7 +1666,8 @@
     "sentiment": "positive",
     "notes": "A DIY hot pot restaurant where customers fill bowls with over 80 ingredients and choose from six types of noodles, then have chefs cook them in broths ranging from herbal beef bone to peanut butter dry spice. Tod praised the dumplings, beef broth's rich umami flavor, and the dry spice mix with peanut butter sauce, with each pot costing around £20."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Bang Bang Oriental",
@@ -1603,7 +1685,8 @@
     "sentiment": "positive",
     "notes": "London's biggest Asian food hall with over 40 traders offering Indian, Malaysian, Korean, Chinese, and Japanese cuisine. Tod completed a £100 challenge sampling Taiwanese fried chicken, orange chicken and noodles, Cantonese roast duck, nasty lac, fried sea bass, ramen, and bing soo dessert."
    }
-  ]
+  ],
+  "placeId": "16eccf32efbc"
  },
  {
   "name": "Four Seasons",
@@ -1629,7 +1712,8 @@
     "sentiment": "mixed",
     "notes": "Cantonese roast meat spot serving roast duck, roast pork, and crispy pork belly. Tod praised the pork belly and duck but docked points because the food wasn't piping hot and the duck skin could have been crispier."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Yo, Tokyo",
@@ -1647,7 +1731,8 @@
     "sentiment": "positive",
     "notes": "Prepares sushi to order and serves ramen with a broth that has been boiling for days and perfectly chewy noodles."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Hot Grubs",
@@ -1665,7 +1750,8 @@
     "sentiment": "positive",
     "notes": "A roadside Caribbean restaurant where Alex hand-builds everything from scratch, including jerk cooking equipment from oil drums. Tod was particularly impressed by the jerk chicken with crispy skin and tender meat, the rice and peas with creamy coconut flavor, and the festival (dumpling-donut hybrid) paired with curry goat, which he called a 'mouth wobbler.'"
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Jeremy's Burger Joint",
@@ -1683,7 +1769,8 @@
     "sentiment": "positive",
     "notes": "Chef Jeremy, who trained at Michelin star restaurants, creates burgers from scratch with homemade buns, chipotle ketchup, and dry-aged bacon. Tod describes the attention to detail as exceptional and the burgers as some of the best he's tried, along with fresh-made fries with homemade garlic and rosemary oil."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Buning",
@@ -1701,7 +1788,8 @@
     "sentiment": "negative",
     "notes": "Korean corn dog battered in noodles and filled with mozzarella cheese. Tod found it edible but lacking in flavor and nutritional value, describing it as just fried cheese with no real taste."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Bun House",
@@ -1719,7 +1807,8 @@
     "sentiment": "positive",
     "notes": "Specializes in custard buns that are filled with creamy custard yolk and carrot juice. Tod praised it as one of the places in Chinatown that really tastes good, with fantastic texture and flavor."
    }
-  ]
+  ],
+  "placeId": "341cd93b24f0"
  },
  {
   "name": "Deep Fried Chicken / Bubble the JG Chicken",
@@ -1737,7 +1826,8 @@
     "sentiment": "positive",
     "notes": "Taiwanese fried chicken popcorn with curry, garlic, cheese, chili, and garlic seasonings. Tod gave it a perfect 10/10, calling it delicious and noting the seasoning makes it require no dipping sauce."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Wonky",
@@ -1755,7 +1845,8 @@
     "sentiment": "negative",
     "notes": "Described as the rudest restaurant in Chinatown with a 3.5 rating online. Cash only with no service charge policy; Tod's interaction at the beginning suggests a dismissive service experience."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "74 Juke",
@@ -1773,7 +1864,8 @@
     "sentiment": "positive",
     "notes": "A newly opened Parisian brasserie viral for their dessert selection. Tod praised nearly every dish including the Duchess potato, wagyu burger, fillet steak with peppercorn sauce, king prawns with cognac thermidor sauce, and salted milk chocolate cookies, though he criticized the £9 portion of chips as overpriced."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "The White Cross",
@@ -1791,7 +1883,8 @@
     "sentiment": "positive",
     "notes": "A unique pub that floods at high tide, offering roast dinners on Sundays and fish and chips. Tod praised the Yorkshire puddings and fish and chips particularly, highlighting the crunch and overall quality of the food service even during flood conditions."
    }
-  ]
+  ],
+  "placeId": "5d8f638cb37a"
  },
  {
   "name": "Watan",
@@ -1809,7 +1902,8 @@
     "sentiment": "positive",
     "notes": "Afghan restaurant featuring a huge charcoal grill and curries made from scratch. Tod praised the Afghan mixed grill (particularly lamb sheet kebabs and lamb chops), chicken kari served sizzling on the bone, oversized Afghan naan bread made to order, and the chapley kebab which he described as his favourite dish with insane flavour and crispy exterior."
    }
-  ]
+  ],
+  "placeId": "c4607a9c17c9"
  },
  {
   "name": "Harley's",
@@ -1827,7 +1921,8 @@
     "sentiment": "positive",
     "notes": "A butchery and rotisserie chicken shop featuring an imported Parisian rotisserie machine. The rotisserie chickens are exceptional with incredibly tender legs and delicate breast meat, served with potatoes cooked in chicken fat that burst with flavor."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "The Ritz",
@@ -1845,7 +1940,8 @@
     "sentiment": "positive",
     "notes": "A world-famous hotel with classically French cuisine with modern refinement, orchestrated by chef John Williams. The restaurant features exceptional theatre-style service with multiple trolleys, signature dishes like pigeon aless and chocolate soufflé, and an extensive 73-page wine list."
    }
-  ]
+  ],
+  "placeId": "3bb9d62c37b3"
  },
  {
   "name": "Wingmans",
@@ -1863,7 +1959,8 @@
     "sentiment": "positive",
     "notes": "Serves eight wings for £5 (60p per wing). Tod describes the Buffalo wing as his favorite wing of all time with sauce that is addictively good."
    }
-  ]
+  ],
+  "placeId": "cc9324723a98"
  },
  {
   "name": "Eco Pizza",
@@ -1881,7 +1978,8 @@
     "sentiment": "positive",
     "notes": "Open until 3 a.m. and offers one pound margarita pizzas (12p per slice) made fresh to order with free chili oil."
    }
-  ]
+  ],
+  "placeId": "d67e245c9b25"
  },
  {
   "name": "Schnitle Forever",
@@ -1899,7 +1997,8 @@
     "sentiment": "positive",
     "notes": "Offers £3 takeaway schnitzel (pork or chicken) hand-bashed to order with free garlic butter and lemon. Tod describes the combination as a match made in heaven."
    }
-  ]
+  ],
+  "placeId": "0de2469df8d3"
  },
  {
   "name": "Fluffy",
@@ -1917,7 +2016,8 @@
     "sentiment": "positive",
     "notes": "Serves souffle pancakes for £3 in London with flavors including creme brulee, pistachio, and tiramisu. Pancakes are described as super wiggly."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Bentley's",
@@ -1935,7 +2035,8 @@
     "sentiment": "positive",
     "notes": "Over 110 years old seafood restaurant headed by Richard Corrian. Features exceptional oysters, seafood platters, turbot finished with potted shrimp and butter carved tableside, and highly praised fish pie that Tod claims is the best he's ever had."
    }
-  ]
+  ],
+  "placeId": "d80f85b69216"
  },
  {
   "name": "Sanjugo",
@@ -1953,7 +2054,8 @@
     "sentiment": "positive",
     "notes": "Features three sushi masters handcrafting sushi rolls with a head chef from Tokyo. Offers exceptional A4 Wagyu prepared two ways (Wagyu nigiri and Wagyu beef roll with truffle), fresh seafood sushi, and a standout 'super donut' dish described as katsu curry with dumplings and meat skewers that Tod calls 'the definition of the perfect lunch.'"
    }
-  ]
+  ],
+  "placeId": "ab167b763273"
  },
  {
   "name": "Trap Kitchen",
@@ -1971,7 +2073,8 @@
     "sentiment": "positive",
     "notes": "Specializes in big seafood and meat platters. Highlights include Bang Bang prawns, jerk chicken, Cajun wings, mac and cheese, and lobster tail with butter sauce and Cajun rub. Mac and cheese praised as 'top tier' — creamy, cheesy with a hit of spice."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Bus Cafe",
@@ -1989,7 +2092,8 @@
     "sentiment": "positive",
     "notes": "Offers a full English breakfast with double eggs, double bacon, and double sausages plus a free cup of tea for £6."
    }
-  ]
+  ],
+  "placeId": "025571a7eecd"
  },
  {
   "name": "Lanzau",
@@ -2007,7 +2111,8 @@
     "sentiment": "positive",
     "notes": "Hand-cut noodles for £10, open until 5:00 a.m., with freshly pulled noodles and delicious broth."
    }
-  ]
+  ],
+  "placeId": null
  },
  {
   "name": "Dwat",
@@ -2025,6 +2130,7 @@
     "sentiment": "positive",
     "notes": "Serves a loaded kebab naan for £2.49 with fresh butter-brushed naan, two lamb sheet kebabs, homemade chili and garlic sauces, and salad."
    }
-  ]
+  ],
+  "placeId": null
  }
 ]
