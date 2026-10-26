@@ -401,7 +401,152 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
   })();
 
   // ─────────────────────────────────────────
-  // 6. RATING PANEL
+  // 6. GOOGLE PLACE INFO (Places API: rating, opening hours, a photo)
+  // ─────────────────────────────────────────
+  // Google's rules: only shown on the Google base map, with the Google Maps logo, the
+  // photographer credited and a link to the place on Google Maps. Only the Google place ID
+  // may be stored, so everything else is fetched fresh each time a place is opened.
+  // Cost: finding the place ID is free; details and the photo are each 1,000 free a month,
+  // and the daily caps set in Google Cloud stop it going past that.
+  const GooglePlaceInfo = (() => {
+    const API      = 'https://places.googleapis.com/v1';
+    const IDS_KEY  = 'scran-google-place-ids'; // SCRAN place → Google place ID ('' = not on Google)
+    const FIELDS   = 'id,displayName,location,rating,userRatingCount,priceLevel,currentOpeningHours,websiteUri,googleMapsUri,photos';
+    const PRICES   = { PRICE_LEVEL_INEXPENSIVE: '£', PRICE_LEVEL_MODERATE: '££', PRICE_LEVEL_EXPENSIVE: '£££', PRICE_LEVEL_VERY_EXPENSIVE: '££££' };
+    const el       = document.getElementById('panel-google');
+    const _details = new Map(); // fetched this visit, so reopening a place costs nothing
+
+    let _showing = null; // the place currently in the panel, so late replies for others are ignored
+
+    function _savedIds() {
+      try { return JSON.parse(localStorage.getItem(IDS_KEY)) || {}; } catch { return {}; }
+    }
+
+    function _saveId(key, googleId) {
+      try { localStorage.setItem(IDS_KEY, JSON.stringify({ ..._savedIds(), [key]: googleId })); } catch { /* ignore */ }
+    }
+
+    async function _call(path, options = {}, fields) {
+      const res = await fetch(`${API}/${path}`, {
+        ...options,
+        headers: { 'Content-Type': 'application/json', 'X-Goog-Api-Key': CONFIG.googleMapsKey, 'X-Goog-FieldMask': fields },
+      });
+      if (!res.ok) throw new Error(res.status === 429 ? 'limit' : `http_${res.status}`);
+      return res.json();
+    }
+
+    // Google's ID for the place with this name within ~150 m (the free "IDs only" search)
+    async function _findId({ name, lat, lon }) {
+      const d = 0.0015;
+      const data = await _call('places:searchText', {
+        method: 'POST',
+        body: JSON.stringify({
+          textQuery: name,
+          pageSize: 1,
+          locationRestriction: { rectangle: {
+            low:  { latitude: lat - d, longitude: lon - d * 1.6 },
+            high: { latitude: lat + d, longitude: lon + d * 1.6 },
+          } },
+        }),
+      }, 'places.id');
+      return data.places?.[0]?.id || '';
+    }
+
+    // The search can return a neighbour, so check the names share a word
+    function _sameName(a, b) {
+      const words = s => new Set(s.toLowerCase().replace(/&/g, 'and').split(/[^a-z0-9]+/)
+        .filter(w => w.length > 2 && !['the', 'and', 'restaurant', 'cafe', 'bar', 'pub', 'london'].includes(w)));
+      const wa = words(a), wb = words(b);
+      if (!wa.size || !wb.size) return a.toLowerCase().trim() === b.toLowerCase().trim();
+      return [...wa].some(w => wb.has(w));
+    }
+
+    async function _load(place) {
+      const ids = _savedIds();
+      let googleId = ids[place.key];
+      if (googleId === undefined) {
+        googleId = await _findId(place);
+        _saveId(place.key, googleId);
+      }
+      if (!googleId) return null;
+      if (!_details.has(googleId)) {
+        const details = await _call(`places/${googleId}?languageCode=en-GB&regionCode=GB`, {}, FIELDS);
+        _details.set(googleId, _sameName(place.name, details.displayName?.text || '') ? details : null);
+      }
+      return _details.get(googleId);
+    }
+
+    function _hoursHtml(hours) {
+      if (!hours) return '';
+      const status = hours.openNow != null
+        ? `<span class="g-${hours.openNow ? 'open' : 'closed'}">${hours.openNow ? 'Open now' : 'Closed now'}</span>` : '';
+      const days = hours.weekdayDescriptions || [];
+      if (!days.length) return status;
+      const today = (new Date().getDay() + 6) % 7; // Google lists Monday first
+      const list = days.map((d, i) => `<li${i === today ? ' class="g-today"' : ''}>${escapeHtml(d)}</li>`).join('');
+      return `<details class="g-hours"><summary>${status || 'Opening hours'}</summary><ul>${list}</ul></details>`;
+    }
+
+    function _photoHtml(photo) {
+      if (!photo) return '';
+      const src = `${API}/${photo.name}/media?maxWidthPx=600&key=${CONFIG.googleMapsKey}`;
+      const credit = (photo.authorAttributions || []).map(a =>
+        a.uri ? `<a href="${escapeHtml(a.uri)}" target="_blank" rel="noopener">${escapeHtml(a.displayName)}</a>` : escapeHtml(a.displayName)
+      ).join(', ');
+      return `<figure class="g-photo"><img src="${escapeHtml(src)}" alt="" loading="lazy">
+        ${credit ? `<figcaption>Photo: ${credit}</figcaption>` : ''}</figure>`;
+    }
+
+    function _render(d) {
+      const summary = [
+        d.rating != null ? `<span class="g-rating">&#9733; ${d.rating.toFixed(1)}</span> <span class="g-muted">(${(d.userRatingCount || 0).toLocaleString('en-GB')})</span>` : '',
+        PRICES[d.priceLevel] ? `<span class="g-muted">${PRICES[d.priceLevel]}</span>` : '',
+      ].filter(Boolean).join(' · ');
+      const links = [
+        d.googleMapsUri ? `<a href="${escapeHtml(d.googleMapsUri)}" target="_blank" rel="noopener">View on Google Maps</a>` : '',
+        d.websiteUri ? `<a href="${escapeHtml(d.websiteUri)}" target="_blank" rel="noopener">Website</a>` : '',
+      ].filter(Boolean).join(' · ');
+      el.innerHTML = `
+        ${summary ? `<div class="g-summary">${summary}</div>` : ''}
+        ${_hoursHtml(d.currentOpeningHours)}
+        ${_photoHtml(d.photos?.[0])}
+        <div class="g-footer"><span class="g-logo">Google Maps</span><span class="g-links">${links}</span></div>`;
+    }
+
+    function _message(text) {
+      el.innerHTML = `<div class="g-muted">${text}</div>`;
+    }
+
+    // place: { key, name, lat, lon }
+    async function show(place) {
+      _showing = place.key;
+      el.innerHTML = '';
+      el.hidden = true;
+      try {
+        if (!await BaseMap.isGoogle()) return; // Google's terms: Places info only on a Google map
+        if (_showing !== place.key) return;
+        el.hidden = false;
+        _message('Loading Google info…');
+        const details = await _load(place);
+        if (_showing !== place.key) return;
+        if (details) _render(details);
+        else el.hidden = true;
+      } catch (e) {
+        if (_showing !== place.key) return;
+        console.warn('[SCRAN] Google place info failed:', e.message);
+        _message(e.message === 'limit' ? 'Google info has hit its daily limit — back tomorrow.' : 'Google info unavailable right now.');
+      }
+    }
+
+    function hide() {
+      _showing = null;
+    }
+
+    return { show, hide };
+  })();
+
+  // ─────────────────────────────────────────
+  // 7. RATING PANEL
   // ─────────────────────────────────────────
   const RatingPanel = (() => {
     const panel       = document.getElementById('rating-panel');
@@ -464,6 +609,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       _renderRatingButtons(stored ? stored.rating : null);
       noteEl.value = stored?.note || '';
       _updateStatusBtns(type, id);
+      GooglePlaceInfo.show({ key: `${type}/${id}`, name, lat, lon });
 
       panel.classList.remove('hidden');
       panel.getBoundingClientRect();
@@ -474,6 +620,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       panel.classList.remove('open');
       _hideTimer = setTimeout(() => panel.classList.add('hidden'), 400);
       _current = null;
+      GooglePlaceInfo.hide();
     }
 
     closeBtn.addEventListener('click', close);
@@ -530,7 +677,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
   // ─────────────────────────────────────────
   // ─────────────────────────────────────────
-  // 7. MY RESTAURANTS MANAGER
+  // 8. MY RESTAURANTS MANAGER
   // ─────────────────────────────────────────
   const MyListManager = (() => {
     const btn    = document.getElementById('list-toggle');
@@ -616,7 +763,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     return { init, refresh, filter };
   })();
 
-  // 8. FILTER BAR
+  // 9. FILTER BAR
   // ─────────────────────────────────────────
   const FilterBar = (() => {
     const AREA_COORDS = {
@@ -704,7 +851,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
   })();
 
   // ─────────────────────────────────────────
-  // 9. CREATOR LAYERS (YouTube reviewers)
+  // 10. CREATOR LAYERS (YouTube reviewers)
   // ─────────────────────────────────────────
   // To add a creator: add an entry here, a <key>-mode-btn in index.html,
   // and data/<key>.json from the pipeline.
@@ -886,7 +1033,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
   }
 
   // ─────────────────────────────────────────
-  // 10. BASE MAP (Google Map Tiles API, Esri if Google is unavailable)
+  // 11. BASE MAP (Google Map Tiles API, Esri if Google is unavailable)
   // ─────────────────────────────────────────
   const BaseMap = (() => {
     const API         = 'https://tile.googleapis.com';
@@ -1010,8 +1157,13 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     }
 
     // Try the saved Google session, then a fresh one, then fall back to Esri
-    async function init(map) {
+    let _started = null;
+    function init(map) {
       _map = map;
+      _started = _start();
+    }
+
+    async function _start() {
       try {
         _addGoogle(await _session(), async () => {
           try {
@@ -1025,11 +1177,17 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       }
     }
 
-    return { init };
+    // Whether the Google map is showing, once the first session request has finished
+    async function isGoogle() {
+      await _started;
+      return !!_logo;
+    }
+
+    return { init, isGoogle };
   })();
 
   // ─────────────────────────────────────────
-  // 11. APP (main controller)
+  // 12. APP (main controller)
   // ─────────────────────────────────────────
   const App = (() => {
     const creatorLayers = CREATORS.map(CreatorLayer);

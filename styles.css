@@ -405,6 +405,7 @@ html, body {
 }
 
 #rating-panel.open { transform: translateY(0); }
+#rating-panel { max-height: 85vh; overflow-y: auto; }
 #rating-panel.hidden { display: none; }
 
 .panel-handle {
@@ -459,6 +460,34 @@ html, body {
   margin: -2px 0 8px;
 }
 #panel-address:empty { display: none; }
+
+/* Google rating, hours and photo (GooglePlaceInfo in app.js) */
+#panel-google {
+  font-size: 0.85rem;
+  color: var(--text);
+  margin: -6px 0 18px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(0,0,0,0.04);
+}
+#panel-google[hidden] { display: none; }
+#panel-google a { color: var(--primary); }
+.g-muted { color: var(--text-muted); }
+.g-summary { margin-bottom: 6px; }
+.g-rating { font-weight: 700; color: #B9770E; }
+.g-open { color: var(--green); font-weight: 600; }
+.g-closed { color: var(--red); font-weight: 600; }
+.g-hours { margin-bottom: 8px; }
+.g-hours summary { cursor: pointer; }
+.g-hours summary::after { content: ' · Hours'; color: var(--text-muted); font-weight: normal; }
+.g-hours ul { list-style: none; margin: 6px 0 0; padding: 0; color: var(--text-muted); line-height: 1.6; }
+.g-hours .g-today { color: var(--text); font-weight: 600; }
+.g-photo { margin: 8px 0; }
+.g-photo img { display: block; width: 100%; height: 170px; object-fit: cover; border-radius: 8px; background: rgba(0,0,0,0.06); }
+.g-photo figcaption { font-size: 0.72rem; color: var(--text-muted); margin-top: 4px; }
+.g-footer { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 8px; }
+.g-logo { font: 500 0.8rem/1 Roboto, Arial, sans-serif; color: #5F6368; white-space: nowrap; }
+.g-links { font-size: 0.8rem; text-align: right; }
 
 #panel-cuisine {
   display: flex;
