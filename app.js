@@ -956,15 +956,20 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       const rating = creatorRating(restaurant);
       const mentions = restaurant.mentions.map(m => {
         // Other platforms can supply `url`; YouTube picks only have the video ID
-        const url = m.url || `https://youtube.com/watch?v=${encodeURIComponent(m.videoId)}`;
+        // `at` is the moment in the video the place comes up, in seconds
+        const url = m.url || `https://youtube.com/watch?v=${encodeURIComponent(m.videoId)}${m.at ? `&t=${m.at}s` : ''}`;
         const mentionRating = m.rating != null
           ? `<div class="creator-mention-rating">&#11088; ${normalizeRating(m.rating, m.rating_out_of)}/10</div>` : '';
+        const dishes = m.dishes?.length
+          ? `<div class="creator-mention-dishes">Try: ${m.dishes.map(escapeHtml).join(', ')}</div>` : '';
         return `<div class="creator-mention">
           <div class="creator-mention-title">
+            ${m.sponsored ? '<span class="creator-mention-ad" title="Paid partnership or sponsored video">Ad</span>' : ''}
             <a href="${escapeHtml(url)}" target="_blank" rel="noopener">&#9654; ${escapeHtml(m.videoTitle)}</a>
           </div>
           ${mentionRating}
           <div class="creator-mention-notes">${escapeHtml(m.notes)}</div>
+          ${dishes}
         </div>`;
       }).join('');
       return `<div class="creator-verdict" style="--creator-colour:${creator.colour};--creator-text:${creator.textColour}">

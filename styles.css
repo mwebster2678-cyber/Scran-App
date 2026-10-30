@@ -827,6 +827,12 @@ html, body {
 .creator-mention-title a:hover { text-decoration: underline; }
 .creator-mention-rating { font-size: 0.85rem; font-weight: 700; color: var(--creator-text); margin-bottom: 4px; }
 .creator-mention-notes { font-size: 0.82rem; color: var(--text); line-height: 1.5; }
+.creator-mention-dishes { font-size: 0.78rem; color: var(--text-muted); margin-top: 4px; }
+.creator-mention-ad {
+  display: inline-block; vertical-align: 1px; margin-right: 4px;
+  border: 1px solid var(--text-muted); border-radius: 4px; padding: 0 4px;
+  font-size: 0.65rem; font-weight: 700; color: var(--text-muted);
+}
 
 /* ── Rated Panel ── */
 
