@@ -9,7 +9,9 @@
 // Usage: node verify.js <creator> --dry-run     fetch video details (free) and estimate the cost
 //        node verify.js <creator> --limit 5     check the first 5 videos only
 //        node verify.js <creator>               check everything (resumes where it left off)
-//        add --transcripts to also read video transcripts (needs a working yt-dlp)
+//        node verify.js <creator> --recheck     check again the videos that have unsure picks
+//        node verify.js <creator> --only <id,id> check again just these videos
+//        add --transcripts to also read video transcripts and chapters (needs a working yt-dlp)
 //
 // Reads <creator>-scraped.json (+ -geocoded.json for current locations) → writes <creator>-verified.json,
 // which geocode.js then uses instead of the scraped file.
@@ -18,7 +20,8 @@ import { execFile } from 'child_process';
 import { promisify } from 'util';
 import Anthropic from '@anthropic-ai/sdk';
 import { creatorFromArgs, nameKey } from './shared.js';
-import { PLACES_FILE, squash, similarity, metres } from './link.js';
+import { PLACES_FILE, squash, similarity, metres, sameName } from './link.js';
+import { loadKnown, findKnown } from './known.js';
 
 const MODEL          = 'claude-haiku-4-5-20251001';
 const PRICE          = { input: 1 / 1e6, output: 5 / 1e6 }; // US$ per token for MODEL
@@ -30,6 +33,8 @@ const CACHE_DIR      = 'cache';
 const creator     = creatorFromArgs();
 const DRY_RUN     = process.argv.includes('--dry-run');
 const TRANSCRIPTS = process.argv.includes('--transcripts');
+const RECHECK     = process.argv.includes('--recheck');
+const ONLY        = process.argv.includes('--only') ? process.argv[process.argv.indexOf('--only') + 1].split(',') : null;
 const LIMIT       = Number(process.argv[process.argv.indexOf('--limit') + 1]) || Infinity;
 const OUTPUT      = `${creator.key}-verified.json`;
 
@@ -73,6 +78,23 @@ async function transcript(videoId) {
   return text || null;
 }
 
+// YouTube's chapters (often generated automatically, and they tend to spell the
+// restaurant's name correctly where captions mishear it), as [{ start, title }]
+async function chapters(videoId) {
+  const cacheFile = `${CACHE_DIR}/${videoId}.chapters.json`;
+  if (fs.existsSync(cacheFile)) return JSON.parse(fs.readFileSync(cacheFile, 'utf8'));
+  let list = [];
+  try {
+    const { stdout } = await promisify(execFile)(YT_DLP, ['--cookies', 'cookies.txt', '--skip-download',
+      '--print', '%(chapters)j', `https://www.youtube.com/watch?v=${videoId}`], { timeout: 60_000 });
+    list = (JSON.parse(stdout.trim()) || []).map(c => ({ start: Math.round(c.start_time), title: c.title }));
+  } catch { /* no chapters */ }
+  fs.writeFileSync(cacheFile, JSON.stringify(list));
+  return list;
+}
+
+const clock = s => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
+
 // Caption lines as plain text, with a [m:ss] marker every 30 seconds or so
 // so Claude can say when in the video a place comes up
 function captionText(vtt) {
@@ -85,7 +107,7 @@ function captionText(vtt) {
     const line = raw.replace(/<[^>]+>/g, '').trim();
     if (!line || line === previous) continue;
     if (start - lastMarker >= 30) {
-      out.push(`[${Math.floor(start / 60)}:${String(start % 60).padStart(2, '0')}]`);
+      out.push(`[${clock(start)}]`);
       lastMarker = start;
     }
     out.push(line);
@@ -100,10 +122,11 @@ const { places } = JSON.parse(fs.readFileSync(PLACES_FILE, 'utf8'));
 const placeRows = places.map(([id, name, lat, lon, , , address]) => ({ id, name, lat, lon, address, key: squash(name) }));
 
 // Real places the pick might be: similar names near its current location, plus the
-// most similar names anywhere in London (for picks placed in the wrong spot)
+// most similar names anywhere in London (for picks placed in the wrong spot). Names
+// must look alike, so a wrong old pin doesn't bring in every shop next to it.
 function candidates(name, at) {
   const key = squash(name);
-  const scored = placeRows.map(p => ({ p, score: similarity(key, p.key) }));
+  const scored = placeRows.map(p => ({ p, score: similarity(key, p.key) })).filter(({ p }) => sameName(name, p.name));
   const near = at
     ? scored.filter(({ p }) => metres(at, p) < 400).sort((a, b) => b.score - a.score).slice(0, 6)
     : [];
@@ -154,19 +177,19 @@ const TOOL = {
   },
 };
 
-function prompt(video, details, text, picks) {
+function prompt(video, details, text, chapterList, picks) {
   return `You are checking restaurant picks taken from a YouTube video by ${creator.name} (@${creator.channel}), a London food creator. The picks were extracted automatically and may be wrong. SCRAN, a restaurant map, will show the kept ones under ${creator.name}'s name, so only ${creator.name}'s own first-hand opinions may be kept.
 
 For each restaurant listed, decide:
 - keep = true only if ${creator.name} personally visited and gave their own opinion of it (reason "own_review"). Visiting together with a guest still counts if ${creator.name} eats there and gives their own view.
 - Otherwise keep = false with the reason:
-  - "guest_recommendation": a guest, chef or interviewee recommends or names it (e.g. a "Best of London" or "where chefs eat" list) and ${creator.name} doesn't review it themself.
+  - "guest_recommendation": a guest, chef or interviewee recommends or names it and ${creator.name} doesn't review it themself. A guest listing their favourite places or dishes (e.g. a chef's "Top 5 dishes", a "Best of London" street interview) is always this, however vividly the guest describes the food, unless ${creator.name} is also shown eating there and gives their own view. Lists voted for by others still count as "own_review" for each place ${creator.name} then visits and eats at in the video.
   - "guest_own_place": it's the guest's own restaurant, mentioned to introduce them, not reviewed by ${creator.name}.
   - "event_stall": a stall at an event, festival or market that ${creator.name} organised or runs. Stalls at a permanent food hall or market reviewed by ${creator.name} are "own_review".
   - "not_london": outside London.
   - "not_a_place_to_eat": not a restaurant, café, bar, pub, bakery or food stall (e.g. a shop, cookery school, a person's home, a brand).
   - "only_mentioned": named in passing without being reviewed.
-- name: the restaurant's correct name. Names from speech are often misheard — correct them using the description, title and candidate places.
+- name: the restaurant's correct name. Names from speech are often misheard — correct them using the chapters, description, title and candidate places. Chapter titles usually spell the name correctly.
 - placeId: the id of the candidate place that is this restaurant (same business; the right branch if it has several), or null if none is.
 - sponsored (for the whole video): true if the title or description says ad, AD, #ad, (ad), paid partnership, sponsored, "in partnership with", or YouTube flags paid promotion.
 - confident = false whenever you are unsure about keep, the name or the placeId.
@@ -176,7 +199,7 @@ Video title: ${video.title}
 YouTube paid promotion flag: ${details?.paidPromotion ? 'yes' : 'no'}
 Description:
 ${(details?.description || '(none)').slice(0, 4000)}
-${text ? `\nTranscript (automatic captions; no speaker names; [m:ss] marks the time):\n${text.slice(0, MAX_TRANSCRIPT)}\n` : ''}
+${chapterList?.length ? `\nChapters:\n${chapterList.map(c => `[${clock(c.start)}] ${c.title}`).join('\n')}\n` : ''}${text ? `\nTranscript (automatic captions; no speaker names; [m:ss] marks the time):\n${text.slice(0, MAX_TRANSCRIPT)}\n` : ''}
 Restaurants extracted from this video:
 ${picks.map((p, i) => `${i}. "${p.name}"${p.location ? ` (location given: ${p.location})` : ''}
    Extracted notes: ${p.notes || '(none)'}
@@ -191,7 +214,9 @@ async function main() {
   fs.mkdirSync(CACHE_DIR, { recursive: true });
   const videos = JSON.parse(fs.readFileSync(creator.files.scraped, 'utf8'))
     .filter(v => v.restaurants?.some(r => r.name && r.name !== 'null'));
-  const done = fs.existsSync(OUTPUT) ? JSON.parse(fs.readFileSync(OUTPUT, 'utf8')) : [];
+  let done = fs.existsSync(OUTPUT) ? JSON.parse(fs.readFileSync(OUTPUT, 'utf8')) : [];
+  if (RECHECK) done = done.filter(v => v.restaurants.every(r => r.confident));
+  if (ONLY) done = done.filter(v => !ONLY.includes(v.videoId));
   const doneIds = new Set(done.map(v => v.videoId));
   const todo = videos.filter(v => !doneIds.has(v.videoId)).slice(0, LIMIT);
 
@@ -212,7 +237,8 @@ async function main() {
       ...r, candidates: candidates(r.name, located.get(nameKey(r.name))),
     }));
     const text = TRANSCRIPTS ? await transcript(video.videoId) : null;
-    prompts.push({ video, picks, content: prompt(video, details[video.videoId], text, picks) });
+    const chapterList = TRANSCRIPTS ? await chapters(video.videoId) : null;
+    prompts.push({ video, picks, content: prompt(video, details[video.videoId], text, chapterList, picks) });
   }
 
   // ~4 characters per token; output is roughly 150 tokens per restaurant
@@ -223,6 +249,7 @@ async function main() {
   if (DRY_RUN) return;
   if (prompts.length > MAX_CALLS) throw new Error(`${prompts.length} calls is over the ${MAX_CALLS} limit`);
 
+  const known = loadKnown();
   const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
   let spent = 0;
   for (const [i, { video, picks, content }] of prompts.entries()) {
@@ -245,6 +272,12 @@ async function main() {
       restaurants: picks.map((pick, index) => {
         const check = result.restaurants.find(r => r.index === index);
         const { candidates, ...original } = pick;
+        // A place you confirmed on the review page settles where it is (Claude still decides keep/drop)
+        const confirmed = check && findKnown(known, { name: check.name, originalName: pick.name, area: check.area || pick.location });
+        if (confirmed) Object.assign(check, {
+          name: confirmed.name, placeId: confirmed.placeId, knownPlace: true,
+          confident: check.confident || (check.keep && check.reason === 'own_review'),
+        });
         return check
           // candidates are kept for unsure picks so the review page can offer them
           ? { ...original, originalName: pick.name, ...check, index: undefined, ...(check.confident ? {} : { candidates }) }

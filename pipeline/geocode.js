@@ -5,6 +5,7 @@
 import fs from 'fs';
 import { creatorFromArgs, nameKey, geocodeLondon } from './shared.js';
 import { PLACES_FILE } from './link.js';
+import { loadKnown, findKnown } from './known.js';
 
 const creator   = creatorFromArgs();
 const INPUT     = creator.files.scraped;
@@ -49,9 +50,10 @@ async function fromVerified() {
     }
   }
 
+  const known = loadKnown();
   const byPlace = new Map();
   const unplaced = [];
-  let dropped = 0, decided = 0;
+  let dropped = 0, decided = 0, fromKnown = 0;
   for (const video of videos) {
     for (const pick of video.restaurants) {
       const decision = decisions.get(`${video.videoId}:${pick.originalName}`);
@@ -59,10 +61,14 @@ async function fromVerified() {
       const keep = decision ? decision.keep : pick.keep;
       if (!keep) { dropped++; continue; }
 
-      const name    = decision?.name || pick.name;
-      const placeId = decision ? decision.placeId : pick.placeId;
+      // A place you confirmed for this restaurant in another video, when Claude wasn't sure here
+      const confirmed = !decision && (!pick.confident || !pick.placeId) ? findKnown(known, pick) : null;
+      if (confirmed) fromKnown++;
+      const answer  = decision || confirmed;
+      const name    = answer?.name || pick.name;
+      const placeId = answer ? answer.placeId : pick.placeId;
       let at = placeById.get(placeId)
-        ?? (decision?.lat ? { lat: decision.lat, lon: decision.lon } : null)
+        ?? (answer?.lat ? { lat: answer.lat, lon: answer.lon } : null)
         ?? previous.get(nameKey(name)) ?? previous.get(nameKey(pick.originalName));
       if (!at && decision?.manual) {
         const [best] = await geocodeLondon(`${decision.manual} London`).catch(() => []);
@@ -99,7 +105,7 @@ async function fromVerified() {
   });
 
   fs.writeFileSync(OUTPUT, JSON.stringify(results, null, 2));
-  console.log(`${creator.name}: ${results.length} restaurants from verified picks (${dropped} picks dropped, ${decided} decided by you) → ${OUTPUT}`);
+  console.log(`${creator.name}: ${results.length} restaurants from verified picks (${dropped} picks dropped, ${decided} decided by you, ${fromKnown} placed from your earlier answers) → ${OUTPUT}`);
   if (unplaced.length) console.log(`No location for ${unplaced.length} kept picks (not on the map):\n${unplaced.map(n => `  ${n}`).join('\n')}`);
 }
 

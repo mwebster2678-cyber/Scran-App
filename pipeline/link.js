@@ -52,6 +52,18 @@ function nameMatch(a, b) {
   return null;
 }
 
+// True if two names could be the same place: a distinctive word in common
+// ("The George Public House" / "The George Tavern") or a close spelling
+export function sameName(a, b) {
+  if (!a || !b) return false;
+  const da = distinctive(a).filter(w => !LOOSE.has(w)), db = distinctive(b).filter(w => !LOOSE.has(w));
+  return da.some(w => db.includes(w)) || similarity(da.join(''), db.join('')) >= 0.6;
+}
+const LOOSE = new Set(['public', 'cafe', 'bistro', 'canteen', 'diner', 'arms', 'head']);
+
+// Words that don't tell places apart, for the review page's own name matching
+export const NAME_STOPWORDS = [...GENERIC, ...LOOSE];
+
 export function metres(a, b) {
   const dy = (a.lat - b.lat) * 111320;
   const dx = (a.lon - b.lon) * 111320 * Math.cos(a.lat * Math.PI / 180);
