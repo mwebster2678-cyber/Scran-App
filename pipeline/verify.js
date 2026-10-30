@@ -23,7 +23,7 @@ import { PLACES_FILE, squash, similarity, metres } from './link.js';
 const MODEL          = 'claude-haiku-4-5-20251001';
 const PRICE          = { input: 1 / 1e6, output: 5 / 1e6 }; // US$ per token for MODEL
 const MAX_CALLS      = 400;    // hard stop, whatever happens
-const MAX_TRANSCRIPT = 15_000; // characters
+const MAX_TRANSCRIPT = 60_000; // characters
 const YT_DLP         = process.env.YT_DLP || 'yt-dlp';
 const CACHE_DIR      = 'cache';
 
@@ -67,14 +67,31 @@ async function transcript(videoId) {
       `https://www.youtube.com/watch?v=${videoId}`], { timeout: 60_000 });
   } catch { /* no transcript; fall back to the description */ }
   const vtt = [`${prefix}.en.vtt`, `${prefix}.en-orig.vtt`].find(f => fs.existsSync(f));
-  const text = vtt ? fs.readFileSync(vtt, 'utf8').split('\n')
-    .filter(l => l && !/^(WEBVTT|NOTE|Kind:|Language:|\d{2}:\d{2}|\d+$)/.test(l))
-    .map(l => l.replace(/<[^>]+>/g, '').trim())
-    .filter((l, i, all) => l && l !== all[i - 1])
-    .join(' ') : '';
+  const text = vtt ? captionText(fs.readFileSync(vtt, 'utf8')) : '';
   [`${prefix}.en.vtt`, `${prefix}.en-orig.vtt`].forEach(f => fs.rmSync(f, { force: true }));
   fs.writeFileSync(cacheFile, text);
   return text || null;
+}
+
+// Caption lines as plain text, with a [m:ss] marker every 30 seconds or so
+// so Claude can say when in the video a place comes up
+function captionText(vtt) {
+  const out = [];
+  let start = 0, lastMarker = -Infinity, previous = '';
+  for (const raw of vtt.split('\n')) {
+    const time = raw.match(/^(\d+):(\d{2}):(\d{2})\.\d+ -->/);
+    if (time) { start = +time[1] * 3600 + +time[2] * 60 + +time[3]; continue; }
+    if (!raw || /^(WEBVTT|NOTE|Kind:|Language:|\d+$)/.test(raw)) continue;
+    const line = raw.replace(/<[^>]+>/g, '').trim();
+    if (!line || line === previous) continue;
+    if (start - lastMarker >= 30) {
+      out.push(`[${Math.floor(start / 60)}:${String(start % 60).padStart(2, '0')}]`);
+      lastMarker = start;
+    }
+    out.push(line);
+    previous = line;
+  }
+  return out.join(' ');
 }
 
 // ─── Candidate places from places.json ──────────────────────────────────────
@@ -126,9 +143,10 @@ const TOOL = {
             verdict:   { type: 'string', description: 'If kept: the creator\'s opinion in at most 12 words. Empty if dropped.' },
             dishes:    { type: 'array', items: { type: 'string' }, description: 'Dishes the creator recommends there.' },
             confident: { type: 'boolean', description: 'false if a person should double-check this decision or the place match.' },
+            moment:    { type: ['string', 'null'], description: 'The [m:ss] transcript marker just before the creator talks about it, e.g. "4:30"; null without a transcript.' },
             why:       { type: 'string', description: 'One short sentence explaining the decision.' },
           },
-          required: ['index', 'keep', 'reason', 'name', 'placeId', 'area', 'notes', 'verdict', 'dishes', 'confident', 'why'],
+          required: ['index', 'keep', 'reason', 'name', 'placeId', 'area', 'notes', 'verdict', 'dishes', 'confident', 'why', 'moment'],
         },
       },
     },
@@ -152,12 +170,13 @@ For each restaurant listed, decide:
 - placeId: the id of the candidate place that is this restaurant (same business; the right branch if it has several), or null if none is.
 - sponsored (for the whole video): true if the title or description says ad, AD, #ad, (ad), paid partnership, sponsored, "in partnership with", or YouTube flags paid promotion.
 - confident = false whenever you are unsure about keep, the name or the placeId.
+- moment: the [m:ss] marker in the transcript just before the creator talks about the restaurant, so a person can jump to it.
 
 Video title: ${video.title}
 YouTube paid promotion flag: ${details?.paidPromotion ? 'yes' : 'no'}
 Description:
 ${(details?.description || '(none)').slice(0, 4000)}
-${text ? `\nTranscript (automatic captions; no speaker names):\n${text.slice(0, MAX_TRANSCRIPT)}\n` : ''}
+${text ? `\nTranscript (automatic captions; no speaker names; [m:ss] marks the time):\n${text.slice(0, MAX_TRANSCRIPT)}\n` : ''}
 Restaurants extracted from this video:
 ${picks.map((p, i) => `${i}. "${p.name}"${p.location ? ` (location given: ${p.location})` : ''}
    Extracted notes: ${p.notes || '(none)'}
@@ -225,10 +244,11 @@ async function main() {
       sponsored: result.sponsored,
       restaurants: picks.map((pick, index) => {
         const check = result.restaurants.find(r => r.index === index);
-        const { candidates: _, ...original } = pick;
+        const { candidates, ...original } = pick;
         return check
-          ? { ...original, originalName: pick.name, ...check, index: undefined }
-          : { ...original, originalName: pick.name, keep: false, reason: 'only_mentioned', confident: false, why: 'Claude returned no check for this pick' };
+          // candidates are kept for unsure picks so the review page can offer them
+          ? { ...original, originalName: pick.name, ...check, index: undefined, ...(check.confident ? {} : { candidates }) }
+          : { ...original, originalName: pick.name, keep: false, reason: 'only_mentioned', confident: false, why: 'Claude returned no check for this pick', candidates };
       }),
     });
     fs.writeFileSync(OUTPUT, JSON.stringify(done, null, 2)); // saved after every video

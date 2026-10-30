@@ -27,6 +27,13 @@ Tod's scraper also needs `yt-dlp` and a `cookies.txt` exported from a logged-in 
 
 Steps 1 and 2 call paid APIs; scraping resumes where it left off if re-run.
 
+Checking picks (before step 2; geocode.js doesn't read these yet):
+
+| Step | Command | Reads → writes |
+|---|---|---|
+| Check each pick with Claude | `YT_DLP=~/.local/bin/yt-dlp node verify.js <creator> --transcripts` | `-scraped` → `<creator>-verified.json` |
+| Review the unsure ones | `node build-verify-review.js`, open http://localhost:8000/pipeline/review-verify.html, Keep/Drop, Export | → `verify-decisions.json` |
+
 Step 5 links each pick to the matching place in `places.json` (`link.js`: same or similar name
 within 60–200 m), so the app shows one card per restaurant. Picks it can't link are listed —
 usually a misheard name or a wrong location — and still appear on the map as their own pins.
