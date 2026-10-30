@@ -139,348 +139,6 @@
   "bestRatingOutOf": null
  },
  {
-  "name": "Vincenzo's",
-  "location": "Shoreditch",
-  "lat": 51.5248524,
-  "lon": -0.0713985,
-  "placeId": null,
-  "mentions": [
-   {
-    "videoId": "n4Uwuho1HjU",
-    "videoTitle": "It’s finally here. Vincenzo’s New York style pizza has landed in Shoreditch. 🍕",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited and extensively reviewed this New York and New Haven style pizza restaurant. He praised the pizzas, particularly the vodka sauce pepperoni pizza and the innovative spanicopita pizza with mozzarella, feta, spinach and scotch bonnet honey.",
-    "verdict": "Exceptional New York style pizza, properly executed old school method.",
-    "dishes": [
-     "Vodka sauce pepperoni pizza",
-     "Spanicopita pizza"
-    ],
-    "sponsored": false,
-    "at": 0
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Brigadiers",
-  "location": "Bloomberg Arcade",
-  "lat": 51.51268,
-  "lon": -0.09177,
-  "placeId": "8fa33b6eb2a8",
-  "mentions": [
-   {
-    "videoId": "RdGAqs9iwGo",
-    "videoTitle": "Still need to book somewhere great? We’ve got you! ❤️🎄❤️",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Indian barbecue with smoky cocktails, beer towers, and barbecue butter chicken wings. Creator says it's so good it makes them tear up.",
-    "verdict": "Exceptional Indian barbecue restaurant, emotionally moving experience.",
-    "dishes": [
-     "Indian barbecue",
-     "smoky cocktails",
-     "beer towers",
-     "barbecue butter chicken wings"
-    ],
-    "sponsored": false,
-    "at": 0
-   },
-   {
-    "videoId": "AHUnqeRroYk",
-    "videoTitle": "Best Curry in London: Where Chefs Eat",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited and extensively reviewed. Praised the butter chicken wings as signature dish, bone marrow biryani, mixed grill, and fish paal bun. Part of voting compilation but Topjaw gives own detailed opinions throughout.",
-    "verdict": "Signature butter chicken wings phenomenal; diverse menu reflects UK food excellence.",
-    "dishes": [
-     "Barbecue buttered chicken wings",
-     "Bone marrow biryani",
-     "Mixed grill",
-     "Fish paal bun",
-     "Lamb ribeye skewer",
-     "Onion bhaji"
-    ],
-    "sponsored": false,
-    "at": 33
-   },
-   {
-    "videoId": "ds-Ix8VHQ68",
-    "videoTitle": "In at Number 5 for the Top 5 Curries in London - Brigadiers!",
-    "rating": 5,
-    "rating_out_of": 5,
-    "sentiment": "positive",
-    "notes": "Topjaw reviews Brigadiers as their number five pick for best curries in London. Despite not serving traditional curry, he praises their Indian barbecue food, beautifully spiced grilled meats, and unusual takes on classic Indian snacks including butter chicken wings, cheese and onion baas, fish pow, bone marrow biryani, and mixed grill.",
-    "verdict": "Number five for best curries in London; beautifully spiced.",
-    "dishes": [
-     "butter chicken wings",
-     "cheese and onion baa",
-     "fish pow",
-     "bone marrow biryani",
-     "mixed grill",
-     "goat shoulder with Roen Josh sauce"
-    ],
-    "sponsored": false,
-    "at": 0
-   }
-  ],
-  "bestRating": 5,
-  "bestRatingOutOf": 5
- },
- {
-  "name": "The George Public House",
-  "location": "Fitzrovia",
-  "lat": 51.5143195,
-  "lon": -0.0530234,
-  "placeId": "02250bccb886",
-  "mentions": [
-   {
-    "videoId": "RdGAqs9iwGo",
-    "videoTitle": "Still need to book somewhere great? We’ve got you! ❤️🎄❤️",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Proper London pub with new glue pot that fits up to 10 people, own Guinness tap, and specific menu. Can get weird and brilliant.",
-    "verdict": "Perfect festive London pub with unique group dining features.",
-    "dishes": [],
-    "sponsored": false,
-    "at": 8
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "The Parakeet",
-  "location": "Kentish Town",
-  "lat": 51.54978,
-  "lon": -0.14049,
-  "placeId": "dd6fca5094b8",
-  "mentions": [
-   {
-    "videoId": "RdGAqs9iwGo",
-    "videoTitle": "Still need to book somewhere great? We’ve got you! ❤️🎄❤️",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Gorgeous pub turned fine dining spot from Ben Allen. Great food, brilliant atmosphere, still feels like a local.",
-    "verdict": "Fine dining pub with local atmosphere and great food.",
-    "dishes": [],
-    "sponsored": false,
-    "at": 18
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "BLOODSPORTS by MEATliquor",
-  "location": null,
-  "lat": 51.51449,
-  "lon": -0.1249,
-  "placeId": "a0d857f1ff65",
-  "mentions": [
-   {
-    "videoId": "RdGAqs9iwGo",
-    "videoTitle": "Still need to book somewhere great? We’ve got you! ❤️🎄❤️",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Moody, mad, and full of energy. Menu by MEATliquor. Turbo margaritas and dead hippie cocktails recommended.",
-    "verdict": "Energetic restaurant with MEATliquor menu and great cocktails.",
-    "dishes": [
-     "turbo margaritas",
-     "dead hippie cocktails"
-    ],
-    "sponsored": false,
-    "at": 26
-   },
-   {
-    "videoId": "jIEhjCAUuCc",
-    "videoTitle": "4 Best New Restaurants in London",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw reviews this American-style sports/watching bar in Covent Garden as one of four best new restaurants. Features Meat Liquor food classics, 32 screens, karaoke, and a unique atmosphere with themed decor.",
-    "verdict": "Exciting place you can't get bored in with great burgers and atmosphere.",
-    "dishes": [
-     "Dead Hippie burger",
-     "onion rings",
-     "ramen crust mozzarella sticks"
-    ],
-    "sponsored": false,
-    "at": 401
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "The Montpelier",
-  "location": "Peckham",
-  "lat": 51.46767,
-  "lon": -0.07031,
-  "placeId": "8eb30d4fe55e",
-  "mentions": [
-   {
-    "videoId": "RdGAqs9iwGo",
-    "videoTitle": "Still need to book somewhere great? We’ve got you! ❤️🎄❤️",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Quietly become a foodie favorite. Michael Bagler in command of the kitchen serving damn tasty small plates.",
-    "verdict": "Foodie favorite serving tasty small plates under Michael Bagler.",
-    "dishes": [
-     "small plates"
-    ],
-    "sponsored": false,
-    "at": 35
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Sheba Restaurant",
-  "location": "Brick Lane",
-  "lat": 51.52066,
-  "lon": -0.07178,
-  "placeId": "ae0840c286b2",
-  "mentions": [
-   {
-    "videoId": "RdGAqs9iwGo",
-    "videoTitle": "Still need to book somewhere great? We’ve got you! ❤️🎄❤️",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Best Indian restaurant on Brick Lane among 23 curry houses. Full of flavor, noise and personality.",
-    "verdict": "Best Indian restaurant on Brick Lane, full of flavor and personality.",
-    "dishes": [],
-    "sponsored": false,
-    "at": 61
-   },
-   {
-    "videoId": "mCCHCiBI70M",
-    "videoTitle": "We find the 3 Best Indian Restaurants in London",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited and reviewed this multi-award winning curry house on Brick Lane. He praised it for covering variety and unique delicacies, reviewed the atari (selection of dishes including Bengal meat, chana dal, and lamb karai), and highlighted the quality value for money on Brick Lane.",
-    "verdict": "Multi-award winning curry house with great value and variety.",
-    "dishes": [
-     "Atari (tasting selection)",
-     "Bengal",
-     "Chana dal",
-     "Lamb karai"
-    ],
-    "sponsored": false,
-    "at": 671
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "The Culpeper",
-  "location": null,
-  "lat": 51.51692,
-  "lon": -0.07303,
-  "placeId": "8b79731f38c3",
-  "mentions": [
-   {
-    "videoId": "RdGAqs9iwGo",
-    "videoTitle": "Still need to book somewhere great? We’ve got you! ❤️🎄❤️",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Beautiful pub that somehow does it all. French pub food and electric shortage buzz.",
-    "verdict": "Elegant pub with French food and brilliant atmosphere.",
-    "dishes": [
-     "French pub food"
-    ],
-    "sponsored": false,
-    "at": 66
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Wildflowers Restaurant",
-  "location": "Pimlico",
-  "lat": 51.49045,
-  "lon": -0.15303,
-  "placeId": "0a76f2fafade",
-  "mentions": [
-   {
-    "videoId": "RdGAqs9iwGo",
-    "videoTitle": "Still need to book somewhere great? We’ve got you! ❤️🎄❤️",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Warm, intimate, and quite frankly magic. Topjaw predicts it will get a Michelin star in February next year.",
-    "verdict": "Magical restaurant predicted to receive Michelin star soon.",
-    "dishes": [],
-    "sponsored": false,
-    "at": 75
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "NIJŪ",
-  "location": null,
-  "lat": 51.50899279999999,
-  "lon": -0.1438217,
-  "placeId": null,
-  "mentions": [
-   {
-    "videoId": "RdGAqs9iwGo",
-    "videoTitle": "Still need to book somewhere great? We’ve got you! ❤️🎄❤️",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "One of Topjaw's favorite meals of the year. Hugely memorable sushi. From Endo at the Rotunda and Chris Golding. One of 18 locations in UK with Kobe license.",
-    "verdict": "Exceptional sushi experience, one of Topjaw's favorite meals.",
-    "dishes": [
-     "sushi",
-     "Kobe"
-    ],
-    "sponsored": false,
-    "at": 91
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Brasserie Zedel",
-  "location": "Soho",
-  "lat": 51.51058,
-  "lon": -0.13556,
-  "placeId": "cd3ed279cae4",
-  "mentions": [
-   {
-    "videoId": "RdGAqs9iwGo",
-    "videoTitle": "Still need to book somewhere great? We’ve got you! ❤️🎄❤️",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Grand, glitzy, and gloriously old school. Perfect for big festive night out without breaking the bank.",
-    "verdict": "Grand old-school brasserie perfect for festive celebrations.",
-    "dishes": [],
-    "sponsored": false,
-    "at": 110
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
   "name": "Guacamoles",
   "location": "Rye Lane Indoor Market, Peckham",
   "lat": 51.47122,
@@ -502,294 +160,6 @@
     ],
     "sponsored": false,
     "at": 0
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Dumplings' Legend",
-  "location": null,
-  "lat": 51.51177,
-  "lon": -0.13127,
-  "placeId": "d46c06c5cc12",
-  "mentions": [
-   {
-    "videoId": "NyKxz2DFAhY",
-    "videoTitle": "Chef Elliot Hashtroudi from Camille reveals his Top 5 dishes in #London",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Chef Elliot recommends the special beef tripe as one of his top 5 dishes in London.",
-    "verdict": "Incredible special beef tripe dish.",
-    "dishes": [
-     "special beef tripe"
-    ],
-    "sponsored": false,
-    "at": 0
-   },
-   {
-    "videoId": "vw8Pb8VbQu8",
-    "videoTitle": "The 3 Best Spots in London’s Chinatown ft. Big John",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited with Big John and tasted multiple dumpling types including spicy vegetable and pork, prawn and pork dumplings. Big John tried truffle and caviar for the first time here.",
-    "verdict": "Changed perception of Chinese food, excellent dumplings",
-    "dishes": [
-     "spicy vegetable dumpling",
-     "pork and prawn dumpling",
-     "prawn dumpling"
-    ],
-    "sponsored": false,
-    "at": 0
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Smoking Goat",
-  "location": "Shoreditch",
-  "lat": 51.52425,
-  "lon": -0.077,
-  "placeId": "8128c7b55d2d",
-  "mentions": [
-   {
-    "videoId": "NyKxz2DFAhY",
-    "videoTitle": "Chef Elliot Hashtroudi from Camille reveals his Top 5 dishes in #London",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Chef Elliot praises the fish sauce chilli wings as worth traveling to London for.",
-    "verdict": "Fish sauce chilli wings worth traveling for.",
-    "dishes": [
-     "fish sauce chilli wing"
-    ],
-    "sponsored": false,
-    "at": 0
-   },
-   {
-    "videoId": "ZINVMbuil-w",
-    "videoTitle": "Michelin Star chef Nieves Barragan from Sabor & Legado gives us her Top 5 dishes in #London",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Michelin Star chef Nieves Barragan recommends their pan fried squid with salted duck egg as one of her top 5 dishes in London.",
-    "verdict": "Super tender, super tasty squid dish.",
-    "dishes": [
-     "Stir fried squid with salted duck egg"
-    ],
-    "sponsored": false,
-    "at": 0
-   },
-   {
-    "videoId": "Hc1fQrbgp9k",
-    "videoTitle": "The Best Fried Chicken Spots in London - ft. 6 Spots You Must Visit",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Thai barbecue specialist with exceptional wings. Sweet, sour, fish sauce with coriander and shallots. Pricey but fantastic.",
-    "verdict": "Best wings in Shoreditch; pricey but phenomenal quality.",
-    "dishes": [
-     "Thai barbecue wings"
-    ],
-    "sponsored": false,
-    "at": 447
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Tasty Jerk",
-  "location": "Crystal Palace",
-  "lat": 51.39874,
-  "lon": -0.08855,
-  "placeId": "d24e0f87405b",
-  "mentions": [
-   {
-    "videoId": "NyKxz2DFAhY",
-    "videoTitle": "Chef Elliot Hashtroudi from Camille reveals his Top 5 dishes in #London",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Chef Elliot recommends the jerk goat curry as one of his top 5 dishes in London.",
-    "verdict": "Excellent jerk goat curry.",
-    "dishes": [
-     "jerk goat curry"
-    ],
-    "sponsored": false,
-    "at": 0
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Kiln",
-  "location": null,
-  "lat": 51.51132,
-  "lon": -0.13609,
-  "placeId": "90842ba5a7e6",
-  "mentions": [
-   {
-    "videoId": "NyKxz2DFAhY",
-    "videoTitle": "Chef Elliot Hashtroudi from Camille reveals his Top 5 dishes in #London",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Chef Elliot recommends the clay pot noodles (crab and pork belly), mentioning he has eaten them there.",
-    "verdict": "Delicious clay pot crab and pork belly noodles.",
-    "dishes": [
-     "clay pot noodles",
-     "crab and pork belly noodles"
-    ],
-    "sponsored": false,
-    "at": 0
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Berenjak",
-  "location": "Borough",
-  "lat": 51.50533,
-  "lon": -0.08991,
-  "placeId": "9b166dd12e73",
-  "mentions": [
-   {
-    "videoId": "NyKxz2DFAhY",
-    "videoTitle": "Chef Elliot Hashtroudi from Camille reveals his Top 5 dishes in #London",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Chef Elliot praises the koobideh kabab and backlover ice cream, recommending the £45 feasting menu as amazing value.",
-    "verdict": "Incredible koobideh kabab, amazing value feasting menu.",
-    "dishes": [
-     "koobideh kabab"
-    ],
-    "sponsored": false,
-    "at": 0
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Koya",
-  "location": null,
-  "lat": 51.51366,
-  "lon": -0.13163,
-  "placeId": "73cc90bcf511",
-  "mentions": [
-   {
-    "videoId": "ZINVMbuil-w",
-    "videoTitle": "Michelin Star chef Nieves Barragan from Sabor & Legado gives us her Top 5 dishes in #London",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Nieves Barragan includes this in her top 5 London dishes, highlighting the tempura and dashi.",
-    "verdict": "Fantastic tempura and dashi.",
-    "dishes": [
-     "Tempura",
-     "Dashi"
-    ],
-    "sponsored": false,
-    "at": 0
-   },
-   {
-    "videoId": "rVU4xYGSYUo",
-    "videoTitle": "Best Breakfast/Brunch in London: Where Chefs Eat",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited and reviewed multiple Japanese breakfast dishes including pickled daikon, mackerel with miso soup, trout on rice, and udon noodles with eggs and bacon in broth. Praised authenticity and hand-made udon.",
-    "verdict": "Beautiful authentic Japanese breakfast, loved by chefs and industry folk.",
-    "dishes": [
-     "Pickled daikon",
-     "Mackerel with miso soup and rice",
-     "Trout on rice",
-     "Udon noodles with eggs, bacon and mushrooms in broth"
-    ],
-    "sponsored": false,
-    "at": 217
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Hoppers",
-  "location": "Soho",
-  "lat": 51.51362,
-  "lon": -0.1316,
-  "placeId": "163f0a1963f3",
-  "mentions": [
-   {
-    "videoId": "ZINVMbuil-w",
-    "videoTitle": "Michelin Star chef Nieves Barragan from Sabor & Legado gives us her Top 5 dishes in #London",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Nieves Barragan features their bone marrow curry with roti as one of her top 5 London dishes.",
-    "verdict": "Excellent bone marrow curry with roti.",
-    "dishes": [
-     "Bone marrow curry with roti"
-    ],
-    "sponsored": false,
-    "at": 31
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "AngloThai",
-  "location": null,
-  "lat": 51.51513,
-  "lon": -0.16111,
-  "placeId": "6930b696b35c",
-  "mentions": [
-   {
-    "videoId": "ZINVMbuil-w",
-    "videoTitle": "Michelin Star chef Nieves Barragan from Sabor & Legado gives us her Top 5 dishes in #London",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Nieves Barragan recommends their braised ox tongue curry as one of her top 5 London dishes.",
-    "verdict": "Homey braised ox tongue curry, perfect.",
-    "dishes": [
-     "Braised ox tongue curry"
-    ],
-    "sponsored": false,
-    "at": 0
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Planque",
-  "location": null,
-  "lat": 51.53838,
-  "lon": -0.07585,
-  "placeId": "a65b67570656",
-  "mentions": [
-   {
-    "videoId": "ZINVMbuil-w",
-    "videoTitle": "Michelin Star chef Nieves Barragan from Sabor & Legado gives us her Top 5 dishes in #London",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Nieves Barragan's number one pick for her top 5 London dishes, featuring their lobster rice.",
-    "verdict": "Incredible lobster rice with intense broth.",
-    "dishes": [
-     "Lobster rice"
-    ],
-    "sponsored": false,
-    "at": 62
    }
   ],
   "bestRating": null,
@@ -841,131 +211,6 @@
     ],
     "sponsored": false,
     "at": 31
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Akoko",
-  "location": null,
-  "lat": 51.51771,
-  "lon": -0.13691,
-  "placeId": "b2dad827cf1a",
-  "mentions": [
-   {
-    "videoId": "YdkDdTrprlQ",
-    "videoTitle": "Asking chefs for their Top 5 dishes in London - Episode 1. Dom Fernando, founder of Paradise.",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Dom Fernando recommends the Gambian oyster stew, describing it as silky and spicy.",
-    "verdict": "Silky spicy Gambian oyster stew.",
-    "dishes": [
-     "Gambian Oyster Stew"
-    ],
-    "sponsored": false,
-    "at": 0
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Luna",
-  "location": null,
-  "lat": 51.587716,
-  "lon": -0.0362323,
-  "placeId": null,
-  "mentions": [
-   {
-    "videoId": "YdkDdTrprlQ",
-    "videoTitle": "Asking chefs for their Top 5 dishes in London - Episode 1. Dom Fernando, founder of Paradise.",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Dom Fernando recommends the warm potato rolls with cultured butter at this new wine bar run by the guys behind Legar.",
-    "verdict": "Warm potato rolls with cultured butter.",
-    "dishes": [
-     "Warm potato dinner rolls"
-    ],
-    "sponsored": false,
-    "at": 11
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Sune",
-  "location": null,
-  "lat": 51.53541,
-  "lon": -0.06272,
-  "placeId": "6a3be63135fd",
-  "mentions": [
-   {
-    "videoId": "YdkDdTrprlQ",
-    "videoTitle": "Asking chefs for their Top 5 dishes in London - Episode 1. Dom Fernando, founder of Paradise.",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Dom Fernando describes the pork chop with velvety lobster sauce as a new version of surf and turf that he loves.",
-    "verdict": "Pork chop with velvety lobster sauce.",
-    "dishes": [
-     "Pork Chop & Lobster Sauce"
-    ],
-    "sponsored": false,
-    "at": 30
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Maison François",
-  "location": null,
-  "lat": 51.50764,
-  "lon": -0.13816,
-  "placeId": "1a40248b4122",
-  "mentions": [
-   {
-    "videoId": "YdkDdTrprlQ",
-    "videoTitle": "Asking chefs for their Top 5 dishes in London - Episode 1. Dom Fernando, founder of Paradise.",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Dom Fernando highlights the whole dessert trolley, specifically the parry brush, noting he's a sucker for a buffet.",
-    "verdict": "Dessert trolley with parry brush.",
-    "dishes": [
-     "Dessert Trolley"
-    ],
-    "sponsored": false,
-    "at": 61
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Saravanaa Bhavan",
-  "location": null,
-  "lat": 51.51028,
-  "lon": -0.12847,
-  "placeId": "9f702777c872",
-  "mentions": [
-   {
-    "videoId": "YdkDdTrprlQ",
-    "videoTitle": "Asking chefs for their Top 5 dishes in London - Episode 1. Dom Fernando, founder of Paradise.",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Dom Fernando ranks the dosa as his #1 best dish in London, a chain of South Indian restaurants he visits regularly but doesn't tell his mom about.",
-    "verdict": "Best dosa in London; better than mom's.",
-    "dishes": [
-     "Dosa"
-    ],
-    "sponsored": false,
-    "at": 71
    }
   ],
   "bestRating": null,
@@ -1049,108 +294,6 @@
     ],
     "sponsored": false,
     "at": 0
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Wine Bar",
-  "location": "Mayfair",
-  "lat": 51.49727,
-  "lon": -0.14593,
-  "placeId": "4d4be303459c",
-  "mentions": [
-   {
-    "videoId": "jIEhjCAUuCc",
-    "videoTitle": "4 Best New Restaurants in London",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw reviews this romantic wine bar underneath a farm shop in Mayfair as one of the best new restaurants. Features excellent wine selection, small plates, charcuterie, and dishes like deviled crab on toast and steak tartare.",
-    "verdict": "Really good date spot with great wine and small plates.",
-    "dishes": [
-     "deviled crab",
-     "steak tartare",
-     "cheese and toast"
-    ],
-    "sponsored": false,
-    "at": 31
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Canal",
-  "location": "West London",
-  "lat": 51.5225391,
-  "lon": -0.1998125,
-  "placeId": null,
-  "mentions": [
-   {
-    "videoId": "jIEhjCAUuCc",
-    "videoTitle": "4 Best New Restaurants in London",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw reviews this canal-side restaurant as one of four best new openings. Part of the Beastro/Freddy Bar Chrispen group. Features modern European food by head chef from Luca (Michelin-starred Italian). Beautiful interior design and waterside setting.",
-    "verdict": "Gorgeous new waterside dining with excellent modern European food.",
-    "dishes": [
-     "filled pasta with ricotta and lemon",
-     "seasonal fritty",
-     "beef tartare with pink fur potato crisps",
-     "table burger",
-     "brown butter old fashioned cocktail"
-    ],
-    "sponsored": false,
-    "at": 220
-   },
-   {
-    "videoId": "u4cCnJ3sNAs",
-    "videoTitle": "Canal on the ‘urban riviera’ is West London’s hottest new restaurant.",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw describes it as a new restaurant with an 'urban riviera' vibe. Head chef Adrian previously worked at Luca. They tasted multiple dishes including ricotta lemon agnolotti, seasonal frito, cheeseburger, and steak tartare.",
-    "verdict": "Gorgeous new West London restaurant with excellent pasta and cocktails.",
-    "dishes": [
-     "Ricotta Lemon Agnolotti with Cavolo Nero",
-     "Seasonal Frito",
-     "Table Cheeseburger",
-     "Steak Tartare with Pink Fur Crisps",
-     "Brown Butter Old Fashioned"
-    ],
-    "sponsored": false,
-    "at": 0
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Dove",
-  "location": "Notting Hill",
-  "lat": 51.51539210000001,
-  "lon": -0.2059362,
-  "placeId": null,
-  "mentions": [
-   {
-    "videoId": "jIEhjCAUuCc",
-    "videoTitle": "4 Best New Restaurants in London",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw reviews this Notting Hill restaurant on Kensington Park Road, famous for serving only 10 burgers daily using 50-day aged beef trim. Topjaw ate multiple dishes and praised the chef Jackson's attention to texture and quality produce.",
-    "verdict": "Excellent use of high-quality produce with exemplary attention to texture.",
-    "dishes": [
-     "cheeseburger (10 per day)",
-     "deep fried potato pit with mortadella",
-     "tomatoes with sour cream and chili crisp",
-     "grilled Atlantic prawns with smoked garlic butter"
-    ],
-    "sponsored": false,
-    "at": 560
    }
   ],
   "bestRating": null,
@@ -1243,100 +386,67 @@
   "bestRatingOutOf": null
  },
  {
-  "name": "Utopia Bagels",
-  "location": "South Bank (Waterloo)",
-  "lat": 51.5052728,
-  "lon": -0.1184929,
-  "placeId": null,
+  "name": "Brigadiers",
+  "location": null,
+  "lat": 51.51268,
+  "lon": -0.09177,
+  "placeId": "8fa33b6eb2a8",
   "mentions": [
    {
-    "videoId": "V0pGH3QcNhM",
-    "videoTitle": "Honestly Utopia Bagels have changed things for us - you haven’t tried a bagel until you’ve had them.",
+    "videoId": "AHUnqeRroYk",
+    "videoTitle": "Best Curry in London: Where Chefs Eat",
     "rating": null,
     "rating_out_of": null,
     "sentiment": "positive",
-    "notes": "Topjaw personally tried and reviewed multiple bagels at Utopia Bagels' temporary South Bank residency. Praised them as the best bagels in the world, highlighting the Worth It bagel, bacon egg and cheese, and various creative shmears like birthday cake and French toast bacon.",
-    "verdict": "Best bagels in the world, worth trying.",
+    "notes": "Topjaw visited and extensively reviewed. Praised the butter chicken wings as signature dish, bone marrow biryani, mixed grill, and fish paal bun. Part of voting compilation but Topjaw gives own detailed opinions throughout.",
+    "verdict": "Signature butter chicken wings phenomenal; diverse menu reflects UK food excellence.",
     "dishes": [
-     "Worth It bagel with Nova salmon",
-     "Bacon, egg and cheese",
-     "Birthday cake on French toast bacon",
-     "Apple turnover"
+     "Barbecue buttered chicken wings",
+     "Bone marrow biryani",
+     "Mixed grill",
+     "Fish paal bun",
+     "Lamb ribeye skewer",
+     "Onion bhaji"
+    ],
+    "sponsored": false,
+    "at": 33
+   },
+   {
+    "videoId": "ds-Ix8VHQ68",
+    "videoTitle": "In at Number 5 for the Top 5 Curries in London - Brigadiers!",
+    "rating": 5,
+    "rating_out_of": 5,
+    "sentiment": "positive",
+    "notes": "Topjaw reviews Brigadiers as their number five pick for best curries in London. Despite not serving traditional curry, he praises their Indian barbecue food, beautifully spiced grilled meats, and unusual takes on classic Indian snacks including butter chicken wings, cheese and onion baas, fish pow, bone marrow biryani, and mixed grill.",
+    "verdict": "Number five for best curries in London; beautifully spiced.",
+    "dishes": [
+     "butter chicken wings",
+     "cheese and onion baa",
+     "fish pow",
+     "bone marrow biryani",
+     "mixed grill",
+     "goat shoulder with Roen Josh sauce"
+    ],
+    "sponsored": false,
+    "at": 0
+   },
+   {
+    "videoId": "RdGAqs9iwGo",
+    "videoTitle": "Still need to book somewhere great? We’ve got you! ❤️🎄❤️",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Indian barbecue with smoky cocktails, beer towers, and barbecue butter chicken wings. Topjaw says it's so good it makes him tear up.",
+    "verdict": "Excellent Indian barbecue, ultimate group feast.",
+    "dishes": [
+     "barbecue butter chicken wings"
     ],
     "sponsored": false,
     "at": 0
    }
   ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Wingmans",
-  "location": "Soho",
-  "lat": 51.51304,
-  "lon": -0.13149,
-  "placeId": "cc9324723a98",
-  "mentions": [
-   {
-    "videoId": "mqrhoS8KgkE",
-    "videoTitle": "Best Chicken Wings in London? With @PaddyTheBaddyUFC",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited Wingmans in Soho with UFC fighter Paddy the Baddy and tried multiple wing varieties including buffalo, barbecue, sesh (dry wings), dar wing with Indian flavors, Korean, and Jamaican me crazy. Multiple award winner and Wingfest favourite.",
-    "verdict": "Award-winning chicken wings restaurant with great variety.",
-    "dishes": [
-     "Buffalo wings",
-     "Barbecue wings",
-     "Sesh wings (dry)",
-     "Dar wing (Indian flavors)",
-     "Korean wings",
-     "Jamaican me crazy wings",
-     "Truffle mac and cheese with slow-cooked beef"
-    ],
-    "sponsored": false,
-    "at": 61
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Wingmans",
-  "location": "Kilburn",
-  "lat": 51.54558,
-  "lon": -0.20201,
-  "placeId": "360c4def57c9",
-  "mentions": [
-   {
-    "videoId": "mqrhoS8KgkE",
-    "videoTitle": "Best Chicken Wings in London? With @PaddyTheBaddyUFC",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw mentions Wingmans has two London locations in Soho and Kilburn, describing both as great. The description states they opened in Kilburn in 2018 and another location in 2020.",
-    "verdict": "Second location equally great for chicken wings.",
-    "dishes": [],
-    "sponsored": false,
-    "at": 123
-   },
-   {
-    "videoId": "ozf5Eizto-E",
-    "videoTitle": "These London Restaurants Thrived During Covid. Our Lockdown Heroes",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw featured this as one of their absolute favorites in London. They visited and ate the signature wings, explaining the secret flour mix and describing them as another level compared to typical chicken wings.",
-    "verdict": "Wings cooked in secret flour mix are next level.",
-    "dishes": [
-     "wings with Korean hot sauce and pickled daikon"
-    ],
-    "sponsored": true,
-    "at": 314
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
+  "bestRating": 5,
+  "bestRatingOutOf": 5
  },
  {
   "name": "Tayyabs",
@@ -1506,12 +616,12 @@
     "rating": null,
     "rating_out_of": null,
     "sentiment": "positive",
-    "notes": "Topjaw highlights this as a chef's favorite with an admirable mission supporting women and children in India. Discusses key dishes in detail and praises the patience and love in the cooking.",
-    "verdict": "Chef's favorite with incredible dishes and admirable mission.",
+    "notes": "Topjaw gives detailed first-hand review of dishes including kosa mango (Bengali mutton curry), tangr prawns with garlic and chili, and kima toasty with smoky flavor. Restaurant supports women and children in India.",
+    "verdict": "Chef's favorite with incredible rich sauces and deep flavors.",
     "dishes": [
-     "Kosa Mango",
-     "Tangi Prawns",
-     "Kima Toasty"
+     "kosa mango",
+     "tangr prawns",
+     "kima toasty"
     ],
     "sponsored": false,
     "at": 0
@@ -1589,32 +699,6 @@
   "bestRatingOutOf": null
  },
  {
-  "name": "Dumbo",
-  "location": "Bethnal Green",
-  "lat": 51.531103,
-  "lon": -0.0480805,
-  "placeId": null,
-  "mentions": [
-   {
-    "videoId": "Ej7tawt68JA",
-    "videoTitle": "Dumbo is finally in London.",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited Dumbo before its London opening and reviewed the cheeseburger, praising the quality of the meat (rib cap blend), housemade sauce, and double-fried chips. They filmed with Sam from Dumbo and noted it as the European original that inspired many London burger spots.",
-    "verdict": "Best burger in Paris now in London. Crispy, elegant.",
-    "dishes": [
-     "Cheeseburger",
-     "French fries"
-    ],
-    "sponsored": false,
-    "at": 0
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
   "name": "Goldies",
   "location": "Soho",
   "lat": 51.51268,
@@ -1665,52 +749,6 @@
   "bestRatingOutOf": null
  },
  {
-  "name": "Mamapen",
-  "location": "Soho",
-  "lat": 51.5126579,
-  "lon": -0.1365768,
-  "placeId": null,
-  "mentions": [
-   {
-    "videoId": "_u7NfNg8aKQ",
-    "videoTitle": "Mamapen the great value, delicious, Cambodian, Soho belter.",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visits and reviews Mamapen, a Cambodian residency at 13 Canteen that is transitioning to permanent status. He praises the pork toast, describes Cambodian cuisine as having fragrant broths, spice, and comfort food, and samples multiple dishes including pineapple curry.",
-    "verdict": "Great value Cambodian comfort food with exciting one-bite quality.",
-    "dishes": [
-     "pork toast",
-     "prawn toast",
-     "pork belly",
-     "chicken",
-     "pineapple curry"
-    ],
-    "sponsored": false,
-    "at": 0
-   },
-   {
-    "videoId": "i65acG8jUew",
-    "videoTitle": "Where has Cambodian food been all our lives…?",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited and gave extensive first-hand review. Chef owner explains the restaurant is named after his mum, his inspiration. Topjaw tried and praised multiple dishes including the pork toast (compared favourably to prawn toast), tattie mince noodles (Scottish-Cambodian fusion, spicy and comforting), Khmer BBQ chicken (marinated for two days), and caramelised braised pork belly (sauce described as so good it could be sent in a flask).",
-    "verdict": "Enormously tasty, incredibly good value, very exciting.",
-    "dishes": [
-     "Panko Pork Toast",
-     "Tattie Mince Noodles",
-     "Khmer BBQ Chicken",
-     "Caramelised Braised Pork Belly"
-    ],
-    "sponsored": false,
-    "at": 0
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
   "name": "Granger & Co.",
   "location": "Marylebone",
   "lat": 51.51912,
@@ -1733,6 +771,34 @@
     ],
     "sponsored": false,
     "at": 33
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Koya",
+  "location": "Soho",
+  "lat": 51.51366,
+  "lon": -0.13163,
+  "placeId": "73cc90bcf511",
+  "mentions": [
+   {
+    "videoId": "rVU4xYGSYUo",
+    "videoTitle": "Best Breakfast/Brunch in London: Where Chefs Eat",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw visited and reviewed multiple Japanese breakfast dishes including pickled daikon, mackerel with miso soup, trout on rice, and udon noodles with eggs and bacon in broth. Praised authenticity and hand-made udon.",
+    "verdict": "Beautiful authentic Japanese breakfast, loved by chefs and industry folk.",
+    "dishes": [
+     "Pickled daikon",
+     "Mackerel with miso soup and rice",
+     "Trout on rice",
+     "Udon noodles with eggs, bacon and mushrooms in broth"
+    ],
+    "sponsored": false,
+    "at": 217
    }
   ],
   "bestRating": null,
@@ -1928,57 +994,6 @@
     ],
     "sponsored": false,
     "at": 0
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "The Spurstowe Arms",
-  "location": null,
-  "lat": 51.54536,
-  "lon": -0.06324,
-  "placeId": "86ba4cea20a9",
-  "mentions": [
-   {
-    "videoId": "JEVL7IXxOrs",
-    "videoTitle": "The industry is right, Hannah's Dough Hands is pizza worth shouting about.",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited and reviewed pizza featuring spicy sausage and 'nduja with hot honey, and spicy tuna pizza with calabrian chili.",
-    "verdict": "Pizza worth shouting about; well-balanced, crispy base with fresh ingredients.",
-    "dishes": [
-     "The Jod (spicy sausage and 'nduja with hot honey)",
-     "Spicy tuna pizza with calabrian chili"
-    ],
-    "sponsored": false,
-    "at": 0
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "The Old Nun's Head",
-  "location": "Peckham",
-  "lat": 51.46524,
-  "lon": -0.05941,
-  "placeId": "880a65d6a6ed",
-  "mentions": [
-   {
-    "videoId": "JEVL7IXxOrs",
-    "videoTitle": "The industry is right, Hannah's Dough Hands is pizza worth shouting about.",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited and reviewed their tuna on pizza offering, which he recommends people try.",
-    "verdict": "Tuna on pizza worth normalising; well-executed pizza offering.",
-    "dishes": [
-     "Tuna pizza"
-    ],
-    "sponsored": false,
-    "at": null
    }
   ],
   "bestRating": null,
@@ -2436,16 +1451,16 @@
     "rating": null,
     "rating_out_of": null,
     "sentiment": "positive",
-    "notes": "Topjaw visited and reviewed their tamworth sausage hot dog, deep fried cod sandwich, and hash browns. They gave it their seal of approval.",
-    "verdict": "Incredible crispy hash browns and excellent fried cod sandwich.",
+    "notes": "Topjaw visited and approved: tamworth sausage hot dog, cod sandwich, hash browns and brown butter tarts. Commended the crisp exterior and soft middle of the hash browns.",
+    "verdict": "Excellent crispy hash browns, seal of approval.",
     "dishes": [
      "tamworth sausage hot dog",
-     "deep fried cod sandwich",
+     "cod sandwich",
      "hash browns",
      "brown butter tarts"
     ],
     "sponsored": false,
-    "at": 30
+    "at": 0
    }
   ],
   "bestRating": null,
@@ -2481,53 +1496,24 @@
   "bestRatingOutOf": null
  },
  {
-  "name": "Ozone Coffee",
-  "location": "Shoreditch",
-  "lat": 51.53253,
-  "lon": -0.0611,
-  "placeId": "5e356a86d08a",
+  "name": "Dumplings' Legend",
+  "location": "Chinatown",
+  "lat": 51.51177,
+  "lon": -0.13127,
+  "placeId": "d46c06c5cc12",
   "mentions": [
    {
-    "videoId": "8stopXU4lIc",
-    "videoTitle": "Ozone Coffee knock it out the park on a daily basis.",
+    "videoId": "vw8Pb8VbQu8",
+    "videoTitle": "The 3 Best Spots in London’s Chinatown ft. Big John",
     "rating": null,
     "rating_out_of": null,
     "sentiment": "positive",
-    "notes": "Topjaw praised Ozone Coffee highly for their coffee, food and atmosphere. They highlighted the menu items including eggs benedict, lamb mints on toast, nasty goran, and flat red London barrata. Sam the head chef cooks what he wants to eat.",
-    "verdict": "Excellent coffee, food and atmosphere across the board.",
+    "notes": "Topjaw visited with Big John and tasted multiple dumpling types including spicy vegetable and pork, prawn and pork dumplings. Big John tried truffle and caviar for the first time here.",
+    "verdict": "Changed perception of Chinese food, excellent dumplings",
     "dishes": [
-     "eggs benedict",
-     "lamb mints on toast",
-     "nasty goran",
-     "flat red London barrata",
-     "green juice"
-    ],
-    "sponsored": false,
-    "at": 0
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Miga",
-  "location": "Hackney",
-  "lat": 51.5345336,
-  "lon": -0.0576598,
-  "placeId": null,
-  "mentions": [
-   {
-    "videoId": "dVA9AYDS2eQ",
-    "videoTitle": "Epic new Korean spot Miga needs to be on your radar.",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited this new family-run Korean restaurant and gave detailed opinions on three signature dishes: Galbi (short rib), mixed Hanbang, and tart. He praised the chef's decades of experience and the quality of the food.",
-    "verdict": "Epic new spot with excellent Korean food and expert chef.",
-    "dishes": [
-     "Galbi",
-     "mixed Hanbang",
-     "tart"
+     "spicy vegetable dumpling",
+     "pork and prawn dumpling",
+     "prawn dumpling"
     ],
     "sponsored": false,
     "at": 0
@@ -2820,29 +1806,6 @@
   "bestRatingOutOf": null
  },
  {
-  "name": "Endo at the Rotunda",
-  "location": null,
-  "lat": 51.51046,
-  "lon": -0.22562,
-  "placeId": "1c04b1516dd4",
-  "mentions": [
-   {
-    "videoId": "uTdvMXUHP7Q",
-    "videoTitle": "London's Sushi Master Endo Kazutoshi gives us his Best of #London #cityguide",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Sushi Master Endo Kazutoshi's own restaurant, featured as guide to best dining in London. Not directly reviewed by Topjaw but Endo is the interviewee/subject of the video giving recommendations.",
-    "verdict": "Endo's flagship sushi restaurant in London.",
-    "dishes": [],
-    "sponsored": false,
-    "at": 0
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
   "name": "Kitchen Table",
   "location": null,
   "lat": 51.52036,
@@ -2974,79 +1937,6 @@
     ],
     "sponsored": true,
     "at": 353
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "The Dusty Knuckle",
-  "location": "Dalston",
-  "lat": 51.57886,
-  "lon": -0.09919,
-  "placeId": "0d5ea3d78ec1",
-  "mentions": [
-   {
-    "videoId": "Qm45NAoLQOE",
-    "videoTitle": "TOP 3 RESTAURANTS IN LONDON ft. Tiffany Calver",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Tiffany Calver's 'Old Trusty' spot. She's a big bread fan and loves this bakery. They visited and tried multiple sandwiches including a cheese toasty with tofu fritters, mackerel sandwich, and green bean feta cheese bread.",
-    "verdict": "Best for bread, great food and people, 10/10.",
-    "dishes": [
-     "cheese toasty with tofu fritters",
-     "mackerel sandwich",
-     "green bean feta cheese bread"
-    ],
-    "sponsored": false,
-    "at": 30
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Manteca",
-  "location": null,
-  "lat": 51.52402,
-  "lon": -0.08046,
-  "placeId": "ff3523437d5b",
-  "mentions": [
-   {
-    "videoId": "Qm45NAoLQOE",
-    "videoTitle": "TOP 3 RESTAURANTS IN LONDON ft. Tiffany Calver",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Tiffany's 'Something Fancy' pick and favorite restaurant. She learned about it through Topjaw. They visited and enjoyed multiple dishes including fried olives with pork and salami, meatballs, and pasta.",
-    "verdict": "Pasta paradise with vibrant Italian food, excellent dishes.",
-    "dishes": [
-     "fried olives with pork and salami",
-     "prosciutto",
-     "duck and pork and beef meatballs",
-     "pasta",
-     "kale sauce with chili"
-    ],
-    "sponsored": false,
-    "at": 156
-   },
-   {
-    "videoId": "CV7sgp3kn8w",
-    "videoTitle": "Are These The Best Date Spots in London? ft. 5 Dates In 1 Day",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited the restaurant just 3 days after opening. Praised the Italian-inspired cuisine and farm-to-table approach using whole animal butchery. Highlighted the creativity and quality of dishes from chefs Dave and Chris.",
-    "verdict": "Incredible Italian-inspired cuisine with flavor explosions and excellent execution.",
-    "dishes": [
-     "speck and salami with black pepper",
-     "pork skin stew",
-     "sausages with fennel and chili with quince mustard",
-     "duck stew capellacci with pumpkin"
-    ],
-    "sponsored": false,
-    "at": 168
    }
   ],
   "bestRating": null,
@@ -3288,6 +2178,34 @@
   "bestRatingOutOf": null
  },
  {
+  "name": "Sheba",
+  "location": "Brick Lane, Shoreditch",
+  "lat": 51.52066,
+  "lon": -0.07178,
+  "placeId": "ae0840c286b2",
+  "mentions": [
+   {
+    "videoId": "mCCHCiBI70M",
+    "videoTitle": "We find the 3 Best Indian Restaurants in London",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw visited and reviewed this multi-award winning curry house on Brick Lane. He praised it for covering variety and unique delicacies, reviewed the atari (selection of dishes including Bengal meat, chana dal, and lamb karai), and highlighted the quality value for money on Brick Lane.",
+    "verdict": "Multi-award winning curry house with great value and variety.",
+    "dishes": [
+     "Atari (tasting selection)",
+     "Bengal",
+     "Chana dal",
+     "Lamb karai"
+    ],
+    "sponsored": false,
+    "at": 671
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
   "name": "Barrafina",
   "location": "Soho",
   "lat": 51.51254,
@@ -3399,314 +2317,6 @@
   "bestRatingOutOf": null
  },
  {
-  "name": "Circolo Popolare",
-  "location": "Fitzrovia",
-  "lat": 51.5172,
-  "lon": -0.1338,
-  "placeId": "8062b32adec5",
-  "mentions": [
-   {
-    "videoId": "a6sx9OCMEpw",
-    "videoTitle": "Are These London's Best Italian Restaurants? Our Top 4!",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited and reviewed this Big Mamma Group restaurant. They praised the spaghetti carbonara, pizza margherita, and the immersive Italian experience it provides.",
-    "verdict": "Vibey Italian experience with excellent pasta and pizza.",
-    "dishes": [
-     "spaghetti carbonara",
-     "pizza margherita"
-    ],
-    "sponsored": false,
-    "at": 69
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Bancone",
-  "location": "Soho",
-  "lat": 51.51136,
-  "lon": -0.13644,
-  "placeId": "9b7596bfad14",
-  "mentions": [
-   {
-    "videoId": "a6sx9OCMEpw",
-    "videoTitle": "Are These London's Best Italian Restaurants? Our Top 4!",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited with guest Pickle and highlighted Bancone's hand-rolled pasta and white marble kitchen. They praised it as serving some of the best pasta in London.",
-    "verdict": "Exceptional hand-rolled pasta with beautiful open kitchen.",
-    "dishes": [
-     "hand-rolled pasta",
-     "polenta",
-     "antipasti"
-    ],
-    "sponsored": false,
-    "at": 209
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Bon Vino",
-  "location": "Bermondsey",
-  "lat": 51.5003414,
-  "lon": -0.0720976,
-  "placeId": null,
-  "mentions": [
-   {
-    "videoId": "a6sx9OCMEpw",
-    "videoTitle": "Are These London's Best Italian Restaurants? Our Top 4!",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited and reviewed owner Alessandro's wine-focused pizza restaurant. They praised the 36-hour fermented white pizza base as phenomenal and the sourcing of wines.",
-    "verdict": "Outstanding white-based pizza, exceptional wine selection.",
-    "dishes": [
-     "white pizza",
-     "neapolitan-style pizza"
-    ],
-    "sponsored": false,
-    "at": 406
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Flour and Grape",
-  "location": "Bermondsey",
-  "lat": 51.49812,
-  "lon": -0.08142,
-  "placeId": "b5bebbee8f04",
-  "mentions": [
-   {
-    "videoId": "a6sx9OCMEpw",
-    "videoTitle": "Are These London's Best Italian Restaurants? Our Top 4!",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited this pasta and wine-focused restaurant, highlighting owner Nick's decision to close his previous restaurant and reopen with a simpler high-quality, low-price concept.",
-    "verdict": "Simple, high-quality pasta and wine at great prices.",
-    "dishes": [
-     "roasted pork shoulder with sage butter",
-     "spinach and ricotta ravioli",
-     "tiramisu gelato",
-     "chocolate hazelnut mousse"
-    ],
-    "sponsored": false,
-    "at": 623
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Chick King",
-  "location": "Tottenham",
-  "lat": 51.5134233,
-  "lon": -0.04897729999999999,
-  "placeId": null,
-  "mentions": [
-   {
-    "videoId": "Hc1fQrbgp9k",
-    "videoTitle": "The Best Fried Chicken Spots in London - ft. 6 Spots You Must Visit",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw's guest Big Lew loves this place; been there 41 years with 4.7 stars. Described as an institution serving excellent fried chicken.",
-    "verdict": "Institution with exceptional fried chicken, 41 years strong.",
-    "dishes": [
-     "Fried chicken wings"
-    ],
-    "sponsored": false,
-    "at": 31
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Bake Street",
-  "location": "Stoke Newington",
-  "lat": 51.55878,
-  "lon": -0.06667,
-  "placeId": "31525a9c9386",
-  "mentions": [
-   {
-    "videoId": "Hc1fQrbgp9k",
-    "videoTitle": "The Best Fried Chicken Spots in London - ft. 6 Spots You Must Visit",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw's personal favorite, relatively new discovery (6.5 years old but recently became popular). Praised for crispy, audacious fried chicken.",
-    "verdict": "Crispy, audacious fried chicken; loved by chefs and foodies alike.",
-    "dishes": [
-     "Chicken bun",
-     "Spicy chicken bun",
-     "Fish fillet"
-    ],
-    "sponsored": false,
-    "at": 146
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Seoul 90",
-  "location": "Old Street, Shoreditch",
-  "lat": 51.52461,
-  "lon": -0.09412,
-  "placeId": "fe35f61e5d82",
-  "mentions": [
-   {
-    "videoId": "Hc1fQrbgp9k",
-    "videoTitle": "The Best Fried Chicken Spots in London - ft. 6 Spots You Must Visit",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Korean fried chicken specialist serving their signature KFC (Korean fried chicken). Consistent, friendly, busy spot.",
-    "verdict": "Consistent Korean fried chicken, friendly and busy.",
-    "dishes": [
-     "Korean fried chicken (KFC)",
-     "Boneless chicken nuggets/tenders"
-    ],
-    "sponsored": false,
-    "at": 336
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Chick 'n' Sours",
-  "location": "Covent Garden",
-  "lat": 51.51362,
-  "lon": -0.12816,
-  "placeId": "fd0a83e267cd",
-  "mentions": [
-   {
-    "videoId": "Hc1fQrbgp9k",
-    "videoTitle": "The Best Fried Chicken Spots in London - ft. 6 Spots You Must Visit",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Established fried chicken and cocktails spot (7 years old). Serves miso wings with seaweed cracker and kung pao wings.",
-    "verdict": "Certified banger; creative Asian-fusion fried chicken.",
-    "dishes": [
-     "Miso wings with seaweed cracker",
-     "Kung pao wings",
-     "Fried chicken sandwich"
-    ],
-    "sponsored": false,
-    "at": 553
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Mr Ji",
-  "location": "Camden",
-  "lat": 51.53751,
-  "lon": -0.14495,
-  "placeId": "9a89525dd4ee",
-  "mentions": [
-   {
-    "videoId": "Hc1fQrbgp9k",
-    "videoTitle": "The Best Fried Chicken Spots in London - ft. 6 Spots You Must Visit",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Taiwanese fried chicken spot, recently reopened with new interior and kitchen. Serves szechuan burger and spatchcocked baby chicken.",
-    "verdict": "Innovative Taiwanese fried chicken; flaky, crispy perfection.",
-    "dishes": [
-     "Chicken burger",
-     "Szechuan burger",
-     "Spatchcocked baby chicken",
-     "Chicken hearts"
-    ],
-    "sponsored": false,
-    "at": 652
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Goila Butter Chicken",
-  "location": "Charlotte Street, Fitzrovia",
-  "lat": 51.5188746,
-  "lon": -0.1498955,
-  "placeId": null,
-  "mentions": [
-   {
-    "videoId": "B_-B3VMZKYY",
-    "videoTitle": "India’s Best Butter Chicken lands in London 🥘🍔 at Goila // New Openings #Shorts",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Award-winning butter chicken curry from India. Topjaw describes it as probably the best butter chicken in the world, now opened in a new location on Charlotte Street offering curry, burger, and delivery options.",
-    "verdict": "Probably the best butter chicken in the world",
-    "dishes": [
-     "Butter Chicken Curry",
-     "Chicken Burger"
-    ],
-    "sponsored": false,
-    "at": 0
-   },
-   {
-    "videoId": "ozf5Eizto-E",
-    "videoTitle": "These London Restaurants Thrived During Covid. Our Lockdown Heroes",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw revisited this place (previously filmed there) and explored the cooking technique. They tasted the smoky flavor from the casa puree infused through the oven and praised the complex, slow-cooked butter chicken sauce.",
-    "verdict": "Complex smoky butter chicken, tastes like nothing else.",
-    "dishes": [
-     "guava butter chicken",
-     "butter chicken"
-    ],
-    "sponsored": true,
-    "at": 593
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Four Corners Pizza",
-  "location": "High Holborn",
-  "lat": 51.5177094,
-  "lon": -0.1189638,
-  "placeId": null,
-  "mentions": [
-   {
-    "videoId": "_xbJ-4n9PCg",
-    "videoTitle": "DETROIT STYLE PIZZA IN LONDON 🍕 at Four Corners // New Openings #Shorts",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Detroit-style pizza pop-up serving for three months (until end of March). Topjaw praised the cheesy, crusty pizza and recommends going easy on portion size as the small is huge. Features toppings like cheddar, mozzarella, chili oil, honey, mortadella and pistachio.",
-    "verdict": "Excellent Detroit-style pizza; cheese-forward and generous portions.",
-    "dishes": [
-     "Detroit-style pizza with cheddar and mozzarella",
-     "Mortadella pistachio pizza",
-     "Honey and chili oil pizza"
-    ],
-    "sponsored": false,
-    "at": 0
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
   "name": "Sunday in Brooklyn",
   "location": "Notting Hill",
   "lat": 51.51527,
@@ -3728,6 +2338,53 @@
     ],
     "sponsored": false,
     "at": 45
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Manteca",
+  "location": "Shoreditch",
+  "lat": 51.52402,
+  "lon": -0.08046,
+  "placeId": "ff3523437d5b",
+  "mentions": [
+   {
+    "videoId": "CV7sgp3kn8w",
+    "videoTitle": "Are These The Best Date Spots in London? ft. 5 Dates In 1 Day",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw visited the restaurant just 3 days after opening. Praised the Italian-inspired cuisine and farm-to-table approach using whole animal butchery. Highlighted the creativity and quality of dishes from chefs Dave and Chris.",
+    "verdict": "Incredible Italian-inspired cuisine with flavor explosions and excellent execution.",
+    "dishes": [
+     "speck and salami with black pepper",
+     "pork skin stew",
+     "sausages with fennel and chili with quince mustard",
+     "duck stew capellacci with pumpkin"
+    ],
+    "sponsored": false,
+    "at": 168
+   },
+   {
+    "videoId": "Qm45NAoLQOE",
+    "videoTitle": "TOP 3 RESTAURANTS IN LONDON ft. Tiffany Calver",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Tiffany's 'Something Fancy' choice. They visit and order multiple pasta dishes and specialties. Tiffany explains she learned about it through Topjaw and loves it.",
+    "verdict": "Excellent pasta and Italian dishes with fresh, vibrant flavors.",
+    "dishes": [
+     "pasta",
+     "fried olives with pork",
+     "prosciutto",
+     "duck and pork and beef meatballs",
+     "machi with kale sauce and chili",
+     "duck with crispy potatoes and jam sauce"
+    ],
+    "sponsored": false,
+    "at": 156
    }
   ],
   "bestRating": null,
@@ -3925,154 +2582,12 @@
   "bestRatingOutOf": null
  },
  {
-  "name": "Dom's Subs",
-  "location": "Hackney Road",
-  "lat": 51.53086,
-  "lon": -0.06903,
-  "placeId": "64fb5f8d8168",
-  "mentions": [
-   {
-    "videoId": "F5Ba0osd-NQ",
-    "videoTitle": "Are These East London's Best Take Away Spots? Bucket List Food.",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited and reviewed their pog cuts and ham witch sandwich with pork belly. They praised the balance and said it's carried them through difficult times.",
-    "verdict": "Perfectly balanced sub with great pork belly and roasted peppers.",
-    "dishes": [
-     "pog cuts",
-     "ham witch sandwich"
-    ],
-    "sponsored": false,
-    "at": 154
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Brawn",
-  "location": "Columbia Road",
-  "lat": 51.52895,
-  "lon": -0.07029,
-  "placeId": "c4eb70b37650",
-  "mentions": [
-   {
-    "videoId": "F5Ba0osd-NQ",
-    "videoTitle": "Are These East London's Best Take Away Spots? Bucket List Food.",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited and reviewed their nashville hot chicken sandwich with chicken thigh meat. They described it as a heavy hitter and wig splitter.",
-    "verdict": "Heavy-hitting Nashville hot chicken sandwich with crispy edges.",
-    "dishes": [
-     "Nashville hot chicken sandwich"
-    ],
-    "sponsored": false,
-    "at": 184
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Bright",
-  "location": "Westgate Street",
-  "lat": 51.53763,
-  "lon": -0.05757,
-  "placeId": "b1f0c6ea1fa1",
-  "mentions": [
-   {
-    "videoId": "F5Ba0osd-NQ",
-    "videoTitle": "Are These East London's Best Take Away Spots? Bucket List Food.",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited and reviewed their squid sandwich. They mentioned you need to arrive before 2pm or they'll be sold out, and praised the generous calamari filling.",
-    "verdict": "Excellent squid sandwich, sold out by 2pm, packed with calamari.",
-    "dishes": [
-     "squid sandwich"
-    ],
-    "sponsored": false,
-    "at": 246
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Eld",
-  "location": "Hackney Road",
-  "lat": 51.5391322,
-  "lon": -0.021987,
-  "placeId": null,
-  "mentions": [
-   {
-    "videoId": "F5Ba0osd-NQ",
-    "videoTitle": "Are These East London's Best Take Away Spots? Bucket List Food.",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited and tried the Swedish kebab (magettes) with lamb sausage, grated mozzarella, and bitter yogurt. They emphasised the lamb and sausage quality and chose light tomato.",
-    "verdict": "Excellent Swedish-Neapolitan pizza with quality lamb sausage kebab.",
-    "dishes": [
-     "magettes (Swedish kebab)",
-     "custard doughnut"
-    ],
-    "sponsored": false,
-    "at": 310
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Sourdough Sophia",
-  "location": "Crouch End",
-  "lat": 51.58126,
-  "lon": -0.12383,
-  "placeId": "f2116d3c9516",
-  "mentions": [
-   {
-    "videoId": "ozf5Eizto-E",
-    "videoTitle": "These London Restaurants Thrived During Covid. Our Lockdown Heroes",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited early and praised the bakery that started as a micro-business in a flat during lockdown. Sofia successfully crowdfunded her first bricks and mortar store and Topjaw noted the early morning queue and quality of baked goods.",
-    "verdict": "Next level baked goods, true lockdown hero.",
-    "dishes": [
-     "sourdough bread",
-     "brownie with walnut"
-    ],
-    "sponsored": true,
-    "at": 69
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
   "name": "Parlour",
-  "location": "Kensal Green",
+  "location": "Kensal Rise",
   "lat": 51.52878,
   "lon": -0.21662,
   "placeId": "109acbbc866a",
   "mentions": [
-   {
-    "videoId": "ozf5Eizto-E",
-    "videoTitle": "These London Restaurants Thrived During Covid. Our Lockdown Heroes",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited and ate fish and chips on Fish and Chip Friday. They praised the crispiness and the business's remarkable adaptation during lockdown, becoming a major flour supplier alongside their deli offering.",
-    "verdict": "Crispy fish and chips, thrived and survived lockdown.",
-    "dishes": [
-     "fish and chips"
-    ],
-    "sponsored": true,
-    "at": 378
-   },
    {
     "videoId": "1RBl7Kglvk8",
     "videoTitle": "THIS RESTAURANT IN LONDON SERVES 100 DESSERTS STRAIGHT ONTO YOUR TABLE",
@@ -4086,1123 +2601,20 @@
     ],
     "sponsored": false,
     "at": 0
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Blacklock",
-  "location": "Shoreditch",
-  "lat": 51.5060025,
-  "lon": -0.0209812,
-  "placeId": "f02043f8880b",
-  "mentions": [
+   },
    {
     "videoId": "ozf5Eizto-E",
     "videoTitle": "These London Restaurants Thrived During Covid. Our Lockdown Heroes",
     "rating": null,
     "rating_out_of": null,
     "sentiment": "positive",
-    "notes": "Topjaw visited and noted this as their favorite location of three. They ate the DIY kits and hot delivery options, describing the burger as juicy and praising the production operation and at-home dining experience.",
-    "verdict": "Best DIY kit done all year, remarkable work.",
+    "notes": "Topjaw visited and ate fish and chips. They praised Jesse (the owner) for his survival and thriving during lockdown, particularly his flour supply business that scaled to 150 kilos a day.",
+    "verdict": "Survived and thrived, excellent fish and chips.",
     "dishes": [
-     "DIY kit",
-     "burger",
-     "beef dripping chips",
-     "Higgs head nuggets",
-     "mac and four cheeses"
-    ],
-    "sponsored": true,
-    "at": 471
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Mother",
-  "location": "Hackney Wick",
-  "lat": 51.544579,
-  "lon": -0.0256935,
-  "placeId": null,
-  "mentions": [
-   {
-    "videoId": "XVdcEzn_yK4",
-    "videoTitle": "We Think These Are The Best Vegan Restaurants In London, Do You?",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Started as a juice stall in Broadway Market, expanded to permanent space at Hackney Wick on the canal. Topjaw visited and reviewed their cheese toastty and red juice.",
-    "verdict": "Beautiful, colourful, aesthetically delicious vegan comfort food.",
-    "dishes": [
-     "cheese toasty",
-     "red juice (carrot, apple, ginger, beetroot)"
+     "fish and chips"
     ],
     "sponsored": false,
-    "at": 31
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "OoWee",
-  "location": "Dalston",
-  "lat": 51.55214489999999,
-  "lon": -0.07469819999999999,
-  "placeId": null,
-  "mentions": [
-   {
-    "videoId": "XVdcEzn_yK4",
-    "videoTitle": "We Think These Are The Best Vegan Restaurants In London, Do You?",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Vegan fast food on Stoke Newington Road. Owner Simone noted most customers are meat eaters wanting to reduce meat consumption. Topjaw visited and ate their cheeseburger.",
-    "verdict": "Simple, delicious vegan versions of indulgent fast food items.",
-    "dishes": [
-     "classic cheeseburger",
-     "baconator",
-     "shrimp fries",
-     "barbecue cotton sandwich"
-    ],
-    "sponsored": false,
-    "at": 93
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Club Mexicana",
-  "location": "Kingly Court, Soho",
-  "lat": 51.51075,
-  "lon": -0.12945,
-  "placeId": "99cb8bc0dd0a",
-  "mentions": [
-   {
-    "videoId": "XVdcEzn_yK4",
-    "videoTitle": "We Think These Are The Best Vegan Restaurants In London, Do You?",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Run by Millie and Dan. Topjaw visited and tried multiple tacos. Mexican lager available. Three different taco types with jackfruit, al pastor, and tofish options.",
-    "verdict": "Absolutely brilliant vegan tacos, indulgent and banging flavours.",
-    "dishes": [
-     "al pastor tacos",
-     "short rib jackfruit tacos with barbecue sauce",
-     "tofish tacos",
-     "margaritas"
-    ],
-    "sponsored": false,
-    "at": 155
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Farmacy",
-  "location": "Notting Hill",
-  "lat": 51.51538,
-  "lon": -0.1927,
-  "placeId": "574a97acdb20",
-  "mentions": [
-   {
-    "videoId": "XVdcEzn_yK4",
-    "videoTitle": "We Think These Are The Best Vegan Restaurants In London, Do You?",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Has own plot of land where they grow 60-70% of ingredients, completely chemical free and sustainable. Topjaw visited multiple times; Will's first visit. Focus on fantastic ingredients rather than replicating meat.",
-    "verdict": "Sustainable, beautifully made vegan food with their own-grown ingredients.",
-    "dishes": [
-     "mushroom burger",
-     "sweet potato fries",
-     "charred tomato lasagna",
-     "popcorn cauliflower",
-     "falafel",
-     "beetroot hummus",
-     "kale caesar salad",
-     "winter bowl"
-    ],
-    "sponsored": false,
-    "at": 247
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "CookDaily",
-  "location": "Boxpark, Shoreditch",
-  "lat": 51.52347,
-  "lon": -0.07636,
-  "placeId": "8e0837cb843e",
-  "mentions": [
-   {
-    "videoId": "XVdcEzn_yK4",
-    "videoTitle": "We Think These Are The Best Vegan Restaurants In London, Do You?",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Owner King Cook is from Laos. Focus on Asian flavours. Topjaw praised their vegan chicken as the best available, genuine flavour and texture.",
-    "verdict": "Best vegan chicken available, so genuine with brilliant Asian flavours.",
-    "dishes": [
-     "chicken pad thai",
-     "bibimbap chicken bowl",
-     "tofu bowl"
-    ],
-    "sponsored": false,
-    "at": 402
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Purezza",
-  "location": "Camden",
-  "lat": 51.53807,
-  "lon": -0.14437,
-  "placeId": "65cdc013c29c",
-  "mentions": [
-   {
-    "videoId": "XVdcEzn_yK4",
-    "videoTitle": "We Think These Are The Best Vegan Restaurants In London, Do You?",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Vegan pizzeria. Offers three base options: hemp, whole wheat, or gluten-free. Pizza names based on Friends episodes. Made their own rice-based mozzarella.",
-    "verdict": "Brilliant vegan pizzas with incredible rice-based mozzarella substitute.",
-    "dishes": [
-     "the one with the pesto pizza",
-     "all the seasons pizza with beetroot and artichoke",
-     "pizza with sausage, tomato, and mozzarella"
-    ],
-    "sponsored": false,
-    "at": 527
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Temple of Seitan",
-  "location": "Camden",
-  "lat": 51.53815,
-  "lon": -0.14436,
-  "placeId": "8a0b1b47a362",
-  "mentions": [
-   {
-    "videoId": "XVdcEzn_yK4",
-    "videoTitle": "We Think These Are The Best Vegan Restaurants In London, Do You?",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Started by Rebecca and Patrick from Melbourne; Rebecca previously worked at KFC before creating vegan version. Seitan made from wheat and water, high protein, low carb, chewy texture.",
-    "verdict": "Brilliant cruelty-free vegan fried chicken replication with great sauce.",
-    "dishes": [
-     "buffalo chicken wing with blue cheese sour cream sauce"
-    ],
-    "sponsored": false,
-    "at": 621
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "From the Ashes BBQ",
-  "location": "Hackney Wick",
-  "lat": 51.53263,
-  "lon": -0.08032,
-  "placeId": "e66102d4d6d2",
-  "mentions": [
-   {
-    "videoId": "qmWp2vR6fXw",
-    "videoTitle": "24 HOURS IN POST-LOCKDOWN LONDON ft. Pork Doughnuts, London's Best Burgers and Big Lew",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited and tried the special pork shoulder donut with spicy chilli jam filling. Martin Atkinson's exceptional barbecue spot doing jam doughnuts like pork shoulder donuts.",
-    "verdict": "Pork shoulder donut exceptional, spicy goodness, perfect start.",
-    "dishes": [
-     "pork shoulder donut with chilli jam",
-     "spicy pork donut"
-    ],
-    "sponsored": false,
-    "at": 60
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Hackney Church Brew Co.",
-  "location": "Hackney Central",
-  "lat": 51.54743,
-  "lon": -0.05237,
-  "placeId": "1679e28d7678",
-  "mentions": [
-   {
-    "videoId": "qmWp2vR6fXw",
-    "videoTitle": "24 HOURS IN POST-LOCKDOWN LONDON ft. Pork Doughnuts, London's Best Burgers and Big Lew",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited and tried the goat cheese burger. Elliott runs the place, smokes a burger that Topjaw described as transporting and fantastic with horseradish mayo.",
-    "verdict": "Goat cheese burger fantastic, horseradish mayo zing, excellent.",
-    "dishes": [
-     "goat cheese burger"
-    ],
-    "sponsored": false,
-    "at": 154
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Studio Kitchen N1",
-  "location": "Islington",
-  "lat": 51.53614,
-  "lon": -0.08893,
-  "placeId": "1f91e993ade4",
-  "mentions": [
-   {
-    "videoId": "qmWp2vR6fXw",
-    "videoTitle": "24 HOURS IN POST-LOCKDOWN LONDON ft. Pork Doughnuts, London's Best Burgers and Big Lew",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited and tried the Oklahoma-style fried onion burger with crushed patty and cheese layers. Max Haley's burger spot praised for fantastic layered cheese and onions.",
-    "verdict": "Oklahoma-style burger certified, cheese beautiful, onion layers.",
-    "dishes": [
-     "Oklahoma-style fried onion burger"
-    ],
-    "sponsored": false,
-    "at": 438
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Smokestak",
-  "location": "Shoreditch",
-  "lat": 51.52368,
-  "lon": -0.07293,
-  "placeId": "740ea03b1ba8",
-  "mentions": [
-   {
-    "videoId": "qmWp2vR6fXw",
-    "videoTitle": "24 HOURS IN POST-LOCKDOWN LONDON ft. Pork Doughnuts, London's Best Burgers and Big Lew",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited and tried brisket, pork belly, and pork tail with crackling. Big Dave Carter runs the legendary smoking operation. Topjaw praised the fullness and salty quality.",
-    "verdict": "Smoked brisket excellent, pork belly fatty, salty fantastic.",
-    "dishes": [
-     "beef brisket",
-     "pork brisket",
-     "pork belly",
-     "pork tail"
-    ],
-    "sponsored": false,
-    "at": 529
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Beigel Bake",
-  "location": "Brick Lane, Shoreditch",
-  "lat": 51.52448,
-  "lon": -0.0717,
-  "placeId": "ca32905b898a",
-  "mentions": [
-   {
-    "videoId": "qmWp2vR6fXw",
-    "videoTitle": "24 HOURS IN POST-LOCKDOWN LONDON ft. Pork Doughnuts, London's Best Burgers and Big Lew",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited and tried bagels. Praised fantastic value and flavour, though noted you shouldn't expect gratitude or smiles from staff. Four pound ninety for generous beef bagel.",
-    "verdict": "Fantastic value and flavour, generous beef bagels.",
-    "dishes": [
-     "beef bagel"
-    ],
-    "sponsored": false,
-    "at": 622
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "FLOR",
-  "location": "Borough Market",
-  "lat": 51.50527,
-  "lon": -0.08992,
-  "placeId": "62f88b2c9511",
-  "mentions": [
-   {
-    "videoId": "qmWp2vR6fXw",
-    "videoTitle": "24 HOURS IN POST-LOCKDOWN LONDON ft. Pork Doughnuts, London's Best Burgers and Big Lew",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited and tried the Spice Girl New York-style pizza. Described as hot stone-baked pizza from guys behind Michelin-starred restaurant Lyles. Mouth-crying good.",
-    "verdict": "Stone-baked pizza hot, spicy, fantastic.",
-    "dishes": [
-     "Spice Girl pizza (New York-style)"
-    ],
-    "sponsored": false,
-    "at": 689
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Ahi Poké",
-  "location": "Market Hall Fulham",
-  "lat": 51.4978992,
-  "lon": -0.1436853,
-  "placeId": null,
-  "mentions": [
-   {
-    "videoId": "KCITfXKd9vk",
-    "videoTitle": "TOPJAW's GUIDE TO MARKET HALL, FULHAM",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw sampled a heatwave poké bowl from Ahi Poké as part of their review of Market Hall Fulham during a busy Tuesday night.",
-    "verdict": "Sampled the heatwave poké bowl at Market Hall.",
-    "dishes": [
-     "Heatwave poké bowl"
-    ],
-    "sponsored": true,
-    "at": 69
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Butchies",
-  "location": "Market Hall Fulham",
-  "lat": 51.48019,
-  "lon": -0.1947827,
-  "placeId": null,
-  "mentions": [
-   {
-    "videoId": "KCITfXKd9vk",
-    "videoTitle": "TOPJAW's GUIDE TO MARKET HALL, FULHAM",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw sampled a banded double beef burger from Butchies as part of their review of Market Hall Fulham.",
-    "verdict": "Sampled the banded double beef burger at Market Hall.",
-    "dishes": [
-     "Banded double beef burger"
-    ],
-    "sponsored": true,
-    "at": 69
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Fanny's Kebabs",
-  "location": "Market Hall Fulham",
-  "lat": 51.48026369999999,
-  "lon": -0.1952993,
-  "placeId": null,
-  "mentions": [
-   {
-    "videoId": "KCITfXKd9vk",
-    "videoTitle": "TOPJAW's GUIDE TO MARKET HALL, FULHAM",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw sampled a lumi aubergine kebab from Fanny's Kebabs as part of their Market Hall Fulham review.",
-    "verdict": "Sampled the lumi aubergine kebab at Market Hall.",
-    "dishes": [
-     "Lumi aubergine kebab"
-    ],
-    "sponsored": true,
-    "at": 69
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "HotBox",
-  "location": "Market Hall Fulham",
-  "lat": 51.48014,
-  "lon": -0.19543,
-  "placeId": "da3e4792f2c4",
-  "mentions": [
-   {
-    "videoId": "KCITfXKd9vk",
-    "videoTitle": "TOPJAW's GUIDE TO MARKET HALL, FULHAM",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw sampled BBQ hot wings with fries and cheese from HotBox as part of their Market Hall Fulham review.",
-    "verdict": "Sampled BBQ hot wings with fries and cheese at Market Hall.",
-    "dishes": [
-     "BBQ hot wings with fries and cheese"
-    ],
-    "sponsored": true,
-    "at": 69
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Love Churros",
-  "location": "Market Hall Fulham",
-  "lat": 51.4801339,
-  "lon": -0.1952553,
-  "placeId": null,
-  "mentions": [
-   {
-    "videoId": "KCITfXKd9vk",
-    "videoTitle": "TOPJAW's GUIDE TO MARKET HALL, FULHAM",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw sampled churros from Love Churros and paired them with Bailey's hot chocolate, which they highlighted as their ultimate dessert creation.",
-    "verdict": "Sampled churros paired brilliantly with Bailey's hot chocolate.",
-    "dishes": [
-     "Churros"
-    ],
-    "sponsored": true,
-    "at": 129
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Made of Dough",
-  "location": "Market Hall Fulham",
-  "lat": 51.46352599999999,
-  "lon": -0.112327,
-  "placeId": null,
-  "mentions": [
-   {
-    "videoId": "KCITfXKd9vk",
-    "videoTitle": "TOPJAW's GUIDE TO MARKET HALL, FULHAM",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw sampled pizza from Made of Dough at Market Hall Fulham.",
-    "verdict": "Sampled pizza at Market Hall.",
-    "dishes": [
-     "Pizza"
-    ],
-    "sponsored": true,
-    "at": 99
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Super Tacos",
-  "location": "Market Hall Fulham",
-  "lat": 51.4803738,
-  "lon": -0.1950268,
-  "placeId": null,
-  "mentions": [
-   {
-    "videoId": "KCITfXKd9vk",
-    "videoTitle": "TOPJAW's GUIDE TO MARKET HALL, FULHAM",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw sampled pollo asado tacos and a taco plate with beef, pork, chicken and corn chips with guac from Super Tacos at Market Hall.",
-    "verdict": "Sampled pollo asado and mixed taco plate with guac.",
-    "dishes": [
-     "Pollo asado tacos",
-     "Taco plate with beef, pork, chicken, corn chips and guac"
-    ],
-    "sponsored": true,
-    "at": 69
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Market Hall Fulham",
-  "location": "Fulham",
-  "lat": 51.48012,
-  "lon": -0.19526,
-  "placeId": "d91a0d96090d",
-  "mentions": [
-   {
-    "videoId": "KCITfXKd9vk",
-    "videoTitle": "TOPJAW's GUIDE TO MARKET HALL, FULHAM",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited Market Hall Fulham, a former Grade II listed Edwardian ticketing hall in West London open 7 days a week for breakfast, lunch, dinner and drinks. They had an excellent evening with good friends, good drinks and delicious food.",
-    "verdict": "Exceeded expectations with great atmosphere and diverse food.",
-    "dishes": [],
-    "sponsored": true,
-    "at": 31
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "The Kitchens at Old Spitalfields",
-  "location": "Old Spitalfields Market",
-  "lat": 51.5196569,
-  "lon": -0.0755469,
-  "placeId": null,
-  "mentions": [
-   {
-    "videoId": "TP7vBBbUEqU",
-    "videoTitle": "GUIDE TO THE KITCHENS at OLD SPITALFIELDS MARKET",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited this food hall venue and ate extensively across multiple stalls. They describe it as a Renaissance of Spitalfields' food scene with various vendors.",
-    "verdict": "Great food hall venue with excellent vendor selection.",
-    "dishes": [
-     "dumplings",
-     "jian bing",
-     "fried chicken sandwich",
-     "pastrami sandwich",
-     "charred grilled broccoli",
-     "steamed bun",
-     "steak sandwich"
-    ],
-    "sponsored": false,
-    "at": 8
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Dumpling Shack",
-  "location": "Old Spitalfields Market",
-  "lat": 51.51991,
-  "lon": -0.07515,
-  "placeId": "26d3c7358d25",
-  "mentions": [
-   {
-    "videoId": "TP7vBBbUEqU",
-    "videoTitle": "GUIDE TO THE KITCHENS at OLD SPITALFIELDS MARKET",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw tried their signature soup dumplings that are sealed, steamed, and fried. They praised the crunch and described them as tasty with hot liquid bursting through.",
-    "verdict": "Best dumplings in London with excellent technique and taste.",
-    "dishes": [
-     "soup dumplings",
-     "fried dumplings"
-    ],
-    "sponsored": false,
-    "at": 44
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Pleasant Lady",
-  "location": "Old Spitalfields Market",
-  "lat": 51.51974,
-  "lon": -0.07506,
-  "placeId": "ba25d7fb0193",
-  "mentions": [
-   {
-    "videoId": "TP7vBBbUEqU",
-    "videoTitle": "GUIDE TO THE KITCHENS at OLD SPITALFIELDS MARKET",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw tried their jian bing (Northern Chinese street food pancakes) with various fillings. They praised the presentation, peanut sauce, and noted the combination of deep fried flour and pork.",
-    "verdict": "Northern China's most popular street food done excellently.",
-    "dishes": [
-     "jian bing",
-     "pork jian bing"
-    ],
-    "sponsored": false,
-    "at": 109
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Flank",
-  "location": "Old Spitalfields Market",
-  "lat": 51.51957,
-  "lon": -0.07505,
-  "placeId": "4ed6437c75f8",
-  "mentions": [
-   {
-    "videoId": "TP7vBBbUEqU",
-    "videoTitle": "GUIDE TO THE KITCHENS at OLD SPITALFIELDS MARKET",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw tried their fried chicken sandwich with house-made batter using potato starch and their own chili sauce. They praised it as a really big, juicy chicken sandwich with perfect balance.",
-    "verdict": "Master of fried chicken sandwich with excellent homemade components.",
-    "dishes": [
-     "fried chicken sandwich"
-    ],
-    "sponsored": false,
-    "at": 205
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Monty's Deli",
-  "location": "Old Spitalfields Market",
-  "lat": 51.5333,
-  "lon": -0.08013,
-  "placeId": "d7441a424cef",
-  "mentions": [
-   {
-    "videoId": "TP7vBBbUEqU",
-    "videoTitle": "GUIDE TO THE KITCHENS at OLD SPITALFIELDS MARKET",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw tried their pastrami sandwich. They praised the rye bread, homemade sauerkraut and mustard, describing it as light, juicy, and amazing with well-balanced flavours.",
-    "verdict": "Master of Jewish soul food with excellent homemade ingredients.",
-    "dishes": [
-     "pastrami sandwich",
-     "pickle"
-    ],
-    "sponsored": false,
-    "at": 250
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "High Mood Food",
-  "location": "Old Spitalfields Market",
-  "lat": 51.51535,
-  "lon": -0.15174,
-  "placeId": "866792684879",
-  "mentions": [
-   {
-    "videoId": "TP7vBBbUEqU",
-    "videoTitle": "GUIDE TO THE KITCHENS at OLD SPITALFIELDS MARKET",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw tried their charred grilled broccoli with green leaves, tahini dressing, activated duck, and fermented foods. They praised it and talked about gut health benefits.",
-    "verdict": "Health-focused food with excellent charred broccoli and fermented elements.",
-    "dishes": [
-     "charred grilled broccoli salad"
-    ],
-    "sponsored": false,
-    "at": 316
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Yum Bun",
-  "location": "Old Spitalfields Market",
-  "lat": 51.51973,
-  "lon": -0.0748,
-  "placeId": "8f29600d1790",
-  "mentions": [
-   {
-    "videoId": "TP7vBBbUEqU",
-    "videoTitle": "GUIDE TO THE KITCHENS at OLD SPITALFIELDS MARKET",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw tried their crispy tofu steamed bun. They described it as looking like a little pillow and praised it as delicate, garlicky, and delicious.",
-    "verdict": "Excellent crispy tofu steamed buns, delicate and flavorful.",
-    "dishes": [
-     "crispy tofu steamed bun"
-    ],
-    "sponsored": false,
-    "at": 350
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "L'Amuse Bouche",
-  "location": "Brixton",
-  "lat": 51.4635,
-  "lon": -0.11216,
-  "placeId": "efd3721bc0e2",
-  "mentions": [
-   {
-    "videoId": "8qYmiZn4yAo",
-    "videoTitle": "LONDON CHEAP EATS - BRIXTON - Meals under £9",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw featured this crepe place and loved their La Goaty (goat's cheese, red onion chutney, spinach) for £5.50, praising it as 'belting belt and crepes'.",
-    "verdict": "Excellent value crepes with quality ingredients.",
-    "dishes": [
-     "La Goaty (goat's cheese, red onion chutney, spinach)"
-    ],
-    "sponsored": false,
-    "at": 32
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "The Joint",
-  "location": "Brixton Village",
-  "lat": 51.46222,
-  "lon": -0.11169,
-  "placeId": "6a447ea02497",
-  "mentions": [
-   {
-    "videoId": "8qYmiZn4yAo",
-    "videoTitle": "LONDON CHEAP EATS - BRIXTON - Meals under £9",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited and reviewed their signature 16-hour slow cooked pulled pork for £8.50, noting it's hard to get a table as it's very popular.",
-    "verdict": "Highly popular, quality slow-cooked pulled pork.",
-    "dishes": [
-     "16 hour slow cooked pulled pork"
-    ],
-    "sponsored": false,
-    "at": 96
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "OKAN Brixton Village",
-  "location": "Brixton Village",
-  "lat": 51.46246,
-  "lon": -0.11181,
-  "placeId": "bb969d8d2ee2",
-  "mentions": [
-   {
-    "videoId": "8qYmiZn4yAo",
-    "videoTitle": "LONDON CHEAP EATS - BRIXTON - Meals under £9",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw featured this Japanese street food place serving okonomiyaki for 18 years. They highlighted the thin slice pork belly okonomiyaki for £8.00 with its unique cooking method.",
-    "verdict": "Excellent value Japanese street food, authentic and filling.",
-    "dishes": [
-     "Thin slice pork belly okonomiyaki"
-    ],
-    "sponsored": false,
-    "at": 188
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Agile Rabbit",
-  "location": "Brixton Village",
-  "lat": 51.46256,
-  "lon": -0.11237,
-  "placeId": "5ec18c544fcf",
-  "mentions": [
-   {
-    "videoId": "8qYmiZn4yAo",
-    "videoTitle": "LONDON CHEAP EATS - BRIXTON - Meals under £9",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited and praised their ham, mushroom, ricotta & pesto calzone (small size for £5), especially noting the creamy ricotta and subtle pesto.",
-    "verdict": "Great value pizza with quality ingredients and generous portions.",
-    "dishes": [
-     "Ham, mushroom, ricotta & pesto calzone"
-    ],
-    "sponsored": false,
-    "at": 157
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Pedler",
-  "location": "Peckham",
-  "lat": 51.46507,
-  "lon": -0.06669,
-  "placeId": "b721bd0ee04b",
-  "mentions": [
-   {
-    "videoId": "YKdwsDL5cGs",
-    "videoTitle": "GUIDE TO PECKHAM with Uber Eats",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited and reviewed. Known for steak sandwiches and frizzle fried chicken. Head chef previously worked at Rules restaurant.",
-    "verdict": "Great steak sandwich and frizzle fried chicken.",
-    "dishes": [
-     "Frizzle Chicken"
-    ],
-    "sponsored": true,
-    "at": 61
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Nandine",
-  "location": "Peckham",
-  "lat": 51.47099,
-  "lon": -0.08258,
-  "placeId": "caceda7644e9",
-  "mentions": [
-   {
-    "videoId": "YKdwsDL5cGs",
-    "videoTitle": "GUIDE TO PECKHAM with Uber Eats",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited and reviewed. Run by a Kurdish family - the mother is the cook and her sons handle business and marketing.",
-    "verdict": "Vibrant Kurdish food, well-run by hardworking family.",
-    "dishes": [
-     "Seven Spice Chicken Shawarma Sandwich"
-    ],
-    "sponsored": true,
-    "at": 123
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Lords of Poké",
-  "location": "Peckham Levels",
-  "lat": 51.4708529,
-  "lon": -0.06801689999999999,
-  "placeId": null,
-  "mentions": [
-   {
-    "videoId": "YKdwsDL5cGs",
-    "videoTitle": "GUIDE TO PECKHAM with Uber Eats",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited and reviewed. Located in Peckham Levels, a multi-use community space with offices, studios, and food places.",
-    "verdict": "Fresh poke bowl with quality tuna in a unique space.",
-    "dishes": [
-     "Large Classic Tuna Bowl"
-    ],
-    "sponsored": true,
-    "at": 156
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Drums & Flats",
-  "location": "Peckham",
-  "lat": 51.4708058,
-  "lon": -0.0682474,
-  "placeId": null,
-  "mentions": [
-   {
-    "videoId": "YKdwsDL5cGs",
-    "videoTitle": "GUIDE TO PECKHAM with Uber Eats",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited and reviewed. Specializes in chicken wings with various sauces, described as a trek away but worth visiting.",
-    "verdict": "Impeccable tangy buffalo wings with perfect sauce.",
-    "dishes": [
-     "5 Tangy Buffalo Wings"
-    ],
-    "sponsored": true,
-    "at": 250
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Gallery Cafe",
-  "location": "Bethnal Green, East London",
-  "lat": 51.52979,
-  "lon": -0.05448,
-  "placeId": "fd609fc1726d",
-  "mentions": [
-   {
-    "videoId": "soyqQluj32A",
-    "videoTitle": "THE BEST VEGAN RESTAURANTS IN LONDON",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Opened in 2006 as a Buddhist vegetarian cafe, converted to fully vegan last year. Three years running voted Time Out's best cafe in Bethnal Green. Features cinema screenings, chapel area, garden in summer, profits go to charity.",
-    "verdict": "Great vegan full English breakfast with creative touches.",
-    "dishes": [
-     "Potato Rostis",
-     "Vegan Full English Breakfast"
-    ],
-    "sponsored": false,
-    "at": 34
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Mooshies London Vegan Burger Bar",
-  "location": "Brick Lane, East London",
-  "lat": 51.51971,
-  "lon": -0.07182,
-  "placeId": "93d8137e1910",
-  "mentions": [
-   {
-    "videoId": "soyqQluj32A",
-    "videoTitle": "THE BEST VEGAN RESTAURANTS IN LONDON",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Owned by boyfriend/girlfriend duo who quit corporate jobs after traveling. Plant-based burger restaurant. They created the restaurant because there wasn't a legal vegan burger place for regular people.",
-    "verdict": "Excellent vegan burgers mimicking classic fast food.",
-    "dishes": [
-     "What's Your Beef",
-     "Chickpea Bytes",
-     "Fried Fish"
-    ],
-    "sponsored": false,
-    "at": 110
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Young Vegans",
-  "location": "Camden, North London",
-  "lat": 51.53059,
-  "lon": -0.05655,
-  "placeId": "3158d15869bc",
-  "mentions": [
-   {
-    "videoId": "soyqQluj32A",
-    "videoTitle": "THE BEST VEGAN RESTAURANTS IN LONDON",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Vegan pie house with stall at Camden Market. Permanent space opened four months ago. Serves seitan and ale pie, curry pie, swift taylor pie, breakfast pie and desserts.",
-    "verdict": "Affordable, delicious vegan pies with bold flavours.",
-    "dishes": [
-     "Seitan & Ale Pie",
-     "Peanut Butter and Chocolate Pie"
-    ],
-    "sponsored": false,
-    "at": 207
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Club Mexicana",
-  "location": "Camden Market, North London",
-  "lat": 51.51645,
-  "lon": -0.07258,
-  "placeId": "1978c9762f53",
-  "mentions": [
-   {
-    "videoId": "soyqQluj32A",
-    "videoTitle": "THE BEST VEGAN RESTAURANTS IN LONDON",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Located at Camden Market serving vegan Mexican food. Summer queue extends down the street. Also serves vegan ice cream and frozen beetroot sorbet made with liquid nitrogen.",
-    "verdict": "Amazing Mexican street food with creative frozen desserts.",
-    "dishes": [
-     "Beer Battered To-Fish Tacos",
-     "Vegan Ice Cream",
-     "Beetroot Sorbet"
-    ],
-    "sponsored": false,
-    "at": 244
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Chin Chin Labs",
-  "location": "Camden, North London",
-  "lat": 51.5385,
-  "lon": -0.14301,
-  "placeId": "642c94eed11e",
-  "mentions": [
-   {
-    "videoId": "soyqQluj32A",
-    "videoTitle": "THE BEST VEGAN RESTAURANTS IN LONDON",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Vegan dessert café in Camden. Serves vegan hot chocolate and frozen desserts made with liquid nitrogen.",
-    "verdict": "Creative vegan desserts, particularly the hot chocolate.",
-    "dishes": [
-     "Vegan Hot Chocolate",
-     "Beetroot Sorbet"
-    ],
-    "sponsored": false,
-    "at": 313
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Cafe Van Gogh",
-  "location": "Brixton, South London",
-  "lat": 51.47759,
-  "lon": -0.11228,
-  "placeId": "564feeb88d07",
-  "mentions": [
-   {
-    "videoId": "soyqQluj32A",
-    "videoTitle": "THE BEST VEGAN RESTAURANTS IN LONDON",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Converted from vegetarian to fully vegan last year. Nonprofit cafe where profits fund community projects in the area. Serves sticky seitan ribs and mac and cheese with butternut squash.",
-    "verdict": "Excellent vegan ribs and mac and cheese, feels good supporting community.",
-    "dishes": [
-     "Sticky Seitan Ribs",
-     "Mac and Cheese with Butternut Squash"
-    ],
-    "sponsored": false,
-    "at": 346
+    "at": 378
    }
   ],
   "bestRating": null,
@@ -5313,54 +2725,6 @@
   "bestRatingOutOf": null
  },
  {
-  "name": "BYOC Bar",
-  "location": null,
-  "lat": 51.534842,
-  "lon": -0.1392278,
-  "placeId": null,
-  "mentions": [
-   {
-    "videoId": "m_z5yPXnnek",
-    "videoTitle": "HOW TO GET COCKTAILS ALL NIGHT IN LONDON FOR £25!",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Expert mixologist creates endless cocktails when you bring your own spirits. Exceptional value at £25 for the entire night. Described as a must-go destination.",
-    "verdict": "Exceptional value, must-go for cocktail lovers.",
-    "dishes": [
-     "Cocktails"
-    ],
-    "sponsored": false,
-    "at": null
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "KERB",
-  "location": "Camden",
-  "lat": 51.5184341,
-  "lon": -0.1155897,
-  "placeId": null,
-  "mentions": [
-   {
-    "videoId": "vCadqjvfpxc",
-    "videoTitle": "KERB CAMDEN: THE INSIDE TOUR BY TOPJAW",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited KERB Camden and was impressed enough to feel full for 48 hours after. They recommend trying any of the stands there.",
-    "verdict": "Excellent food market with diverse street food vendors.",
-    "dishes": [],
-    "sponsored": false,
-    "at": 0
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
   "name": "Hawker House",
   "location": "Shoreditch",
   "lat": 51.53327,
@@ -5408,161 +2772,6 @@
     ],
     "sponsored": false,
     "at": 0
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Misato",
-  "location": "Chinatown/Soho",
-  "lat": 51.51085,
-  "lon": -0.13186,
-  "placeId": "55ef1f507e5e",
-  "mentions": [
-   {
-    "videoId": "uDWzMUbdg6c",
-    "videoTitle": "LONDON CHEAP EATS - SOHO Meals Under £8",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited and praised the chicken katsu curry for £6, noting it tastes fresher than Wagamama. They highlighted the generous portion and that the unassuming exterior belies amazing food inside.",
-    "verdict": "Fresh, generous katsu curry, better than Wagamama.",
-    "dishes": [
-     "Chicken Katsu Curry"
-    ],
-    "sponsored": false,
-    "at": 31
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Bake",
-  "location": "Soho",
-  "lat": 51.51079,
-  "lon": -0.13159,
-  "placeId": "8bd7dddbe9cd",
-  "mentions": [
-   {
-    "videoId": "uDWzMUbdg6c",
-    "videoTitle": "LONDON CHEAP EATS - SOHO Meals Under £8",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited the Chinese bakery next to Misato and praised the buns for their size and shininess. They tried a BBQ pork bun for £1.30 and called it 'banging', describing it as a good lunchtime snack.",
-    "verdict": "Shiny, beautiful buns; banging value at £1.30.",
-    "dishes": [
-     "BBQ Pork Bun"
-    ],
-    "sponsored": false,
-    "at": 93
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Carbon",
-  "location": "Soho",
-  "lat": 51.49408,
-  "lon": -0.0984,
-  "placeId": "7d338dab4c88",
-  "mentions": [
-   {
-    "videoId": "uDWzMUbdg6c",
-    "videoTitle": "LONDON CHEAP EATS - SOHO Meals Under £8",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited this grill house and ordered king prawn patatas bravas for £7.95. They praised the prawns as really good and not too spicy, and called it 'the best patatas bravas I've had since Barcelona.'",
-    "verdict": "Best patatas bravas since Barcelona; fresh prawns.",
-    "dishes": [
-     "King Prawn Patatas Bravas"
-    ],
-    "sponsored": false,
-    "at": 124
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "The Pie Shop",
-  "location": "Covent Garden",
-  "lat": 51.5136143,
-  "lon": -0.1365486,
-  "placeId": null,
-  "mentions": [
-   {
-    "videoId": "uDWzMUbdg6c",
-    "videoTitle": "LONDON CHEAP EATS - SOHO Meals Under £8",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited in Covent Garden and ordered steak and stout pie for £6.75. They loved the pie ('If you don't like pie, what's wrong with you?') and noted it was a substantial meal that fit the budget.",
-    "verdict": "Substantial pie meal; excellent value at £6.75.",
-    "dishes": [
-     "Steak and Stout Pie"
-    ],
-    "sponsored": false,
-    "at": 185
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Homeslice",
-  "location": "Covent Garden",
-  "lat": 51.5146,
-  "lon": -0.12646,
-  "placeId": "42cf540e7ab3",
-  "mentions": [
-   {
-    "videoId": "uDWzMUbdg6c",
-    "videoTitle": "LONDON CHEAP EATS - SOHO Meals Under £8",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited Homeslice in Covent Garden and ordered a large margarita and mushroom pizza slice for £4. They highlighted that huge 20-inch pizzas cost substantial amounts, but individual slices are cheap eats.",
-    "verdict": "Huge slices; cheap eat at £4 per slice.",
-    "dishes": [
-     "Large Margarita and Mushroom Pizza Slice"
-    ],
-    "sponsored": false,
-    "at": 250
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Molly Bakes",
-  "location": "Dalston",
-  "lat": 51.493662,
-  "lon": -0.158989,
-  "placeId": null,
-  "mentions": [
-   {
-    "videoId": "M-c_eejeydY",
-    "videoTitle": "INTRODUCING FREAKSHAKES IN LONDON",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw visited this bakery/cafe in Dalston near Shoreditch and gave a detailed review of their freakshakes. They praised the high-quality ingredients including Ice Cream Union ice cream, the effort and work involved, and found the £7 price reasonable given the quality and presentation.",
-    "verdict": "Outstanding freakshakes with premium ingredients and effort.",
-    "dishes": [
-     "Raspberry freakshake",
-     "Bomber Man freakshake",
-     "Fluff You freakshake",
-     "Salted caramel freakshake",
-     "Chocolate freakshake",
-     "Peanut butter freakshake"
-    ],
-    "sponsored": false,
-    "at": 1
    }
   ],
   "bestRating": null,
@@ -5851,6 +3060,22 @@
     ],
     "sponsored": false,
     "at": 64
+   },
+   {
+    "videoId": "Qm45NAoLQOE",
+    "videoTitle": "TOP 3 RESTAURANTS IN LONDON ft. Tiffany Calver",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Tiffany's 'Guilty Pleasure' choice. They visit and eat burgers and fries. Tiffany shares her personal order preferences and observations about the Five Guys experience.",
+    "verdict": "Best burgers and fries in London, keeps it cute and simple.",
+    "dishes": [
+     "cheeseburger",
+     "fries",
+     "all-in burger"
+    ],
+    "sponsored": false,
+    "at": 349
    }
   ],
   "bestRating": null,
@@ -5906,6 +3131,2465 @@
     ],
     "sponsored": false,
     "at": 441
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Vincenzo's",
+  "location": "Shoreditch",
+  "lat": 51.5248524,
+  "lon": -0.0713985,
+  "placeId": null,
+  "mentions": [
+   {
+    "videoId": "n4Uwuho1HjU",
+    "videoTitle": "It’s finally here. Vincenzo’s New York style pizza has landed in Shoreditch. 🍕",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw reviews the New York and New Haven style pizzas at Tom Vincent's new central London location. Highlights include the vodka sauce pepperoni pesto pizza, spanakopita with mozzarella, feta, spinach and scotch bonnet honey, and the Baratta pizza with thick tomato base.",
+    "verdict": "Authentic old school New York pizza, properly executed.",
+    "dishes": [
+     "Vodka sauce pepperoni pesto pizza",
+     "Spanakopita with mozzarella, feta, spinach, scotch bonnet honey",
+     "Baratta pizza"
+    ],
+    "sponsored": false,
+    "at": 0
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "The George Tavern",
+  "location": "Fitzrovia",
+  "lat": 51.51427,
+  "lon": -0.05304,
+  "placeId": "02250bccb886",
+  "mentions": [
+   {
+    "videoId": "RdGAqs9iwGo",
+    "videoTitle": "Still need to book somewhere great? We’ve got you! ❤️🎄❤️",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Proper London pub with a glue pot that fits up to 10 people, own Guinness tap, and specific menu. Topjaw says you can get weird there.",
+    "verdict": "Great festive pub with unique group features.",
+    "dishes": [],
+    "sponsored": false,
+    "at": 9
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "The Parakeet",
+  "location": null,
+  "lat": 51.54978,
+  "lon": -0.14049,
+  "placeId": "dd6fca5094b8",
+  "mentions": [
+   {
+    "videoId": "RdGAqs9iwGo",
+    "videoTitle": "Still need to book somewhere great? We’ve got you! ❤️🎄❤️",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Gorgeous pub turned fine dining spot from Ben Allen (formerly of Brad). Great food, brilliant atmosphere, still feels local.",
+    "verdict": "Fine dining in a local pub setting, excellent atmosphere.",
+    "dishes": [],
+    "sponsored": false,
+    "at": 31
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "BLOODSPORTS by MEATliquor",
+  "location": null,
+  "lat": 51.51449,
+  "lon": -0.1249,
+  "placeId": "a0d857f1ff65",
+  "mentions": [
+   {
+    "videoId": "RdGAqs9iwGo",
+    "videoTitle": "Still need to book somewhere great? We’ve got you! ❤️🎄❤️",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Moody, mad, and full of energy. Menu by meat liquor. Turbo margaritas and a dead hippie are signature drinks.",
+    "verdict": "Energetic spot with bold cocktails and meat liquor menu.",
+    "dishes": [
+     "turbo margaritas",
+     "dead hippie"
+    ],
+    "sponsored": false,
+    "at": 43
+   },
+   {
+    "videoId": "jIEhjCAUuCc",
+    "videoTitle": "4 Best New Restaurants in London",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "American sports bar concept in Covent Garden with 32 screens, karaoke, horror film memorabilia. Food by MEATliquor featuring their classics. Open midday to 2am daily.",
+    "verdict": "Fun American sports bar with great burgers and entertainment.",
+    "dishes": [
+     "Dead Hippie Burger",
+     "Onion rings",
+     "Mozzarella sticks",
+     "Monkey fingers"
+    ],
+    "sponsored": false,
+    "at": 401
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "The Montpelier",
+  "location": null,
+  "lat": 51.46767,
+  "lon": -0.07031,
+  "placeId": "8eb30d4fe55e",
+  "mentions": [
+   {
+    "videoId": "RdGAqs9iwGo",
+    "videoTitle": "Still need to book somewhere great? We’ve got you! ❤️🎄❤️",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Peckham local that has quietly become a foodie favorite. Michael Bagler in command of the kitchen serving damn tasty small plates.",
+    "verdict": "Talented chef, tasty small plates, quiet foodie favorite.",
+    "dishes": [
+     "small plates"
+    ],
+    "sponsored": false,
+    "at": 52
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "SHEBA",
+  "location": "Brick Lane",
+  "lat": 51.5206625,
+  "lon": -0.07171269999999999,
+  "placeId": "ae0840c286b2",
+  "mentions": [
+   {
+    "videoId": "RdGAqs9iwGo",
+    "videoTitle": "Still need to book somewhere great? We’ve got you! ❤️🎄❤️",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Best Indian restaurant on Brick Lane among 23 curry houses. Full of flavor, noise and personality.",
+    "verdict": "Best on Brick Lane, full of flavor and personality.",
+    "dishes": [],
+    "sponsored": false,
+    "at": 61
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "The Culpeper",
+  "location": null,
+  "lat": 51.51692,
+  "lon": -0.07303,
+  "placeId": "8b79731f38c3",
+  "mentions": [
+   {
+    "videoId": "RdGAqs9iwGo",
+    "videoTitle": "Still need to book somewhere great? We’ve got you! ❤️🎄❤️",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Beautiful pub that does French pub food and has an electric shortage buzz. Manages to do it all.",
+    "verdict": "Beautiful pub with French food and electric atmosphere.",
+    "dishes": [
+     "French pub food"
+    ],
+    "sponsored": false,
+    "at": 68
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Wildflowers",
+  "location": null,
+  "lat": 51.49045,
+  "lon": -0.15303,
+  "placeId": "0a76f2fafade",
+  "mentions": [
+   {
+    "videoId": "RdGAqs9iwGo",
+    "videoTitle": "Still need to book somewhere great? We’ve got you! ❤️🎄❤️",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Warm, intimate, and magical. Topjaw predicts it will get a Michelin star in February next year.",
+    "verdict": "Magical, intimate; predicted Michelin star prospect.",
+    "dishes": [],
+    "sponsored": false,
+    "at": 76
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "NIJŪ",
+  "location": null,
+  "lat": 51.50899279999999,
+  "lon": -0.1438217,
+  "placeId": null,
+  "mentions": [
+   {
+    "videoId": "RdGAqs9iwGo",
+    "videoTitle": "Still need to book somewhere great? We’ve got you! ❤️🎄❤️",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Sushi restaurant from Endo (off Endo at the Rotunda) and Chris Golding. Hugely memorable sushi, one of only 18 UK locations licensed to serve Kobe.",
+    "verdict": "One of year's best meals, memorable sushi, Kobe licensed.",
+    "dishes": [
+     "sushi"
+    ],
+    "sponsored": false,
+    "at": 91
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Brasserie Zedel",
+  "location": "Soho",
+  "lat": 51.51058,
+  "lon": -0.13556,
+  "placeId": "cd3ed279cae4",
+  "mentions": [
+   {
+    "videoId": "RdGAqs9iwGo",
+    "videoTitle": "Still need to book somewhere great? We’ve got you! ❤️🎄❤️",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Grand, glitzy, and gloriously old school. Perfect for a big festive night out without breaking the bank.",
+    "verdict": "Grand, glitzy, old school; great value festive spot.",
+    "dishes": [],
+    "sponsored": false,
+    "at": 101
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Wine Bar",
+  "location": "Mayfair",
+  "lat": 51.49727,
+  "lon": -0.14593,
+  "placeId": "4d4be303459c",
+  "mentions": [
+   {
+    "videoId": "jIEhjCAUuCc",
+    "videoTitle": "4 Best New Restaurants in London",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw describes it as London's most romantic wine bar located underneath a farm shop. Features small plates, shakucheri, and excellent wine selection. Walk-ins only, great date spot in Mayfair.",
+    "verdict": "Romantic wine bar with great small plates and wine.",
+    "dishes": [
+     "Steak tartare",
+     "Deviled crab",
+     "Cheese toastie",
+     "Pork belly"
+    ],
+    "sponsored": false,
+    "at": 0
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Canal",
+  "location": "West London",
+  "lat": 51.5225391,
+  "lon": -0.1998125,
+  "placeId": null,
+  "mentions": [
+   {
+    "videoId": "jIEhjCAUuCc",
+    "videoTitle": "4 Best New Restaurants in London",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Newer sibling of Bistro Freddy Bar Crispen. First waterside dining spot creating urban gritty Riviera vibe. Modern European cuisine with pasta focus from chef formerly at Michelin-starred Luca. Beautiful handfinished interior.",
+    "verdict": "Gorgeous waterside restaurant with excellent modern European food.",
+    "dishes": [
+     "Ricotta ravioli",
+     "Seasonal fritter",
+     "Beef tartare",
+     "Table burger",
+     "Brown butter old fashioned"
+    ],
+    "sponsored": false,
+    "at": 220
+   },
+   {
+    "videoId": "u4cCnJ3sNAs",
+    "videoTitle": "Canal on the ‘urban riviera’ is West London’s hottest new restaurant.",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw visited this new restaurant and reviewed multiple dishes. Head chef Adrian previously worked at Luca. They praised the Ricotta Lemon Agnolotti, Seasonal Frito, Table Cheeseburger, Steak Tartare with Pink fur crisps, and Brown Butter Old Fashioned cocktail.",
+    "verdict": "Excellent new West London spot with urban riviera vibes.",
+    "dishes": [
+     "Ricotta Lemon Agnolotti with Cavolo Nero",
+     "Seasonal Frito",
+     "Table Cheeseburger",
+     "Steak Tartare with Pink fur crisps",
+     "Brown Butter Old Fashioned"
+    ],
+    "sponsored": false,
+    "at": 0
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Dove",
+  "location": "Notting Hill",
+  "lat": 51.51539210000001,
+  "lon": -0.2059362,
+  "placeId": null,
+  "mentions": [
+   {
+    "videoId": "jIEhjCAUuCc",
+    "videoTitle": "4 Best New Restaurants in London",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Notting Hill restaurant serving only 10 burgers daily using 50-day aged rib trim from HG Walter. Opened 2019. Menu driven by chef's personal preferences. High quality produce with focus on texture and subtle embellishment.",
+    "verdict": "Exceptional quality burgers and refined small plates with texture.",
+    "dishes": [
+     "Burger (limited 10 per day)",
+     "Deep fried potato with mortadella",
+     "Tomatoes with sour cream and chili crisp",
+     "Grilled Atlantic prawns"
+    ],
+    "sponsored": false,
+    "at": 560
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Utopia Bagels",
+  "location": "South Bank (Waterloo)",
+  "lat": 51.5052728,
+  "lon": -0.1184929,
+  "placeId": null,
+  "mentions": [
+   {
+    "videoId": "V0pGH3QcNhM",
+    "videoTitle": "Honestly Utopia Bagels have changed things for us - you haven’t tried a bagel until you’ve had them.",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw described these as some of the best bagels in the world, visiting their South Bank residency. Tried multiple bagels including the 'worth it' bagel with Nova salmon, bacon egg and cheese, and various cream cheese flavors.",
+    "verdict": "Best bagels in the world, life-changing quality.",
+    "dishes": [
+     "Worth it bagel (Nova salmon, capers, cream cheese, red onions)",
+     "Bacon, egg and cheese bagel",
+     "Birthday cake on French toast bacon",
+     "Apple turnover bagel"
+    ],
+    "sponsored": false,
+    "at": 0
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Wingmans",
+  "location": "Soho",
+  "lat": 51.51304,
+  "lon": -0.13149,
+  "placeId": "cc9324723a98",
+  "mentions": [
+   {
+    "videoId": "mqrhoS8KgkE",
+    "videoTitle": "Best Chicken Wings in London? With @PaddyTheBaddyUFC",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw visited Wingmans in Soho with UFC fighter Paddy the Baddy. They tasted multiple wing varieties including buffalo, barbecue, dry wings (salt and pepper style), a dark wing with Indian flavourings and crispy chutney that won at Wingfest, Korean wings, and the hottest 'Jamaican me crazy' wings. Topjaw highlighted the restaurant as a routine award winner.",
+    "verdict": "Award-winning, multiple excellent wing varieties, great experience.",
+    "dishes": [
+     "Buffalo wings",
+     "Barbecue wings",
+     "Dry wings (salt and pepper)",
+     "Dark wing with Indian flavourings and crispy chutney",
+     "Korean wings",
+     "Jamaican me crazy wings (hottest)",
+     "Truffle mac and cheese with slow-cooked beef"
+    ],
+    "sponsored": false,
+    "at": 61
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Dumbo",
+  "location": "Bethnal Green",
+  "lat": 51.531103,
+  "lon": -0.0480805,
+  "placeId": null,
+  "mentions": [
+   {
+    "videoId": "Ej7tawt68JA",
+    "videoTitle": "Dumbo is finally in London.",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw visited before opening and tried the cheeseburger with special Martins potato roll brought from Paris, double fried chips, and housemade secret sauce. Owner Sam discussed the burgers and London expansion.",
+    "verdict": "Best burger in Paris, now in London.",
+    "dishes": [
+     "Cheeseburger",
+     "French fries",
+     "Beer"
+    ],
+    "sponsored": false,
+    "at": 0
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Mamapen",
+  "location": "Soho",
+  "lat": 51.5126579,
+  "lon": -0.1365768,
+  "placeId": null,
+  "mentions": [
+   {
+    "videoId": "_u7NfNg8aKQ",
+    "videoTitle": "Mamapen the great value, delicious, Cambodian, Soho belter.",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "London's only Cambodian restaurant. A residency inside 13 Canteen that has now become permanent. Topjaw praised the pork toast, prawn toast, pork belly rice, chicken, and pineapple curry.",
+    "verdict": "Great value, delicious Cambodian food. Exciting project.",
+    "dishes": [
+     "pork toast",
+     "prawn toast",
+     "pork belly rice",
+     "chicken",
+     "pineapple curry"
+    ],
+    "sponsored": false,
+    "at": 0
+   },
+   {
+    "videoId": "i65acG8jUew",
+    "videoTitle": "Where has Cambodian food been all our lives…?",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw visits this Cambodian restaurant and gives their own detailed opinions on multiple dishes. The owner explains the restaurant is named after their mother who provides cooking inspiration.",
+    "verdict": "Enormously tasty, incredibly good value, exciting new opening.",
+    "dishes": [
+     "Panko Pork Toast",
+     "Tattie Mince Noodles",
+     "Khmer BBQ Chicken",
+     "Caramelised Braised Pork Belly"
+    ],
+    "sponsored": false,
+    "at": 0
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Hannah's Dough Hands",
+  "location": null,
+  "lat": 51.5453747,
+  "lon": -0.0632078,
+  "placeId": null,
+  "mentions": [
+   {
+    "videoId": "JEVL7IXxOrs",
+    "videoTitle": "The industry is right, Hannah's Dough Hands is pizza worth shouting about.",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw visited and reviewed pizzas at Hannah's Dough Hands, praising the pizza-making and specific dishes including the J (spicy sausage), spicy tuna, and mushroom pizza.",
+    "verdict": "Pizza worth shouting about; excellent craftsmanship.",
+    "dishes": [
+     "J pizza with spicy sausage and hot honey",
+     "Spicy tuna pizza",
+     "Mushroom pizza with soy sauce"
+    ],
+    "sponsored": false,
+    "at": 0
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "The Spurstowe Arms",
+  "location": null,
+  "lat": 51.54536,
+  "lon": -0.06324,
+  "placeId": "86ba4cea20a9",
+  "mentions": [
+   {
+    "videoId": "JEVL7IXxOrs",
+    "videoTitle": "The industry is right, Hannah's Dough Hands is pizza worth shouting about.",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw visited and reviewed pizza at The Spurstowe Arms, which serves Hannah's Dough Hands pizza including tuna on pizza.",
+    "verdict": "Serves quality tuna pizza from Hannah's Dough Hands.",
+    "dishes": [
+     "Tuna pizza"
+    ],
+    "sponsored": false,
+    "at": 0
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Old Nunshead",
+  "location": "Peckham",
+  "lat": 51.46524,
+  "lon": -0.05941,
+  "placeId": "880a65d6a6ed",
+  "mentions": [
+   {
+    "videoId": "JEVL7IXxOrs",
+    "videoTitle": "The industry is right, Hannah's Dough Hands is pizza worth shouting about.",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw visited and reviewed pizza at The Old Nuns Head in Peckham, which serves Hannah's Dough Hands pizza including tuna on pizza.",
+    "verdict": "Serves quality tuna pizza from Hannah's Dough Hands.",
+    "dishes": [
+     "Tuna pizza"
+    ],
+    "sponsored": false,
+    "at": 0
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Ozone Coffee",
+  "location": "Shoreditch",
+  "lat": 51.53253,
+  "lon": -0.0611,
+  "placeId": "5e356a86d08a",
+  "mentions": [
+   {
+    "videoId": "8stopXU4lIc",
+    "videoTitle": "Ozone Coffee knock it out the park on a daily basis.",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw praises Ozone Coffee for scoring highly on coffee, food and atmosphere. They particularly enjoyed the nasty goreng, egg benedict, and flat red London barista coffee with black pudding.",
+    "verdict": "Best coffee spot in London, consistently excellent daily.",
+    "dishes": [
+     "nasty goreng",
+     "egg benedict on bubble and squeak",
+     "lamb mints on toast",
+     "flat red London barista on black pudding"
+    ],
+    "sponsored": false,
+    "at": 0
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Miga",
+  "location": "Hackney",
+  "lat": 51.5345336,
+  "lon": -0.0576598,
+  "placeId": null,
+  "mentions": [
+   {
+    "videoId": "dVA9AYDS2eQ",
+    "videoTitle": "Epic new Korean spot Miga needs to be on your radar.",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw visited this new family-run Korean restaurant and ate there. The owner/chef recommended three dishes: galbi (short rib), mixed H (Korean stew with Jang sauce), and tart (showcasing the chef's ingredient knowledge and technique).",
+    "verdict": "Best Korean chef in London, can't help but fall in love with the food.",
+    "dishes": [
+     "galbi",
+     "mixed H",
+     "tart"
+    ],
+    "sponsored": false,
+    "at": 0
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "The Dusty Knuckle",
+  "location": "Dolston",
+  "lat": 51.57886,
+  "lon": -0.09919,
+  "placeId": "0d5ea3d78ec1",
+  "mentions": [
+   {
+    "videoId": "Qm45NAoLQOE",
+    "videoTitle": "TOP 3 RESTAURANTS IN LONDON ft. Tiffany Calver",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Tiffany visits and praises the bakery highly, describing various toastie and sandwich options. She notes the bread quality and enthusiasm for the spot, giving it a 10/10 rating.",
+    "verdict": "One of the best for bread, great food and people.",
+    "dishes": [
+     "toasty with tofu fritters",
+     "cheese toasty",
+     "mackerel and induya sandwich",
+     "green bean feta cheese sandwich"
+    ],
+    "sponsored": false,
+    "at": 0
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Circolo Popolare",
+  "location": "Fitzrovia",
+  "lat": 51.5172,
+  "lon": -0.1338,
+  "placeId": "8062b32adec5",
+  "mentions": [
+   {
+    "videoId": "a6sx9OCMEpw",
+    "videoTitle": "Are These London's Best Italian Restaurants? Our Top 4!",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw visited and featured it as one of London's best Italian restaurants. They praised the immersive experience, pizza, and spaghetti carbonara, describing it as vibey and transporting them to Italy.",
+    "verdict": "Immersive Italian experience with excellent pizza and pasta.",
+    "dishes": [
+     "Spaghetti carbonara",
+     "Pizza Margherita",
+     "Aperol Spritz"
+    ],
+    "sponsored": false,
+    "at": 69
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Bancone",
+  "location": "Soho",
+  "lat": 51.51136,
+  "lon": -0.13644,
+  "placeId": "9b7596bfad14",
+  "mentions": [
+   {
+    "videoId": "a6sx9OCMEpw",
+    "videoTitle": "Are These London's Best Italian Restaurants? Our Top 4!",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw visited with guest Pickle and reviewed it as serving some of the very best hand-rolled pasta in London. They praised the open kitchen, white marble, antipasti, polenta, and cod with ox cheek and pappardelle.",
+    "verdict": "Serves some of the very best hand-rolled pasta in London.",
+    "dishes": [
+     "Hand-rolled pasta",
+     "Cacio e pepe",
+     "Cod",
+     "Ox cheek pappardelle",
+     "Polenta",
+     "Antipasti",
+     "Cherry Americano"
+    ],
+    "sponsored": false,
+    "at": 209
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Bon Vino",
+  "location": "Bermondsey",
+  "lat": 51.5003414,
+  "lon": -0.0720976,
+  "placeId": null,
+  "mentions": [
+   {
+    "videoId": "a6sx9OCMEpw",
+    "videoTitle": "Are These London's Best Italian Restaurants? Our Top 4!",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw visited and highlighted the owner Alessandro's expertise as a former wine broker (since 2011). They praised the sourcing, wines, and the white-based pizza by pizza master Giovanni from Naples/Rome.",
+    "verdict": "Exceptional wines and phenomenal white-based Neapolitan pizza.",
+    "dishes": [
+     "White pizza",
+     "Pizza",
+     "Wine"
+    ],
+    "sponsored": false,
+    "at": 406
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Flour & Grape",
+  "location": "Bermondsey",
+  "lat": 51.49812,
+  "lon": -0.08142,
+  "placeId": "b5bebbee8f04",
+  "mentions": [
+   {
+    "videoId": "a6sx9OCMEpw",
+    "videoTitle": "Are These London's Best Italian Restaurants? Our Top 4!",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw visited and praised it as a simple, high-quality, low-price pasta and wine spot run by owner Nick Yonah. No reservations, always busy. They enjoyed multiple dishes including bruschetta, pork shoulder, linguini, ravioli, tiramisu gelato, and chocolate hazelnut mousse.",
+    "verdict": "Simple, high-quality pasta and wine at affordable prices.",
+    "dishes": [
+     "Bruschetta",
+     "Roasted pork shoulder with sage butter",
+     "Linguini",
+     "Spinach and ricotta ravioli",
+     "Tiramisu gelato",
+     "Chocolate hazelnut mousse",
+     "Lemoncello"
+    ],
+    "sponsored": false,
+    "at": 623
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Chick King",
+  "location": "Tottenham",
+  "lat": 51.5134233,
+  "lon": -0.04897729999999999,
+  "placeId": null,
+  "mentions": [
+   {
+    "videoId": "Hc1fQrbgp9k",
+    "videoTitle": "The Best Fried Chicken Spots in London - ft. 6 Spots You Must Visit",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "An institution for 41 years with 4.7 stars on Google. Big Lew raves about it, calling it the home of fried chicken and raw, unadulterated goodness.",
+    "verdict": "Home of fried chicken, raw unadulterated quality",
+    "dishes": [
+     "wings"
+    ],
+    "sponsored": false,
+    "at": 28
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Bake Street",
+  "location": "Rectory Road, Clapton",
+  "lat": 51.55878,
+  "lon": -0.06667,
+  "placeId": "31525a9c9386",
+  "mentions": [
+   {
+    "videoId": "Hc1fQrbgp9k",
+    "videoTitle": "The Best Fried Chicken Spots in London - ft. 6 Spots You Must Visit",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Been around 6.5 years but only recently became known. Now beloved by chefs and foodies. Offers crispy chicken with excellent sauces and creative menu items.",
+    "verdict": "Crispy fried chicken with fantastic sauces, chefs' favourite",
+    "dishes": [
+     "chicken bun",
+     "spicy bun",
+     "fish fillet",
+     "creme brulee cookies"
+    ],
+    "sponsored": false,
+    "at": 146
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Seoul 90",
+  "location": "Old Street, Shoreditch",
+  "lat": 51.52461,
+  "lon": -0.09412,
+  "placeId": "fe35f61e5d82",
+  "mentions": [
+   {
+    "videoId": "Hc1fQrbgp9k",
+    "videoTitle": "The Best Fried Chicken Spots in London - ft. 6 Spots You Must Visit",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Consistent, friendly, busy Korean fried chicken spot. Their KFC (Korean fried chicken) is saucy and delicious. Offers both boneless and bone-in options.",
+    "verdict": "Consistent, friendly Korean fried chicken, saucy",
+    "dishes": [
+     "Korean fried chicken (KFC)",
+     "boneless chicken nuggets"
+    ],
+    "sponsored": false,
+    "at": 336
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Smoking Goat",
+  "location": "Shoreditch",
+  "lat": 51.52425,
+  "lon": -0.077,
+  "placeId": "8128c7b55d2d",
+  "mentions": [
+   {
+    "videoId": "Hc1fQrbgp9k",
+    "videoTitle": "The Best Fried Chicken Spots in London - ft. 6 Spots You Must Visit",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Thai BBQ spot serving wings with sweet and sour fish sauce, coriander, shallots. Wings are crispy and flavorful with rock-hard texture. Pricey at £40 for wings and three pints.",
+    "verdict": "Best wings in Shoreditch, phenomenal Thai BBQ style",
+    "dishes": [
+     "Thai BBQ wings"
+    ],
+    "sponsored": false,
+    "at": 447
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Chick 'n Sours",
+  "location": "Covent Garden",
+  "lat": 51.51362,
+  "lon": -0.12816,
+  "placeId": "fd0a83e267cd",
+  "mentions": [
+   {
+    "videoId": "Hc1fQrbgp9k",
+    "videoTitle": "The Best Fried Chicken Spots in London - ft. 6 Spots You Must Visit",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "7-year-old fried chicken and cocktails spot. Serves miso wings with seaweed cracker dusting and kung pao wings with dark soy, oyster sauce, pickled chilies and spring onions. Certified quality.",
+    "verdict": "Certified banger, miso and kung pao wings fantastic",
+    "dishes": [
+     "miso wings with seaweed cracker",
+     "kung pao wings",
+     "fried chicken sandwich"
+    ],
+    "sponsored": false,
+    "at": 553
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Mr Ji",
+  "location": "Camden",
+  "lat": 51.53751,
+  "lon": -0.14495,
+  "placeId": "9a89525dd4ee",
+  "mentions": [
+   {
+    "videoId": "Hc1fQrbgp9k",
+    "videoTitle": "The Best Fried Chicken Spots in London - ft. 6 Spots You Must Visit",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Taiwanese spot that reopened with new interior and kitchen. Serves innovative contemporary twists on Chinese and Taiwanese favorites including szechuan burger and whole spatchcocked baby chicken.",
+    "verdict": "Fantastic innovative Taiwanese, flaky crispy fried",
+    "dishes": [
+     "szechuan burger",
+     "chicken hearts",
+     "whole spatchcocked baby chicken"
+    ],
+    "sponsored": false,
+    "at": 652
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Goila Butter Chicken",
+  "location": "Charlotte Street, Fitzrovia",
+  "lat": 51.5188746,
+  "lon": -0.1498955,
+  "placeId": null,
+  "mentions": [
+   {
+    "videoId": "B_-B3VMZKYY",
+    "videoTitle": "India’s Best Butter Chicken lands in London 🥘🍔 at Goila // New Openings #Shorts",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw praised it as probably the best butter chicken in the world. Award-winning curry from India now with a new London location offering both curry and burger options.",
+    "verdict": "Probably the best butter chicken in the world.",
+    "dishes": [
+     "butter chicken curry",
+     "deep fried chicken tikka burger"
+    ],
+    "sponsored": false,
+    "at": 0
+   },
+   {
+    "videoId": "ozf5Eizto-E",
+    "videoTitle": "These London Restaurants Thrived During Covid. Our Lockdown Heroes",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw had eaten here before and during the pandemic visited again. They explained the unique smoking technique using burnt casa puree trays in the oven to infuse smoke into the butter chicken sauce.",
+    "verdict": "Complex smoky flavor, beautiful technique, delicious.",
+    "dishes": [
+     "butter chicken"
+    ],
+    "sponsored": false,
+    "at": 562
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Four Corners",
+  "location": "High Holborn",
+  "lat": 51.5177094,
+  "lon": -0.1189638,
+  "placeId": null,
+  "mentions": [
+   {
+    "videoId": "_xbJ-4n9PCg",
+    "videoTitle": "DETROIT STYLE PIZZA IN LONDON 🍕 at Four Corners // New Openings #Shorts",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw visited and tried the Detroit-style pizza. They praised the generous portion sizes, cheesy crusty character, and recommended going easy on size as the small is huge.",
+    "verdict": "Excellent Detroit-style pizza with generous portions.",
+    "dishes": [
+     "Detroit-style pizza with cheddar and mozzarella",
+     "Mortadella pistachio pizza",
+     "Pizza with chili oil and honey"
+    ],
+    "sponsored": false,
+    "at": 0
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Dom's Subs",
+  "location": "Hackney Road, E2 7SJ",
+  "lat": 51.53086,
+  "lon": -0.06903,
+  "placeId": "64fb5f8d8168",
+  "mentions": [
+   {
+    "videoId": "F5Ba0osd-NQ",
+    "videoTitle": "Are These East London's Best Take Away Spots? Bucket List Food.",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw visited and reviewed their subs including the ham witch with pork belly. Praised the balance and combination between bread and fillings.",
+    "verdict": "Well-balanced subs, perfect marriage of ingredients.",
+    "dishes": [
+     "ham witch with pork belly",
+     "chicken spatch"
+    ],
+    "sponsored": false,
+    "at": 154
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Brawn",
+  "location": "Columbia Road, E2 7RG",
+  "lat": 51.52895,
+  "lon": -0.07029,
+  "placeId": "c4eb70b37650",
+  "mentions": [
+   {
+    "videoId": "F5Ba0osd-NQ",
+    "videoTitle": "Are These East London's Best Take Away Spots? Bucket List Food.",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw visited and reviewed the nashville hot chicken sandwich. Described it as a heavy hitter and wig splitter, praising the crispy edges and chicken thigh meat.",
+    "verdict": "Heavy hitter nashville hot chicken sandwich.",
+    "dishes": [
+     "nashville hot chicken sandwich"
+    ],
+    "sponsored": false,
+    "at": 221
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Bright",
+  "location": "Westgate Street, E8 3RL",
+  "lat": 51.53763,
+  "lon": -0.05757,
+  "placeId": "b1f0c6ea1fa1",
+  "mentions": [
+   {
+    "videoId": "F5Ba0osd-NQ",
+    "videoTitle": "Are These East London's Best Take Away Spots? Bucket List Food.",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw visited and reviewed the squid sandwich. Praised how the calamari was packed into the bun and sold out by 2pm.",
+    "verdict": "Excellent squid sandwich, sells out by 2pm.",
+    "dishes": [
+     "squid sandwich"
+    ],
+    "sponsored": false,
+    "at": 266
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "ELD PIZZA",
+  "location": "Hackney Road, E2 9EG",
+  "lat": 51.5321836,
+  "lon": -0.05893399999999999,
+  "placeId": null,
+  "mentions": [
+   {
+    "videoId": "F5Ba0osd-NQ",
+    "videoTitle": "Are These East London's Best Take Away Spots? Bucket List Food.",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw visited and reviewed the magettes (Swedish kebab) with lamb sausage, grated mozzarella and bitter yogurt. Praised how it brought Swedish roots into neapolitan pizza.",
+    "verdict": "Swedish kebab pizza with great sausage and meat.",
+    "dishes": [
+     "magettes (Swedish kebab with lamb sausage)",
+     "custard doughnut"
+    ],
+    "sponsored": false,
+    "at": 319
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "From the Ashes",
+  "location": "Stour Road, E3 2NT",
+  "lat": 51.53263,
+  "lon": -0.08032,
+  "placeId": "e66102d4d6d2",
+  "mentions": [
+   {
+    "videoId": "F5Ba0osd-NQ",
+    "videoTitle": "Are These East London's Best Take Away Spots? Bucket List Food.",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw visited and reviewed their custard doughnuts. Called it a life-changing experience and the best donut available in the world.",
+    "verdict": "Life-changing custard doughnuts, best in the world.",
+    "dishes": [
+     "custard doughnuts"
+    ],
+    "sponsored": false,
+    "at": 428
+   },
+   {
+    "videoId": "qmWp2vR6fXw",
+    "videoTitle": "24 HOURS IN POST-LOCKDOWN LONDON ft. Pork Doughnuts, London's Best Burgers and Big Lew",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw personally visited and tried the pork shoulder donut with spicy chilli jam and sugar coating, which he praised as exceptional barbecue.",
+    "verdict": "Exceptional barbecue with unforgettable pork shoulder donuts.",
+    "dishes": [
+     "Pork Shoulder Donut",
+     "Spicy Pork Donut with Chilli Jam"
+    ],
+    "sponsored": false,
+    "at": 23
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Sourdough Sophia",
+  "location": "Crouch End",
+  "lat": 51.58126,
+  "lon": -0.12383,
+  "placeId": "f2116d3c9516",
+  "mentions": [
+   {
+    "videoId": "ozf5Eizto-E",
+    "videoTitle": "These London Restaurants Thrived During Covid. Our Lockdown Heroes",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw visited the bakery early on a Friday morning and tasted their brownie with walnut. They praised Sophia as a lockdown hero who started from a flat and successfully opened a brick-and-mortar store.",
+    "verdict": "Lockdown hero, quality baked goods, next level.",
+    "dishes": [
+     "brownie with walnut"
+    ],
+    "sponsored": false,
+    "at": 78
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Wingmans",
+  "location": "Kilburn",
+  "lat": 51.54558,
+  "lon": -0.20201,
+  "placeId": "360c4def57c9",
+  "mentions": [
+   {
+    "videoId": "ozf5Eizto-E",
+    "videoTitle": "These London Restaurants Thrived During Covid. Our Lockdown Heroes",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw describes it as one of their absolute favorites in London where you must wear gloves because the wings are so hot and juicy. They highlight the secret flour mix and soldier boys wings with Korean hot sauce and pickled daikon.",
+    "verdict": "Absolute favorite, wings another level, secret flour mix.",
+    "dishes": [
+     "wings",
+     "soldier boys (Korean hot sauce with diced pineapple pickled daikon)"
+    ],
+    "sponsored": false,
+    "at": 314
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Blacklock",
+  "location": "Shoreditch",
+  "lat": 51.5060025,
+  "lon": -0.0209812,
+  "placeId": "f02043f8880b",
+  "mentions": [
+   {
+    "videoId": "ozf5Eizto-E",
+    "videoTitle": "These London Restaurants Thrived During Covid. Our Lockdown Heroes",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw visited and tried Blacklock's DIY kit (their favorite DIY kit over the past year) and hot delivery. They praised the burger, beef dripping chips, and higgs head nuggets mac and cheese.",
+    "verdict": "Best DIY kit experience, juicy burger, remarkable work.",
+    "dishes": [
+     "burger",
+     "beef dripping chips",
+     "higgs head nuggets mac and cheese"
+    ],
+    "sponsored": false,
+    "at": 461
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Mother",
+  "location": "Hackney Wick",
+  "lat": 51.544579,
+  "lon": -0.0256935,
+  "placeId": null,
+  "mentions": [
+   {
+    "videoId": "XVdcEzn_yK4",
+    "videoTitle": "We Think These Are The Best Vegan Restaurants In London, Do You?",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Started as a juice stall in Broadway Market, expanded to permanent space at Hackney Wick on the canal. Topjaw tried their cheese toasty (smoky vegan cheese, tomato, pesto) and red juice (carrot, apple, ginger, beetroot).",
+    "verdict": "Winter comfort food; smoky cheese toasty and refreshing juice.",
+    "dishes": [
+     "Cheese toasty",
+     "Red juice"
+    ],
+    "sponsored": false,
+    "at": 36
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "OoWee",
+  "location": "Dalston",
+  "lat": 51.55214489999999,
+  "lon": -0.07469819999999999,
+  "placeId": null,
+  "mentions": [
+   {
+    "videoId": "XVdcEzn_yK4",
+    "videoTitle": "We Think These Are The Best Vegan Restaurants In London, Do You?",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Vegan fast food restaurant on Stoke Newington Road. Topjaw tried their classic cheeseburger and noted most customers are actually meat eaters looking to eat less meat. Menu includes baconator, classic cheeseburger, shrimp fries, barbecue cotton sandwich - all completely vegan.",
+    "verdict": "Indulgent vegan fast food, classic cheeseburger tastes authentic.",
+    "dishes": [
+     "Classic cheeseburger"
+    ],
+    "sponsored": false,
+    "at": 86
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Club Mexicana",
+  "location": "Kingly Court, Soho",
+  "lat": 51.51645,
+  "lon": -0.07258,
+  "placeId": "1978c9762f53",
+  "mentions": [
+   {
+    "videoId": "XVdcEzn_yK4",
+    "videoTitle": "We Think These Are The Best Vegan Restaurants In London, Do You?",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Three-story food court location in Kingly Court off Carnaby Street. Topjaw tried al pastor tacos (chili-infused shawarma, charred pineapple, salsa verde), short rib jackfruit tacos (barbecue sauce, slaw), and tofish tacos. Ran into someone they knew there.",
+    "verdict": "Brilliant vegan tacos; indulgent flavors without meat or fish.",
+    "dishes": [
+     "Al pastor tacos",
+     "Short rib jackfruit tacos",
+     "Tofish tacos"
+    ],
+    "sponsored": false,
+    "at": 159
+   },
+   {
+    "videoId": "soyqQluj32A",
+    "videoTitle": "THE BEST VEGAN RESTAURANTS IN LONDON",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Vegan Mexican street food vendor at Camden Market. Topjaw enjoyed their beer-battered fish tacos with vegan sour cream. They also tried desserts using liquid nitrogen.",
+    "verdict": "Amazing vegan Mexican street food, creative desserts with nitrogen.",
+    "dishes": [
+     "Beer Battered To-Fish Tacos",
+     "Beetroot Sorbet"
+    ],
+    "sponsored": false,
+    "at": 258
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Farmacy",
+  "location": "Notting Hill",
+  "lat": 51.51538,
+  "lon": -0.1927,
+  "placeId": "574a97acdb20",
+  "mentions": [
+   {
+    "videoId": "XVdcEzn_yK4",
+    "videoTitle": "We Think These Are The Best Vegan Restaurants In London, Do You?",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Sustainable restaurant with own farm plot where 60-70% of ingredients are grown. Topjaw notes it's not trying to replicate meat products but uses fantastic ingredients. Will's first time visiting. They tried mushroom burger, sweet potato fries, lasagna, popcorn cauliflower, falafel, beetroot hummus, kale caesar salad, and winter bowl.",
+    "verdict": "Fantastic ingredients, sustainable, ideal for long lunch or dinner.",
+    "dishes": [
+     "Mushroom burger",
+     "Sweet potato fries",
+     "Lasagna",
+     "Winter bowl"
+    ],
+    "sponsored": false,
+    "at": 262
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "CookDaily",
+  "location": "Boxpark, Shoreditch",
+  "lat": 51.52347,
+  "lon": -0.07636,
+  "placeId": "8e0837cb843e",
+  "mentions": [
+   {
+    "videoId": "XVdcEzn_yK4",
+    "videoTitle": "We Think These Are The Best Vegan Restaurants In London, Do You?",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Owner King Cook is from Laos. Restaurant focuses on Asian flavors. Topjaw praised the vegan chicken pad thai as 'the best vegan chicken you can get' and also tried bibimbap chicken bowl and tofu bowl.",
+    "verdict": "Best vegan chicken available; genuine, flavorful Asian cuisine.",
+    "dishes": [
+     "Chicken pad thai",
+     "Bibimbap chicken bowl",
+     "Tofu bowl"
+    ],
+    "sponsored": false,
+    "at": 385
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Purezza",
+  "location": "Camden",
+  "lat": 51.53807,
+  "lon": -0.14437,
+  "placeId": "65cdc013c29c",
+  "mentions": [
+   {
+    "videoId": "XVdcEzn_yK4",
+    "videoTitle": "We Think These Are The Best Vegan Restaurants In London, Do You?",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Pizza restaurant with three base options: hemp, whole wheat, or gluten-free. Pizza names inspired by Friends episodes. Topjaw tried 'The One with the Pesto' (pesto, courgette, tomato base with rice-based mozzarella) and 'The Seasons' (beetroot, artichoke, olives, coriander) and a third pizza with sausage, tomato, rice mozzarella.",
+    "verdict": "Excellent vegan pizzas; rice-based mozzarella impressed.",
+    "dishes": [
+     "The One with the Pesto",
+     "The Seasons"
+    ],
+    "sponsored": false,
+    "at": 511
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Temple of Seitan",
+  "location": "Camden",
+  "lat": 51.53815,
+  "lon": -0.14436,
+  "placeId": "8a0b1b47a362",
+  "mentions": [
+   {
+    "videoId": "XVdcEzn_yK4",
+    "videoTitle": "We Think These Are The Best Vegan Restaurants In London, Do You?",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Founded by Rebecca and Patrick from Melbourne; Rebecca previously worked at KFC before deciding to create vegan fried chicken alternative. Seitan is made from water and wheat, high protein, low carb, chewy texture. Topjaw tried buffalo chicken wings with blue cheese sour cream sauce.",
+    "verdict": "Cruelty-free fried chicken replica; excellent buffalo wings.",
+    "dishes": [
+     "Buffalo chicken wings"
+    ],
+    "sponsored": false,
+    "at": 590
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Hackney Church Brew Co.",
+  "location": "Hackney Central",
+  "lat": 51.54743,
+  "lon": -0.05237,
+  "placeId": "1679e28d7678",
+  "mentions": [
+   {
+    "videoId": "qmWp2vR6fXw",
+    "videoTitle": "24 HOURS IN POST-LOCKDOWN LONDON ft. Pork Doughnuts, London's Best Burgers and Big Lew",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw visited and tried the goat cheese burger, praising it as everything a cheeseburger should be with excellent horseradish mayo.",
+    "verdict": "Outstanding goat cheese burger with horseradish mayo, transport to another dimension.",
+    "dishes": [
+     "Goat Cheese Burger"
+    ],
+    "sponsored": false,
+    "at": 151
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "1251 Restaurant",
+  "location": "Angel, Upper Street",
+  "lat": 51.5338306,
+  "lon": -0.0937944,
+  "placeId": null,
+  "mentions": [
+   {
+    "videoId": "qmWp2vR6fXw",
+    "videoTitle": "24 HOURS IN POST-LOCKDOWN LONDON ft. Pork Doughnuts, London's Best Burgers and Big Lew",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw tried the fried chicken (tandoori wings and bombay mix) from James Cochran's new grab-and-go offering after COVID changes, praising the crispiness and juiciness despite some bread-heaviness.",
+    "verdict": "Crispy, juicy fried chicken; bread-heavy but excellent flavors.",
+    "dishes": [
+     "Tandoori Fried Chicken Wings",
+     "Bombay Mix"
+    ],
+    "sponsored": false,
+    "at": 300
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Studio Kitchen",
+  "location": "Islington",
+  "lat": 51.53614,
+  "lon": -0.08893,
+  "placeId": "1f91e993ade4",
+  "mentions": [
+   {
+    "videoId": "qmWp2vR6fXw",
+    "videoTitle": "24 HOURS IN POST-LOCKDOWN LONDON ft. Pork Doughnuts, London's Best Burgers and Big Lew",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw visited and tried the Oklahoma-style fried onion cheeseburger, calling it brilliant with excellent layers of cheese and onions.",
+    "verdict": "Brilliant Oklahoma-style fried onion cheeseburger with gorgeous cheese layers.",
+    "dishes": [
+     "Fried Onion Cheeseburger"
+    ],
+    "sponsored": false,
+    "at": 394
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Smokestak",
+  "location": "Shoreditch",
+  "lat": 51.52368,
+  "lon": -0.07293,
+  "placeId": "740ea03b1ba8",
+  "mentions": [
+   {
+    "videoId": "qmWp2vR6fXw",
+    "videoTitle": "24 HOURS IN POST-LOCKDOWN LONDON ft. Pork Doughnuts, London's Best Burgers and Big Lew",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw visited and tried smoked brisket, pork, and crispy pork skin, praising the quality of the smoking and the fullness of flavors.",
+    "verdict": "Excellent smoked brisket and pork; sexy, muscular cuts cooked perfectly.",
+    "dishes": [
+     "Brisket Bun",
+     "Pork Brisket",
+     "Beef Brisket",
+     "Crispy Pork Skin"
+    ],
+    "sponsored": false,
+    "at": 509
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Beigel Bake",
+  "location": "Brick Lane, Shoreditch",
+  "lat": 51.52448,
+  "lon": -0.0717,
+  "placeId": "ca32905b898a",
+  "mentions": [
+   {
+    "videoId": "qmWp2vR6fXw",
+    "videoTitle": "24 HOURS IN POST-LOCKDOWN LONDON ft. Pork Doughnuts, London's Best Burgers and Big Lew",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw visited and tried the beef bagel, praising it as fantastic value and flavor despite the vendor's gruff demeanor, noting the generous beef portions.",
+    "verdict": "Fantastic value and flavor; generous beef portions in excellent bagels.",
+    "dishes": [
+     "Beef Bagel"
+    ],
+    "sponsored": false,
+    "at": 622
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Ahi Poké",
+  "location": "Market Hall Fulham",
+  "lat": 51.4978992,
+  "lon": -0.1436853,
+  "placeId": null,
+  "mentions": [
+   {
+    "videoId": "KCITfXKd9vk",
+    "videoTitle": "TOPJAW's GUIDE TO MARKET HALL, FULHAM",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw sampled a heatwave poke bowl from Ahi Poké at Market Hall Fulham during their evening review.",
+    "verdict": "Featured among Market Hall's food offerings.",
+    "dishes": [
+     "Heatwave poke bowl"
+    ],
+    "sponsored": true,
+    "at": 69
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Butchies",
+  "location": "Market Hall Fulham",
+  "lat": 51.48019,
+  "lon": -0.1947827,
+  "placeId": null,
+  "mentions": [
+   {
+    "videoId": "KCITfXKd9vk",
+    "videoTitle": "TOPJAW's GUIDE TO MARKET HALL, FULHAM",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw sampled a banded double beef burger from Butchies at Market Hall Fulham.",
+    "verdict": "Featured among Market Hall's food offerings.",
+    "dishes": [
+     "Banded double beef burger"
+    ],
+    "sponsored": true,
+    "at": 69
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Fanny's Kebabs",
+  "location": "Market Hall Fulham",
+  "lat": 51.48026369999999,
+  "lon": -0.1952993,
+  "placeId": null,
+  "mentions": [
+   {
+    "videoId": "KCITfXKd9vk",
+    "videoTitle": "TOPJAW's GUIDE TO MARKET HALL, FULHAM",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw sampled a lumi aubergine kebab from Fanny's Kebabs at Market Hall Fulham.",
+    "verdict": "Featured among Market Hall's food offerings.",
+    "dishes": [
+     "Lumi aubergine kebab"
+    ],
+    "sponsored": true,
+    "at": 69
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Hot Box",
+  "location": "Market Hall Fulham",
+  "lat": 51.48014,
+  "lon": -0.19543,
+  "placeId": "da3e4792f2c4",
+  "mentions": [
+   {
+    "videoId": "KCITfXKd9vk",
+    "videoTitle": "TOPJAW's GUIDE TO MARKET HALL, FULHAM",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw sampled BBQ hot wings with fries and cheese from Hot Box at Market Hall Fulham.",
+    "verdict": "Featured among Market Hall's food offerings.",
+    "dishes": [
+     "BBQ hot wings with fries and cheese"
+    ],
+    "sponsored": true,
+    "at": 69
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Love Churros",
+  "location": "Market Hall Fulham",
+  "lat": 51.4801339,
+  "lon": -0.1952553,
+  "placeId": null,
+  "mentions": [
+   {
+    "videoId": "KCITfXKd9vk",
+    "videoTitle": "TOPJAW's GUIDE TO MARKET HALL, FULHAM",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw sampled churros at Market Hall Fulham and paired them with Bailey's hot chocolate for a dessert.",
+    "verdict": "Made Bailey's hot chocolate and churros pairing work perfectly.",
+    "dishes": [
+     "Churros"
+    ],
+    "sponsored": true,
+    "at": 109
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Made of Dough",
+  "location": "Market Hall Fulham",
+  "lat": 51.46352599999999,
+  "lon": -0.112327,
+  "placeId": null,
+  "mentions": [
+   {
+    "videoId": "KCITfXKd9vk",
+    "videoTitle": "TOPJAW's GUIDE TO MARKET HALL, FULHAM",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw sampled pizza feet from Made of Dough at Market Hall Fulham.",
+    "verdict": "Featured among Market Hall's food offerings.",
+    "dishes": [
+     "Pizza feet"
+    ],
+    "sponsored": true,
+    "at": 99
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Super Tacos",
+  "location": "Market Hall Fulham",
+  "lat": 51.4803738,
+  "lon": -0.1950268,
+  "placeId": null,
+  "mentions": [
+   {
+    "videoId": "KCITfXKd9vk",
+    "videoTitle": "TOPJAW's GUIDE TO MARKET HALL, FULHAM",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw sampled pollo asado taco plate with beef, pork, chicken and corn chips with guac from Super Tacos at Market Hall Fulham.",
+    "verdict": "Featured among Market Hall's food offerings.",
+    "dishes": [
+     "Pollo asado taco plate with beef, pork, chicken, corn chips and guac"
+    ],
+    "sponsored": true,
+    "at": 69
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Market Hall Fulham",
+  "location": "Fulham",
+  "lat": 51.48012,
+  "lon": -0.19526,
+  "placeId": "d91a0d96090d",
+  "mentions": [
+   {
+    "videoId": "KCITfXKd9vk",
+    "videoTitle": "TOPJAW's GUIDE TO MARKET HALL, FULHAM",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw visited and reviewed this former ticketing hall in West London that is open 7 days a week for breakfast, lunch, dinner and drinks. Super busy on a Tuesday night with good food and drinks.",
+    "verdict": "Exceeded expectations; great food hall venue.",
+    "dishes": [],
+    "sponsored": true,
+    "at": 31
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Dumpling Shack",
+  "location": "Old Spitalfields Market",
+  "lat": 51.51991,
+  "lon": -0.07515,
+  "placeId": "26d3c7358d25",
+  "mentions": [
+   {
+    "videoId": "TP7vBBbUEqU",
+    "videoTitle": "GUIDE TO THE KITCHENS at OLD SPITALFIELDS MARKET",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw tried their shao mai (soup dumplings), praising the technique of filling with soup, steaming and frying. Recommended eating whole in one bite for the full experience.",
+    "verdict": "Best companies in London, excellent technique and taste.",
+    "dishes": [
+     "shao mai (soup dumplings)"
+    ],
+    "sponsored": false,
+    "at": 44
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Pleasant Lady",
+  "location": "Old Spitalfields Market",
+  "lat": 51.51974,
+  "lon": -0.07506,
+  "placeId": "ba25d7fb0193",
+  "mentions": [
+   {
+    "videoId": "TP7vBBbUEqU",
+    "videoTitle": "GUIDE TO THE KITCHENS at OLD SPITALFIELDS MARKET",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw tried their jian bing (northern Chinese street food pancakes) with pork, praising the five different flours and presentation. Found it bursting with flavor and Asian spices.",
+    "verdict": "Northern China's street food with great presentation and flavor.",
+    "dishes": [
+     "jian bing (Chinese crepes)",
+     "jian bing with pork"
+    ],
+    "sponsored": false,
+    "at": 123
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Flank",
+  "location": "Old Spitalfields Market",
+  "lat": 51.51957,
+  "lon": -0.07505,
+  "placeId": "4ed6437c75f8",
+  "mentions": [
+   {
+    "videoId": "TP7vBBbUEqU",
+    "videoTitle": "GUIDE TO THE KITCHENS at OLD SPITALFIELDS MARKET",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw ate a fried chicken sandwich with potato starch batter and house-made chili sauce. Praised the tender, juicy chicken with good heat balance and mayonnaise.",
+    "verdict": "Really good fried chicken sandwich with perfect balance.",
+    "dishes": [
+     "fried chicken sandwich"
+    ],
+    "sponsored": false,
+    "at": 191
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Monty's Deli",
+  "location": "Old Spitalfields Market",
+  "lat": 51.5333,
+  "lon": -0.08013,
+  "placeId": "d7441a424cef",
+  "mentions": [
+   {
+    "videoId": "TP7vBBbUEqU",
+    "videoTitle": "GUIDE TO THE KITCHENS at OLD SPITALFIELDS MARKET",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw tried their pastrami sandwich with homemade rye bread, sauerkraut and mustard. Praised the masterful execution and quality of the pastrami.",
+    "verdict": "Master of all trades, fat pastrami sandwich, excellent homemade components.",
+    "dishes": [
+     "pastrami sandwich"
+    ],
+    "sponsored": false,
+    "at": 250
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "High Mood Food",
+  "location": "Old Spitalfields Market",
+  "lat": 51.5154369,
+  "lon": -0.1518064,
+  "placeId": "866792684879",
+  "mentions": [
+   {
+    "videoId": "TP7vBBbUEqU",
+    "videoTitle": "GUIDE TO THE KITCHENS at OLD SPITALFIELDS MARKET",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw tried their charred grilled blue soba with green leaves, tahini dressing, activated nuts and fermented foods. Praised the health-focused content and gut-friendly ingredients.",
+    "verdict": "Health-focused with charred blue soba and fermented foods.",
+    "dishes": [
+     "charred grilled blue soba",
+     "crispy tofu steamed bun"
+    ],
+    "sponsored": false,
+    "at": 308
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Yum Bun",
+  "location": "Old Spitalfields Market",
+  "lat": 51.51973,
+  "lon": -0.0748,
+  "placeId": "8f29600d1790",
+  "mentions": [
+   {
+    "videoId": "TP7vBBbUEqU",
+    "videoTitle": "GUIDE TO THE KITCHENS at OLD SPITALFIELDS MARKET",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw tried their crispy tofu steamed bun, described as delicate, garlicky and delicious. Also mentioned a steak sandwich dessert created by chef Nuno Mendes.",
+    "verdict": "Delicate, garlicky steamed tofu buns and creative steak sandwich.",
+    "dishes": [
+     "crispy tofu steamed bun",
+     "steak sandwich"
+    ],
+    "sponsored": false,
+    "at": 350
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "L'Amuse Bouche",
+  "location": "Brixton",
+  "lat": 51.4635,
+  "lon": -0.11216,
+  "placeId": "efd3721bc0e2",
+  "mentions": [
+   {
+    "videoId": "8qYmiZn4yAo",
+    "videoTitle": "LONDON CHEAP EATS - BRIXTON - Meals under £9",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw visited and reviewed their La Goaty crepe with goat's cheese, red onion chutney and spinach for £5.50.",
+    "verdict": "Excellent value crepe with nice combination of ingredients.",
+    "dishes": [
+     "La Goaty (goat's cheese, red onion chutney, spinach)"
+    ],
+    "sponsored": false,
+    "at": 28
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "The Joint",
+  "location": "Brixton",
+  "lat": 51.46222,
+  "lon": -0.11169,
+  "placeId": "6a447ea02497",
+  "mentions": [
+   {
+    "videoId": "8qYmiZn4yAo",
+    "videoTitle": "LONDON CHEAP EATS - BRIXTON - Meals under £9",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw visited and ate their 16 hour slow cooked pulled pork for £8.50. They noted it's hard to get a table as it's very popular.",
+    "verdict": "Popular spot with excellent slow-cooked pulled pork, tables hard to get.",
+    "dishes": [
+     "16 hr slow cooked pulled pork"
+    ],
+    "sponsored": false,
+    "at": 102
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Okan",
+  "location": "Brixton",
+  "lat": 51.50198,
+  "lon": -0.11815,
+  "placeId": "8314a039fda5",
+  "mentions": [
+   {
+    "videoId": "8qYmiZn4yAo",
+    "videoTitle": "LONDON CHEAP EATS - BRIXTON - Meals under £9",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw visited and tried their thin slice pork belly okonomiyaki for £8.00. The owner explained the traditional Japanese preparation method.",
+    "verdict": "Tasty, filling, authentic Japanese okonomiyaki under £9.",
+    "dishes": [
+     "Thin slice pork belly okonomiyaki"
+    ],
+    "sponsored": false,
+    "at": 167
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Agile Rabbit",
+  "location": "Brixton",
+  "lat": 51.46256,
+  "lon": -0.11237,
+  "placeId": "5ec18c544fcf",
+  "mentions": [
+   {
+    "videoId": "8qYmiZn4yAo",
+    "videoTitle": "LONDON CHEAP EATS - BRIXTON - Meals under £9",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw visited and ate a ham, mushroom, ricotta & pesto calzone (small for £5). They praised the quality and creaminess of the ricotta.",
+    "verdict": "Excellent quality pizza with creamy ricotta and subtle pesto.",
+    "dishes": [
+     "Ham, mushroom, ricotta & pesto calzone"
+    ],
+    "sponsored": false,
+    "at": 137
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Hawksmoor",
+  "location": null,
+  "lat": 51.50971,
+  "lon": -0.13613,
+  "placeId": "2443384ff7a5",
+  "mentions": [
+   {
+    "videoId": "gazrzEVKxn4",
+    "videoTitle": "IS THIS LONDON'S BEST FRY UP? We visit Hawksmoor to find out.",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw visited and tried their Full Breakfast for two (£37). They praised it as possibly the best fry-up in London, the UK, or the world, highlighting the high quality meat and calling it the breakfast of champions.",
+    "verdict": "Possibly London's best fry-up; premium quality meat.",
+    "dishes": [
+     "Full Breakfast for two"
+    ],
+    "sponsored": false,
+    "at": 0
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Pedler",
+  "location": "Peckham",
+  "lat": 51.46507,
+  "lon": -0.06669,
+  "placeId": "b721bd0ee04b",
+  "mentions": [
+   {
+    "videoId": "YKdwsDL5cGs",
+    "videoTitle": "GUIDE TO PECKHAM with Uber Eats",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Head chef previously worked at Rules. Topjaw recommends the Frizzle Chicken, a fried chicken sandwich that looks \"ungodly.\"",
+    "verdict": "Excellent fried chicken sandwich; popular weekend hangover spot.",
+    "dishes": [
+     "Frizzle Chicken"
+    ],
+    "sponsored": true,
+    "at": 25
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Nandine",
+  "location": "Peckham",
+  "lat": 51.47099,
+  "lon": -0.08258,
+  "placeId": "caceda7644e9",
+  "mentions": [
+   {
+    "videoId": "YKdwsDL5cGs",
+    "videoTitle": "GUIDE TO PECKHAM with Uber Eats",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Run by a hardworking Kurdish family with mom as cook, sons in business/marketing, dad as founder/interior designer. Topjaw tries the Seven Spice Chicken Shawarma Sandwich and describes the vibrant food.",
+    "verdict": "Family-run Kurdish restaurant with vibrant, authentic cuisine.",
+    "dishes": [
+     "Seven Spice Chicken Shawarma Sandwich"
+    ],
+    "sponsored": true,
+    "at": 92
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Lords of Poké",
+  "location": "Peckham Levels",
+  "lat": 51.4708529,
+  "lon": -0.06801689999999999,
+  "placeId": null,
+  "mentions": [
+   {
+    "videoId": "YKdwsDL5cGs",
+    "videoTitle": "GUIDE TO PECKHAM with Uber Eats",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Located in Peckham Levels multi-use space with offices, studios, and food venues. Semi-permanent lease. Topjaw tries the Large Classic Tuna Bowl with chunks of tuna.",
+    "verdict": "Fresh poke bowls available at Peckham Levels; good value.",
+    "dishes": [
+     "Large Classic Tuna Bowl"
+    ],
+    "sponsored": true,
+    "at": 159
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Drums & Flats",
+  "location": "Peckham",
+  "lat": 51.4708058,
+  "lon": -0.0682474,
+  "placeId": null,
+  "mentions": [
+   {
+    "videoId": "YKdwsDL5cGs",
+    "videoTitle": "GUIDE TO PECKHAM with Uber Eats",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Located in multi-story car park. Topjaw tries the Tangy Buffalo Wings with blue cheese sauce and spicy barbecue, which are \"impeccable.\"",
+    "verdict": "Outstanding buffalo wings; worth the trek to multi-story car park.",
+    "dishes": [
+     "5 Tangy Buffalo Wings"
+    ],
+    "sponsored": true,
+    "at": 250
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Gallery Cafe",
+  "location": "Bethnal Green, East London",
+  "lat": 51.52979,
+  "lon": -0.05448,
+  "placeId": "fd609fc1726d",
+  "mentions": [
+   {
+    "videoId": "soyqQluj32A",
+    "videoTitle": "THE BEST VEGAN RESTAURANTS IN LONDON",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Buddhist vegetarian café converted to completely vegan in 2022. Three years in a row One Time Out's best café in Bethnal Green. Topjaw enjoyed their vegan full English breakfast and noted all profits go to charity.",
+    "verdict": "Excellent vegan full English, great community space.",
+    "dishes": [
+     "Potato Rostis",
+     "Vegan Full English Breakfast"
+    ],
+    "sponsored": false,
+    "at": 42
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Mooshies",
+  "location": "Brick Lane, East London",
+  "lat": 51.5219999,
+  "lon": -0.0716915,
+  "placeId": null,
+  "mentions": [
+   {
+    "videoId": "soyqQluj32A",
+    "videoTitle": "THE BEST VEGAN RESTAURANTS IN LONDON",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Plant-based burger place owned by boyfriend/girlfriend duo who left corporate life to open it. Topjaw loved their chickpea-based burgers mimicking classic fast food like Big Mac and fish fillets.",
+    "verdict": "Creative vegan versions of classic fast food burgers.",
+    "dishes": [
+     "What's Your Beef",
+     "Chickpea Bites",
+     "Fish Aubergine"
+    ],
+    "sponsored": false,
+    "at": 123
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Young Vegans",
+  "location": "Camden, North London + other locations",
+  "lat": 51.53059,
+  "lon": -0.05655,
+  "placeId": "3158d15869bc",
+  "mentions": [
+   {
+    "videoId": "soyqQluj32A",
+    "videoTitle": "THE BEST VEGAN RESTAURANTS IN LONDON",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Vegan pie shop with permanent space opened about four months ago (from video date). Topjaw loved their Seitan & Ale Pie made with vegan steak, red wine gravy, mash and crispy onions.",
+    "verdict": "Delicious vegan pies, especially the seitan and ale variety.",
+    "dishes": [
+     "Seitan & Ale Pie",
+     "Curry Pie",
+     "Peanut Butter and Chocolate Pie"
+    ],
+    "sponsored": false,
+    "at": 203
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Chin Chin",
+  "location": "Camden, North London + other locations",
+  "lat": 51.5385,
+  "lon": -0.14301,
+  "placeId": "642c94eed11e",
+  "mentions": [
+   {
+    "videoId": "soyqQluj32A",
+    "videoTitle": "THE BEST VEGAN RESTAURANTS IN LONDON",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Ice cream shop at Camden Lock with vegan options. Topjaw highlighted their Vegan Hot Chocolate as a standout drink.",
+    "verdict": "Excellent vegan hot chocolate, top-quality ice cream spot.",
+    "dishes": [
+     "Vegan Hot Chocolate"
+    ],
+    "sponsored": false,
+    "at": 313
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Cafe Van Gogh",
+  "location": "Brixton, South London",
+  "lat": 51.47759,
+  "lon": -0.11228,
+  "placeId": "564feeb88d07",
+  "mentions": [
+   {
+    "videoId": "soyqQluj32A",
+    "videoTitle": "THE BEST VEGAN RESTAURANTS IN LONDON",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Nonprofit vegan café that converted from vegetarian last year. All profits support community projects. Topjaw loved their Sticky Seitan Ribs and mac and cheese made with butternut squash.",
+    "verdict": "Outstanding sticky seitan ribs and vegan mac and cheese.",
+    "dishes": [
+     "Sticky Seitan Ribs",
+     "Mac and Cheese"
+    ],
+    "sponsored": false,
+    "at": 375
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "BYOC Bar",
+  "location": "Camden",
+  "lat": 51.534842,
+  "lon": -0.1392278,
+  "placeId": null,
+  "mentions": [
+   {
+    "videoId": "m_z5yPXnnek",
+    "videoTitle": "HOW TO GET COCKTAILS ALL NIGHT IN LONDON FOR £25!",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Bring Your Own Cocktail concept where customers bring spirits and a mixologist creates endless cocktails. Topjaw describes it as exceptional value and a must-go.",
+    "verdict": "Exceptional value, must-go destination.",
+    "dishes": [
+     "Cocktails"
+    ],
+    "sponsored": false,
+    "at": null
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Kerb Camden",
+  "location": "Camden",
+  "lat": 51.5184341,
+  "lon": -0.1155897,
+  "placeId": null,
+  "mentions": [
+   {
+    "videoId": "vCadqjvfpxc",
+    "videoTitle": "KERB CAMDEN: THE INSIDE TOUR BY TOPJAW",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw visited Kerb, a food market with 35 street food traders, and sampled multiple stands. They were impressed enough to feel full for 48 hours afterward.",
+    "verdict": "35 amazing street food stands in one place.",
+    "dishes": [
+     "Quesadillas",
+     "Crispy squid",
+     "Hot dogs",
+     "Homemade sodas",
+     "Fried halloumi",
+     "Filipino chicken saté curry"
+    ],
+    "sponsored": false,
+    "at": 0
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Misato",
+  "location": "Soho",
+  "lat": 51.51085,
+  "lon": -0.13186,
+  "placeId": "55ef1f507e5e",
+  "mentions": [
+   {
+    "videoId": "uDWzMUbdg6c",
+    "videoTitle": "LONDON CHEAP EATS - SOHO Meals Under £8",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw visited and tried the Chicken Katsu Curry for £6. Jesse noted it tastes fresher than Wagamama and praised the portion size.",
+    "verdict": "Fresh katsu curry, great value, highly recommended.",
+    "dishes": [
+     "Chicken Katsu Curry"
+    ],
+    "sponsored": false,
+    "at": 34
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Bake",
+  "location": "Soho",
+  "lat": 51.51079,
+  "lon": -0.13159,
+  "placeId": "8bd7dddbe9cd",
+  "mentions": [
+   {
+    "videoId": "uDWzMUbdg6c",
+    "videoTitle": "LONDON CHEAP EATS - SOHO Meals Under £8",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw visited and tried BBQ Pork Buns for £1.30. They praised the appearance and described it as a reliable lunchtime snack.",
+    "verdict": "Beautiful buns, excellent value lunchtime option.",
+    "dishes": [
+     "BBQ Pork Bun"
+    ],
+    "sponsored": false,
+    "at": 80
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Leños and Carbon",
+  "location": "Soho",
+  "lat": 51.49408,
+  "lon": -0.0984,
+  "placeId": "7d338dab4c88",
+  "mentions": [
+   {
+    "videoId": "uDWzMUbdg6c",
+    "videoTitle": "LONDON CHEAP EATS - SOHO Meals Under £8",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw visited and tried King Prawn Patatas Bravas for £7.95. Jesse called it the best patas bravas since Barcelona, noting the prawns were fresh and not too spicy.",
+    "verdict": "Best patas bravas since Barcelona, fresh prawns.",
+    "dishes": [
+     "King Prawn Patatas Bravas"
+    ],
+    "sponsored": false,
+    "at": 129
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Pieminister",
+  "location": "Covent Garden",
+  "lat": 51.5136143,
+  "lon": -0.1365486,
+  "placeId": null,
+  "mentions": [
+   {
+    "videoId": "uDWzMUbdg6c",
+    "videoTitle": "LONDON CHEAP EATS - SOHO Meals Under £8",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw visited and tried Steak and Stout pie for £6.75. They described it as a substantial meal fitting the £8 budget.",
+    "verdict": "Substantial pie, excellent value, worth trying.",
+    "dishes": [
+     "Steak and Stout Pie"
+    ],
+    "sponsored": false,
+    "at": 179
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Homeslice",
+  "location": "Covent Garden",
+  "lat": 51.5146,
+  "lon": -0.12646,
+  "placeId": "42cf540e7ab3",
+  "mentions": [
+   {
+    "videoId": "uDWzMUbdg6c",
+    "videoTitle": "LONDON CHEAP EATS - SOHO Meals Under £8",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw visited and tried a Large Pizza Slice (Margarita and Mushroom) for £4. They highlighted it as a cheap eat option with 20-inch pizzas.",
+    "verdict": "Large pizza slices at excellent prices, banging.",
+    "dishes": [
+     "Large Pizza Slice"
+    ],
+    "sponsored": false,
+    "at": 231
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Molly Bakes",
+  "location": "Dalston",
+  "lat": 51.493662,
+  "lon": -0.158989,
+  "placeId": null,
+  "mentions": [
+   {
+    "videoId": "M-c_eejeydY",
+    "videoTitle": "INTRODUCING FREAKSHAKES IN LONDON",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Topjaw visited this bakery/cafe in Dalston and reviewed their freakshakes. They highlighted the high-quality ingredients, generous portions, and creative over-the-top milkshake designs. They found the £7 price point reasonable given the effort and quality.",
+    "verdict": "Amazing freakshakes with high-quality ingredients and creative designs.",
+    "dishes": [
+     "Raspberry freakshake",
+     "Bomber Man freakshake",
+     "Neapolitan freakshake",
+     "White chocolate cookie sandwich freakshake"
+    ],
+    "sponsored": false,
+    "at": 1
    }
   ],
   "bestRating": null,
