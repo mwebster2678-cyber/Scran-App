@@ -3,7 +3,7 @@
 //     recommendations, a guest's own restaurant, stalls at the creator's own events,
 //     or places outside London)
 //   - flags sponsored videos
-//   - corrects misheard names and picks the matching place from places.json
+//   - corrects misheard names (using chapters and comments too) and picks the matching place from places.json
 //   - rewrites the notes to cover only what the creator said
 //
 // Usage: node verify.js <creator> --dry-run     fetch video details (free) and estimate the cost
@@ -12,6 +12,7 @@
 //        node verify.js <creator> --recheck     check again the videos that have unsure picks
 //        node verify.js <creator> --only <id,id> check again just these videos
 //        add --transcripts to also read video transcripts and chapters (needs a working yt-dlp)
+//        add --frames to also show Claude video frames around each pick (on-screen name graphics)
 //
 // Reads <creator>-scraped.json (+ -geocoded.json for current locations) → writes <creator>-verified.json,
 // which geocode.js then uses instead of the scraped file.
@@ -20,8 +21,9 @@ import { execFile } from 'child_process';
 import { promisify } from 'util';
 import Anthropic from '@anthropic-ai/sdk';
 import { creatorFromArgs, nameKey } from './shared.js';
-import { PLACES_FILE, squash, similarity, metres, sameName } from './link.js';
+import { PLACES_FILE, squash, similarity, metres, sameName, soundsLike } from './link.js';
 import { loadKnown, findKnown } from './known.js';
+import { saysWhere } from './comments.js';
 
 const MODEL          = 'claude-haiku-4-5-20251001';
 const PRICE          = { input: 1 / 1e6, output: 5 / 1e6 }; // US$ per token for MODEL
@@ -34,6 +36,11 @@ const creator     = creatorFromArgs();
 const DRY_RUN     = process.argv.includes('--dry-run');
 const TRANSCRIPTS = process.argv.includes('--transcripts');
 const RECHECK     = process.argv.includes('--recheck');
+const FRAMES      = process.argv.includes('--frames');
+const MAX_SHEETS  = 4; // storyboard images per video, each 9 frames about 5 s apart
+const MARK_EVERY  = 5;  // seconds between [m:ss] markers in transcripts, to line up with the frames
+const MAX_GAP     = 15;  // seconds a name graphic may be from a restaurant's mention to count for it
+const SOUNDS_LIKE = 0.4; // how alike (soundsLike) a graphic and a heard name must be
 const ONLY        = process.argv.includes('--only') ? process.argv[process.argv.indexOf('--only') + 1].split(',') : null;
 const LIMIT       = Number(process.argv[process.argv.indexOf('--limit') + 1]) || Infinity;
 const OUTPUT      = `${creator.key}-verified.json`;
@@ -63,7 +70,7 @@ async function videoDetails(videoIds) {
 }
 
 async function transcript(videoId) {
-  const cacheFile = `${CACHE_DIR}/${videoId}.transcript.txt`;
+  const cacheFile = `${CACHE_DIR}/${videoId}.transcript-${MARK_EVERY}s.txt`;
   if (fs.existsSync(cacheFile)) return fs.readFileSync(cacheFile, 'utf8') || null;
   const prefix = `${CACHE_DIR}/${videoId}`;
   try {
@@ -76,6 +83,25 @@ async function transcript(videoId) {
   [`${prefix}.en.vtt`, `${prefix}.en-orig.vtt`].forEach(f => fs.rmSync(f, { force: true }));
   fs.writeFileSync(cacheFile, text);
   return text || null;
+}
+
+// The most relevant comments on a video (YouTube Data API, free within the daily quota):
+// viewers and the creator often say where a place is. [{ text, likes, creator }]
+async function comments(videoId) {
+  const cacheFile = `${CACHE_DIR}/${videoId}.comments.json`;
+  if (fs.existsSync(cacheFile)) return JSON.parse(fs.readFileSync(cacheFile, 'utf8'));
+  const url = new URL('https://www.googleapis.com/youtube/v3/commentThreads');
+  url.search = new URLSearchParams({ part: 'snippet', videoId, order: 'relevance', maxResults: '20',
+    textFormat: 'plainText', key: process.env.YOUTUBE_API_KEY });
+  const data = await (await fetch(url)).json();
+  if (data.error && data.error.errors?.[0]?.reason !== 'commentsDisabled') throw new Error(`YouTube comments: ${data.error.message}`);
+  const list = (data.items || []).map(t => {
+    const c = t.snippet.topLevelComment.snippet;
+    return { text: c.textDisplay.replace(/\s+/g, ' ').trim().slice(0, 300), likes: c.likeCount,
+      creator: c.authorChannelId?.value === t.snippet.channelId };
+  });
+  fs.writeFileSync(cacheFile, JSON.stringify(list));
+  return list;
 }
 
 // YouTube's chapters (often generated automatically, and they tend to spell the
@@ -93,9 +119,52 @@ async function chapters(videoId) {
   return list;
 }
 
+// YouTube's storyboard sheets (the timeline hover previews: 3×3 frames, 960×540) around the
+// given moments, as [{ start, end, type, data }]. Name graphics like "CANAL RESTAURANT 115 WOODFIELD RD"
+// are readable in them, and they need no video download.
+async function storyboard(videoId, moments) {
+  const metaFile = `${CACHE_DIR}/${videoId}.storyboard.json`;
+  let durations = fs.existsSync(metaFile) ? JSON.parse(fs.readFileSync(metaFile, 'utf8')) : null;
+  let urls = null;
+  const load = async () => {
+    const { stdout } = await promisify(execFile)(YT_DLP, ['--cookies', 'cookies.txt', '-f', 'sb0', '--skip-download',
+      '--print', '%(fragments)j', `https://www.youtube.com/watch?v=${videoId}`], { timeout: 60_000 });
+    const fragments = JSON.parse(stdout.trim());
+    urls = fragments.map(f => f.url);
+    durations = fragments.map(f => f.duration);
+    fs.writeFileSync(metaFile, JSON.stringify(durations));
+  };
+  if (!durations) {
+    try { await load(); } catch { durations = []; fs.writeFileSync(metaFile, '[]'); }
+  }
+  if (!durations.length) return [];
+
+  const starts = durations.map((_, i) => durations.slice(0, i).reduce((a, b) => a + b, 0));
+  const sheetAt = t => Math.max(0, starts.findLastIndex(start => start <= t));
+  // The sheet each moment falls in and the next one (a moment marks just before the mention)
+  const wanted = new Set(moments.length ? moments.flatMap(t => [sheetAt(t), sheetAt(t) + 1]) : [0, 1, 2, 3]);
+  const sheets = [];
+  for (const i of [...wanted].filter(i => i < durations.length).sort((a, b) => a - b).slice(0, MAX_SHEETS)) {
+    const file = `${CACHE_DIR}/${videoId}.sb${i}.jpg`;
+    if (!fs.existsSync(file)) {
+      try {
+        if (!urls) await load();
+        const res = await fetch(urls[i]);
+        if (!res.ok) continue;
+        fs.writeFileSync(file, Buffer.from(await res.arrayBuffer()));
+      } catch { continue; }
+    }
+    const bytes = fs.readFileSync(file);
+    // YouTube serves these as WebP despite the .jpg name
+    const type = bytes.subarray(8, 12).toString() === 'WEBP' ? 'image/webp' : bytes[0] === 0x89 ? 'image/png' : 'image/jpeg';
+    sheets.push({ start: Math.round(starts[i]), end: Math.round(starts[i] + durations[i]), type, data: bytes.toString('base64') });
+  }
+  return sheets;
+}
+
 const clock = s => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
 
-// Caption lines as plain text, with a [m:ss] marker every 30 seconds or so
+// Caption lines as plain text, with a [m:ss] marker every MARK_EVERY seconds or so
 // so Claude can say when in the video a place comes up
 function captionText(vtt) {
   const out = [];
@@ -106,7 +175,7 @@ function captionText(vtt) {
     if (!raw || /^(WEBVTT|NOTE|Kind:|Language:|\d+$)/.test(raw)) continue;
     const line = raw.replace(/<[^>]+>/g, '').trim();
     if (!line || line === previous) continue;
-    if (start - lastMarker >= 30) {
+    if (start - lastMarker >= MARK_EVERY) {
       out.push(`[${clock(start)}]`);
       lastMarker = start;
     }
@@ -114,6 +183,27 @@ function captionText(vtt) {
     previous = line;
   }
   return out.join(' ');
+}
+
+const seconds = t => { const m = String(t || '').match(/^(\d+):(\d{2})$/); return m ? +m[1] * 60 + +m[2] : null; };
+
+// Gives each graphic Claude read to the heard name it sounds most like, among the names
+// mentioned within MAX_GAP seconds of it (videos often name several places seconds
+// apart). Graphics are evidence for the review page: they never rename a pick by
+// themselves, since they can be misread ("GUN & SUM" for Bun & Sum).
+function matchGraphics(restaurants, graphics = []) {
+  return graphics.map(g => {
+    const at = seconds(g.at);
+    let best = null;
+    for (const r of restaurants) {
+      const mention = seconds(r.moment);
+      if (at == null || mention == null || Math.abs(at - mention) > MAX_GAP) continue;
+      const score = Math.max(soundsLike(g.text, r.originalName), soundsLike(g.text, r.name || ''));
+      if (score >= SOUNDS_LIKE && (!best || score > best.score)) best = { r, score };
+    }
+    if (best) Object.assign(best.r, { onScreen: g.text, onScreenAt: g.at });
+    return { ...g, matched: best?.r.originalName ?? null };
+  });
 }
 
 // ─── Candidate places from places.json ──────────────────────────────────────
@@ -151,6 +241,14 @@ const TOOL = {
     type: 'object',
     properties: {
       sponsored: { type: 'boolean', description: 'The video is an ad, paid partnership or sponsored.' },
+      graphics: {
+        type: 'array',
+        description: 'Every on-screen text graphic naming a restaurant that you can read with certainty in the video frames, copied exactly. Empty without frames.',
+        items: { type: 'object', properties: {
+          text: { type: 'string' },
+          at:   { type: 'string', description: 'The m:ss label of the frame it appears in.' },
+        }, required: ['text', 'at'] },
+      },
       restaurants: {
         type: 'array',
         items: {
@@ -162,22 +260,23 @@ const TOOL = {
             name:      { type: 'string', description: 'The correct name of the restaurant.' },
             placeId:   { type: ['string', 'null'], description: 'id of the matching candidate place, or null if none matches.' },
             area:      { type: ['string', 'null'], description: 'Branch or area if the video says which, else null.' },
+            address:   { type: ['string', 'null'], description: 'Street address if the transcript, description, a comment or a clearly readable on-screen graphic gives it (e.g. "115 Woodfield Rd"). null if unsure: a wrong address is worse than none.' },
             notes:     { type: 'string', description: 'If kept: 1–2 sentences on what the creator themself said about it. Empty if dropped.' },
             verdict:   { type: 'string', description: 'If kept: the creator\'s opinion in at most 12 words. Empty if dropped.' },
             dishes:    { type: 'array', items: { type: 'string' }, description: 'Dishes the creator recommends there.' },
             confident: { type: 'boolean', description: 'false if a person should double-check this decision or the place match.' },
-            moment:    { type: ['string', 'null'], description: 'The [m:ss] transcript marker just before the creator talks about it, e.g. "4:30"; null without a transcript.' },
+            moment:    { type: ['string', 'null'], description: 'The [m:ss] transcript marker just before the restaurant is first named, e.g. "4:30"; null without a transcript.' },
             why:       { type: 'string', description: 'One short sentence explaining the decision.' },
           },
-          required: ['index', 'keep', 'reason', 'name', 'placeId', 'area', 'notes', 'verdict', 'dishes', 'confident', 'why', 'moment'],
+          required: ['index', 'keep', 'reason', 'name', 'placeId', 'area', 'address', 'notes', 'verdict', 'dishes', 'confident', 'why', 'moment'],
         },
       },
     },
-    required: ['sponsored', 'restaurants'],
+    required: ['sponsored', 'graphics', 'restaurants'],
   },
 };
 
-function prompt(video, details, text, chapterList, picks) {
+function prompt(video, details, text, chapterList, commentList, picks) {
   return `You are checking restaurant picks taken from a YouTube video by ${creator.name} (@${creator.channel}), a London food creator. The picks were extracted automatically and may be wrong. SCRAN, a restaurant map, will show the kept ones under ${creator.name}'s name, so only ${creator.name}'s own first-hand opinions may be kept.
 
 For each restaurant listed, decide:
@@ -193,13 +292,15 @@ For each restaurant listed, decide:
 - placeId: the id of the candidate place that is this restaurant (same business; the right branch if it has several), or null if none is.
 - sponsored (for the whole video): true if the title or description says ad, AD, #ad, (ad), paid partnership, sponsored, "in partnership with", or YouTube flags paid promotion.
 - confident = false whenever you are unsure about keep, the name or the placeId.
+- Video frames (if attached, each labelled with its time): list in graphics every on-screen text graphic naming a restaurant (e.g. "CANAL RESTAURANT"), with its frame time. They're matched to the restaurants separately, so don't rename restaurants from them. The frames are small: copy only text you can read with certainty, and never guess or fill in blurry or partly readable text (small address lines usually are). A wrong name or address is far worse than none.
+- Comments: viewers saying what or where a place is. Use them to correct names and find the right place, but as hints: viewers can be wrong or name somewhere else entirely. Comments marked [creator] are from ${creator.name}.
 - moment: the [m:ss] marker in the transcript just before the creator talks about the restaurant, so a person can jump to it.
 
 Video title: ${video.title}
 YouTube paid promotion flag: ${details?.paidPromotion ? 'yes' : 'no'}
 Description:
 ${(details?.description || '(none)').slice(0, 4000)}
-${chapterList?.length ? `\nChapters:\n${chapterList.map(c => `[${clock(c.start)}] ${c.title}`).join('\n')}\n` : ''}${text ? `\nTranscript (automatic captions; no speaker names; [m:ss] marks the time):\n${text.slice(0, MAX_TRANSCRIPT)}\n` : ''}
+${chapterList?.length ? `\nChapters:\n${chapterList.map(c => `[${clock(c.start)}] ${c.title}`).join('\n')}\n` : ''}${commentList?.length ? `\nComments saying what or where a place is:\n${commentList.map(c => `- ${c.creator ? '[creator] ' : ''}${c.text}`).join('\n')}\n` : ''}${text ? `\nTranscript (automatic captions; no speaker names; [m:ss] marks the time):\n${text.slice(0, MAX_TRANSCRIPT)}\n` : ''}
 Restaurants extracted from this video:
 ${picks.map((p, i) => `${i}. "${p.name}"${p.location ? ` (location given: ${p.location})` : ''}
    Extracted notes: ${p.notes || '(none)'}
@@ -215,6 +316,12 @@ async function main() {
   const videos = JSON.parse(fs.readFileSync(creator.files.scraped, 'utf8'))
     .filter(v => v.restaurants?.some(r => r.name && r.name !== 'null'));
   let done = fs.existsSync(OUTPUT) ? JSON.parse(fs.readFileSync(OUTPUT, 'utf8')) : [];
+  // When each pick comes up, from the last check, to choose which video frames to show
+  const moments = new Map(done.map(v => {
+    const unsure = v.restaurants.filter(r => !r.confident);
+    return [v.videoId, (unsure.length ? unsure : v.restaurants).map(r => String(r.moment || '').match(/^(\d+):(\d{2})$/))
+      .filter(Boolean).map(m => +m[1] * 60 + +m[2])];
+  }));
   if (RECHECK) done = done.filter(v => v.restaurants.every(r => r.confident));
   if (ONLY) done = done.filter(v => !ONLY.includes(v.videoId));
   const doneIds = new Set(done.map(v => v.videoId));
@@ -238,11 +345,20 @@ async function main() {
     }));
     const text = TRANSCRIPTS ? await transcript(video.videoId) : null;
     const chapterList = TRANSCRIPTS ? await chapters(video.videoId) : null;
-    prompts.push({ video, picks, content: prompt(video, details[video.videoId], text, chapterList, picks) });
+    const commentList = (await comments(video.videoId)).filter(c => saysWhere(c.text));
+    const sheets = FRAMES ? await storyboard(video.videoId, moments.get(video.videoId) || []) : [];
+    const instructions = prompt(video, details[video.videoId], text, chapterList, commentList, picks);
+    const content = sheets.length ? [{ type: 'text', text: instructions }, ...sheets.flatMap(sh => [
+      { type: 'text', text: `Video frames (3×3, left to right, top to bottom) at ${
+        Array.from({ length: 9 }, (_, k) => clock(Math.round(sh.start + k * (sh.end - sh.start) / 9))).join(', ')}:` },
+      { type: 'image', source: { type: 'base64', media_type: sh.type, data: sh.data } },
+    ])] : instructions;
+    prompts.push({ video, picks, content, sheets: sheets.length });
   }
 
   // ~4 characters per token; output is roughly 150 tokens per restaurant
-  const estInput  = prompts.reduce((n, p) => n + p.content.length / 4 + 900, 0);
+  const textOf = c => typeof c === 'string' ? c : c.filter(b => b.type === 'text').map(b => b.text).join('');
+  const estInput  = prompts.reduce((n, p) => n + textOf(p.content).length / 4 + 900 + 700 * p.sheets, 0);
   const estOutput = prompts.reduce((n, p) => n + 150 * p.picks.length + 50, 0);
   console.log(`Estimated cost: about $${(estInput * PRICE.input + estOutput * PRICE.output).toFixed(2)} ` +
     `(${Math.round(estInput / 1000)}k input + ${Math.round(estOutput / 1000)}k output tokens, ${MODEL})`);
@@ -265,11 +381,7 @@ async function main() {
     const result = res.content.find(c => c.type === 'tool_use')?.input;
     if (!result?.restaurants) throw new Error(`No result for video ${video.videoId}`);
 
-    done.push({
-      videoId: video.videoId,
-      title: video.title,
-      sponsored: result.sponsored,
-      restaurants: picks.map((pick, index) => {
+    const restaurants = picks.map((pick, index) => {
         const check = result.restaurants.find(r => r.index === index);
         const { candidates, ...original } = pick;
         // A place you confirmed on the review page settles where it is (Claude still decides keep/drop)
@@ -282,8 +394,9 @@ async function main() {
           // candidates are kept for unsure picks so the review page can offer them
           ? { ...original, originalName: pick.name, ...check, index: undefined, ...(check.confident ? {} : { candidates }) }
           : { ...original, originalName: pick.name, keep: false, reason: 'only_mentioned', confident: false, why: 'Claude returned no check for this pick', candidates };
-      }),
-    });
+      });
+    const graphics = matchGraphics(restaurants, result.graphics);
+    done.push({ videoId: video.videoId, title: video.title, sponsored: result.sponsored, graphics, restaurants });
     fs.writeFileSync(OUTPUT, JSON.stringify(done, null, 2)); // saved after every video
     const kept = done.at(-1).restaurants.filter(r => r.keep).length;
     console.log(`kept ${kept}/${picks.length}${result.sponsored ? ' (ad)' : ''} — $${spent.toFixed(3)} so far`);

@@ -61,6 +61,29 @@ export function sameName(a, b) {
 }
 const LOOSE = new Set(['public', 'cafe', 'bistro', 'canteen', 'diner', 'arms', 'head']);
 
+// A rough sound key: what's left of a word once vowels and similar-sounding letters
+// are merged, so misheard names line up ("Seal" / "Sael" → "sl")
+const soundKey = w => w
+  .replace(/ph/g, 'f').replace(/ck|q|c(?=[aou])|ch/g, 'k').replace(/c/g, 's').replace(/z/g, 's')
+  .replace(/x/g, 'ks').replace(/dg|j/g, 'g').replace(/wh/g, 'w').replace(/d/g, 't').replace(/b/g, 'p').replace(/v/g, 'f')
+  .replace(/(?!^)[aeiouyhw]/g, '').replace(/(.)\1+/g, '$1');
+
+// How alike two names are in spelling or in sound (0–1), comparing their distinctive
+// words: "SAEL ROAST DINING" / "Seal" is high, "MOTHER WORKS" / "OoWee" is 0
+export function soundsLike(a, b) {
+  const wa = distinctive(a).filter(w => !LOOSE.has(w)), wb = distinctive(b).filter(w => !LOOSE.has(w));
+  if (!wa.length || !wb.length) return 0;
+  const joined = (ws, f = w => w) => ws.map(f).join('');
+  // Whole names, and the best single pair of words (a graphic can carry extra words)
+  const pairs = [[joined(wa), joined(wb)], ...wa.flatMap(x => wb.map(y => [x, y]))];
+  return Math.max(...pairs.map(([x, y]) => {
+    if (x === y) return 1;
+    const sx = soundKey(x), sy = soundKey(y);
+    const sound = sx.length >= 2 && sy.length >= 2 ? (sx === sy ? 0.9 : similarity(sx, sy)) : 0;
+    return Math.max(similarity(x, y), sound);
+  }));
+}
+
 // Words that don't tell places apart, for the review page's own name matching
 export const NAME_STOPWORDS = [...GENERIC, ...LOOSE];
 

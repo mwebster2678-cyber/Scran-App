@@ -7,6 +7,7 @@ import crypto from 'crypto';
 import { CREATORS, nameKey } from './shared.js';
 import { PLACES_FILE, sameName, NAME_STOPWORDS } from './link.js';
 import { loadKnown, findKnown } from './known.js';
+import { saysWhere } from './comments.js';
 
 const OUTPUT        = 'review-verify.html';
 const DECISIONS     = 'verify-decisions.json';
@@ -34,6 +35,12 @@ function seconds(moment) {
   return m ? +m[1] * 60 + +m[2] : null;
 }
 
+// Comments on the video that say what or where a place is (fetched by verify.js)
+function commentsFor(videoId) {
+  const file = `cache/${videoId}.comments.json`;
+  return fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, 'utf8')).filter(c => saysWhere(c.text)).map(c => c.text) : [];
+}
+
 function item(key, creator, video, pick, why) {
   // Only candidates whose name looks like the pick's (not every place near an old, possibly wrong pin)
   const candidates = (pick.candidates || []).map(c => placeById.get(c.id))
@@ -47,8 +54,9 @@ function item(key, creator, video, pick, why) {
     at: seconds(pick.moment), moment: pick.moment,
     originalName: pick.originalName, name: pick.name, area: pick.area || pick.location || null,
     keep: pick.keep, reasonKey: pick.reason, reason: REASON_LABELS[pick.reason] || pick.reason, why,
-    verdict: pick.verdict, notes: pick.notes,
-    options, guessed: !!guess, specificArea: !!(pick.area && !/^(central |north |south |east |west )?london$/i.test(pick.area)),
+    verdict: pick.verdict, notes: pick.notes, comments: commentsFor(video.videoId),
+    address: pick.address || null, onScreen: pick.onScreen || null,
+    options, guessed: !!guess, specificArea: !!(pick.address || (pick.area && !/^(central |north |south |east |west )?london$/i.test(pick.area))),
   };
 }
 
@@ -170,6 +178,9 @@ function buildHtml(items) {
   .drop-reasons[hidden] { display: none; }
   .drop-reasons button { padding: 5px 10px; border: 1.5px solid rgba(0,0,0,0.12); border-radius: 14px; background: #fff; cursor: pointer; font-size: 0.75rem; font-family: inherit; }
   .drop-reasons button:hover { border-color: #c0392b; color: #c0392b; }
+  .drop-reasons button.claudes { border-color: #c0392b; color: #c0392b; font-weight: 700; }
+  .comments { padding: 10px 16px; border-bottom: 1px solid #f0ede8; }
+  .comment { font-size: 0.78rem; color: #444; line-height: 1.4; margin-bottom: 4px; }
   .spot { display: inline-block; font-size: 0.68rem; font-weight: 700; color: #6C3483; border: 1px solid #6C3483; border-radius: 10px; padding: 0 7px; margin-left: 4px; }
   .status { font-size: 0.72rem; font-weight: 700; color: #888; }
 </style>
@@ -336,7 +347,13 @@ function buildCard(r, n) {
       <span class="decision \${r.keep ? 'keep' : 'drop'}">\${r.keep ? 'Keep' : 'Drop'}</span> — \${esc(r.reason)}
       <div class="why">\${esc(r.why)}</div>
       \${r.verdict ? '<div class="verdict">“' + esc(r.verdict) + '”</div>' : ''}
+      \${r.onScreen ? '<div class="why"><b>On screen:</b> ' + esc(r.onScreen) + '</div>' : ''}
+      \${r.address ? '<div class="why"><b>Address mentioned:</b> ' + esc(r.address) + '</div>' : ''}
     </div>
+    \${r.comments.length ? \`<div class="comments">
+      <div class="options-label">Viewers say</div>
+      \${r.comments.map(c => \`<div class="comment">“\${esc(c)}”</div>\`).join('')}
+    </div>\` : ''}
     <div class="options">
       <div class="options-label">Which place is it?</div>
       <div data-options>\${optionsHtml || '<div class="option-address" data-empty>No matches found. Type the name below.</div>'}</div>
@@ -362,7 +379,7 @@ function buildCard(r, n) {
       <button class="btn-drop">✗ Drop</button>
       <span class="status"></span>
       <div class="drop-reasons" hidden>Why?
-        \${Object.entries(DROP_REASONS).map(([k, label]) => \`<button data-reason="\${k}">\${label}</button>\`).join('')}
+        \${Object.entries(DROP_REASONS).map(([k, label]) => \`<button data-reason="\${k}"\${!r.keep && k === r.reasonKey ? ' class="claudes" title="Claude’s reason"' : ''}>\${label}\${!r.keep && k === r.reasonKey ? ' (Claude)' : ''}</button>\`).join('')}
       </div>
     </div>\`;
 
@@ -411,10 +428,18 @@ function buildCard(r, n) {
   let googleTop = null;
   card.googleSearch = async () => {
     const note = card.querySelector('[data-google-note]');
-    const query = r.name + (r.area && !/^(central |north |south |east |west )?london$/i.test(r.area) ? ' ' + r.area : '') + ', London';
+    // A street address narrows the search most; otherwise the area, unless it's just "London"
+    const where = r.address || (r.area && !/^(central |north |south |east |west )?london$/i.test(r.area) ? r.area : '');
+    const queries = [r.name + (where ? ' ' + where : '') + ', London'];
+    // The on-screen name too, when it differs from Claude's (it may fix a misheard name)
+    if (r.onScreen && nameFit([r.name, r.originalName], r.onScreen) < 1) queries.push(r.onScreen + (where ? ' ' + where : '') + ', London');
     try {
-      const found = await googleSearch(query);
-      note.textContent = found.length ? 'Searched Google for “' + query + '”' : 'Google found nothing for “' + query + '”';
+      const found = [];
+      for (const q of queries) for (const g of await googleSearch(q)) {
+        if (!found.some(f => Math.abs(f.lat - g.lat) < 1e-5 && Math.abs(f.lon - g.lon) < 1e-5)) found.push(g);
+      }
+      const query = queries.map(q => '“' + q + '”').join(' and ');
+      note.textContent = found.length ? 'Searched Google for ' + query : 'Google found nothing for ' + query;
       const places = [];
       for (const g of found) {
         const p = await scranPlaceFor(g);
@@ -422,7 +447,7 @@ function buildCard(r, n) {
                       : { id: null, name: g.name, address: g.address, lat: g.lat, lon: g.lon });
       }
       googleTop = places[0] || null;
-      const names = [r.name, r.originalName];
+      const names = [r.name, r.originalName, r.onScreen].filter(Boolean);
       // Places in our list with the same name within ~1 km of Google's results (Google
       // finds the area well even when its top result is a different place)
       const nearby = places.length ? (await loadPlaces())
@@ -525,10 +550,10 @@ function buildCard(r, n) {
     }
     save(); refresh();
   });
-  // Dropping something Claude kept asks why, so learn.js can spot repeated mistakes
+  // Dropping always asks why (Claude's reason highlighted), so learn.js can spot repeated mistakes
   const reasons = card.querySelector('.drop-reasons');
   const drop = reason => { state[r.id] = { ...context(), keep: false, dropReason: reason }; reasons.hidden = true; save(); refresh(); };
-  card.querySelector('.btn-drop').addEventListener('click', () => r.keep ? (reasons.hidden = !reasons.hidden) : drop(r.reasonKey));
+  card.querySelector('.btn-drop').addEventListener('click', () => { reasons.hidden = !reasons.hidden; });
   reasons.querySelectorAll('button').forEach(b => b.addEventListener('click', () => drop(b.dataset.reason)));
   return card;
 }
