@@ -36,6 +36,15 @@ Checking picks (geocode.js uses the verified picks in place of the scraped ones 
 | Learn from your decisions | `node learn.js` (picks up the newest export from ~/Downloads) | `verify-decisions` → `known-places.json` + accuracy report |
 | Rebuild the map | `node geocode.js <creator> && node inject.js <creator>` | uses `-verified`, your decisions and `known-places` |
 
+Google (Places API (New), `GOOGLE_MAPS_API_KEY` in `.env`: the private pipeline key, not the map's website key):
+
+| Check | Command | What it does |
+|---|---|---|
+| How much Google would help | `node eval-google.js` | Replays Google search against your decisions |
+| Map pins vs Google | `node check-pins.js` | Lists pins far from Google's place with the same name (moves, wrong pins) → `pin-check.json` |
+
+Searches are cached in `cache/`, so re-runs are free; the daily cap in Google Cloud covers the project, review page included.
+
 `known-places.json` holds every place you've confirmed, so the same restaurant in another video is
 placed automatically (verify.js, geocode.js) and doesn't come back to the review page.
 

@@ -3,7 +3,7 @@
 // exists; otherwise the raw scraped picks, located with Google.
 // Usage: node geocode.js <creator>
 import fs from 'fs';
-import { creatorFromArgs, nameKey, geocodeLondon } from './shared.js';
+import { creatorFromArgs, nameKey, geocodeLondon, tidyName } from './shared.js';
 import { PLACES_FILE } from './link.js';
 import { loadKnown, findKnown } from './known.js';
 
@@ -65,7 +65,10 @@ async function fromVerified() {
       const confirmed = !decision && (!pick.confident || !pick.placeId) ? findKnown(known, pick) : null;
       if (confirmed) fromKnown++;
       const answer  = decision || confirmed;
-      const name    = answer?.name || pick.name;
+      // Your answer's name, tidied; one typed in lowercase that's Claude's name apart from
+      // capitals ("dumbo") takes Claude's capitals
+      const sameButCase = answer?.name && answer.name.toLowerCase() === pick.name.toLowerCase() && pick.name !== pick.name.toLowerCase();
+      const name    = sameButCase ? pick.name : tidyName(answer?.name || pick.name);
       const placeId = answer ? answer.placeId : pick.placeId;
       let at = placeById.get(placeId)
         ?? (answer?.lat ? { lat: answer.lat, lon: answer.lon } : null)

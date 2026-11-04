@@ -20,8 +20,9 @@ import fs from 'fs';
 import { execFile } from 'child_process';
 import { promisify } from 'util';
 import Anthropic from '@anthropic-ai/sdk';
-import { creatorFromArgs, nameKey } from './shared.js';
-import { PLACES_FILE, squash, similarity, metres, sameName, soundsLike } from './link.js';
+import { creatorFromArgs, addressInText, nameKey, tidyName } from './shared.js';
+import { PLACES_FILE, squash, similarity, metres, sameName } from './link.js';
+import { matchGraphics } from './graphics.js';
 import { loadKnown, findKnown } from './known.js';
 import { saysWhere } from './comments.js';
 
@@ -39,8 +40,6 @@ const RECHECK     = process.argv.includes('--recheck');
 const FRAMES      = process.argv.includes('--frames');
 const MAX_SHEETS  = 4; // storyboard images per video, each 9 frames about 5 s apart
 const MARK_EVERY  = 5;  // seconds between [m:ss] markers in transcripts, to line up with the frames
-const MAX_GAP     = 15;  // seconds a name graphic may be from a restaurant's mention to count for it
-const SOUNDS_LIKE = 0.4; // how alike (soundsLike) a graphic and a heard name must be
 const ONLY        = process.argv.includes('--only') ? process.argv[process.argv.indexOf('--only') + 1].split(',') : null;
 const LIMIT       = Number(process.argv[process.argv.indexOf('--limit') + 1]) || Infinity;
 const OUTPUT      = `${creator.key}-verified.json`;
@@ -185,27 +184,6 @@ function captionText(vtt) {
   return out.join(' ');
 }
 
-const seconds = t => { const m = String(t || '').match(/^(\d+):(\d{2})$/); return m ? +m[1] * 60 + +m[2] : null; };
-
-// Gives each graphic Claude read to the heard name it sounds most like, among the names
-// mentioned within MAX_GAP seconds of it (videos often name several places seconds
-// apart). Graphics are evidence for the review page: they never rename a pick by
-// themselves, since they can be misread ("GUN & SUM" for Bun & Sum).
-function matchGraphics(restaurants, graphics = []) {
-  return graphics.map(g => {
-    const at = seconds(g.at);
-    let best = null;
-    for (const r of restaurants) {
-      const mention = seconds(r.moment);
-      if (at == null || mention == null || Math.abs(at - mention) > MAX_GAP) continue;
-      const score = Math.max(soundsLike(g.text, r.originalName), soundsLike(g.text, r.name || ''));
-      if (score >= SOUNDS_LIKE && (!best || score > best.score)) best = { r, score };
-    }
-    if (best) Object.assign(best.r, { onScreen: g.text, onScreenAt: g.at });
-    return { ...g, matched: best?.r.originalName ?? null };
-  });
-}
-
 // ─── Candidate places from places.json ──────────────────────────────────────
 
 const { places } = JSON.parse(fs.readFileSync(PLACES_FILE, 'utf8'));
@@ -260,7 +238,7 @@ const TOOL = {
             name:      { type: 'string', description: 'The correct name of the restaurant.' },
             placeId:   { type: ['string', 'null'], description: 'id of the matching candidate place, or null if none matches.' },
             area:      { type: ['string', 'null'], description: 'Branch or area if the video says which, else null.' },
-            address:   { type: ['string', 'null'], description: 'Street address if the transcript, description, a comment or a clearly readable on-screen graphic gives it (e.g. "115 Woodfield Rd"). null if unsure: a wrong address is worse than none.' },
+            address:   { type: ['string', 'null'], description: 'Street address only if the transcript, description, a comment or a clearly readable on-screen graphic gives it (e.g. "115 Woodfield Rd"). Never copy a candidate place’s address. null if unsure: a wrong address is worse than none.' },
             notes:     { type: 'string', description: 'If kept: 1–2 sentences on what the creator themself said about it. Empty if dropped.' },
             verdict:   { type: 'string', description: 'If kept: the creator\'s opinion in at most 12 words. Empty if dropped.' },
             dishes:    { type: 'array', items: { type: 'string' }, description: 'Dishes the creator recommends there.' },
@@ -353,7 +331,9 @@ async function main() {
         Array.from({ length: 9 }, (_, k) => clock(Math.round(sh.start + k * (sh.end - sh.start) / 9))).join(', ')}:` },
       { type: 'image', source: { type: 'base64', media_type: sh.type, data: sh.data } },
     ])] : instructions;
-    prompts.push({ video, picks, content, sheets: sheets.length });
+    // Everything the video says, to check Claude's addresses came from it
+    const evidence = [details[video.videoId]?.description, text, ...(chapterList || []).map(c => c.title), ...commentList.map(c => c.text)].join('\n');
+    prompts.push({ video, picks, content, evidence, sheets: sheets.length });
   }
 
   // ~4 characters per token; output is roughly 150 tokens per restaurant
@@ -368,7 +348,7 @@ async function main() {
   const known = loadKnown();
   const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
   let spent = 0;
-  for (const [i, { video, picks, content }] of prompts.entries()) {
+  for (const [i, { video, picks, content, evidence }] of prompts.entries()) {
     process.stdout.write(`[${i + 1}/${prompts.length}] ${video.title.slice(0, 60)}… `);
     const res = await anthropic.messages.create({
       model: MODEL,
@@ -387,7 +367,7 @@ async function main() {
         // A place you confirmed on the review page settles where it is (Claude still decides keep/drop)
         const confirmed = check && findKnown(known, { name: check.name, originalName: pick.name, area: check.area || pick.location });
         if (confirmed) Object.assign(check, {
-          name: confirmed.name, placeId: confirmed.placeId, knownPlace: true,
+          name: tidyName(confirmed.name), placeId: confirmed.placeId, knownPlace: true,
           confident: check.confident || (check.keep && check.reason === 'own_review'),
         });
         return check
@@ -396,6 +376,9 @@ async function main() {
           : { ...original, originalName: pick.name, keep: false, reason: 'only_mentioned', confident: false, why: 'Claude returned no check for this pick', candidates };
       });
     const graphics = matchGraphics(restaurants, result.graphics);
+    // An address the video never gives is a guess (often the guessed place's own address)
+    const said = evidence + '\n' + (result.graphics || []).map(g => g.text).join('\n');
+    for (const r of restaurants) if (r.address && !addressInText(r.address, said)) r.address = null;
     done.push({ videoId: video.videoId, title: video.title, sponsored: result.sponsored, graphics, restaurants });
     fs.writeFileSync(OUTPUT, JSON.stringify(done, null, 2)); // saved after every video
     const kept = done.at(-1).restaurants.filter(r => r.keep).length;

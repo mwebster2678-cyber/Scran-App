@@ -50,6 +50,38 @@ export function nameKey(name) {
   return name.toLowerCase().replace(/[^a-z0-9]/g, '');
 }
 
+// A restaurant name as it should appear on the map, without Google listing styling:
+// "#AsadorCamden" → "Asador Camden", "Peckish Burgers | Camden" → "Peckish Burgers",
+// "Roll Boys." → "Roll Boys" (abbreviations like "Co." keep their full stop)
+export function tidyName(name) {
+  let n = name.trim()
+    .replace(/^#(\S+)$/, (_, tag) => tag.replace(/([a-z])([A-Z])/g, '$1 $2'))
+    .replace(/\s+[|•·]\s+.*$/, '')
+    .replace(/\s{2,}/g, ' ');
+  if (/\.$/.test(n) && !/\b(Co|Ltd|St|Jr|Inc|Bros)\.$/i.test(n)) n = n.slice(0, -1);
+  // Typed in lowercase: capitalise each word
+  if (n === n.toLowerCase()) n = n.replace(/\b[a-z]/g, c => c.toUpperCase());
+  return n;
+}
+
+// Whether a street address is actually given in the video's text (description, transcript,
+// chapters, comments, on-screen graphics): its postcode, house number and street, or street name.
+// Claude sometimes copies the address of the place it guessed, which isn't evidence of anything.
+const STREET_WORDS = new Set(['road', 'rd', 'street', 'st', 'lane', 'ln', 'avenue', 'ave', 'high', 'place', 'pl',
+  'square', 'sq', 'way', 'row', 'hill', 'terrace', 'parade', 'yard', 'market', 'london', 'unit', 'the', 'and']);
+const plain = s => ' ' + String(s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, ' ').trim() + ' ';
+export function addressInText(address, text) {
+  if (!address) return false;
+  const t = plain(text), squashed = t.replace(/ /g, '');
+  const postcode = address.match(/\b[A-Z]{1,2}\d[A-Z\d]?\s*\d[A-Z]{2}\b/i)?.[0];
+  if (postcode && squashed.includes(postcode.toLowerCase().replace(/\s/g, ''))) return true;
+  const street = address.split(',').find(part => /[a-z]{3}/i.test(part) && !/^\s*unit\b/i.test(part)) || '';
+  const numbered = street.match(/\b(\d+[a-z]?)\s+([a-z]+)/i);
+  if (numbered && t.includes(` ${numbered[1].toLowerCase()} ${numbered[2].toLowerCase()} `)) return true;
+  const name = plain(street).trim().split(' ').filter(w => !/^\d/.test(w) && !STREET_WORDS.has(w)).join(' ');
+  return name.length >= 5 && t.includes(` ${name} `);
+}
+
 // ─── Google geocoding ───────────────────────────────────────────────────────
 
 // Rough M25 bounding box — discard results clearly outside London

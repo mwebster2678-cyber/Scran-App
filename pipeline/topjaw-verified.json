@@ -6453,277 +6453,6 @@
     ]
   },
   {
-    "videoId": "RdGAqs9iwGo",
-    "title": "Still need to book somewhere great? We’ve got you! ❤️🎄❤️",
-    "sponsored": false,
-    "restaurants": [
-      {
-        "name": "Brigadiers",
-        "location": null,
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw calls it 'the city's ultimate group feast' and says 'It is so good it makes me tear up'. Features Indian barbecue, smoky cocktails, beer towers, and barbecue butter chicken wings.",
-        "originalName": "Brigadiers",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": "8fa33b6eb2a8",
-        "area": null,
-        "address": "1-5 Bloomberg Arcade, EC4N 8AR",
-        "onScreen": "BRIGADIERS",
-        "moment": "0:00",
-        "verdict": "Ultimate group feast, makes me tear up",
-        "dishes": [
-          "Indian barbecue",
-          "barbecue butter chicken wings",
-          "smoky cocktails",
-          "beer towers"
-        ],
-        "confident": true,
-        "why": "Topjaw personally visited and gave detailed first-hand opinion of multiple dishes."
-      },
-      {
-        "name": "The George Pub",
-        "location": null,
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Described as 'a proper London pub' perfect for festive pints. Features the new glue pot for up to 10 people with your own Guinness tap and different menu.",
-        "originalName": "The George Public House",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": "bb8be1fbdf7b",
-        "area": "Fitzrovia",
-        "address": "White Hart Yard, SE1 1NX",
-        "onScreen": "THE GEORGE",
-        "moment": "0:08",
-        "verdict": "Proper London pub, festive pints and own Guinness tap",
-        "dishes": [
-          "Glue pot"
-        ],
-        "confident": false,
-        "why": "While Topjaw mentions this is in Fitzrovia from transcript, the candidate 'Coach House at The George' at White Hart Yard is in SE1, which may be different location.",
-        "candidates": [
-          {
-            "id": "910e9033eb34",
-            "name": "The George Pub",
-            "address": "9 Eden Grove, N7 8EE"
-          },
-          {
-            "id": "bb8be1fbdf7b",
-            "name": "Coach House at The George",
-            "address": "White Hart Yard, SE1 1NX"
-          },
-          {
-            "id": "445b6b5a0efb",
-            "name": "George IV Pub",
-            "address": "7 Ida Street, E14 6LT"
-          },
-          {
-            "id": "e88fcc3b837e",
-            "name": "The george pub croydon",
-            "address": "George St, CR0 1PE"
-          }
-        ]
-      },
-      {
-        "name": "The Parakeet",
-        "location": null,
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw describes it as 'a gorgeous pub turned fine dining spot from Ben Allen'. Praises great food and brilliant atmosphere while still feeling like a local.",
-        "originalName": "The Parakeet",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": "dd6fca5094b8",
-        "area": "Kentish Town",
-        "address": "256 Kentish Town Rd, NW5 2AA",
-        "onScreen": "THE PARAKEET",
-        "moment": "0:18",
-        "verdict": "Gorgeous pub-turned-fine-dining, great food, local feel",
-        "dishes": [],
-        "confident": true,
-        "why": "Topjaw personally reviewed it and gave detailed opinion."
-      },
-      {
-        "name": "BLOODSPORTS by MEATliquor",
-        "location": null,
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw describes it as 'moody, mad, and full of energy' with menu by Meat Liquor. Recommends turbo margaritas and a dead hippie cocktail.",
-        "originalName": "BLOODsports",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": "a0d857f1ff65",
-        "area": null,
-        "address": "27-29 Endell St, WC2H 9BA",
-        "onScreen": "BLOODSPORTS",
-        "moment": "0:22",
-        "verdict": "Moody, mad, full of energy, great cocktails",
-        "dishes": [
-          "turbo margaritas",
-          "dead hippie"
-        ],
-        "confident": true,
-        "why": "Topjaw personally reviewed and recommended specific drinks."
-      },
-      {
-        "name": "The Montpelier",
-        "location": null,
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw says 'the peek local has quietly become a foodie favorite'. Praises Michael Bagler commanding the kitchen serving 'damn tasty small plates'.",
-        "originalName": "The Montpelier / ELM",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": "8eb30d4fe55e",
-        "area": "Peckham",
-        "address": "43 Choumert Rd, SE15 4AR",
-        "onScreen": "THE MONTPELIER",
-        "moment": "0:26",
-        "verdict": "Foodie favorite with talented chef, damn tasty small plates",
-        "dishes": [
-          "small plates"
-        ],
-        "confident": false,
-        "why": "Transcript says 'Elm' too, suggesting two separate places or a name change, but video frames and description only mention The Montpelier.",
-        "candidates": [
-          {
-            "id": "8eb30d4fe55e",
-            "name": "The Montpelier",
-            "address": "43 Choumert Rd, SE15 4AR"
-          },
-          {
-            "id": "16798ebd5037",
-            "name": "Montpeliers",
-            "address": "35 Montpelier Vale, SE3 0TJ"
-          },
-          {
-            "id": "922df90d4101",
-            "name": "Café Montpeliano",
-            "address": "144 Brompton Road, SW3 1HX"
-          },
-          {
-            "id": "bb9cc7f6b389",
-            "name": "Montpeliano Restaurant",
-            "address": "13 Montpelier Street, SW7 1HQ"
-          }
-        ]
-      },
-      {
-        "name": "Sheba Restaurant",
-        "location": null,
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw calls it 'Brick Lane royalty' and 'the best Indian restaurant on that street'. Describes it as 'full of flavor, noise and personality' among 23 curry houses.",
-        "originalName": "SHEBA",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": "ae0840c286b2",
-        "area": "Brick Lane",
-        "address": "136 Brick Lane, E1 6RU",
-        "onScreen": "SHEBA",
-        "moment": "0:31",
-        "verdict": "Best Indian on Brick Lane, full of flavor and personality",
-        "dishes": [
-          "curry"
-        ],
-        "confident": true,
-        "why": "Topjaw personally reviewed and gave strong first-hand opinion."
-      },
-      {
-        "name": "The Culpeper",
-        "location": null,
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw describes it as 'a beauty of a pub that somehow does it all'. Notes it serves French pub food with electric shortage buzz.",
-        "originalName": "The Culpeper",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": "8b79731f38c3",
-        "area": null,
-        "address": "40 Commercial St, E1 6LP",
-        "onScreen": "THE CULPEPER",
-        "moment": "0:35",
-        "verdict": "Beautiful pub, French pub food, electric atmosphere",
-        "dishes": [
-          "French pub food"
-        ],
-        "confident": true,
-        "why": "Topjaw personally reviewed and gave detailed opinion."
-      },
-      {
-        "name": "Wildflowers Restaurant",
-        "location": null,
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw describes it as 'warm, intimate, and quite frankly magic'. Predicts it will receive a Michelin star in February next year.",
-        "originalName": "Wildflowers",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": "0a76f2fafade",
-        "area": "Pimlico",
-        "address": "Newson's Yard, 57 Pimlico Road, SW1W 8NE",
-        "onScreen": "WILDFLOWERS",
-        "moment": "0:40",
-        "verdict": "Warm, intimate, magic, predicted for Michelin star",
-        "dishes": [],
-        "confident": true,
-        "why": "Topjaw personally visited and gave detailed enthusiastic review."
-      },
-      {
-        "name": "NIJŪ",
-        "location": null,
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw calls it 'one of my favorite meals of the year' and says 'This place is the nuts'. Run by Endo from Endo at the Rotunda and Chris Golding, offering hugely memorable sushi and one of 18 UK locations licensed to serve Kobe.",
-        "originalName": "NIJŪ",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": null,
-        "area": null,
-        "address": null,
-        "onScreen": "NIJU",
-        "moment": "0:44",
-        "verdict": "One of favorite meals, place is the nuts, Kobe sushi",
-        "dishes": [
-          "sushi",
-          "Kobe"
-        ],
-        "confident": false,
-        "why": "No candidate places found in system; cannot verify placeId.",
-        "candidates": []
-      },
-      {
-        "name": "Brasserie Zedel",
-        "location": null,
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw describes it as 'grand, glitzy, and gloriously old school'. Recommends it for big festive nights out without breaking the bank.",
-        "originalName": "Brasserie Zedel",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": "cd3ed279cae4",
-        "area": "Soho",
-        "address": "20 Sherwood St, W1F 7ED",
-        "onScreen": "BRASSERIE ZEDEL",
-        "moment": "0:50",
-        "verdict": "Grand, glitzy, old school, great value festive dining",
-        "dishes": [],
-        "confident": true,
-        "why": "Topjaw personally reviewed and gave detailed opinion."
-      }
-    ]
-  },
-  {
     "videoId": "YdkDdTrprlQ",
     "title": "Asking chefs for their Top 5 dishes in London - Episode 1. Dom Fernando, founder of Paradise.",
     "sponsored": false,
@@ -6740,7 +6469,7 @@
         "reason": "own_review",
         "placeId": "b2dad827cf1a",
         "area": null,
-        "address": "21 Berners St, W1T 3LP",
+        "address": null,
         "onScreen": null,
         "moment": "0:00",
         "verdict": "Gambian Oyster Stew is silky and spicy.",
@@ -6860,7 +6589,7 @@
         "reason": "own_review",
         "placeId": "1a40248b4122",
         "area": null,
-        "address": "34 Duke Street St James's, SW1Y 6DF",
+        "address": null,
         "onScreen": null,
         "moment": "1:01",
         "verdict": "Dessert trolley experience is like a kid in candy store.",
@@ -6882,7 +6611,7 @@
         "reason": "own_review",
         "placeId": "9f702777c872",
         "area": null,
-        "address": "17 Charing Cross Rd, WC2H 0EP",
+        "address": null,
         "onScreen": null,
         "moment": "1:01",
         "verdict": "Dosa is authentic South Indian, beloved despite mom's version.",
@@ -6891,415 +6620,6 @@
         ],
         "confident": true,
         "why": "Clear match with Saravanaa Bhavan. The Charing Cross Road location is a known central London branch of this South Indian chain."
-      }
-    ]
-  },
-  {
-    "videoId": "jIEhjCAUuCc",
-    "title": "4 Best New Restaurants in London",
-    "sponsored": false,
-    "restaurants": [
-      {
-        "name": "Wine Bar",
-        "location": null,
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw describes it as London's most romantic wine bar underneath a farm shop. Small plates, great wine, steaks, cheese boards. Topjaw and Will enjoyed it together and gave their own opinions on the food and wine.",
-        "originalName": "Wine Bar",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": null,
-        "area": "Mayfair",
-        "address": null,
-        "onScreen": null,
-        "moment": "0:00",
-        "verdict": "Really romantic date spot with excellent wine and small plates.",
-        "dishes": [
-          "Steak tartare",
-          "Crab on toast",
-          "Cheese and toasty",
-          "Charcuterie board"
-        ],
-        "confident": false,
-        "why": "The extracted name 'Wine Bar' lacks a proper establishment name; location is confirmed as Mayfair but the placeId cannot be determined without more specific information.",
-        "candidates": []
-      },
-      {
-        "name": "BLOODSPORTS by MEATliquor",
-        "location": "Covent Garden",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "American sports bar concept with 32 screens, karaoke, pinball, and horror movie decor. Food by MEATliquor featuring their signature burgers and sides. Topjaw enjoyed the atmosphere and food.",
-        "originalName": "BLOODsports",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": "a0d857f1ff65",
-        "area": "Covent Garden",
-        "address": "27-29 Endell St, WC2H 9BA",
-        "onScreen": null,
-        "moment": "6:41",
-        "verdict": "Fun watching bar with great burgers, karaoke, and entertainment.",
-        "dishes": [
-          "Dead Hippie Burger",
-          "Onion rings",
-          "Ramen crust mozzarella sticks",
-          "Monkey fingers"
-        ],
-        "confident": true,
-        "why": "Clear match to the candidate place BLOODSPORTS by MEATliquor at the Covent Garden address, confirmed by Topjaw's review and the on-screen caption 'CANAL RESTAURANT'."
-      },
-      {
-        "name": "Canal",
-        "location": "West London",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Canal-side restaurant in west London by the team behind Beastro, Freddy Bar Crispen. Modern European cuisine with pasta focus. Head chef formerly from Michelin-starred Luca. Topjaw ate there and praised the food, ambiance, and cocktail program.",
-        "originalName": "Canal Restaurant",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": null,
-        "area": "West London",
-        "address": null,
-        "onScreen": "CANAL RESTAURANT",
-        "moment": "3:40",
-        "verdict": "Gorgeous canal-side spot with excellent modern European pasta.",
-        "dishes": [
-          "Agnolotti with ricotta and lemon",
-          "Seasonal fritter",
-          "Pink fir potato crisps with aged beef",
-          "Table burger",
-          "Brown butter old fashioned cocktail"
-        ],
-        "confident": false,
-        "why": "The on-screen text 'CANAL RESTAURANT' is clear but no matching placeId found in candidates; requires verification that this is the correct restaurant name and location.",
-        "candidates": [
-          {
-            "id": "a3bec9299361",
-            "name": "ANA Restaurant",
-            "address": "263 Old Brompton Rd, SW5 9JA"
-          },
-          {
-            "id": "5566b1e7d1b7",
-            "name": "Toscana restaurant",
-            "address": "9, Central Parade, Station Rd, DA15 7DH"
-          },
-          {
-            "id": "32d78f22daf1",
-            "name": "Restaurant italien canal",
-            "address": "453 Edgware Rd, W2 1TH"
-          },
-          {
-            "id": "f5006cf21f80",
-            "name": "Canary Cafe & Restaurant",
-            "address": "175 Brighton Rd, CR2 6EG"
-          },
-          {
-            "id": "d74216f8af95",
-            "name": "Canal Reach Canteen",
-            "address": "King's Cross"
-          }
-        ]
-      },
-      {
-        "name": "Dove",
-        "location": null,
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Restaurant in Notting Hill that serves only 10 burgers a day made from 50-day aged beef trim. Menu is chef Jackson's favorite things to eat. Topjaw ate the burger and various other dishes, praising the quality and texture focus.",
-        "originalName": "Dove",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": null,
-        "area": "Notting Hill",
-        "address": "Kensington Park Road, London",
-        "onScreen": null,
-        "moment": "9:20",
-        "verdict": "Excellent quality burgers (10 only) and creative, beautifully textured dishes.",
-        "dishes": [
-          "Burger (10 per day)",
-          "Deep fried potato with baratha and mortadella",
-          "Tomatoes with sour cream and chili crisp",
-          "Grilled Atlantic prawns with smoked garlic butter"
-        ],
-        "confident": false,
-        "why": "The location Kensington Park Road, Notting Hill is mentioned but doesn't match any of the candidate placeIds clearly; none appear to be the correct Dove restaurant.",
-        "candidates": [
-          {
-            "id": "edccc13b6213",
-            "name": "Bar Love",
-            "address": "265 Portobello Road, W11 1LR",
-            "metresFromPin": 281
-          },
-          {
-            "id": "973bd99359d1",
-            "name": "The Dove",
-            "address": "24-28 Broadway Market, E8 4QJ",
-            "metresFromPin": 10254
-          },
-          {
-            "id": "2bcc65c0afb1",
-            "name": "The Dove",
-            "address": "19 Upper Mall, W6 9TA",
-            "metresFromPin": 3423
-          },
-          {
-            "id": "eb73c7d04e5a",
-            "name": "The Dover",
-            "address": "33 Dover St, W1S 4NF",
-            "metresFromPin": 4420
-          },
-          {
-            "id": "9011692f8c41",
-            "name": "Over",
-            "address": "44 Southwark Street, SE1 1UN",
-            "metresFromPin": 7848
-          },
-          {
-            "id": "bf950577cad7",
-            "name": "Wood Oven",
-            "address": "25-27 Station Parade, IG11 8ED",
-            "metresFromPin": 20006
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "videoId": "V0pGH3QcNhM",
-    "title": "Honestly Utopia Bagels have changed things for us - you haven’t tried a bagel until you’ve had them.",
-    "sponsored": false,
-    "restaurants": [
-      {
-        "name": "Utopia Bagels",
-        "location": "South Bank (Waterloo)",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw personally visited and ate multiple bagels at their temporary South Bank residency (July 25 - Aug 17). He tried the 'Worth It' bagel with Nova lox, capers, cream cheese and red onions, a bacon egg and cheese bagel, and various creative flavors including birthday cake and French toast bacon variants.",
-        "originalName": "Utopia Bagels",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": null,
-        "area": "South Bank",
-        "address": null,
-        "onScreen": "UTOPIA BAGELS",
-        "moment": "0:00",
-        "verdict": "Best bagels in the world; transformative bagel experience.",
-        "dishes": [
-          "Worth It bagel",
-          "Bacon egg and cheese bagel",
-          "Birthday cake bagel",
-          "French toast bacon bagel",
-          "Nova lox bagel with capers and cream cheese"
-        ],
-        "confident": true,
-        "why": "Topjaw clearly visited and gave extensive personal tasting notes on multiple items; prominent throughout the video with detailed reactions to each bagel."
-      }
-    ]
-  },
-  {
-    "videoId": "Ej7tawt68JA",
-    "title": "Dumbo is finally in London.",
-    "restaurants": [
-      {
-        "name": "Dumbo",
-        "location": "Bethnal Green",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw visits Dumbo before its London opening, tries their signature smash burger with cheeseburger, fries and beer. Topjaw eats and gives their own opinion, describing the burger construction and comparing it favorably to other London burger spots.",
-        "originalName": "Dumbo",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": null,
-        "area": "Bethnal Green",
-        "address": "119 Bethnal Green Road, E2 7DG",
-        "onScreen": "DUMBO",
-        "moment": "0:00",
-        "verdict": "Best burger in Paris now in London, exceptional.",
-        "dishes": [
-          "cheeseburger",
-          "French fries",
-          "beer"
-        ],
-        "confident": true,
-        "why": "Topjaw personally visited, ate the food, and gave their own detailed opinion before the opening."
-      }
-    ]
-  },
-  {
-    "videoId": "_u7NfNg8aKQ",
-    "title": "Mamapen the great value, delicious, Cambodian, Soho belter.",
-    "sponsored": false,
-    "restaurants": [
-      {
-        "name": "Mamapen",
-        "location": "Soho",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw visited and reviewed Mamapen, London's only Cambodian restaurant. He praised the pork toast, prawn toast, pork belly rice, chicken curry, and pineapple curry as delicious with great value. He celebrated its transition from residency to permanent status.",
-        "originalName": "Mamapen",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": null,
-        "area": "Soho",
-        "address": null,
-        "onScreen": "MAMAPEN",
-        "moment": "0:00",
-        "verdict": "London's only Cambodian restaurant, excellent value and flavour.",
-        "dishes": [
-          "pork toast",
-          "prawn toast",
-          "pork belly rice",
-          "chicken curry",
-          "pineapple curry"
-        ],
-        "confident": true,
-        "why": "Topjaw personally visited, ate multiple dishes, and gave detailed positive opinions about Mamapen, clearly his own first-hand review."
-      }
-    ]
-  },
-  {
-    "videoId": "JEVL7IXxOrs",
-    "title": "The industry is right, Hannah's Dough Hands is pizza worth shouting about.",
-    "sponsored": false,
-    "restaurants": [
-      {
-        "name": "Hannah's Dough Hands",
-        "location": null,
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw visited and extensively reviewed Hannah's pizzas. He tried the J (spicy sausage and nduja with hot honey), spicy tuna (with calabrian chili), and mushroom pizza. He praised the pizza-making technique and quality.",
-        "originalName": "Hannah's Dough Hands",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": null,
-        "area": null,
-        "address": null,
-        "onScreen": "DOUGH HANDS",
-        "moment": "0:00",
-        "verdict": "Industry is right, Hannah's pizza is worth shouting about.",
-        "dishes": [
-          "J pizza with spicy sausage and nduja",
-          "Spicy tuna pizza with calabrian chili",
-          "Mushroom pizza roasted in soy sauce"
-        ],
-        "confident": true,
-        "why": "Topjaw personally visited, tasted multiple dishes, and gave detailed opinions on the pizzas and techniques."
-      },
-      {
-        "name": "The Spurstowe Arms",
-        "location": null,
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw visited and reviewed pizzas at The Spurstowe Arms, specifically praising the tuna pizza offering.",
-        "originalName": "The Spurstowe Arms",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": "86ba4cea20a9",
-        "area": null,
-        "address": "68 Greenwood Rd, E8 1AB",
-        "onScreen": "The Spurstowe Arms",
-        "moment": "0:00",
-        "verdict": "Serves excellent tuna pizza worth trying.",
-        "dishes": [
-          "Tuna pizza"
-        ],
-        "confident": true,
-        "why": "Topjaw personally visited and reviewed the restaurant, mentioning it serves tuna on pizza."
-      },
-      {
-        "name": "The Old Nuns Head",
-        "location": "Peckham",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw reviewed The Old Nuns Head (Peckham), which serves tuna pizza. The description mentions it as one of two places to get tuna on pizza.",
-        "originalName": "The Old Nuns Head",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": "880a65d6a6ed",
-        "area": "Peckham",
-        "address": "15 Nunhead Grn, SE15 3QQ",
-        "onScreen": null,
-        "moment": null,
-        "verdict": "Serves tuna on pizza worth trying.",
-        "dishes": [
-          "Tuna pizza"
-        ],
-        "confident": true,
-        "why": "Topjaw personally visited and featured this restaurant as one of his picks for tuna pizza in the video description."
-      }
-    ]
-  },
-  {
-    "videoId": "i65acG8jUew",
-    "title": "Where has Cambodian food been all our lives…?",
-    "sponsored": false,
-    "restaurants": [
-      {
-        "name": "Mamapen",
-        "location": null,
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw visited and reviewed this Cambodian restaurant extensively, interviewing the owner about dishes including Panko Pork Toast, Tattie Mince Noodles, Khmer BBQ Chicken and Caramelised Braised Pork Belly. Described as enormously tasty and incredibly good value.",
-        "originalName": "Mamapen",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": null,
-        "area": null,
-        "address": null,
-        "onScreen": "Cambodian restaurant",
-        "moment": "0:00",
-        "verdict": "Enormously tasty and incredibly good value.",
-        "dishes": [
-          "Panko Pork Toast",
-          "Tattie Mince Noodles",
-          "Khmer BBQ Chicken",
-          "Caramelised Braised Pork Belly"
-        ],
-        "confident": false,
-        "why": "The restaurant name 'Mamapen' doesn't match any of the candidate places provided (which are Mama Pho, 4Mama, Mama's, Mama Li variations). The transcript clearly states it's London's only Cambodian restaurant and the owner explains the name comes from their mother, but no exact matching place was found in the candidates.",
-        "candidates": [
-          {
-            "id": "f3333ff4a554",
-            "name": "Mama Pho",
-            "address": "24 Bute St, SW7 3EX",
-            "metresFromPin": 3468
-          },
-          {
-            "id": "2bf9294da687",
-            "name": "4Mama",
-            "address": "148 Hanworth Road, TW3 3",
-            "metresFromPin": 16450
-          },
-          {
-            "id": "39648fa7a136",
-            "name": "Mama's",
-            "address": "141a Wickham Rd, CR0 8TE",
-            "metresFromPin": 16474
-          },
-          {
-            "id": "ce125250fdf8",
-            "name": "Mama Li",
-            "address": "22 Great Tower Street, EC3R 5AQ",
-            "metresFromPin": 3871
-          },
-          {
-            "id": "725302bf1fde",
-            "name": "Mama Li",
-            "address": "2 West Street, BR1 1RF",
-            "metresFromPin": 15804
-          }
-        ]
       }
     ]
   },
@@ -7320,7 +6640,7 @@
         "reason": "not_london",
         "placeId": "7144798c7346",
         "area": "Morden",
-        "address": "42 Aberconway Rd, SM4 5LF",
+        "address": null,
         "onScreen": null,
         "verdict": "",
         "dishes": [],
@@ -7355,7 +6675,7 @@
         "reason": "guest_own_place",
         "placeId": "69ec6da11aed",
         "area": "Soho",
-        "address": "40 Dean St, W1D 4PX",
+        "address": null,
         "onScreen": null,
         "verdict": "",
         "dishes": [],
@@ -7483,7 +6803,7 @@
         "reason": "own_review",
         "placeId": "8062b32adec5",
         "area": "Fitzrovia",
-        "address": "40-41 Rathbone Pl, W1T 1HX",
+        "address": null,
         "onScreen": null,
         "moment": "1:09",
         "verdict": "Classic execution, full immersive Italian experience.",
@@ -7507,7 +6827,7 @@
         "reason": "own_review",
         "placeId": "9b7596bfad14",
         "area": "Soho",
-        "address": "8-10 Lower James St, W1F 9EL",
+        "address": null,
         "onScreen": null,
         "moment": "3:29",
         "verdict": "Excellent hand-rolled pasta, simple Italian done very well.",
@@ -7608,187 +6928,6 @@
     ]
   },
   {
-    "videoId": "Hc1fQrbgp9k",
-    "title": "The Best Fried Chicken Spots in London - ft. 6 Spots You Must Visit",
-    "sponsored": false,
-    "restaurants": [
-      {
-        "name": "Chick King",
-        "location": null,
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "41-year institution with 4.7 stars on Google. Topjaw ate and praised the wings highly, saying 'some of my favorite wins period' and 'delicious wings'. Guest Big Lew raved about it.",
-        "originalName": "Chick King",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": null,
-        "area": "Tottenham",
-        "address": null,
-        "onScreen": "Chick - King",
-        "moment": "0:28",
-        "verdict": "Institution for 41 years, delicious wings, 4.7 stars.",
-        "dishes": [
-          "fried chicken wings"
-        ],
-        "confident": false,
-        "why": "Correct location found (Tottenham per transcript) but candidate places don't include a Tottenham Chick King; the Harrow candidate is too far away.",
-        "candidates": [
-          {
-            "id": "07d410556d1d",
-            "name": "Chick Inn",
-            "address": "60 Barnfield Gardens, SE18 3",
-            "metresFromPin": 9096
-          },
-          {
-            "id": "94baa8b5ffdd",
-            "name": "Chick Inn",
-            "address": "247 Hoe Street, E17 9PT",
-            "metresFromPin": 7859
-          },
-          {
-            "id": "f91da6bc4271",
-            "name": "Chick King Harrow",
-            "address": "229 Station Rd, HA1 2TB",
-            "metresFromPin": 21110
-          },
-          {
-            "id": "3ddf61dc0a2f",
-            "name": "Jin Kichi",
-            "address": "73 Heath St, NW3 6UG",
-            "metresFromPin": 10207
-          },
-          {
-            "id": "6da36ab1bf4c",
-            "name": "Main Chick",
-            "address": "325 Gray's Inn Rd, WC1X 8PX",
-            "metresFromPin": 5363
-          }
-        ]
-      },
-      {
-        "name": "Bake Street",
-        "location": null,
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Residential area off the beaten track, relatively new to Topjaw but Big Lew has been advocating for it. Topjaw ate chicken bun and spicy bun, praising the crispy texture and spicy sauce. Also noted a fish fillet and creme brûlée cookies on the weekend menu.",
-        "originalName": "Bake Street",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": null,
-        "area": "Clissold Park/Rectory Road area, Hackney",
-        "address": "Rectory Road, Hackney",
-        "onScreen": "BAKE STREET",
-        "moment": "2:26",
-        "verdict": "Crispy fried chicken, great sauce, unassuming neighbourhood spot.",
-        "dishes": [
-          "chicken bun",
-          "spicy bun",
-          "fish fillet",
-          "creme brûlée cookies"
-        ],
-        "confident": false,
-        "why": "No candidate places found; name and general location from transcript and on-screen graphics are clear, but exact address and placeId cannot be confirmed.",
-        "candidates": []
-      },
-      {
-        "name": "Seoul 90",
-        "location": null,
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Korean fried chicken specialist. Topjaw ate and enjoyed their Korean fried chicken (KFC - their house name for it), describing small boneless nugget-style pieces as 'lovely' and liking them overall.",
-        "originalName": "Seoul 90",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": "fe35f61e5d82",
-        "area": "Old Street, Shoreditch",
-        "address": "90 Old St, EC1V 9AX",
-        "onScreen": "SEOUL 90",
-        "moment": "5:36",
-        "verdict": "Consistent, friendly, busy; Korean fried chicken is excellent.",
-        "dishes": [
-          "KFC (Korean fried chicken)",
-          "boneless chicken nuggies"
-        ],
-        "confident": true,
-        "why": "Exact match found: Seoul90 Korean Restaurant at 90 Old St matches the on-screen graphic and transcript location perfectly."
-      },
-      {
-        "name": "Smoking Goat",
-        "location": null,
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Thai barbecue spot. Topjaw ate the wings (40 quid for wings and three pints) and was impressed despite the high price. Described wings as 'rock hard' with 'phenomenal' and 'mind-boggling levels' of flavour, calling them 'the wing to end all wings'.",
-        "originalName": "Smoking Goat",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": "8128c7b55d2d",
-        "area": "Shoreditch",
-        "address": "64 Shoreditch High St, E1 6JJ",
-        "onScreen": null,
-        "moment": "7:27",
-        "verdict": "Best wings in Shoreditch, sweet and sour with fish sauce.",
-        "dishes": [
-          "Thai BBQ wings (sweet and sour with fish sauce)"
-        ],
-        "confident": true,
-        "why": "Exact match found: Smoking Goat Shoreditch at the correct address on Shoreditch High St."
-      },
-      {
-        "name": "Chick 'n Sours",
-        "location": null,
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Been around for 7 years, offers fried chicken and cocktails. Topjaw ate miso wings with seaweed cracker dusting and kung pao wings with dark soy, oyster sauce, pickled chilies and spring onions. Also had a fried chicken sandwich with sour cream and Asian slaw. Praised it as 'a certified banger'.",
-        "originalName": "Chick 'n Sours",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": "fd0a83e267cd",
-        "area": "Covent Garden",
-        "address": "1 Earlham St, WC2H 9LL",
-        "onScreen": null,
-        "moment": "9:13",
-        "verdict": "Seven-year veteran; miso and kung pao wings with crisp slaw.",
-        "dishes": [
-          "miso wings with seaweed cracker",
-          "kung pao wings",
-          "fried chicken sandwich"
-        ],
-        "confident": true,
-        "why": "Exact match found: Chick 'n' Sours at Earlham St is the primary London location and matches the context."
-      },
-      {
-        "name": "Mr Ji",
-        "location": null,
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Taiwanese restaurant in Soho. Opened during lockdown in covered market, then closed and reopened with new interior and kitchen. Topjaw ate szechuan chicken burger, chicken hearts and spatchcocked whole baby chicken. Praised the 'flaky crispy fried' texture as what he wanted.",
-        "originalName": "Mr Ji",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": null,
-        "area": "Soho",
-        "address": null,
-        "onScreen": null,
-        "moment": "10:52",
-        "verdict": "Contemporary Taiwanese; spatchcocked baby chicken with flaky crispy fried texture.",
-        "dishes": [
-          "szechuan chicken burger",
-          "chicken hearts",
-          "whole spatchcocked baby chicken"
-        ],
-        "confident": false,
-        "why": "No candidate places found; location (Soho) and name are clear from transcript but cannot confirm exact address or placeId.",
-        "candidates": []
-      }
-    ]
-  },
-  {
     "videoId": "B_-B3VMZKYY",
     "title": "India’s Best Butter Chicken lands in London 🥘🍔 at Goila // New Openings #Shorts",
     "sponsored": false,
@@ -7820,667 +6959,6 @@
     ]
   },
   {
-    "videoId": "_xbJ-4n9PCg",
-    "title": "DETROIT STYLE PIZZA IN LONDON 🍕 at Four Corners // New Openings #Shorts",
-    "restaurants": [
-      {
-        "name": "Four Corners",
-        "location": "High Holborn",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw visits this temporary Detroit-style pizza pop-up in High Holborn (open until end of March before moving to Barcelona). He reviews the pizza's cheesy, crusty character and notes the generous small size.",
-        "originalName": "Four Corners",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": null,
-        "area": "High Holborn",
-        "address": null,
-        "onScreen": "FOUR CORNERS",
-        "verdict": "Excellent Detroit-style pizza with generous portions.",
-        "dishes": [
-          "Detroit-style pizza with cheddar, mozzarella, chili oil and honey",
-          "Mortadella pistachio pizza"
-        ],
-        "confident": false,
-        "why": "The restaurant is temporary and moving to Barcelona soon, so it may not be in SCRAN's database. None of the candidate places match a Four Corners pizzeria at High Holborn.",
-        "moment": "0:00",
-        "candidates": [
-          {
-            "id": "7bc8b10923e2",
-            "name": "Four Corners Cafe",
-            "address": "12 Lower Marsh, SE1 7RJ",
-            "metresFromPin": 1964
-          },
-          {
-            "id": "b9e576878b0d",
-            "name": "Four Corners Wine Company",
-            "address": "22 Upper Ground, SE1 9PD",
-            "metresFromPin": 1363
-          },
-          {
-            "id": "e24aca92409b",
-            "name": "Food Corner",
-            "address": "418 Alexandra Ave, HA2 9TR",
-            "metresFromPin": 18519
-          },
-          {
-            "id": "2d9c2c6e4f62",
-            "name": "The Corner Cafe",
-            "address": "11- 13 London Rd, SM4 5HT",
-            "metresFromPin": 13751
-          },
-          {
-            "id": "ea4b9790343b",
-            "name": "Corner Cafe",
-            "address": "23-25A, 23-25A, 23 Waverley Rd, SE18 7TL",
-            "metresFromPin": 14232
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "videoId": "F5Ba0osd-NQ",
-    "title": "Are These East London's Best Take Away Spots? Bucket List Food.",
-    "sponsored": false,
-    "restaurants": [
-      {
-        "name": "Marksman",
-        "location": "Hackney Road, E2 7SJ",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw ate tamworth sausage hot dog, deep fried cod sandwich and brown butter tarts. Called hash browns 'fire mate' with extreme levels of crisp and soft in the middle. Gave seal of approval.",
-        "originalName": "Marksman",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": "513e0aa2eb92",
-        "area": null,
-        "address": "254 Hackney Rd, E2 7SB",
-        "onScreen": null,
-        "moment": "0:30",
-        "verdict": "Fire hash browns, great fish and chip sandwich.",
-        "dishes": [
-          "tamworth sausage hot dog",
-          "cod sandwich",
-          "hash browns",
-          "brown butter tarts"
-        ],
-        "confident": true,
-        "why": "Topjaw personally visited, ate food and gave their own review with approval."
-      },
-      {
-        "name": "Dom's Subs",
-        "location": "Hackney Rd, E2 7SJ",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw ate pork belly sandwich with roasted peppers, turkey ham and tomato. Praised it as perfectly balanced and light, describing it as 'that for me filming'.",
-        "originalName": "Dom's Subs",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": "64fb5f8d8168",
-        "area": null,
-        "address": "262 Hackney Road, E2 7SJ",
-        "onScreen": null,
-        "moment": "2:34",
-        "verdict": "Perfectly balanced light and breezy pork belly sandwich.",
-        "dishes": [
-          "pork belly sandwich"
-        ],
-        "confident": true,
-        "why": "Topjaw personally visited, ate food and gave their own review praising the balance."
-      },
-      {
-        "name": "Brawn",
-        "location": "Columbia Road, E2 7RG",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw ate nashville hot chicken sandwich with crispy edges from a lockdown adaptation/weekend pop-up. Called it 'a heavy hitter it's a wig splitter'.",
-        "originalName": "Brawn",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": "c4eb70b37650",
-        "area": null,
-        "address": "49 Columbia Rd, E2 7RG",
-        "onScreen": null,
-        "moment": "3:34",
-        "verdict": "Heavy hitter nashville hot chicken, a wig splitter.",
-        "dishes": [
-          "nashville hot chicken sandwich"
-        ],
-        "confident": true,
-        "why": "Topjaw personally visited, ate food and gave their own review."
-      },
-      {
-        "name": "Bright",
-        "location": "Westgate St, E8 3RL",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw ate squid sandwich (calamari in a bun), sold out by 2pm most days. Commented on how well-packed and tender the squid is.",
-        "originalName": "Bright",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": "b1f0c6ea1fa1",
-        "area": null,
-        "address": "1 Westgate St, E8 3RL",
-        "onScreen": "BRIGHT",
-        "moment": "4:26",
-        "verdict": "Squid sandwich packed with quality calamari.",
-        "dishes": [
-          "squid sandwich"
-        ],
-        "confident": true,
-        "why": "Topjaw personally visited, ate food and gave their own review."
-      },
-      {
-        "name": "ELD",
-        "location": "Hackney Rd, E2 9EG",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw ate mägges (Swedish kebab) with lamb sausage, grated mozzarella and bitter yogurt. Praised the meat-focused dish and mentioned it's wood-fired neapolitan pizza. Called custard doughnut 'perfect way to wrap up'.",
-        "originalName": "ELD PIZZA",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": null,
-        "area": null,
-        "address": "Hackney Rd, E2 9EG",
-        "onScreen": null,
-        "moment": "5:19",
-        "verdict": "Swedish-neapolitan fusion, mägges lamb sausage perfect.",
-        "dishes": [
-          "mägges (Swedish kebab)",
-          "custard doughnut"
-        ],
-        "confident": true,
-        "why": "Topjaw personally visited, ate food and gave their own review."
-      },
-      {
-        "name": "Victoria Park",
-        "location": "Stour Road, E3 2NT",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "",
-        "originalName": "From The Ashes",
-        "keep": false,
-        "reason": "not_a_place_to_eat",
-        "placeId": null,
-        "area": "East London",
-        "address": null,
-        "onScreen": "VICTORIA PARK",
-        "moment": "6:22",
-        "verdict": "",
-        "dishes": [],
-        "confident": false,
-        "why": "Renamed from “From The Ashes” using on-screen text: check it's this place. Victoria Park is a public park, not a restaurant or food establishment."
-      }
-    ]
-  },
-  {
-    "videoId": "ozf5Eizto-E",
-    "title": "These London Restaurants Thrived During Covid. Our Lockdown Heroes",
-    "sponsored": false,
-    "restaurants": [
-      {
-        "name": "Sourdough Sophia",
-        "location": "Crouch End, N8 8PL",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw visited this lockdown hero bakery that Sophia opened after her successful kickstarter campaign. They tried the walnut brownie and praised it as 'next level baked goods'.",
-        "originalName": "Sourdough Sophia",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": "f2116d3c9516",
-        "area": "Crouch End",
-        "address": "24 Middle Ln, N8 8PL",
-        "onScreen": null,
-        "moment": "1:18",
-        "verdict": "Lockdown hero; excellent sourdough bakery with quality baked goods.",
-        "dishes": [
-          "Walnut brownie"
-        ],
-        "confident": true,
-        "why": "Topjaw personally visited, ate and gave their own positive opinion."
-      },
-      {
-        "name": "Fed by George",
-        "location": null,
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "",
-        "originalName": "George Williams",
-        "keep": false,
-        "reason": "guest_own_place",
-        "placeId": null,
-        "area": null,
-        "address": null,
-        "onScreen": null,
-        "moment": "3:08",
-        "verdict": "",
-        "dishes": [],
-        "confident": true,
-        "why": "George Williams runs this DIY food business; Topjaw ate what George prepared but this is George's own place introduced to profile him, not Topjaw's independent review of an existing restaurant."
-      },
-      {
-        "name": "Wingmans",
-        "location": "Kilburn, NW6 2QN",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw visited Wingmans, one of their absolute favourite restaurants in London. They praised the wings cooked in Wingmans' secret flour mix and the Korean hot sauce with pineapple and pickled daikon.",
-        "originalName": "Wingmans",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": "360c4def57c9",
-        "area": "Kilburn",
-        "address": "332 Kilburn High Rd, NW6 2QN",
-        "onScreen": null,
-        "moment": "5:14",
-        "verdict": "Absolute favourite; exceptional wings with secret flour mix and amazing sauces.",
-        "dishes": [
-          "Wings with Korean hot sauce, diced pineapple and pickled daikon"
-        ],
-        "confident": true,
-        "why": "Topjaw personally visited, ate and gave their own enthusiastic opinion."
-      },
-      {
-        "name": "Parlour",
-        "location": "Kensal Green, NW10 5LG",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw visited and ate at Parlour, praising owner Jesse as a lockdown hero. They tried the fish and chips and noted the impressive variety of offerings including ice cream and wine.",
-        "originalName": "Parlour",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": "109acbbc866a",
-        "area": "Kensal Green",
-        "address": "5 Regent St, NW10 5LG",
-        "onScreen": "PARLOUR",
-        "moment": "6:18",
-        "verdict": "Quality lockdown hero; excellent fish and chips, great variety.",
-        "dishes": [
-          "Fish and chips"
-        ],
-        "confident": true,
-        "why": "Topjaw personally visited, ate and gave their own positive opinion."
-      },
-      {
-        "name": "Blacklock",
-        "location": "Shoreditch, EC2A 3DZ",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw visited Blacklock in Shoreditch and tried their DIY kit and hot delivery boxes. They praised the production line output (600-1000 boxes per week) and called their burger and beef dripping chips 'remarkable work'.",
-        "originalName": "Blacklock",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": null,
-        "area": "Shoreditch",
-        "address": "28-30 Rivington St, EC2A 3DZ",
-        "onScreen": null,
-        "moment": "7:41",
-        "verdict": "Excellent DIY kits and delivery; remarkable burger and beef dripping chips.",
-        "dishes": [
-          "Burger",
-          "Beef dripping chips",
-          "Higgs head nuggets",
-          "Mac and four cheeses"
-        ],
-        "confident": false,
-        "why": "The description lists Blacklock at 28-30 Rivington St EC2A 3DZ but candidate place closest match is at a different address; Topjaw visited and reviewed but location confirmation needed.",
-        "candidates": [
-          {
-            "id": "f02043f8880b",
-            "name": "Blacklock Restaurant",
-            "address": "5 Frobisher Psge, E14 4EE",
-            "metresFromPin": 14
-          },
-          {
-            "id": "7dfa7250cb6b",
-            "name": "Blacklock",
-            "address": "24 Great Windmill Street, W1D 7LG",
-            "metresFromPin": 7899
-          },
-          {
-            "id": "5dd6dc8e306f",
-            "name": "Blacklock City",
-            "address": "13 Philpot Lane, EC3M 8AA",
-            "metresFromPin": 4411
-          },
-          {
-            "id": "b60a9ef4a64f",
-            "name": "Black Rock",
-            "address": "9 Christopher St, EC2A 2BS",
-            "metresFromPin": 4733
-          },
-          {
-            "id": "59f6fa1c5c59",
-            "name": "The Blackstock",
-            "address": "284 Seven Sisters Rd, N4 2HY",
-            "metresFromPin": 8717
-          },
-          {
-            "id": "0bf39056c9d0",
-            "name": "The Black Lamb",
-            "address": "67 High St, SW19 5EE",
-            "metresFromPin": 16349
-          }
-        ]
-      },
-      {
-        "name": "Goila Butter Chicken",
-        "location": "Marylebone, W1U 8AB",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw visited and ate at this transformed restaurant. They explained the complex cooking process for the smoky butter chicken sauce using burnt casa puree in the oven, and praised it as having a complex, delicious flavour unlike anything else.",
-        "originalName": "Goila Butter Chicken",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": null,
-        "area": "Marylebone",
-        "address": "71 Blandford Street, W1U 8AB",
-        "onScreen": "GOILA\nGOILA BUTTER CHICKEN",
-        "moment": "9:53",
-        "verdict": "Complex, smoky butter chicken with intricate traditional technique.",
-        "dishes": [
-          "Butter chicken",
-          "Guava chicken"
-        ],
-        "confident": false,
-        "why": "Topjaw personally visited and reviewed but no matching placeId found in candidates; onScreen text confirms name.",
-        "candidates": []
-      },
-      {
-        "name": "Pub To Your Door",
-        "location": null,
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw visited George's mobile pub setup at home. They had a pint of pale ale and praised the festoon lighting and pallet board setup that tricks the eye into looking like a real pub garden.",
-        "originalName": "Pub To Your Door",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": null,
-        "area": null,
-        "address": null,
-        "onScreen": "PUB TO YOUR DOOR",
-        "moment": "11:00",
-        "verdict": "Creative lockdown solution; charming mobile pub with good ale.",
-        "dishes": [
-          "Pale ale"
-        ],
-        "confident": true,
-        "why": "Topjaw personally visited, ate/drank and gave their own positive opinion of this innovative service."
-      }
-    ]
-  },
-  {
-    "videoId": "XVdcEzn_yK4",
-    "title": "We Think These Are The Best Vegan Restaurants In London, Do You?",
-    "sponsored": false,
-    "restaurants": [
-      {
-        "name": "Mother",
-        "location": "Hackney Wick",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Featured in Topjaw's guide to the best vegan restaurants in London. Part of a curated selection of meat-free dining destinations across the city.",
-        "originalName": "Mother",
-        "keep": false,
-        "reason": "only_mentioned",
-        "confident": false,
-        "why": "Claude returned no check for this pick",
-        "candidates": [
-          {
-            "id": "b439190f2d17",
-            "name": "Mothers UK",
-            "address": "135 Victoria Road, N9 9BB",
-            "metresFromPin": 9126
-          },
-          {
-            "id": "20e1382cc6d5",
-            "name": "Mother Vine",
-            "address": "255 Pavilion Rd, SW1X 0BP",
-            "metresFromPin": 10836
-          },
-          {
-            "id": "df7d2ccbe064",
-            "name": "Sweet Mother",
-            "address": "136 Plumstead High St, SE18 1JQ",
-            "metresFromPin": 10368
-          },
-          {
-            "id": "794a38a7e8ec",
-            "name": "The Otherist",
-            "address": "111 Old Broad St, EC2N 1AP",
-            "metresFromPin": 5197
-          },
-          {
-            "id": "dcbe78a6c22d",
-            "name": "Sweet Mother",
-            "address": "262 Old Kent Road, SE1 5UB",
-            "metresFromPin": 7198
-          }
-        ]
-      },
-      {
-        "name": "Mother Works",
-        "location": "Dalston",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw visited and ate at this location, trying their vegan cheese toastie and red juice. They highlighted it as a place started as a juice stall that has expanded to a permanent space at Hackney Wick on the canal.",
-        "originalName": "OoWee",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": null,
-        "area": "Hackney Wick",
-        "address": null,
-        "onScreen": "MOTHER WORKS",
-        "verdict": "Great vegan breakfast, brunch and lunch spot with beautiful food.",
-        "dishes": [
-          "vegan cheese toasty",
-          "red juice (carrot, apple, ginger, beetroot)"
-        ],
-        "confident": false,
-        "why": "Renamed from “OoWee” using on-screen text: check it's this place. Topjaw clearly visited and gave their own opinion after eating there.",
-        "moment": "0:36"
-      },
-      {
-        "name": "OoWee",
-        "location": "Kingly Court, Soho",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw visited and ate at this vegan fast food restaurant. They tried the classic cheeseburger and noted that most customers are meat-eaters just looking to eat less meat. They appreciated the indulgent, decadent vegan versions of classic fast food.",
-        "originalName": "Club Mexicana",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": null,
-        "area": "Dalston",
-        "address": "Stoke Newington Road, Dalston",
-        "onScreen": null,
-        "verdict": "Delicious vegan fast food that mimics classic items well.",
-        "dishes": [
-          "classic cheeseburger",
-          "baconator",
-          "shrimp fries",
-          "barbecue cotton sandwich"
-        ],
-        "confident": false,
-        "why": "The name 'OoWee' doesn't appear in the transcript; the transcript says 'Ureme' which is described as the sound people make when eating. This may be a mishearing or alternative name that needs verification.",
-        "moment": "1:26",
-        "candidates": [
-          {
-            "id": "1978c9762f53",
-            "name": "Club Mexicana",
-            "address": "46-48 Commercial St, E1 6LT",
-            "metresFromPin": 0
-          },
-          {
-            "id": "3b72b9a588a1",
-            "name": "La Casita Mexicana",
-            "address": "90 Brick Lane, E1 6RL",
-            "metresFromPin": 338
-          },
-          {
-            "id": "99cb8bc0dd0a",
-            "name": "Club Mexicana",
-            "address": "20–21 Leicester Sq, WC2H 7JX",
-            "metresFromPin": 3990
-          },
-          {
-            "id": "2952c0128971",
-            "name": "Club Mexicana",
-            "address": "Unit 6 The Arcade, EC2M 7PN",
-            "metresFromPin": 648
-          },
-          {
-            "id": "d0d73577dfa5",
-            "name": "El Mexicana",
-            "address": "",
-            "metresFromPin": 12132
-          },
-          {
-            "id": "dde381876f7f",
-            "name": "EL Mexicana",
-            "address": "St Ann's Shopping Centre, HA1 1AT",
-            "metresFromPin": 19672
-          }
-        ]
-      },
-      {
-        "name": "Club Mexicana",
-        "location": "Notting Hill",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw visited with his girlfriend Millie and her boyfriend Dan. They tried three types of tacos including al pastor with chili infused shawarma and charred pineapple, short rib jackfruit with barbecue, and tofish tacos. They praised the quality and indulgence of the vegan versions.",
-        "originalName": "Farmacy",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": "2952c0128971",
-        "area": "Kingly Court, Soho",
-        "address": "Unit 6 The Arcade, EC2M 7PN",
-        "onScreen": "CLUB MEXICANA",
-        "verdict": "Absolutely brilliant tacos that taste as banging as meat versions.",
-        "dishes": [
-          "al pastor tacos",
-          "short rib jackfruit tacos",
-          "tofish tacos"
-        ],
-        "confident": false,
-        "why": "Renamed from “Farmacy” using on-screen text: check it's this place. Topjaw clearly visited and ate multiple dishes, giving detailed personal opinions.",
-        "moment": "2:39"
-      },
-      {
-        "name": "Farmacy",
-        "location": "Boxpark, Shoreditch",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw visited (Jesse notes it was his first time for Will). They tried multiple dishes including mushroom burger, sweet potato fries, lasagna, popcorn cauliflower, falafel, beetroot hummus, and a winter bowl. They highlighted the sustainability aspect with 60-70% of ingredients grown on their own farm.",
-        "originalName": "CookDaily",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": "574a97acdb20",
-        "area": "Notting Hill",
-        "address": "74 Westbourne Grove, W2 5",
-        "onScreen": null,
-        "verdict": "Fancy vegan spot with fantastic ingredients and excellent dishes.",
-        "dishes": [
-          "mushroom burger",
-          "sweet potato fries",
-          "lasagna",
-          "popcorn cauliflower",
-          "falafel",
-          "beetroot hummus",
-          "winter bowl"
-        ],
-        "confident": true,
-        "why": "Topjaw personally visited and ate multiple dishes, discussing their quality and sustainability practices in detail.",
-        "moment": "4:22"
-      },
-      {
-        "name": "CookDaily",
-        "location": "Boxpark, Shoreditch",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw visited and tried the vegan chicken pad thai, describing it as the best vegan chicken available. Owner King Cook is from Laos. They also tried a bibimbap chicken bowl and tofu bowl, praising the authentic flavors and texture.",
-        "originalName": "Eat Chay",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": "94e011bc5c88",
-        "area": "Boxpark, Shoreditch",
-        "address": "1-27, The Arcade, Liverpool St, EC2M 7PN",
-        "onScreen": null,
-        "verdict": "Best vegan chicken; genuine Asian flavors very close to real chicken.",
-        "dishes": [
-          "chicken pad thai",
-          "bibimbap chicken bowl",
-          "tofu bowl"
-        ],
-        "confident": true,
-        "why": "Topjaw personally visited and ate there, giving detailed opinions on the vegan chicken quality.",
-        "moment": "6:25"
-      },
-      {
-        "name": "Eat Chay",
-        "location": "Camden",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "",
-        "originalName": "Purezza",
-        "keep": false,
-        "reason": "only_mentioned",
-        "placeId": null,
-        "area": "Boxpark, Shoreditch",
-        "address": null,
-        "onScreen": null,
-        "verdict": "",
-        "dishes": [],
-        "confident": true,
-        "why": "Eat Chay is listed in the description but never appears in the video content, transcript or footage. Only 8 restaurants are actually visited.",
-        "moment": null
-      },
-      {
-        "name": "Purezza",
-        "location": null,
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw visited and ate at Purezza. They featured pizza with three base options (hemp, whole wheat, gluten-free), with dishes named after Friends episodes. Tried 'The One with the Pesto' and 'All of the Seasons' pizzas, praising the homemade rice-based mozzarella.",
-        "originalName": "Temple of Seitan",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": "65cdc013c29c",
-        "area": "Camden",
-        "address": "45-47 Parkway, NW1 7PN",
-        "onScreen": null,
-        "verdict": "Fantastic vegan pizza with excellent homemade rice mozzarella.",
-        "dishes": [
-          "The One with the Pesto pizza",
-          "All of the Seasons pizza"
-        ],
-        "confident": true,
-        "why": "Topjaw personally visited and ate multiple pizzas, discussing their quality and the vegan mozzarella technique.",
-        "moment": "8:31"
-      }
-    ]
-  },
-  {
     "videoId": "qmWp2vR6fXw",
     "title": "24 HOURS IN POST-LOCKDOWN LONDON ft. Pork Doughnuts, London's Best Burgers and Big Lew",
     "sponsored": false,
@@ -8497,7 +6975,7 @@
         "reason": "own_review",
         "placeId": "e66102d4d6d2",
         "area": "Hackney Wick",
-        "address": "10 Stour Road, E3 2NT",
+        "address": null,
         "onScreen": null,
         "moment": "0:23",
         "verdict": "Exceptional BBQ with innovative pork shoulder doughnuts.",
@@ -8520,7 +6998,7 @@
         "reason": "own_review",
         "placeId": "1679e28d7678",
         "area": "Hackney Central",
-        "address": "17 Bohemia Pl, E8 1DU",
+        "address": null,
         "onScreen": null,
         "moment": "2:31",
         "verdict": "Fantastic goat cheese burger with horseradish mayo, enlightening experience.",
@@ -8597,7 +7075,7 @@
         "reason": "own_review",
         "placeId": "1f91e993ade4",
         "area": "Islington (N1)",
-        "address": "49-50 Eagle Wharf Rd, N1 7ED",
+        "address": null,
         "onScreen": null,
         "moment": "6:34",
         "verdict": "Certified fantastic Oklahoma-style fried onion cheeseburger.",
@@ -8620,7 +7098,7 @@
         "reason": "own_review",
         "placeId": "740ea03b1ba8",
         "area": "Shoreditch",
-        "address": "35 Sclater St, E1 6LB",
+        "address": null,
         "onScreen": null,
         "moment": "8:29",
         "verdict": "Legendary smoked meats with crispy skin and fatty richness.",
@@ -9056,7 +7534,7 @@
         "reason": "not_a_place_to_eat",
         "placeId": null,
         "area": "Spitalfields",
-        "address": "16 Horner Square, E1 6EW",
+        "address": null,
         "onScreen": null,
         "verdict": "",
         "dishes": [],
@@ -9076,7 +7554,7 @@
         "reason": "own_review",
         "placeId": "26d3c7358d25",
         "area": "Spitalfields",
-        "address": "Brushfield St, E1 6BG",
+        "address": null,
         "onScreen": null,
         "verdict": "Best dumplings in London; excellent soup-filled fried dumplings.",
         "dishes": [
@@ -9098,7 +7576,7 @@
         "reason": "own_review",
         "placeId": "ba25d7fb0193",
         "area": "Spitalfields",
-        "address": "4 Market Street, E1 6",
+        "address": null,
         "onScreen": null,
         "verdict": "Northern China street food with great presentation and flavour.",
         "dishes": [
@@ -9142,7 +7620,7 @@
         "reason": "own_review",
         "placeId": "d7441a424cef",
         "area": "Hoxton",
-        "address": "227-229 Hoxton St, N1 5LG",
+        "address": null,
         "onScreen": null,
         "verdict": "Master of trades; exceptional pastrami sandwich with house-made elements.",
         "dishes": [
@@ -9184,7 +7662,7 @@
         "reason": "own_review",
         "placeId": "866792684879",
         "area": "Spitalfields",
-        "address": "25 Duke Street, W1U 1DJ",
+        "address": null,
         "onScreen": null,
         "verdict": "Health-focused food with great fermented elements and green leaves.",
         "dishes": [
@@ -9243,7 +7721,7 @@
         "reason": "own_review",
         "placeId": "efd3721bc0e2",
         "area": "Brixton",
-        "address": "Pop, SW9 8PQ",
+        "address": null,
         "onScreen": null,
         "moment": "0:32",
         "verdict": "Excellent value crepe with quality ingredients.",
@@ -9364,7 +7842,7 @@
         "reason": "only_mentioned",
         "placeId": "d67024f9cf4e",
         "area": "Brixton Village",
-        "address": "Granille Arcade, Unit 3, Brixton Village, Coldharbour Ln, SW9 8PR",
+        "address": null,
         "onScreen": null,
         "moment": null,
         "verdict": "",
@@ -9451,7 +7929,7 @@
         "reason": "only_mentioned",
         "placeId": "43b0a53cc962",
         "area": "Brixton",
-        "address": "8 The Pavement, SW4 0HY",
+        "address": null,
         "onScreen": null,
         "moment": null,
         "verdict": "",
@@ -9556,304 +8034,6 @@
     ]
   },
   {
-    "videoId": "YKdwsDL5cGs",
-    "title": "GUIDE TO PECKHAM with Uber Eats",
-    "sponsored": true,
-    "restaurants": [
-      {
-        "name": "Pedler",
-        "location": "Peckham",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw visited and reviewed Pedler, praising their Frizzle Chicken. The head chef previously worked at Rules, a historic London restaurant. Topjaw highlighted the steak sandwich with chutney and mayo.",
-        "originalName": "Pedler",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": "b721bd0ee04b",
-        "area": "Peckham",
-        "address": "58 Peckham Rye, SE15 4JR",
-        "onScreen": null,
-        "moment": "0:25",
-        "verdict": "Great all-day dining with standout frizzle chicken.",
-        "dishes": [
-          "Frizzle Chicken",
-          "Grilled Steak Sandwich with Attitude Sauce"
-        ],
-        "confident": true,
-        "why": "Topjaw personally visited and gave detailed first-hand opinion on the food."
-      },
-      {
-        "name": "Nandine",
-        "location": "Peckham",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw visited this Kurdish family-run restaurant where the mother is the cook and sons handle business/marketing. Topjaw praised the vibrant food and flavour, trying the Seven Spice Chicken Shawarma Sandwich.",
-        "originalName": "Nandine",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": "caceda7644e9",
-        "area": "Peckham",
-        "address": "82 Vestry Rd, SE5 8PQ",
-        "onScreen": null,
-        "moment": "1:32",
-        "verdict": "Vibrant Kurdish cuisine run by hardworking family.",
-        "dishes": [
-          "Seven Spice Chicken Shawarma Sandwich"
-        ],
-        "confident": true,
-        "why": "Topjaw personally visited, ate, and gave their own opinion of the Kurdish food."
-      },
-      {
-        "name": "Lords of Poké",
-        "location": "Peckham",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Located in Peckham Levels (multi-use space). Topjaw visited and ordered the Classic Tuna Bowl, praising the quality of tuna chunks and noting everything is available on Uber Eats.",
-        "originalName": "Lords Of Poké",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": "e1fff88ebdd7",
-        "area": "Peckham Levels",
-        "address": "2 Kingdom Street, W2 6BD",
-        "onScreen": "LORDS OF POKÉ",
-        "moment": "2:39",
-        "verdict": "Quality poké bowls with fresh chunks of tuna.",
-        "dishes": [
-          "Large Classic Tuna Bowl"
-        ],
-        "confident": false,
-        "why": "Topjaw reviewed it personally, but the candidate place address differs from Peckham Levels location mentioned in description and transcript (Kingdom Street is Central London).",
-        "candidates": [
-          {
-            "id": "e1fff88ebdd7",
-            "name": "Lords of Poké",
-            "address": "2 Kingdom Street, W2 6BD",
-            "metresFromPin": 0
-          }
-        ]
-      },
-      {
-        "name": "Drums & Flats",
-        "location": "Peckham",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw visited this fried chicken spot at the end of their Peckham tour and tried the Tangy Buffalo Wings with blue cheese sauce and spicy barbecue. Topjaw described the wings as impeccable.",
-        "originalName": "Drums & Flats",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": null,
-        "area": "Peckham",
-        "address": null,
-        "onScreen": "DRUMS & FLATS",
-        "moment": "3:47",
-        "verdict": "Impeccable tangy buffalo wings with great sauces.",
-        "dishes": [
-          "5 Tangy Buffalo Wings"
-        ],
-        "confident": false,
-        "why": "Topjaw reviewed it personally, but no candidate place matched in the system and full address details are unavailable.",
-        "candidates": []
-      }
-    ]
-  },
-  {
-    "videoId": "soyqQluj32A",
-    "title": "THE BEST VEGAN RESTAURANTS IN LONDON",
-    "sponsored": false,
-    "restaurants": [
-      {
-        "name": "One Time Out",
-        "location": "Bethnal Green, East London",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Buddhist vegetarian café converted to fully vegan. Three years running One Time Out's best café in Bethnal Green. Features cinema screenings, chapel area, garden seating in summer, live music and open mics. All profits go to charity.",
-        "originalName": "Gallery Cafe",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": "fd609fc1726d",
-        "area": "Bethnal Green, East London",
-        "address": "21 Old Ford Road, E2 9PL",
-        "onScreen": null,
-        "moment": "0:42",
-        "verdict": "Great vegan full English breakfast, profits to charity.",
-        "dishes": [
-          "Vegan Full English Breakfast",
-          "Potato Rostis"
-        ],
-        "confident": true,
-        "why": "Topjaw visited and reviewed in detail. The name is corrected from extracted 'Gallery Cafe' based on transcript and description which mentions it opened as Buddhist vegetarian café."
-      },
-      {
-        "name": "Russia",
-        "location": "Brick Lane, East London",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Vegan plant-based burger restaurant owned by boyfriend/girlfriend duo. Started after they quit corporate jobs post-travel inspiration. Recreates classic burger experiences for vegans.",
-        "originalName": "Mooshies",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": null,
-        "area": "Brick Lane, East London",
-        "address": null,
-        "onScreen": null,
-        "moment": "2:03",
-        "verdict": "Creative plant-based burgers recreating missed vegan favourites.",
-        "dishes": [
-          "Chickpea Bites",
-          "Chilli Sauce Burger",
-          "Deep Fried Fish Aubergine Burger"
-        ],
-        "confident": false,
-        "why": "Topjaw visited and reviewed, but the restaurant is only known as 'Russia' in transcript; no matching candidate provided and name seems unusual for a vegan burger place.",
-        "candidates": [
-          {
-            "id": "4c0314460c5d",
-            "name": "Moosh",
-            "address": "17 Jerdan Pl, SW6 1BE"
-          }
-        ]
-      },
-      {
-        "name": "Young Vegans",
-        "location": "Camden, North London",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Vegan pie restaurant. Started as street food vendor, opened permanent Camden Market location four months prior. Serves savoury pies including seitan and ale, curry, breakfast varieties and desserts.",
-        "originalName": "Young Vegans",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": "3158d15869bc",
-        "area": "Camden, North London and other locations",
-        "address": "393 Cambridge Heath Road, E2 9RA",
-        "onScreen": null,
-        "moment": "3:23",
-        "verdict": "Affordable, delicious vegan pies with excellent depth.",
-        "dishes": [
-          "Seitan & Ale Pie",
-          "Curry Pie",
-          "Breakfast Pie",
-          "Peanut Butter and Chocolate Pie"
-        ],
-        "confident": true,
-        "why": "Topjaw visited and reviewed in detail at Camden location. Chapter title confirms 'Pie House' refers to Young Vegans."
-      },
-      {
-        "name": "Club Mexicana",
-        "location": "Camden Market, North London",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Vegan Mexican food vendor in Camden Market with multiple London locations. Serves beer battered fish tacos with vegan sour cream. Busy in summer with long queues.",
-        "originalName": "Club Mexicana",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": "2952c0128971",
-        "area": "Camden Market, North London and other locations",
-        "address": "Unit 6 The Arcade, EC2M 7PN",
-        "onScreen": "Club Mexicana",
-        "moment": "4:18",
-        "verdict": "Amazing vegan Mexican street food with depth.",
-        "dishes": [
-          "Beer Battered To-Fish Tacos",
-          "Vegan Sour Cream"
-        ],
-        "confident": false,
-        "why": "Topjaw visited and reviewed at Camden Market location. However, candidate address is for a different location (The Arcade, unclear if this is a market stall permanent space).",
-        "candidates": [
-          {
-            "id": "1978c9762f53",
-            "name": "Club Mexicana",
-            "address": "46-48 Commercial St, E1 6LT",
-            "metresFromPin": 0
-          },
-          {
-            "id": "3b72b9a588a1",
-            "name": "La Casita Mexicana",
-            "address": "90 Brick Lane, E1 6RL",
-            "metresFromPin": 338
-          },
-          {
-            "id": "99cb8bc0dd0a",
-            "name": "Club Mexicana",
-            "address": "20–21 Leicester Sq, WC2H 7JX",
-            "metresFromPin": 3990
-          },
-          {
-            "id": "2952c0128971",
-            "name": "Club Mexicana",
-            "address": "Unit 6 The Arcade, EC2M 7PN",
-            "metresFromPin": 648
-          },
-          {
-            "id": "d0d73577dfa5",
-            "name": "El Mexicana",
-            "address": "",
-            "metresFromPin": 12132
-          },
-          {
-            "id": "dde381876f7f",
-            "name": "EL Mexicana",
-            "address": "St Ann's Shopping Centre, HA1 1AT",
-            "metresFromPin": 19672
-          }
-        ]
-      },
-      {
-        "name": "Chin Chin Labs",
-        "location": "Camden, North London",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Vegan dessert spot in Camden Market serving vegan hot chocolate and beetroot sorbet made with liquid nitrogen freezing technique.",
-        "originalName": "Chin Chin",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": "642c94eed11e",
-        "area": "Camden, North London",
-        "address": "49-50 Camden Lock Pl, NW1 8AF",
-        "onScreen": null,
-        "moment": "5:13",
-        "verdict": "Amazing vegan desserts using liquid nitrogen freezing.",
-        "dishes": [
-          "Vegan Hot Chocolate",
-          "Beetroot Sorbet"
-        ],
-        "confident": true,
-        "why": "Topjaw visited and reviewed at Camden Market. Chin Chin Labs is the ice cream shop in Camden Lock Place that matches the description."
-      },
-      {
-        "name": "Cafe Van Gogh",
-        "location": "Brixton, South London",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Vegan café and non-profit. Previously vegetarian, converted fully vegan last year. All profits support community projects locally. Features sticky seitan ribs and mac and cheese with butternut squash.",
-        "originalName": "Cafe Van Gogh",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": "564feeb88d07",
-        "area": "Brixton, South London",
-        "address": "88 Brixton Road, SW9 6BE",
-        "onScreen": null,
-        "moment": "6:15",
-        "verdict": "Excellent vegan comfort food, non-profit supporting community.",
-        "dishes": [
-          "Sticky Seitan Ribs",
-          "Mac and Cheese with Butternut Squash"
-        ],
-        "confident": true,
-        "why": "Topjaw visited and reviewed in detail. Non-profit status and community focus confirmed in transcript."
-      }
-    ]
-  },
-  {
     "videoId": "m_z5yPXnnek",
     "title": "HOW TO GET COCKTAILS ALL NIGHT IN LONDON FOR £25!",
     "sponsored": false,
@@ -9916,167 +8096,6 @@
     ]
   },
   {
-    "videoId": "uDWzMUbdg6c",
-    "title": "LONDON CHEAP EATS - SOHO Meals Under £8",
-    "restaurants": [
-      {
-        "name": "Misato",
-        "location": "Soho",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw visited and praised the chicken katsu curry, noting it tastes fresher than Wagamama and costs only £6. He highlighted the generous portion and beautiful presentation.",
-        "originalName": "Misato",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": "55ef1f507e5e",
-        "area": "Chinatown, Soho",
-        "address": "11 Wardour St, W1D 6PG",
-        "onScreen": null,
-        "moment": "0:34",
-        "verdict": "Excellent katsu curry at great value, very fresh taste.",
-        "dishes": [
-          "Chicken Katsu Curry"
-        ],
-        "confident": true,
-        "why": "Topjaw personally visited, ate, and gave a detailed positive opinion of the dish."
-      },
-      {
-        "name": "Bake",
-        "location": "Soho",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw visited the Chinese bakery next to Misato and praised the buns for their size and beauty. He found them to be a great lunchtime snack and loved the BBQ pork bun at £1.30.",
-        "originalName": "Bake",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": null,
-        "area": "Chinatown, Soho",
-        "address": null,
-        "onScreen": null,
-        "moment": "1:20",
-        "verdict": "Beautiful, shiny buns; great value lunchtime snack.",
-        "dishes": [
-          "BBQ Pork Bun"
-        ],
-        "confident": false,
-        "why": "No candidate place found for 'Bake'; unable to verify the exact business despite clear first-hand review by Topjaw.",
-        "candidates": []
-      },
-      {
-        "name": "Leños and Carbon",
-        "location": "Soho",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw visited and ordered king prawn patatas bravas at £7.95. He praised it highly, saying it was the best patatas bravas he'd had since Barcelona and complimented the fresh prawns.",
-        "originalName": "Carbon",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": "7d338dab4c88",
-        "area": "Regent Street, Soho",
-        "address": "113c Elephant Rd, SE17 1LB",
-        "onScreen": "C",
-        "moment": "2:09",
-        "verdict": "Best patatas bravas since Barcelona, fresh prawns, excellent.",
-        "dishes": [
-          "King Prawn Patatas Bravas"
-        ],
-        "confident": false,
-        "why": "The on-screen graphic shows 'C', and the transcript mentions 'Carbon' and 'Reg Street', but the placeId candidate 'Leños and Carbon' has address on Elephant Rd (SE17), not Regent Street. Location mismatch requires verification.",
-        "candidates": [
-          {
-            "id": "7d338dab4c88",
-            "name": "Leños and Carbon",
-            "address": "113c Elephant Rd, SE17 1LB",
-            "metresFromPin": 0
-          },
-          {
-            "id": "ddf03201bb18",
-            "name": "Carbon Kopi",
-            "address": "11 Margravine Rd, W6 8LS",
-            "metresFromPin": 8110
-          },
-          {
-            "id": "b3933b199707",
-            "name": "Carbon Kopi",
-            "address": "1 Hazlebury Rd, SW6 2NA",
-            "metresFromPin": 6877
-          },
-          {
-            "id": "90caee7e092b",
-            "name": "Carbobar",
-            "address": "130 Cadogan Terrace, E9 5",
-            "metresFromPin": 7078
-          },
-          {
-            "id": "2f0822a639af",
-            "name": "The Carbon Lounge",
-            "address": "Watford FC Vicarage Road, WD18 0ER",
-            "metresFromPin": 27271
-          }
-        ]
-      },
-      {
-        "name": "Fatty Pie",
-        "location": "Soho",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw visited and ordered the steak and stout pie for £6.75. He expressed enthusiasm for pie and described getting a substantial meal within the £8 budget.",
-        "originalName": "The Pie Shop",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": null,
-        "area": "Covent Garden, Soho",
-        "address": null,
-        "onScreen": null,
-        "moment": "2:59",
-        "verdict": "Great pie at good value, substantial meal.",
-        "dishes": [
-          "Steak and Stout Pie"
-        ],
-        "confident": false,
-        "why": "The video refers to 'Fat Pie', 'Batsy pie', and 'Fatty pie' inconsistently; the transcript mentions 'batsy pie' and later 'Fatty pie'. The candidate 'The Pie & Mash Shop' (Spital St) is in Deptford, not Covent Garden where they were eating.",
-        "candidates": [
-          {
-            "id": "2d19d3eb3595",
-            "name": "Heath Pie Shop",
-            "address": ""
-          },
-          {
-            "id": "3232c2f1b7f8",
-            "name": "The Pie & Mash Shop",
-            "address": "4 Spital St, DA1 2DL"
-          }
-        ]
-      },
-      {
-        "name": "Homeslice",
-        "location": "Soho",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Topjaw visited and ordered a large slice of margarita and mushroom pizza for £4. He highlighted it as an excellent cheap eat in central London.",
-        "originalName": "Home Slice",
-        "keep": true,
-        "reason": "own_review",
-        "placeId": "42cf540e7ab3",
-        "area": "Soho/Covent Garden",
-        "address": "13 Neal's Yard, WC2H 9DP",
-        "onScreen": null,
-        "moment": "3:51",
-        "verdict": "Huge slices at excellent value, bargain cheap eat.",
-        "dishes": [
-          "Large Slice - Margarita and Mushroom"
-        ],
-        "confident": true,
-        "why": "Topjaw personally visited, ate, and confirmed it as a top cheap eat; the Neal's Yard location matches the Soho area visited."
-      }
-    ]
-  },
-  {
     "videoId": "M-c_eejeydY",
     "title": "INTRODUCING FREAKSHAKES IN LONDON",
     "sponsored": false,
@@ -10132,6 +8151,2142 @@
             "address": "Terrace Rd Unit 135, KT12 2EA"
           }
         ]
+      }
+    ]
+  },
+  {
+    "videoId": "RdGAqs9iwGo",
+    "title": "Still need to book somewhere great? We’ve got you! ❤️🎄❤️",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "BRIGADIERS",
+        "at": "0:07",
+        "matched": "Brigadiers"
+      },
+      {
+        "text": "The George Pub",
+        "at": "0:13",
+        "matched": "The George Public House"
+      },
+      {
+        "text": "The Parakeet",
+        "at": "0:29",
+        "matched": "The Parakeet"
+      },
+      {
+        "text": "BLOODSPORTS",
+        "at": "0:35",
+        "matched": "BLOODsports"
+      },
+      {
+        "text": "The Culpeper",
+        "at": "0:33",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Brigadiers",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw describes it as 'the city's ultimate group feast' with Indian barbecue, smoky cocktails, beer towers and barbecue butter chicken wings.",
+        "originalName": "Brigadiers",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "8fa33b6eb2a8",
+        "area": null,
+        "address": null,
+        "moment": "0:00",
+        "verdict": "City's ultimate group feast, makes him tear up.",
+        "dishes": [
+          "Indian barbecue",
+          "barbecue butter chicken wings",
+          "smoky cocktails",
+          "beer towers"
+        ],
+        "confident": true,
+        "why": "Topjaw gives his own strong opinion at the start of the video as part of his curated list.",
+        "onScreen": "BRIGADIERS",
+        "onScreenAt": "0:07"
+      },
+      {
+        "name": "The George",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw describes it as a proper London pub perfect for festive pints, with a new glue pot that fits up to 10 people, Guinness tap and a specific menu.",
+        "originalName": "The George Public House",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "268534aae1df",
+        "area": "Fitzrovia",
+        "address": null,
+        "moment": "0:13",
+        "verdict": "Proper London pub, great for festive gatherings.",
+        "dishes": [],
+        "confident": true,
+        "why": "The transcript says 'Fitzroia' but the candidate at White Hart Yard (Coach House at The George, SE1) is in Borough. The 9 Eden Grove location (N7) is not Fitzrovia either. Needs verification.",
+        "knownPlace": true,
+        "onScreen": "The George Pub",
+        "onScreenAt": "0:13"
+      },
+      {
+        "name": "The Parakeet",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw praises it as a gorgeous pub turned fine dining spot from Ben Allen, with great food and brilliant atmosphere that still feels like a local.",
+        "originalName": "The Parakeet",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "dd6fca5094b8",
+        "area": null,
+        "address": null,
+        "moment": "0:29",
+        "verdict": "Gorgeous pub turned fine dining with great atmosphere.",
+        "dishes": [],
+        "confident": true,
+        "why": "Topjaw gives his own review as part of his curated list.",
+        "onScreen": "The Parakeet",
+        "onScreenAt": "0:29"
+      },
+      {
+        "name": "BLOODSPORTS",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw describes it as moody, mad and full of energy with a menu by Meat Liquor, recommending turbo margaritas and a dead hippie.",
+        "originalName": "BLOODsports",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "a0d857f1ff65",
+        "area": null,
+        "address": null,
+        "moment": "0:35",
+        "verdict": "Moody, mad, full of energy with great cocktails.",
+        "dishes": [
+          "turbo margaritas",
+          "dead hippie"
+        ],
+        "confident": true,
+        "why": "Topjaw gives his own opinion as part of his curated list.",
+        "onScreen": "BLOODSPORTS",
+        "onScreenAt": "0:35"
+      },
+      {
+        "name": "The Montpelier",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw says it has quietly become a foodie favorite with talented Michael Bagler commanding the kitchen, serving damn tasty small plates.",
+        "originalName": "The Montpelier / ELM",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "8eb30d4fe55e",
+        "area": null,
+        "address": null,
+        "moment": "0:47",
+        "verdict": "Quietly become a foodie favorite, damn tasty small plates.",
+        "dishes": [
+          "small plates"
+        ],
+        "confident": true,
+        "why": "Transcript says 'The Melier/Elm' and mentions Michael Bagler but the name match is unclear - 'Melier' doesn't match standard candidates. Confident about The Montpelier on Choumert Rd being the place but name transcription is uncertain.",
+        "knownPlace": true
+      },
+      {
+        "name": "Sheba Brick Lane - Awarded Best Curry House In UK",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw calls it 'Brick Lane royalty' and declares it 'the best Indian restaurant on that street' out of 23 curry houses, full of flavor, noise and personality.",
+        "originalName": "SHEBA",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Brick Lane",
+        "address": "136 Brick Lane, E1 6RU",
+        "moment": "0:57",
+        "verdict": "Best Indian on Brick Lane, full of flavor and personality.",
+        "dishes": [
+          "Indian curry"
+        ],
+        "confident": true,
+        "why": "Topjaw gives his own strong opinion about it being the best on Brick Lane as part of his curated list.",
+        "knownPlace": true
+      },
+      {
+        "name": "The Culpeper",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw describes it as a beauty of a pub that does it all, with French pub food and an electric atmosphere.",
+        "originalName": "The Culpeper",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "8b79731f38c3",
+        "area": null,
+        "address": null,
+        "moment": "1:07",
+        "verdict": "Beautiful pub with French food and electric atmosphere.",
+        "dishes": [
+          "French pub food"
+        ],
+        "confident": true,
+        "why": "Topjaw gives his own opinion as part of his curated list."
+      },
+      {
+        "name": "Wildflowers",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw describes it as warm, intimate and quite frankly magic, predicting it will earn a Michelin star in February.",
+        "originalName": "Wildflowers",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "0a76f2fafade",
+        "area": null,
+        "address": null,
+        "moment": "1:13",
+        "verdict": "Warm, intimate, magic - predicted Michelin star.",
+        "dishes": [],
+        "confident": false,
+        "why": "Two main candidates: Wildflower on Rye Lane or Wildflowers on Pimlico Road. Pimlico is more upscale and fits the 'magic' and Michelin prediction better, but cannot be certain which one Topjaw means.",
+        "candidates": [
+          {
+            "id": "23b931b9cc22",
+            "name": "Wildflower",
+            "address": "95A Rye Lane, SE15 4ST"
+          },
+          {
+            "id": "0a76f2fafade",
+            "name": "Wildflowers Restaurant",
+            "address": "Newson's Yard, 57 Pimlico Road, SW1W 8NE"
+          },
+          {
+            "id": "082027ed68e8",
+            "name": "The Hand And Flower",
+            "address": "24 Upper Ham Rd, TW10 5LA"
+          },
+          {
+            "id": "420cb12f2e72",
+            "name": "Hand & Flower",
+            "address": "617 Kings Road, SW6 2ES"
+          }
+        ]
+      },
+      {
+        "name": "NIJŪ",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw calls it 'one of my favorite meals of the year', describing hugely memorable sushi from Endo and Chris Golding, one of only 18 UK locations licensed to serve Kobe.",
+        "originalName": "NIJŪ",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "moment": "1:24",
+        "verdict": "One of his favorite meals of the year, memorable sushi.",
+        "dishes": [
+          "sushi",
+          "Kobe"
+        ],
+        "confident": true,
+        "why": "No candidate places found in the database. The place exists but cannot be matched to a placeId.",
+        "knownPlace": true
+      },
+      {
+        "name": "Brasserie Zedel",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw describes it as grand, glitzy and gloriously old school, perfect for a big festive night out without breaking the bank.",
+        "originalName": "Brasserie Zedel",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "cd3ed279cae4",
+        "area": "Soho",
+        "address": null,
+        "moment": "1:40",
+        "verdict": "Grand, glitzy, old school, great value for celebrations.",
+        "dishes": [],
+        "confident": true,
+        "why": "Topjaw gives his own opinion as part of his curated list."
+      }
+    ]
+  },
+  {
+    "videoId": "jIEhjCAUuCc",
+    "title": "4 Best New Restaurants in London",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "CANAL RESTAURANT",
+        "at": "4:03",
+        "matched": "Canal Restaurant"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Wine Bar",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Located underneath The Farm Shop in Mayfair. Topjaw describes it as London's most romantic wine bar with small plate, shakusheri board, great wine. They ate there and praised the crab on toast, steak tartare, cheese toastie, pork belly and charcuterie board.",
+        "originalName": "Wine Bar",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Mayfair",
+        "address": null,
+        "moment": "0:31",
+        "verdict": "London's most romantic wine bar, excellent food and wine.",
+        "dishes": [
+          "Devilled crab on toast",
+          "Steak tartare",
+          "Cheese toastie",
+          "Pork belly",
+          "Charcuterie board",
+          "Cured meats"
+        ],
+        "confident": false,
+        "why": "Cannot confirm exact restaurant name or find matching place; described only as 'Wine Bar' underneath The Farm Shop.",
+        "candidates": []
+      },
+      {
+        "name": "BLOODSPORTS by MEATliquor",
+        "location": "Covent Garden",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "American sports bar in Covent Garden created by Scott (from Meat Liquor). Topjaw visited and praised the atmosphere with 32 screens, carpet from The Shining, special brewer beer in frozen mug, and food by Meatliquor including Dead Hippie Burger and other classics. They also mentioned the upcoming hideout coffee hatch with donuts.",
+        "originalName": "BLOODsports",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "a0d857f1ff65",
+        "area": "Covent Garden",
+        "address": null,
+        "moment": "6:42",
+        "verdict": "Fun American sports bar with great food and unique atmosphere.",
+        "dishes": [
+          "Dead Hippie Burger",
+          "Onion rings",
+          "Ramen crust mozzarella sticks",
+          "Monkey fingers",
+          "Gassy donuts"
+        ],
+        "confident": true,
+        "why": "Topjaw clearly visited and reviewed this place with detailed observations of food and atmosphere."
+      },
+      {
+        "name": "Canal",
+        "location": "West London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Waterside dining spot and new sibling to Bistro Freddy Barclayren. Topjaw describes it as creating an urban gritty Riviera vibe. Head chef formerly from Luca (Michelin star Italian). They tasted pasta with ricotta lemon filling, seasonal fritter with comfy datarinas sauce, tart with pink fur potato crisps and 28-day aged beef, table burger, and brown butter old fashioned cocktail.",
+        "originalName": "Canal Restaurant",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "West London",
+        "address": null,
+        "moment": "3:41",
+        "verdict": "Beautiful new waterside restaurant with excellent modern European food.",
+        "dishes": [
+          "Pasta with ricotta lemon filling and spinach",
+          "Seasonal fritter",
+          "Tart with pink fur potato crisps and beef",
+          "Table burger",
+          "Brown butter old fashioned"
+        ],
+        "confident": false,
+        "why": "Cannot find matching place; placeId candidates don't match this specific restaurant description, though graphics clearly show 'CANAL RESTAURANT'.",
+        "candidates": [
+          {
+            "id": "a3bec9299361",
+            "name": "ANA Restaurant",
+            "address": "263 Old Brompton Rd, SW5 9JA"
+          },
+          {
+            "id": "5566b1e7d1b7",
+            "name": "Toscana restaurant",
+            "address": "9, Central Parade, Station Rd, DA15 7DH"
+          },
+          {
+            "id": "32d78f22daf1",
+            "name": "Restaurant italien canal",
+            "address": "453 Edgware Rd, W2 1TH"
+          },
+          {
+            "id": "f5006cf21f80",
+            "name": "Canary Cafe & Restaurant",
+            "address": "175 Brighton Rd, CR2 6EG"
+          },
+          {
+            "id": "d74216f8af95",
+            "name": "Canal Reach Canteen",
+            "address": "King's Cross"
+          }
+        ],
+        "onScreen": "CANAL RESTAURANT",
+        "onScreenAt": "4:03"
+      },
+      {
+        "name": "Dove Restaurant",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Restaurant in Notting Hill that serves only 10 burgers a day made from 50-day aged rib trim. Topjaw visited and tasted the famous burger plus other dishes: deep fried potato pit set with baratha and mortadella, tomatoes with sour cream and chili crisp, and grilled Atlantic prawns with smoked garlic butter.",
+        "originalName": "Dove",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Notting Hill",
+        "address": "Kensington Park Road, Notting Hill",
+        "moment": "9:21",
+        "verdict": "Exceptional burger-focused restaurant with excellent supporting dishes.",
+        "dishes": [
+          "Burger (10 per day only)",
+          "Deep fried potato pit set with baratha and mortadella",
+          "Tomatoes with sour cream and chili crisp",
+          "Grilled Atlantic prawns with smoked garlic butter"
+        ],
+        "confident": true,
+        "why": "Location described as Notting Hill on Kensington Park Road, but none of the candidate places match this exact description or location details provided.",
+        "knownPlace": true
+      }
+    ]
+  },
+  {
+    "videoId": "V0pGH3QcNhM",
+    "title": "Honestly Utopia Bagels have changed things for us - you haven’t tried a bagel until you’ve had them.",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "Best Bagels in New York",
+        "at": "0:00",
+        "matched": null
+      },
+      {
+        "text": "UTOPIA BAGELS",
+        "at": "0:03",
+        "matched": "Utopia Bagels"
+      },
+      {
+        "text": "UTOPIA BAGELS",
+        "at": "0:07",
+        "matched": "Utopia Bagels"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Utopia Bagels",
+        "location": "South Bank (Waterloo)",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw visited the South Bank residency (July 25th - Aug 17th at Waterloo) and extensively reviewed multiple bagels including The Worth It bagel, bacon egg and cheese, birthday cake, and apple turnover. He praised the quality, noting the hand-sliced Nova salmon and the bagel oven from 1947.",
+        "originalName": "Utopia Bagels",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "South Bank",
+        "address": null,
+        "verdict": "Best bagels in the world with exceptional quality",
+        "dishes": [
+          "The Worth It Bagel",
+          "Bacon Egg and Cheese",
+          "Birthday Cake French Toast Bagel",
+          "Apple Turnover Bagel"
+        ],
+        "confident": true,
+        "why": "Topjaw personally visited and gave detailed, enthusiastic opinions on multiple dishes at this temporary residency.",
+        "moment": "0:00",
+        "knownPlace": true,
+        "onScreen": "UTOPIA BAGELS",
+        "onScreenAt": "0:03"
+      }
+    ]
+  },
+  {
+    "videoId": "Ej7tawt68JA",
+    "title": "Dumbo is finally in London.",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "DUMBO",
+        "at": "0:04",
+        "matched": "Dumbo"
+      },
+      {
+        "text": "BEST BURGER IN PARIS",
+        "at": "0:02",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "dumbo",
+        "location": "Bethnal Green",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw visited before opening and reviewed the smash burger in detail. The Paris original that inspired many London burger places. Menu is simple: cheeseburger, French fries, and beer. Made with rib cap, dry-aged beef, chopped white onions, gherkins, American diner cheese, Martins potato rolls (specially brought from Paris), secret sauce, and double-fried chips.",
+        "originalName": "Dumbo",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Bethnal Green",
+        "address": "119 Bethnal Green Road, E2 7DG",
+        "verdict": "Best burger deserving respect, simple elegant approach.",
+        "dishes": [
+          "Cheeseburger",
+          "French fries",
+          "Beer"
+        ],
+        "confident": true,
+        "why": "Topjaw personally visited before opening, reviewed the burger in depth with the chef (Sam), and gave enthusiastic opinions on the food.",
+        "moment": "0:00",
+        "knownPlace": true,
+        "onScreen": "DUMBO",
+        "onScreenAt": "0:04"
+      }
+    ]
+  },
+  {
+    "videoId": "_u7NfNg8aKQ",
+    "title": "Mamapen the great value, delicious, Cambodian, Soho belter.",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "MAMAPEN",
+        "at": "0:01",
+        "matched": "Mamapen"
+      },
+      {
+        "text": "Cambodian restaurant",
+        "at": "0:02",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "mampen",
+        "location": "Soho",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "London's only Cambodian restaurant, residency that became permanent at 13 Cannons (or similar venue). Topjaw visited and reviewed multiple dishes including pork toast, pork belly rice, chicken curry, and pineapple curry. Praised for great value and delicious, distinctive Cambodian food with fragrant broths, spicy elements, and comfort food.",
+        "originalName": "Mamapen",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Soho",
+        "address": null,
+        "moment": "0:00",
+        "verdict": "Exceptional Cambodian dishes with incredible depth and value.",
+        "dishes": [
+          "Pork toast",
+          "Pork belly rice",
+          "Chicken curry",
+          "Pineapple curry",
+          "Lap chum (cured Chinese sausage)"
+        ],
+        "confident": true,
+        "why": "Cannot confirm exact placeId as none of the candidate places match Mama Pen/Mamapen; the venue appears to be a residency within another establishment (13 Cannons) rather than a standalone restaurant.",
+        "knownPlace": true,
+        "onScreen": "MAMAPEN",
+        "onScreenAt": "0:01"
+      }
+    ]
+  },
+  {
+    "videoId": "JEVL7IXxOrs",
+    "title": "The industry is right, Hannah's Dough Hands is pizza worth shouting about.",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "DOUGH HANDS",
+        "at": "0:06",
+        "matched": "Hannah's Dough Hands"
+      },
+      {
+        "text": "The Spurstowe Arms",
+        "at": "0:05",
+        "matched": "The Spurstowe Arms"
+      },
+      {
+        "text": "The Jod",
+        "at": "0:12",
+        "matched": null
+      },
+      {
+        "text": "Spicy Tuna",
+        "at": "0:13",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Dough Hands East",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw visits and reviews multiple pizzas here, praising the quality and design. Hannah makes pizza with 5 years of experience. Pizzas include The Jod (spicy sausage and nduja with hot honey), Spicy Tuna (with Calabrian chili), and mushroom (roasted in soy sauce, Tagantsio and garlic).",
+        "originalName": "Hannah's Dough Hands",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "moment": "0:00",
+        "verdict": "Pizza worth shouting about, expertly made.",
+        "dishes": [
+          "The Jod pizza",
+          "Spicy Tuna pizza",
+          "Mushroom pizza"
+        ],
+        "confident": true,
+        "why": "No candidate places found; may be a new or pop-up venture not yet in SCRAN.",
+        "knownPlace": true,
+        "onScreen": "DOUGH HANDS",
+        "onScreenAt": "0:06"
+      },
+      {
+        "name": "The Spurstowe Arms",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw mentions this pub serves tuna on pizza, part of normalising tuna as a pizza topping. Video description highlights this location.",
+        "originalName": "The Spurstowe Arms",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "86ba4cea20a9",
+        "area": null,
+        "address": null,
+        "moment": "0:00",
+        "verdict": "Serves tuna pizza; pushes pizza boundaries.",
+        "dishes": [
+          "Tuna pizza"
+        ],
+        "confident": false,
+        "why": "Mentioned in description and transcript but no direct on-screen review or eating shown in video; primarily mentioned as context for tuna pizza.",
+        "candidates": [
+          {
+            "id": "86ba4cea20a9",
+            "name": "The Spurstowe Arms",
+            "address": "68 Greenwood Rd, E8 1AB",
+            "metresFromPin": 0
+          }
+        ],
+        "onScreen": "The Spurstowe Arms",
+        "onScreenAt": "0:05"
+      },
+      {
+        "name": "The Old Nun's Head",
+        "location": "Peckham",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw mentions this pub (in Peckham) serves tuna on pizza. Listed in video description alongside The Spurstowe Arms.",
+        "originalName": "The Old Nuns Head",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "880a65d6a6ed",
+        "area": "Peckham",
+        "address": null,
+        "moment": null,
+        "verdict": "Serves tuna pizza; pushes pizza boundaries.",
+        "dishes": [
+          "Tuna pizza"
+        ],
+        "confident": false,
+        "why": "Mentioned in description but not directly reviewed in transcript or shown being eaten in video; primarily context for tuna pizza trend.",
+        "candidates": [
+          {
+            "id": "880a65d6a6ed",
+            "name": "Old Nunshead",
+            "address": "The Old Nun's Head, 15 Nunhead Grn, SE15 3QQ",
+            "metresFromPin": 0
+          },
+          {
+            "id": "1a2916236a1f",
+            "name": "Old Queens Head",
+            "address": "Essex Rd, IG9 5JE",
+            "metresFromPin": 18982
+          },
+          {
+            "id": "55533d8de158",
+            "name": "The Old Queens Head",
+            "address": "44 Essex Rd, N1 8LN",
+            "metresFromPin": 8508
+          },
+          {
+            "id": "9d8685bc62dc",
+            "name": "The Old King's Head",
+            "address": "Hampton Court Rd, KT 1 4",
+            "metresFromPin": 18539
+          },
+          {
+            "id": "d8c35c041971",
+            "name": "The Old Kings Head",
+            "address": "28 Holywell Row, EC2A 4JB",
+            "metresFromPin": 6635
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "videoId": "i65acG8jUew",
+    "title": "Where has Cambodian food been all our lives…?",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "Cambodian restaurant",
+        "at": "0:12",
+        "matched": null
+      },
+      {
+        "text": "The pork toast",
+        "at": "0:03",
+        "matched": null
+      },
+      {
+        "text": "Spiced to me, baby",
+        "at": "0:05",
+        "matched": null
+      },
+      {
+        "text": "Sorry soya",
+        "at": "0:06",
+        "matched": null
+      },
+      {
+        "text": "Tatty mince noodles",
+        "at": "0:07",
+        "matched": null
+      },
+      {
+        "text": "Khmer BBQ Chicken",
+        "at": "0:08",
+        "matched": null
+      },
+      {
+        "text": "Caramelised Braised Pork Belly",
+        "at": "0:14",
+        "matched": null
+      },
+      {
+        "text": "The pork toast",
+        "at": "0:16",
+        "matched": null
+      },
+      {
+        "text": "Long and sad me day",
+        "at": "0:17",
+        "matched": null
+      },
+      {
+        "text": "The long pork toast",
+        "at": "0:17",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "mampen",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Described as London's only Cambodian restaurant with enormous flavour and incredible value. Topjaw visited, ate multiple dishes and gave detailed personal opinions on the food quality, comparing flavours and textures throughout.",
+        "originalName": "Mamapen",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "moment": "0:06",
+        "verdict": "Exceptional Cambodian cooking, best new London opening.",
+        "dishes": [
+          "Panko Pork Toast",
+          "Tattie Mince Noodles",
+          "Khmer BBQ Chicken",
+          "Caramelised Braised Pork Belly"
+        ],
+        "confident": true,
+        "why": "No matching Mamapen candidate place found in the list provided; the restaurant appears to be newer or not yet indexed, though the video and transcript clearly identify it as 'mamen' (Mamapen).",
+        "knownPlace": true
+      }
+    ]
+  },
+  {
+    "videoId": "Hc1fQrbgp9k",
+    "title": "The Best Fried Chicken Spots in London - ft. 6 Spots You Must Visit",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "Chick - King",
+        "at": "0:28",
+        "matched": "Chick King"
+      },
+      {
+        "text": "BAKE STREET",
+        "at": "2:32",
+        "matched": "Bake Street"
+      },
+      {
+        "text": "SEOUL 90",
+        "at": "5:44",
+        "matched": "Seoul 90"
+      },
+      {
+        "text": "MR G",
+        "at": "11:00",
+        "matched": "Mr Ji"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Chick King",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw hasn't eaten here before but guest Lou 'wrecked it' and strongly recommends it. An institution for 41 years with 4.7 stars. Topjaw tries the wings.",
+        "originalName": "Chick King",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "f91da6bc4271",
+        "area": "Harrow",
+        "address": null,
+        "moment": "0:28",
+        "verdict": "Raw unadulterated fried chicken, delicious wings.",
+        "dishes": [
+          "Wings"
+        ],
+        "confident": false,
+        "why": "Guest recommendation heavily featured but Topjaw does eat and react to the wings; unsure if this counts as own review or guest recommendation, marking keep cautiously.",
+        "candidates": [
+          {
+            "id": "07d410556d1d",
+            "name": "Chick Inn",
+            "address": "60 Barnfield Gardens, SE18 3",
+            "metresFromPin": 9096
+          },
+          {
+            "id": "94baa8b5ffdd",
+            "name": "Chick Inn",
+            "address": "247 Hoe Street, E17 9PT",
+            "metresFromPin": 7859
+          },
+          {
+            "id": "f91da6bc4271",
+            "name": "Chick King Harrow",
+            "address": "229 Station Rd, HA1 2TB",
+            "metresFromPin": 21110
+          },
+          {
+            "id": "3ddf61dc0a2f",
+            "name": "Jin Kichi",
+            "address": "73 Heath St, NW3 6UG",
+            "metresFromPin": 10207
+          },
+          {
+            "id": "6da36ab1bf4c",
+            "name": "Main Chick",
+            "address": "325 Gray's Inn Rd, WC1X 8PX",
+            "metresFromPin": 5363
+          }
+        ],
+        "onScreen": "Chick - King",
+        "onScreenAt": "0:28"
+      },
+      {
+        "name": "Bake Street",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "A personal favorite of Topjaw. About 6.5 years old but only recently became well-known. Now popular with chefs and foodies. Topjaw eats the original chicken bun and yang yum bun.",
+        "originalName": "Bake Street",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Rectory Road, Clapton",
+        "address": null,
+        "moment": "2:26",
+        "verdict": "Crispy, fantastic chicken burger with excellent sauce.",
+        "dishes": [
+          "Original chicken bun",
+          "Yang yum bun",
+          "Fish fillet"
+        ],
+        "confident": false,
+        "why": "No candidate places found in database; cannot confirm location beyond 'near Rectory Road' in Clapton.",
+        "candidates": [],
+        "onScreen": "BAKE STREET",
+        "onScreenAt": "2:32"
+      },
+      {
+        "name": "Seoul 90",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Korean fried chicken spot at the epicenter of Shoreditch. Consistent, friendly, and busy. Topjaw tries their Korean fried chicken called 'KFC' and mini tenders.",
+        "originalName": "Seoul 90",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "fe35f61e5d82",
+        "area": "Old Street, Shoreditch",
+        "address": null,
+        "moment": "5:36",
+        "verdict": "Consistent Korean fried chicken, lovely saucy pieces.",
+        "dishes": [
+          "Korean fried chicken (KFC)",
+          "Mini tenders"
+        ],
+        "confident": true,
+        "why": "Exact address match and Topjaw visits and eats here giving personal view.",
+        "onScreen": "SEOUL 90",
+        "onScreenAt": "5:44"
+      },
+      {
+        "name": "Smoking Goat",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Thai BBQ fried chicken spot that Topjaw loves. Serves sweet and sour wings with fish sauce, coriander and shallots. Topjaw describes them as 'juicy', 'rock hard', and 'the wing to end all wings'.",
+        "originalName": "Smoking Goat",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "8128c7b55d2d",
+        "area": "Shoreditch",
+        "address": "64 Shoreditch High St, E1 6JJ",
+        "moment": "7:27",
+        "verdict": "Best wings in Shoreditch, phenomenal Thai-style fried chicken.",
+        "dishes": [
+          "Thai BBQ wings with sweet and sour fish sauce"
+        ],
+        "confident": true,
+        "why": "Exact address match and Topjaw visits and eats here giving own detailed opinion."
+      },
+      {
+        "name": "Chick 'n' Sours",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "7-year-old fried chicken and cocktails spot. Topjaw tries miso wings with seaweed cracker dusting, kung pao wings with dark soy and oyster sauce, and an iconic K-pop fried chicken sandwich with sour cream and asian slaw.",
+        "originalName": "Chick 'n Sours",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "fd0a83e267cd",
+        "area": "Covent Garden",
+        "address": null,
+        "moment": "9:13",
+        "verdict": "Certified banger, trusted spot with innovative wings.",
+        "dishes": [
+          "Miso wings with seaweed cracker",
+          "Kung pao wings",
+          "K-pop fried chicken sandwich"
+        ],
+        "confident": true,
+        "why": "Address matches first candidate place exactly and Topjaw visits and eats here giving own view."
+      },
+      {
+        "name": "Mr Ji",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Taiwanese spot recently reopened in Soho. Opened during initial lockdowns, closed, then reopened with new interior and kitchen. Topjaw tries szechuan burger (lunch item), chicken hearts, and spatchcocked baby chicken.",
+        "originalName": "Mr Ji",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Soho",
+        "address": null,
+        "moment": "10:52",
+        "verdict": "Fantastic innovative Taiwanese with flaky crispy fried chicken.",
+        "dishes": [
+          "Szechuan burger",
+          "Chicken hearts",
+          "Spatchcocked baby chicken"
+        ],
+        "confident": false,
+        "why": "No candidate places found in database; cannot confirm business identity despite clear Soho location from transcript.",
+        "candidates": [],
+        "onScreen": "MR G",
+        "onScreenAt": "11:00"
+      }
+    ]
+  },
+  {
+    "videoId": "_xbJ-4n9PCg",
+    "title": "DETROIT STYLE PIZZA IN LONDON 🍕 at Four Corners // New Openings #Shorts",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "FOUR CORNERS",
+        "at": "0:06",
+        "matched": "Four Corners"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Four Corners",
+        "location": "High Holborn",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw visited this Detroit-style pizza pop-up at High Holborn and sampled multiple pizza variations, commenting on the generous cheese content and large portion sizes. The restaurant is a 3-month pop-up (until end of March) before relocating to Barcelona.",
+        "originalName": "Four Corners",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "High Holborn",
+        "address": null,
+        "moment": "0:06",
+        "confident": false,
+        "verdict": "Detroit-style pizza with excessive, delicious cheese.",
+        "dishes": [
+          "Detroit-style pizza with cheddar and mozzarella",
+          "Sopressata, mozzarella, cheddar, chili oil and honey",
+          "Mortadella, pistachio, fresh burrata, mozzarella and cheddar"
+        ],
+        "why": "Topjaw personally visited, ate multiple pizzas and gave his own opinion, but no exact match found in candidate places (all candidates are different restaurants in different locations). The video clearly states it's under Hawksmoor in High Holborn and is a temporary pop-up.",
+        "candidates": [
+          {
+            "id": "7bc8b10923e2",
+            "name": "Four Corners Cafe",
+            "address": "12 Lower Marsh, SE1 7RJ",
+            "metresFromPin": 1964
+          },
+          {
+            "id": "b9e576878b0d",
+            "name": "Four Corners Wine Company",
+            "address": "22 Upper Ground, SE1 9PD",
+            "metresFromPin": 1363
+          },
+          {
+            "id": "e24aca92409b",
+            "name": "Food Corner",
+            "address": "418 Alexandra Ave, HA2 9TR",
+            "metresFromPin": 18519
+          },
+          {
+            "id": "2d9c2c6e4f62",
+            "name": "The Corner Cafe",
+            "address": "11- 13 London Rd, SM4 5HT",
+            "metresFromPin": 13751
+          },
+          {
+            "id": "ea4b9790343b",
+            "name": "Corner Cafe",
+            "address": "23-25A, 23-25A, 23 Waverley Rd, SE18 7TL",
+            "metresFromPin": 14232
+          }
+        ],
+        "onScreen": "FOUR CORNERS",
+        "onScreenAt": "0:06"
+      }
+    ]
+  },
+  {
+    "videoId": "F5Ba0osd-NQ",
+    "title": "Are These East London's Best Take Away Spots? Bucket List Food.",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "VICTORIA PARK",
+        "at": "6:24",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Marksman",
+        "location": "Hackney Road, E2 7SJ",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw ate hot dog, tamworth sausage, cod sandwich and hash browns. Praised the crispy cod hash browns as 'fire' with excellent texture.",
+        "originalName": "Marksman",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "513e0aa2eb92",
+        "area": "Hackney Road",
+        "address": "254 Hackney Rd, E2 7SB",
+        "moment": "0:55",
+        "verdict": "Excellent crispy cod sandwich and hash browns, approved.",
+        "dishes": [
+          "Hot dog tamworth sausage",
+          "Cod sandwich",
+          "Hash browns",
+          "Brown butter tarts"
+        ],
+        "confident": true,
+        "why": "Topjaw visited, ate, and gave clear positive opinion on the food."
+      },
+      {
+        "name": "Dom's Subs",
+        "location": "Hackney Rd, E2 7SJ",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw sampled the ham witch with pork belly, roasted peppers, turkey and tomato. Called it 'perfectly well balanced' and praised it as getting them 'through turbulent times'.",
+        "originalName": "Dom's Subs",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "64fb5f8d8168",
+        "area": "Hackney Road",
+        "address": "262 Hackney Road, E2 7SJ",
+        "moment": "2:34",
+        "verdict": "Perfectly balanced ham witch sandwich with excellent ingredients.",
+        "dishes": [
+          "Ham witch (pork belly, roasted peppers, turkey, tomato)",
+          "Sesame seed sub with pork belly"
+        ],
+        "confident": true,
+        "why": "Topjaw visited, ate, and gave detailed positive opinion on the subs."
+      },
+      {
+        "name": "Brawn",
+        "location": "Columbia Road, E2 7RG",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw ate the Nashville hot chicken sandwich. Described it as 'a heavy hitter' and 'a wig splitter' with crispy chicken thigh meat and beautiful red sauce.",
+        "originalName": "Brawn",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "c4eb70b37650",
+        "area": "Columbia Road",
+        "address": "49 Columbia Rd, E2 7RG",
+        "moment": "3:41",
+        "verdict": "Heavy-hitting Nashville hot chicken sandwich, excellent crispy edges.",
+        "dishes": [
+          "Nashville hot chicken sandwich"
+        ],
+        "confident": true,
+        "why": "Topjaw visited, ate, and gave enthusiastic positive opinion on the Nashville hot chicken."
+      },
+      {
+        "name": "Bright",
+        "location": "Westgate St, E8 3RL",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw ate the squid sandwich and praised how calamari was elevated. Noted it sells out by 2pm and said 'how can you complain' about the amount of squid packed into the bun.",
+        "originalName": "Bright",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "b1f0c6ea1fa1",
+        "area": "Westgate Street",
+        "address": "1 Westgate St, E8 3RL",
+        "moment": "4:26",
+        "verdict": "Excellent squid sandwich, sells out by 2pm daily.",
+        "dishes": [
+          "Squid sandwich (calamari)"
+        ],
+        "confident": true,
+        "why": "Topjaw visited, ate, and gave positive opinion on the squid sandwich."
+      },
+      {
+        "name": "Eld",
+        "location": "Hackney Rd, E2 9EG",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw ate the magettes (Swedish kebab) with lamb sausage, grated mozzarella and bitter yogurt. Praised Elliot's blend of Swedish roots with Neapolitan pizza. Also tried custard doughnut.",
+        "originalName": "ELD PIZZA",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Hackney Road",
+        "address": "Hackney Rd, E2 9EG",
+        "moment": "5:19",
+        "verdict": "Swedish-Neapolitan fusion pizza, excellent magettes and custard doughnuts.",
+        "dishes": [
+          "Magettes (Swedish kebab with lamb sausage, mozzarella, yogurt)",
+          "Custard doughnut"
+        ],
+        "confident": true,
+        "why": "Topjaw visited, ate, and gave positive opinion on the Swedish-Neapolitan pizza and doughnuts."
+      },
+      {
+        "name": "From the Ashes BBQ",
+        "location": "Stour Road, E3 2NT",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "From The Ashes",
+        "keep": false,
+        "reason": "not_a_place_to_eat",
+        "placeId": "e66102d4d6d2",
+        "area": "East London",
+        "address": null,
+        "moment": "6:22",
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "Victoria Park is a public park, not a restaurant or food venue - just a location where they watched the sunset.",
+        "knownPlace": true
+      }
+    ]
+  },
+  {
+    "videoId": "ozf5Eizto-E",
+    "title": "These London Restaurants Thrived During Covid. Our Lockdown Heroes",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "PARLOUR",
+        "at": "6:25",
+        "matched": "Parlour"
+      },
+      {
+        "text": "GOILA BUTTER CHICKEN",
+        "at": "9:37",
+        "matched": "Goila Butter Chicken"
+      },
+      {
+        "text": "PUB TO YOUR DOOR",
+        "at": "11:27",
+        "matched": "Pub To Your Door"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Sourdough Sophia",
+        "location": "Crouch End, N8 8PL",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw visited early on a Friday morning and profiled Sophia as a lockdown hero who started with a micro bakery from a flat dining room, ran a Kickstarter campaign, and opened her first bricks and mortar store. They tasted her baked goods including a walnut brownie.",
+        "originalName": "Sourdough Sophia",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "f2116d3c9516",
+        "area": "Crouch End",
+        "address": "24 Middle Ln, N8 8PL",
+        "moment": "1:18",
+        "verdict": "Lockdown hero adapting elegantly with quality sourdough.",
+        "dishes": [
+          "Walnut brownie"
+        ],
+        "confident": true,
+        "why": "Topjaw personally visited, ate the food, and gave their own review of Sophia and her bakery."
+      },
+      {
+        "name": "Fed By George",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "George Williams",
+        "keep": false,
+        "reason": "guest_own_place",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "moment": "3:08",
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "Fed By George is George Williams' own business, mentioned to introduce him. Topjaw ate food George prepared but it was in George's flat, not a restaurant venue."
+      },
+      {
+        "name": "Wingmans",
+        "location": "Kilburn, NW6 2QN",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw visited Wingmans and described it as one of their absolute favorites in London. They profiled the owners Ben and David as lockdown heroes who adapted with multiple brands on delivery platforms. Topjaw tasted the signature wings and soldier boys.",
+        "originalName": "Wingmans",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "360c4def57c9",
+        "area": "Kilburn",
+        "address": "332 Kilburn High Rd, NW6 2QN",
+        "moment": "5:14",
+        "verdict": "Favorite restaurant with top-tier adapted delivery wings.",
+        "dishes": [
+          "Wings (secret flour mix)",
+          "Soldier boys (Korean hot sauce with diced pineapple and pickled daikon)"
+        ],
+        "confident": true,
+        "why": "Topjaw personally visited, ate and tasted the wings and other dishes, and gave their own detailed review."
+      },
+      {
+        "name": "Parlour",
+        "location": "Kensal Green, NW10 5LG",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw visited and described Jesse as 'my lockdown hero' who set up a deli when lockdown happened. He was originally a flour supplier (150 kilos a day) and pivoted to a full deli. Topjaw ate and rated the fish and chips.",
+        "originalName": "Parlour",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "109acbbc866a",
+        "area": "Kensal Green",
+        "address": "5 Regent St, NW10 5LG",
+        "moment": "6:18",
+        "verdict": "Thrived as lockdown hero with excellent fish and chips.",
+        "dishes": [
+          "Fish and chips (crispy, gluten-free option available)"
+        ],
+        "confident": true,
+        "why": "Topjaw personally visited, ate the fish and chips, and gave their own positive review of the lockdown adaptation.",
+        "onScreen": "PARLOUR",
+        "onScreenAt": "6:25"
+      },
+      {
+        "name": "Blacklock",
+        "location": "Shoreditch, EC2A 3DZ",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw visited Blacklock and profiled Gordon (founder, ex-lawyer) as a lockdown hero. They featured the DIY kits which Topjaw has had and rated as their favorite. They also showed the production line doing 600-1000 boxes weekly, hot delivery, and tasted the burger, beef dripping chips, and mac and four cheeses.",
+        "originalName": "Blacklock",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "5dd6dc8e306f",
+        "area": "Shoreditch",
+        "address": "28-30 Rivington St, EC2A 3DZ",
+        "moment": "7:41",
+        "verdict": "Excellent lockdown adaptation with quality DIY kits.",
+        "dishes": [
+          "DIY kits",
+          "Burger",
+          "Beef dripping chips",
+          "Mac and four cheeses"
+        ],
+        "confident": false,
+        "why": "The description lists Shoreditch with EC2A 3DZ address, but the only matching candidate with good relevance is Blacklock City (EC3M). Need to verify if the Rivington St address in description is outdated or if a different Blacklock location was featured.",
+        "candidates": [
+          {
+            "id": "f02043f8880b",
+            "name": "Blacklock Restaurant",
+            "address": "5 Frobisher Psge, E14 4EE",
+            "metresFromPin": 14
+          },
+          {
+            "id": "7dfa7250cb6b",
+            "name": "Blacklock",
+            "address": "24 Great Windmill Street, W1D 7LG",
+            "metresFromPin": 7899
+          },
+          {
+            "id": "5dd6dc8e306f",
+            "name": "Blacklock City",
+            "address": "13 Philpot Lane, EC3M 8AA",
+            "metresFromPin": 4411
+          },
+          {
+            "id": "b60a9ef4a64f",
+            "name": "Black Rock",
+            "address": "9 Christopher St, EC2A 2BS",
+            "metresFromPin": 4733
+          },
+          {
+            "id": "59f6fa1c5c59",
+            "name": "The Blackstock",
+            "address": "284 Seven Sisters Rd, N4 2HY",
+            "metresFromPin": 8717
+          },
+          {
+            "id": "0bf39056c9d0",
+            "name": "The Black Lamb",
+            "address": "67 High St, SW19 5EE",
+            "metresFromPin": 16349
+          }
+        ]
+      },
+      {
+        "name": "Goila Butter Chicken",
+        "location": "Marylebone, W1U 8AB",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw visited and profiled this restaurant as a lockdown hero. They had previously eaten and filmed here but it transformed during the pandemic. Topjaw discovered how the chef infuses smoke through the butter chicken sauce using burnt coconut puree in the oven. They tasted the guava chicken and butter chicken.",
+        "originalName": "Goila Butter Chicken",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Marylebone",
+        "address": "71 Blandford Street, W1U 8AB",
+        "moment": "9:30",
+        "verdict": "Transformed lockdown hero with expertly crafted butter chicken.",
+        "dishes": [
+          "Guava chicken",
+          "Butter chicken"
+        ],
+        "confident": false,
+        "why": "No candidate places returned in the system, so placeId cannot be verified despite being a real London restaurant that Topjaw reviewed in person.",
+        "candidates": [],
+        "onScreen": "GOILA BUTTER CHICKEN",
+        "onScreenAt": "9:37"
+      },
+      {
+        "name": "Pub To Your Door",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw met with George (who ran all three restaurants at Kimpton Fishroy) who created this lockdown adaptation. It's a mobile pub experience delivered to customers' doors with pallet boards, festoon lighting, beer, cocktails on tap, and bar snacks. Topjaw tasted a pale ale and experienced the service.",
+        "originalName": "Pub To Your Door",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "moment": "11:00",
+        "verdict": "Creative lockdown hero adaptation delivering pub experience.",
+        "dishes": [
+          "Pale ale",
+          "Bar snacks",
+          "Cocktails on tap"
+        ],
+        "confident": true,
+        "why": "Topjaw personally experienced the service, tasted the beer, and gave their own review of this novel lockdown adaptation.",
+        "onScreen": "PUB TO YOUR DOOR",
+        "onScreenAt": "11:27"
+      }
+    ]
+  },
+  {
+    "videoId": "XVdcEzn_yK4",
+    "title": "We Think These Are The Best Vegan Restaurants In London, Do You?",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "MOTHER WORKS",
+        "at": "0:41",
+        "matched": "Mother"
+      },
+      {
+        "text": "CLUB MEXICANA",
+        "at": "2:44",
+        "matched": "Club Mexicana"
+      },
+      {
+        "text": "VEGAN TACOS COMING AT YOS",
+        "at": "2:58",
+        "matched": null
+      },
+      {
+        "text": "FARMACY",
+        "at": "4:21",
+        "matched": "Farmacy"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Mother Works",
+        "location": "Hackney Wick",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Started as a juice stall in Broadway Market, expanded to permanent space at Hackney Wick on the canal. Topjaw tried their vegan cheese toastty with smoky vegan cheese, tomato and pesto, and their red juice with carrot, apple, ginger and beetroot.",
+        "originalName": "Mother",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Hackney Wick",
+        "address": null,
+        "moment": "0:36",
+        "verdict": "Beautiful colour, aesthetically delicious, tastes great.",
+        "dishes": [
+          "Vegan cheese toasty",
+          "Red juice (carrot, apple, ginger, beetroot)"
+        ],
+        "confident": true,
+        "why": "Topjaw personally visited and ate food there, giving their own opinion.",
+        "onScreen": "MOTHER WORKS",
+        "onScreenAt": "0:41"
+      },
+      {
+        "name": "OoWee",
+        "location": "Dalston",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Vegan fast food restaurant. They tried the classic cheeseburger which tastes like McDonald's. Most customers are meat eaters looking to cut down consumption.",
+        "originalName": "OoWee",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Dalston",
+        "address": "Stoke Newington Road, Dalston",
+        "moment": "1:31",
+        "verdict": "Simple, delicious, tastes like real fast food.",
+        "dishes": [
+          "Classic cheeseburger",
+          "Baconator",
+          "Shrimp fries",
+          "Barbecue cotton sandwich"
+        ],
+        "confident": false,
+        "why": "The extracted name 'OoWee' doesn't match the transcript which calls it 'Ureme' (described as the sound people make when eating). Chapter title says 'Ureme'. This needs verification.",
+        "candidates": []
+      },
+      {
+        "name": "Club Mexicana",
+        "location": "Kingly Court, Soho",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Vegan Mexican restaurant at Kingly Court food court (three floors). Topjaw tried three types of tacos: al pastor with chilli-infused shawarma and charred pineapple, short rib jackfruit with barbecue sauce and slaw, and tofish tacos.",
+        "originalName": "Club Mexicana",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "2952c0128971",
+        "area": "Kingly Court, Soho",
+        "address": null,
+        "moment": "2:39",
+        "verdict": "Absolutely brilliant tacos, banging and indulgent.",
+        "dishes": [
+          "Al pastor tacos",
+          "Short rib jackfruit tacos",
+          "Tofish tacos",
+          "Margarita"
+        ],
+        "confident": true,
+        "why": "Topjaw personally visited and ate multiple dishes there, giving their own opinion.",
+        "onScreen": "CLUB MEXICANA",
+        "onScreenAt": "2:44"
+      },
+      {
+        "name": "Farmacy",
+        "location": "Notting Hill",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Has their own plot of land where they grow most ingredients. Super sustainable, chemical-free. Topjaw had been before but this was Will's first visit. They tried mushroom burger, sweet potato fries, vegetable lasagna, and a winter bowl with beetroot hummus, kale Caesar salad and falafel.",
+        "originalName": "Farmacy",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "574a97acdb20",
+        "area": "Notting Hill",
+        "address": null,
+        "moment": "4:22",
+        "verdict": "Fantastic ingredients, brilliant food, sustainable.",
+        "dishes": [
+          "Mushroom burger",
+          "Sweet potato fries",
+          "Vegetable lasagna",
+          "Popcorn cauliflower",
+          "Falafel",
+          "Beetroot hummus",
+          "Winter bowl"
+        ],
+        "confident": true,
+        "why": "Topjaw personally visited and ate food there, giving their own opinion.",
+        "onScreen": "FARMACY",
+        "onScreenAt": "4:21"
+      },
+      {
+        "name": "CookDaily",
+        "location": "Boxpark, Shoreditch",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Vegan Asian restaurant at Boxpark. Owner King Cook is from Laos (next to Thailand). Focuses on Asian flavors. Topjaw tried their vegan pad Thai chicken and said it's the best vegan chicken available.",
+        "originalName": "CookDaily",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "94e011bc5c88",
+        "area": "Boxpark, Shoreditch",
+        "address": null,
+        "moment": "6:25",
+        "verdict": "Best vegan chicken you can get, genuine, so much flavour.",
+        "dishes": [
+          "Vegan pad Thai chicken",
+          "Bibimbap chicken bowl",
+          "Tofu bowl"
+        ],
+        "confident": true,
+        "why": "Topjaw personally visited and ate food there, giving their own opinion."
+      },
+      {
+        "name": "Eat Chay",
+        "location": "Boxpark, Shoreditch",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Eat Chay",
+        "keep": false,
+        "reason": "only_mentioned",
+        "placeId": null,
+        "area": "Boxpark, Shoreditch",
+        "address": null,
+        "moment": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "Extracted from description but not featured in the video; not visited or reviewed by Topjaw."
+      },
+      {
+        "name": "Purezza",
+        "location": "Camden",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Vegan Italian pizzeria. Customers choose from three bases: hemp, whole wheat or gluten-free. Pizzas named like Friends episodes. Topjaw tried 'The One with the Pesto' and 'All of the Seasons'. Makes their own rice-based mozzarella.",
+        "originalName": "Purezza",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "65cdc013c29c",
+        "area": "Camden",
+        "address": null,
+        "moment": "8:31",
+        "verdict": "Rice-based mozzarella is excellent; smashed it.",
+        "dishes": [
+          "The One with the Pesto pizza",
+          "All of the Seasons pizza (beetroot and artichoke)"
+        ],
+        "confident": true,
+        "why": "Topjaw personally visited and ate pizza there, giving their own opinion."
+      },
+      {
+        "name": "Temple of Seitan",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Seitan (water and wheat) restaurant with high protein, low carb, chewy texture. Started by Rebecca and Patrick from Melbourne; Rebecca worked in KFC before creating vegan version. Topjaw tried their buffalo chicken wing with blue cheese and sour cream sauce.",
+        "originalName": "Temple of Seitan",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "06eab00439ad",
+        "area": "Camden",
+        "address": null,
+        "moment": "9:50",
+        "verdict": "Really good, got some zing to it.",
+        "dishes": [
+          "Buffalo chicken wing (seitan)"
+        ],
+        "confident": false,
+        "why": "Unsure which Temple of Seitan location (there are multiple); likely Camden based on proximity to Purezza but address needs verification.",
+        "candidates": [
+          {
+            "id": "8a0b1b47a362",
+            "name": "Temple of Seitan",
+            "address": "43 Parkway, NW1 7PN"
+          },
+          {
+            "id": "06eab00439ad",
+            "name": "Temple of Seitan",
+            "address": "103a Camley Street, N1C 4"
+          },
+          {
+            "id": "1d01a3151bd3",
+            "name": "Temple Of Seitan",
+            "address": "11 Goods Way, N1C 4DP"
+          },
+          {
+            "id": "6d20804af171",
+            "name": "Temple of Seitan",
+            "address": "10 Morning Ln, E9 6NA"
+          },
+          {
+            "id": "5915c586d9bb",
+            "name": "Temple Of Seitan",
+            "address": "London, E1 5QU"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "videoId": "YKdwsDL5cGs",
+    "title": "GUIDE TO PECKHAM with Uber Eats",
+    "sponsored": true,
+    "graphics": [
+      {
+        "text": "LORDS OF POKE",
+        "at": "3:12",
+        "matched": "Lords Of Poké"
+      },
+      {
+        "text": "DRUMS & FLATS",
+        "at": "4:13",
+        "matched": "Drums & Flats"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Pedler",
+        "location": "Peckham",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Early morning stop. Head chef previously worked at Rules. Topjaw tried the Frizzle Chicken and a steak sandwich with mayo on brioche.",
+        "originalName": "Pedler",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "b721bd0ee04b",
+        "area": "Peckham",
+        "address": "58 Peckham Rye, SE15 4JR",
+        "moment": "0:25",
+        "verdict": "Frizzle chicken impressive; steak sandwich essential.",
+        "dishes": [
+          "Frizzle Chicken",
+          "Steak Sandwich"
+        ],
+        "confident": true,
+        "why": "Topjaw personally visited and gave their own detailed review of the food and restaurant."
+      },
+      {
+        "name": "Nandine",
+        "location": "Peckham",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Kurdish restaurant run by a hard-working family; mom is the cook, sons handle business and marketing, dad designed the interior. Topjaw tried the Seven Spice Chicken Shawarma Sandwich and praised the vibrant food.",
+        "originalName": "Nandine",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "caceda7644e9",
+        "area": "Peckham",
+        "address": "82 Vestry Rd, SE5 8PQ",
+        "moment": "2:03",
+        "verdict": "Vibrant Kurdish food; family-run gem.",
+        "dishes": [
+          "Seven Spice Chicken Shawarma Sandwich"
+        ],
+        "confident": true,
+        "why": "Topjaw personally visited, ate there, and gave their own opinion of the food and the restaurant's story."
+      },
+      {
+        "name": "Lords of Poké",
+        "location": "Peckham",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Located in Peckham Levels, a multi-use community space with offices, studios, and food places. Topjaw had the Large Classic Tuna Bowl and noted the fat chunks of tuna.",
+        "originalName": "Lords Of Poké",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "e1fff88ebdd7",
+        "area": "Peckham Levels",
+        "address": null,
+        "moment": "2:39",
+        "verdict": "Quality tuna chunks; solid poké bowl.",
+        "dishes": [
+          "Large Classic Tuna Bowl"
+        ],
+        "confident": false,
+        "why": "The candidate place address (W2, King's Cross) doesn't match the Peckham Levels location stated in the video description and chapters; this may be the wrong branch or the placeId may be incorrect.",
+        "candidates": [
+          {
+            "id": "e1fff88ebdd7",
+            "name": "Lords of Poké",
+            "address": "2 Kingdom Street, W2 6BD",
+            "metresFromPin": 0
+          }
+        ],
+        "onScreen": "LORDS OF POKE",
+        "onScreenAt": "3:12"
+      },
+      {
+        "name": "Drums & Flats",
+        "location": "Peckham",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Described as a bit of a trek. Topjaw had Tangy Buffalo Wings with blue cheese sauce and spicy barbecue.",
+        "originalName": "Drums & Flats",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Peckham",
+        "address": null,
+        "moment": "4:12",
+        "verdict": "Tangy buffalo wings with blue cheese sauce.",
+        "dishes": [
+          "5 Tangy Buffalo Wings"
+        ],
+        "confident": false,
+        "why": "No candidate place provided; address and exact location in Peckham unknown; the on-screen graphic confirms the name but placeId cannot be verified.",
+        "candidates": [],
+        "onScreen": "DRUMS & FLATS",
+        "onScreenAt": "4:13"
+      }
+    ]
+  },
+  {
+    "videoId": "soyqQluj32A",
+    "title": "THE BEST VEGAN RESTAURANTS IN LONDON",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "MOOSHIES",
+        "at": "2:03",
+        "matched": "Mooshies"
+      },
+      {
+        "text": "YOUNG VEGANS",
+        "at": "3:24",
+        "matched": "Young Vegans"
+      },
+      {
+        "text": "CLUB MEXICANA",
+        "at": "4:19",
+        "matched": "Club Mexicana"
+      },
+      {
+        "text": "CHIN CHIN",
+        "at": "5:13",
+        "matched": "Chin Chin"
+      },
+      {
+        "text": "CAFE VAN GOGH",
+        "at": "6:08",
+        "matched": "Cafe Van Gogh"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Gallery Cafe",
+        "location": "Bethnal Green, East London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Buddhist vegetarian café converted to completely vegan. Three years in a row One Time Out's best café in Bethnal Green. Topjaw tried their vegan full English breakfast with tofu scrambled eggs, beans, sausages, kale, roasted mushrooms and hash browns. Profits go to charity.",
+        "originalName": "Gallery Cafe",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "fd609fc1726d",
+        "area": "Bethnal Green, East London",
+        "address": null,
+        "moment": "0:42",
+        "verdict": "Excellent vegan full English breakfast, feels great to support charity.",
+        "dishes": [
+          "Potato Rostis (£8.75)",
+          "Vegan Full English Breakfast"
+        ],
+        "confident": true,
+        "why": "Topjaw visited and ate there, giving their own review. Chapter title and description confirm location and name."
+      },
+      {
+        "name": "Mooshies",
+        "location": "Brick Lane, East London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Owned by boyfriend/girlfriend duo. Vegan burger restaurant. Topjaw tried their plant-based burgers including chickpea bites with sweet chili sauce and deep fried aubergine 'beef' that smelled like a Big Mac. Owners wanted to provide vegan alternatives for things vegans miss like Big Macs and fillet fish burgers.",
+        "originalName": "Mooshies",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Brick Lane, East London",
+        "address": null,
+        "moment": "1:56",
+        "verdict": "Excellent vegan burgers that taste like the real thing.",
+        "dishes": [
+          "What's Your Beef (£7.50)",
+          "Chickpea Bites",
+          "Deep Fried Aubergine 'Beef'"
+        ],
+        "confident": false,
+        "why": "Graphics clearly show 'MOOSHIES' but no matching candidate found on Brick Lane. The only candidate (Moosh, SW6) appears to be different location/branch or wrong place entirely.",
+        "candidates": [
+          {
+            "id": "4c0314460c5d",
+            "name": "Moosh",
+            "address": "17 Jerdan Pl, SW6 1BE"
+          }
+        ],
+        "onScreen": "MOOSHIES",
+        "onScreenAt": "2:03"
+      },
+      {
+        "name": "Young Vegans",
+        "location": "Camden, North London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Vegan restaurant with stall at Camden Market and permanent space opened about four months ago. Topjaw tried their Seitan & Ale Pie (vegan steak with red wine gravy, mash, crispy onions) and peanut butter and chocolate pies.",
+        "originalName": "Young Vegans",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "8c134714934e",
+        "area": "Camden Market, North London",
+        "address": null,
+        "moment": "3:17",
+        "verdict": "Delicious, cheap vegan pies with excellent fillings.",
+        "dishes": [
+          "Seitan & Ale Pie (£7)",
+          "Curry Pie",
+          "Shepherd's Pie",
+          "Breakfast Pie",
+          "Peanut Butter & Chocolate Pie"
+        ],
+        "confident": true,
+        "why": "Topjaw visited and ate there. Graphics show 'YOUNG VEGANS'. The candidate 'M'eat The Vegans' at Camden Stables Market matches location perfectly.",
+        "onScreen": "YOUNG VEGANS",
+        "onScreenAt": "3:24"
+      },
+      {
+        "name": "Club Mexicana",
+        "location": "Camden Market, North London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Vegan Mexican restaurant at Camden Market with other London locations. Topjaw tried their Beer Battered Fish Tacos with vegan sour cream. Graphics say can't film inside as vendors get protective.",
+        "originalName": "Club Mexicana",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "1978c9762f53",
+        "area": "Camden Market, North London",
+        "address": null,
+        "moment": "4:04",
+        "verdict": "Great vegan tacos with excellent vegan sour cream topping.",
+        "dishes": [
+          "Beer Battered To-Fish Tacos (£7)",
+          "Vegan Ice Cream",
+          "Beetroot Sorbet"
+        ],
+        "confident": true,
+        "why": "Topjaw visited and ate there. Graphics clearly show 'CLUB MEXICANA'. Multiple candidates exist; the Commercial St location is likely based on proximity to Camden area.",
+        "onScreen": "CLUB MEXICANA",
+        "onScreenAt": "4:19"
+      },
+      {
+        "name": "Chin Chin Dessert Club",
+        "location": "Camden, North London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Vegan ice cream and frozen desserts shop in Camden. Uses liquid nitrogen to freeze desserts. Topjaw tried their vegan hot chocolate and beetroot sorbet.",
+        "originalName": "Chin Chin",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "fa232a6f223d",
+        "area": "Camden, North London",
+        "address": null,
+        "moment": "5:13",
+        "verdict": "Amazing innovative vegan frozen desserts made with liquid nitrogen.",
+        "dishes": [
+          "Vegan Hot Chocolate (£3.25)",
+          "Beetroot Sorbet"
+        ],
+        "confident": true,
+        "why": "Topjaw visited and ate there. Graphics show 'CHIN CHIN'. Chin Chin Labs at Camden Lock Place is the right location (ice cream shop at this venue).",
+        "knownPlace": true,
+        "onScreen": "CHIN CHIN",
+        "onScreenAt": "5:13"
+      },
+      {
+        "name": "Cafe Van Gogh",
+        "location": "Brixton, South London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Vegan café in Brixton (previously vegetarian, fully vegan as of last year). Non-profit - all profits go to community projects in the area. Topjaw tried their Sticky Seitan Ribs (seitan with homemade barbecue sauce), mac and cheese made with butternut squash and cashew cream.",
+        "originalName": "Cafe Van Gogh",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "564feeb88d07",
+        "area": "Brixton, South London",
+        "address": "88 Brixton Road, SW9 6BE",
+        "moment": "6:15",
+        "verdict": "Excellent vegan ribs and mac and cheese; feels great supporting non-profit.",
+        "dishes": [
+          "Sticky Seitan Ribs (£10.95)",
+          "Mac and Cheese (butternut squash & cashew cream)"
+        ],
+        "confident": true,
+        "why": "Topjaw visited and ate there. Graphics show 'CAFE VAN GOGH'. Address and candidate place match perfectly.",
+        "onScreen": "CAFE VAN GOGH",
+        "onScreenAt": "6:08"
+      }
+    ]
+  },
+  {
+    "videoId": "uDWzMUbdg6c",
+    "title": "LONDON CHEAP EATS - SOHO Meals Under £8",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "PATATAS BRAVAS WITH KING PRAWNS £7.95",
+        "at": "2:31",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Misato",
+        "location": "Soho",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw is impressed with the Chicken Katsu Curry, noting it tastes fresher than Wagamama. He appreciated the generous portion and the staff's friendliness.",
+        "originalName": "Misato",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "55ef1f507e5e",
+        "area": null,
+        "address": null,
+        "moment": "0:36",
+        "verdict": "Excellent katsu curry, fresher than Wagamama, great value at £6.",
+        "dishes": [
+          "Chicken Katsu Curry"
+        ],
+        "confident": true,
+        "why": "Topjaw visited, ate the food and gave his own positive opinion."
+      },
+      {
+        "name": "Bake",
+        "location": "Soho",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw and Will visit the Chinese bakery next to Misato. They praise the buns for being big, shiny and beautiful. Will tries a BBQ pork bun and gives positive feedback, calling it a 'surefire lunchtime snack.'",
+        "originalName": "Bake",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Chinatown, Soho",
+        "address": null,
+        "moment": "1:33",
+        "verdict": "Beautiful big buns, excellent value at £1.30, great lunchtime snack.",
+        "dishes": [
+          "BBQ Pork Bun"
+        ],
+        "confident": false,
+        "why": "No candidate places found for 'Bake' in Soho/Chinatown area; uncertain if this is the correct name or placeId.",
+        "candidates": []
+      },
+      {
+        "name": "Carbon",
+        "location": "Soho",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw describes Carbon as 'the best smelling grill house ever.' They try the Patatas Bravas with King Prawns and Topjaw raves that it's 'the best patatas bravas I've had since Barcelona.' Will also confirms the prawns are really good, fresh and not too spicy.",
+        "originalName": "Carbon",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "moment": "2:09",
+        "verdict": "Best patatas bravas since Barcelona, fresh prawns, exceptional at £7.95.",
+        "dishes": [
+          "Patatas Bravas with King Prawns"
+        ],
+        "confident": false,
+        "why": "The candidate places (Carbon Kopi, Carbobar, Leños and Carbon) don't appear to be a grill house in central Soho matching the video description; the correct placeId is uncertain.",
+        "candidates": [
+          {
+            "id": "ddf03201bb18",
+            "name": "Carbon Kopi",
+            "address": "11 Margravine Rd, W6 8LS"
+          },
+          {
+            "id": "b3933b199707",
+            "name": "Carbon Kopi",
+            "address": "1 Hazlebury Rd, SW6 2NA"
+          },
+          {
+            "id": "90caee7e092b",
+            "name": "Carbobar",
+            "address": "130 Cadogan Terrace, E9 5"
+          },
+          {
+            "id": "7d338dab4c88",
+            "name": "Leños and Carbon",
+            "address": "113c Elephant Rd, SE17 1LB"
+          },
+          {
+            "id": "2f0822a639af",
+            "name": "The Carbon Lounge",
+            "address": "Watford FC Vicarage Road, WD18 0ER"
+          }
+        ]
+      },
+      {
+        "name": "The Pie Shop",
+        "location": "Soho",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw and Will find a pie shop in Covent Garden (they mention being 'in common garden right in the middle of Covent'). They order the most popular pie—Steak and Stout—and Topjaw expresses his love of pie, finding it a substantial meal for £6.75 that fits under the £8 budget.",
+        "originalName": "The Pie Shop",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Covent Garden",
+        "address": null,
+        "moment": "2:59",
+        "verdict": "Great pie, substantial meal, excellent value at £6.75.",
+        "dishes": [
+          "Steak and Stout Pie"
+        ],
+        "confident": false,
+        "why": "The name 'The Pie Shop' is inferred from the chapter title 'Fat Pie' and video context, but the actual restaurant name is unclear; candidate places don't match Covent Garden location.",
+        "candidates": [
+          {
+            "id": "2d19d3eb3595",
+            "name": "Heath Pie Shop",
+            "address": ""
+          },
+          {
+            "id": "3232c2f1b7f8",
+            "name": "The Pie & Mash Shop",
+            "address": "4 Spital St, DA1 2DL"
+          }
+        ]
+      },
+      {
+        "name": "Home Slice",
+        "location": "Soho",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw and Will visit Home Slice in Covent Garden and try large pizza slices. Topjaw is enthusiastic about the huge 20-inch pizzas and £4 slices, calling it an excellent cheap eat. They try a Margherita and mushroom slice.",
+        "originalName": "Home Slice",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "42cf540e7ab3",
+        "area": null,
+        "address": null,
+        "moment": "3:51",
+        "verdict": "Huge quality pizza slices, excellent value at £4.",
+        "dishes": [
+          "Margherita and Mushroom slice"
+        ],
+        "confident": true,
+        "why": "Topjaw visited, ate the pizza and gave positive opinions. Home Slice at Neal's Yard is the well-known London pizza chain matching the description."
       }
     ]
   }

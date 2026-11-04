@@ -165,6 +165,10 @@ function buildHtml(items) {
   .result:hover { background: #f0ede8; }
   .result span { color: #666; font-size: 0.75rem; }
   .google-note { font-size: 0.72rem; color: #888; margin-top: 4px; }
+  .google-flag { display: inline-block; margin-top: 6px; padding: 3px 9px; border-radius: 10px; font-size: 0.75rem; font-weight: 600; }
+  .google-flag[hidden] { display: none; }
+  .google-flag.agrees { background: #e6f6ec; color: #1e7a45; }
+  .google-flag.missing { background: #fdf0e1; color: #a35a00; }
   .loc-status { display: block; font-size: 0.72rem; font-weight: 600; margin-top: 4px; }
   .option[hidden] { display: none; }
 
@@ -216,7 +220,8 @@ function save() { try { localStorage.setItem(STORE, JSON.stringify(state)); } ca
 
 const DROP_REASONS = {
   guest_recommendation: 'A guest’s pick', guest_own_place: 'Guest’s own place', only_mentioned: 'Only mentioned',
-  event_stall: 'Their own event', not_london: 'Not London', not_a_place_to_eat: 'Not a place to eat', other: 'Other',
+  event_stall: 'Their own event', closed: 'Closed now', temporary: 'Pop-up / temporary stall',
+  not_london: 'Not London', not_a_place_to_eat: 'Not a place to eat', other: 'Other',
 };
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 const mapLink = o => 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(o.name + ', ' + (o.address || 'London'));
@@ -358,6 +363,7 @@ function buildCard(r, n) {
       <div class="options-label">Which place is it?</div>
       <div data-options>\${optionsHtml || '<div class="option-address" data-empty>No matches found. Type the name below.</div>'}</div>
       <div class="google-note" data-google-note></div>
+      <div class="google-flag" data-google-flag hidden></div>
     </div>
     <div class="search">
       <div class="options-label">Not right? Type the name</div>
@@ -473,7 +479,12 @@ function buildCard(r, n) {
         select(added[best]);
         suggested = sources[added[best]];
       }
-      if (agrees) note.textContent += ' · Google agrees with Claude’s guess';
+      // Google and Claude agreeing has always been the right place; Google finding nothing
+      // with the name is a sign the place has closed or was only a temporary stall
+      const flag = card.querySelector('[data-google-flag]');
+      const named = places.some(p => nameFit(names, p.name) > 0);
+      if (agrees) Object.assign(flag, { hidden: false, className: 'google-flag agrees', textContent: '✓ Google agrees with Claude’s place' });
+      else if (!named) Object.assign(flag, { hidden: false, className: 'google-flag missing', textContent: 'Google can’t find this: may be closed or a temporary stall' });
     } catch (e) { note.textContent = e.message; }
   };
 

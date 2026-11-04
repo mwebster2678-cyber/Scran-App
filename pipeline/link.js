@@ -71,7 +71,9 @@ const soundKey = w => w
 // How alike two names are in spelling or in sound (0–1), comparing their distinctive
 // words: "SAEL ROAST DINING" / "Seal" is high, "MOTHER WORKS" / "OoWee" is 0
 export function soundsLike(a, b) {
-  const wa = distinctive(a).filter(w => !LOOSE.has(w)), wb = distinctive(b).filter(w => !LOOSE.has(w));
+  // Names made only of everyday words ("Bake Street") are compared on those words
+  const key = s => { const d = distinctive(s).filter(w => !LOOSE.has(w)); return d.length ? d : words(s).filter(w => w !== 'the' && w !== 'and'); };
+  const wa = key(a), wb = key(b);
   if (!wa.length || !wb.length) return 0;
   const joined = (ws, f = w => w) => ws.map(f).join('');
   // Whole names, and the best single pair of words (a graphic can carry extra words)

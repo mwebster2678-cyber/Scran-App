@@ -1,1031 +1,2876 @@
 [
-  {
-    "creator": "tod",
-    "videoId": "Og6wRgMZyaQ",
-    "originalName": "Seal",
-    "keep": true,
-    "name": "Sael",
-    "placeId": null,
-    "lat": 51.5088908,
-    "lon": -0.1332191,
-    "address": null,
-    "manual": "Sael",
-    "mapLink": "https://www.google.com/maps/place/Sael+London/@51.5088908,-0.1332191,707m/data=!3m2!1e3!4b1!4m6!3m5!1s0x48760587d0c27927:0xe90779f23b32bcb5!8m2!3d51.5088908!4d-0.1332191!16s%2Fg%2F11ln1fd9ng!5m1!1e2?entry=ttu&g_ep=EgoyMDI2MTAyNy4wIKXMDSoASAFQAw%3D%3D"
+ {
+  "creator": "tod",
+  "videoId": "Og6wRgMZyaQ",
+  "originalName": "Seal",
+  "keep": true,
+  "name": "Sael",
+  "placeId": null,
+  "lat": 51.5088908,
+  "lon": -0.1332191,
+  "address": null,
+  "manual": "Sael",
+  "mapLink": "https://www.google.com/maps/place/Sael+London/@51.5088908,-0.1332191,707m/data=!3m2!1e3!4b1!4m6!3m5!1s0x48760587d0c27927:0xe90779f23b32bcb5!8m2!3d51.5088908!4d-0.1332191!16s%2Fg%2F11ln1fd9ng!5m1!1e2?entry=ttu&g_ep=EgoyMDI2MTAyNy4wIKXMDSoASAFQAw%3D%3D"
+ },
+ {
+  "creator": "tod",
+  "videoId": "nxUM-snBFt4",
+  "originalName": "Black Bear",
+  "keep": true,
+  "name": "Black Bear Burger",
+  "placeId": "50ceed44bfb8",
+  "lat": 51.46185,
+  "lon": -0.11325,
+  "address": "11, 13A Market Row, SW9 8LB",
+  "manual": null
+ },
+ {
+  "creator": "tod",
+  "videoId": "nxUM-snBFt4",
+  "originalName": "Fletchers",
+  "area": null,
+  "claude": {
+   "keep": false,
+   "reason": "only_mentioned",
+   "name": "Fletchers",
+   "placeId": null
   },
-  {
-    "creator": "tod",
-    "videoId": "nxUM-snBFt4",
-    "originalName": "Black Bear",
-    "keep": true,
-    "name": "Black Bear Burger",
-    "placeId": "50ceed44bfb8",
-    "lat": 51.46185,
-    "lon": -0.11325,
-    "address": "11, 13A Market Row, SW9 8LB",
-    "manual": null
+  "suggested": null,
+  "spot": false,
+  "keep": false,
+  "dropReason": "only_mentioned"
+ },
+ {
+  "creator": "tod",
+  "videoId": "hA2zqOZxuVo",
+  "originalName": "Abe",
+  "keep": true,
+  "name": "Ibai",
+  "placeId": null,
+  "lat": 51.5177979,
+  "lon": -0.0989976,
+  "address": null,
+  "manual": "Ibai",
+  "mapLink": "https://www.google.com/maps/place/Ibai/@51.5179565,-0.099415,138m/data=!3m1!1e3!4m6!3m5!1s0x48761b6d13447a93:0x14b179f97bd82d79!8m2!3d51.5177979!4d-0.0989976!16s%2Fg%2F11w1hzs46k!5m1!1e2?entry=ttu&g_ep=EgoyMDI2MTAyNy4wIKXMDSoASAFQAw%3D%3D"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "n4Uwuho1HjU",
+  "originalName": "Vincenzo's",
+  "keep": true,
+  "name": "Vincenzo",
+  "placeId": null,
+  "lat": 51.5248524,
+  "lon": -0.0713985,
+  "address": null,
+  "manual": "Vincenzo",
+  "mapLink": "https://www.google.com/maps/place/Vincenzo's+Pizza/@51.5222483,-0.0811366,2085m/data=!3m1!1e3!4m10!1m2!2m1!1sVincenzo,+London!3m6!1s0x48761d0c9d199073:0x2b8d353f65e117c6!8m2!3d51.5248524!4d-0.0713985!15sChBWaW5jZW56bywgTG9uZG9uWhEiD3ZpbmNlbnpvIGxvbmRvbpIBEHBpenphX3Jlc3RhdXJhbnSaAURDaTlEUVVsUlFVTnZaRU5vZEhsalJqbHZUMjVXZVdKV2JGbFVSbEpYVFRGU1ZsWnVRbUZaVjJSV1ZIcFJNMkpXUlJBQuABAPoBBAgAEEU!16s%2Fg%2F11yn38425f?entry=ttu&g_ep=EgoyMDI2MTAyNy4wIKXMDSoASAFQAw%3D%3D"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "RdGAqs9iwGo",
+  "originalName": "The George Public House",
+  "keep": true,
+  "name": "The George",
+  "placeId": "268534aae1df",
+  "lat": 51.51764,
+  "lon": -0.14185,
+  "address": "55 Great Portland St, W1W 7LQ",
+  "manual": null
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "RdGAqs9iwGo",
+  "originalName": "SHEBA",
+  "keep": true,
+  "name": "Sheba Brick Lane - Awarded Best Curry House In UK",
+  "placeId": null,
+  "lat": 51.5206625,
+  "lon": -0.07171269999999999,
+  "address": "136 Brick Ln, London E1 6RU",
+  "manual": null
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "RdGAqs9iwGo",
+  "originalName": "NIJŪ",
+  "keep": true,
+  "name": "NIJŪ",
+  "placeId": null,
+  "lat": 51.508992799999994,
+  "lon": -0.1438217,
+  "address": "20 Berkeley St, London W1J 8EE",
+  "manual": null
+ },
+ {
+  "creator": "tod",
+  "videoId": "EnTsdLW3k3s",
+  "originalName": "Acador",
+  "area": "Camden Market",
+  "claude": {
+   "keep": true,
+   "name": "Asador",
+   "placeId": null
   },
-  {
-    "creator": "tod",
-    "videoId": "nxUM-snBFt4",
-    "originalName": "Fletchers",
-    "area": null,
-    "claude": {
-      "keep": false,
-      "reason": "only_mentioned",
-      "name": "Fletchers",
-      "placeId": null
-    },
-    "suggested": null,
-    "spot": false,
-    "keep": false,
-    "dropReason": "only_mentioned"
+  "suggested": "google",
+  "keep": true,
+  "name": "#AsadorCamden",
+  "placeId": null,
+  "lat": 51.5423836,
+  "lon": -0.1473842,
+  "address": "Stables Yard West Yard, 8AH, Chalk Farm Rd, Chalk Farm, London NW1 0LU",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "tod",
+  "videoId": "EnTsdLW3k3s",
+  "originalName": "Peckish Burgers",
+  "area": "Camden Market",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Peckish Burgers",
+   "placeId": null
   },
-  {
-    "creator": "tod",
-    "videoId": "hA2zqOZxuVo",
-    "originalName": "Abe",
-    "keep": true,
-    "name": "Ibai",
-    "placeId": null,
-    "lat": 51.5177979,
-    "lon": -0.0989976,
-    "address": null,
-    "manual": "Ibai",
-    "mapLink": "https://www.google.com/maps/place/Ibai/@51.5179565,-0.099415,138m/data=!3m1!1e3!4m6!3m5!1s0x48761b6d13447a93:0x14b179f97bd82d79!8m2!3d51.5177979!4d-0.0989976!16s%2Fg%2F11w1hzs46k!5m1!1e2?entry=ttu&g_ep=EgoyMDI2MTAyNy4wIKXMDSoASAFQAw%3D%3D"
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "Peckish Burgers | Camden",
+  "placeId": null,
+  "lat": 51.5411461,
+  "lon": -0.1460696,
+  "address": "KERB Camden Market The West Yard, London NW1 8AF",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "tod",
+  "videoId": "RvAbVo7WRYg",
+  "originalName": "Schwamaha",
+  "area": null,
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Schwamaha",
+   "placeId": null
   },
-  {
-    "creator": "topjaw",
-    "videoId": "n4Uwuho1HjU",
-    "originalName": "Vincenzo's",
-    "keep": true,
-    "name": "Vincenzo",
-    "placeId": null,
-    "lat": 51.5248524,
-    "lon": -0.0713985,
-    "address": null,
-    "manual": "Vincenzo",
-    "mapLink": "https://www.google.com/maps/place/Vincenzo's+Pizza/@51.5222483,-0.0811366,2085m/data=!3m1!1e3!4m10!1m2!2m1!1sVincenzo,+London!3m6!1s0x48761d0c9d199073:0x2b8d353f65e117c6!8m2!3d51.5248524!4d-0.0713985!15sChBWaW5jZW56bywgTG9uZG9uWhEiD3ZpbmNlbnpvIGxvbmRvbpIBEHBpenphX3Jlc3RhdXJhbnSaAURDaTlEUVVsUlFVTnZaRU5vZEhsalJqbHZUMjVXZVdKV2JGbFVSbEpYVFRGU1ZsWnVRbUZaVjJSV1ZIcFJNMkpXUlJBQuABAPoBBAgAEEU!16s%2Fg%2F11yn38425f?entry=ttu&g_ep=EgoyMDI2MTAyNy4wIKXMDSoASAFQAw%3D%3D"
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "Shawarma Hut",
+  "placeId": "db1e85e0d7d3",
+  "lat": 51.48701,
+  "lon": -0.09534,
+  "address": "292b Walworth Rd, SE17 2TE",
+  "manual": null,
+  "source": "search"
+ },
+ {
+  "creator": "tod",
+  "videoId": "qpOZUNUdrko",
+  "originalName": "Shwamaha",
+  "area": "South London",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Shwamaha",
+   "placeId": null
   },
-  {
-    "creator": "topjaw",
-    "videoId": "RdGAqs9iwGo",
-    "originalName": "The George Public House",
-    "keep": true,
-    "name": "The George",
-    "placeId": "268534aae1df",
-    "lat": 51.51764,
-    "lon": -0.14185,
-    "address": "55 Great Portland St, W1W 7LQ",
-    "manual": null
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "Shawarma Hut",
+  "placeId": "db1e85e0d7d3",
+  "lat": 51.48701,
+  "lon": -0.09534,
+  "address": "292b Walworth Rd, SE17 2TE",
+  "manual": null,
+  "source": "search"
+ },
+ {
+  "creator": "tod",
+  "videoId": "wGptiu_Uboo",
+  "originalName": "Breadto",
+  "area": "Clapham",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Bread & Stall",
+   "placeId": null
   },
-  {
-    "creator": "topjaw",
-    "videoId": "RdGAqs9iwGo",
-    "originalName": "SHEBA",
-    "keep": true,
-    "name": "Sheba Brick Lane - Awarded Best Curry House In UK",
-    "placeId": null,
-    "lat": 51.5206625,
-    "lon": -0.07171269999999999,
-    "address": "136 Brick Ln, London E1 6RU",
-    "manual": null
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "breadstall",
+  "placeId": null,
+  "lat": 51.5134357,
+  "lon": -0.134899,
+  "address": null,
+  "manual": "breadstall",
+  "mapLink": "https://www.google.com/maps/place/Breadstall+Pizza/@51.5134357,-0.2111624,12754m/data=!3m2!1e3!5s0x487605269b15d107:0x2fe0eaf458411818!4m10!1m2!2m1!1sbreadstall,+London!3m6!1s0x487605e4651e6389:0x1db3d4b2da5877bd!8m2!3d51.5134357!4d-0.134899!15sChJicmVhZHN0YWxsLCBMb25kb25aEyIRYnJlYWRzdGFsbCBsb25kb26SARBwaXp6YV9yZXN0YXVyYW50mgFEQ2k5RFFVbFJRVU52WkVOb2RIbGpSamx2VDJ0T1dWSXdlR2hrVnpGcVpHdGFSRmxZVG5salZGVjVWRzFTU2xOWFl4QULgAQD6AQQIABBF!16s%2Fg%2F11wxmjy40h?entry=ttu&g_ep=EgoyMDI2MTAyOC4wIKXMDSoASAFQAw%3D%3D",
+  "source": "maplink"
+ },
+ {
+  "creator": "tod",
+  "videoId": "wGptiu_Uboo",
+  "originalName": "Gracies",
+  "area": "Central London",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Gracey's",
+   "placeId": null
   },
-  {
-    "creator": "topjaw",
-    "videoId": "RdGAqs9iwGo",
-    "originalName": "NIJŪ",
-    "keep": true,
-    "name": "NIJŪ",
-    "placeId": null,
-    "lat": 51.508992799999994,
-    "lon": -0.1438217,
-    "address": "20 Berkeley St, London W1J 8EE",
-    "manual": null
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "Gracey's Pizza",
+  "placeId": null,
+  "lat": 51.516284000000006,
+  "lon": -0.1298763,
+  "address": "Arcade Food Hall, 103-105 New Oxford St, London WC2H 8AJ",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "tod",
+  "videoId": "Ewg05v3Dbmc",
+  "originalName": "Tantoni",
+  "area": null,
+  "claude": {
+   "keep": false,
+   "reason": "only_mentioned",
+   "name": "Tantoni",
+   "placeId": null
   },
-  {
-    "creator": "tod",
-    "videoId": "EnTsdLW3k3s",
-    "originalName": "Acador",
-    "area": "Camden Market",
-    "claude": {
-      "keep": true,
-      "name": "Asador",
-      "placeId": null
-    },
-    "suggested": "google",
-    "keep": true,
-    "name": "#AsadorCamden",
-    "placeId": null,
-    "lat": 51.5423836,
-    "lon": -0.1473842,
-    "address": "Stables Yard West Yard, 8AH, Chalk Farm Rd, Chalk Farm, London NW1 0LU",
-    "manual": null,
-    "source": "google-top"
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "Durak Tantuni",
+  "placeId": "aa99f74e0116",
+  "lat": 51.58633,
+  "lon": -0.09489,
+  "address": "390 W Green Rd, N15 3PX",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "tod",
+  "videoId": "-FQAVHY-rgs",
+  "originalName": "Tuna Fight Club",
+  "area": "Notting Hill",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Tuna Fight Club",
+   "placeId": null
   },
-  {
-    "creator": "tod",
-    "videoId": "EnTsdLW3k3s",
-    "originalName": "Peckish Burgers",
-    "area": "Camden Market",
-    "claude": {
-      "keep": true,
-      "reason": "own_review",
-      "name": "Peckish Burgers",
-      "placeId": null
-    },
-    "suggested": "google-top",
-    "spot": false,
-    "keep": true,
-    "name": "Peckish Burgers | Camden",
-    "placeId": null,
-    "lat": 51.5411461,
-    "lon": -0.1460696,
-    "address": "KERB Camden Market The West Yard, London NW1 8AF",
-    "manual": null,
-    "source": "google-top"
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "Notting Hill Fish + Meat Shop",
+  "placeId": null,
+  "lat": 51.5133434,
+  "lon": -0.2032753,
+  "address": "287-289 Westbourne Grove, London W11 2QA",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "tod",
+  "videoId": "R8oibBiE7l0",
+  "originalName": "Yianisir",
+  "area": null,
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Yiannis",
+   "placeId": null
   },
-  {
-    "creator": "tod",
-    "videoId": "RvAbVo7WRYg",
-    "originalName": "Schwamaha",
-    "area": null,
-    "claude": {
-      "keep": true,
-      "reason": "own_review",
-      "name": "Schwamaha",
-      "placeId": null
-    },
-    "suggested": "google-top",
-    "spot": false,
-    "keep": true,
-    "name": "Shawarma Hut",
-    "placeId": "58c0cde0ebb5",
-    "lat": 51.49456,
-    "lon": -0.13078,
-    "address": "292b Walworth Rd, SE17 2TE",
-    "manual": null,
-    "source": "search"
+  "suggested": null,
+  "spot": false,
+  "keep": false,
+  "dropReason": "not_london"
+ },
+ {
+  "creator": "tod",
+  "videoId": "PSWqseSgjtI",
+  "originalName": "Leon Stone Tavern",
+  "area": "Leytonstone",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Leytonstone Tavern",
+   "placeId": "135911cb317b"
   },
-  {
-    "creator": "tod",
-    "videoId": "qpOZUNUdrko",
-    "originalName": "Shwamaha",
-    "area": "South London",
-    "claude": {
-      "keep": true,
-      "reason": "own_review",
-      "name": "Shwamaha",
-      "placeId": null
-    },
-    "suggested": "google-top",
-    "spot": false,
-    "keep": true,
-    "name": "Shawarma Hut",
-    "placeId": "db1e85e0d7d3",
-    "lat": 51.48701,
-    "lon": -0.09534,
-    "address": "292b Walworth Rd, SE17 2TE",
-    "manual": null,
-    "source": "search"
+  "suggested": "claude",
+  "spot": false,
+  "keep": true,
+  "name": "Leytonstone Tavern",
+  "placeId": "135911cb317b",
+  "lat": 51.55917,
+  "lon": 0.01111,
+  "address": "119 Harrow Road, E11 3PX",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "tod",
+  "videoId": "PSWqseSgjtI",
+  "originalName": "Otto's Restaurant",
+  "area": "center of London",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "OTTO Restaurant Bar",
+   "placeId": "ad8731efca6a"
   },
-  {
-    "creator": "tod",
-    "videoId": "wGptiu_Uboo",
-    "originalName": "Breadto",
-    "area": "Clapham",
-    "claude": {
-      "keep": true,
-      "reason": "own_review",
-      "name": "Bread & Stall",
-      "placeId": null
-    },
-    "suggested": "google-top",
-    "spot": false,
-    "keep": true,
-    "name": "breadstall",
-    "placeId": null,
-    "lat": 51.5134357,
-    "lon": -0.134899,
-    "address": null,
-    "manual": "breadstall",
-    "mapLink": "https://www.google.com/maps/place/Breadstall+Pizza/@51.5134357,-0.2111624,12754m/data=!3m2!1e3!5s0x487605269b15d107:0x2fe0eaf458411818!4m10!1m2!2m1!1sbreadstall,+London!3m6!1s0x487605e4651e6389:0x1db3d4b2da5877bd!8m2!3d51.5134357!4d-0.134899!15sChJicmVhZHN0YWxsLCBMb25kb25aEyIRYnJlYWRzdGFsbCBsb25kb26SARBwaXp6YV9yZXN0YXVyYW50mgFEQ2k5RFFVbFJRVU52WkVOb2RIbGpSamx2VDJ0T1dWSXdlR2hrVnpGcVpHdGFSRmxZVG5salZGVjVWRzFTU2xOWFl4QULgAQD6AQQIABBF!16s%2Fg%2F11wxmjy40h?entry=ttu&g_ep=EgoyMDI2MTAyOC4wIKXMDSoASAFQAw%3D%3D",
-    "source": "maplink"
+  "suggested": "claude",
+  "spot": false,
+  "keep": true,
+  "name": "Otto's French Restaurant",
+  "placeId": "a1ba19dfd3c8",
+  "lat": 51.5229,
+  "lon": -0.1143,
+  "address": "182 Gray's Inn Rd, WC1X 8EW",
+  "manual": null,
+  "source": "google"
+ },
+ {
+  "creator": "tod",
+  "videoId": "FUVaTR1WUxI",
+  "originalName": "Roll Boys",
+  "area": null,
+  "claude": {
+   "keep": false,
+   "reason": "event_stall",
+   "name": "Roll Boys",
+   "placeId": null
   },
-  {
-    "creator": "tod",
-    "videoId": "wGptiu_Uboo",
-    "originalName": "Gracies",
-    "area": "Central London",
-    "claude": {
-      "keep": true,
-      "reason": "own_review",
-      "name": "Gracey's",
-      "placeId": null
-    },
-    "suggested": "google-top",
-    "spot": false,
-    "keep": true,
-    "name": "Gracey's Pizza",
-    "placeId": null,
-    "lat": 51.516284000000006,
-    "lon": -0.1298763,
-    "address": "Arcade Food Hall, 103-105 New Oxford St, London WC2H 8AJ",
-    "manual": null,
-    "source": "google-top"
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "Roll Boys.",
+  "placeId": null,
+  "lat": 51.5208945,
+  "lon": -0.0753731,
+  "address": "My Favourite Sandwich, 141 Commercial St, London E1 6BJ",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "tod",
+  "videoId": "Og6wRgMZyaQ",
+  "originalName": "Row and Five",
+  "area": null,
+  "claude": {
+   "keep": false,
+   "reason": "only_mentioned",
+   "name": "Rowan Five",
+   "placeId": null
   },
-  {
-    "creator": "tod",
-    "videoId": "Ewg05v3Dbmc",
-    "originalName": "Tantoni",
-    "area": null,
-    "claude": {
-      "keep": false,
-      "reason": "only_mentioned",
-      "name": "Tantoni",
-      "placeId": null
-    },
-    "suggested": "google-top",
-    "spot": false,
-    "keep": true,
-    "name": "Durak Tantuni",
-    "placeId": "aa99f74e0116",
-    "lat": 51.58633,
-    "lon": -0.09489,
-    "address": "390 W Green Rd, N15 3PX",
-    "manual": null,
-    "source": "google-top"
+  "suggested": "google-top",
+  "spot": false,
+  "keep": false,
+  "dropReason": "only_mentioned"
+ },
+ {
+  "creator": "tod",
+  "videoId": "hA2zqOZxuVo",
+  "originalName": "Cafe Continental",
+  "area": "Manchester",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Cafe Continental",
+   "placeId": "281c9bb1fdee"
   },
-  {
-    "creator": "tod",
-    "videoId": "-FQAVHY-rgs",
-    "originalName": "Tuna Fight Club",
-    "area": "Notting Hill",
-    "claude": {
-      "keep": true,
-      "reason": "own_review",
-      "name": "Tuna Fight Club",
-      "placeId": null
-    },
-    "suggested": "google-top",
-    "spot": false,
-    "keep": true,
-    "name": "Notting Hill Fish + Meat Shop",
-    "placeId": null,
-    "lat": 51.5133434,
-    "lon": -0.2032753,
-    "address": "287-289 Westbourne Grove, London W11 2QA",
-    "manual": null,
-    "source": "google-top"
+  "suggested": "claude",
+  "spot": false,
+  "keep": false,
+  "dropReason": "not_london"
+ },
+ {
+  "creator": "tod",
+  "videoId": "hA2zqOZxuVo",
+  "originalName": "Rack City Ribs",
+  "area": "London",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Rack City Ribs",
+   "placeId": null
   },
-  {
-    "creator": "tod",
-    "videoId": "R8oibBiE7l0",
-    "originalName": "Yianisir",
-    "area": null,
-    "claude": {
-      "keep": true,
-      "reason": "own_review",
-      "name": "Yiannis",
-      "placeId": null
-    },
-    "suggested": null,
-    "spot": false,
-    "keep": false,
-    "dropReason": "not_london"
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "Rack City Ribs",
+  "placeId": null,
+  "lat": 51.5391405,
+  "lon": -0.135904,
+  "address": "88 Royal College St, London NW1 0TH",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "tod",
+  "videoId": "hA2zqOZxuVo",
+  "originalName": "Ashes",
+  "area": "London",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Ashes",
+   "placeId": null
   },
-  {
-    "creator": "tod",
-    "videoId": "PSWqseSgjtI",
-    "originalName": "Leon Stone Tavern",
-    "area": "Leytonstone",
-    "claude": {
-      "keep": true,
-      "reason": "own_review",
-      "name": "Leytonstone Tavern",
-      "placeId": "135911cb317b"
-    },
-    "suggested": "claude",
-    "spot": false,
-    "keep": true,
-    "name": "Leytonstone Tavern",
-    "placeId": "135911cb317b",
-    "lat": 51.55917,
-    "lon": 0.01111,
-    "address": "119 Harrow Road, E11 3PX",
-    "manual": null,
-    "source": "claude"
+  "suggested": "google-top",
+  "spot": false,
+  "keep": false,
+  "dropReason": "event_stall"
+ },
+ {
+  "creator": "tod",
+  "videoId": "hA2zqOZxuVo",
+  "originalName": "1415 Asad",
+  "area": "London",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "1415 Asad",
+   "placeId": null
   },
-  {
-    "creator": "tod",
-    "videoId": "PSWqseSgjtI",
-    "originalName": "Otto's Restaurant",
-    "area": "center of London",
-    "claude": {
-      "keep": true,
-      "reason": "own_review",
-      "name": "OTTO Restaurant Bar",
-      "placeId": "ad8731efca6a"
-    },
-    "suggested": "claude",
-    "spot": false,
-    "keep": true,
-    "name": "Otto's French Restaurant",
-    "placeId": "a1ba19dfd3c8",
-    "lat": 51.5229,
-    "lon": -0.1143,
-    "address": "182 Gray's Inn Rd, WC1X 8EW",
-    "manual": null,
-    "source": "google"
+  "suggested": "google-top",
+  "spot": false,
+  "keep": false,
+  "dropReason": "event_stall"
+ },
+ {
+  "creator": "tod",
+  "videoId": "hA2zqOZxuVo",
+  "originalName": "Hungry Boys",
+  "area": "London",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Hungry Boys",
+   "placeId": null
   },
-  {
-    "creator": "tod",
-    "videoId": "FUVaTR1WUxI",
-    "originalName": "Roll Boys",
-    "area": null,
-    "claude": {
-      "keep": false,
-      "reason": "event_stall",
-      "name": "Roll Boys",
-      "placeId": null
-    },
-    "suggested": "google-top",
-    "spot": false,
-    "keep": true,
-    "name": "Roll Boys.",
-    "placeId": null,
-    "lat": 51.5208945,
-    "lon": -0.0753731,
-    "address": "My Favourite Sandwich, 141 Commercial St, London E1 6BJ",
-    "manual": null,
-    "source": "google-top"
+  "suggested": "google",
+  "spot": false,
+  "keep": false,
+  "dropReason": "event_stall"
+ },
+ {
+  "creator": "tod",
+  "videoId": "EnTsdLW3k3s",
+  "originalName": "Octopus Kebab (unnamed vendor)",
+  "area": "Camden Market",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Octopus Kebab",
+   "placeId": null
   },
-  {
-    "creator": "tod",
-    "videoId": "Og6wRgMZyaQ",
-    "originalName": "Row and Five",
-    "area": null,
-    "claude": {
-      "keep": false,
-      "reason": "only_mentioned",
-      "name": "Rowan Five",
-      "placeId": null
-    },
-    "suggested": "google-top",
-    "spot": false,
-    "keep": false,
-    "dropReason": "only_mentioned"
+  "suggested": "google-top",
+  "spot": false,
+  "keep": false,
+  "dropReason": "only_mentioned"
+ },
+ {
+  "creator": "tod",
+  "videoId": "PSWqseSgjtI",
+  "originalName": "McDonald's",
+  "area": null,
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "McDonald's",
+   "placeId": null
   },
-  {
-    "creator": "tod",
-    "videoId": "hA2zqOZxuVo",
-    "originalName": "Cafe Continental",
-    "area": "Manchester",
-    "claude": {
-      "keep": true,
-      "reason": "own_review",
-      "name": "Cafe Continental",
-      "placeId": "281c9bb1fdee"
-    },
-    "suggested": "claude",
-    "spot": false,
-    "keep": false,
-    "dropReason": "not_london"
+  "suggested": "google-top",
+  "spot": false,
+  "keep": false,
+  "dropReason": "other"
+ },
+ {
+  "creator": "tod",
+  "videoId": "XUEy2_-Gd6c",
+  "originalName": "Reuben's Ruben",
+  "area": "Brixton",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Reuben's",
+   "placeId": null
   },
-  {
-    "creator": "tod",
-    "videoId": "hA2zqOZxuVo",
-    "originalName": "Rack City Ribs",
-    "area": "London",
-    "claude": {
-      "keep": true,
-      "reason": "own_review",
-      "name": "Rack City Ribs",
-      "placeId": null
-    },
-    "suggested": "google-top",
-    "spot": false,
-    "keep": true,
-    "name": "Rack City Ribs",
-    "placeId": null,
-    "lat": 51.5391405,
-    "lon": -0.135904,
-    "address": "88 Royal College St, London NW1 0TH",
-    "manual": null,
-    "source": "google-top"
+  "suggested": null,
+  "spot": false,
+  "keep": false,
+  "dropReason": "temporary"
+ },
+ {
+  "creator": "tod",
+  "videoId": "wGptiu_Uboo",
+  "originalName": "Tops Pizza",
+  "area": "London",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Tops Pizza",
+   "placeId": "a98a52b06131"
   },
-  {
-    "creator": "tod",
-    "videoId": "hA2zqOZxuVo",
-    "originalName": "Ashes",
-    "area": "London",
-    "claude": {
-      "keep": true,
-      "reason": "own_review",
-      "name": "Ashes",
-      "placeId": null
-    },
-    "suggested": "google-top",
-    "spot": false,
-    "keep": false,
-    "dropReason": "event_stall"
+  "suggested": "claude",
+  "spot": false,
+  "keep": false,
+  "dropReason": "other"
+ },
+ {
+  "creator": "tod",
+  "videoId": "XUEy2_-Gd6c",
+  "originalName": "From the Ashes",
+  "area": "Oxford Street",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "From the Ashes BBQ",
+   "placeId": "e66102d4d6d2"
   },
-  {
-    "creator": "tod",
-    "videoId": "hA2zqOZxuVo",
-    "originalName": "1415 Asad",
-    "area": "London",
-    "claude": {
-      "keep": true,
-      "reason": "own_review",
-      "name": "1415 Asad",
-      "placeId": null
-    },
-    "suggested": "google-top",
-    "spot": false,
-    "keep": false,
-    "dropReason": "event_stall"
+  "suggested": "claude",
+  "spot": false,
+  "keep": true,
+  "name": "From the Ashes BBQ",
+  "placeId": "e66102d4d6d2",
+  "lat": 51.53263,
+  "lon": -0.08032,
+  "address": "10 Stour Road, E3 2NT",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "tod",
+  "videoId": "XUEy2_-Gd6c",
+  "originalName": "Roll Boys",
+  "area": null,
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Roll Boys",
+   "placeId": null
   },
-  {
-    "creator": "tod",
-    "videoId": "hA2zqOZxuVo",
-    "originalName": "Hungry Boys",
-    "area": "London",
-    "claude": {
-      "keep": true,
-      "reason": "own_review",
-      "name": "Hungry Boys",
-      "placeId": null
-    },
-    "suggested": "google",
-    "spot": false,
-    "keep": false,
-    "dropReason": "event_stall"
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "Roll Boys.",
+  "placeId": null,
+  "lat": 51.5208945,
+  "lon": -0.0753731,
+  "address": "My Favourite Sandwich, 141 Commercial St, London E1 6BJ",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "tod",
+  "videoId": "RNBmjC3NZng",
+  "originalName": "Cornicopia",
+  "area": null,
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Cornucopia",
+   "placeId": null
   },
-  {
-    "creator": "tod",
-    "videoId": "EnTsdLW3k3s",
-    "originalName": "Octopus Kebab (unnamed vendor)",
-    "area": "Camden Market",
-    "claude": {
-      "keep": true,
-      "reason": "own_review",
-      "name": "Octopus Kebab",
-      "placeId": null
-    },
-    "suggested": "google-top",
-    "spot": false,
-    "keep": false,
-    "dropReason": "only_mentioned"
+  "suggested": "google",
+  "spot": false,
+  "keep": true,
+  "name": "Cornucopia",
+  "placeId": null,
+  "lat": 51.4902713,
+  "lon": -0.1554745,
+  "address": null,
+  "manual": "Cornucopia",
+  "mapLink": "https://www.google.com/maps/place/Corenucopia+by+Clare+Smyth/@51.4902713,-0.3079098,25505m/data=!3m1!1e3!4m10!1m2!2m1!1sCornicopia,+London!3m6!1s0x48760584bc4c1607:0xf646d3227bfd6f68!8m2!3d51.4902713!4d-0.1554745!15sChJDb3JudWNvcGlhLCBMb25kb25aEyIRY29ybnVjb3BpYSBsb25kb26SAQZiaXN0cm-aAURDaTlEUVVsUlFVTnZaRU5vZEhsalJqbHZUMnRvYjFVeFpHaGhTR2d3VlZScmRHVklaRlJaVmtJMVRsVnNibE5IWXhBQuABAPoBBAgAED0!16s%2Fg%2F11xzwmp470?entry=ttu&g_ep=EgoyMDI2MTAyOC4wIKXMDSoASAFQAw%3D%3D",
+  "source": "maplink"
+ },
+ {
+  "creator": "tod",
+  "videoId": "w2PC8FgFrXE",
+  "originalName": "Fighter",
+  "area": "Liverpool Street",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Coqfighter",
+   "placeId": "c0657f3d8647"
   },
-  {
-    "creator": "tod",
-    "videoId": "PSWqseSgjtI",
-    "originalName": "McDonald's",
-    "area": null,
-    "claude": {
-      "keep": true,
-      "reason": "own_review",
-      "name": "McDonald's",
-      "placeId": null
-    },
-    "suggested": "google-top",
-    "spot": false,
-    "keep": false,
-    "dropReason": "other"
+  "suggested": "nearby",
+  "spot": false,
+  "keep": true,
+  "name": "Coqfighter Liverpool St",
+  "placeId": null,
+  "lat": 51.5181147,
+  "lon": -0.0779262,
+  "address": "18 Widegate St, London E1 7HP",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "tod",
+  "videoId": "FT_gOZrCnDI",
+  "originalName": "Leopard Pies",
+  "area": "Tower Bridge Collective",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Leopard Pies",
+   "placeId": null
   },
-  {
-    "creator": "tod",
-    "videoId": "XUEy2_-Gd6c",
-    "originalName": "Reuben's Ruben",
-    "area": "Brixton",
-    "claude": {
-      "keep": true,
-      "reason": "own_review",
-      "name": "Reuben's",
-      "placeId": null
-    },
-    "suggested": "candidate",
-    "spot": false,
-    "keep": false,
-    "dropReason": "other"
+  "suggested": "nearby",
+  "spot": false,
+  "keep": true,
+  "name": "Leopard Pie",
+  "placeId": null,
+  "lat": 51.504017,
+  "lon": -0.075912,
+  "address": null,
+  "manual": "Leopard Pie",
+  "mapLink": "https://www.google.com/maps/place/Leopard+Pie+Tower+Bridge/@51.504017,-0.075912,797m/data=!3m2!1e3!4b1!4m6!3m5!1s0x487603b5548c2d4b:0x766770ce3720dd94!8m2!3d51.504017!4d-0.075912!16s%2Fg%2F11y0s4yq7g?entry=ttu&g_ep=EgoyMDI2MTAyOC4wIKXMDSoASAFQAw%3D%3D",
+  "source": "maplink"
+ },
+ {
+  "creator": "tod",
+  "videoId": "FT_gOZrCnDI",
+  "originalName": "Jimmy Smashburgers",
+  "area": "Tower Bridge Collective",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Jimmy Smashburgers",
+   "placeId": null
   },
-  {
-    "creator": "tod",
-    "videoId": "wGptiu_Uboo",
-    "originalName": "Tops Pizza",
-    "area": "London",
-    "claude": {
-      "keep": true,
-      "reason": "own_review",
-      "name": "Tops Pizza",
-      "placeId": "a98a52b06131"
-    },
-    "suggested": "claude",
-    "spot": false,
-    "keep": false,
-    "dropReason": "other"
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "Jimmys Burgers",
+  "placeId": null,
+  "lat": 51.504017,
+  "lon": -0.075912,
+  "address": "1 Horselydown Ln, London SE1 2LJ",
+  "manual": null,
+  "source": "google"
+ },
+ {
+  "creator": "tod",
+  "videoId": "cIJSkrXaoJs",
+  "originalName": "The Clink",
+  "area": "Brixton Prison",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "The Clink",
+   "placeId": null
   },
-  {
-    "creator": "tod",
-    "videoId": "XUEy2_-Gd6c",
-    "originalName": "From the Ashes",
-    "area": "Oxford Street",
-    "claude": {
-      "keep": true,
-      "reason": "own_review",
-      "name": "From the Ashes BBQ",
-      "placeId": "e66102d4d6d2"
-    },
-    "suggested": "claude",
-    "spot": false,
-    "keep": true,
-    "name": "From the Ashes BBQ",
-    "placeId": "e66102d4d6d2",
-    "lat": 51.53263,
-    "lon": -0.08032,
-    "address": "10 Stour Road, E3 2NT",
-    "manual": null,
-    "source": "claude"
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "The Clink Restaurant",
+  "placeId": "c32eea5c1354",
+  "lat": 51.45205,
+  "lon": -0.12565,
+  "address": "HMP Brixton, Jebb Ave, SW2 5XF",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "tod",
+  "videoId": "fq-y8bU872k",
+  "originalName": "Toshiba",
+  "area": "Brick Lane",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Toshiba",
+   "placeId": null
   },
-  {
-    "creator": "tod",
-    "videoId": "XUEy2_-Gd6c",
-    "originalName": "Roll Boys",
-    "area": null,
-    "claude": {
-      "keep": true,
-      "reason": "own_review",
-      "name": "Roll Boys",
-      "placeId": null
-    },
-    "suggested": "google-top",
-    "spot": false,
-    "keep": true,
-    "name": "Roll Boys.",
-    "placeId": null,
-    "lat": 51.5208945,
-    "lon": -0.0753731,
-    "address": "My Favourite Sandwich, 141 Commercial St, London E1 6BJ",
-    "manual": null,
-    "source": "google-top"
+  "suggested": "google",
+  "spot": false,
+  "keep": true,
+  "name": "Sheba Brick Lane - Awarded Best Curry House In UK",
+  "placeId": null,
+  "lat": 51.5206625,
+  "lon": -0.07171269999999999,
+  "address": "136 Brick Ln, London E1 6RU",
+  "manual": null,
+  "source": "google"
+ },
+ {
+  "creator": "tod",
+  "videoId": "xi1DBTmRuK0",
+  "originalName": "Chin Chin",
+  "area": "Tottenham Court Road",
+  "claude": {
+   "keep": false,
+   "reason": "event_stall",
+   "name": "Chin Chin Labs",
+   "placeId": "642c94eed11e"
   },
-  {
-    "creator": "tod",
-    "videoId": "RNBmjC3NZng",
-    "originalName": "Cornicopia",
-    "area": null,
-    "claude": {
-      "keep": true,
-      "reason": "own_review",
-      "name": "Cornucopia",
-      "placeId": null
-    },
-    "suggested": "google",
-    "spot": false,
-    "keep": true,
-    "name": "Cornucopia",
-    "placeId": null,
-    "lat": 51.4902713,
-    "lon": -0.1554745,
-    "address": null,
-    "manual": "Cornucopia",
-    "mapLink": "https://www.google.com/maps/place/Corenucopia+by+Clare+Smyth/@51.4902713,-0.3079098,25505m/data=!3m1!1e3!4m10!1m2!2m1!1sCornicopia,+London!3m6!1s0x48760584bc4c1607:0xf646d3227bfd6f68!8m2!3d51.4902713!4d-0.1554745!15sChJDb3JudWNvcGlhLCBMb25kb25aEyIRY29ybnVjb3BpYSBsb25kb26SAQZiaXN0cm-aAURDaTlEUVVsUlFVTnZaRU5vZEhsalJqbHZUMnRvYjFVeFpHaGhTR2d3VlZScmRHVklaRlJaVmtJMVRsVnNibE5IWXhBQuABAPoBBAgAED0!16s%2Fg%2F11xzwmp470?entry=ttu&g_ep=EgoyMDI2MTAyOC4wIKXMDSoASAFQAw%3D%3D",
-    "source": "maplink"
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "Chin Chin Dessert Club",
+  "placeId": "fa232a6f223d",
+  "lat": 51.51435,
+  "lon": -0.13116,
+  "address": "54 Greek St, W1D 3DS",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "tod",
+  "videoId": "xi1DBTmRuK0",
+  "originalName": "Reuben's Reuben",
+  "area": "Tottenham Court Road",
+  "claude": {
+   "keep": false,
+   "reason": "event_stall",
+   "name": "Ruben's Reubens",
+   "placeId": "942e17a1c513"
   },
-  {
-    "creator": "tod",
-    "videoId": "w2PC8FgFrXE",
-    "originalName": "Fighter",
-    "area": "Liverpool Street",
-    "claude": {
-      "keep": true,
-      "reason": "own_review",
-      "name": "Coqfighter",
-      "placeId": "c0657f3d8647"
-    },
-    "suggested": "nearby",
-    "spot": false,
-    "keep": true,
-    "name": "Coqfighter Liverpool St",
-    "placeId": null,
-    "lat": 51.5181147,
-    "lon": -0.0779262,
-    "address": "18 Widegate St, London E1 7HP",
-    "manual": null,
-    "source": "google-top"
+  "suggested": "claude",
+  "spot": false,
+  "keep": false,
+  "dropReason": "temporary"
+ },
+ {
+  "creator": "tod",
+  "videoId": "xi1DBTmRuK0",
+  "originalName": "Duck Shed",
+  "area": "Tottenham Court Road",
+  "claude": {
+   "keep": false,
+   "reason": "event_stall",
+   "name": "The Duck Shed",
+   "placeId": "e958b597188a"
   },
-  {
-    "creator": "tod",
-    "videoId": "FT_gOZrCnDI",
-    "originalName": "Leopard Pies",
-    "area": "Tower Bridge Collective",
-    "claude": {
-      "keep": true,
-      "reason": "own_review",
-      "name": "Leopard Pies",
-      "placeId": null
-    },
-    "suggested": "nearby",
-    "spot": false,
-    "keep": true,
-    "name": "Leopard Pie",
-    "placeId": null,
-    "lat": 51.504017,
-    "lon": -0.075912,
-    "address": null,
-    "manual": "Leopard Pie",
-    "mapLink": "https://www.google.com/maps/place/Leopard+Pie+Tower+Bridge/@51.504017,-0.075912,797m/data=!3m2!1e3!4b1!4m6!3m5!1s0x487603b5548c2d4b:0x766770ce3720dd94!8m2!3d51.504017!4d-0.075912!16s%2Fg%2F11y0s4yq7g?entry=ttu&g_ep=EgoyMDI2MTAyOC4wIKXMDSoASAFQAw%3D%3D",
-    "source": "maplink"
+  "suggested": "claude",
+  "spot": false,
+  "keep": false,
+  "dropReason": "event_stall"
+ },
+ {
+  "creator": "tod",
+  "videoId": "xi1DBTmRuK0",
+  "originalName": "Truffle Burger",
+  "area": "Tottenham Court Road",
+  "claude": {
+   "keep": false,
+   "reason": "event_stall",
+   "name": "Truffle Burger",
+   "placeId": null
   },
-  {
-    "creator": "tod",
-    "videoId": "FT_gOZrCnDI",
-    "originalName": "Jimmy Smashburgers",
-    "area": "Tower Bridge Collective",
-    "claude": {
-      "keep": true,
-      "reason": "own_review",
-      "name": "Jimmy Smashburgers",
-      "placeId": null
-    },
-    "suggested": "google-top",
-    "spot": false,
-    "keep": true,
-    "name": "Jimmys Burgers",
-    "placeId": null,
-    "lat": 51.504017,
-    "lon": -0.075912,
-    "address": "1 Horselydown Ln, London SE1 2LJ",
-    "manual": null,
-    "source": "google"
+  "suggested": "candidate",
+  "spot": false,
+  "keep": true,
+  "name": "Truffle Burger",
+  "placeId": "eb6f91c62549",
+  "lat": 51.51422,
+  "lon": -0.1313,
+  "address": "22 Bateman St, W1D 3AN",
+  "manual": null,
+  "source": "candidate"
+ },
+ {
+  "creator": "tod",
+  "videoId": "ioCTTANQ1sQ",
+  "originalName": "Tuna Fight Club",
+  "area": "Notting Hill",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Tuna Fight Club",
+   "placeId": null
   },
-  {
-    "creator": "tod",
-    "videoId": "cIJSkrXaoJs",
-    "originalName": "The Clink",
-    "area": "Brixton Prison",
-    "claude": {
-      "keep": true,
-      "reason": "own_review",
-      "name": "The Clink",
-      "placeId": null
-    },
-    "suggested": "google-top",
-    "spot": false,
-    "keep": true,
-    "name": "The Clink Restaurant",
-    "placeId": "c32eea5c1354",
-    "lat": 51.45205,
-    "lon": -0.12565,
-    "address": "HMP Brixton, Jebb Ave, SW2 5XF",
-    "manual": null,
-    "source": "google-top"
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "Notting Hill Fish + Meat Shop",
+  "placeId": null,
+  "lat": 51.5133434,
+  "lon": -0.2032753,
+  "address": "287-289 Westbourne Grove, London W11 2QA",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "RdGAqs9iwGo",
+  "originalName": "The Montpelier / ELM",
+  "area": null,
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "The Montpelier",
+   "placeId": "8eb30d4fe55e"
   },
-  {
-    "creator": "tod",
-    "videoId": "fq-y8bU872k",
-    "originalName": "Toshiba",
-    "area": "Brick Lane",
-    "claude": {
-      "keep": true,
-      "reason": "own_review",
-      "name": "Toshiba",
-      "placeId": null
-    },
-    "suggested": "google",
-    "spot": false,
-    "keep": true,
-    "name": "Sheba Brick Lane - Awarded Best Curry House In UK",
-    "placeId": null,
-    "lat": 51.5206625,
-    "lon": -0.07171269999999999,
-    "address": "136 Brick Ln, London E1 6RU",
-    "manual": null,
-    "source": "google"
+  "suggested": "claude",
+  "spot": false,
+  "keep": true,
+  "name": "The Montpelier",
+  "placeId": "8eb30d4fe55e",
+  "lat": 51.46767,
+  "lon": -0.07031,
+  "address": "43 Choumert Rd, SE15 4AR",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "YdkDdTrprlQ",
+  "originalName": "Luna",
+  "area": null,
+  "claude": {
+   "keep": false,
+   "reason": "guest_recommendation",
+   "name": "Luna",
+   "placeId": null
   },
-  {
-    "creator": "tod",
-    "videoId": "xi1DBTmRuK0",
-    "originalName": "Chin Chin",
-    "area": "Tottenham Court Road",
-    "claude": {
-      "keep": false,
-      "reason": "event_stall",
-      "name": "Chin Chin Labs",
-      "placeId": "642c94eed11e"
-    },
-    "suggested": "google-top",
-    "spot": false,
-    "keep": true,
-    "name": "Chin Chin Dessert Club",
-    "placeId": "fa232a6f223d",
-    "lat": 51.51435,
-    "lon": -0.13116,
-    "address": "54 Greek St, W1D 3DS",
-    "manual": null,
-    "source": "google-top"
+  "suggested": "google",
+  "spot": false,
+  "keep": false,
+  "dropReason": "guest_recommendation"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "YdkDdTrprlQ",
+  "originalName": "Sune",
+  "area": null,
+  "claude": {
+   "keep": false,
+   "reason": "guest_recommendation",
+   "name": "Sune",
+   "placeId": null
   },
-  {
-    "creator": "tod",
-    "videoId": "xi1DBTmRuK0",
-    "originalName": "Reuben's Reuben",
-    "area": "Tottenham Court Road",
-    "claude": {
-      "keep": false,
-      "reason": "event_stall",
-      "name": "Ruben's Reubens",
-      "placeId": null
-    },
-    "suggested": "candidate",
-    "spot": false,
-    "keep": false,
-    "dropReason": "other"
+  "suggested": "google-top",
+  "spot": false,
+  "keep": false,
+  "dropReason": "guest_recommendation"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "jIEhjCAUuCc",
+  "originalName": "Wine Bar",
+  "area": "Mayfair",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Wine Bar",
+   "placeId": null
   },
-  {
-    "creator": "tod",
-    "videoId": "xi1DBTmRuK0",
-    "originalName": "Duck Shed",
-    "area": "Tottenham Court Road",
-    "claude": {
-      "keep": false,
-      "reason": "event_stall",
-      "name": "The Duck Shed",
-      "placeId": "e958b597188a"
-    },
-    "suggested": "claude",
-    "spot": false,
-    "keep": false,
-    "dropReason": "event_stall"
+  "suggested": "google-top",
+  "spot": false,
+  "keep": false,
+  "dropReason": "other"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "jIEhjCAUuCc",
+  "originalName": "Dove",
+  "area": "Notting Hill",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Dove",
+   "placeId": null
   },
-  {
-    "creator": "tod",
-    "videoId": "xi1DBTmRuK0",
-    "originalName": "Truffle Burger",
-    "area": "Tottenham Court Road",
-    "claude": {
-      "keep": false,
-      "reason": "event_stall",
-      "name": "Truffle Burger",
-      "placeId": null
-    },
-    "suggested": "candidate",
-    "spot": false,
-    "keep": true,
-    "name": "Truffle Burger",
-    "placeId": "eb6f91c62549",
-    "lat": 51.51422,
-    "lon": -0.1313,
-    "address": "22 Bateman St, W1D 3AN",
-    "manual": null,
-    "source": "candidate"
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "Dove Restaurant",
+  "placeId": null,
+  "lat": 51.51539210000001,
+  "lon": -0.20593619999999999,
+  "address": "31 Kensington Park Rd, London W11 2EU",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "V0pGH3QcNhM",
+  "originalName": "Utopia Bagels",
+  "area": "South Bank (Waterloo)",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Utopia Bagels",
+   "placeId": null
   },
-  {
-    "creator": "tod",
-    "videoId": "ioCTTANQ1sQ",
-    "originalName": "Tuna Fight Club",
-    "area": "Notting Hill",
-    "claude": {
-      "keep": true,
-      "reason": "own_review",
-      "name": "Tuna Fight Club",
-      "placeId": null
-    },
-    "suggested": "google-top",
-    "spot": false,
-    "keep": true,
-    "name": "Notting Hill Fish + Meat Shop",
-    "placeId": null,
-    "lat": 51.5133434,
-    "lon": -0.2032753,
-    "address": "287-289 Westbourne Grove, London W11 2QA",
-    "manual": null,
-    "source": "google-top"
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "Utopia Bagels",
+  "placeId": null,
+  "lat": 51.5052728,
+  "lon": -0.11849289999999998,
+  "address": "30 The Queen's Walk, London SE1 8XX",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "Ej7tawt68JA",
+  "originalName": "Dumbo",
+  "area": "Bethnal Green",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Dumbo",
+   "placeId": null
   },
-  {
-    "creator": "topjaw",
-    "videoId": "RdGAqs9iwGo",
-    "originalName": "The Montpelier / ELM",
-    "area": null,
-    "claude": {
-      "keep": true,
-      "reason": "own_review",
-      "name": "The Montpelier",
-      "placeId": "8eb30d4fe55e"
-    },
-    "suggested": "claude",
-    "spot": false,
-    "keep": true,
-    "name": "The Montpelier",
-    "placeId": "8eb30d4fe55e",
-    "lat": 51.46767,
-    "lon": -0.07031,
-    "address": "43 Choumert Rd, SE15 4AR",
-    "manual": null,
-    "source": "claude"
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "dumbo",
+  "placeId": null,
+  "lat": 51.5249011,
+  "lon": -0.0719526,
+  "address": null,
+  "manual": "dumbo",
+  "mapLink": "https://www.google.com/maps/place/Dumbo+Shoreditch/@51.5197746,-0.1038097,6372m/data=!3m1!1e3!4m10!1m2!2m1!1sdumbo,+London!3m6!1s0x48761dab812dba1f:0x7b843f11b7548405!8m2!3d51.5249011!4d-0.0719526!15sCg1kdW1ibywgTG9uZG9uWg4iDGR1bWJvIGxvbmRvbpIBFGhhbWJ1cmdlcl9yZXN0YXVyYW50mgFEQ2k5RFFVbFJRVU52WkVOb2RIbGpSamx2VDJ0S01sSllVa1pqYWtKeFVWWkpNbEl4Y0ZkT1YyaHpaR3BDU1dWdVl4QULgAQD6AQUIwAEQQA!16s%2Fg%2F11xdftb4vs?entry=ttu&g_ep=EgoyMDI2MTAyOC4wIKXMDSoASAFQAw%3D%3D",
+  "source": "maplink"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "_u7NfNg8aKQ",
+  "originalName": "Mamapen",
+  "area": "Soho",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Mamapen",
+   "placeId": null
   },
-  {
-    "creator": "topjaw",
-    "videoId": "YdkDdTrprlQ",
-    "originalName": "Luna",
-    "area": null,
-    "claude": {
-      "keep": false,
-      "reason": "guest_recommendation",
-      "name": "Luna",
-      "placeId": null
-    },
-    "suggested": "google",
-    "spot": false,
-    "keep": false,
-    "dropReason": "guest_recommendation"
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "mampen",
+  "placeId": null,
+  "lat": 51.5126579,
+  "lon": -0.1365768,
+  "address": null,
+  "manual": "mampen",
+  "mapLink": "google.com/maps/place/Rhianna+Jones+Piercing,+21+Noel+St,+London+W1F+8GP/@51.5126579,-0.1365768,797m/data=!3m1!1e3!4m13!1m7!3m6!1s0x48761d9ddf71a451:0xc85a6b3deb3e1b4!2sMamapen!8m2!3d51.5126579!4d-0.1365768!16s%2Fg%2F11j6xw9c9n!3m4!1s0x4876058a91c71369:0xe23a730410fc78a9!8m2!3d51.5148893!4d-0.1363271?entry=ttu&g_ep=EgoyMDI2MTAyOC4wIKXMDSoASAFQAw%3D%3D",
+  "source": "maplink"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "JEVL7IXxOrs",
+  "originalName": "Hannah's Dough Hands",
+  "area": null,
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Hannah's Dough Hands",
+   "placeId": null
   },
-  {
-    "creator": "topjaw",
-    "videoId": "YdkDdTrprlQ",
-    "originalName": "Sune",
-    "area": null,
-    "claude": {
-      "keep": false,
-      "reason": "guest_recommendation",
-      "name": "Sune",
-      "placeId": null
-    },
-    "suggested": "google-top",
-    "spot": false,
-    "keep": false,
-    "dropReason": "guest_recommendation"
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "Dough Hands East",
+  "placeId": null,
+  "lat": 51.5453747,
+  "lon": -0.0632078,
+  "address": "The Spurstowe Arms, 68 Greenwood Rd, London E8 1AB",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "i65acG8jUew",
+  "originalName": "Mamapen",
+  "area": null,
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Mamapen",
+   "placeId": null
   },
-  {
-    "creator": "topjaw",
-    "videoId": "jIEhjCAUuCc",
-    "originalName": "Wine Bar",
-    "area": "Mayfair",
-    "claude": {
-      "keep": true,
-      "reason": "own_review",
-      "name": "Wine Bar",
-      "placeId": null
-    },
-    "suggested": "google-top",
-    "spot": false,
-    "keep": false,
-    "dropReason": "other"
+  "suggested": "candidate",
+  "spot": false,
+  "keep": true,
+  "name": "Mamapen",
+  "placeId": null,
+  "lat": 51.5126579,
+  "lon": -0.1365768,
+  "address": null,
+  "manual": "Mamapen",
+  "mapLink": "google.com/maps/place/Rhianna+Jones+Piercing,+21+Noel+St,+London+W1F+8GP/@51.5126579,-0.1365768,797m/data=!3m1!1e3!4m13!1m7!3m6!1s0x48761d9ddf71a451:0xc85a6b3deb3e1b4!2sMamapen!8m2!3d51.5126579!4d-0.1365768!16s%2Fg%2F11j6xw9c9n!3m4!1s0x4876058a91c71369:0xe23a730410fc78a9!8m2!3d51.5148893!4d-0.1363271?entry=ttu&g_ep=EgoyMDI2MTAyOC4wIKXMDSoASAFQAw%3D%3D",
+  "source": "maplink"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "dVA9AYDS2eQ",
+  "originalName": "Miga",
+  "area": "Hackney",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Miga",
+   "placeId": null
   },
-  {
-    "creator": "topjaw",
-    "videoId": "jIEhjCAUuCc",
-    "originalName": "Dove",
-    "area": "Notting Hill",
-    "claude": {
-      "keep": true,
-      "reason": "own_review",
-      "name": "Dove",
-      "placeId": null
-    },
-    "suggested": "google-top",
-    "spot": false,
-    "keep": true,
-    "name": "Dove Restaurant",
-    "placeId": null,
-    "lat": 51.51539210000001,
-    "lon": -0.20593619999999999,
-    "address": "31 Kensington Park Rd, London W11 2EU",
-    "manual": null,
-    "source": "google-top"
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "Miga",
+  "placeId": null,
+  "lat": 51.534533599999996,
+  "lon": -0.0576598,
+  "address": "1 Mare St, London E8 4RP",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "tod",
+  "videoId": "FUVaTR1WUxI",
+  "originalName": "Reuben's",
+  "area": null,
+  "claude": {
+   "keep": false,
+   "reason": "event_stall",
+   "name": "Reuben's",
+   "placeId": null
   },
-  {
-    "creator": "topjaw",
-    "videoId": "V0pGH3QcNhM",
-    "originalName": "Utopia Bagels",
-    "area": "South Bank (Waterloo)",
-    "claude": {
-      "keep": true,
-      "reason": "own_review",
-      "name": "Utopia Bagels",
-      "placeId": null
-    },
-    "suggested": "google-top",
-    "spot": false,
-    "keep": true,
-    "name": "Utopia Bagels",
-    "placeId": null,
-    "lat": 51.5052728,
-    "lon": -0.11849289999999998,
-    "address": "30 The Queen's Walk, London SE1 8XX",
-    "manual": null,
-    "source": "google-top"
+  "suggested": "candidate",
+  "spot": false,
+  "keep": false,
+  "dropReason": "event_stall"
+ },
+ {
+  "creator": "tod",
+  "videoId": "fq-y8bU872k",
+  "originalName": "BKC",
+  "area": null,
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "BKC",
+   "placeId": null
   },
-  {
-    "creator": "topjaw",
-    "videoId": "Ej7tawt68JA",
-    "originalName": "Dumbo",
-    "area": "Bethnal Green",
-    "claude": {
-      "keep": true,
-      "reason": "own_review",
-      "name": "Dumbo",
-      "placeId": null
-    },
-    "suggested": "google-top",
-    "spot": false,
-    "keep": true,
-    "name": "dumbo",
-    "placeId": null,
-    "lat": 51.5249011,
-    "lon": -0.0719526,
-    "address": null,
-    "manual": "dumbo",
-    "mapLink": "https://www.google.com/maps/place/Dumbo+Shoreditch/@51.5197746,-0.1038097,6372m/data=!3m1!1e3!4m10!1m2!2m1!1sdumbo,+London!3m6!1s0x48761dab812dba1f:0x7b843f11b7548405!8m2!3d51.5249011!4d-0.0719526!15sCg1kdW1ibywgTG9uZG9uWg4iDGR1bWJvIGxvbmRvbpIBFGhhbWJ1cmdlcl9yZXN0YXVyYW50mgFEQ2k5RFFVbFJRVU52WkVOb2RIbGpSamx2VDJ0S01sSllVa1pqYWtKeFVWWkpNbEl4Y0ZkT1YyaHpaR3BDU1dWdVl4QULgAQD6AQUIwAEQQA!16s%2Fg%2F11xdftb4vs?entry=ttu&g_ep=EgoyMDI2MTAyOC4wIKXMDSoASAFQAw%3D%3D",
-    "source": "maplink"
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "BKC Biryani Kebab Chai",
+  "placeId": "53bde4da71f2",
+  "lat": 51.51414,
+  "lon": -0.16153,
+  "address": "7 Edgware Road, W2 2ER",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "tod",
+  "videoId": "xi1DBTmRuK0",
+  "originalName": "My Diesel",
+  "area": "Tottenham Court Road",
+  "claude": {
+   "keep": false,
+   "reason": "only_mentioned",
+   "name": "Most Dizzy",
+   "placeId": null
   },
-  {
-    "creator": "topjaw",
-    "videoId": "_u7NfNg8aKQ",
-    "originalName": "Mamapen",
-    "area": "Soho",
-    "claude": {
-      "keep": true,
-      "reason": "own_review",
-      "name": "Mamapen",
-      "placeId": null
-    },
-    "suggested": "google-top",
-    "spot": false,
-    "keep": true,
-    "name": "mampen",
-    "placeId": null,
-    "lat": 51.5126579,
-    "lon": -0.1365768,
-    "address": null,
-    "manual": "mampen",
-    "mapLink": "google.com/maps/place/Rhianna+Jones+Piercing,+21+Noel+St,+London+W1F+8GP/@51.5126579,-0.1365768,797m/data=!3m1!1e3!4m13!1m7!3m6!1s0x48761d9ddf71a451:0xc85a6b3deb3e1b4!2sMamapen!8m2!3d51.5126579!4d-0.1365768!16s%2Fg%2F11j6xw9c9n!3m4!1s0x4876058a91c71369:0xe23a730410fc78a9!8m2!3d51.5148893!4d-0.1363271?entry=ttu&g_ep=EgoyMDI2MTAyOC4wIKXMDSoASAFQAw%3D%3D",
-    "source": "maplink"
+  "suggested": "google-top",
+  "spot": false,
+  "keep": false,
+  "dropReason": "other"
+ },
+ {
+  "creator": "tod",
+  "videoId": "XiRDZo9wjf8",
+  "originalName": "London's Oldest Thai Restaurant",
+  "area": "Stoke Newington",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Yum Yum Thai Restaurant",
+   "placeId": null
   },
-  {
-    "creator": "topjaw",
-    "videoId": "JEVL7IXxOrs",
-    "originalName": "Hannah's Dough Hands",
-    "area": null,
-    "claude": {
-      "keep": true,
-      "reason": "own_review",
-      "name": "Hannah's Dough Hands",
-      "placeId": null
-    },
-    "suggested": "google-top",
-    "spot": false,
-    "keep": true,
-    "name": "Dough Hands East",
-    "placeId": null,
-    "lat": 51.5453747,
-    "lon": -0.0632078,
-    "address": "The Spurstowe Arms, 68 Greenwood Rd, London E8 1AB",
-    "manual": null,
-    "source": "google-top"
+  "suggested": "nearby",
+  "spot": false,
+  "keep": true,
+  "name": "Yum Yum",
+  "placeId": "add903e06f44",
+  "lat": 51.5626,
+  "lon": -0.07401,
+  "address": "Stoke Newington High Street, Hackney, N16 0LH",
+  "manual": null,
+  "source": "nearby"
+ },
+ {
+  "creator": "tod",
+  "videoId": "ewtgs3tNtR0",
+  "originalName": "Arthur's Market",
+  "area": null,
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Arthur's Market",
+   "placeId": null
   },
-  {
-    "creator": "topjaw",
-    "videoId": "i65acG8jUew",
-    "originalName": "Mamapen",
-    "area": null,
-    "claude": {
-      "keep": true,
-      "reason": "own_review",
-      "name": "Mamapen",
-      "placeId": null
-    },
-    "suggested": "candidate",
-    "spot": false,
-    "keep": true,
-    "name": "Mamapen",
-    "placeId": null,
-    "lat": 51.5126579,
-    "lon": -0.1365768,
-    "address": null,
-    "manual": "Mamapen",
-    "mapLink": "google.com/maps/place/Rhianna+Jones+Piercing,+21+Noel+St,+London+W1F+8GP/@51.5126579,-0.1365768,797m/data=!3m1!1e3!4m13!1m7!3m6!1s0x48761d9ddf71a451:0xc85a6b3deb3e1b4!2sMamapen!8m2!3d51.5126579!4d-0.1365768!16s%2Fg%2F11j6xw9c9n!3m4!1s0x4876058a91c71369:0xe23a730410fc78a9!8m2!3d51.5148893!4d-0.1363271?entry=ttu&g_ep=EgoyMDI2MTAyOC4wIKXMDSoASAFQAw%3D%3D",
-    "source": "maplink"
+  "suggested": null,
+  "spot": false,
+  "keep": false,
+  "dropReason": "closed"
+ },
+ {
+  "creator": "tod",
+  "videoId": "DDZL_lSrtWg",
+  "originalName": "Darene Express",
+  "area": "Kingley Court, Carnaby Street, W1B 5PW",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Darjeeling Express",
+   "placeId": null
   },
-  {
-    "creator": "topjaw",
-    "videoId": "dVA9AYDS2eQ",
-    "originalName": "Miga",
-    "area": "Hackney",
-    "claude": {
-      "keep": true,
-      "reason": "own_review",
-      "name": "Miga",
-      "placeId": null
-    },
-    "suggested": "google-top",
-    "spot": false,
-    "keep": true,
-    "name": "Miga",
-    "placeId": null,
-    "lat": 51.534533599999996,
-    "lon": -0.0576598,
-    "address": "1 Mare St, London E8 4RP",
-    "manual": null,
-    "source": "google-top"
-  }
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "Darjeeling Express",
+  "placeId": "f78a045aa362",
+  "lat": 51.5113,
+  "lon": -0.13279,
+  "address": "36-40 Rupert St, W1D 6DW",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "tod",
+  "videoId": "6aMT1O8YqKs",
+  "originalName": "Row",
+  "area": null,
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Row",
+   "placeId": null
+  },
+  "suggested": "google",
+  "spot": false,
+  "keep": true,
+  "name": "Roe - Canary Wharf",
+  "placeId": "54a350cb72c7",
+  "lat": 51.50231,
+  "lon": -0.01522,
+  "address": "One Park Drive, 5 Park Dr, E14 9GG",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "tod",
+  "videoId": "eYlK99B6-cI",
+  "originalName": "Eat While Catering",
+  "area": "Sidcup",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "EatWild Catering",
+   "placeId": null
+  },
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "The Seafood Boil Club",
+  "placeId": null,
+  "lat": 51.429804,
+  "lon": 0.1069319,
+  "address": "Clarence Rd, Sidcup DA14 4DL",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "tod",
+  "videoId": "i-Jz8XZOkbo",
+  "originalName": "Teml Crown",
+  "area": "North London",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Templ Crown",
+   "placeId": "84b2f0af6a19"
+  },
+  "suggested": "claude",
+  "spot": false,
+  "keep": true,
+  "name": "The Tamil Crown",
+  "placeId": "81acbcf8c07e",
+  "lat": 51.532,
+  "lon": -0.10184,
+  "address": "16 Elia St, N1 8DE",
+  "manual": null,
+  "source": "search"
+ },
+ {
+  "creator": "tod",
+  "videoId": "i-Jz8XZOkbo",
+  "originalName": "Teml Prince",
+  "area": null,
+  "claude": {
+   "keep": false,
+   "reason": "only_mentioned",
+   "name": "Templ Prince",
+   "placeId": "e558fe67468f"
+  },
+  "suggested": "claude",
+  "spot": false,
+  "keep": false,
+  "dropReason": "only_mentioned"
+ },
+ {
+  "creator": "tod",
+  "videoId": "vycF66zjsKA",
+  "originalName": "Electric Collection",
+  "area": "Earlsfield, south west London",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Eclectic Collection",
+   "placeId": null
+  },
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "Delicatessen By The Eclectic Collection",
+  "placeId": null,
+  "lat": 51.4427689,
+  "lon": -0.1886361,
+  "address": "491 Garratt Ln, London SW18 4SW",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "tod",
+  "videoId": "Vj4lCfGrcHc",
+  "originalName": "From the Ashes at the Ned",
+  "area": "The Ned",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Interstellar at The Ned",
+   "placeId": null
+  },
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "The Ned London",
+  "placeId": null,
+  "lat": 51.5136949,
+  "lon": -0.0901693,
+  "address": "27 Poultry, London EC2R 8AJ",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "tod",
+  "videoId": "czjrptTojlo",
+  "originalName": "Social Da",
+  "area": "Pinner, NW London",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Social Dhabi",
+   "placeId": null
+  },
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "Social Dhaba",
+  "placeId": "679fd72480dd",
+  "lat": 51.60796,
+  "lon": -0.37391,
+  "address": "294 Uxbridge Rd, HA5 4HR",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "tod",
+  "videoId": "j77t9_Hiuc0",
+  "originalName": "Hacker",
+  "area": null,
+  "claude": {
+   "keep": false,
+   "reason": "only_mentioned",
+   "name": "Hacker",
+   "placeId": null
+  },
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "Hakka",
+  "placeId": null,
+  "lat": 51.5930699,
+  "lon": -0.2596486,
+  "address": null,
+  "manual": "Hakka",
+  "mapLink": "https://www.google.com/maps/place/Hakka/@51.5175048,-0.1409881,4377m/data=!3m2!1e3!5s0x4876114a018505e5:0xfa027b0c18f6eae7!4m10!1m2!2m1!1sHakka,+London!3m6!1s0x48761149fd1c5f47:0xf1bd1e6988f00875!8m2!3d51.5930699!4d-0.2596486!15sCg1IYWtrYSwgTG9uZG9uWg4iDGhha2thIGxvbmRvbpIBEGhha2thX3Jlc3RhdXJhbnSaASRDaGREU1VoTk1HOW5TMFZKUTBGblNVUjBObVZ1YUhoM1JSQULgAQD6AQQIABA1!16s%2Fg%2F11hczqsr3g?entry=ttu&g_ep=EgoyMDI2MTEwMS4wIKXMDSoASAFQAw%3D%3D",
+  "source": "maplink"
+ },
+ {
+  "creator": "tod",
+  "videoId": "j77t9_Hiuc0",
+  "originalName": "Four Seasons",
+  "area": null,
+  "claude": {
+   "keep": false,
+   "reason": "only_mentioned",
+   "name": "Four Seasons",
+   "placeId": null
+  },
+  "suggested": "google",
+  "spot": false,
+  "keep": false,
+  "dropReason": "only_mentioned"
+ },
+ {
+  "creator": "tod",
+  "videoId": "j77t9_Hiuc0",
+  "originalName": "Coconut Trees",
+  "area": null,
+  "claude": {
+   "keep": false,
+   "reason": "only_mentioned",
+   "name": "Coconut Tree",
+   "placeId": "525da4337cfa"
+  },
+  "suggested": "claude",
+  "spot": false,
+  "keep": true,
+  "name": "Coconut Tree",
+  "placeId": "525da4337cfa",
+  "lat": 51.59336,
+  "lon": -0.25956,
+  "address": "Unit C (First Floor, 399 Edgware Rd, NW9 0FH",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "tod",
+  "videoId": "j77t9_Hiuc0",
+  "originalName": "Yo, Tokyo",
+  "area": null,
+  "claude": {
+   "keep": false,
+   "reason": "only_mentioned",
+   "name": "Yo, Tokyo",
+   "placeId": null
+  },
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "Yo Tokyo",
+  "placeId": null,
+  "lat": 51.5931515,
+  "lon": -0.2593115,
+  "address": "First Floor, Unit C, 399 Edgware Rd, London NW9 0FH",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "tod",
+  "videoId": "8ySESDayGmc",
+  "originalName": "Hot Grubs",
+  "area": "Park Royal",
+  "claude": {
+   "keep": false,
+   "reason": "not_london",
+   "name": "Hot Grubs",
+   "placeId": null
+  },
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "Hot grubz, Caribbean food",
+  "placeId": null,
+  "lat": 51.535972,
+  "lon": -0.2755738,
+  "address": "Entrance, grand union industrial estate, London NW10 7UL",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "tod",
+  "videoId": "59VgA54yx3w",
+  "originalName": "Jim Carer",
+  "area": null,
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Jamavar",
+   "placeId": null
+  },
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "Gymkhana",
+  "placeId": "bc4c655e0826",
+  "lat": 51.50852,
+  "lon": -0.14144,
+  "address": "42 Albemarle St, W1S 4JH",
+  "manual": null,
+  "source": "search"
+ },
+ {
+  "creator": "tod",
+  "videoId": "b2g8jpC-r-8",
+  "originalName": "Harley's",
+  "area": "Hamstead",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Harley's",
+   "placeId": null
+  },
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "Harley's Butchery & Rotisserie",
+  "placeId": null,
+  "lat": 51.555901299999995,
+  "lon": -0.17831429999999998,
+  "address": "Oriel Pl, London NW3 1QN",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "tod",
+  "videoId": "xr5XDBj37K0",
+  "originalName": "Fluffy",
+  "area": "London",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Fluffy",
+   "placeId": null
+  },
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "Fluffy Fluffy Bayswater",
+  "placeId": null,
+  "lat": 51.5130815,
+  "lon": -0.1879312,
+  "address": "113 Queensway, London W2 4SJ",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "tod",
+  "videoId": "7ut16rPvjOI",
+  "originalName": "Trap Kitchen",
+  "area": null,
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Trap Kitchen",
+   "placeId": null
+  },
+  "suggested": null,
+  "spot": false,
+  "keep": false,
+  "dropReason": "closed"
+ },
+ {
+  "creator": "tod",
+  "videoId": "uLTVvkCaCCo",
+  "originalName": "Lanzau",
+  "area": "Chinatown",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Lanzau",
+   "placeId": null
+  },
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "Lanzhou Lamian Noodle Bar",
+  "placeId": "adef989681d1",
+  "lat": 51.51152,
+  "lon": -0.12782,
+  "address": "33 Cranbourn St, WC2H 7AD",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "tod",
+  "videoId": "uLTVvkCaCCo",
+  "originalName": "Dwat",
+  "area": "Tooting",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Dwat",
+   "placeId": null
+  },
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "Dawat",
+  "placeId": "61689d55175e",
+  "lat": 51.42982,
+  "lon": -0.16612,
+  "address": "256-258 Upper Tooting Rd, SW17 0DN",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "tod",
+  "videoId": "uLTVvkCaCCo",
+  "originalName": "Lamar Chu",
+  "area": null,
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Lamar",
+   "placeId": "5bfc88383237"
+  },
+  "suggested": "claude",
+  "spot": false,
+  "keep": true,
+  "name": "La Maritxu",
+  "placeId": "5c1b036acc20",
+  "lat": 51.51472,
+  "lon": -0.16522,
+  "address": "12 Connaught St, W2 2AF",
+  "manual": null,
+  "source": "search"
+ },
+ {
+  "creator": "tod",
+  "videoId": "uLTVvkCaCCo",
+  "originalName": "Fosdakb",
+  "area": "North London",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Fosdakb",
+   "placeId": null
+  },
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "Fostok Halab Market",
+  "placeId": "439761d3fa6b",
+  "lat": 51.50851,
+  "lon": -0.2774,
+  "address": "310-314 Uxbridge Rd, W3 9QP",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "tod",
+  "videoId": "uLTVvkCaCCo",
+  "originalName": "Bread Store",
+  "area": null,
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Bread Store",
+   "placeId": null
+  },
+  "suggested": "google",
+  "spot": false,
+  "keep": true,
+  "name": "Breadstall",
+  "placeId": null,
+  "lat": 51.5134357,
+  "lon": -0.134899,
+  "address": null,
+  "manual": "Breadstall",
+  "mapLink": "https://www.google.com/maps/place/Breadstall+Pizza/@51.486107,-0.1505776,11316m/data=!3m2!1e3!5s0x487605269b15d107:0x2fe0eaf458411818!4m10!1m2!2m1!1sBreadstall,+London!3m6!1s0x487605e4651e6389:0x1db3d4b2da5877bd!8m2!3d51.5134357!4d-0.134899!15sChJCcmVhZHN0YWxsLCBMb25kb25aEyIRYnJlYWRzdGFsbCBsb25kb26SARBwaXp6YV9yZXN0YXVyYW50mgFEQ2k5RFFVbFJRVU52WkVOb2RIbGpSamx2VDJ0T1dWSXdlR2hrVnpGcVpHdGFSRmxZVG5salZGVjVWRzFTU2xOWFl4QULgAQD6AQQIABBF!16s%2Fg%2F11wxmjy40h?entry=ttu&g_ep=EgoyMDI2MTEwMS4wIKXMDSoASAFQAw%3D%3D",
+  "source": "maplink"
+ },
+ {
+  "creator": "tod",
+  "videoId": "KLDoTubA4zU",
+  "originalName": "Empire",
+  "area": "Notting Hill",
+  "claude": {
+   "keep": false,
+   "reason": "not_london",
+   "name": "Empire",
+   "placeId": null
+  },
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "Empire Empire",
+  "placeId": "0efcd4800e1e",
+  "lat": 51.51798,
+  "lon": -0.20355,
+  "address": "16 All Saints Rd, W11 1HH",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "tod",
+  "videoId": "Sa-uqqcg5VI",
+  "originalName": "Orantikica Vanario",
+  "area": "London",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Anttico Forno",
+   "placeId": null
+  },
+  "suggested": "google",
+  "spot": false,
+  "keep": true,
+  "name": "All’ Antico Vinaio",
+  "placeId": "a91487573239",
+  "lat": 51.51251,
+  "lon": -0.13284,
+  "address": "61 Old Compton St, W1D 6HT",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "tod",
+  "videoId": "wllfaansu6A",
+  "originalName": "Zender",
+  "area": null,
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Zender",
+   "placeId": null
+  },
+  "suggested": null,
+  "spot": false,
+  "keep": false,
+  "dropReason": "closed"
+ },
+ {
+  "creator": "tod",
+  "videoId": "M-Q0E5SOCPw",
+  "originalName": "Buning",
+  "area": "Chinatown, London",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Coosik",
+   "placeId": null
+  },
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "Bunsik Chinatown",
+  "placeId": null,
+  "lat": 51.5113169,
+  "lon": -0.132168,
+  "address": "31 Wardour St, London W1D 6PT",
+  "manual": null,
+  "source": "google"
+ },
+ {
+  "creator": "tod",
+  "videoId": "M-Q0E5SOCPw",
+  "originalName": "Deep Fried Chicken / Bubble the JG Chicken",
+  "area": "Chinatown, London",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Deep Fried Chicken",
+   "placeId": null
+  },
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "Good friend",
+  "placeId": null,
+  "lat": 51.5117794,
+  "lon": -0.1287906,
+  "address": null,
+  "manual": "Good friend",
+  "mapLink": "https://www.google.com/maps/place/Good+Friend+Chicken/@51.5118524,-0.1379074,2759m/data=!3m1!1e3!4m10!1m2!2m1!1sGood+friend,+London!3m6!1s0x487604cd8709ea7f:0x1f874a2be3a2b138!8m2!3d51.5117794!4d-0.1287906!15sChNHb29kIGZyaWVuZCwgTG9uZG9uWhQiEmdvb2QgZnJpZW5kIGxvbmRvbpIBFmZyaWVkX2NoaWNrZW5fdGFrZWF3YXmaASNDaFpEU1VoTk1HOW5TMFZKUTBGblNVTk1iVGhsVGxOM0VBReABAPoBBAgAEEs!16s%2Fg%2F11cnypt0t4?entry=ttu&g_ep=EgoyMDI2MTEwMS4wIKXMDSoASAFQAw%3D%3D",
+  "source": "maplink"
+ },
+ {
+  "creator": "tod",
+  "videoId": "M-Q0E5SOCPw",
+  "originalName": "Wonky",
+  "area": "Chinatown, London",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Wonky",
+   "placeId": null
+  },
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "Wong Kei",
+  "placeId": "8f0334684b50",
+  "lat": 51.51151,
+  "lon": -0.13231,
+  "address": "41-43 Wardour St, W1D 6PX",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "4ngOMp-fv48",
+  "originalName": "The Duchess of Soho",
+  "area": "Soho",
+  "claude": {
+   "keep": false,
+   "reason": "only_mentioned",
+   "name": "The Duchess of Soho",
+   "placeId": null
+  },
+  "suggested": "candidate",
+  "spot": false,
+  "keep": false,
+  "dropReason": "guest_recommendation"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "mFC_HzFtekI",
+  "originalName": "Big Zuu's favourite cocktail bar",
+  "area": "Golden Square",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Simmons",
+   "placeId": null
+  },
+  "suggested": "nearby",
+  "spot": false,
+  "keep": false,
+  "dropReason": "guest_recommendation"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "a6sx9OCMEpw",
+  "originalName": "Bon Vino",
+  "area": "Bermondsey",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Bon Vino",
+   "placeId": null
+  },
+  "suggested": "google",
+  "spot": false,
+  "keep": true,
+  "name": "Bon Vino 35",
+  "placeId": null,
+  "lat": 51.5003414,
+  "lon": -0.0720976,
+  "address": "35 Dockhead, London SE1 2BS",
+  "manual": null,
+  "source": "google"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "qmWp2vR6fXw",
+  "originalName": "12:51 / Around the Cluck",
+  "area": null,
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Little Market Bites",
+   "placeId": null
+  },
+  "suggested": "nearby",
+  "spot": false,
+  "keep": true,
+  "name": "BAO Bar",
+  "placeId": "05f04f3eeecb",
+  "lat": 51.53752,
+  "lon": -0.05876,
+  "address": "Netil Market, 23 Westgate St, E8 3RL",
+  "manual": null,
+  "source": "search"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "qmWp2vR6fXw",
+  "originalName": "Studio Kitchen N1",
+  "area": "Islington (Angel, Upper Street)",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "1251",
+   "placeId": null
+  },
+  "suggested": "candidate",
+  "spot": false,
+  "keep": true,
+  "name": "12:51 - Restaurant",
+  "placeId": "b534c2f557ac",
+  "lat": 51.53783,
+  "lon": -0.10279,
+  "address": "107 Upper Street, N1 1QN",
+  "manual": null,
+  "source": "search"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "KCITfXKd9vk",
+  "originalName": "Ahi Poké",
+  "area": "Market Hall, Fulham",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Ahi Poké",
+   "placeId": null
+  },
+  "suggested": null,
+  "spot": false,
+  "keep": false,
+  "dropReason": "temporary"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "KCITfXKd9vk",
+  "originalName": "Butchies",
+  "area": "Market Hall, Fulham",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Butchies",
+   "placeId": null
+  },
+  "suggested": null,
+  "spot": false,
+  "keep": false,
+  "dropReason": "temporary"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "KCITfXKd9vk",
+  "originalName": "Fanny's Kebabs",
+  "area": "Market Hall, Fulham",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Fanny's Kebabs",
+   "placeId": null
+  },
+  "suggested": null,
+  "spot": false,
+  "keep": false,
+  "dropReason": "temporary"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "KCITfXKd9vk",
+  "originalName": "Hot Box",
+  "area": "Fulham",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Hot Box",
+   "placeId": "da3e4792f2c4"
+  },
+  "suggested": "claude",
+  "spot": false,
+  "keep": false,
+  "dropReason": "temporary"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "KCITfXKd9vk",
+  "originalName": "Love Churros",
+  "area": "Market Hall, Fulham",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Love Churros",
+   "placeId": "781d8113bec8"
+  },
+  "suggested": "claude",
+  "spot": false,
+  "keep": false,
+  "dropReason": "temporary"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "KCITfXKd9vk",
+  "originalName": "Made of Dough",
+  "area": "Market Hall, Fulham",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Made of Dough",
+   "placeId": null
+  },
+  "suggested": null,
+  "spot": false,
+  "keep": false,
+  "dropReason": "temporary"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "KCITfXKd9vk",
+  "originalName": "Super Tacos",
+  "area": "Market Hall, Fulham",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Super Tacos",
+   "placeId": null
+  },
+  "suggested": null,
+  "spot": false,
+  "keep": false,
+  "dropReason": "temporary"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "TP7vBBbUEqU",
+  "originalName": "Monty's Deli",
+  "area": "Hoxton",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Monty's Deli",
+   "placeId": "d7441a424cef"
+  },
+  "suggested": "claude",
+  "spot": false,
+  "keep": false,
+  "dropReason": "closed"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "TP7vBBbUEqU",
+  "originalName": "High Mood Food",
+  "area": "Spitalfields",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "High Mood Food",
+   "placeId": "866792684879"
+  },
+  "suggested": "claude",
+  "spot": false,
+  "keep": false,
+  "dropReason": "closed"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "8qYmiZn4yAo",
+  "originalName": "The Joint",
+  "area": "Brixton",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "The Joint",
+   "placeId": null
+  },
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "The Joint",
+  "placeId": "6a447ea02497",
+  "lat": 51.46222,
+  "lon": -0.11169,
+  "address": "Brixton Village, Unit 87 Coldharbour Ln, SW9 8PR",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "8qYmiZn4yAo",
+  "originalName": "Okan",
+  "area": "Brixton",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Okan",
+   "placeId": null
+  },
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "OKAN Brixton Village",
+  "placeId": "bb969d8d2ee2",
+  "lat": 51.46246,
+  "lon": -0.11181,
+  "address": "39, Brixton Village, Coldharbour Ln, SW9 8PS",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "8qYmiZn4yAo",
+  "originalName": "Honest Burger",
+  "area": "Brixton",
+  "claude": {
+   "keep": false,
+   "reason": "only_mentioned",
+   "name": "Honest Burgers",
+   "placeId": null
+  },
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "Honest Burgers",
+  "placeId": "810716a37b74",
+  "lat": 51.4624,
+  "lon": -0.11245,
+  "address": "Unit 12, Brixton Village, SW9 8PR",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "8qYmiZn4yAo",
+  "originalName": "Elephant",
+  "area": "Brixton",
+  "claude": {
+   "keep": false,
+   "reason": "only_mentioned",
+   "name": "Elephant",
+   "placeId": null
+  },
+  "suggested": "nearby",
+  "spot": false,
+  "keep": false,
+  "dropReason": "only_mentioned"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "8qYmiZn4yAo",
+  "originalName": "Franco Manca",
+  "area": "Brixton",
+  "claude": {
+   "keep": false,
+   "reason": "only_mentioned",
+   "name": "Franco Manca",
+   "placeId": null
+  },
+  "suggested": "nearby",
+  "spot": false,
+  "keep": false,
+  "dropReason": "only_mentioned"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "m_z5yPXnnek",
+  "originalName": "James Cochran's Restaurant",
+  "area": "East London",
+  "claude": {
+   "keep": false,
+   "reason": "only_mentioned",
+   "name": "J. Cochran",
+   "placeId": null
+  },
+  "suggested": "nearby",
+  "spot": false,
+  "keep": false,
+  "dropReason": "only_mentioned"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "m_z5yPXnnek",
+  "originalName": "BYOC Bar",
+  "area": null,
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Bring Your Own Cocktail",
+   "placeId": null
+  },
+  "suggested": "nearby",
+  "spot": false,
+  "keep": false,
+  "dropReason": "closed"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "M-c_eejeydY",
+  "originalName": "Ice Cream Union",
+  "area": "Dalston",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Molly Bakes",
+   "placeId": null
+  },
+  "suggested": "nearby",
+  "spot": false,
+  "keep": false,
+  "dropReason": "closed"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "RdGAqs9iwGo",
+  "originalName": "Wildflowers",
+  "area": null,
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Wildflowers",
+   "placeId": "0a76f2fafade"
+  },
+  "suggested": "claude",
+  "spot": false,
+  "keep": true,
+  "name": "Wildflowers Restaurant",
+  "placeId": "0a76f2fafade",
+  "lat": 51.49045,
+  "lon": -0.15303,
+  "address": "Newson's Yard, 57 Pimlico Road, SW1W 8NE",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "jIEhjCAUuCc",
+  "originalName": "Canal Restaurant",
+  "area": "West London",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Canal",
+   "placeId": null
+  },
+  "suggested": "nearby",
+  "spot": false,
+  "keep": true,
+  "name": "Canal Restaurant",
+  "placeId": null,
+  "lat": 51.5225391,
+  "lon": -0.1998125,
+  "address": null,
+  "manual": "Canal Restaurant",
+  "mapLink": "https://www.google.com/maps/place/Canal+Restaurant/@51.5225391,-0.28221,22613m/data=!3m1!1e3!4m10!1m2!2m1!1scanal,+London!3m6!1s0x4876111a366d2413:0xa55b4fe77b056536!8m2!3d51.5225391!4d-0.1998125!15sCg1jYW5hbCwgTG9uZG9uWg4iDGNhbmFsIGxvbmRvbpIBGm1vZGVybl9ldXJvcGVhbl9yZXN0YXVyYW50mgFEQ2k5RFFVbFJRVU52WkVOb2RIbGpSamx2VDI1c1JsUkdUVEJVTW1oSlVsUmFTbE5HT1cxV2JXaEVZVEZuZWsxWVl4QULgAQD6AQQIABBA!16s%2Fg%2F11m6qsypd1?entry=ttu&g_ep=EgoyMDI2MTEwMS4wIKXMDSoASAFQAw%3D%3D",
+  "source": "maplink"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "JEVL7IXxOrs",
+  "originalName": "The Spurstowe Arms",
+  "area": null,
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "The Spurstowe Arms",
+   "placeId": "86ba4cea20a9"
+  },
+  "suggested": "claude",
+  "spot": false,
+  "keep": true,
+  "name": "Dough Hands Pizza",
+  "placeId": null,
+  "lat": 51.5453747,
+  "lon": -0.0632078,
+  "address": null,
+  "manual": "Dough Hands Pizza",
+  "mapLink": "https://www.google.com/maps/place/The+Spurstowe+Arms/@51.5453747,-0.0632078,706m/data=!3m1!1e3!4m14!1m7!3m6!1s0x48761d16bfa5bd73:0x501eb9830a5c9d43!2sDough+Hands+East!8m2!3d51.5453747!4d-0.0632078!16s%2Fg%2F11shs3fn8b!3m5!1s0x487606f76b898add:0x23f4eb01ef8cd953!8m2!3d51.5453895!4d-0.0631891!16s%2Fm%2F051tl5g?entry=ttu&g_ep=EgoyMDI2MTEwMS4wIKXMDSoASAFQAw%3D%3D",
+  "source": "maplink"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "JEVL7IXxOrs",
+  "originalName": "The Old Nuns Head",
+  "area": "Peckham",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "The Old Nun's Head",
+   "placeId": "880a65d6a6ed"
+  },
+  "suggested": "claude",
+  "spot": false,
+  "keep": false,
+  "dropReason": "other"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "Hc1fQrbgp9k",
+  "originalName": "Chick King",
+  "area": "Harrow",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Chick King",
+   "placeId": "f91da6bc4271"
+  },
+  "suggested": "claude",
+  "spot": false,
+  "keep": true,
+  "name": "Chick King[FRIEDCHICKEN-RIBS-BURGERS]",
+  "placeId": "c148e7816ca9",
+  "lat": 51.60449,
+  "lon": -0.0682,
+  "address": "755 High Rd, N17 8AH",
+  "manual": null,
+  "source": "search"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "Hc1fQrbgp9k",
+  "originalName": "Bake Street",
+  "area": "Rectory Road, Clapton",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Bake Street",
+   "placeId": null
+  },
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "Bake Street",
+  "placeId": "31525a9c9386",
+  "lat": 51.55878,
+  "lon": -0.06667,
+  "address": "58 Evering Rd, N16 7SR",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "Hc1fQrbgp9k",
+  "originalName": "Mr Ji",
+  "area": "Soho",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Mr Ji",
+   "placeId": null
+  },
+  "suggested": "google-top",
+  "spot": false,
+  "keep": false,
+  "dropReason": "closed"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "_xbJ-4n9PCg",
+  "originalName": "Four Corners",
+  "area": "High Holborn",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Four Corners",
+   "placeId": null
+  },
+  "suggested": "candidate",
+  "spot": false,
+  "keep": false,
+  "dropReason": "temporary"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "ozf5Eizto-E",
+  "originalName": "Blacklock",
+  "area": "Shoreditch",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Blacklock",
+   "placeId": "5dd6dc8e306f"
+  },
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "Blacklock Shoreditch",
+  "placeId": "67bb77151774",
+  "lat": 51.52591,
+  "lon": -0.08191,
+  "address": "28-30 Rivington St, EC2A 3DZ",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "ozf5Eizto-E",
+  "originalName": "Goila Butter Chicken",
+  "area": "Marylebone",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Goila Butter Chicken",
+   "placeId": null
+  },
+  "suggested": "nearby",
+  "spot": false,
+  "keep": false,
+  "dropReason": "temporary"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "ozf5Eizto-E",
+  "originalName": "Pub To Your Door",
+  "area": null,
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Pub To Your Door",
+   "placeId": null
+  },
+  "suggested": "nearby",
+  "spot": false,
+  "keep": false,
+  "dropReason": "temporary"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "XVdcEzn_yK4",
+  "originalName": "OoWee",
+  "area": "Dalston",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "OoWee",
+   "placeId": null
+  },
+  "suggested": "google-top",
+  "spot": false,
+  "keep": false,
+  "dropReason": "closed"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "XVdcEzn_yK4",
+  "originalName": "Temple of Seitan",
+  "area": "Camden",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Temple of Seitan",
+   "placeId": "06eab00439ad"
+  },
+  "suggested": "claude",
+  "spot": false,
+  "keep": true,
+  "name": "Temple of Seitan",
+  "placeId": "8a0b1b47a362",
+  "lat": 51.53815,
+  "lon": -0.14436,
+  "address": "43 Parkway, NW1 7PN",
+  "manual": null,
+  "source": "candidate"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "YKdwsDL5cGs",
+  "originalName": "Lords Of Poké",
+  "area": "Peckham Levels",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Lords of Poké",
+   "placeId": "e1fff88ebdd7"
+  },
+  "suggested": "claude",
+  "spot": false,
+  "keep": false,
+  "dropReason": "closed"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "YKdwsDL5cGs",
+  "originalName": "Drums & Flats",
+  "area": "Peckham",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Drums & Flats",
+   "placeId": null
+  },
+  "suggested": "google-top",
+  "spot": false,
+  "keep": false,
+  "dropReason": "temporary"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "soyqQluj32A",
+  "originalName": "Mooshies",
+  "area": "Brick Lane, East London",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Mooshies",
+   "placeId": null
+  },
+  "suggested": "nearby",
+  "spot": false,
+  "keep": true,
+  "name": "Mooshies London Vegan Burger Bar",
+  "placeId": "93d8137e1910",
+  "lat": 51.51971,
+  "lon": -0.07182,
+  "address": "104 Brick Lane, Spitalfields, E1 6RL",
+  "manual": null,
+  "source": "nearby"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "uDWzMUbdg6c",
+  "originalName": "Bake",
+  "area": "Chinatown, Soho",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Bake",
+   "placeId": null
+  },
+  "suggested": "google",
+  "spot": false,
+  "keep": false,
+  "dropReason": "other"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "uDWzMUbdg6c",
+  "originalName": "Carbon",
+  "area": "Soho",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Carbon",
+   "placeId": null
+  },
+  "suggested": "google-top",
+  "spot": false,
+  "keep": true,
+  "name": "Carbon Soho",
+  "placeId": null,
+  "lat": 51.510844,
+  "lon": -0.1369564,
+  "address": "78 Brewer St, London W1F 9TY",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "uDWzMUbdg6c",
+  "originalName": "The Pie Shop",
+  "area": "Covent Garden",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "The Pie Shop",
+   "placeId": null
+  },
+  "suggested": "nearby",
+  "spot": false,
+  "keep": false,
+  "dropReason": "closed"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "TP7vBBbUEqU",
+  "originalName": "Pleasant Lady",
+  "area": "Spitalfields",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Pleasant Lady",
+   "placeId": "ba25d7fb0193"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "keep": true,
+  "name": "Pleasant Lady Jian Bing Trading Stall",
+  "placeId": "ba25d7fb0193",
+  "lat": 51.51974,
+  "lon": -0.07506,
+  "address": "4 Market Street, E1 6",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "F5Ba0osd-NQ",
+  "originalName": "Brawn",
+  "area": "Columbia Road",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Brawn",
+   "placeId": "c4eb70b37650"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "keep": true,
+  "name": "Brawn",
+  "placeId": "c4eb70b37650",
+  "lat": 51.52895,
+  "lon": -0.07029,
+  "address": "49 Columbia Rd, E2 7RG",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "87dnHa20ilA",
+  "originalName": "Fenchurch Restaurant",
+  "area": "Sky Garden",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Fenchurch Restaurant",
+   "placeId": "746e749383ef"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "keep": true,
+  "name": "Fenchurch Restaurant",
+  "placeId": "746e749383ef",
+  "lat": 51.51115,
+  "lon": -0.08386,
+  "address": "Level 37, Sky Garden Walk, 1, EC3M 8AF",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "BZgRaHsFBDk",
+  "originalName": "Ibai",
+  "area": null,
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Ibai",
+   "placeId": "1c52ffeb67b5"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "keep": true,
+  "name": "Ibai",
+  "placeId": "1c52ffeb67b5",
+  "lat": 51.51792,
+  "lon": -0.09875,
+  "address": "90 Bartholomew Close, EC1A 7BN",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "QuD91Ecjts4",
+  "originalName": "Goldies",
+  "area": "Soho",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Goldies",
+   "placeId": "7a840d92cf38"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "keep": true,
+  "name": "Goldies",
+  "placeId": "7a840d92cf38",
+  "lat": 51.51268,
+  "lon": -0.13861,
+  "address": "W1B 5PW",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "rVU4xYGSYUo",
+  "originalName": "Granger & Co",
+  "area": "Marylebone",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Granger & Co.",
+   "placeId": "116631510068"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "keep": true,
+  "name": "Granger & Co.",
+  "placeId": "116631510068",
+  "lat": 51.51912,
+  "lon": -0.15179,
+  "address": "105 Marylebone High St, W1U 4RS",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "tod",
+  "videoId": "98MED7dkJD4",
+  "originalName": "Bentley's",
+  "area": "Piccadilly",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Bentley's Oyster Bar & Grill",
+   "placeId": "d80f85b69216"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "keep": true,
+  "name": "Bentley's Oyster Bar & Grill",
+  "placeId": "d80f85b69216",
+  "lat": 51.50962,
+  "lon": -0.13774,
+  "address": "11-15 Swallow St, Piccadilly, W1B 4DG",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "tod",
+  "videoId": "EnTsdLW3k3s",
+  "originalName": "Funky Chips",
+  "area": "Camden Market",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Funky Chips",
+   "placeId": "327258239cb7"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "keep": true,
+  "name": "Funky Chips",
+  "placeId": "327258239cb7",
+  "lat": 51.54234,
+  "lon": -0.14732,
+  "address": "The Stables Market, Chalk Farm Rd, NW1 8AH",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "z2Isil_GyF0",
+  "originalName": "2210 by NattyCanCook",
+  "area": "Herne Hill",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "2210 by NattyCanCook",
+   "placeId": "d95e942b1f57"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "keep": true,
+  "name": "2210 by NattyCanCook",
+  "placeId": "d95e942b1f57",
+  "lat": 51.45061,
+  "lon": -0.10049,
+  "address": "Norwood Rd, SE24 9AA",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "HvWoUfSMsZQ",
+  "originalName": "BiBi",
+  "area": null,
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "BiBi",
+   "placeId": "9811f628cfe4"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "keep": true,
+  "name": "BiBi",
+  "placeId": "9811f628cfe4",
+  "lat": 51.51244,
+  "lon": -0.15334,
+  "address": "42 N Audley St, W1K 6ZP",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "hd05qpqcrSI",
+  "originalName": "Morchella",
+  "area": null,
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Morchella",
+   "placeId": "e50b7dd1d0db"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "keep": true,
+  "name": "Morchella",
+  "placeId": "e50b7dd1d0db",
+  "lat": 51.52693,
+  "lon": -0.10857,
+  "address": "86 Rosebery Ave, EC1R 4QY",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "qmWp2vR6fXw",
+  "originalName": "Beigal Bake",
+  "area": "Shoreditch",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Smokestak",
+   "placeId": "740ea03b1ba8"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "keep": true,
+  "name": "Smokestak",
+  "placeId": "740ea03b1ba8",
+  "lat": 51.52368,
+  "lon": -0.07293,
+  "address": "35 Sclater St, E1 6LB",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "tod",
+  "videoId": "4mKnxhB0R-g",
+  "originalName": "Regency",
+  "area": null,
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "The Regency",
+   "placeId": "dbbd4996b071"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "keep": true,
+  "name": "The Regency Club",
+  "placeId": "fe18ebb552e6",
+  "lat": 51.5942,
+  "lon": -0.28439,
+  "address": "18-21 Queensbury Station Parade, HA8 5NR",
+  "manual": null,
+  "source": "search"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "OqQHdSScquc",
+  "originalName": "Pizza Pilgrims",
+  "area": "Soho, Kingly Court",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Pizza Pilgrims",
+   "placeId": "822fa49adc5f"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "keep": true,
+  "name": "Pizza Pilgrims",
+  "placeId": "822fa49adc5f",
+  "lat": 51.51237,
+  "lon": -0.13885,
+  "address": "11 Kingly St, W1B 5PW",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "tod",
+  "videoId": "f7vIFESo2jQ",
+  "originalName": "Sing Pula",
+  "area": null,
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Singapulah",
+   "placeId": "abd63b7d9316"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "keep": true,
+  "name": "Singapulah",
+  "placeId": "abd63b7d9316",
+  "lat": 51.51194,
+  "lon": -0.13237,
+  "address": "53 Shaftesbury Ave, W1D 6LB",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "tod",
+  "videoId": "jrKa6dO__yQ",
+  "originalName": "Schwings",
+  "area": null,
+  "claude": {
+   "keep": false,
+   "reason": "event_stall",
+   "name": "Schwings",
+   "placeId": null
+  },
+  "suggested": null,
+  "spot": true,
+  "keep": false,
+  "dropReason": "event_stall"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "Hhrzlsnb7-s",
+  "originalName": "Sambal & Shiok",
+  "area": "Holloway Road, N7",
+  "claude": {
+   "keep": false,
+   "reason": "guest_own_place",
+   "name": "Sambal Shiok Laksa Bar",
+   "placeId": "8866166d3e15"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "keep": false,
+  "dropReason": "guest_own_place"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "zrW1WefP89g",
+  "originalName": "St.JOHN",
+  "area": null,
+  "claude": {
+   "keep": false,
+   "reason": "guest_own_place",
+   "name": "St. John",
+   "placeId": "7946170346bf"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "keep": false,
+  "dropReason": "guest_own_place"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "sqUUTGnROEI",
+  "originalName": "Harrods",
+  "area": "Knightsbridge",
+  "claude": {
+   "keep": false,
+   "reason": "only_mentioned",
+   "name": "Harrods",
+   "placeId": null
+  },
+  "suggested": null,
+  "spot": true,
+  "keep": false,
+  "dropReason": "only_mentioned"
+ },
+ {
+  "creator": "tod",
+  "videoId": "jrKa6dO__yQ",
+  "originalName": "Killer Waffles",
+  "area": null,
+  "claude": {
+   "keep": false,
+   "reason": "event_stall",
+   "name": "Killer Waffles",
+   "placeId": null
+  },
+  "suggested": null,
+  "spot": true,
+  "keep": false,
+  "dropReason": "event_stall"
+ }
 ]

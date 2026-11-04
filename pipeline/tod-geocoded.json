@@ -322,10 +322,10 @@
         "rating": null,
         "rating_out_of": null,
         "sentiment": "positive",
-        "notes": "Extravagant French fine dining restaurant where Tod tries the £2,600 gold-plated burger (second most expensive in the world, pre-order only). Made with lamb, ribeye, fillet, sirloin, dry-aged beef, truffle, caviar, Scottish lobster, and 24-karat gold leaf. Tod praises the distinct flavors from dry-aged beef.",
-        "verdict": "Most insane burger, exceptional ingredients and execution.",
+        "notes": "Extravagant French fine dining establishment where Tod tries the £2,600 gold-plated burger (second most expensive in the world). Made with lamb, ribeye, fillet, sirloin, truffle, caviar, lobster, and 24-karat gold leaf. £500 goes to charity. Tod praises the distinct flavors from dry-aged beef over wagyu.",
+        "verdict": "Extraordinary ingredients, worth the extravagance, better than wagyu.",
         "dishes": [
-          "£2,600 gold-plated burger"
+          "£2,600 gold-plated burger with lamb, ribeye, fillet, sirloin, truffle, caviar, lobster"
         ],
         "sponsored": false,
         "at": 601
@@ -808,7 +808,7 @@
     "bestRatingOutOf": null
   },
   {
-    "name": "Vnilla | Covent Garden",
+    "name": "Vnilla",
     "location": "Covent Garden",
     "lat": 51.51441,
     "lon": -0.12419,
@@ -1119,6 +1119,22 @@
         ],
         "sponsored": false,
         "at": 0
+      },
+      {
+        "videoId": "RvAbVo7WRYg",
+        "videoTitle": "11 January 2026",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod praised the fresh ingredients and exceptional value, highlighting the £3.99 hummus with bread and £4.99 shawarma meal deal with chicken carved from pillars of meat. He was impressed by portion sizes, quality of marination, and charcoal grill offerings, comparing the value to Nando's.",
+        "verdict": "Exceptional value with fresh, high-quality shawarma and sides.",
+        "dishes": [
+          "hummus with bread (£3)",
+          "shawarma meal deal (£4.99)",
+          "charcoal grill chicken (£5.99)"
+        ],
+        "sponsored": false,
+        "at": 0
       }
     ],
     "bestRating": null,
@@ -1153,11 +1169,11 @@
     "bestRatingOutOf": null
   },
   {
-    "name": "The Regency",
+    "name": "The Regency Club",
     "location": null,
-    "lat": 51.69153,
-    "lon": -0.1785,
-    "placeId": "dbbd4996b071",
+    "lat": 51.5942,
+    "lon": -0.28439,
+    "placeId": "fe18ebb552e6",
     "mentions": [
       {
         "videoId": "4mKnxhB0R-g",
@@ -1234,40 +1250,6 @@
     "bestRatingOutOf": null
   },
   {
-    "name": "Sael",
-    "location": "St James's Market",
-    "lat": 51.5088908,
-    "lon": -0.1332191,
-    "placeId": null,
-    "mentions": [
-      {
-        "videoId": "Og6wRgMZyaQ",
-        "videoTitle": "For £29pp, is this London’s best roast? 👀 #london #roast #foodie",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Chef and owner Jason Atherton's restaurant serving roast dinners at £29pp. Tod praises the exceptional bread brushed in beef dripping, insane pies including bone marrow, Marmite tart with caviar, perfectly executed roasts with crispy roast potatoes and excellent gravy, creamy mashed potato, and cauliflower cheese.",
-        "verdict": "Best roast in London, exceptional quality for £29pp.",
-        "dishes": [
-          "roast dinner",
-          "bread with beef dripping butter",
-          "bone marrow pie",
-          "Marmite tart with caviar",
-          "roast chicken and beef",
-          "Yorkshire puddings",
-          "mashed potato",
-          "roast potatoes",
-          "cauliflower cheese",
-          "Guinness"
-        ],
-        "sponsored": false,
-        "at": 0
-      }
-    ],
-    "bestRating": null,
-    "bestRatingOutOf": null
-  },
-  {
     "name": "Black Bear Burger",
     "location": "London",
     "lat": 51.46185,
@@ -1337,7 +1319,7 @@
     "bestRatingOutOf": null
   },
   {
-    "name": "#AsadorCamden",
+    "name": "Asador Camden",
     "location": "Camden Market",
     "lat": 51.5423836,
     "lon": -0.1473842,
@@ -1388,7 +1370,7 @@
     "bestRatingOutOf": null
   },
   {
-    "name": "Peckish Burgers | Camden",
+    "name": "Peckish Burgers",
     "location": "Camden Market",
     "lat": 51.5411461,
     "lon": -0.1460696,
@@ -1432,136 +1414,6 @@
         ],
         "sponsored": false,
         "at": 90
-      }
-    ],
-    "bestRating": null,
-    "bestRatingOutOf": null
-  },
-  {
-    "name": "Shawarma Hut",
-    "location": "Elephant and Castle",
-    "lat": 51.49456,
-    "lon": -0.13078,
-    "placeId": "58c0cde0ebb5",
-    "mentions": [
-      {
-        "videoId": "RvAbVo7WRYg",
-        "videoTitle": "11 January 2026",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Tod visited and praised the fresh ingredients and exceptional value. He highlighted the £3.99 hummus with bread and £4.99 shawarma meal deal with chicken carved from three pillars of meat, impressed by portion sizes, quality of marination, and charcoal grill offerings.",
-        "verdict": "Exceptional value, fresh ingredients, incredible portions.",
-        "dishes": [
-          "hummus with bread",
-          "shawarma meal deal",
-          "chicken shawarma",
-          "charcoal grilled shawarma"
-        ],
-        "sponsored": false,
-        "at": 0
-      }
-    ],
-    "bestRating": null,
-    "bestRatingOutOf": null
-  },
-  {
-    "name": "breadstall",
-    "location": "Clapham",
-    "lat": 51.5134357,
-    "lon": -0.134899,
-    "placeId": null,
-    "mentions": [
-      {
-        "videoId": "wGptiu_Uboo",
-        "videoTitle": "We Tried London's Most Expensive Pizza (You Won't Believe How much It Cost!!!!)",
-        "rating": 9.1,
-        "rating_out_of": 10,
-        "sentiment": "positive",
-        "notes": "Widely regarded as the best slice shop in the city. Exceptional sourdough crust with perfect balance of Neapolitan and New York styles; beef shin pizza defies gravity and is some of the best pizza in the world.",
-        "verdict": "Incredibly crispy, puffy crust, best pizza worldwide.",
-        "dishes": [
-          "beef shin pizza"
-        ],
-        "sponsored": false,
-        "at": 296
-      }
-    ],
-    "bestRating": 9.1,
-    "bestRatingOutOf": 10
-  },
-  {
-    "name": "Gracey's Pizza",
-    "location": "Topps Road / Central London",
-    "lat": 51.516284000000006,
-    "lon": -0.1298763,
-    "placeId": null,
-    "mentions": [
-      {
-        "videoId": "wGptiu_Uboo",
-        "videoTitle": "We Tried London's Most Expensive Pizza (You Won't Believe How much It Cost!!!!)",
-        "rating": 9,
-        "rating_out_of": 10,
-        "sentiment": "positive",
-        "notes": "Recently opened in Central London. Makes their own stracciatella in-house; praised for perfectly baked grandma slice and sausage pizza with exceptional flavour balance.",
-        "verdict": "Makes own stracciatella, fantastic pizza, 9.1 rating.",
-        "dishes": [
-          "grandma slice",
-          "smoky pepperoni pizza",
-          "sweet vera sausage pizza"
-        ],
-        "sponsored": false,
-        "at": 570
-      }
-    ],
-    "bestRating": 9,
-    "bestRatingOutOf": 10
-  },
-  {
-    "name": "Crazy Pizza Knightsbridge",
-    "location": "Knightsbridge",
-    "lat": 51.49952,
-    "lon": -0.16174,
-    "placeId": "89eb337bd218",
-    "mentions": [
-      {
-        "videoId": "wGptiu_Uboo",
-        "videoTitle": "We Tried London's Most Expensive Pizza (You Won't Believe How much It Cost!!!!)",
-        "rating": 1.3,
-        "rating_out_of": 10,
-        "sentiment": "negative",
-        "notes": "London's most expensive pizza at £65 (salmon and caviar). Underwhelming presentation, buttery texture, and confusing flavour profile; Tod described it as a warm salmon wrap rather than pizza.",
-        "verdict": "Overpriced, disappointing, worst value of day.",
-        "dishes": [
-          "salmon and caviar pizza"
-        ],
-        "sponsored": false,
-        "at": 776
-      }
-    ],
-    "bestRating": 1.3,
-    "bestRatingOutOf": 10
-  },
-  {
-    "name": "Crisp Pizza",
-    "location": "Hammersmith",
-    "lat": 51.4885,
-    "lon": -0.22692,
-    "placeId": "95c774a3d6f7",
-    "mentions": [
-      {
-        "videoId": "wGptiu_Uboo",
-        "videoTitle": "We Tried London's Most Expensive Pizza (You Won't Believe How much It Cost!!!!)",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Called by Dave Portnoy 'by far the best pizza I've had in London.' The grandma pie is thick but supremely light and airy inside with impressive execution. Tod called it perfect pizza.",
-        "verdict": "Perfect crunch, perfect balance, best pizza world.",
-        "dishes": [
-          "grandma pie"
-        ],
-        "sponsored": false,
-        "at": 898
       }
     ],
     "bestRating": null,
@@ -1617,13 +1469,12 @@
         "rating": null,
         "rating_out_of": null,
         "sentiment": "positive",
-        "notes": "Tod personally experienced this popup dining concept where a grocery store transforms into a tuna butchering restaurant at 7 p.m., featuring a nine-course tasting menu (£250 per person) with high-grade Japanese sashimi and hand-dived scallops.",
-        "verdict": "London's craziest dining experience, world-first tuna butchering spectacle.",
+        "notes": "A grocery store by day that transforms into a dining experience at 7 p.m., featuring a nine-course tasting menu (£250 per person) centered around butchering a £15,000 bluefin tuna in front of diners. Tod personally experienced this event and described it as one of the most sought-after experiences in London.",
+        "verdict": "Incredible experience: butchering tuna in front of diners nightly.",
         "dishes": [
-          "nine-course tasting menu",
-          "high-grade Japanese sashimi",
-          "hand-dived scallops",
-          "bluefin tuna"
+          "Nine-course tasting menu",
+          "High-grade Japanese sashimi",
+          "Hand-dived scallops"
         ],
         "sponsored": false,
         "at": 0
@@ -1634,18 +1485,16 @@
         "rating": null,
         "rating_out_of": null,
         "sentiment": "positive",
-        "notes": "A hidden grocery store by day in Notting Hill that transforms into an exclusive dining experience at 7 p.m., serving a 9-course tasting menu (£250pp) centered around live-butchered 350kg bluefin tuna. Tod describes it as \"one of the most sought-after experiences in the whole of London\" and rates every course highly.",
-        "verdict": "Extraordinary immersive tuna experience, every bite exceptional.",
+        "notes": "A grocery store by day that transforms into an exclusive 7 p.m. dining experience. Features a 9-course tasting menu (£250 per person) centered around a live-butchered 350kg bluefin tuna from the Spanish coast. Tod praises the immersive theatrical atmosphere, the progression through multiple tuna cuts (akami, otoro, kamatoro), hand-dived scallops, lobster, N25 Oscietra Reserve caviar, and nigiri. He describes every bite as \"10/10\" and calls it \"one of the most sought-after experiences in the whole of London.\"",
+        "verdict": "Every single bite is a 10/10. Utterly bonkers.",
         "dishes": [
-          "Usuzukuri appetizers",
-          "Nakaochi - fresh and 9-day aged tuna with caviar",
-          "Miso soup",
-          "Grilled hand-dived Orkney scallop with wasabi and blackcurrant sauce",
+          "Kamatoro (collar) with caviar",
+          "Grilled hand-dived Orkney scallop with wasabi and cucumber",
           "Caviar cigars",
           "Akami with candied pistachio crumb",
-          "Otoro with truffle",
-          "Tempura lobster tail with sweetcorn fritter",
-          "Nigiri - dashi maki tamago, chu toro, kama toro with caviar",
+          "Otoro (belly) with truffle",
+          "Lobster tempura with sweetcorn fritter",
+          "Nigiri (dashi maki tamago, chu toro, kama toro with caviar)",
           "Roasted kama toro donburi"
         ],
         "sponsored": false,
@@ -1656,85 +1505,7 @@
     "bestRatingOutOf": null
   },
   {
-    "name": "Bun & Sum",
-    "location": null,
-    "lat": 51.52535,
-    "lon": -0.02247,
-    "placeId": "d3e525e35146",
-    "mentions": [
-      {
-        "videoId": "PSWqseSgjtI",
-        "videoTitle": "Cheapest VS Most Expensive Burger In London (£2,600 - WAS IT WORH IT?)",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Tod finds incredible value at £3.99 for a double smash burger with crispy, caramelized beef patties. He highlights the value for money as unbeatable and notes there's a game to potentially win a free meal.",
-        "verdict": "Amazing value for money, crispy caramelized crust.",
-        "dishes": [
-          "Double smash burger"
-        ],
-        "sponsored": false,
-        "at": 80
-      }
-    ],
-    "bestRating": null,
-    "bestRatingOutOf": null
-  },
-  {
-    "name": "Leytonstone Tavern",
-    "location": null,
-    "lat": 51.55917,
-    "lon": 0.01111,
-    "placeId": "135911cb317b",
-    "mentions": [
-      {
-        "videoId": "PSWqseSgjtI",
-        "videoTitle": "Cheapest VS Most Expensive Burger In London (£2,600 - WAS IT WORH IT?)",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Tod revisits this pub after 6 years; it inspired his entire channel when he was 15. He eats the Joe Exotic burger with dry-aged beef (short rib, brisket, chuck, rib cap), blue cheese, and sweet chili jam. Thursday burger, fries, and booze deal is £16.50.",
-        "verdict": "Transformed his life, exceptional dry-aged beef burger.",
-        "dishes": [
-          "Joe Exotic burger"
-        ],
-        "sponsored": false,
-        "at": 157
-      }
-    ],
-    "bestRating": null,
-    "bestRatingOutOf": null
-  },
-  {
-    "name": "The Star in Shoreditch",
-    "location": "Shoreditch",
-    "lat": 51.52652,
-    "lon": -0.0841,
-    "placeId": "a409e4540a0d",
-    "mentions": [
-      {
-        "videoId": "PSWqseSgjtI",
-        "videoTitle": "Cheapest VS Most Expensive Burger In London (£2,600 - WAS IT WORH IT?)",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "London's smallest two-person burger restaurant run by Ryan from Poked Burger and Delirium Dining Club. £100 nine-course burger tasting menu featuring innovative dishes: layered potato with duck fat and wagyu, smash burger on crumpet, Spanish wagyu with truffle.",
-        "verdict": "Unique fine dining burger experience, innovative and impressive.",
-        "dishes": [
-          "Nine-course burger tasting menu",
-          "Layered potato with duck fat and wagyu",
-          "Smash burger on crumpet",
-          "Spanish wagyu burger with truffle"
-        ],
-        "sponsored": false,
-        "at": 361
-      }
-    ],
-    "bestRating": null,
-    "bestRatingOutOf": null
-  },
-  {
-    "name": "Roll Boys.",
+    "name": "Roll Boys",
     "location": null,
     "lat": 51.5208945,
     "lon": -0.0753731,
@@ -1811,36 +1582,6 @@
     "bestRatingOutOf": null
   },
   {
-    "name": "Cornucopia",
-    "location": null,
-    "lat": 51.4902713,
-    "lon": -0.1554745,
-    "placeId": null,
-    "mentions": [
-      {
-        "videoId": "RNBmjC3NZng",
-        "videoTitle": "Most expensive fish and chips in London #michelin #london #foodie #bistro",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Tod visited and extensively reviewed this luxury bistro, highlighting the expensive fish and chips with Dover sole and lobster bisque, the 13-type potato tasting menu, and Clare Smyth's three Michelin star cooking. He was extremely enthusiastic throughout.",
-        "verdict": "Exceptional luxury bistro deserving multiple Michelin stars.",
-        "dishes": [
-          "Fried chicken and caviar",
-          "Lobster bisque soup",
-          "Fish and chips with Dover sole and lobster mousse",
-          "Potato tasting menu (dauphinois, hasselback, Anna potatoes, croquettes, boulangère, mashed potatoes, butter truffle potatoes)",
-          "Toad in the hole",
-          "Sticky toffee pudding"
-        ],
-        "sponsored": false,
-        "at": 0
-      }
-    ],
-    "bestRating": null,
-    "bestRatingOutOf": null
-  },
-  {
     "name": "Coqfighter Liverpool St",
     "location": "Liverpool Street",
     "lat": 51.5181147,
@@ -1864,189 +1605,6 @@
         ],
         "sponsored": true,
         "at": 0
-      }
-    ],
-    "bestRating": null,
-    "bestRatingOutOf": null
-  },
-  {
-    "name": "Leopard Pie",
-    "location": "Tower Bridge Collective",
-    "lat": 51.504017,
-    "lon": -0.075912,
-    "placeId": null,
-    "mentions": [
-      {
-        "videoId": "FT_gOZrCnDI",
-        "videoTitle": "LONDON’S NEWEST FOOD MARKET (ad) #foodie #london #cheap",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Stall in Tower Bridge Collective food market. Tod tried their honey butter rings (50p each) covered with hot honey and parmesan cheese, available in multiple flavors including pistachio and bara.",
-        "verdict": "Incredible value, amazing flavors.",
-        "dishes": [
-          "Honey butter rings"
-        ],
-        "sponsored": true,
-        "at": 0
-      }
-    ],
-    "bestRating": null,
-    "bestRatingOutOf": null
-  },
-  {
-    "name": "Jimmys Burgers",
-    "location": "Tower Bridge Collective",
-    "lat": 51.504017,
-    "lon": -0.075912,
-    "placeId": null,
-    "mentions": [
-      {
-        "videoId": "FT_gOZrCnDI",
-        "videoTitle": "LONDON’S NEWEST FOOD MARKET (ad) #foodie #london #cheap",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Stall in Tower Bridge Collective food market offering double smash burgers for £3. Tod's favorite was the double smash with duya and parmesan cheese, which he praised as a ridiculously good deal.",
-        "verdict": "Ridiculously good value for money.",
-        "dishes": [
-          "Double smash burger"
-        ],
-        "sponsored": true,
-        "at": 22
-      }
-    ],
-    "bestRating": null,
-    "bestRatingOutOf": null
-  },
-  {
-    "name": "M Thai",
-    "location": "Tower Bridge Collective",
-    "lat": 51.50406460000001,
-    "lon": -0.07576179999999999,
-    "placeId": null,
-    "mentions": [
-      {
-        "videoId": "FT_gOZrCnDI",
-        "videoTitle": "LONDON’S NEWEST FOOD MARKET (ad) #foodie #london #cheap",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Stall in Tower Bridge Collective food market. Tod tried their spicy noodles which came with a free pot of chili dipping oil.",
-        "verdict": "Enjoyed spicy noodles with complimentary chili oil.",
-        "dishes": [
-          "Spicy noodles"
-        ],
-        "sponsored": true,
-        "at": 85
-      }
-    ],
-    "bestRating": null,
-    "bestRatingOutOf": null
-  },
-  {
-    "name": "The Clink Restaurant",
-    "location": "Brixton",
-    "lat": 51.45205,
-    "lon": -0.12565,
-    "placeId": "c32eea5c1354",
-    "mentions": [
-      {
-        "videoId": "cIJSkrXaoJs",
-        "videoTitle": "I ate prison food for a full day #prison #london #food",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Tod visited The Clink restaurant inside Brixton Prison and was very impressed by the quality of the food prepared by prisoner chefs. He particularly praised the steak bavette with béarnaise sauce, comparing it favourably to London restaurants at £24.",
-        "verdict": "Exceptional quality food, life-changing program.",
-        "dishes": [
-          "squid cooked two ways",
-          "fresh bread",
-          "steak bavette with thin fries and béarnaise sauce",
-          "macaroni and cheese",
-          "jerk chicken"
-        ],
-        "sponsored": false,
-        "at": 0
-      }
-    ],
-    "bestRating": null,
-    "bestRatingOutOf": null
-  },
-  {
-    "name": "Sheba Brick Lane - Awarded Best Curry House In UK",
-    "location": "Brick Lane",
-    "lat": 51.5206625,
-    "lon": -0.07171269999999999,
-    "placeId": null,
-    "mentions": [
-      {
-        "videoId": "fq-y8bU872k",
-        "videoTitle": "Super cheap Indian deals in London #cheap #london #foodie #indianfood AD",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Tod visited and tried their £1 butter chicken cheesy naan bread, praising the combination of cheese, garlic, and butter chicken as \"a match made in heaven.\"",
-        "verdict": "Excellent £1 butter chicken cheesy naan, match made in heaven.",
-        "dishes": [
-          "butter chicken cheesy naan"
-        ],
-        "sponsored": true,
-        "at": 0
-      }
-    ],
-    "bestRating": null,
-    "bestRatingOutOf": null
-  },
-  {
-    "name": "Dilpasand Restaurant",
-    "location": "Whitechapel",
-    "lat": 51.51494,
-    "lon": -0.06364,
-    "placeId": "81a6d8761dba",
-    "mentions": [
-      {
-        "videoId": "fq-y8bU872k",
-        "videoTitle": "Super cheap Indian deals in London #cheap #london #foodie #indianfood AD",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Tod visited and sampled the £5 mixed grill with fresh kebabs. He particularly praised the sea kebab for being \"so fatty, juicy\" with \"a kiss of smoke.\"",
-        "verdict": "Fresh grilled kebabs, sea kebab juicy with great smoke kiss.",
-        "dishes": [
-          "mixed grill",
-          "sea kebab",
-          "chicken wings",
-          "chicken legs",
-          "lamb chops"
-        ],
-        "sponsored": true,
-        "at": 41
-      }
-    ],
-    "bestRating": null,
-    "bestRatingOutOf": null
-  },
-  {
-    "name": "BKC",
-    "location": null,
-    "lat": 51.513841,
-    "lon": -0.1614456,
-    "placeId": null,
-    "mentions": [
-      {
-        "videoId": "fq-y8bU872k",
-        "videoTitle": "Super cheap Indian deals in London #cheap #london #foodie #indianfood AD",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Tod featured their £1 biryani made fresh daily with huge chunks of chicken as an affordable dining option.",
-        "verdict": "Fresh daily biryani with huge chunks of chicken, excellent value.",
-        "dishes": [
-          "biryani"
-        ],
-        "sponsored": true,
-        "at": 61
       }
     ],
     "bestRating": null,
@@ -2226,25 +1784,91 @@
     "bestRatingOutOf": null
   },
   {
-    "name": "Arthur's Market",
+    "name": "Yum Yum",
+    "location": "Stoke Newington",
+    "lat": 51.5626,
+    "lon": -0.07401,
+    "placeId": "add903e06f44",
+    "mentions": [
+      {
+        "videoId": "XiRDZo9wjf8",
+        "videoTitle": "LONDON’S OLDEST THAI RESTAURANT #thai #food #london #shorts AD",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Opened in 1992, run by grandparents from Northern Thailand. Tod praised the homemade spring rolls, papaya salad with 12+ vegetables, king prawn satays, Pad Kra Pao, Thai green curry made fresh daily, and lamb massaman curry. He felt transported to Thailand visiting.",
+        "verdict": "Exceptional Thai restaurant with authentic preparation and quality ingredients.",
+        "dishes": [
+          "homemade spring rolls",
+          "papaya salad",
+          "king prawn satays",
+          "Pad Kra Pao",
+          "Thai green curry",
+          "lamb massaman curry",
+          "tom yam soup"
+        ],
+        "sponsored": true,
+        "at": 0
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Darjeeling Express",
+    "location": "Kingley Court, Carnaby Street, W1B 5PW",
+    "lat": 51.5113,
+    "lon": -0.13279,
+    "placeId": "f78a045aa362",
+    "mentions": [
+      {
+        "videoId": "DDZL_lSrtWg",
+        "videoTitle": "This restaurant is run by Indian housewives #foodie #indian #food #london #india",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "London's only female-run Indian kitchen operated by aunties and housewives who cook traditional family recipes. Tod praised multiple dishes including momos, butter chicken toast, Kosha Mangsho, methi chicken with paratha, and macher jhol, highlighting the authentic homemade quality and bold flavors.",
+        "verdict": "Unique, female-run Indian kitchen with authentic homemade recipes.",
+        "dishes": [
+          "momos",
+          "butter chicken toast",
+          "Kosha Mangsho",
+          "methi chicken",
+          "paratha bread",
+          "macher jhol"
+        ],
+        "sponsored": false,
+        "at": 0
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Roe - Canary Wharf",
     "location": null,
-    "lat": 51.4854522,
-    "lon": -0.1733533,
-    "placeId": null,
+    "lat": 51.50231,
+    "lon": -0.01522,
+    "placeId": "54a350cb72c7",
     "mentions": [
       {
-        "videoId": "ewtgs3tNtR0",
-        "videoTitle": "LONDON’S NEW GROCERY STORE #london #food #new #sushi",
+        "videoId": "6aMT1O8YqKs",
+        "videoTitle": "Craziest roast dinner in London #roast #london #Foodie #food #roastbeef",
         "rating": null,
         "rating_out_of": null,
         "sentiment": "positive",
-        "notes": "Tod visited this newly opened grocery store and was impressed by the raw carabineros prawn sushi roll made by the chef, the live tuna cutting twice weekly, the sushi bar, specialist steaks from the Basque country, and the in-house Basque restaurant where he had langoustines and Ruby Galega steak cooked on a charcoal grill on Sunday.",
-        "verdict": "Insane grocery store with exceptional seafood and meat.",
+        "notes": "Tod personally visited and ate an elaborate £60 per person sharing roast dinner featuring slow-cooked ribs, fire-kissed lamb, dry-aged beef, whole chicken, and tableside-carved suckling pig with 24-hour beef bone gravy. He praised the tender beef, depth of flavor, and particularly highlighted the bacon rib Yorkshire puddings.",
+        "verdict": "Craziest roast in London, utterly insane meal.",
         "dishes": [
-          "raw carabineros prawn sushi roll",
-          "prawn tempura",
-          "langoustines with lemon and butter",
-          "ruby galega steak"
+          "Blooming onion",
+          "60 per person sharing roast",
+          "Jacob's flattened ribs",
+          "Fire-kissed butter braised lamb",
+          "Dry-aged beef",
+          "Whole chicken",
+          "Suckling pig on kebab spit",
+          "Bacon rib Yorkshire puddings",
+          "Beef fat roasted potatoes"
         ],
         "sponsored": false,
         "at": 0
@@ -2254,29 +1878,24 @@
     "bestRatingOutOf": null
   },
   {
-    "name": "Empire",
-    "location": "Notting Hill",
-    "lat": 51.5593659,
-    "lon": -0.119986,
+    "name": "The Seafood Boil Club",
+    "location": "Sidcup",
+    "lat": 51.429804,
+    "lon": 0.1069319,
     "placeId": null,
     "mentions": [
       {
-        "videoId": "KLDoTubA4zU",
-        "videoTitle": "New favourite Indian food in London #indian #foodie #food #london #shorts",
+        "videoId": "eYlK99B6-cI",
+        "videoTitle": "Secret garden seafood boil #london #seafoodboil #foodie #lobster",
         "rating": null,
         "rating_out_of": null,
         "sentiment": "positive",
-        "notes": "Tod describes it as a potential new favourite. He praises the fresh tandoor-roasted meats, crispy masala chips, moist and flavourful lobster biryani with whole lobster (£36), perfectly balanced paneer maccani (48-hour preparation), butter chicken, garlic and cheese naan, and a galop meringue cheesecake that ranks among his top five meals of the year.",
-        "verdict": "Top five meal of the year; incredible curries and lobster biryani.",
+        "notes": "Tod visited Gemma's back garden supper club and gave enthusiastic first-hand reviews of the seafood boil experience, praising the lobster tail with homemade Cajun sauce as an 'outer body experience' and highlighting the complex 50-spice seasoning and the soft, sweet Alaskan crab legs.",
+        "verdict": "Hands down the best seafood boils ever eaten.",
         "dishes": [
-          "lobster biryani",
-          "lamb chops",
-          "mixed grill sharing platter",
-          "masala chips",
-          "paneer maccani",
-          "butter chicken",
-          "garlic and cheese naan",
-          "galop meringue cheesecake"
+          "Lobster tail with Cajun sauce",
+          "Alaskan crab legs",
+          "Seafood boil (prawns, potatoes, corn, oysters, sausages, eggs, crayfish)"
         ],
         "sponsored": false,
         "at": 0
@@ -2286,11 +1905,11 @@
     "bestRatingOutOf": null
   },
   {
-    "name": "Templ Crown",
+    "name": "The Tamil Crown",
     "location": "North London",
-    "lat": 51.56193,
-    "lon": -0.12476,
-    "placeId": "84b2f0af6a19",
+    "lat": 51.532,
+    "lon": -0.10184,
+    "placeId": "81acbcf8c07e",
     "mentions": [
       {
         "videoId": "i-Jz8XZOkbo",
@@ -2314,10 +1933,10 @@
     "bestRatingOutOf": null
   },
   {
-    "name": "Eclectic Collection",
+    "name": "Delicatessen By The Eclectic Collection",
     "location": "Earlsfield, south west London",
-    "lat": 51.43974799999999,
-    "lon": -0.1866403,
+    "lat": 51.4427689,
+    "lon": -0.1886361,
     "placeId": null,
     "mentions": [
       {
@@ -2344,10 +1963,10 @@
     "bestRatingOutOf": null
   },
   {
-    "name": "Interstellar at The Ned",
+    "name": "The Ned London",
     "location": "The Ned",
-    "lat": 51.5136153,
-    "lon": -0.090129,
+    "lat": 51.5136949,
+    "lon": -0.0901693,
     "placeId": null,
     "mentions": [
       {
@@ -2368,6 +1987,36 @@
           "smoked duck legs"
         ],
         "sponsored": false,
+        "at": 0
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Social Dhaba",
+    "location": "Pinner, NW London",
+    "lat": 51.60796,
+    "lon": -0.37391,
+    "placeId": "679fd72480dd",
+    "mentions": [
+      {
+        "videoId": "czjrptTojlo",
+        "videoTitle": "Hunting for London’s best Punjab food AD #pubjab #indianfood #food #foodie",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod visited and praised it as \"hands down one of the best Punjabi restaurants\" he's ever been to. Highlighted the mixed grill, tandoor chicken, pani puri, butter chicken, fresh naans, and particularly the doll as \"the best doll I've ever eaten in my life.\"",
+        "verdict": "Best Punjabi restaurant; exceptional doll and butter chicken.",
+        "dishes": [
+          "mixed grill",
+          "tandoor chicken",
+          "pani puri",
+          "butter chicken",
+          "naan",
+          "doll"
+        ],
+        "sponsored": true,
         "at": 0
       }
     ],
@@ -2406,127 +2055,92 @@
     "bestRatingOutOf": null
   },
   {
-    "name": "Bunsik",
-    "location": "Chinatown",
-    "lat": 51.5117601,
-    "lon": -0.1311286,
+    "name": "Hakka",
+    "location": null,
+    "lat": 51.5930699,
+    "lon": -0.2596486,
     "placeId": null,
     "mentions": [
       {
-        "videoId": "M-Q0E5SOCPw",
-        "videoTitle": "BEST AND WORSE OF LONDON CHINATOWN  Ft. Morgan Jay",
-        "rating": 3,
-        "rating_out_of": 10,
-        "sentiment": "negative",
-        "notes": "Korean corn dog battered in noodles and filled with mozzarella cheese. Tod found it edible but lacking in flavor and nutritional value, rating it 3/10.",
-        "verdict": "Edible but no flavor, just fried cheese.",
-        "dishes": [
-          "Korean corn dog with noodle batter and mozzarella cheese"
-        ],
-        "sponsored": false,
-        "at": 110
-      }
-    ],
-    "bestRating": 3,
-    "bestRatingOutOf": 10
-  },
-  {
-    "name": "Bun House",
-    "location": "Chinatown",
-    "lat": 51.51169,
-    "lon": -0.12989,
-    "placeId": "341cd93b24f0",
-    "mentions": [
-      {
-        "videoId": "M-Q0E5SOCPw",
-        "videoTitle": "BEST AND WORSE OF LONDON CHINATOWN  Ft. Morgan Jay",
-        "rating": 9,
-        "rating_out_of": 10,
-        "sentiment": "positive",
-        "notes": "Specializes in custard buns filled with creamy custard yolk, carrot juice, and egg. Tod praised it as one of the best places in Chinatown with fantastic texture and flavor, rating it 9-10/10.",
-        "verdict": "Fantastic. Creamy, sweet, and perfectly textured.",
-        "dishes": [
-          "Custard buns"
-        ],
-        "sponsored": false,
-        "at": 320
-      }
-    ],
-    "bestRating": 9,
-    "bestRatingOutOf": 10
-  },
-  {
-    "name": "Deep Fried Chicken",
-    "location": "Chinatown",
-    "lat": 51.5117601,
-    "lon": -0.1311286,
-    "placeId": null,
-    "mentions": [
-      {
-        "videoId": "M-Q0E5SOCPw",
-        "videoTitle": "BEST AND WORSE OF LONDON CHINATOWN  Ft. Morgan Jay",
-        "rating": 10,
-        "rating_out_of": 10,
-        "sentiment": "positive",
-        "notes": "Taiwanese fried chicken popcorn with curry, garlic, cheese, chili, and garlic seasonings. Tod gave it a perfect 10/10, calling it delicious with excellent seasoning requiring no dipping sauce.",
-        "verdict": "10 out of 10. Delicious, tender batter, perfect seasoning.",
-        "dishes": [
-          "Chicken popcorn with curry, garlic, cheese seasoning",
-          "Chicken popcorn with chili, garlic, seaweed"
-        ],
-        "sponsored": false,
-        "at": 514
-      }
-    ],
-    "bestRating": 10,
-    "bestRatingOutOf": 10
-  },
-  {
-    "name": "Four Seasons",
-    "location": "Chinatown",
-    "lat": 51.51191,
-    "lon": -0.13091,
-    "placeId": "c5d2801f8671",
-    "mentions": [
-      {
-        "videoId": "M-Q0E5SOCPw",
-        "videoTitle": "BEST AND WORSE OF LONDON CHINATOWN  Ft. Morgan Jay",
-        "rating": 8,
-        "rating_out_of": 10,
-        "sentiment": "mixed",
-        "notes": "Cantonese roast meat spot serving roast duck, roast pork, and crispy pork belly. Tod praised the pork and duck but docked points because food wasn't piping hot and duck skin could have been crispier. Rated 8/10.",
-        "verdict": "Good roast meats but should be hotter and crispier.",
-        "dishes": [
-          "Crispy pork belly",
-          "Roast duck"
-        ],
-        "sponsored": false,
-        "at": 648
-      }
-    ],
-    "bestRating": 8,
-    "bestRatingOutOf": 10
-  },
-  {
-    "name": "Wonky",
-    "location": "Chinatown",
-    "lat": 51.5590533,
-    "lon": -0.1786474,
-    "placeId": null,
-    "mentions": [
-      {
-        "videoId": "M-Q0E5SOCPw",
-        "videoTitle": "BEST AND WORSE OF LONDON CHINATOWN  Ft. Morgan Jay",
+        "videoId": "j77t9_Hiuc0",
+        "videoTitle": "£100 Challenge at London’s Biggest Asian Food Hall #food #foodchallenge #asian #london #shorts",
         "rating": null,
         "rating_out_of": null,
-        "sentiment": "negative",
-        "notes": "Cash-only restaurant with no service charge policy and reportedly rude service. Tod tried Singapore noodles which he found had no flavor except for spice, with tiny shrimp. Morgan disagreed and said it had no flavor at all. Poor experience overall.",
-        "verdict": "No flavor, poor service, worst Chinese food in city.",
-        "dishes": [
-          "Singapore noodles"
-        ],
+        "sentiment": "positive",
+        "notes": "",
+        "verdict": null,
+        "dishes": [],
         "sponsored": false,
-        "at": 899
+        "at": 16
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Coconut Tree",
+    "location": null,
+    "lat": 51.59336,
+    "lon": -0.25956,
+    "placeId": "525da4337cfa",
+    "mentions": [
+      {
+        "videoId": "j77t9_Hiuc0",
+        "videoTitle": "£100 Challenge at London’s Biggest Asian Food Hall #food #foodchallenge #asian #london #shorts",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "mixed",
+        "notes": "",
+        "verdict": null,
+        "dishes": [],
+        "sponsored": false,
+        "at": 49
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Yo Tokyo",
+    "location": null,
+    "lat": 51.5931515,
+    "lon": -0.2593115,
+    "placeId": null,
+    "mentions": [
+      {
+        "videoId": "j77t9_Hiuc0",
+        "videoTitle": "£100 Challenge at London’s Biggest Asian Food Hall #food #foodchallenge #asian #london #shorts",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "verdict": null,
+        "dishes": [],
+        "sponsored": false,
+        "at": 62
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Hot grubz, Caribbean food",
+    "location": "Park Royal",
+    "lat": 51.535972,
+    "lon": -0.2755738,
+    "placeId": null,
+    "mentions": [
+      {
+        "videoId": "8ySESDayGmc",
+        "videoTitle": "INCREDIBLE Roadside Caribbean restaurant in London! #london #jerk #foodie #shorts",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "verdict": null,
+        "dishes": [],
+        "sponsored": false,
+        "at": 0
       }
     ],
     "bestRating": null,
@@ -2560,10 +2174,39 @@
     "bestRatingOutOf": null
   },
   {
-    "name": "Harley's",
+    "name": "Gymkhana",
+    "location": null,
+    "lat": 51.50852,
+    "lon": -0.14144,
+    "placeId": "bc4c655e0826",
+    "mentions": [
+      {
+        "videoId": "59VgA54yx3w",
+        "videoTitle": "Best Indian restaurant in the world is in London #indianfood #london #curry #food #india foodie",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Two Michelin star Indian restaurant. Tod praised the complexity of spices, the quality of meat preparation, and highlighted exceptional dishes including pani puri, lamb brain burger, masala butter chicken, monk jack biryani, and lamb chops.",
+        "verdict": "Exceptional dishes with complex, hallucination-inducing spices.",
+        "dishes": [
+          "pani puri",
+          "lamb brain burger",
+          "masala butter chicken",
+          "monk jack biryani",
+          "lamb chops"
+        ],
+        "sponsored": false,
+        "at": 0
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Harley's Butchery & Rotisserie",
     "location": "Hamstead",
-    "lat": 51.5556461,
-    "lon": -0.1761749,
+    "lat": 51.555901299999995,
+    "lon": -0.17831429999999998,
     "placeId": null,
     "mentions": [
       {
@@ -2689,10 +2332,10 @@
     "bestRatingOutOf": null
   },
   {
-    "name": "Fluffy",
+    "name": "Fluffy Fluffy Bayswater",
     "location": "London",
-    "lat": 51.5171237,
-    "lon": -0.0211122,
+    "lat": 51.5130815,
+    "lon": -0.1879312,
     "placeId": null,
     "mentions": [
       {
@@ -2711,36 +2354,6 @@
         ],
         "sponsored": true,
         "at": 70
-      }
-    ],
-    "bestRating": null,
-    "bestRatingOutOf": null
-  },
-  {
-    "name": "Trap Kitchen",
-    "location": null,
-    "lat": 51.5434312,
-    "lon": -0.1509654,
-    "placeId": null,
-    "mentions": [
-      {
-        "videoId": "7ut16rPvjOI",
-        "videoTitle": "Hunting for the best Soul Food in London AD #food #london #soulfood #shorts",
-        "rating": null,
-        "rating_out_of": null,
-        "sentiment": "positive",
-        "notes": "Tod visited and ate from their big seafood and meat platters, praising the combo platter with Bang Bang prawns, jerk chicken, Cajun wings, mac and cheese, and lobster tail. Highlighted the mac and cheese as 'top tier' - creamy and cheesy with a hit of spice.",
-        "verdict": "Delicious seafood and meat platters, exceptional mac and cheese.",
-        "dishes": [
-          "Bang Bang prawns",
-          "jerk chicken",
-          "Cajun wings",
-          "mac and cheese",
-          "lobster tail",
-          "waffles and Oreos"
-        ],
-        "sponsored": true,
-        "at": 0
       }
     ],
     "bestRating": null,
@@ -2773,11 +2386,11 @@
     "bestRatingOutOf": null
   },
   {
-    "name": "Lanzau",
+    "name": "Lanzhou Lamian Noodle Bar",
     "location": "Chinatown",
-    "lat": 51.5284904,
-    "lon": -0.1974263,
-    "placeId": null,
+    "lat": 51.51152,
+    "lon": -0.12782,
+    "placeId": "adef989681d1",
     "mentions": [
       {
         "videoId": "uLTVvkCaCCo",
@@ -2798,11 +2411,11 @@
     "bestRatingOutOf": null
   },
   {
-    "name": "Dwat",
+    "name": "Dawat",
     "location": "Tooting",
-    "lat": 51.4103192,
-    "lon": -0.1222327,
-    "placeId": null,
+    "lat": 51.42982,
+    "lon": -0.16612,
+    "placeId": "61689d55175e",
     "mentions": [
       {
         "videoId": "uLTVvkCaCCo",
@@ -2823,11 +2436,11 @@
     "bestRatingOutOf": null
   },
   {
-    "name": "Lamar",
+    "name": "La Maritxu",
     "location": null,
-    "lat": 51.3789,
-    "lon": -0.10356,
-    "placeId": "5bfc88383237",
+    "lat": 51.51472,
+    "lon": -0.16522,
+    "placeId": "5c1b036acc20",
     "mentions": [
       {
         "videoId": "uLTVvkCaCCo",
@@ -2842,6 +2455,686 @@
         ],
         "sponsored": false,
         "at": 39
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Fostok Halab Market",
+    "location": "North London",
+    "lat": 51.50851,
+    "lon": -0.2774,
+    "placeId": "439761d3fa6b",
+    "mentions": [
+      {
+        "videoId": "uLTVvkCaCCo",
+        "videoTitle": "£10 Guide To London’s Best Eats #cheapeat #affordable #london #food #shorts",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod visited this supermarket and butcher and tried London's cheapest chicken shawarma for £3, which he said is unbeatable.",
+        "verdict": "London's cheapest chicken shawarma at £3, unbeatable value.",
+        "dishes": [
+          "Chicken shawarma"
+        ],
+        "sponsored": false,
+        "at": 51
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Breadstall",
+    "location": null,
+    "lat": 51.5134357,
+    "lon": -0.134899,
+    "placeId": null,
+    "mentions": [
+      {
+        "videoId": "uLTVvkCaCCo",
+        "videoTitle": "£10 Guide To London’s Best Eats #cheapeat #affordable #london #food #shorts",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod tried pizza slices with daily specials including candied jalapeno, pepperoni, and hot honey pizza. A whole slice cost £7 and is bigger than a normal pizza.",
+        "verdict": "Best pizza slices in the city, huge portions for £7.",
+        "dishes": [
+          "Pizza slices with daily specials including candied jalapeno, pepperoni, and hot honey pizza"
+        ],
+        "sponsored": false,
+        "at": 63
+      },
+      {
+        "videoId": "wGptiu_Uboo",
+        "videoTitle": "We Tried London's Most Expensive Pizza (You Won't Believe How much It Cost!!!!)",
+        "rating": 9.1,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Widely regarded as the best slice shop in London. Features exceptional sourdough crust balancing Neapolitan and New York styles. The beef shin pizza was described as defying gravity and some of the best pizza in the world.",
+        "verdict": "Perfect balance of styles; best pizza in London.",
+        "dishes": [
+          "Beef shin pizza",
+          "Sourdough pizza"
+        ],
+        "sponsored": false,
+        "at": 296
+      }
+    ],
+    "bestRating": 9.1,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Sael",
+    "location": null,
+    "lat": 51.5088908,
+    "lon": -0.1332191,
+    "placeId": null,
+    "mentions": [
+      {
+        "videoId": "Og6wRgMZyaQ",
+        "videoTitle": "For £29pp, is this London’s best roast? 👀 #london #roast #foodie",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod visited Chef Jason Atherton's restaurant and reviewed their £29pp roast dinner. He praised the exceptional bread brushed with beef dripping, bone marrow pie, Marmite tart with caviar, fire-roasted chicken and beef cooked medium rare, crispy roast potatoes, Yorkshire puddings stuffed with mashed potato, and cauliflower cheese.",
+        "verdict": "Outstanding roast dinner with exceptional sides and bread.",
+        "dishes": [
+          "Roast dinner (chicken and beef)",
+          "Bread brushed with beef dripping",
+          "Bone marrow pie",
+          "Marmite tart with caviar",
+          "Yorkshire puddings stuffed with mashed potato",
+          "Roast potatoes",
+          "Cauliflower cheese",
+          "Pint of Guinness"
+        ],
+        "sponsored": false,
+        "at": 0
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Gracey's Pizza",
+    "location": "Central London / Top Port Road",
+    "lat": 51.516284000000006,
+    "lon": -0.1298763,
+    "placeId": null,
+    "mentions": [
+      {
+        "videoId": "wGptiu_Uboo",
+        "videoTitle": "We Tried London's Most Expensive Pizza (You Won't Believe How much It Cost!!!!)",
+        "rating": 9,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Recently opened pizzeria founded during pandemic. Makes their own stracciatella in-house. Praised for perfectly baked grandma slice and sausage pizza with exceptional flavour balance.",
+        "verdict": "Phenomenal execution, house-made stracciatella, excellent flavours.",
+        "dishes": [
+          "Smoky pepperoni pizza",
+          "Grandma slice",
+          "Sweet Vera (sausage and pepper pizza)"
+        ],
+        "sponsored": false,
+        "at": 570
+      }
+    ],
+    "bestRating": 9,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Crazy Pizza",
+    "location": "Knightsbridge",
+    "lat": 51.49952,
+    "lon": -0.16174,
+    "placeId": "89eb337bd218",
+    "mentions": [
+      {
+        "videoId": "wGptiu_Uboo",
+        "videoTitle": "We Tried London's Most Expensive Pizza (You Won't Believe How much It Cost!!!!)",
+        "rating": 1.3,
+        "rating_out_of": 10,
+        "sentiment": "negative",
+        "notes": "London's most expensive pizza at £65 with salmon and caviar. Underwhelming presentation with anemic bake and confusing, unpleasant flavour profile.",
+        "verdict": "Overpriced disappointment; tastes like cold salmon wrap.",
+        "dishes": [
+          "Salmon and caviar pizza (£65)"
+        ],
+        "sponsored": false,
+        "at": 776
+      }
+    ],
+    "bestRating": 1.3,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Crisp Pizza",
+    "location": "Hammersmith",
+    "lat": 51.4885,
+    "lon": -0.22692,
+    "placeId": "95c774a3d6f7",
+    "mentions": [
+      {
+        "videoId": "wGptiu_Uboo",
+        "videoTitle": "We Tried London's Most Expensive Pizza (You Won't Believe How much It Cost!!!!)",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Dave Portnoy called it 'by far the best pizza I've had in London.' The grandma pie is thick but supremely light and airy inside with perfect balance and exceptional structural integrity.",
+        "verdict": "Still London's best; perfect balance and incredible crunch.",
+        "dishes": [
+          "Grandma pie (pepperoni, tomato sauce, cheese)",
+          "Pizza with hot honey and garlic sauce"
+        ],
+        "sponsored": false,
+        "at": 930
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Bun & Sum",
+    "location": null,
+    "lat": 51.52535,
+    "lon": -0.02247,
+    "placeId": "d3e525e35146",
+    "mentions": [
+      {
+        "videoId": "PSWqseSgjtI",
+        "videoTitle": "Cheapest VS Most Expensive Burger In London (£2,600 - WAS IT WORH IT?)",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod is impressed by the £3.99 double smash burger with crispy, caramelized crust on beef patties and excellent value for money. Better value than a Tesco meal deal.",
+        "verdict": "Amazing value for money, crispy crust, incredibly cheap.",
+        "dishes": [
+          "Double smash burger £3.99"
+        ],
+        "sponsored": false,
+        "at": 81
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Leytonstone Tavern",
+    "location": null,
+    "lat": 51.55917,
+    "lon": 0.01111,
+    "placeId": "135911cb317b",
+    "mentions": [
+      {
+        "videoId": "PSWqseSgjtI",
+        "videoTitle": "Cheapest VS Most Expensive Burger In London (£2,600 - WAS IT WORH IT?)",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "A pub burger spot that inspired Tod's entire channel when he visited 6 years ago at age 15. The Joe Exotic burger features dry-aged beef (short rib, brisket, chuck, rib cap), blue cheese, sweet chili jam. Thursday deal: burger, fries, booze for £16.50.",
+        "verdict": "Transformed my life six years ago, still exceptional.",
+        "dishes": [
+          "Joe Exotic burger",
+          "Thursday deal with fries and booze"
+        ],
+        "sponsored": false,
+        "at": 161
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "The Star in Shoreditch",
+    "location": "Shoreditch",
+    "lat": 51.52652,
+    "lon": -0.0841,
+    "placeId": "a409e4540a0d",
+    "mentions": [
+      {
+        "videoId": "PSWqseSgjtI",
+        "videoTitle": "Cheapest VS Most Expensive Burger In London (£2,600 - WAS IT WORH IT?)",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "London's smallest restaurant—a two-person burger counter run by Ryan from Poked Burger and Delirium Dining Club. The £100 nine-course burger tasting menu includes layered potato chips with duck fat and wagyu, smash burgers on crumpets, and Spanish wagyu with truffle.",
+        "verdict": "Innovative luxury burger experience in intimate two-seat setting.",
+        "dishes": [
+          "Nine-course burger tasting menu £100",
+          "Layered potato with duck fat and wagyu",
+          "Smash burger on crumpet",
+          "Spanish wagyu with blue cheese and truffle"
+        ],
+        "sponsored": false,
+        "at": 361
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Cornucopia",
+    "location": null,
+    "lat": 51.4902713,
+    "lon": -0.1554745,
+    "placeId": null,
+    "mentions": [
+      {
+        "videoId": "RNBmjC3NZng",
+        "videoTitle": "Most expensive fish and chips in London #michelin #london #foodie #bistro",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod visited this luxury bistro helmed by three Michelin-star chef Clare Smyth. He personally tasted and praised multiple dishes: fried chicken with caviar, lobster bisque soup, the signature £52 Dover sole fish and chips with lobster mousse, the 13-type potato tasting menu with various preparations (dauphinois, hasselback, Anna, croquettes, boulangère, mashed potatoes with toppings, butter truffle potatoes), toad in the hole, and sticky toffee pudding.",
+        "verdict": "Exceptional luxury bistro with inventive dishes deserving multiple Michelin stars.",
+        "dishes": [
+          "Fried chicken with caviar",
+          "Lobster bisque soup",
+          "Dover sole fish and chips with lobster mousse",
+          "Potato tasting menu (13 types: dauphinois, hasselback, Anna, croquettes, boulangère, mashed potatoes with gravy/caviar/sour cream, butter truffle potatoes)",
+          "Toad in the hole",
+          "Sticky toffee pudding"
+        ],
+        "sponsored": false,
+        "at": 0
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Leopard Pie",
+    "location": "Tower Bridge Collective",
+    "lat": 51.504017,
+    "lon": -0.075912,
+    "placeId": null,
+    "mentions": [
+      {
+        "videoId": "FT_gOZrCnDI",
+        "videoTitle": "LONDON’S NEWEST FOOD MARKET (ad) #foodie #london #cheap",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod tried honey butter rings for 50p, covered with hot honey and parmesan cheese, available in multiple flavors including pistachio and bara.",
+        "verdict": "Excellent value honey butter rings at 50p.",
+        "dishes": [
+          "Honey butter rings with hot honey and parmesan",
+          "Pistachio honey butter rings",
+          "Bara honey butter rings"
+        ],
+        "sponsored": true,
+        "at": 5
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Jimmys Burgers",
+    "location": "Tower Bridge Collective",
+    "lat": 51.504017,
+    "lon": -0.075912,
+    "placeId": null,
+    "mentions": [
+      {
+        "videoId": "FT_gOZrCnDI",
+        "videoTitle": "LONDON’S NEWEST FOOD MARKET (ad) #foodie #london #cheap",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod tried double smash burgers for £3. His favorite was the double smash with duya and parmesan cheese, described as a ridiculously good deal compared to meal deals.",
+        "verdict": "Incredible value double smash burgers for £3.",
+        "dishes": [
+          "Double smash burger with duya and parmesan cheese"
+        ],
+        "sponsored": true,
+        "at": 21
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "M Thai",
+    "location": "Tower Bridge Collective",
+    "lat": 51.50406460000001,
+    "lon": -0.07576179999999999,
+    "placeId": null,
+    "mentions": [
+      {
+        "videoId": "FT_gOZrCnDI",
+        "videoTitle": "LONDON’S NEWEST FOOD MARKET (ad) #foodie #london #cheap",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod tried spicy noodles that came with a free pot of chili dipping oil, which he enjoyed.",
+        "verdict": "Spicy noodles with complimentary chili dipping oil.",
+        "dishes": [
+          "Spicy noodles with free chili dipping oil pot"
+        ],
+        "sponsored": true,
+        "at": 90
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Tower Bridge Collective",
+    "location": "Tower Bridge",
+    "lat": 51.50406460000001,
+    "lon": -0.07576179999999999,
+    "placeId": null,
+    "mentions": [
+      {
+        "videoId": "FT_gOZrCnDI",
+        "videoTitle": "LONDON’S NEWEST FOOD MARKET (ad) #foodie #london #cheap",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "A food market featuring multiple vendors offering diverse cuisines under £5. Tod praised the variety and noted they've covered every single cuisine. He also mentioned hot chocolate and other dishes.",
+        "verdict": "Excellent variety of global cuisines, everything under £5.",
+        "dishes": [
+          "Hot chocolate with XL marshmallow",
+          "Cheesy noodles",
+          "Katsu curry",
+          "Korean fried chicken with spicy chips",
+          "Indian wraps",
+          "Palestinian chicken"
+        ],
+        "sponsored": true,
+        "at": 0
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "The Clink Restaurant",
+    "location": "Brixton",
+    "lat": 51.45205,
+    "lon": -0.12565,
+    "placeId": "c32eea5c1354",
+    "mentions": [
+      {
+        "videoId": "cIJSkrXaoJs",
+        "videoTitle": "I ate prison food for a full day #prison #london #food",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod personally visited and ate multiple dishes including squid cooked two ways, fresh bread, and steak bavette with béarnaise sauce. He praised the high quality of the food prepared by prisoners and discussed the rehabilitation mission of the restaurant.",
+        "verdict": "Exceptional food quality, life-changing rehabilitation program.",
+        "dishes": [
+          "Squid cooked two ways",
+          "Fresh bread",
+          "Steak bavette with béarnaise sauce and thin fries",
+          "Macaroni and cheese",
+          "Jerk chicken"
+        ],
+        "sponsored": false,
+        "at": 0
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Sheba Brick Lane - Awarded Best Curry House In UK",
+    "location": "Brick Lane",
+    "lat": 51.5206625,
+    "lon": -0.07171269999999999,
+    "placeId": null,
+    "mentions": [
+      {
+        "videoId": "fq-y8bU872k",
+        "videoTitle": "Super cheap Indian deals in London #cheap #london #foodie #indianfood AD",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod visited and reviewed their £1 butter chicken cheesy naan bread, praising the combination of cheese, garlic, and butter chicken as 'a match made in heaven.'",
+        "verdict": "£1 butter chicken naan is excellent value.",
+        "dishes": [
+          "Butter chicken cheesy naan"
+        ],
+        "sponsored": true,
+        "at": 7
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Dilpasand Restaurant",
+    "location": "Whitechapel",
+    "lat": 51.51494,
+    "lon": -0.06364,
+    "placeId": "81a6d8761dba",
+    "mentions": [
+      {
+        "videoId": "fq-y8bU872k",
+        "videoTitle": "Super cheap Indian deals in London #cheap #london #foodie #indianfood AD",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod visited and reviewed their £5 mixed grill with fresh kebabs grilled to order. He particularly praised the sea kebab for being 'so fatty, juicy' with 'a kiss of smoke.'",
+        "verdict": "Fresh mixed grill with outstanding sea kebab at £5.",
+        "dishes": [
+          "Mixed grill",
+          "Sea kebab",
+          "Chicken wings",
+          "Chicken legs",
+          "Lamb chops"
+        ],
+        "sponsored": true,
+        "at": 42
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "BKC Biryani Kebab Chai",
+    "location": null,
+    "lat": 51.51414,
+    "lon": -0.16153,
+    "placeId": "53bde4da71f2",
+    "mentions": [
+      {
+        "videoId": "fq-y8bU872k",
+        "videoTitle": "Super cheap Indian deals in London #cheap #london #foodie #indianfood AD",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod reviewed their £1 biryani made fresh daily with huge chunks of chicken, presented as an affordable dining option.",
+        "verdict": "£1 biryani with generous chicken portions is great value.",
+        "dishes": [
+          "Biryani"
+        ],
+        "sponsored": true,
+        "at": 59
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Empire Empire",
+    "location": "Notting Hill",
+    "lat": 51.51798,
+    "lon": -0.20355,
+    "placeId": "0efcd4800e1e",
+    "mentions": [
+      {
+        "videoId": "KLDoTubA4zU",
+        "videoTitle": "New favourite Indian food in London #indian #foodie #food #london #shorts",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "verdict": null,
+        "dishes": [],
+        "sponsored": false,
+        "at": 0
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "All’ Antico Vinaio",
+    "location": "London",
+    "lat": 51.51251,
+    "lon": -0.13284,
+    "placeId": "a91487573239",
+    "mentions": [
+      {
+        "videoId": "Sa-uqqcg5VI",
+        "videoTitle": "Most famous sandwich shop in the world in London #food #london #sandwich #shorts",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod visited and reviewed multiple sandwiches. He praised the Sketcha bread (brushed with oil and sliced to show smoke), the fatty salty salami infused with fennel, the roasted porchetta with smoked provolone, and the mortadella with stracciatella and pistachio drizzle. He noted the sandwiches are huge and joked about needing dental checkups after.",
+        "verdict": "World-class Italian sandwiches with incredible bread and imported meats.",
+        "dishes": [
+          "Salami and stracciatella sandwich",
+          "Pork and provolone sandwich",
+          "Mortadella and pistachio sandwich"
+        ],
+        "sponsored": false,
+        "at": 0
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Bunsik Chinatown",
+    "location": "Chinatown, London",
+    "lat": 51.5113169,
+    "lon": -0.132168,
+    "placeId": null,
+    "mentions": [
+      {
+        "videoId": "M-Q0E5SOCPw",
+        "videoTitle": "BEST AND WORSE OF LONDON CHINATOWN  Ft. Morgan Jay",
+        "rating": 3,
+        "rating_out_of": 10,
+        "sentiment": "negative",
+        "notes": "Korean corn dog battered in noodles and filled with mozzarella cheese. Tod found it edible but lacking in flavor and nutritional value, describing it as just fried cheese with no real taste.",
+        "verdict": "Edible but flavorless; 3/10",
+        "dishes": [
+          "Korean corn dog with noodle batter",
+          "Mozzarella cheese-filled corn dog"
+        ],
+        "sponsored": false,
+        "at": 113
+      }
+    ],
+    "bestRating": 3,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Bun House",
+    "location": "Chinatown, London",
+    "lat": 51.51169,
+    "lon": -0.12989,
+    "placeId": "341cd93b24f0",
+    "mentions": [
+      {
+        "videoId": "M-Q0E5SOCPw",
+        "videoTitle": "BEST AND WORSE OF LONDON CHINATOWN  Ft. Morgan Jay",
+        "rating": 9,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Specializes in custard buns filled with creamy custard yolk, carrot juice, egg yolk, and coconut. Tod praised it as one of the best places in Chinatown with fantastic texture and flavor; cream custard that's piping hot.",
+        "verdict": "Excellent; 9-10/10",
+        "dishes": [
+          "Custard buns",
+          "Buns with carrot juice, egg yolk, and coconut filling"
+        ],
+        "sponsored": false,
+        "at": 320
+      }
+    ],
+    "bestRating": 9,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Good friend",
+    "location": "Chinatown, London",
+    "lat": 51.5117794,
+    "lon": -0.1287906,
+    "placeId": null,
+    "mentions": [
+      {
+        "videoId": "M-Q0E5SOCPw",
+        "videoTitle": "BEST AND WORSE OF LONDON CHINATOWN  Ft. Morgan Jay",
+        "rating": 10,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Taiwanese fried chicken popcorn with curry, garlic, cheese, chili, and garlic seasonings. Tod gave it a perfect 10/10, calling it delicious and noting the seasoning makes it require no dipping sauce; crispy but tender batter.",
+        "verdict": "Delicious and perfectly seasoned; 10/10",
+        "dishes": [
+          "Fried chicken popcorn with curry, garlic, and cheese",
+          "Fried chicken popcorn with chili and garlic",
+          "Thai spice seasoned chicken popcorn"
+        ],
+        "sponsored": false,
+        "at": 514
+      }
+    ],
+    "bestRating": 10,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Four Seasons",
+    "location": "Chinatown, London",
+    "lat": 51.51191,
+    "lon": -0.13091,
+    "placeId": "c5d2801f8671",
+    "mentions": [
+      {
+        "videoId": "M-Q0E5SOCPw",
+        "videoTitle": "BEST AND WORSE OF LONDON CHINATOWN  Ft. Morgan Jay",
+        "rating": 8,
+        "rating_out_of": 10,
+        "sentiment": "mixed",
+        "notes": "Cantonese roast meat spot serving roast duck, roast pork, and crispy pork belly. Tod praised the crispy pork belly and duck but docked points because the food wasn't piping hot enough and the duck skin could have been crispier.",
+        "verdict": "Good roast meats but temperature issues; 8/10",
+        "dishes": [
+          "Crispy pork belly",
+          "Roast duck",
+          "Roast pork"
+        ],
+        "sponsored": false,
+        "at": 633
+      }
+    ],
+    "bestRating": 8,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Wong Kei",
+    "location": "Chinatown, London",
+    "lat": 51.51151,
+    "lon": -0.13231,
+    "placeId": "8f0334684b50",
+    "mentions": [
+      {
+        "videoId": "M-Q0E5SOCPw",
+        "videoTitle": "BEST AND WORSE OF LONDON CHINATOWN  Ft. Morgan Jay",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "negative",
+        "notes": "Described as the rudest restaurant in Chinatown with a 3.5 rating online. Cash only with no service charge policy. Tod ordered Singapore noodles and found them to have no flavor except spice; worst Chinese food he'd had in the city.",
+        "verdict": "No flavor, only spice; disappointing; 1-2/10",
+        "dishes": [
+          "Singapore chili noodles"
+        ],
+        "sponsored": false,
+        "at": 896
       }
     ],
     "bestRating": null,

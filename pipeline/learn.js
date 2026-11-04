@@ -52,7 +52,12 @@ if (withContext.length < decisions.length) {
 }
 if (!withContext.length) process.exit(0);
 
+// Fully right: the keep/drop call, and for a keep, the place too. If you had to find the place
+// yourself (search, Google, a Maps link), Claude didn't get it right.
+const claudeRight = d => d.keep === d.claude.keep && (!d.keep || (d.claude.placeId && d.placeId === d.claude.placeId));
+
 console.log(`\nClaude's keep/drop call was right: ${pct(withContext.filter(d => d.keep === d.claude.keep).length, withContext.length)}`);
+console.log(`…and the right place too:          ${pct(withContext.filter(claudeRight).length, withContext.length)}`);
 const claudeGuessed = withContext.filter(d => d.keep && d.claude.placeId);
 console.log(`Claude's place guess was right:   ${pct(claudeGuessed.filter(d => d.placeId === d.claude.placeId).length, claudeGuessed.length)}`);
 
@@ -78,7 +83,8 @@ for (const s of [...new Set(ticked.map(d => d.suggested))]) {
 
 const spot = withContext.filter(d => d.spot);
 if (spot.length) {
-  console.log(`\nSpot check (picks Claude was sure about): keep/drop right ${pct(spot.filter(d => d.keep === d.claude.keep).length, spot.length)}`);
+  console.log(`\nSpot check (picks Claude was sure about): right ${pct(spot.filter(claudeRight).length, spot.length)}`);
+  spot.filter(d => !claudeRight(d)).forEach(d => console.log(`  wrong: "${d.originalName}" → Claude: ${d.claude.keep ? `"${d.claude.name}"` : `drop (${d.claude.reason})`} → you: ${d.keep ? `"${d.name}"` : `drop (${d.dropReason})`}`));
 }
 
 // Mistakes by kind: what you dropped that Claude kept, and Claude's drop reasons you overruled
