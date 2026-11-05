@@ -33,7 +33,7 @@ Checking picks (geocode.js uses the verified picks in place of the scraped ones 
 |---|---|---|
 | Check each pick with Claude | `YT_DLP=~/.local/bin/yt-dlp node verify.js <creator> --transcripts` | `-scraped` → `<creator>-verified.json` |
 | Review the unsure ones | `node build-verify-review.js`, open http://localhost:8000/pipeline/review-verify.html, Keep/Drop, Export | → `verify-decisions.json` |
-| Learn from your decisions | `node learn.js` (picks up the newest export from ~/Downloads) | `verify-decisions` → `known-places.json` + accuracy report |
+| Learn from your decisions | `node learn.js` (merges in the newest export from ~/Downloads; never deletes earlier decisions; `decision-fixes.json` holds corrections made outside the page) | `verify-decisions` → `known-places.json` + accuracy report |
 | Rebuild the map | `node geocode.js <creator> && node inject.js <creator>` | uses `-verified`, your decisions and `known-places` |
 
 Google (Places API (New), `GOOGLE_MAPS_API_KEY` in `.env`: the private pipeline key, not the map's website key):

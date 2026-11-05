@@ -3,7 +3,7 @@
 //     and the review page use for the same restaurant in other videos
 //   - reports how often each kind of suggestion was right, to tune what's ticked
 //     automatically and when a pick needs reviewing at all
-// Picks up the newest verify-decisions*.json from ~/Downloads if it's newer than ours.
+// Merges in the newest verify-decisions*.json from ~/Downloads or ~/Documents.
 // Usage: node learn.js
 import fs from 'fs';
 import os from 'os';
@@ -12,21 +12,46 @@ import { KNOWN_FILE } from './known.js';
 
 const DECISIONS = 'verify-decisions.json';
 
-// Newest export from Downloads ("verify-decisions (2).json" etc.)
-const downloads = path.join(os.homedir(), 'Downloads');
-const exported = fs.existsSync(downloads) ? fs.readdirSync(downloads)
-  .filter(f => /^verify-decisions.*\.json$/.test(f))
-  .map(f => path.join(downloads, f))
-  .sort((a, b) => fs.statSync(b).mtimeMs - fs.statSync(a).mtimeMs)[0] : null;
-if (exported && (!fs.existsSync(DECISIONS) || fs.statSync(exported).mtimeMs > fs.statSync(DECISIONS).mtimeMs)) {
-  fs.copyFileSync(exported, DECISIONS);
-  console.log(`Copied ${exported} → ${DECISIONS}`);
+// Newest export from Downloads or Documents ("verify-decisions (2).json" etc.), merged into ours: an
+// export only adds or changes decisions, so one from a browser that lost its saved
+// answers can't wipe the earlier ones
+const keyOf = d => d.kind === 'pin' ? `pin:${d.creator}:${d.name}` : `${d.creator}:${d.videoId}:${d.originalName}`;
+const exported = ['Downloads', 'Documents'].map(dir => path.join(os.homedir(), dir)).filter(dir => fs.existsSync(dir))
+  .flatMap(dir => fs.readdirSync(dir).filter(f => /^verify-decisions.*\.json$/.test(f)).map(f => path.join(dir, f)))
+  .sort((a, b) => fs.statSync(b).mtimeMs - fs.statSync(a).mtimeMs)[0];
+const ours = fs.existsSync(DECISIONS) ? JSON.parse(fs.readFileSync(DECISIONS, 'utf8')) : [];
+// Merging the same export again changes nothing, so the newest is always merged
+if (exported) {
+  const merged = new Map(ours.map(d => [keyOf(d), d]));
+  const before = merged.size;
+  let changed = 0;
+  for (const d of JSON.parse(fs.readFileSync(exported, 'utf8'))) {
+    const old = merged.get(keyOf(d));
+    if (old && JSON.stringify(old) !== JSON.stringify(d)) changed++;
+    merged.set(keyOf(d), d);
+  }
+  fs.writeFileSync(DECISIONS, JSON.stringify([...merged.values()], null, 1));
+  console.log(`Merged ${exported} → ${DECISIONS}: ${merged.size - before} new, ${changed} changed, ${merged.size} in all`);
 }
 if (!fs.existsSync(DECISIONS)) {
   console.error(`No ${DECISIONS} yet: Export decisions from the review page first.`);
   process.exit(1);
 }
-const decisions = JSON.parse(fs.readFileSync(DECISIONS, 'utf8'));
+
+// Corrections made outside the review page (e.g. a pin fixed from Google), applied over
+// your exports so the browser's older answer doesn't undo them
+const FIXES = 'decision-fixes.json';
+const fixes = fs.existsSync(FIXES) ? JSON.parse(fs.readFileSync(FIXES, 'utf8')) : [];
+const all = JSON.parse(fs.readFileSync(DECISIONS, 'utf8'));
+for (const fix of fixes) {
+  const d = all.find(d => keyOf(d) === fix.key);
+  if (d) Object.assign(d, fix.set);
+  // A pick you never saw on the page (Claude was sure about it): the fix is the decision
+  else { const [creator, videoId, ...name] = fix.key.split(':'); all.push({ creator, videoId, originalName: name.join(':'), ...fix.set }); }
+}
+fs.writeFileSync(DECISIONS, JSON.stringify(all, null, 1));
+// Pin check decisions (moved map pins) are applied by geocode.js, not learned from
+const decisions = all.filter(d => d.kind !== 'pin');
 
 // ─── Confirmed places ───────────────────────────────────────────────────────
 

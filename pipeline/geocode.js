@@ -36,9 +36,12 @@ async function fromVerified() {
   const placeById = new Map(places.map(([id, name, lat, lon]) => [id, { name, lat, lon }]));
 
   // Your decisions from the review page override Claude's
-  const decisions = new Map((fs.existsSync(DECISIONS) ? JSON.parse(fs.readFileSync(DECISIONS, 'utf8')) : [])
-    .filter(d => d.creator === creator.key)
-    .map(d => [`${d.videoId}:${d.originalName}`, d]));
+  const allDecisions = (fs.existsSync(DECISIONS) ? JSON.parse(fs.readFileSync(DECISIONS, 'utf8')) : [])
+    .filter(d => d.creator === creator.key);
+  const decisions = new Map(allDecisions.filter(d => d.kind !== 'pin').map(d => [`${d.videoId}:${d.originalName}`, d]));
+  // Pins you moved on the review page's Pin check (usually a place that has moved)
+  const pinMoves = allDecisions.filter(d => d.kind === 'pin' && d.move);
+  const pinClosed = allDecisions.filter(d => d.kind === 'pin' && d.remove);
 
   // Where each pick was placed before verify.js, for picks with no matching place
   // (a copy of the old output is kept, because this step overwrites it)
@@ -96,18 +99,32 @@ async function fromVerified() {
         dishes:        pick.dishes || [],
         sponsored:     !!video.sponsored,
         at:            m ? +m[1] * 60 + +m[2] : null,
+        // You said the place has moved since this video (the pin is where it is now)
+        ...(decision?.moved ? { moved: true } : {}),
       });
     }
   }
 
-  const results = [...byPlace.values()].map(r => {
+  let results = [...byPlace.values()].map(r => {
     const ratings = r.mentions.map(m => m.rating).filter(v => v != null);
     const bestRating = ratings.length ? Math.max(...ratings) : null;
     const best = r.mentions.find(m => m.rating === bestRating) || r.mentions[0];
     return { ...r, bestRating, bestRatingOutOf: best?.rating_out_of ?? null };
   });
 
+  // The new spot no longer matches the old place in places.json, so inject.js links it afresh
+  for (const move of pinMoves) {
+    const r = results.find(r => (move.placeId && r.placeId === move.placeId) || r.name === move.name);
+    if (r) Object.assign(r, { lat: move.lat, lon: move.lon, placeId: null });
+  }
+
+  // Places you marked closed on the Pin check come off the map
+  const closed = r => pinClosed.some(d => (d.placeId && r.placeId === d.placeId) || r.name === d.name);
+  const removed = results.filter(closed).length;
+  results = results.filter(r => !closed(r));
+
   fs.writeFileSync(OUTPUT, JSON.stringify(results, null, 2));
+  if (removed) console.log(`${removed} closed places removed (Pin check)`);
   console.log(`${creator.name}: ${results.length} restaurants from verified picks (${dropped} picks dropped, ${decided} decided by you, ${fromKnown} placed from your earlier answers) → ${OUTPUT}`);
   if (unplaced.length) console.log(`No location for ${unplaced.length} kept picks (not on the map):\n${unplaced.map(n => `  ${n}`).join('\n')}`);
 }

@@ -967,6 +967,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
             ${m.sponsored ? '<span class="creator-mention-ad" title="Paid partnership or sponsored video">Ad</span>' : ''}
             <a href="${escapeHtml(url)}" target="_blank" rel="noopener">&#9654; ${escapeHtml(m.videoTitle)}</a>
           </div>
+          ${m.moved ? '<div class="creator-mention-moved">Moved since this video: the map shows where it is now</div>' : ''}
           ${mentionRating}
           <div class="creator-mention-notes">${escapeHtml(m.notes)}</div>
           ${dishes}

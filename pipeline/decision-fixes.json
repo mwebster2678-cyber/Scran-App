@@ -1,0 +1,20 @@
+[
+ {
+  "key": "tod:RvAbVo7WRYg:Schwamaha",
+  "why": "places.json row 58c0cde0ebb5 has the right address but a pin in Pimlico",
+  "set": {
+   "placeId": "db1e85e0d7d3",
+   "lat": 51.48701,
+   "lon": -0.09534
+  }
+ },
+ {
+  "key": "topjaw:FHMHe3YU4ng:Hawker House",
+  "why": "A venue hosting a burger festival, not a restaurant (you, 4 Nov)",
+  "set": {
+   "keep": false,
+   "dropReason": "temporary",
+   "name": "Hawker House"
+  }
+ }
+]

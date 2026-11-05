@@ -2872,5 +2872,1061 @@
   "spot": true,
   "keep": false,
   "dropReason": "event_stall"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "FHMHe3YU4ng",
+  "originalName": "Hawker House",
+  "keep": false,
+  "dropReason": "temporary",
+  "name": "Hawker House"
+ },
+ {
+  "kind": "pin",
+  "creator": "topjaw",
+  "name": "Wingmans",
+  "placeId": "360c4def57c9",
+  "from": {
+   "lat": 51.54558,
+   "lon": -0.20201
+  },
+  "keep": true,
+  "move": true,
+  "lat": 51.5129939,
+  "lon": -0.1314572,
+  "address": "29-31 Old Compton St, London W1D 5JS",
+  "source": "google"
+ },
+ {
+  "kind": "pin",
+  "creator": "topjaw",
+  "name": "Hawker House",
+  "placeId": "a250a12e8f61",
+  "from": {
+   "lat": 51.53327,
+   "lon": -0.06178
+  },
+  "keep": true,
+  "move": true,
+  "lat": 51.57245030000001,
+  "lon": -0.0889274,
+  "address": "Hawker House, Anax St, Woodberry Down, London N4 2JQ",
+  "source": "google"
+ },
+ {
+  "kind": "pin",
+  "creator": "tod",
+  "name": "Panadera",
+  "placeId": "7dfe93642e7f",
+  "from": {
+   "lat": 51.5433,
+   "lon": -0.1419
+  },
+  "keep": true,
+  "move": true,
+  "lat": 51.5153646,
+  "lon": -0.1515619,
+  "address": "7 Picton Pl, London W1U 1BN",
+  "source": "google"
+ },
+ {
+  "kind": "pin",
+  "creator": "topjaw",
+  "name": "No Drama",
+  "placeId": "2162b6c1b930",
+  "from": {
+   "lat": 51.51345,
+   "lon": -0.2488
+  },
+  "keep": true,
+  "move": true,
+  "lat": 51.5028886,
+  "lon": -0.22393659999999996,
+  "address": "15-19 Goldhawk Rd, London W12 8QQ",
+  "source": "google"
+ },
+ {
+  "kind": "pin",
+  "creator": "topjaw",
+  "name": "Bright",
+  "placeId": "b1f0c6ea1fa1",
+  "from": {
+   "lat": 51.53763,
+   "lon": -0.05757
+  },
+  "keep": true,
+  "move": false,
+  "remove": true,
+  "dropReason": "closed"
+ },
+ {
+  "kind": "pin",
+  "creator": "topjaw",
+  "name": "Agile Rabbit",
+  "placeId": "5ec18c544fcf",
+  "from": {
+   "lat": 51.46256,
+   "lon": -0.11237
+  },
+  "keep": true,
+  "move": false,
+  "remove": true,
+  "dropReason": "closed"
+ },
+ {
+  "kind": "pin",
+  "creator": "topjaw",
+  "name": "From the Ashes BBQ",
+  "placeId": "e66102d4d6d2",
+  "from": {
+   "lat": 51.53263,
+   "lon": -0.08032
+  },
+  "keep": true,
+  "move": true,
+  "lat": 51.5360639,
+  "lon": -0.057482599999999995,
+  "address": "61 Mare St, London E8 4RG",
+  "source": "google"
+ },
+ {
+  "kind": "pin",
+  "creator": "topjaw",
+  "name": "Darjeeling Express",
+  "placeId": "590a56b6acc7",
+  "from": {
+   "lat": 51.51268,
+   "lon": -0.13874
+  },
+  "keep": true,
+  "move": true,
+  "lat": 51.511297799999994,
+  "lon": -0.13279649999999998,
+  "address": "36-40 Rupert St, London W1D 6DW",
+  "source": "google"
+ },
+ {
+  "creator": "tod",
+  "videoId": "xr5XDBj37K0",
+  "originalName": "Eco Pizza",
+  "area": null,
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Ecco Pizza",
+   "placeId": "d67e245c9b25"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "keep": true,
+  "name": "Icco",
+  "placeId": null,
+  "lat": 51.5136459,
+  "lon": -0.1304521,
+  "address": null,
+  "manual": "Icco",
+  "mapLink": "https://www.google.com/maps/place/ICCO+Pizza+-+Soho/@NaN,NaN,NaNm/data=!3m2!1e3!5s0x487604d2be2a082f:0x60dbc701bf762c7e!4m10!1m2!2m1!1sIcco,+London!3m6!1s0x48760554b21f2f6b:0xf467283f5ab30673!8m2!3d51.5136459!4d-0.1304521!15sCgxJY2NvLCBMb25kb24iA4gBAVoNIgtpY2NvIGxvbmRvbpIBEHBpenphX3Jlc3RhdXJhbnSaAURDaTlEUVVsUlFVTnZaRU5vZEhsalJqbHZUMjFLU21Sc1FsUmhhMHBWVGtka1ZsTlZVbkZWU0d4TFZHMWFVMU5ZWXhBQuABAPoBBAgAEEw!16s%2Fg%2F11mdgz9xpj?entry=ttu&g_ep=EgoyMDI2MTEwMy4wIKXMDSoASAFQAw%3D%3D",
+  "source": "maplink"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "VlfkaN9J_Ec",
+  "originalName": "E Pellicci",
+  "area": null,
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "E Pellicci",
+   "placeId": "cb5517747f04"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "keep": true,
+  "name": "E Pellicci",
+  "placeId": "cb5517747f04",
+  "lat": 51.52653,
+  "lon": -0.06345,
+  "address": "332 Bethnal Grn Rd, E2 0AG",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "SNbYvs7BVMI",
+  "originalName": "Ogam Tapas Bar",
+  "area": "N1",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "OGAM Korean TAPAS BAR",
+   "placeId": "124edb564f07"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "keep": true,
+  "name": "OGAM Korean TAPAS BAR",
+  "placeId": "124edb564f07",
+  "lat": 51.53349,
+  "lon": -0.11019,
+  "address": "10 Chapel Market, N1 9EZ",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "qmWp2vR6fXw",
+  "originalName": "From The Ashes",
+  "area": "Hackney Wick",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "From the Ashes BBQ",
+   "placeId": "e66102d4d6d2"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "keep": true,
+  "name": "From the Ashes BBQ",
+  "placeId": "e66102d4d6d2",
+  "lat": 51.53263,
+  "lon": -0.08032,
+  "address": "10 Stour Road, E3 2NT",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "vw8Pb8VbQu8",
+  "originalName": "Four Seasons Wardour St",
+  "area": "Wardour Street, Chinatown",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Four Seasons",
+   "placeId": "e7e8924ea7c4"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "keep": true,
+  "name": "Four Seasons",
+  "placeId": "e7e8924ea7c4",
+  "lat": 51.51111,
+  "lon": -0.13199,
+  "address": "23 Wardour St, W1D 6PW",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "uwIX55mAUkQ",
+  "originalName": "Creams",
+  "area": "Kentish Town",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Creams",
+   "placeId": "906eaa80109f"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "keep": true,
+  "name": "Creams Cafe Kentish Town",
+  "placeId": "906eaa80109f",
+  "lat": 51.54943,
+  "lon": -0.14084,
+  "address": "246, 248 Kentish Town Rd, NW5 2AB",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "XodLLywtigw",
+  "originalName": "Quo Vadis",
+  "area": null,
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Quo Vadis",
+   "placeId": "330c04057e79"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "keep": true,
+  "name": "Quo Vadis",
+  "placeId": "330c04057e79",
+  "lat": 51.51408,
+  "lon": -0.13271,
+  "address": "26-29 Dean St, W1D 3LL",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "a6sx9OCMEpw",
+  "originalName": "Flour & Grape",
+  "area": "Bermondsey",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Flour and Grape",
+   "placeId": "b5bebbee8f04"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "keep": true,
+  "name": "Flour and Grape",
+  "placeId": "b5bebbee8f04",
+  "lat": 51.49812,
+  "lon": -0.08142,
+  "address": "214 Bermondsey St, SE1 3TQ",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "xHEgwRMbcNs",
+  "originalName": "Copita",
+  "area": "Soho",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Copita",
+   "placeId": "045e179b48fa"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "keep": true,
+  "name": "Copita",
+  "placeId": "045e179b48fa",
+  "lat": 51.51458,
+  "lon": -0.13607,
+  "address": "27 D'Arblay St, W1F 8EN",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "XVdcEzn_yK4",
+  "originalName": "CookDaily",
+  "area": "Boxpark, Shoreditch",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "CookDaily",
+   "placeId": "94e011bc5c88"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "keep": true,
+  "name": "King CookDaily",
+  "placeId": "94e011bc5c88",
+  "lat": 51.51732,
+  "lon": -0.08235,
+  "address": "1-27, The Arcade, Liverpool St, EC2M 7PN",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "XVdcEzn_yK4",
+  "originalName": "Club Mexicana",
+  "area": "Kingly Court, Soho",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Club Mexicana",
+   "placeId": "2952c0128971"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "keep": true,
+  "name": "Club Mexicana",
+  "placeId": "2952c0128971",
+  "lat": 51.51718,
+  "lon": -0.08186,
+  "address": "Unit 6 The Arcade, EC2M 7PN",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "soyqQluj32A",
+  "originalName": "Cafe Van Gogh",
+  "area": "Brixton, South London",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Cafe Van Gogh",
+   "placeId": "564feeb88d07"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "moved": false,
+  "keep": false,
+  "dropReason": "closed"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "SNbYvs7BVMI",
+  "originalName": "Publiq",
+  "area": "W8",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Publiq - South Kensington",
+   "placeId": "15cc7adbccf4"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "moved": false,
+  "keep": false,
+  "dropReason": "closed"
+ },
+ {
+  "creator": "tod",
+  "videoId": "pDwU7CJhFCI",
+  "originalName": "Ebby",
+  "area": null,
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Ebby's Kitchen",
+   "placeId": "2272e59a90c6"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "moved": false,
+  "keep": true,
+  "name": "Ibai",
+  "placeId": "1c52ffeb67b5",
+  "lat": 51.51792,
+  "lon": -0.09875,
+  "address": "90 Bartholomew Close, EC1A 7BN",
+  "manual": null,
+  "source": "search"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "qw_-ZdP6RFg",
+  "originalName": "Norma",
+  "area": null,
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Norma",
+   "placeId": "65ed5e956fa3"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "moved": false,
+  "keep": true,
+  "name": "Norma",
+  "placeId": "65ed5e956fa3",
+  "lat": 51.51837,
+  "lon": -0.13452,
+  "address": "8 Charlotte St., W1T 2LS",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "uDsR7HzuLGQ",
+  "originalName": "Terra Moderna",
+  "area": "Belsize Park",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Terra Moderna",
+   "placeId": "73e1a0be63bb"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "moved": false,
+  "keep": true,
+  "name": "Terra Moderna",
+  "placeId": "73e1a0be63bb",
+  "lat": 51.54673,
+  "lon": -0.16112,
+  "address": "2b England's Ln, NW3 4TG",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "tod",
+  "videoId": "OUiKBV5RhMk",
+  "originalName": "Cafe Francois",
+  "area": "Borough",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Café François",
+   "placeId": "8cfa514018a0"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "moved": false,
+  "keep": true,
+  "name": "Café François",
+  "placeId": "8cfa514018a0",
+  "lat": 51.50641,
+  "lon": -0.09133,
+  "address": "14 Stoney Street, SE1 9",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "tod",
+  "videoId": "Em9qhHMv5PA",
+  "originalName": "Smacks",
+  "area": null,
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Smacks Hamburgers",
+   "placeId": "2fbb29ee101e"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "moved": false,
+  "keep": true,
+  "name": "Smacks",
+  "placeId": null,
+  "lat": 51.4860118,
+  "lon": -0.0940607,
+  "address": null,
+  "manual": "Smacks",
+  "mapLink": "https://www.google.com/maps/place/Smacks+Walworth+Rd/@51.4860118,-0.3824518,45262m/data=!3m1!1e3!4m10!1m2!2m1!1sSmacks!3m6!1s0x487605d4245b02f3:0xee29fb44b04f5744!8m2!3d51.4860118!4d-0.0940607!15sCgZTbWFja3NaCCIGc21hY2tzkgEUaGFtYnVyZ2VyX3Jlc3RhdXJhbnSaAURDaTlEUVVsUlFVTnZaRU5vZEhsalJqbHZUMnBvU21WSVNuVlhXRTU0WkVjMVVGRnFXa1JQVkdNeFRUSnpNMWxYWXhBQuABAPoBBQjuAhAr!16s%2Fg%2F11xgjqcrxb?entry=ttu&g_ep=EgoyMDI2MTEwMy4wIKXMDSoASAFQAw%3D%3D",
+  "source": "maplink"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "dKgJzqccQ7k",
+  "originalName": "Burger & Lobster",
+  "area": null,
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Burger & Lobster",
+   "placeId": "8ed7020d0fb5"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "moved": true,
+  "keep": true,
+  "name": "Burger & Lobster",
+  "placeId": "8ed7020d0fb5",
+  "lat": 51.51732,
+  "lon": -0.14094,
+  "address": "6 Little Portland St, W1W 7JE",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "8stopXU4lIc",
+  "originalName": "Ozone Coffee",
+  "area": "Shoreditch",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Ozone Coffee",
+   "placeId": "5e356a86d08a"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "moved": false,
+  "keep": true,
+  "name": "Ozone Coffee",
+  "placeId": "5e356a86d08a",
+  "lat": 51.53253,
+  "lon": -0.0611,
+  "address": "Emma St, E2 9AP",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "XVdcEzn_yK4",
+  "originalName": "Mother",
+  "area": "Hackney Wick",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Mother Works",
+   "placeId": null
+  },
+  "suggested": null,
+  "spot": true,
+  "moved": false,
+  "keep": false,
+  "dropReason": "closed"
+ },
+ {
+  "creator": "tod",
+  "videoId": "fq-y8bU872k",
+  "originalName": "Dilpasand",
+  "area": "Whitechapel",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Dilpasand Restaurant",
+   "placeId": "81a6d8761dba"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "moved": false,
+  "keep": true,
+  "name": "Dilpasand Restaurant",
+  "placeId": "81a6d8761dba",
+  "lat": 51.51494,
+  "lon": -0.06364,
+  "address": "111-113 Commercial Rd, E1 1RD",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "tod",
+  "videoId": "7jiwb2wR2rA",
+  "originalName": "Cafe Francois",
+  "area": "Borough Market",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Café François",
+   "placeId": "8cfa514018a0"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "moved": false,
+  "keep": true,
+  "name": "Café François",
+  "placeId": "8cfa514018a0",
+  "lat": 51.50641,
+  "lon": -0.09133,
+  "address": "14 Stoney Street, SE1 9",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "87dnHa20ilA",
+  "originalName": "Darwin Brasserie",
+  "area": "Sky Garden",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Darwin Brasserie",
+   "placeId": "c5cb08e932fa"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "moved": false,
+  "keep": true,
+  "name": "Darwin Brasserie",
+  "placeId": "c5cb08e932fa",
+  "lat": 51.51122,
+  "lon": -0.08346,
+  "address": "Level 36, Sky Garden Walk, 1, EC3M 8AF",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "a6sx9OCMEpw",
+  "originalName": "Circolo Popolare",
+  "area": "Fitzrovia",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Circolo Popolare",
+   "placeId": "8062b32adec5"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "moved": false,
+  "keep": true,
+  "name": "Circolo Popolare",
+  "placeId": "8062b32adec5",
+  "lat": 51.5172,
+  "lon": -0.1338,
+  "address": "40-41 Rathbone Pl, W1T 1HX",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "tod",
+  "videoId": "L-PoStuPrVU",
+  "originalName": "Emmanzi",
+  "area": "Peckham",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "M. Manze",
+   "placeId": "4562e6fef8e5"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "moved": false,
+  "keep": true,
+  "name": "M.Manze",
+  "placeId": "4562e6fef8e5",
+  "lat": 51.47402,
+  "lon": -0.06874,
+  "address": "105 Peckham High St, SE15 5RS",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "YKdwsDL5cGs",
+  "originalName": "Pedler",
+  "area": "Peckham",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Pedler",
+   "placeId": "b721bd0ee04b"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "moved": false,
+  "keep": true,
+  "name": "Pedler",
+  "placeId": "b721bd0ee04b",
+  "lat": 51.46507,
+  "lon": -0.06669,
+  "address": "58 Peckham Rye, SE15 4JR",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "RdGAqs9iwGo",
+  "originalName": "Brigadiers",
+  "area": null,
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Brigadiers",
+   "placeId": "8fa33b6eb2a8"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "moved": false,
+  "keep": true,
+  "name": "Brigadiers",
+  "placeId": "8fa33b6eb2a8",
+  "lat": 51.51268,
+  "lon": -0.09177,
+  "address": "1-5 Bloomberg Arcade, EC4N 8AR",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "tod",
+  "videoId": "h_3-K5mWq8w",
+  "originalName": "Danieli",
+  "area": "Richmond",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Danieli On The Green",
+   "placeId": "cfbe846b29f0"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "moved": false,
+  "keep": true,
+  "name": "Danieli On The Green",
+  "placeId": "cfbe846b29f0",
+  "lat": 51.461,
+  "lon": -0.30546,
+  "address": "13 The Green, TW9 1PX",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "tod",
+  "videoId": "M-Q0E5SOCPw",
+  "originalName": "Bun House",
+  "area": "Chinatown, London",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Bun House",
+   "placeId": "341cd93b24f0"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "moved": false,
+  "keep": true,
+  "name": "Bun House",
+  "placeId": "341cd93b24f0",
+  "lat": 51.51169,
+  "lon": -0.12989,
+  "address": "26-27 Lisle Street, WC2H 7BA",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "uF83J3HHzJ0",
+  "originalName": "Milk",
+  "area": "Balham",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "MILK CAFE",
+   "placeId": "905e74bc628b"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "moved": false,
+  "keep": true,
+  "name": "MILK CAFE",
+  "placeId": "905e74bc628b",
+  "lat": 51.44447,
+  "lon": -0.15085,
+  "address": "20 Bedford Hill, SW12 9RG",
+  "manual": null,
+  "source": "claude"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "r1WMeuc8lxw",
+  "originalName": "Darby's",
+  "area": null,
+  "claude": {
+   "keep": false,
+   "reason": "guest_own_place",
+   "name": "Darby's",
+   "placeId": "d1011ce0e42e"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "moved": false,
+  "keep": false,
+  "dropReason": "guest_own_place"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "szna6GJjDZw",
+  "originalName": "Morchella & Perilla",
+  "area": null,
+  "claude": {
+   "keep": false,
+   "reason": "guest_own_place",
+   "name": "Morchella & Perilla",
+   "placeId": "e50b7dd1d0db"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "moved": false,
+  "keep": false,
+  "dropReason": "guest_own_place"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "eK-9u_CxYMM",
+  "originalName": "Jolene",
+  "area": "Newington Green",
+  "claude": {
+   "keep": false,
+   "reason": "guest_recommendation",
+   "name": "Jolene",
+   "placeId": "bbc9a27c35e7"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "moved": false,
+  "keep": false,
+  "dropReason": "guest_own_place"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "mhGU7yQy0bw",
+  "originalName": "Moto",
+  "area": null,
+  "claude": {
+   "keep": false,
+   "reason": "guest_own_place",
+   "name": "Moto",
+   "placeId": "001ae2027aa1"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "moved": false,
+  "keep": false,
+  "dropReason": "guest_own_place"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "QazHd145leY",
+  "originalName": "Lita",
+  "area": "Marylebone",
+  "claude": {
+   "keep": false,
+   "reason": "guest_own_place",
+   "name": "Lita Marylebone",
+   "placeId": "b74006187007"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "moved": false,
+  "keep": false,
+  "dropReason": "guest_own_place"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "FoRAFqRTsXI",
+  "originalName": "Blanchette",
+  "area": null,
+  "claude": {
+   "keep": false,
+   "reason": "guest_own_place",
+   "name": "Blanchette",
+   "placeId": "61754c3eab6b"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "moved": false,
+  "keep": false,
+  "dropReason": "guest_own_place"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "8qYmiZn4yAo",
+  "originalName": "Fish, Wings and Tings",
+  "area": "Brixton Village",
+  "claude": {
+   "keep": false,
+   "reason": "only_mentioned",
+   "name": "Fish, Wings and Tings",
+   "placeId": "d67024f9cf4e"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "moved": false,
+  "keep": false,
+  "dropReason": "only_mentioned"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "pOJhlYMfRYI",
+  "originalName": "Muse",
+  "area": null,
+  "claude": {
+   "keep": false,
+   "reason": "guest_own_place",
+   "name": "Muse by Tom Aikens",
+   "placeId": "aa51eac3a0cb"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "moved": false,
+  "keep": false,
+  "dropReason": "guest_own_place"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "vZ2GGH1qZ8A",
+  "originalName": "Holborn Dining Room",
+  "area": "Holborn",
+  "claude": {
+   "keep": false,
+   "reason": "guest_own_place",
+   "name": "Holborn Dining Room",
+   "placeId": "2815fdc184b9"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "moved": false,
+  "keep": false,
+  "dropReason": "guest_own_place"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "AkV7KwMX670",
+  "originalName": "Mere",
+  "area": null,
+  "claude": {
+   "keep": false,
+   "reason": "guest_own_place",
+   "name": "Mere",
+   "placeId": null
+  },
+  "suggested": null,
+  "spot": true,
+  "moved": false,
+  "keep": false,
+  "dropReason": "guest_own_place"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "ZINVMbuil-w",
+  "originalName": "AngloThai",
+  "area": null,
+  "claude": {
+   "keep": false,
+   "reason": "guest_recommendation",
+   "name": "AngloThai",
+   "placeId": "6930b696b35c"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "moved": false,
+  "keep": false,
+  "dropReason": "guest_recommendation"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "NyKxz2DFAhY",
+  "originalName": "Smoking Goat",
+  "area": "Shoreditch",
+  "claude": {
+   "keep": false,
+   "reason": "guest_recommendation",
+   "name": "Smoking Goat",
+   "placeId": "8128c7b55d2d"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "moved": false,
+  "keep": false,
+  "dropReason": "guest_recommendation"
+ },
+ {
+  "creator": "tod",
+  "videoId": "rHQiPQvkPaA",
+  "originalName": "Fume",
+  "area": "Twickenham",
+  "claude": {
+   "keep": false,
+   "reason": "event_stall",
+   "name": "Fume",
+   "placeId": null
+  },
+  "suggested": null,
+  "spot": true,
+  "moved": false,
+  "keep": false,
+  "dropReason": "event_stall"
+ },
+ {
+  "creator": "topjaw",
+  "videoId": "EPzwgsWfCoM",
+  "originalName": "Tayer + Elementary",
+  "area": null,
+  "claude": {
+   "keep": false,
+   "reason": "guest_own_place",
+   "name": "Tayer and Elementary",
+   "placeId": "fdb819694037"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "moved": false,
+  "keep": false,
+  "dropReason": "guest_own_place"
  }
 ]

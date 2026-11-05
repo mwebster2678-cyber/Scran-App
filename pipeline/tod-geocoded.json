@@ -32,9 +32,9 @@
   {
     "name": "Panadera",
     "location": null,
-    "lat": 51.5433,
-    "lon": -0.1419,
-    "placeId": "7dfe93642e7f",
+    "lat": 51.5153646,
+    "lon": -0.1515619,
+    "placeId": null,
     "mentions": [
       {
         "videoId": "3-KEdHOjrmk",
@@ -512,7 +512,7 @@
     "bestRatingOutOf": null
   },
   {
-    "name": "M. Manze",
+    "name": "M.Manze",
     "location": "Peckham",
     "lat": 51.47402,
     "lon": -0.06874,
@@ -673,7 +673,18 @@
         ],
         "sponsored": false,
         "at": 0
-      },
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Ibai",
+    "location": null,
+    "lat": 51.51792,
+    "lon": -0.09875,
+    "placeId": "1c52ffeb67b5",
+    "mentions": [
       {
         "videoId": "pDwU7CJhFCI",
         "videoTitle": "Biggest Steak We’ve Ever Eaten FT. Man Vs Food",
@@ -696,11 +707,11 @@
     "bestRatingOutOf": null
   },
   {
-    "name": "Smacks Hamburgers",
+    "name": "Smacks",
     "location": null,
-    "lat": 51.43547,
-    "lon": -0.16058,
-    "placeId": "2fbb29ee101e",
+    "lat": 51.4860118,
+    "lon": -0.0940607,
+    "placeId": null,
     "mentions": [
       {
         "videoId": "Em9qhHMv5PA",
@@ -2282,11 +2293,11 @@
     "bestRatingOutOf": null
   },
   {
-    "name": "Ecco Pizza",
+    "name": "Icco",
     "location": null,
-    "lat": 51.51597,
-    "lon": -0.12393,
-    "placeId": "d67e245c9b25",
+    "lat": 51.5136459,
+    "lon": -0.1304521,
+    "placeId": null,
     "mentions": [
       {
         "videoId": "xr5XDBj37K0",

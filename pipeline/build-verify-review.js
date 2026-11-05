@@ -11,8 +11,8 @@ import { saysWhere } from './comments.js';
 
 const OUTPUT        = 'review-verify.html';
 const DECISIONS     = 'verify-decisions.json';
-const SPOT_KEPT     = 15; // picks Claude was sure about, to spot-check: kept ones…
-const SPOT_DROPPED  = 5;  // …and dropped ones
+const SPOT_KEPT     = 50; // picks Claude was sure about, to spot-check: kept ones…
+const SPOT_DROPPED  = 20; // …and dropped ones
 
 const REASON_LABELS = {
   own_review:           'Reviewed it themself',
@@ -91,10 +91,28 @@ function main() {
   for (const s of [...sure.filter(s => s.pick.keep).slice(0, SPOT_KEPT), ...sure.filter(s => !s.pick.keep).slice(0, SPOT_DROPPED)]) {
     items.push({ ...item(s.key, s.creator, s.video, s.pick, s.pick.why), spot: true });
   }
+  // Map pins check-pins.js found far from Google's place with the same name, picked out for you
+  // in pins-to-review.json: move each to Google's location, leave it, or paste the right one
+  if (fs.existsSync('pin-check.json') && fs.existsSync('pins-to-review.json')) {
+    const review = new Set(JSON.parse(fs.readFileSync('pins-to-review.json', 'utf8')));
+    for (const f of JSON.parse(fs.readFileSync('pin-check.json', 'utf8')).far.filter(f => review.has(f.name))) {
+      const creator = CREATORS[f.creator];
+      const onMap = JSON.parse(fs.readFileSync(`../data/${f.creator}.json`, 'utf8'));
+      const entry = (Array.isArray(onMap) ? onMap : Object.values(onMap)[0])
+        .find(r => (f.placeId && r.placeId === f.placeId) || r.name === f.name);
+      items.push({
+        kind: 'pin', id: `pin:${f.creator}:${f.name}`, creator: f.creator, creatorName: creator.name, colour: creator.colour,
+        name: f.name, placeId: f.placeId, pin: f.pin, google: f.google, away: f.away,
+        address: f.placeId ? placeById.get(f.placeId)?.address || null : null,
+        videos: (entry?.mentions || []).map(m => ({ videoId: m.videoId, title: m.videoTitle, at: m.at })),
+      });
+    }
+  }
+
   fs.writeFileSync(OUTPUT, buildHtml(items));
-  const unsure = items.filter(i => !i.spot);
+  const unsure = items.filter(i => !i.spot && i.kind !== 'pin');
   const counts = Object.keys(CREATORS).map(k => `${unsure.filter(i => i.creator === k).length} ${CREATORS[k].name}`).join(', ');
-  console.log(`${unsure.length} picks to review (${counts}) + ${items.length - unsure.length} to spot-check → ${OUTPUT}` +
+  console.log(`${unsure.length} picks to review (${counts}) + ${items.filter(i => i.spot).length} to spot-check + ${items.filter(i => i.kind === 'pin').length} pins → ${OUTPUT}` +
     (settled ? `; ${settled} more settled by your earlier answers` : ''));
 }
 
@@ -165,6 +183,9 @@ function buildHtml(items) {
   .result:hover { background: #f0ede8; }
   .result span { color: #666; font-size: 0.75rem; }
   .google-note { font-size: 0.72rem; color: #888; margin-top: 4px; }
+  .moved { display: flex; gap: 6px; align-items: center; padding: 8px 16px 0; font-size: 0.75rem; color: #666; cursor: pointer; }
+  .pin-where { font-size: 0.8rem; margin-top: 8px; }
+  .pin-where b { display: block; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.04em; color: #888; }
   .google-flag { display: inline-block; margin-top: 6px; padding: 3px 9px; border-radius: 10px; font-size: 0.75rem; font-weight: 600; }
   .google-flag[hidden] { display: none; }
   .google-flag.agrees { background: #e6f6ec; color: #1e7a45; }
@@ -197,6 +218,7 @@ function buildHtml(items) {
   <div class="tabs" id="kind-tabs">
     <button class="tab active" data-kind="unsure">Unsure</button>
     <button class="tab" data-kind="spot">Spot check</button>
+    <button class="tab" data-kind="pins">Pin check</button>
   </div>
   <div class="tabs" id="creator-tabs"></div>
   <div class="tabs" id="status-tabs">
@@ -207,7 +229,7 @@ function buildHtml(items) {
   </div>
   <button id="export-btn">Export decisions</button>
 </header>
-<p class="help"><b>Spot check</b> has a random few of the picks Claude was sure about, to see how often it's wrong. <b>Unsure:</b> Claude wasn't sure about these. Watch the moment in the video, choose the right place (Claude's best guess or Google's top match is ticked) or type its name to search, then <b>Keep</b> or <b>Drop</b>. Your choices are saved in this browser. When you're done, Export and save <code>${DECISIONS}</code> in the pipeline folder.</p>
+<p class="help"><b>Pin check:</b> map pins that are far from Google's place with the same name, usually a place that has moved. Move the pin to Google's location, leave it, paste the right Google Maps link, or remove it if the place has closed (Google often finds a different place then). <b>Spot check</b> has a random few of the picks Claude was sure about, to see how often it's wrong. <b>Unsure:</b> Claude wasn't sure about these. Watch the moment in the video, choose the right place (Claude's best guess or Google's top match is ticked) or type its name to search, then <b>Keep</b> or <b>Drop</b>. Your choices are saved in this browser. When you're done, Export and save <code>${DECISIONS}</code> in the pipeline folder.</p>
 
 <div class="grid" id="grid"></div>
 
@@ -322,12 +344,69 @@ function coordsFrom(text) {
   return lat > 51.2 && lat < 51.75 && lon > -0.55 && lon < 0.35 ? { lat, lon } : null;
 }
 
+const pinLink = at => 'https://www.google.com/maps/search/?api=1&query=' + at.lat + ',' + at.lon;
+const distance = m => m >= 1000 ? (m / 1000).toFixed(1) + ' km' : m + ' m';
+
+function buildPinCard(r) {
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.dataset.id = r.id;
+  card.dataset.creator = r.creator;
+  card.dataset.kind = 'pins';
+  card.innerHTML = \`
+    <div class="card-top">
+      <span class="creator" style="background:\${r.colour}">\${esc(r.creatorName)}</span>
+      <div class="name">\${esc(r.name)}</div>
+      <div class="heard">Pin is \${distance(r.away)} from Google’s \${esc(r.google.name)}</div>
+      \${r.videos.map(v => \`<a class="video" href="https://www.youtube.com/watch?v=\${v.videoId}\${v.at ? '&t=' + v.at + 's' : ''}" target="_blank" rel="noopener">▶ \${esc(v.title)}</a>\`).join('')}
+    </div>
+    <div class="claude">
+      <div class="pin-where"><b>Pin on the map now</b>\${esc(r.address || 'No address')}
+        <a class="option-map" href="\${pinLink(r.pin)}" target="_blank" rel="noopener">See it on Google Maps ↗</a></div>
+      <div class="pin-where"><b>Google’s location</b>\${esc(r.google.name)}, \${esc(r.google.address)}
+        <a class="option-map" href="\${pinLink(r.google)}" target="_blank" rel="noopener">See it on Google Maps ↗</a></div>
+    </div>
+    <div class="search">
+      <div class="options-label">Somewhere else? Paste its Google Maps link</div>
+      <input type="text" placeholder="https://www.google.com/maps/place/…" data-maplink>
+      <span class="loc-status" data-loc-status></span>
+    </div>
+    <div class="actions">
+      <button class="btn-keep" data-move>Move pin</button>
+      <button class="btn-drop" data-leave>Pin is right</button>
+      <button class="btn-drop" data-closed>Closed: remove</button>
+      <span class="status"></span>
+    </div>\`;
+
+  const link = card.querySelector('[data-maplink]');
+  const linkStatus = card.querySelector('[data-loc-status]');
+  const base = { kind: 'pin', creator: r.creator, name: r.name, placeId: r.placeId, from: r.pin, keep: true };
+  const decide = d => { state[r.id] = { ...base, ...d }; save(); refresh(); };
+  link.addEventListener('input', () => {
+    const at = coordsFrom(link.value);
+    linkStatus.textContent = !link.value.trim() ? '' : at ? '✓ Pin found: press Move pin to use it' : 'No location in that link. Use the full address from the browser bar, not a share link.';
+    linkStatus.style.color = at ? '#27AE60' : '#c0392b';
+  });
+  // Moves to your pasted link if there is one, otherwise to Google's location
+  card.querySelector('[data-move]').addEventListener('click', () => {
+    const at = link.value.trim() && coordsFrom(link.value);
+    decide(at ? { move: true, lat: at.lat, lon: at.lon, source: 'maplink' }
+              : { move: true, lat: r.google.lat, lon: r.google.lon, address: r.google.address, source: 'google' });
+  });
+  card.querySelector('[data-leave]').addEventListener('click', () => decide({ move: false }));
+  // Google's place is often a different one when the reviewed place has shut
+  card.querySelector('[data-closed]').addEventListener('click', () => decide({ move: false, remove: true, dropReason: 'closed' }));
+  return card;
+}
+
 function buildCard(r, n) {
+  if (r.kind === 'pin') return buildPinCard(r);
   const card = document.createElement('div');
   card.className = 'card';
   card.dataset.id = r.id;
   card.dataset.creator = r.creator;
   card.dataset.spot = !!r.spot;
+  card.dataset.kind = r.spot ? 'spot' : 'unsure';
   const videoUrl = 'https://www.youtube.com/watch?v=' + r.videoId + (r.at ? '&t=' + r.at + 's' : '');
   const optionsHtml = r.options.map((o, i) => \`
     <label class="option">
@@ -380,6 +459,7 @@ function buildCard(r, n) {
         </div>
       </label>
     </div>
+    <label class="moved"><input type="checkbox" data-moved> Moved since the video: the place you choose is where it is now</label>
     <div class="actions">
       <button class="btn-keep">✓ Keep</button>
       <button class="btn-drop">✗ Drop</button>
@@ -532,12 +612,17 @@ function buildCard(r, n) {
   else if (s && s.optionIndex != null) select(s.optionIndex); // saved by the page's first version
   else if (options.length && r.guessed) select(0);
 
+  const movedBox = card.querySelector('[data-moved]');
+  movedBox.checked = !!s?.moved;
+
   // Claude's call and what the page suggested, saved with every decision
   const context = () => ({
     creator: r.creator, videoId: r.videoId, originalName: r.originalName, area: r.area,
     claude: { keep: r.keep, reason: r.reasonKey, name: r.name, placeId: r.guessed ? r.options[0].id : null },
-    suggested, spot: !!r.spot,
+    suggested, spot: !!r.spot, moved: movedBox.checked,
   });
+  // Ticking or unticking after deciding updates the saved decision
+  movedBox.addEventListener('change', () => { if (state[r.id]) { state[r.id].moved = movedBox.checked; save(); } });
 
   card.querySelector('.btn-keep').addEventListener('click', () => {
     const chosen = radios().find(x => x.checked)?.value;
@@ -572,16 +657,18 @@ function buildCard(r, n) {
 function statusOf(id) { const s = state[id]; return !s ? 'pending' : s.keep ? 'kept' : 'dropped'; }
 
 function refresh() {
-  const visible = DATA.filter(r => (creatorFilter === 'all' || r.creator === creatorFilter) && !!r.spot === (kindFilter === 'spot'));
+  const kindOf = r => r.kind === 'pin' ? 'pins' : r.spot ? 'spot' : 'unsure';
+  const visible = DATA.filter(r => (creatorFilter === 'all' || r.creator === creatorFilter) && kindOf(r) === kindFilter);
   document.querySelectorAll('.card').forEach(card => {
     const status = statusOf(card.dataset.id);
     const s = state[card.dataset.id];
     card.classList.toggle('kept', status === 'kept');
     card.classList.toggle('dropped', status === 'dropped');
-    card.querySelector('.status').textContent = status === 'kept' ? 'Kept: ' + s.name
+    card.querySelector('.status').textContent = s?.kind === 'pin' ? (s.remove ? 'Closed: removed from the map' : s.move ? (s.source === 'maplink' ? 'Moved to your link' : 'Moved to Google’s location') : 'Pin left as it is')
+      : status === 'kept' ? 'Kept: ' + s.name
       : status === 'dropped' ? 'Dropped' + (s.dropReason && DROP_REASONS[s.dropReason] ? ': ' + DROP_REASONS[s.dropReason] : '') : '';
     card.classList.toggle('hidden',
-      (card.dataset.spot === 'true') !== (kindFilter === 'spot') ||
+      card.dataset.kind !== kindFilter ||
       (creatorFilter !== 'all' && card.dataset.creator !== creatorFilter) ||
       (statusFilter !== 'all' && status !== statusFilter));
   });
@@ -598,7 +685,7 @@ DATA.forEach((r, n) => grid.appendChild(buildCard(r, n)));
 (async () => {
   if (!GOOGLE_KEY) return;
   for (const card of document.querySelectorAll('.card')) {
-    if (!state[card.dataset.id] && card.dataset.spot !== 'true') await card.googleSearch();
+    if (!state[card.dataset.id] && card.dataset.kind === 'unsure') await card.googleSearch();
   }
 })();
 

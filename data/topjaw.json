@@ -571,9 +571,9 @@
  {
   "name": "Darjeeling Express",
   "location": "Soho",
-  "lat": 51.51268,
-  "lon": -0.13874,
-  "placeId": "590a56b6acc7",
+  "lat": 51.511297799999994,
+  "lon": -0.13279649999999998,
+  "placeId": "f78a045aa362",
   "mentions": [
    {
     "videoId": "AHUnqeRroYk",
@@ -1948,9 +1948,9 @@
  {
   "name": "No Drama",
   "location": "W3",
-  "lat": 51.51345,
-  "lon": -0.2488,
-  "placeId": "2162b6c1b930",
+  "lat": 51.5028886,
+  "lon": -0.22393659999999996,
+  "placeId": null,
   "mentions": [
    {
     "videoId": "SNbYvs7BVMI",
@@ -2001,33 +2001,6 @@
     ],
     "sponsored": false,
     "at": 255
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Publiq - South Kensington",
-  "location": "W8",
-  "lat": 51.5015,
-  "lon": -0.18426,
-  "placeId": "15cc7adbccf4",
-  "mentions": [
-   {
-    "videoId": "SNbYvs7BVMI",
-    "videoTitle": "London’s BEST BURGER ft @koreanenglishman | Three’s A Crowd",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Josh's favourite date night spot, featured as a 'Guilty Pleasure'. Topjaw tried cocktails and small sharing plates including mushroom dishes with sweet garlicky buttery sauce.",
-    "verdict": "Great cocktails and small sharing plates, hits all the spots.",
-    "dishes": [
-     "Cocktails",
-     "Mushroom Plates",
-     "Cheeky Small Sharing Plates"
-    ],
-    "sponsored": false,
-    "at": 558
    }
   ],
   "bestRating": null,
@@ -2131,7 +2104,7 @@
   "bestRatingOutOf": null
  },
  {
-  "name": "Creams",
+  "name": "Creams Cafe Kentish Town",
   "location": "Kentish Town",
   "lat": 51.54943,
   "lon": -0.14084,
@@ -2728,31 +2701,6 @@
   "bestRatingOutOf": null
  },
  {
-  "name": "Hawker House",
-  "location": "Shoreditch",
-  "lat": 51.53327,
-  "lon": -0.06178,
-  "placeId": "a250a12e8f61",
-  "mentions": [
-   {
-    "videoId": "FHMHe3YU4ng",
-    "videoTitle": "WE MANAGED 10 BURGERS AT NATIONAL BURGER DAY IN LONDON BY TOPJAW",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw attended National Burger Day at Hawker House and managed to try 10 different burgers from street food vendors competing at the event.",
-    "verdict": "Experienced 10 burgers at National Burger Day event.",
-    "dishes": [
-     "burger"
-    ],
-    "sponsored": false,
-    "at": null
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
   "name": "Radio Rooftop",
   "location": "Me Hotel, Strand, Aldwych",
   "lat": 51.51213,
@@ -3011,7 +2959,8 @@
      "burger"
     ],
     "sponsored": false,
-    "at": 160
+    "at": 160,
+    "moved": true
    }
   ],
   "bestRating": null,
@@ -3142,8 +3091,8 @@
  {
   "name": "Wingmans",
   "location": "Soho",
-  "lat": 51.51304,
-  "lon": -0.13149,
+  "lat": 51.5129939,
+  "lon": -0.1314572,
   "placeId": "cc9324723a98",
   "mentions": [
    {
@@ -3589,9 +3538,9 @@
  {
   "name": "From the Ashes BBQ",
   "location": "Hackney Wick",
-  "lat": 51.53263,
-  "lon": -0.08032,
-  "placeId": "e66102d4d6d2",
+  "lat": 51.5360639,
+  "lon": -0.057482599999999995,
+  "placeId": null,
   "mentions": [
    {
     "videoId": "qmWp2vR6fXw",
@@ -3939,31 +3888,6 @@
     ],
     "sponsored": false,
     "at": 167
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Agile Rabbit",
-  "location": "Brixton Village",
-  "lat": 51.46256,
-  "lon": -0.11237,
-  "placeId": "5ec18c544fcf",
-  "mentions": [
-   {
-    "videoId": "8qYmiZn4yAo",
-    "videoTitle": "LONDON CHEAP EATS - BRIXTON - Meals under £9",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw featured and ate ham, mushroom, ricotta & pesto calzone for £5 (small). Described as real good quality pizza place with generous portions.",
-    "verdict": "Fantastic value pizza with creamy ricotta and subtle pesto.",
-    "dishes": [
-     "Ham, mushroom, ricotta & pesto calzone"
-    ],
-    "sponsored": false,
-    "at": 137
    }
   ],
   "bestRating": null,
@@ -4632,31 +4556,6 @@
   "bestRatingOutOf": null
  },
  {
-  "name": "Bright",
-  "location": "Westgate Street",
-  "lat": 51.53763,
-  "lon": -0.05757,
-  "placeId": "b1f0c6ea1fa1",
-  "mentions": [
-   {
-    "videoId": "F5Ba0osd-NQ",
-    "videoTitle": "Are These East London's Best Take Away Spots? Bucket List Food.",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Topjaw ate the squid sandwich and praised how calamari was elevated. Noted it sells out by 2pm and said 'how can you complain' about the amount of squid packed into the bun.",
-    "verdict": "Excellent squid sandwich, sells out by 2pm daily.",
-    "dishes": [
-     "Squid sandwich (calamari)"
-    ],
-    "sponsored": false,
-    "at": 266
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
   "name": "Eld",
   "location": "Hackney Road",
   "lat": 51.5321836,
@@ -4762,32 +4661,6 @@
   "bestRatingOutOf": null
  },
  {
-  "name": "Mother Works",
-  "location": "Hackney Wick",
-  "lat": 51.544579,
-  "lon": -0.0256935,
-  "placeId": null,
-  "mentions": [
-   {
-    "videoId": "XVdcEzn_yK4",
-    "videoTitle": "We Think These Are The Best Vegan Restaurants In London, Do You?",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Started as a juice stall in Broadway Market, expanded to permanent space at Hackney Wick on the canal. Topjaw tried their vegan cheese toastty with smoky vegan cheese, tomato and pesto, and their red juice with carrot, apple, ginger and beetroot.",
-    "verdict": "Beautiful colour, aesthetically delicious, tastes great.",
-    "dishes": [
-     "Vegan cheese toasty",
-     "Red juice (carrot, apple, ginger, beetroot)"
-    ],
-    "sponsored": false,
-    "at": 36
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
   "name": "Club Mexicana",
   "location": "Kingly Court, Soho",
   "lat": 51.51718,
@@ -4847,7 +4720,7 @@
   "bestRatingOutOf": null
  },
  {
-  "name": "CookDaily",
+  "name": "King CookDaily",
   "location": "Boxpark, Shoreditch",
   "lat": 51.51732,
   "lon": -0.08235,
@@ -5105,32 +4978,6 @@
     ],
     "sponsored": false,
     "at": 313
-   }
-  ],
-  "bestRating": null,
-  "bestRatingOutOf": null
- },
- {
-  "name": "Cafe Van Gogh",
-  "location": "Brixton, South London",
-  "lat": 51.47759,
-  "lon": -0.11228,
-  "placeId": "564feeb88d07",
-  "mentions": [
-   {
-    "videoId": "soyqQluj32A",
-    "videoTitle": "THE BEST VEGAN RESTAURANTS IN LONDON",
-    "rating": null,
-    "rating_out_of": null,
-    "sentiment": "positive",
-    "notes": "Vegan café in Brixton (previously vegetarian, fully vegan as of last year). Non-profit - all profits go to community projects in the area. Topjaw tried their Sticky Seitan Ribs (seitan with homemade barbecue sauce), mac and cheese made with butternut squash and cashew cream.",
-    "verdict": "Excellent vegan ribs and mac and cheese; feels great supporting non-profit.",
-    "dishes": [
-     "Sticky Seitan Ribs (£10.95)",
-     "Mac and Cheese (butternut squash & cashew cream)"
-    ],
-    "sponsored": false,
-    "at": 375
    }
   ],
   "bestRating": null,
