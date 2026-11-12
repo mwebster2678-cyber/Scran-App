@@ -40,6 +40,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     googleMapsKey: 'AIzaSyAP7wkccKRKXO1DhpUbfghTcvW5pH5N7V8',
     storageKey: 'london-eats-ratings',
     bookmarkKey: 'london-eats-bookmarks',
+    accountKey: 'scran-synced-account', // whose account this browser's ratings and saved places came from
     // Approximate M25 polygon, clockwise from South Mimms
     m25Polygon: [
       [51.716, -0.198],
@@ -155,16 +156,17 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
     function getAll() { return _load(); }
 
-    // On sign-in: ratings made while signed out go up to the account, then this browser keeps
-    // everything on the account
-    async function syncFromCloud() {
+    // Ratings made while signed out go up to the account, then this browser keeps everything on
+    // the account. Once this browser has synced with the account (`fromSignedOut` false), the
+    // account is the truth, so a rating removed on another device goes here too.
+    async function syncFromCloud(fromSignedOut) {
       const user = typeof Auth !== 'undefined' && Auth.currentUser();
-      if (!user) return;
+      if (!user) return false;
       const { data, error } = await sbClient.from('ratings').select('*').eq('user_id', user.id);
-      if (error || !data) return;
+      if (error || !data) return false;
       const local = _load();
       const onAccount = new Set(data.map(r => getKey(r.osm_type, r.osm_id)));
-      const signedOut = Object.entries(local).filter(([k, e]) => !onAccount.has(k) && e.rating != null);
+      const signedOut = fromSignedOut ? Object.entries(local).filter(([k, e]) => !onAccount.has(k) && e.rating != null) : [];
       if (signedOut.length) {
         const { error: upErr } = await sbClient.from('ratings').upsert(signedOut.map(([k, e]) => {
           const [type, id] = splitKey(k);
@@ -186,6 +188,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         };
       });
       _save(stored);
+      return true;
     }
 
     // Signing out leaves the next person on this browser with an empty list (yours stay on your account)
@@ -233,14 +236,14 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     function getAll() { return _load(); }
 
     // Same as Storage.syncFromCloud: places saved while signed out join the account's
-    async function syncFromCloud() {
+    async function syncFromCloud(fromSignedOut) {
       const user = _user();
-      if (!user) return;
+      if (!user) return false;
       const { data, error } = await sbClient.from('bookmarks').select('*').eq('user_id', user.id);
-      if (error || !data) return;
+      if (error || !data) return false;
       const local = _load();
       const onAccount = new Set(data.map(b => key(b.place_type, b.place_id)));
-      const signedOut = Object.entries(local).filter(([k]) => !onAccount.has(k));
+      const signedOut = fromSignedOut ? Object.entries(local).filter(([k]) => !onAccount.has(k)) : [];
       if (signedOut.length) {
         await sbClient.from('bookmarks').upsert(signedOut.map(([k, b]) => {
           const [type, id] = splitKey(k);
@@ -254,6 +257,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
           timestamp: new Date(b.created_at).getTime() };
       });
       _save(stored);
+      return true;
     }
 
     function clear() { _save({}); }
@@ -1815,11 +1819,20 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     }
 
     async function _accountChanged(signedOut) {
+      let owner = null;
+      try { owner = localStorage.getItem(CONFIG.accountKey); } catch {}
       if (signedOut) {
         Storage.clear();
         BookmarkStorage.clear();
+        try { localStorage.removeItem(CONFIG.accountKey); } catch {}
       } else if (_currentUser) {
-        await Promise.all([Storage.syncFromCloud(), BookmarkStorage.syncFromCloud()]);
+        // Another account's leftovers are never uploaded to this one
+        const fromSignedOut = !owner;
+        if (owner && owner !== _currentUser.id) { Storage.clear(); BookmarkStorage.clear(); }
+        const synced = await Promise.all([Storage.syncFromCloud(fromSignedOut), BookmarkStorage.syncFromCloud(fromSignedOut)]);
+        if (synced.every(Boolean)) {
+          try { localStorage.setItem(CONFIG.accountKey, _currentUser.id); } catch {}
+        }
       }
       MyListManager.refresh();
       Views.reload();
