@@ -1171,6 +1171,84 @@ html, body {
 #following-empty[hidden] { display: none; }
 #following-empty strong { display: block; color: var(--text); margin-bottom: 2px; }
 
+/* ── People: photos, profiles and what people you follow said (Social in app.js) ── */
+.person-initial {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+}
+
+.header-avatar { width: 28px; height: 28px; border-radius: 50%; object-fit: cover; display: block; }
+.header-avatar.person-initial { font-size: 0.85rem; }
+
+.profile-who { display: flex; align-items: center; gap: 12px; min-width: 0; flex: 1; }
+.profile-avatar { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; display: block; }
+.profile-follow-counts { font-size: 0.75rem; color: var(--text-muted); margin-top: 3px; }
+.profile-follow-counts:empty { display: none; }
+#profile-follow-btn { margin-right: 10px; }
+#profile-follow-btn[hidden] { display: none; }
+
+.sheet-btn.follow { background: var(--primary); border-color: var(--primary); color: #fff; }
+.sheet-btn.follow:hover { background: var(--accent); }
+.sheet-row[data-person] .sheet-row-text { cursor: pointer; }
+.sheet-row[data-person] .sheet-row-sub { color: var(--primary); }
+
+#people-search {
+  width: 100%;
+  margin: 6px 0 4px;
+  padding: 9px 12px;
+  border: 1.5px solid rgba(0,0,0,0.12);
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 0.88rem;
+  background: #fff;
+  outline: none;
+}
+#people-search:focus { border-color: var(--primary); }
+
+#panel-people:empty { display: none; }
+.people-verdicts { margin: -4px 0 16px; }
+.people-verdicts-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+.person-verdict {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+.person-verdict-avatar { width: 32px; height: 32px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+.person-verdict-text { flex: 1; min-width: 0; }
+.person-verdict-name { font-weight: 700; font-size: 0.88rem; }
+.person-verdict-note { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; line-height: 1.4; }
+
+/* "+2" when several people you follow rated the same place */
+.pin-people-count {
+  position: absolute;
+  bottom: 6px;
+  right: -9px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1;
+  padding: 2px 3px;
+  border-radius: 4px;
+  z-index: 2;
+}
+
 /* ── Phones ── */
 @media (max-width: 700px) {
   #zoom-controls, #user-name, #signout-btn { display: none; }

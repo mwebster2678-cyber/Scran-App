@@ -10,6 +10,18 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
   }
 
+  // Saving to or loading from your account failed: say so, rather than quietly keeping it only here
+  function cloudError(error) {
+    console.warn('[SCRAN] account sync failed:', error);
+    UI.showError(`Couldn’t sync with your account: ${error.message}`);
+  }
+
+  // 'place/abc' → ['place', 'abc'] (Storage and BookmarkStorage keys)
+  function splitKey(key) {
+    const i = key.indexOf('/');
+    return [key.slice(0, i), key.slice(i + 1)];
+  }
+
   function normalizeRating(rating, outOf) {
     if (rating == null || outOf == null || outOf <= 0) return null;
     return parseFloat(((rating / outOf) * 10).toFixed(1));
@@ -100,7 +112,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
           rating,
           note: resolvedNote,
         }, { onConflict: 'user_id,osm_type,osm_id' }).then(({ error }) => {
-          if (error) console.warn('Cloud sync failed:', error.message);
+          if (error) cloudError(error);
         });
       }
     }
@@ -117,7 +129,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
             .eq('user_id', user.id)
             .eq('osm_type', type)
             .eq('osm_id', String(id))
-            .then(({ error }) => { if (error) console.warn('Cloud sync failed:', error.message); });
+            .then(({ error }) => { if (error) cloudError(error); });
         }
       }
     }
@@ -133,7 +145,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
           .eq('user_id', user.id)
           .eq('osm_type', type)
           .eq('osm_id', String(id))
-          .then(({ error }) => { if (error) console.warn('Cloud sync failed:', error.message); });
+          .then(({ error }) => { if (error) cloudError(error); });
       }
     }
 
@@ -143,12 +155,25 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
     function getAll() { return _load(); }
 
+    // On sign-in: ratings made while signed out go up to the account, then this browser keeps
+    // everything on the account
     async function syncFromCloud() {
       const user = typeof Auth !== 'undefined' && Auth.currentUser();
       if (!user) return;
       const { data, error } = await sbClient.from('ratings').select('*').eq('user_id', user.id);
       if (error || !data) return;
-      const stored = {};
+      const local = _load();
+      const onAccount = new Set(data.map(r => getKey(r.osm_type, r.osm_id)));
+      const signedOut = Object.entries(local).filter(([k, e]) => !onAccount.has(k) && e.rating != null);
+      if (signedOut.length) {
+        const { error: upErr } = await sbClient.from('ratings').upsert(signedOut.map(([k, e]) => {
+          const [type, id] = splitKey(k);
+          return { user_id: user.id, osm_type: type, osm_id: id, restaurant_name: e.name, lat: e.lat, lon: e.lon,
+            cuisine: e.cuisine || [], rating: e.rating, note: e.note || '' };
+        }), { onConflict: 'user_id,osm_type,osm_id' });
+        if (upErr) cloudError(upErr);
+      }
+      const stored = Object.fromEntries(signedOut);
       data.forEach(r => {
         stored[getKey(r.osm_type, r.osm_id)] = {
           rating: r.rating,
@@ -163,7 +188,10 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       _save(stored);
     }
 
-    return { get, set, setNote, remove, count, getKey, getAll, syncFromCloud };
+    // Signing out leaves the next person on this browser with an empty list (yours stay on your account)
+    function clear() { _save({}); }
+
+    return { get, set, setNote, remove, count, getKey, getAll, syncFromCloud, clear };
   })();
 
   // ─────────────────────────────────────────
@@ -180,18 +208,57 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     }
     function key(type, id) { return `${type}/${id}`; }
     function get(type, id) { return !!_load()[key(type, id)]; }
+    const _user = () => typeof Auth !== 'undefined' && Auth.currentUser();
+    const _warn = ({ error }) => { if (error) cloudError(error); };
     function set(type, id, name, lat, lon, cuisine) {
       const data = _load();
       data[key(type, id)] = { name, lat, lon, cuisine, timestamp: Date.now() };
       _save(data);
+      const user = _user();
+      if (user) {
+        sbClient.from('bookmarks').upsert({ user_id: user.id, place_type: type, place_id: String(id),
+          name, lat, lon, cuisine: cuisine || [] }).then(_warn);
+      }
     }
     function remove(type, id) {
       const data = _load();
       delete data[key(type, id)];
       _save(data);
+      const user = _user();
+      if (user) {
+        sbClient.from('bookmarks').delete()
+          .eq('user_id', user.id).eq('place_type', type).eq('place_id', String(id)).then(_warn);
+      }
     }
     function getAll() { return _load(); }
-    return { get, set, remove, getAll, key };
+
+    // Same as Storage.syncFromCloud: places saved while signed out join the account's
+    async function syncFromCloud() {
+      const user = _user();
+      if (!user) return;
+      const { data, error } = await sbClient.from('bookmarks').select('*').eq('user_id', user.id);
+      if (error || !data) return;
+      const local = _load();
+      const onAccount = new Set(data.map(b => key(b.place_type, b.place_id)));
+      const signedOut = Object.entries(local).filter(([k]) => !onAccount.has(k));
+      if (signedOut.length) {
+        await sbClient.from('bookmarks').upsert(signedOut.map(([k, b]) => {
+          const [type, id] = splitKey(k);
+          return { user_id: user.id, place_type: type, place_id: id, name: b.name, lat: b.lat, lon: b.lon,
+            cuisine: b.cuisine || [] };
+        })).then(_warn);
+      }
+      const stored = Object.fromEntries(signedOut);
+      data.forEach(b => {
+        stored[key(b.place_type, b.place_id)] = { name: b.name, lat: b.lat, lon: b.lon, cuisine: b.cuisine || [],
+          timestamp: new Date(b.created_at).getTime() };
+      });
+      _save(stored);
+    }
+
+    function clear() { _save({}); }
+
+    return { get, set, remove, getAll, key, syncFromCloud, clear };
   })();
 
   // ─────────────────────────────────────────
@@ -540,6 +607,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     const addressEl   = document.getElementById('panel-address');
     const cuisineEl   = document.getElementById('panel-cuisine');
     const creatorsEl  = document.getElementById('panel-creators');
+    const peopleEl    = document.getElementById('panel-people');
     const btnsEl      = document.getElementById('rating-buttons');
     const closeBtn    = document.getElementById('panel-close');
     const clearBtn    = document.getElementById('clear-rating-btn');
@@ -600,6 +668,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       CreatorPicks.load().then(() => {
         if (_current?.id === id) creatorsEl.innerHTML = creatorVerdictsHtml(CreatorPicks.forPlace(id));
       });
+      peopleEl.innerHTML = peopleVerdictsHtml(PeopleLayer.forPlace(type, id));
       GooglePlaceInfo.show({ key: `${type}/${id}`, name, lat, lon });
 
       panel.classList.remove('hidden');
@@ -615,6 +684,13 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     }
 
     closeBtn.addEventListener('click', close);
+
+    peopleEl.addEventListener('click', (e) => {
+      const row = e.target.closest('[data-person]');
+      if (!row) return;
+      close(); // the profile opens underneath this card otherwise
+      ProfilePanel.open(row.dataset.person);
+    });
 
     noteEl.addEventListener('input', () => {
       if (!_current) return;
@@ -1230,18 +1306,184 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
   })();
 
   // ─────────────────────────────────────────
-  // 11b. VIEWS (Following / Explore bottom nav and its sheet)
+  // 11b. SOCIAL (profiles and follows in Supabase)
   // ─────────────────────────────────────────
-  // Explore shows the creators you switch on in its sheet. Following shows what's in FOLLOWING:
-  // your own ratings and saved places, and the creators you follow; friends' reviews come later.
+  // What the Following view shows: your own ratings and saved places, the people you follow
+  // and the creators you follow. Signed out, followed creators are kept in this browser only.
   const FOLLOWING = {
     me: true,     // your ratings and saved places (MyListManager)
-    friends: [],  // to come: friends' reviews
-    people: [],   // creator keys you follow, e.g. 'tod' (saved in this browser for now)
+    people: [],   // profiles you follow: [{ id, name, avatar_url }]
+    creators: [], // creator keys you follow, e.g. 'tod'
   };
 
+  const Social = (() => {
+    const LOCAL_CREATORS = 'scran-following';
+    const PROFILE = 'id, name, avatar_url';
+    const _user = () => Auth.currentUser();
+    const _warn = ({ error }) => { if (error) cloudError(error); };
+
+    function _localCreators() {
+      try { return JSON.parse(localStorage.getItem(LOCAL_CREATORS)) || []; } catch { return []; }
+    }
+    function _saveLocalCreators() {
+      try { localStorage.setItem(LOCAL_CREATORS, JSON.stringify(FOLLOWING.creators)); } catch {}
+    }
+
+    // Who you follow. Creators followed while signed out join the account at sign-in.
+    async function load() {
+      const user = _user();
+      const local = _localCreators().filter(k => CREATORS.some(c => c.key === k));
+      if (!user) {
+        FOLLOWING.people = [];
+        FOLLOWING.creators = local;
+        return;
+      }
+      const { data, error } = await sbClient.from('follows')
+        .select(`creator_key, followee:profiles!follows_followee_id_fkey(${PROFILE})`)
+        .eq('follower_id', user.id).order('created_at');
+      if (error) { cloudError(error); return; }
+      const creators = data.filter(f => f.creator_key).map(f => f.creator_key);
+      const newOnes = local.filter(k => !creators.includes(k));
+      if (newOnes.length) {
+        await sbClient.from('follows').insert(newOnes.map(k => ({ follower_id: user.id, creator_key: k }))).then(_warn);
+      }
+      FOLLOWING.creators = [...creators, ...newOnes].filter(k => CREATORS.some(c => c.key === k));
+      FOLLOWING.people = data.filter(f => f.followee).map(f => f.followee);
+      try { localStorage.removeItem(LOCAL_CREATORS); } catch {}
+    }
+
+    async function setCreator(key, follow) {
+      FOLLOWING.creators = FOLLOWING.creators.filter(k => k !== key).concat(follow ? [key] : []);
+      const user = _user();
+      if (!user) return _saveLocalCreators();
+      const q = sbClient.from('follows');
+      await (follow ? q.insert({ follower_id: user.id, creator_key: key })
+                    : q.delete().eq('follower_id', user.id).eq('creator_key', key)).then(_warn);
+    }
+
+    // `person` is a profile ({ id, name, avatar_url })
+    async function setPerson(person, follow) {
+      const user = _user();
+      if (!user) { UI.showError('Sign in to follow people.'); return false; }
+      FOLLOWING.people = FOLLOWING.people.filter(p => p.id !== person.id).concat(follow ? [person] : []);
+      const q = sbClient.from('follows');
+      await (follow ? q.insert({ follower_id: user.id, followee_id: person.id })
+                    : q.delete().eq('follower_id', user.id).eq('followee_id', person.id)).then(_warn);
+      return true;
+    }
+
+    const isFollowing = id => FOLLOWING.people.some(p => p.id === id);
+
+    // Other people on SCRAN, newest first, that you don't follow yet; `text` narrows by name
+    async function findPeople(text = '') {
+      let q = sbClient.from('profiles').select(PROFILE).order('created_at', { ascending: false }).limit(10);
+      if (text) q = q.ilike('name', `%${text.replace(/[%_,()]/g, ' ')}%`);
+      const { data } = await q;
+      const me = _user()?.id;
+      return (data || []).filter(p => p.id !== me && (text || !isFollowing(p.id)));
+    }
+
+    async function profile(id) {
+      const [{ data: person }, { data: ratings }, followers, following] = await Promise.all([
+        sbClient.from('profiles').select(PROFILE).eq('id', id).maybeSingle(),
+        sbClient.from('ratings').select('osm_type, osm_id, restaurant_name, lat, lon, cuisine, rating, note').eq('user_id', id),
+        sbClient.from('follows').select('*', { count: 'exact', head: true }).eq('followee_id', id),
+        sbClient.from('follows').select('*', { count: 'exact', head: true }).eq('follower_id', id).not('followee_id', 'is', null),
+      ]);
+      return { person, ratings: ratings || [], followers: followers.count || 0, following: following.count || 0 };
+    }
+
+    return { load, setCreator, setPerson, isFollowing, findPeople, profile };
+  })();
+
+  // Small round photo for a person, or their initial if they have none
+  function personAvatar(p, cls) {
+    return p.avatar_url
+      ? `<img class="${cls}" src="${escapeHtml(p.avatar_url)}" alt="" referrerpolicy="no-referrer">`
+      : `<div class="${cls} person-initial">${escapeHtml((p.name || '?')[0].toUpperCase())}</div>`;
+  }
+
+  // ─────────────────────────────────────────
+  // 11c. PEOPLE LAYER (ratings by the people you follow)
+  // ─────────────────────────────────────────
+  const PeopleLayer = (() => {
+    let _map     = null;
+    let _active  = false;
+    let _byPlace = new Map(); // 'type/id' → [{ person, rating, note, name, lat, lon, cuisine, type, id }]
+    let _markers = [];
+
+    async function load() {
+      const people = new Map(FOLLOWING.people.map(p => [p.id, p]));
+      _byPlace = new Map();
+      if (people.size) {
+        const { data, error } = await sbClient.from('ratings')
+          .select('user_id, osm_type, osm_id, restaurant_name, lat, lon, cuisine, rating, note')
+          .in('user_id', [...people.keys()]);
+        if (error) cloudError(error);
+        (data || []).forEach(r => {
+          if (!r.lat || !r.lon) return;
+          const key = `${r.osm_type}/${r.osm_id}`;
+          if (!_byPlace.has(key)) _byPlace.set(key, []);
+          _byPlace.get(key).push({ person: people.get(r.user_id), rating: r.rating, note: r.note,
+            name: r.restaurant_name, lat: r.lat, lon: r.lon, cuisine: r.cuisine || [], type: r.osm_type, id: r.osm_id });
+        });
+      }
+      _draw();
+    }
+
+    function _icon(entries) {
+      const first = entries[0];
+      const more = entries.length > 1 ? `<span class="pin-people-count">+${entries.length - 1}</span>` : '';
+      return L.divIcon({
+        className: '',
+        html: `<div class="map-pin pin-creator pin-rated" style="--creator-colour:var(--primary)">${personAvatar(first.person, 'pin-avatar')}<span class="pin-score-badge">${first.rating}</span>${more}</div>`,
+        iconSize: [34, 44], iconAnchor: [17, 44], popupAnchor: [0, -46],
+      });
+    }
+
+    function _draw() {
+      _markers.forEach(m => m.remove());
+      _markers = [];
+      if (!_active || !_map) return;
+      _byPlace.forEach(entries => {
+        const { type, id, name, lat, lon, cuisine } = entries[0];
+        const marker = L.marker([lat, lon], { icon: _icon(entries), zIndexOffset: 515 });
+        marker.on('click', (e) => {
+          L.DomEvent.stopPropagation(e);
+          const place = type === PLACE_TYPE ? Places.get(id) : null;
+          RatingPanel.open(place ? placeRef(place) : { type, id, name, cuisine, lat, lon });
+        });
+        marker.addTo(_map);
+        _markers.push(marker);
+      });
+    }
+
+    function setActive(active) { _active = active; _draw(); }
+    function forPlace(type, id) { return _byPlace.get(`${type}/${id}`) || []; }
+    function init(map) { _map = map; }
+
+    return { init, load, setActive, forPlace };
+  })();
+
+  // What the people you follow said, on the place card
+  function peopleVerdictsHtml(entries) {
+    if (!entries.length) return '';
+    return `<div class="people-verdicts"><div class="people-verdicts-title">People you follow</div>${entries.map(e => `
+      <div class="person-verdict" data-person="${e.person.id}">
+        ${personAvatar(e.person, 'person-verdict-avatar')}
+        <div class="person-verdict-text">
+          <div class="person-verdict-name">${escapeHtml(e.person.name)}</div>
+          ${e.note ? `<div class="person-verdict-note">${escapeHtml(e.note)}</div>` : ''}
+        </div>
+        <div class="profile-score ${e.rating >= 7 ? 'score-high' : e.rating >= 4 ? 'score-mid' : 'score-low'}">${e.rating}</div>
+      </div>`).join('')}</div>`;
+  }
+
+  // ─────────────────────────────────────────
+  // 11d. VIEWS (Following / Explore bottom nav and its sheet)
+  // ─────────────────────────────────────────
+  // Explore shows the creators you switch on in its sheet; Following shows what's in FOLLOWING.
   const Views = (() => {
-    const FOLLOW_KEY = 'scran-following';
     const buttons = document.querySelectorAll('#bottom-nav button');
     const emptyEl = document.getElementById('following-empty');
     const sheet   = document.getElementById('sheet');
@@ -1252,31 +1494,22 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     let _view      = 'explore';
     let _exploreOn = new Set(CREATORS.map(c => c.key)); // creators switched on in Explore
     let _counts    = {};                                // picks per creator, once loaded
-
-    function _savePeople() {
-      try { localStorage.setItem(FOLLOW_KEY, JSON.stringify(FOLLOWING.people)); } catch {}
-    }
-
-    function _loadPeople() {
-      try {
-        const keys = JSON.parse(localStorage.getItem(FOLLOW_KEY)) || [];
-        FOLLOWING.people = keys.filter(k => CREATORS.some(c => c.key === k));
-      } catch {}
-    }
+    let _suggested = null;                              // people to follow, once loaded
+    let _ready     = false;
 
     function _mineCount() {
       return Storage.count() + Object.keys(BookmarkStorage.getAll()).length;
     }
 
     function _followingIsEmpty() {
-      return !(FOLLOWING.me && _mineCount()) && !FOLLOWING.friends.length && !FOLLOWING.people.length;
+      return !(FOLLOWING.me && _mineCount()) && !FOLLOWING.people.length && !FOLLOWING.creators.length;
     }
 
     const _switch = (on, attrs) =>
       `<button class="sheet-switch${on ? ' on' : ''}" role="switch" aria-checked="${on}" ${attrs}></button>`;
 
-    function _row({ avatar, colour, name, sub }, actions) {
-      return `<div class="sheet-row" style="--creator-colour:${colour}">
+    function _row({ avatar, colour, name, sub, person }, actions) {
+      return `<div class="sheet-row" style="--creator-colour:${colour}"${person ? ` data-person="${person}"` : ''}>
         ${avatar}
         <div class="sheet-row-text">
           <div class="sheet-row-name">${escapeHtml(name)}</div>
@@ -1292,78 +1525,127 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         name: c.name, sub: n == null ? '' : `${n} picks` }, actions);
     }
 
+    function _personRow(p) {
+      const followed = Social.isFollowing(p.id);
+      return _row({ avatar: personAvatar(p, 'sheet-avatar'), colour: 'var(--primary)', name: p.name,
+        sub: 'View profile', person: p.id },
+        `<button class="sheet-btn${followed ? '' : ' follow'}" data-person-follow="${p.id}">${followed ? 'Unfollow' : 'Follow'}</button>`);
+    }
+
+    // People shown in the sheet, so a Follow button can find the profile it belongs to
+    const _shown = new Map();
+    const _people = list => list.map(p => { _shown.set(p.id, p); return _personRow(p); }).join('');
+
     function _render() {
       if (_view === 'explore') {
         body.innerHTML = '<div class="sheet-title">Creators</div>' + CREATORS.map(c => {
-          const followed = FOLLOWING.people.includes(c.key);
+          const followed = FOLLOWING.creators.includes(c.key);
           return _creatorRow(c,
             `<button class="sheet-btn${followed ? ' followed' : ''}" data-follow="${c.key}">${followed ? 'Following' : 'Follow'}</button>` +
             _switch(_exploreOn.has(c.key), `data-creator="${c.key}" aria-label="Show ${escapeHtml(c.name)} on the map"`));
         }).join('');
         return;
       }
-      const people = CREATORS.filter(c => FOLLOWING.people.includes(c.key));
-      const mine = _mineCount();
-      body.innerHTML = '<div class="sheet-title">Following</div>'
+      const signedIn = !!Auth.currentUser();
+      const creators = CREATORS.filter(c => FOLLOWING.creators.includes(c.key));
+      body.innerHTML = '<div class="sheet-title">You</div>'
         + _row({ avatar: '<div class="sheet-avatar sheet-avatar-me">&#x2605;</div>', colour: 'var(--primary)',
-            name: 'You', sub: `${mine} rated or saved` },
+            name: 'Your places', sub: `${_mineCount()} rated or saved` },
             _switch(FOLLOWING.me, 'data-me aria-label="Show your places on the map"'))
-        + people.map(c => _creatorRow(c, `<button class="sheet-btn" data-unfollow="${c.key}">Unfollow</button>`)).join('')
-        + (people.length ? '' : '<div class="sheet-empty">You&rsquo;re not following anyone yet. Tap Follow next to a creator in Explore.</div>')
-        + '<div class="sheet-title">Suggested</div>'
-        + '<div class="sheet-empty">Suggestions will show here once you can follow friends and other people.</div>';
+        + '<div class="sheet-title">People</div>'
+        + (signedIn
+          ? (_people(FOLLOWING.people) || '<div class="sheet-empty">You&rsquo;re not following anyone yet.</div>')
+          : '<div class="sheet-empty">Sign in to follow people and see their ratings on the map.</div>')
+        + '<div class="sheet-title">Creators</div>'
+        + (creators.map(c => _creatorRow(c, `<button class="sheet-btn" data-follow="${c.key}">Unfollow</button>`)).join('')
+          || '<div class="sheet-empty">Tap Follow next to a creator in Explore.</div>')
+        + (signedIn ? `<div class="sheet-title">Find people</div>
+            <input id="people-search" type="search" placeholder="Search by name" autocomplete="off">
+            <div id="people-results"></div>
+            <div class="sheet-title">Suggested</div>
+            <div id="people-suggested">${_suggested == null ? '<div class="sheet-empty">Loading…</div>'
+              : _people(_suggested.filter(p => !Social.isFollowing(p.id)))
+                || '<div class="sheet-empty">No suggestions yet: you&rsquo;ll see people here as they join SCRAN.</div>'}</div>` : '');
+      if (signedIn && _suggested == null) {
+        Social.findPeople().then(list => { _suggested = list; if (_view === 'following') _render(); });
+      }
     }
 
     // Switch the map's layers to match the current view, then redraw the sheet
-    function _apply() {
+    function refresh() {
+      if (!_ready) return;
       const following = _view === 'following';
       buttons.forEach(b => b.classList.toggle('active', b.dataset.view === _view));
       _layers.forEach(layer => {
-        const on = following ? FOLLOWING.people.includes(layer.key) : _exploreOn.has(layer.key);
+        const on = following ? FOLLOWING.creators.includes(layer.key) : _exploreOn.has(layer.key);
         if (on !== layer.isActive()) layer.setActive(on);
       });
       MyListManager.setActive(following && FOLLOWING.me);
+      PeopleLayer.setActive(following);
       emptyEl.hidden = !(following && !sheet.classList.contains('open') && _followingIsEmpty());
       _render();
     }
 
-    function show(view) { _view = view; _apply(); }
+    function show(view) { _view = view; refresh(); }
 
     function setSheet(open) {
       if (open === sheet.classList.contains('open')) return;
       sheet.classList.toggle('open', open);
       toggle.setAttribute('aria-expanded', open);
-      _apply();
+      refresh();
     }
 
-    function _toggleIn(list, key) {
-      const i = list.indexOf(key);
-      i >= 0 ? list.splice(i, 1) : list.push(key);
+    // After sign-in or sign-out: reload who you follow and their ratings
+    async function reload() {
+      _suggested = null;
+      await Social.load();
+      await PeopleLayer.load();
+      refresh();
     }
+
+    let _searchTimer = null;
 
     function init(creatorLayers) {
       _layers = creatorLayers;
-      _loadPeople();
+      _ready = true;
       buttons.forEach(b => b.addEventListener('click', () => show(b.dataset.view)));
       toggle.addEventListener('click', () => setSheet(!sheet.classList.contains('open')));
-      body.addEventListener('click', (e) => {
+      body.addEventListener('click', async (e) => {
         const b = e.target.closest('button');
+        const row = e.target.closest('[data-person]');
+        if (!b && row) { ProfilePanel.open(row.dataset.person); return; }
         if (!b) return;
-        const { creator, follow, unfollow } = b.dataset;
+        const { creator, follow, personFollow } = b.dataset;
         if (creator) _exploreOn.has(creator) ? _exploreOn.delete(creator) : _exploreOn.add(creator);
-        else if (follow) { _toggleIn(FOLLOWING.people, follow); _savePeople(); }
-        else if (unfollow) { _toggleIn(FOLLOWING.people, unfollow); _savePeople(); }
+        else if (follow) await Social.setCreator(follow, !FOLLOWING.creators.includes(follow));
         else if ('me' in b.dataset) FOLLOWING.me = !FOLLOWING.me;
-        _apply();
+        else if (personFollow) {
+          const person = _shown.get(personFollow);
+          if (!await Social.setPerson(person, !Social.isFollowing(person.id))) return;
+          await PeopleLayer.load();
+        }
+        refresh();
+      });
+      body.addEventListener('input', (e) => {
+        if (e.target.id !== 'people-search') return;
+        clearTimeout(_searchTimer);
+        const text = e.target.value.trim();
+        _searchTimer = setTimeout(async () => {
+          const results = document.getElementById('people-results');
+          if (!results) return;
+          if (!text) { results.innerHTML = ''; return; }
+          const list = await Social.findPeople(text);
+          results.innerHTML = _people(list) || '<div class="sheet-empty">No one by that name yet.</div>';
+        }, 300);
       });
       CreatorPicks.load().then(picks => {
         _counts = Object.fromEntries(Object.entries(picks).map(([k, list]) => [k, list.length]));
         _render();
       });
-      _render();
+      reload();
     }
 
-    return { init, show, setSheet };
+    return { init, show, setSheet, refresh, reload };
   })();
 
   // ─────────────────────────────────────────
@@ -1465,6 +1747,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       const creatorPins = creatorPinGroup().addTo(_map);
       creatorLayers.forEach(layer => layer.init(creatorPins, _showPlacesInView));
       MyListManager.init(_map);
+      PeopleLayer.init(_map);
       Views.init(creatorLayers);
       UI.updateStatsCount();
 
@@ -1520,6 +1803,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       if (session) {
         const meta = session.user.user_metadata;
         userName.textContent = meta.full_name || meta.name || session.user.email;
+        userAvatar.innerHTML = personAvatar({ name: userName.textContent, avatar_url: meta.avatar_url || meta.picture }, 'header-avatar');
         signinBtn.style.display = 'none';
         userInfo.style.display  = 'flex';
         _currentUser = session.user;
@@ -1530,13 +1814,30 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       }
     }
 
+    async function _accountChanged(signedOut) {
+      if (signedOut) {
+        Storage.clear();
+        BookmarkStorage.clear();
+      } else if (_currentUser) {
+        await Promise.all([Storage.syncFromCloud(), BookmarkStorage.syncFromCloud()]);
+      }
+      MyListManager.refresh();
+      Views.reload();
+    }
+
     async function init() {
       const { data: { session } } = await sbClient.auth.getSession();
       _setUI(session);
 
+      // Supabase also reports token refreshes here; only a change of account needs a sync
+      let syncedFor;
       sbClient.auth.onAuthStateChange((_event, session) => {
         _setUI(session);
-        if (session) Storage.syncFromCloud();
+        const id = session?.user.id || null;
+        if (id === syncedFor) return;
+        const signedOut = !!syncedFor && !id;
+        syncedFor = id;
+        setTimeout(() => _accountChanged(signedOut)); // Supabase asks for no awaits inside this callback
       });
 
       signinBtn.addEventListener('click', () => {
@@ -1560,11 +1861,15 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
   Auth.init();
   App.init();
 
-  // ── Profile panel ──
-  (function () {
+  // ── Profile panel: your ratings, or another person's (ProfilePanel.open(id)) ──
+  const ProfilePanel = (() => {
     const panel         = document.getElementById('profile-panel');
     const btn           = document.getElementById('profile-btn');
     const closeBtn      = document.getElementById('profile-close');
+    const titleEl       = document.getElementById('profile-title');
+    const avatarEl      = document.getElementById('profile-avatar');
+    const countsEl      = document.getElementById('profile-follow-counts');
+    const followBtn     = document.getElementById('profile-follow-btn');
     const totalEl       = document.getElementById('profile-total');
     const avgEl         = document.getElementById('profile-avg');
     const topEl         = document.getElementById('profile-top');
@@ -1573,6 +1878,8 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     const userEl        = document.getElementById('profile-user');
     const emailEl       = document.getElementById('profile-email');
     const signoutBtn    = document.getElementById('profile-signout-btn');
+
+    let _person = null; // the profile on show when it isn't yours
 
     signoutBtn.addEventListener('click', () => {
       sbClient.auth.signOut();
@@ -1585,17 +1892,8 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     const scoreClass = score =>
       score >= 7 ? 'score-high' : score >= 4 ? 'score-mid' : 'score-low';
 
-    function build() {
-      const user = typeof Auth !== 'undefined' && Auth.currentUser();
-      if (user) {
-        emailEl.textContent = user.email || '';
-        userEl.style.display = 'flex';
-      } else {
-        userEl.style.display = 'none';
-      }
-
-      const all = Storage.getAll();
-      const entries = Object.values(all).filter(e => e.rating != null);
+    // entries: [{ name, rating }]
+    function _build(entries) {
       const n = entries.length;
 
       totalEl.textContent = n;
@@ -1641,12 +1939,66 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         </div>`).join('');
     }
 
-    btn.addEventListener('click', () => {
-      build();
+    const _counts = (followers, following) =>
+      `${followers} follower${followers === 1 ? '' : 's'} · ${following} following`;
+
+    function _showFollow() {
+      followBtn.hidden = !_person;
+      if (!_person) return;
+      const followed = Social.isFollowing(_person.id);
+      followBtn.textContent = followed ? 'Unfollow' : 'Follow';
+      followBtn.classList.toggle('follow', !followed);
+    }
+
+    // No id, or your own: your ratings from this browser
+    async function open(id = null) {
+      const user = Auth.currentUser();
+      const mine = !id || id === user?.id;
+      _person = null;
+      countsEl.textContent = '';
+      if (mine) {
+        const meta = user?.user_metadata || {};
+        titleEl.textContent = 'My Ratings';
+        avatarEl.innerHTML = user ? personAvatar({ name: meta.full_name || meta.name, avatar_url: meta.avatar_url || meta.picture }, 'profile-avatar') : '';
+        emailEl.textContent = user?.email || '';
+        userEl.style.display = user ? 'flex' : 'none';
+        _build(Object.values(Storage.getAll()).filter(e => e.rating != null));
+      } else {
+        titleEl.textContent = '';
+        avatarEl.innerHTML = '';
+        userEl.style.display = 'none';
+        _build([]);
+      }
+      _showFollow();
       panel.classList.add('open');
+
+      if (mine && !user) return;
+      const p = await Social.profile(mine ? user.id : id);
+      countsEl.textContent = _counts(p.followers, p.following);
+      if (mine || !p.person) return;
+      _person = p.person;
+      titleEl.textContent = p.person.name;
+      avatarEl.innerHTML = personAvatar(p.person, 'profile-avatar');
+      _build(p.ratings.map(r => ({ name: r.restaurant_name, rating: r.rating })));
+      _showFollow();
+    }
+
+    followBtn.addEventListener('click', async () => {
+      if (!_person) return;
+      const follow = !Social.isFollowing(_person.id);
+      if (!await Social.setPerson(_person, follow)) return;
+      _showFollow();
+      const p = await Social.profile(_person.id);
+      countsEl.textContent = _counts(p.followers, p.following);
+      await PeopleLayer.load();
+      Views.refresh();
     });
 
+    btn.addEventListener('click', () => open());
+
     closeBtn.addEventListener('click', () => panel.classList.remove('open'));
+
+    return { open };
   })();
 
   // ── Collapsible filter column: starts closed on phones, where it would cover the map ──
