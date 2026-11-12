@@ -671,7 +671,6 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
   // 8. MY RESTAURANTS MANAGER
   // ─────────────────────────────────────────
   const MyListManager = (() => {
-    const btn    = document.getElementById('list-toggle');
     let _map     = null;
     let _active  = false;
     let _entries = []; // [{ marker, key }]
@@ -742,16 +741,15 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       _addPins(cuisine);
     }
 
-    function init(map) {
-      _map = map;
-      btn.addEventListener('click', () => {
-        _active = !_active;
-        btn.classList.toggle('active', _active);
-        _active ? _addPins(FilterBar.getCuisine()) : _removePins();
-      });
+    function setActive(active) {
+      if (active === _active) return;
+      _active = active;
+      _active ? _addPins(FilterBar.getCuisine()) : _removePins();
     }
 
-    return { init, refresh, filter };
+    function init(map) { _map = map; }
+
+    return { init, refresh, filter, setActive };
   })();
 
   // 9. FILTER BAR
@@ -844,8 +842,10 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
   // ─────────────────────────────────────────
   // 10. CREATOR LAYERS (YouTube reviewers)
   // ─────────────────────────────────────────
-  // To add a creator: add an entry here, a <key>-mode-btn in index.html,
-  // and data/<key>.json from the pipeline.
+  // To add a creator: add an entry here and data/<key>.json from the pipeline.
+  // `draft: true` shows a creator only on this computer or your Wi-Fi (local preview), so their
+  // picks can be checked before they go on the live site.
+  const PREVIEW = /^(localhost|127\.0\.0\.1|192\.168\.\d+\.\d+)$/.test(location.hostname);
   const CREATORS = [
     {
       key: 'topjaw',
@@ -863,7 +863,16 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       textColour: '#A07D00',
       zIndexOffset: 500,
     },
-  ];
+    {
+      key: 'bitetwice',
+      name: 'Bite Twice',
+      avatar: 'images/bitetwice.jpg',
+      colour: '#D35400',
+      textColour: '#B34700',
+      zIndexOffset: 480,
+      draft: true, // until its picks are reviewed
+    },
+  ].filter(c => !c.draft || PREVIEW);
 
   // Best overall score, falling back to the highest single-video score
   function creatorRating(restaurant) {
@@ -986,8 +995,6 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
   // A toggleable set of map pins for one creator
   function CreatorLayer(creator) {
-    const btn = document.getElementById(`${creator.key}-mode-btn`);
-
     let _pins     = null; // cluster group shared by all creators
     let _onToggle = null;
     let _active   = false;
@@ -1048,7 +1055,6 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
     async function _setActive(active) {
       _active = active;
-      btn.classList.toggle('active', _active);
       if (_active) {
         await _addPins();
         filter(FilterBar.getArea(), FilterBar.getCuisine());
@@ -1058,16 +1064,15 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       _onToggle();
     }
 
-    // Creator picks are SCRAN's headline, so they start switched on.
+    // Creator picks are SCRAN's headline, so they start switched on (Views switches them).
     // onToggle runs after the pins change, so the map can hide or show the plain dots under them.
     function init(pins, onToggle) {
       _pins = pins;
       _onToggle = onToggle;
-      btn.addEventListener('click', () => _setActive(!_active));
       _setActive(true);
     }
 
-    return { key: creator.key, init, filter, isActive: () => _active };
+    return { key: creator.key, init, filter, setActive: _setActive, isActive: () => _active };
   }
 
   // ─────────────────────────────────────────
@@ -1225,6 +1230,143 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
   })();
 
   // ─────────────────────────────────────────
+  // 11b. VIEWS (Following / Explore bottom nav and its sheet)
+  // ─────────────────────────────────────────
+  // Explore shows the creators you switch on in its sheet. Following shows what's in FOLLOWING:
+  // your own ratings and saved places, and the creators you follow; friends' reviews come later.
+  const FOLLOWING = {
+    me: true,     // your ratings and saved places (MyListManager)
+    friends: [],  // to come: friends' reviews
+    people: [],   // creator keys you follow, e.g. 'tod' (saved in this browser for now)
+  };
+
+  const Views = (() => {
+    const FOLLOW_KEY = 'scran-following';
+    const buttons = document.querySelectorAll('#bottom-nav button');
+    const emptyEl = document.getElementById('following-empty');
+    const sheet   = document.getElementById('sheet');
+    const toggle  = document.getElementById('sheet-toggle');
+    const body    = document.getElementById('sheet-body');
+
+    let _layers    = [];
+    let _view      = 'explore';
+    let _exploreOn = new Set(CREATORS.map(c => c.key)); // creators switched on in Explore
+    let _counts    = {};                                // picks per creator, once loaded
+
+    function _savePeople() {
+      try { localStorage.setItem(FOLLOW_KEY, JSON.stringify(FOLLOWING.people)); } catch {}
+    }
+
+    function _loadPeople() {
+      try {
+        const keys = JSON.parse(localStorage.getItem(FOLLOW_KEY)) || [];
+        FOLLOWING.people = keys.filter(k => CREATORS.some(c => c.key === k));
+      } catch {}
+    }
+
+    function _mineCount() {
+      return Storage.count() + Object.keys(BookmarkStorage.getAll()).length;
+    }
+
+    function _followingIsEmpty() {
+      return !(FOLLOWING.me && _mineCount()) && !FOLLOWING.friends.length && !FOLLOWING.people.length;
+    }
+
+    const _switch = (on, attrs) =>
+      `<button class="sheet-switch${on ? ' on' : ''}" role="switch" aria-checked="${on}" ${attrs}></button>`;
+
+    function _row({ avatar, colour, name, sub }, actions) {
+      return `<div class="sheet-row" style="--creator-colour:${colour}">
+        ${avatar}
+        <div class="sheet-row-text">
+          <div class="sheet-row-name">${escapeHtml(name)}</div>
+          <div class="sheet-row-sub">${sub}</div>
+        </div>
+        ${actions}
+      </div>`;
+    }
+
+    function _creatorRow(c, actions) {
+      const n = _counts[c.key];
+      return _row({ avatar: `<img class="sheet-avatar" src="${c.avatar}" alt="">`, colour: c.colour,
+        name: c.name, sub: n == null ? '' : `${n} picks` }, actions);
+    }
+
+    function _render() {
+      if (_view === 'explore') {
+        body.innerHTML = '<div class="sheet-title">Creators</div>' + CREATORS.map(c => {
+          const followed = FOLLOWING.people.includes(c.key);
+          return _creatorRow(c,
+            `<button class="sheet-btn${followed ? ' followed' : ''}" data-follow="${c.key}">${followed ? 'Following' : 'Follow'}</button>` +
+            _switch(_exploreOn.has(c.key), `data-creator="${c.key}" aria-label="Show ${escapeHtml(c.name)} on the map"`));
+        }).join('');
+        return;
+      }
+      const people = CREATORS.filter(c => FOLLOWING.people.includes(c.key));
+      const mine = _mineCount();
+      body.innerHTML = '<div class="sheet-title">Following</div>'
+        + _row({ avatar: '<div class="sheet-avatar sheet-avatar-me">&#x2605;</div>', colour: 'var(--primary)',
+            name: 'You', sub: `${mine} rated or saved` },
+            _switch(FOLLOWING.me, 'data-me aria-label="Show your places on the map"'))
+        + people.map(c => _creatorRow(c, `<button class="sheet-btn" data-unfollow="${c.key}">Unfollow</button>`)).join('')
+        + (people.length ? '' : '<div class="sheet-empty">You&rsquo;re not following anyone yet. Tap Follow next to a creator in Explore.</div>')
+        + '<div class="sheet-title">Suggested</div>'
+        + '<div class="sheet-empty">Suggestions will show here once you can follow friends and other people.</div>';
+    }
+
+    // Switch the map's layers to match the current view, then redraw the sheet
+    function _apply() {
+      const following = _view === 'following';
+      buttons.forEach(b => b.classList.toggle('active', b.dataset.view === _view));
+      _layers.forEach(layer => {
+        const on = following ? FOLLOWING.people.includes(layer.key) : _exploreOn.has(layer.key);
+        if (on !== layer.isActive()) layer.setActive(on);
+      });
+      MyListManager.setActive(following && FOLLOWING.me);
+      emptyEl.hidden = !(following && !sheet.classList.contains('open') && _followingIsEmpty());
+      _render();
+    }
+
+    function show(view) { _view = view; _apply(); }
+
+    function setSheet(open) {
+      if (open === sheet.classList.contains('open')) return;
+      sheet.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', open);
+      _apply();
+    }
+
+    function _toggleIn(list, key) {
+      const i = list.indexOf(key);
+      i >= 0 ? list.splice(i, 1) : list.push(key);
+    }
+
+    function init(creatorLayers) {
+      _layers = creatorLayers;
+      _loadPeople();
+      buttons.forEach(b => b.addEventListener('click', () => show(b.dataset.view)));
+      toggle.addEventListener('click', () => setSheet(!sheet.classList.contains('open')));
+      body.addEventListener('click', (e) => {
+        const b = e.target.closest('button');
+        if (!b) return;
+        const { creator, follow, unfollow } = b.dataset;
+        if (creator) _exploreOn.has(creator) ? _exploreOn.delete(creator) : _exploreOn.add(creator);
+        else if (follow) { _toggleIn(FOLLOWING.people, follow); _savePeople(); }
+        else if (unfollow) { _toggleIn(FOLLOWING.people, unfollow); _savePeople(); }
+        else if ('me' in b.dataset) FOLLOWING.me = !FOLLOWING.me;
+        _apply();
+      });
+      CreatorPicks.load().then(picks => {
+        _counts = Object.fromEntries(Object.entries(picks).map(([k, list]) => [k, list.length]));
+        _render();
+      });
+      _render();
+    }
+
+    return { init, show, setSheet };
+  })();
+
+  // ─────────────────────────────────────────
   // 12. APP (main controller)
   // ─────────────────────────────────────────
   const App = (() => {
@@ -1323,6 +1465,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       const creatorPins = creatorPinGroup().addTo(_map);
       creatorLayers.forEach(layer => layer.init(creatorPins, _showPlacesInView));
       MyListManager.init(_map);
+      Views.init(creatorLayers);
       UI.updateStatsCount();
 
       FilterBar.init(
@@ -1345,7 +1488,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       _map.on('moveend', _showPlacesInView);
 
       // Close panel on map click
-      _map.on('click', () => RatingPanel.close());
+      _map.on('click', () => { RatingPanel.close(); Views.setSheet(false); });
 
       // Keyboard — close panel on Escape, block browser zoom shortcuts
       document.addEventListener('keydown', (e) => {
@@ -1504,6 +1647,23 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     });
 
     closeBtn.addEventListener('click', () => panel.classList.remove('open'));
+  })();
+
+  // ── Collapsible filter column: starts closed on phones, where it would cover the map ──
+  (function () {
+    const sidebar = document.getElementById('filter-sidebar');
+    const toggle  = document.getElementById('fs-collapse');
+    function setOpen(open) {
+      sidebar.classList.toggle('closed', !open);
+      toggle.setAttribute('aria-expanded', open);
+    }
+    setOpen(!window.matchMedia('(max-width: 700px)').matches);
+    toggle.addEventListener('click', () => setOpen(sidebar.classList.contains('closed')));
+    // A dot on the tab shows a filter is on while the column is hidden
+    sidebar.addEventListener('click', () => {
+      const filtered = [...sidebar.querySelectorAll('.fs-chip.selected')].some(c => c.dataset.value);
+      toggle.classList.toggle('filtered', filtered);
+    });
   })();
 
   // ── Collapsible sidebar sections ──

@@ -255,7 +255,7 @@ const TOOL = {
 };
 
 function prompt(video, details, text, chapterList, commentList, picks) {
-  return `You are checking restaurant picks taken from a YouTube video by ${creator.name} (@${creator.channel}), a London food creator. The picks were extracted automatically and may be wrong. SCRAN, a restaurant map, will show the kept ones under ${creator.name}'s name, so only ${creator.name}'s own first-hand opinions may be kept.
+  return `You are checking restaurant picks taken from a YouTube video by ${creator.name} (@${creator.channel}), a London food creator.${creator.about ? ' ' + creator.about : ''} The picks were extracted automatically and may be wrong. SCRAN, a restaurant map, will show the kept ones under ${creator.name}'s name, so only ${creator.name}'s own first-hand opinions may be kept.
 
 For each restaurant listed, decide:
 - keep = true only if ${creator.name} personally visited and gave their own opinion of it (reason "own_review"). Visiting together with a guest still counts if ${creator.name} eats there and gives their own view.

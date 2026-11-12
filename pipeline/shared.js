@@ -4,7 +4,8 @@ import 'dotenv/config';
 
 // To add a creator: add an entry here and a matching one in ../app.js CREATORS.
 // `source` is how the scraper reads a video: 'transcript' (spoken reviews)
-// or 'description' (reviews written in the video description).
+// or 'description' (reviews written in the video description); `about` is optional
+// context for Claude (e.g. who presents). New creators use scrape.js.
 export const CREATORS = {
   tod: {
     name: 'Tod',
@@ -21,6 +22,14 @@ export const CREATORS = {
     emoji: '🔵',
     colour: '#0e7490',
     textColour: '#0e7490',
+  },  bitetwice: {
+    name: 'Bite Twice',
+    channel: 'BiteTwice',
+    source: 'transcript',
+    about: 'Bite Twice is two presenters, Gerry and Paul, reviewing together; either of them giving their view counts as Bite Twice reviewing it.',
+    emoji: '🟠',
+    colour: '#D35400',
+    textColour: '#B34700',
   },
 };
 

@@ -10,6 +10,7 @@
   --yellow: #F39C12;
   --green: #27AE60;
   --panel-radius: 20px;
+  --nav-h: 56px; /* bottom nav, not counting the phone's home-bar inset */
 }
 
 html, body {
@@ -34,7 +35,7 @@ html, body {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 12px 20px;
+  padding: calc(12px + env(safe-area-inset-top, 0px)) 20px 12px;
   background: rgba(244, 241, 237, 0.82);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -365,7 +366,7 @@ html, body {
 /* ── Error Toast ── */
 #error-toast {
   position: fixed;
-  bottom: 24px;
+  bottom: calc(var(--nav-h) + 40px + env(safe-area-inset-bottom, 0px));
   left: 20px;
   z-index: 3000;
   background: #2c2c2c;
@@ -750,47 +751,6 @@ html, body {
 #zoom-controls button:last-child { border-bottom: none; }
 #zoom-controls button:hover { background: #fff; }
 
-/* ── Mode Bar ── */
-#mode-bar {
-  position: fixed;
-  bottom: 0; left: 0; right: 0;
-  z-index: 1000;
-  display: flex;
-  align-items: stretch;
-  background: rgba(244, 241, 237, 0.95);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-top: 1px solid rgba(0,0,0,0.09);
-  box-shadow: 0 -2px 12px rgba(0,0,0,0.07);
-  padding-bottom: env(safe-area-inset-bottom, 0px);
-}
-
-#mode-bar button {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-  padding: 10px 6px 10px;
-  background: none;
-  border: none;
-  border-top: 2.5px solid transparent;
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  cursor: pointer;
-  transition: color 0.15s, border-color 0.15s, background 0.15s;
-  letter-spacing: 0.01em;
-}
-
-#mode-bar button:hover { background: rgba(0,0,0,0.04); }
-
-/* Active states — each keeps its own brand colour */
-#topjaw-mode-btn.active     { color: #0e7490; border-top-color: #0e7490; background: rgba(14,116,144,0.06); }
-#tod-mode-btn.active        { color: #A07D00; border-top-color: #D4AC0D; background: rgba(212,172,13,0.06); }
-#list-toggle.active         { color: var(--primary); border-top-color: var(--primary); background: rgba(108,52,131,0.06); }
-
 /* ── What creators said, at the top of the place card (creatorVerdictsHtml in app.js) ── */
 #panel-creators:empty { display: none; }
 #panel-creators { margin: -6px 0 14px; }
@@ -840,9 +800,9 @@ html, body {
 /* ── Filter Sidebar ── */
 #filter-sidebar {
   position: fixed;
-  top: 52px;
+  top: calc(52px + env(safe-area-inset-top, 0px));
   right: 0;
-  bottom: 64px;
+  bottom: calc(var(--nav-h) + env(safe-area-inset-bottom, 0px));
   width: 130px;
   z-index: 990;
   background: rgba(244, 241, 237, 0.95);
@@ -850,13 +810,53 @@ html, body {
   -webkit-backdrop-filter: blur(12px);
   border-left: 2px solid var(--primary);
   border-bottom: 2px solid var(--primary);
+  transition: transform 0.25s ease;
+}
+
+/* Hidden off the right edge, leaving only its tab */
+#filter-sidebar.closed { transform: translateX(100%); }
+
+#fs-body {
+  height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
 }
 
-#filter-sidebar::-webkit-scrollbar { width: 3px; }
-#filter-sidebar::-webkit-scrollbar-track { background: transparent; }
-#filter-sidebar::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.18); border-radius: 3px; }
+#fs-body::-webkit-scrollbar { width: 3px; }
+#fs-body::-webkit-scrollbar-track { background: transparent; }
+#fs-body::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.18); border-radius: 3px; }
+
+/* Tab on the column's left edge that shows and hides it */
+#fs-collapse {
+  position: absolute;
+  top: 12px;
+  left: -36px;
+  width: 34px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(244, 241, 237, 0.95);
+  border: 2px solid var(--primary);
+  border-right: none;
+  border-radius: 10px 0 0 10px;
+  color: var(--primary);
+  cursor: pointer;
+  padding: 0;
+}
+
+#fs-collapse-dot {
+  position: absolute;
+  top: 6px;
+  right: 5px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--red);
+  display: none;
+}
+
+#filter-sidebar.closed #fs-collapse.filtered #fs-collapse-dot { display: block; }
 
 .fs-section { padding: 10px 0 6px; }
 .fs-section:first-child { padding-top: 20px; }
@@ -957,8 +957,8 @@ html, body {
   color: var(--text) !important;
 }
 
-/* Map credits and Google logo sit just above the bottom mode bar so they stay visible */
-.leaflet-bottom { bottom: calc(56px + env(safe-area-inset-bottom, 0px)); }
+/* Map credits and Google logo sit just above the bottom nav so they stay visible */
+.leaflet-bottom { bottom: calc(var(--nav-h) + env(safe-area-inset-bottom, 0px)); }
 .leaflet-bottom.leaflet-left { left: 76px; } /* clear of the zoom buttons */
 .google-logo { display: block; width: 59px; height: 18px; margin: 0 0 4px 0 !important; pointer-events: none; }
 
@@ -974,4 +974,219 @@ html, body {
   color: #fff;
   font-weight: 700;
   font-size: 0.85rem;
+}
+
+/* ── Following / Explore bottom nav (Views in app.js) ── */
+#bottom-nav {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 1000;
+  display: flex;
+  height: calc(var(--nav-h) + env(safe-area-inset-bottom, 0px));
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  background: rgba(244, 241, 237, 0.97);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(0,0,0,0.09);
+  box-shadow: 0 -2px 12px rgba(0,0,0,0.07);
+}
+
+#bottom-nav button {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--text-muted);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#bottom-nav button:hover { color: var(--text); }
+#bottom-nav button.active { color: var(--primary); }
+
+/* ── Half-screen sheet above the nav: creators in Explore, who you follow in Following ── */
+#sheet {
+  position: fixed;
+  left: 50%;
+  bottom: calc(var(--nav-h) + env(safe-area-inset-bottom, 0px));
+  width: min(100%, 520px);
+  height: 50vh;
+  z-index: 999; /* slides out from behind the nav */
+  background: var(--surface);
+  border-radius: 18px 18px 0 0;
+  transform: translate(-50%, 100%);
+  transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1), box-shadow 0.3s;
+}
+
+#sheet.open {
+  transform: translate(-50%, 0);
+  box-shadow: 0 -4px 24px rgba(0,0,0,0.14);
+}
+
+/* The arrow tab on the sheet's top edge, which sits just above the nav while closed */
+#sheet-toggle {
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: rgba(244, 241, 237, 0.97);
+  border: 1px solid rgba(0,0,0,0.09);
+  border-bottom: none;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.06);
+  color: var(--primary);
+  cursor: pointer;
+}
+
+#sheet-toggle svg { transition: transform 0.3s; }
+#sheet.open #sheet-toggle svg { transform: rotate(180deg); }
+
+#sheet-body {
+  height: 100%;
+  overflow-y: auto;
+  padding: 8px 20px 20px;
+}
+
+.sheet-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin: 14px 0 4px;
+}
+
+.sheet-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.sheet-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--creator-colour);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.sheet-avatar-me {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary);
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.sheet-row-text { flex: 1; min-width: 0; }
+.sheet-row-name { font-weight: 700; font-size: 0.92rem; }
+.sheet-row-sub { font-size: 0.75rem; color: var(--text-muted); margin-top: 2px; }
+
+.sheet-btn {
+  flex-shrink: 0;
+  background: none;
+  border: 1.5px solid rgba(0,0,0,0.15);
+  border-radius: 16px;
+  padding: 5px 12px;
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.sheet-btn:hover { background: rgba(0,0,0,0.04); }
+.sheet-btn.followed { color: var(--primary); border-color: var(--primary); }
+
+/* On/off switch, in the creator's colour when on */
+.sheet-switch {
+  position: relative;
+  flex-shrink: 0;
+  width: 44px;
+  height: 26px;
+  border: none;
+  border-radius: 13px;
+  background: rgba(0,0,0,0.18);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s;
+}
+
+.sheet-switch::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  transition: transform 0.2s;
+}
+
+.sheet-switch.on { background: var(--creator-colour, var(--primary)); }
+.sheet-switch.on::after { transform: translateX(18px); }
+
+.sheet-empty {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+  padding: 10px 0;
+}
+
+#following-empty {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(calc(100% - 32px), 420px);
+  bottom: calc(var(--nav-h) + 40px + env(safe-area-inset-bottom, 0px));
+  z-index: 1000;
+  background: var(--surface);
+  border-radius: 14px;
+  padding: 14px 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+#following-empty[hidden] { display: none; }
+#following-empty strong { display: block; color: var(--text); margin-bottom: 2px; }
+
+/* ── Phones ── */
+@media (max-width: 700px) {
+  #zoom-controls, #user-name, #signout-btn { display: none; }
+
+  #header { padding: calc(10px + env(safe-area-inset-top, 0px)) 14px 10px; gap: 8px; }
+  #header h1 { font-size: 1.25rem; }
+  #signin-btn { padding: 6px 11px; font-size: 0.72rem; }
+  #status-text { min-width: 0; font-size: 0.72rem; white-space: nowrap; overflow: hidden; }
+  #status-msg { overflow: hidden; text-overflow: ellipsis; }
+
+  #filter-sidebar { width: 150px; }
+  .fs-chip { padding: 9px 12px; font-size: 0.82rem; }
+  .fs-toggle { padding: 6px 12px 8px; font-size: 0.68rem; }
+
+  #error-toast { left: 16px; right: 16px; max-width: none; }
+  .leaflet-bottom.leaflet-left { left: 0; }
+  .leaflet-control-attribution { font-size: 9px; }
+  .panel-inner, .profile-body { padding-left: 18px; padding-right: 18px; }
 }
