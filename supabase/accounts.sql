@@ -107,6 +107,8 @@ create policy "Delete your own ratings" on ratings for delete using (auth.uid() 
 
 -- Lets the app fetch a rating with the rater's name and photo in one go
 delete from ratings where user_id not in (select id from profiles); -- accounts that no longer exist
+alter table ratings drop constraint if exists ratings_user_id_fkey;  -- an older link to a table accounts aren't in
+create unique index if not exists ratings_user_place on ratings (user_id, osm_type, osm_id);
 alter table ratings drop constraint if exists ratings_user_profile_fkey;
 alter table ratings add constraint ratings_user_profile_fkey
   foreign key (user_id) references profiles(id) on delete cascade;
