@@ -1499,6 +1499,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     let _exploreOn = new Set(CREATORS.map(c => c.key)); // creators switched on in Explore
     let _counts    = {};                                // picks per creator, once loaded
     let _suggested = null;                              // people to follow, once loaded
+    let _search    = { text: '', results: null };       // Explore's people search, kept across redraws
     let _ready     = false;
 
     function _mineCount() {
@@ -1540,6 +1541,11 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     const _shown = new Map();
     const _people = list => list.map(p => { _shown.set(p.id, p); return _personRow(p); }).join('');
 
+    function _searchResultsHtml() {
+      if (!_search.text || !_search.results) return '';
+      return _people(_search.results) || '<div class="sheet-empty">No one by that name yet.</div>';
+    }
+
     function _render() {
       if (_view === 'explore') {
         body.innerHTML = '<div class="sheet-title">Creators</div>' + CREATORS.map(c => {
@@ -1547,7 +1553,11 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
           return _creatorRow(c,
             `<button class="sheet-btn${followed ? ' followed' : ''}" data-follow="${c.key}">${followed ? 'Following' : 'Follow'}</button>` +
             _switch(_exploreOn.has(c.key), `data-creator="${c.key}" aria-label="Show ${escapeHtml(c.name)} on the map"`));
-        }).join('');
+        }).join('')
+          + `<div class="sheet-title">People</div>
+            <input id="people-search" type="search" placeholder="Search people on SCRAN by name" autocomplete="off"
+              value="${escapeHtml(_search.text)}">
+            <div id="people-results">${_searchResultsHtml()}</div>`;
         return;
       }
       const signedIn = !!Auth.currentUser();
@@ -1558,15 +1568,12 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
             _switch(FOLLOWING.me, 'data-me aria-label="Show your places on the map"'))
         + '<div class="sheet-title">People</div>'
         + (signedIn
-          ? (_people(FOLLOWING.people) || '<div class="sheet-empty">You&rsquo;re not following anyone yet.</div>')
+          ? (_people(FOLLOWING.people) || '<div class="sheet-empty">You&rsquo;re not following anyone yet. Search for people in Explore.</div>')
           : '<div class="sheet-empty">Sign in to follow people and see their ratings on the map.</div>')
         + '<div class="sheet-title">Creators</div>'
         + (creators.map(c => _creatorRow(c, `<button class="sheet-btn" data-follow="${c.key}">Unfollow</button>`)).join('')
           || '<div class="sheet-empty">Tap Follow next to a creator in Explore.</div>')
-        + (signedIn ? `<div class="sheet-title">Find people</div>
-            <input id="people-search" type="search" placeholder="Search by name" autocomplete="off">
-            <div id="people-results"></div>
-            <div class="sheet-title">Suggested</div>
+        + (signedIn ? `<div class="sheet-title">Suggested</div>
             <div id="people-suggested">${_suggested == null ? '<div class="sheet-empty">Loading…</div>'
               : _people(_suggested.filter(p => !Social.isFollowing(p.id)))
                 || '<div class="sheet-empty">No suggestions yet: you&rsquo;ll see people here as they join SCRAN.</div>'}</div>` : '');
@@ -1634,12 +1641,13 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         if (e.target.id !== 'people-search') return;
         clearTimeout(_searchTimer);
         const text = e.target.value.trim();
+        _search = { text, results: null };
         _searchTimer = setTimeout(async () => {
+          const list = text ? await Social.findPeople(text) : null;
+          if (_search.text !== text) return; // typed more while this was loading
+          _search.results = list;
           const results = document.getElementById('people-results');
-          if (!results) return;
-          if (!text) { results.innerHTML = ''; return; }
-          const list = await Social.findPeople(text);
-          results.innerHTML = _people(list) || '<div class="sheet-empty">No one by that name yet.</div>';
+          if (results) results.innerHTML = _searchResultsHtml();
         }, 300);
       });
       CreatorPicks.load().then(picks => {
@@ -1891,6 +1899,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     const userEl        = document.getElementById('profile-user');
     const emailEl       = document.getElementById('profile-email');
     const signoutBtn    = document.getElementById('profile-signout-btn');
+    const deleteBtn     = document.getElementById('profile-delete-btn');
 
     let _person = null; // the profile on show when it isn't yours
 
@@ -1975,11 +1984,13 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         avatarEl.innerHTML = user ? personAvatar({ name: meta.full_name || meta.name, avatar_url: meta.avatar_url || meta.picture }, 'profile-avatar') : '';
         emailEl.textContent = user?.email || '';
         userEl.style.display = user ? 'flex' : 'none';
+        deleteBtn.hidden = !user;
         _build(Object.values(Storage.getAll()).filter(e => e.rating != null));
       } else {
         titleEl.textContent = '';
         avatarEl.innerHTML = '';
         userEl.style.display = 'none';
+        deleteBtn.hidden = true;
         _build([]);
       }
       _showFollow();
@@ -2005,6 +2016,17 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       countsEl.textContent = _counts(p.followers, p.following);
       await PeopleLayer.load();
       Views.refresh();
+    });
+
+    // Removes the account and everything on it (profile, ratings, saved places, follows):
+    // delete_my_account in supabase/safety.sql
+    deleteBtn.addEventListener('click', async () => {
+      if (!confirm('Delete your SCRAN account? Your profile, ratings, notes, saved places and follows will be removed for good.')) return;
+      const { error } = await sbClient.rpc('delete_my_account');
+      if (error) { cloudError(error); return; }
+      panel.classList.remove('open');
+      await sbClient.auth.signOut();
+      UI.showSuccess('Your account has been deleted.');
     });
 
     btn.addEventListener('click', () => open());

@@ -1249,6 +1249,27 @@ html, body {
   z-index: 2;
 }
 
+.profile-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(0,0,0,0.07);
+  font-size: 0.78rem;
+}
+.profile-footer a { color: var(--text-muted); margin-left: auto; }
+#profile-delete-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: 0.78rem;
+  color: var(--red);
+  cursor: pointer;
+}
+#profile-delete-btn[hidden] { display: none; }
+
 /* ── Phones ── */
 @media (max-width: 700px) {
   #zoom-controls, #user-name, #signout-btn { display: none; }
