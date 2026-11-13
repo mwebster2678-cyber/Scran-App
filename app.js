@@ -655,6 +655,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     let _hideTimer = null;
 
     function open({ type, id, name, cuisine, lat, lon, address }) {
+      if (!requireSignIn('Sign in to open places, see what creators said and rate them.')) return;
       // Cancel any pending hide from a previous close()
       clearTimeout(_hideTimer);
 
@@ -1554,10 +1555,12 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
             `<button class="sheet-btn${followed ? ' followed' : ''}" data-follow="${c.key}">${followed ? 'Following' : 'Follow'}</button>` +
             _switch(_exploreOn.has(c.key), `data-creator="${c.key}" aria-label="Show ${escapeHtml(c.name)} on the map"`));
         }).join('')
-          + `<div class="sheet-title">People</div>
-            <input id="people-search" type="search" placeholder="Search people on SCRAN by name" autocomplete="off"
-              value="${escapeHtml(_search.text)}">
-            <div id="people-results">${_searchResultsHtml()}</div>`;
+          + '<div class="sheet-title">People</div>'
+          + (Auth.currentUser()
+            ? `<input id="people-search" type="search" placeholder="Search people on SCRAN by name" autocomplete="off"
+                value="${escapeHtml(_search.text)}">
+              <div id="people-results">${_searchResultsHtml()}</div>`
+            : '<div class="sheet-empty">Sign in to search for people and follow them. <button class="sheet-link" data-signin>Sign in</button></div>');
         return;
       }
       const signedIn = !!Auth.currentUser();
@@ -1597,7 +1600,11 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       _render();
     }
 
-    function show(view) { _view = view; refresh(); }
+    function show(view) {
+      if (view === 'following' && !requireSignIn('Sign in to follow people and creators, and see their places.')) return;
+      _view = view;
+      refresh();
+    }
 
     function setSheet(open) {
       if (open === sheet.classList.contains('open')) return;
@@ -1627,6 +1634,8 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         if (!b && row) { ProfilePanel.open(row.dataset.person); return; }
         if (!b) return;
         const { creator, follow, personFollow } = b.dataset;
+        if ('signin' in b.dataset) { AuthDialog.open(); return; }
+        if (follow && !requireSignIn('Sign in to follow creators.')) return;
         if (creator) _exploreOn.has(creator) ? _exploreOn.delete(creator) : _exploreOn.add(creator);
         else if (follow) await Social.setCreator(follow, !FOLLOWING.creators.includes(follow));
         else if ('me' in b.dataset) FOLLOWING.me = !FOLLOWING.me;
@@ -1833,6 +1842,9 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         Storage.clear();
         BookmarkStorage.clear();
         try { localStorage.removeItem(CONFIG.accountKey); } catch {}
+        RatingPanel.close();
+        ProfilePanel.close();
+        Views.show('explore');
       } else if (_currentUser) {
         // Another account's leftovers are never uploaded to this one
         const fromSignedOut = !owner;
@@ -1852,8 +1864,10 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
       // Supabase also reports token refreshes here; only a change of account needs a sync
       let syncedFor;
-      sbClient.auth.onAuthStateChange((_event, session) => {
+      sbClient.auth.onAuthStateChange((event, session) => {
         _setUI(session);
+        if (event === 'PASSWORD_RECOVERY') setTimeout(() => AuthDialog.open(null, 'reset'));
+        else if (session) setTimeout(() => AuthDialog.signedIn());
         const id = session?.user.id || null;
         if (id === syncedFor) return;
         const signedOut = !!syncedFor && !id;
@@ -1861,12 +1875,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         setTimeout(() => _accountChanged(signedOut)); // Supabase asks for no awaits inside this callback
       });
 
-      signinBtn.addEventListener('click', () => {
-        sbClient.auth.signInWithOAuth({
-          provider: 'google',
-          options: { redirectTo: window.location.href }
-        });
-      });
+      signinBtn.addEventListener('click', () => AuthDialog.open());
 
       signoutBtn.addEventListener('click', () => {
         sbClient.auth.signOut();
@@ -1874,6 +1883,136 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     }
 
     return { init, currentUser };
+  })();
+
+  // Signed out, SCRAN is just the Explore map to look around: opening a place, profiles,
+  // Following and people search all ask you to sign in first
+  function requireSignIn(reason) {
+    if (Auth.currentUser()) return true;
+    AuthDialog.open(reason);
+    return false;
+  }
+
+  // ─────────────────────────────────────────
+  // Sign-in dialog: Google, or email and password (with sign-up and password reset)
+  // ─────────────────────────────────────────
+  const AuthDialog = (() => {
+    const dialog    = document.getElementById('auth-dialog');
+    const titleEl   = document.getElementById('auth-title');
+    const reasonEl  = document.getElementById('auth-reason');
+    const googleEl  = document.getElementById('auth-google-area');
+    const form      = document.getElementById('auth-form');
+    const nameEl    = document.getElementById('auth-name');
+    const emailEl   = document.getElementById('auth-email');
+    const passEl    = document.getElementById('auth-password');
+    const submitEl  = document.getElementById('auth-submit');
+    const messageEl = document.getElementById('auth-message');
+    const forgotEl  = document.getElementById('auth-forgot');
+    const switchEl  = document.getElementById('auth-switch');
+
+    const MIN_PASSWORD = 8;
+    // Where email links (confirm, reset password) bring you back to
+    const here = () => window.location.origin + window.location.pathname;
+
+    const MODES = {
+      signin: { title: 'Sign in to SCRAN', submit: 'Sign in', google: true, name: false, email: true, password: true,
+        switchText: 'New to SCRAN? Create an account', switchTo: 'signup', forgot: true },
+      signup: { title: 'Create your account', submit: 'Create account', google: true, name: true, email: true, password: true,
+        switchText: 'Already have an account? Sign in', switchTo: 'signin', forgot: false },
+      forgot: { title: 'Reset your password', submit: 'Email me a reset link', google: false, name: false, email: true, password: false,
+        switchText: 'Back to sign in', switchTo: 'signin', forgot: false },
+      reset:  { title: 'Choose a new password', submit: 'Save password', google: false, name: false, email: false, password: true,
+        switchText: '', switchTo: null, forgot: false },
+    };
+    let _mode = 'signin';
+
+    function _message(text, isError) {
+      messageEl.textContent = text;
+      messageEl.className = isError ? 'error' : '';
+      messageEl.hidden = !text;
+    }
+
+    function _setMode(mode) {
+      _mode = mode;
+      const m = MODES[mode];
+      titleEl.textContent = m.title;
+      submitEl.textContent = m.submit;
+      googleEl.hidden = !m.google;
+      nameEl.hidden = !m.name;
+      emailEl.hidden = !m.email;
+      passEl.hidden = !m.password;
+      passEl.placeholder = mode === 'signin' ? 'Password' : `Password (at least ${MIN_PASSWORD} characters)`;
+      passEl.autocomplete = mode === 'signin' ? 'current-password' : 'new-password';
+      forgotEl.hidden = !m.forgot;
+      switchEl.hidden = !m.switchTo;
+      switchEl.textContent = m.switchText;
+      _message('');
+    }
+
+    function open(reason = null, mode = 'signin') {
+      reasonEl.textContent = reason || '';
+      reasonEl.hidden = !reason;
+      _setMode(mode);
+      dialog.hidden = false;
+      (mode === 'reset' ? passEl : emailEl).focus({ preventScroll: true });
+    }
+
+    function close() {
+      dialog.hidden = true;
+    }
+
+    async function _submit() {
+      const name = nameEl.value.trim();
+      const email = emailEl.value.trim();
+      const password = passEl.value;
+      if (MODES[_mode].email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return _message('Enter your email address.', true);
+      if (_mode === 'signup' && !name) return _message('Enter your name. It’s shown on your profile.', true);
+      if (MODES[_mode].password && _mode !== 'signin' && password.length < MIN_PASSWORD) {
+        return _message(`Use at least ${MIN_PASSWORD} characters for your password.`, true);
+      }
+      if (_mode === 'signin' && !password) return _message('Enter your password.', true);
+
+      submitEl.disabled = true;
+      try {
+        if (_mode === 'signin') {
+          const { error } = await sbClient.auth.signInWithPassword({ email, password });
+          if (error) return _message(/confirm/i.test(error.message)
+            ? 'Confirm your email first: open the link we sent you.' : 'That email and password don’t match an account.', true);
+        } else if (_mode === 'signup') {
+          const { data, error } = await sbClient.auth.signUp({ email, password,
+            options: { data: { full_name: name }, emailRedirectTo: here() } });
+          if (error) return _message(error.message, true);
+          if (!data.session) _message(`Nearly done: we’ve emailed a link to ${email}. Open it to confirm your account.`);
+        } else if (_mode === 'forgot') {
+          const { error } = await sbClient.auth.resetPasswordForEmail(email, { redirectTo: here() });
+          if (error) return _message(error.message, true);
+          _message('If there’s an account with that email, a reset link is on its way.');
+        } else if (_mode === 'reset') {
+          const { error } = await sbClient.auth.updateUser({ password });
+          if (error) return _message(error.message, true);
+          _mode = 'signin';
+          close();
+          UI.showSuccess('Password saved.');
+        }
+      } finally {
+        submitEl.disabled = false;
+      }
+    }
+
+    document.getElementById('auth-google').addEventListener('click', () => {
+      sbClient.auth.signInWithOAuth({ provider: 'google', options: { redirectTo: window.location.href } });
+    });
+    form.addEventListener('submit', (e) => { e.preventDefault(); _submit(); });
+    forgotEl.addEventListener('click', () => _setMode('forgot'));
+    switchEl.addEventListener('click', () => _setMode(MODES[_mode].switchTo));
+    document.getElementById('auth-close').addEventListener('click', close);
+    dialog.addEventListener('click', (e) => { if (e.target === dialog) close(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+
+    // Signed in (from this dialog, or back from Google): done, unless choosing a new password
+    function signedIn() { if (_mode !== 'reset') close(); }
+
+    return { open, close, signedIn };
   })();
 
   // ─────────────────────────────────────────
@@ -1974,6 +2113,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
     // No id, or your own: your ratings from this browser
     async function open(id = null) {
+      if (!requireSignIn('Sign in to see profiles and keep your own ratings.')) return;
       const user = Auth.currentUser();
       const mine = !id || id === user?.id;
       _person = null;
@@ -2031,9 +2171,10 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
     btn.addEventListener('click', () => open());
 
-    closeBtn.addEventListener('click', () => panel.classList.remove('open'));
+    const close = () => panel.classList.remove('open');
+    closeBtn.addEventListener('click', close);
 
-    return { open };
+    return { open, close };
   })();
 
   // ── Collapsible filter column: starts closed on phones, where it would cover the map ──
