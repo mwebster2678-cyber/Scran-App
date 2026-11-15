@@ -1,0 +1,193 @@
+[
+  {
+    "name": "Wingmans",
+    "location": "Soho",
+    "lat": 51.51304,
+    "lon": -0.13149,
+    "placeId": "cc9324723a98",
+    "mentions": [
+      {
+        "videoId": "jRbxJeM59wY",
+        "videoTitle": "London’s newest chicken Caesar wrap any good?",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Bite Twice reviewed Wingmans' chicken Caesar wrap favorably. They praise the crispy chicken skin, creamy spicy sauce, grated Parmesan, and perfect ratio of chicken to salad. They note it's a good quick lunch option in Soho without long queues, with online booking available.",
+        "verdict": "Excellent chicken Caesar wrap, perfect ratio, creamy sauce.",
+        "dishes": [
+          "Chicken Caesar wrap"
+        ],
+        "sponsored": false,
+        "at": 5
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Santa Nata",
+    "location": "Borough Market",
+    "lat": 51.50623,
+    "lon": -0.09234,
+    "placeId": "04d287ad344f",
+    "mentions": [
+      {
+        "videoId": "gzx-TrGrYZo",
+        "videoTitle": "Is this London’s best pastel de nata? 🇵🇹",
+        "rating": 7.7,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Gerry gave 7.7, praising the gooey warm custard and crispy caramelized shell. Paul gave 6.4, finding it too sweet and gloopy. They only sell one item—pastel de nata.",
+        "verdict": "Excellent crispy shell and custardy filling. Highly rated.",
+        "dishes": [
+          "Pastel de nata"
+        ],
+        "sponsored": false,
+        "at": 6
+      }
+    ],
+    "bestRating": 7.7,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Galvin La Chapelle",
+    "location": "Spitalfields",
+    "lat": 51.52014,
+    "lon": -0.0781,
+    "placeId": "ba6bb5afbf6e",
+    "mentions": [
+      {
+        "videoId": "LA_2xpsRfx4",
+        "videoTitle": "When 2 Michelin chef’s join forces at Galvin La Chapelle 🤌🏽",
+        "rating": 9.1,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Michelin star restaurant. Bite Twice were invited and visited with guest chef Tom Brown. They thoroughly reviewed the menu including duck liver parfait with spicy cherries and popcorn crumble, lobster toes, sea green with soy and radish, crab custard with heritage tomatoes and radish, lamb trio, and coconut parfait with honey and chamomile. They scored it 9.1 and called it one of the best meals they've had.",
+        "verdict": "One of the best meals they've had. Score 9.1.",
+        "dishes": [
+          "Duck liver parfait with spicy cherries and popcorn crumble",
+          "Lobster toes",
+          "Sea green with soy and radish",
+          "Crab custard with heritage tomatoes and radish",
+          "Lamb trio",
+          "Coconut parfait with honey and chamomile"
+        ],
+        "sponsored": false,
+        "at": 6
+      }
+    ],
+    "bestRating": 9.1,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Bentley's Oyster Bar & Grill",
+    "location": "Piccadilly",
+    "lat": 51.50962,
+    "lon": -0.13774,
+    "placeId": "d80f85b69216",
+    "mentions": [
+      {
+        "videoId": "cErMPX6RPBo",
+        "videoTitle": "Reviewing bougi fish and chips at one of London’s oldest oyster bars 🐠",
+        "rating": 10,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "One of London's oldest oyster bars and bougie fish and chip places, serving oysters for 150 years. Gerry and Paul visited on National Fish and Chip Day and praised the fish and chips extensively as some of the best they've ever had.",
+        "verdict": "Some of the best fish and chips I've ever had, ever.",
+        "dishes": [
+          "Fish and chips",
+          "Oysters",
+          "Whitebait",
+          "Scampi",
+          "Curry sauce"
+        ],
+        "sponsored": false,
+        "at": 6
+      }
+    ],
+    "bestRating": 10,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Goldies",
+    "location": "off Carnaby Street",
+    "lat": 51.51268,
+    "lon": -0.13861,
+    "placeId": "7a840d92cf38",
+    "mentions": [
+      {
+        "videoId": "gTi9ZP1BpEI",
+        "videoTitle": "Is Goldies off Carnaby street worthy of the hype?",
+        "rating": 8.3,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Bite Twice visited and extensively reviewed elevated hot dogs, burgers and ribs. Paul gave the ribs a 9.8/10 rating as his favorite dish. Both reviewers praised the quality, with final scores of 8.5 (Gerry) and 8.1 (Paul).",
+        "verdict": "Excellent elevated comfort food, ribs are exceptional.",
+        "dishes": [
+          "Elevated hot dogs",
+          "Burgers",
+          "Ribs",
+          "Charred asparagus",
+          "Burnt ends"
+        ],
+        "sponsored": false,
+        "at": 0
+      }
+    ],
+    "bestRating": 8.3,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Panadera",
+    "location": "Mayfair",
+    "lat": 51.5433,
+    "lon": -0.1419,
+    "placeId": "7dfe93642e7f",
+    "mentions": [
+      {
+        "videoId": "N3xttKm7PJE",
+        "videoTitle": "Is this viral London bakery worthy of the hype?",
+        "rating": 7.8,
+        "rating_out_of": 10,
+        "sentiment": "mixed",
+        "notes": "Viral Filipino bakery. Bite Twice reviewed the ube donut (8.2/10), miso cinnamon roll (7.4/10), sausage roll (7.3/10) and chicken Caesar wrap. The ube donut was excellent and creamy, but other items didn't fully live up to the hype due to dryness and lack of flavour.",
+        "verdict": "Good items but not entirely worthy of hype. 7.8/10",
+        "dishes": [
+          "Ube donut",
+          "Miso cinnamon roll",
+          "Sausage roll",
+          "Chicken Caesar wrap"
+        ],
+        "sponsored": false,
+        "at": 0
+      }
+    ],
+    "bestRating": 7.8,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Guinness Bar",
+    "location": "Covent Garden",
+    "lat": 51.51349,
+    "lon": -0.12491,
+    "placeId": "5e779a7a0689",
+    "mentions": [
+      {
+        "videoId": "jOIfcaw04dk",
+        "videoTitle": "Is the Guinness pie at the Guinness brewery any good? 🥧",
+        "rating": 8.4,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Bite Twice reviewed the beef and Guinness pie with mash (£14). Gerry scored it 8.4/10, praising the tasty gravy, rich beef, and quality. Paul scored it 7.9/10, finding it good but noting the Guinness flavour was subtle and portion size small.",
+        "verdict": "Excellent pie with rich flavour and superb mash quality.",
+        "dishes": [
+          "Beef and Guinness pie with mash"
+        ],
+        "sponsored": false,
+        "at": 0
+      }
+    ],
+    "bestRating": 8.4,
+    "bestRatingOutOf": 10
+  }
+]

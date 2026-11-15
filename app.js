@@ -951,7 +951,6 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       colour: '#D35400',
       textColour: '#B34700',
       zIndexOffset: 480,
-      draft: true, // until its picks are reviewed
     },
   ].filter(c => !c.draft || PREVIEW);
 

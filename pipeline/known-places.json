@@ -1576,5 +1576,675 @@
   "lon": -0.15085,
   "creator": "topjaw",
   "videoId": "uF83J3HHzJ0"
+ },
+ {
+  "names": [
+   "Cafe de Frango",
+   "Casa do Frango"
+  ],
+  "area": "London",
+  "name": "Casa do Frango",
+  "placeId": "8bec3b8e38be",
+  "lat": 51.50486,
+  "lon": -0.09282,
+  "creator": "bitetwice",
+  "videoId": "MyButnqrJrs"
+ },
+ {
+  "names": [
+   "Old Hag",
+   "The Old Hag",
+   "Auld hag"
+  ],
+  "area": "Angel",
+  "name": "Auld hag",
+  "placeId": null,
+  "lat": 51.5311523,
+  "lon": -0.105828,
+  "creator": "bitetwice",
+  "videoId": "L1deaSDnIqE"
+ },
+ {
+  "names": [
+   "Spud Bros Express",
+   "SpudBros Express"
+  ],
+  "area": "Oxford Circus",
+  "name": "SpudBros Express",
+  "placeId": null,
+  "lat": 51.5146562,
+  "lon": -0.14265239999999998,
+  "creator": "bitetwice",
+  "videoId": "zVkav6li3rU"
+ },
+ {
+  "names": [
+   "Lagom",
+   "Lagom by Elliot Cunningham"
+  ],
+  "area": "Hackney",
+  "name": "Lagom by Elliot Cunningham",
+  "placeId": null,
+  "lat": 51.5482995,
+  "lon": -0.0685418,
+  "creator": "bitetwice",
+  "videoId": "sgPEfU87BuE"
+ },
+ {
+  "names": [
+   "Czer",
+   "CZER"
+  ],
+  "area": null,
+  "name": "CZER",
+  "placeId": null,
+  "lat": 51.513322099999996,
+  "lon": -0.15423399999999998,
+  "creator": "bitetwice",
+  "videoId": "mF16ivjswIU"
+ },
+ {
+  "names": [
+   "Benji's",
+   "Benny's Broadway"
+  ],
+  "area": "Broadway Market",
+  "name": "Benny's Broadway",
+  "placeId": null,
+  "lat": 51.5370579,
+  "lon": -0.0616365,
+  "creator": "bitetwice",
+  "videoId": "lIzGAYvOaEU"
+ },
+ {
+  "names": [
+   "<UNKNOWN>",
+   "Athericious",
+   "Udderlicious"
+  ],
+  "area": "Upper Street",
+  "name": "Udderlicious",
+  "placeId": "92c7e57435dd",
+  "lat": 51.54233,
+  "lon": -0.1031,
+  "creator": "bitetwice",
+  "videoId": "oFIVxqL_eJE"
+ },
+ {
+  "names": [
+   "Guinness Factory",
+   "Guinness Bar",
+   "Guinness Open Gate Brewery London"
+  ],
+  "area": "Covent Garden",
+  "name": "Guinness Open Gate Brewery London",
+  "placeId": "853eb0e5478d",
+  "lat": 51.51318,
+  "lon": -0.12541,
+  "creator": "bitetwice",
+  "videoId": "jOIfcaw04dk"
+ },
+ {
+  "names": [
+   "Bancone",
+   "Bancone Golden Square"
+  ],
+  "area": "Central London",
+  "name": "Bancone Golden Square",
+  "placeId": "9b7596bfad14",
+  "lat": 51.51136,
+  "lon": -0.13644,
+  "creator": "bitetwice",
+  "videoId": "G50mnKykN2I"
+ },
+ {
+  "names": [
+   "Claridge's"
+  ],
+  "area": null,
+  "name": "Claridge's",
+  "placeId": null,
+  "lat": 51.5124212,
+  "lon": -0.1478613,
+  "creator": "bitetwice",
+  "videoId": "eTqgycOLzrk"
+ },
+ {
+  "names": [
+   "Antonio's",
+   "Antonio Delicatessen"
+  ],
+  "area": "Lewisham",
+  "name": "Antonio Delicatessen",
+  "placeId": "152f42c1a529",
+  "lat": 51.46174,
+  "lon": -0.00962,
+  "creator": "bitetwice",
+  "videoId": "NSmZuNX3aRk"
+ },
+ {
+  "names": [
+   "Kerfield Arms",
+   "The Kerfield Arms"
+  ],
+  "area": "Camberwell, South London",
+  "name": "The Kerfield Arms",
+  "placeId": null,
+  "lat": 51.4729489,
+  "lon": -0.0898573,
+  "creator": "bitetwice",
+  "videoId": "Qc9rsOVRKzg"
+ },
+ {
+  "names": [
+   "Meatstock at the Commercial Tavern",
+   "Meatstock",
+   "Meat Stop - Shoreditch"
+  ],
+  "area": "Commercial Tavern (residency)",
+  "name": "Meat Stop - Shoreditch",
+  "placeId": null,
+  "lat": 51.5216499,
+  "lon": -0.0756797,
+  "creator": "bitetwice",
+  "videoId": "z0-DS4evEv8"
+ },
+ {
+  "names": [
+   "Seven Dials Market",
+   "Little Pudding"
+  ],
+  "area": "Covent Garden",
+  "name": "Little Pudding",
+  "placeId": null,
+  "lat": 51.5140531,
+  "lon": -0.1256333,
+  "creator": "bitetwice",
+  "videoId": "hI1NVMFW_Ew"
+ },
+ {
+  "names": [
+   "Jolene",
+   "Jolene Colebrooke Row"
+  ],
+  "area": "Islington",
+  "name": "Jolene Colebrooke Row",
+  "placeId": "44c8d2d56d67",
+  "lat": 51.53667,
+  "lon": -0.10103,
+  "creator": "bitetwice",
+  "videoId": "9R0OMsOkqQk"
+ },
+ {
+  "names": [
+   "Poosie's Deli",
+   "Superette"
+  ],
+  "area": "Abbey Street",
+  "name": "Superette",
+  "placeId": "19501a07292b",
+  "lat": 51.54077,
+  "lon": -0.10282,
+  "creator": "bitetwice",
+  "videoId": "D2FCULHf9MM"
+ },
+ {
+  "names": [
+   "<UNKNOWN>",
+   "C9",
+   "Rock Steady Eddie's"
+  ],
+  "area": "South London",
+  "name": "Rock Steady Eddie's",
+  "placeId": "71c2ae2807f2",
+  "lat": 51.47206,
+  "lon": -0.09341,
+  "creator": "bitetwice",
+  "videoId": "2SMWH-_WGzo"
+ },
+ {
+  "names": [
+   "Clifton Street Market",
+   "Bánh Mì & Son",
+   "Banh Mi & Son"
+  ],
+  "area": "Clifton Street",
+  "name": "Banh Mi & Son",
+  "placeId": null,
+  "lat": 51.521848899999995,
+  "lon": -0.08351549999999999,
+  "creator": "bitetwice",
+  "videoId": "mmvjZezGf5A"
+ },
+ {
+  "names": [
+   "Bun Head",
+   "Bunhead Bakery"
+  ],
+  "area": "Herne Hill",
+  "name": "Bunhead Bakery",
+  "placeId": "2dfcf3461dfc",
+  "lat": 51.43916,
+  "lon": -0.12333,
+  "creator": "bitetwice",
+  "videoId": "4l9diyh8Tek"
+ },
+ {
+  "names": [
+   "Coper",
+   "Coppari",
+   "Copains"
+  ],
+  "area": "Covent Garden",
+  "name": "Copains",
+  "placeId": "c21bc4185d09",
+  "lat": 51.51462,
+  "lon": -0.12589,
+  "creator": "bitetwice",
+  "videoId": "6CXzEqJpauc"
+ },
+ {
+  "names": [
+   "<UNKNOWN>",
+   "Kipferl"
+  ],
+  "area": "Islington",
+  "name": "Kipferl",
+  "placeId": "bb1913936a96",
+  "lat": 51.53517,
+  "lon": -0.10349,
+  "creator": "bitetwice",
+  "videoId": "4U86Sd_batc"
+ },
+ {
+  "names": [
+   "<UNKNOWN>",
+   "Rise and Dine Café",
+   "Rise and Dine Cafe"
+  ],
+  "area": "Lambeth",
+  "name": "Rise and Dine Cafe",
+  "placeId": null,
+  "lat": 51.4949933,
+  "lon": -0.11680849999999998,
+  "creator": "bitetwice",
+  "videoId": "APHSNla0gXg"
+ },
+ {
+  "names": [
+   "Bosworth Collab",
+   "Fostok Halab Market"
+  ],
+  "area": "Acton",
+  "name": "Fostok Halab Market",
+  "placeId": "439761d3fa6b",
+  "lat": 51.50851,
+  "lon": -0.2774,
+  "creator": "bitetwice",
+  "videoId": "APHSNla0gXg"
+ },
+ {
+  "names": [
+   "Bara",
+   "Bara Café"
+  ],
+  "area": "Peckham",
+  "name": "Bara Café",
+  "placeId": null,
+  "lat": 51.468038,
+  "lon": -0.06908689999999999,
+  "creator": "bitetwice",
+  "videoId": "ipJ0rZsPP6s"
+ },
+ {
+  "names": [
+   "August Bakery"
+  ],
+  "area": "London",
+  "name": "August Bakery",
+  "placeId": null,
+  "lat": 51.4611209,
+  "lon": -0.1628359,
+  "creator": "bitetwice",
+  "videoId": "m6kUK_bmVuU"
+ },
+ {
+  "names": [
+   "Offley's Bakery",
+   "Coughlans Bakery"
+  ],
+  "area": "Croydon",
+  "name": "Coughlans Bakery",
+  "placeId": "344000fc8128",
+  "lat": 51.37235,
+  "lon": -0.09945,
+  "creator": "bitetwice",
+  "videoId": "FYwaCHtAFX8"
+ },
+ {
+  "names": [
+   "Fred Bakery",
+   "Fred Bakery Oxford Circus"
+  ],
+  "area": "Oxford Circus",
+  "name": "Fred Bakery Oxford Circus",
+  "placeId": "42a282c06696",
+  "lat": 51.51648,
+  "lon": -0.14149,
+  "creator": "bitetwice",
+  "videoId": "NNzxbUYJgXc"
+ },
+ {
+  "names": [
+   "Sue",
+   "Souffrance",
+   "Onsu"
+  ],
+  "area": "London",
+  "name": "Onsu",
+  "placeId": "0ef4df23cfc4",
+  "lat": 51.51249,
+  "lon": -0.13192,
+  "creator": "bitetwice",
+  "videoId": "g1IGkbi0afY"
+ },
+ {
+  "names": [
+   "Cherries Cafe",
+   "Terry's Cafe"
+  ],
+  "area": "Soho",
+  "name": "Terry's Cafe",
+  "placeId": "957ac3696edf",
+  "lat": 51.50073,
+  "lon": -0.0984,
+  "creator": "bitetwice",
+  "videoId": "-3WJAl7O21Q"
+ },
+ {
+  "names": [
+   "Robin's Ramen"
+  ],
+  "area": "Notting Hill",
+  "name": "Robin's Ramen",
+  "placeId": null,
+  "lat": 51.5065924,
+  "lon": -0.208449,
+  "creator": "bitetwice",
+  "videoId": "9k8qlRjaHdo"
+ },
+ {
+  "names": [
+   "Conny's Pizza",
+   "Connie's Pizza"
+  ],
+  "area": "Peckham",
+  "name": "Connie's Pizza",
+  "placeId": null,
+  "lat": 51.473669799999996,
+  "lon": -0.0574442,
+  "creator": "bitetwice",
+  "videoId": "HDTsrOAvhIA"
+ },
+ {
+  "names": [
+   "Patio Pizza"
+  ],
+  "area": null,
+  "name": "Patio Pizza",
+  "placeId": "9c5b080c2870",
+  "lat": 51.40844,
+  "lon": -0.28522,
+  "creator": "bitetwice",
+  "videoId": "bTDdprkTwqo"
+ },
+ {
+  "names": [
+   "The Groa",
+   "Groa",
+   "Grosvenor Arms"
+  ],
+  "area": null,
+  "name": "Grosvenor Arms",
+  "placeId": null,
+  "lat": 51.447353,
+  "lon": -0.1894889,
+  "creator": "bitetwice",
+  "videoId": "Nzplcs0m-K8"
+ },
+ {
+  "names": [
+   "Crisp",
+   "Crispy",
+   "Crisp W1"
+  ],
+  "area": "W6",
+  "name": "Crisp W1",
+  "placeId": null,
+  "lat": 51.5133863,
+  "lon": -0.15382469999999998,
+  "creator": "bitetwice",
+  "videoId": "Nzplcs0m-K8"
+ },
+ {
+  "names": [
+   "Aonan",
+   "Vincenzo pizza"
+  ],
+  "area": null,
+  "name": "Vincenzo pizza",
+  "placeId": null,
+  "lat": 51.5248524,
+  "lon": -0.0713985,
+  "creator": "bitetwice",
+  "videoId": "Nzplcs0m-K8"
+ },
+ {
+  "names": [
+   "Dough Hands",
+   "Dough Hands East"
+  ],
+  "area": null,
+  "name": "Dough Hands East",
+  "placeId": null,
+  "lat": 51.5453747,
+  "lon": -0.0632078,
+  "creator": "bitetwice",
+  "videoId": "7P5TW9pVowE"
+ },
+ {
+  "names": [
+   "Raclette stall",
+   "Raclette Stall",
+   "Kappacasein Dairy"
+  ],
+  "area": "Borough Market",
+  "name": "Kappacasein Dairy",
+  "placeId": "d83514295053",
+  "lat": 51.50495,
+  "lon": -0.09068,
+  "creator": "bitetwice",
+  "videoId": "9PzF2hfoVjU"
+ },
+ {
+  "names": [
+   "Petty Co",
+   "Wasuya"
+  ],
+  "area": "Petty Coat Lane",
+  "name": "Wasuya",
+  "placeId": null,
+  "lat": 51.5149526,
+  "lon": -0.0737817,
+  "creator": "bitetwice",
+  "videoId": "YZKsWh6EikI"
+ },
+ {
+  "names": [
+   "Furnace Fish Grill Oyster Bar",
+   "Furness Oyster Bar"
+  ],
+  "area": "Camden",
+  "name": "Furness Oyster Bar",
+  "placeId": null,
+  "lat": 51.505581799999995,
+  "lon": -0.0904328,
+  "creator": "bitetwice",
+  "videoId": "vwbYD7yQ69U"
+ },
+ {
+  "names": [
+   "<UNKNOWN>",
+   "Jamie Oliver's Favourite Kebab Shop (Fulham)",
+   "Kebab Kid"
+  ],
+  "area": "Fulham",
+  "name": "Kebab Kid",
+  "placeId": "05a44e7a2b84",
+  "lat": 51.47227,
+  "lon": -0.20275,
+  "creator": "bitetwice",
+  "videoId": "w4E96SAExdE"
+ },
+ {
+  "names": [
+   "Honey's",
+   "Honey's Caribbean Take Away"
+  ],
+  "area": "Deptford",
+  "name": "Honey's Caribbean Take Away",
+  "placeId": null,
+  "lat": 51.476965,
+  "lon": -0.026046,
+  "creator": "bitetwice",
+  "videoId": "jj1kXlZBn88"
+ },
+ {
+  "names": [
+   "Molly's",
+   "Morley's"
+  ],
+  "area": "Deptford",
+  "name": "Morley's",
+  "placeId": "5fc1e997402e",
+  "lat": 51.48021,
+  "lon": -0.0263,
+  "creator": "bitetwice",
+  "videoId": "ky7ZG6TTI94"
+ },
+ {
+  "names": [
+   "<UNKNOWN>",
+   "Wes Green",
+   "West Green Bagels and Juice"
+  ],
+  "area": "Tottenham",
+  "name": "West Green Bagels and Juice",
+  "placeId": "c8cf6d914912",
+  "lat": 51.58424,
+  "lon": -0.07568,
+  "creator": "bitetwice",
+  "videoId": "FLF4S0v8MRo"
+ },
+ {
+  "names": [
+   "Dave's Hot Chicken"
+  ],
+  "area": "London",
+  "name": "Dave's Hot Chicken",
+  "placeId": null,
+  "lat": 51.5426619,
+  "lon": -0.0061404,
+  "creator": "bitetwice",
+  "videoId": "Q06-dzNhoIw"
+ },
+ {
+  "names": [
+   "Octopus Kebab Stall",
+   "Pescobar Seafood London"
+  ],
+  "area": "Camden Market",
+  "name": "Pescobar Seafood London",
+  "placeId": "f5e6c4dff449",
+  "lat": 51.54263,
+  "lon": -0.14817,
+  "creator": "bitetwice",
+  "videoId": "LJKrm6BhdF8"
+ },
+ {
+  "names": [
+   "<UNKNOWN>",
+   "Slowburn"
+  ],
+  "area": "Waltham Stow/East London",
+  "name": "Slowburn",
+  "placeId": null,
+  "lat": 51.591405,
+  "lon": -0.0394735,
+  "creator": "bitetwice",
+  "videoId": "FxUk9NO2d5g"
+ },
+ {
+  "names": [
+   "Francesco's"
+  ],
+  "area": "Camberwell",
+  "name": "Francesco's",
+  "placeId": "ed00817e4a0e",
+  "lat": 51.4738,
+  "lon": -0.08908,
+  "creator": "bitetwice",
+  "videoId": "aUephbK7uUw"
+ },
+ {
+  "names": [
+   "Lahor Karahi",
+   "Lahore Karahi"
+  ],
+  "area": "Tooting",
+  "name": "Lahore Karahi",
+  "placeId": "8113d52b72b7",
+  "lat": 51.42958,
+  "lon": -0.16617,
+  "creator": "bitetwice",
+  "videoId": "Ak5Z8nP4SHU"
+ },
+ {
+  "names": [
+   "Galvin La Chapelle"
+  ],
+  "area": "Spitalfields",
+  "name": "Galvin La Chapelle",
+  "placeId": "ba6bb5afbf6e",
+  "lat": 51.52014,
+  "lon": -0.0781,
+  "creator": "bitetwice",
+  "videoId": "LA_2xpsRfx4"
+ },
+ {
+  "names": [
+   "Hassos",
+   "Hassos Doner"
+  ],
+  "area": "Green Lanes, Haringey",
+  "name": "Hassos Doner",
+  "placeId": "8e6fa4a93ea5",
+  "lat": 51.57867,
+  "lon": -0.09914,
+  "creator": "bitetwice",
+  "videoId": "1n8VcFym0kE"
+ },
+ {
+  "names": [
+   "Wingman's",
+   "Wingmans"
+  ],
+  "area": "Soho",
+  "name": "Wingmans",
+  "placeId": "cc9324723a98",
+  "lat": 51.51304,
+  "lon": -0.13149,
+  "creator": "bitetwice",
+  "videoId": "jRbxJeM59wY"
  }
 ]

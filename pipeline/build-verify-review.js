@@ -243,7 +243,7 @@ function save() { try { localStorage.setItem(STORE, JSON.stringify(state)); } ca
 const DROP_REASONS = {
   guest_recommendation: 'A guest’s pick', guest_own_place: 'Guest’s own place', only_mentioned: 'Only mentioned',
   event_stall: 'Their own event', closed: 'Closed now', temporary: 'Pop-up / temporary stall',
-  not_london: 'Not London', not_a_place_to_eat: 'Not a place to eat', other: 'Other',
+  not_london: 'Not London', not_a_place_to_eat: 'Not a place to eat', cant_find: 'Can’t find', other: 'Other',
 };
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 const mapLink = o => 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(o.name + ', ' + (o.address || 'London'));

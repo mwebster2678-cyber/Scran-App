@@ -1,0 +1,2188 @@
+[
+  {
+    "name": "Wingmans",
+    "location": "Soho",
+    "lat": 51.51304,
+    "lon": -0.13149,
+    "placeId": "cc9324723a98",
+    "mentions": [
+      {
+        "videoId": "jRbxJeM59wY",
+        "videoTitle": "London’s newest chicken Caesar wrap any good?",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Bite Twice reviewed Wingmans' chicken Caesar wrap favorably. They praise the crispy chicken skin, creamy spicy sauce, grated Parmesan, and perfect ratio of chicken to salad. They note it's a good quick lunch option in Soho without long queues, with online booking available.",
+        "verdict": "Excellent chicken Caesar wrap, perfect ratio, creamy sauce.",
+        "dishes": [
+          "Chicken Caesar wrap"
+        ],
+        "sponsored": false,
+        "at": 5
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Casa do Frango",
+    "location": "London",
+    "lat": 51.50486,
+    "lon": -0.09282,
+    "placeId": "8bec3b8e38be",
+    "mentions": [
+      {
+        "videoId": "MyButnqrJrs",
+        "videoTitle": "🇵🇹🇵🇹",
+        "rating": 8.6,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Bite Twice visited and reviewed this Portuguese restaurant extensively, praising multiple dishes including sea bass ('some of the best fish I've ever had'), frango piri piri chicken ('some of the best chicken I've ever had, perfectly juicy'), bacalhau, pork croquettes, and pork ribs. They noted the venue as 'absolutely stunning' and gave ratings of 8.6 and 8.7.",
+        "verdict": "Outstanding Portuguese restaurant with exceptional fish and chicken",
+        "dishes": [
+          "Frango piri piri",
+          "Sea bass with lemon butter and chives",
+          "Bacalhau",
+          "Beef pica pau",
+          "Pork croquettes with mustard béchamel",
+          "Grilled chorizo with black olive mayo",
+          "Cod fritters with lemon mayo",
+          "Pork ribs"
+        ],
+        "sponsored": false,
+        "at": 5
+      }
+    ],
+    "bestRating": 8.6,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Auld hag",
+    "location": "Angel",
+    "lat": 51.5311523,
+    "lon": -0.105828,
+    "placeId": null,
+    "mentions": [
+      {
+        "videoId": "L1deaSDnIqE",
+        "videoTitle": "Does a full Scottish breakfast beat a full English ? 🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "mixed",
+        "notes": "Bite Twice reviewed a full Scottish breakfast here. Both presenters gave their own opinions: Gerry scored it 7.9/10 and Paul 7.7/10. They found it a solid breakfast with abundant portions, though Gerry felt the egg could have been more runny and Paul preferred the Full English overall. Priced at £17.50.",
+        "verdict": "Solid breakfast with great portions, Full English wins.",
+        "dishes": [
+          "Full Scottish breakfast",
+          "Black pudding",
+          "Haggis",
+          "Square sausage",
+          "Bacon",
+          "Beans",
+          "Egg"
+        ],
+        "sponsored": false,
+        "at": 6
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Santa Nata",
+    "location": "Borough Market",
+    "lat": 51.50623,
+    "lon": -0.09234,
+    "placeId": "04d287ad344f",
+    "mentions": [
+      {
+        "videoId": "gzx-TrGrYZo",
+        "videoTitle": "Is this London’s best pastel de nata? 🇵🇹",
+        "rating": 7.7,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Gerry gave 7.7, praising the gooey warm custard and crispy caramelized shell. Paul gave 6.4, finding it too sweet and gloopy. They only sell one item—pastel de nata.",
+        "verdict": "Excellent crispy shell and custardy filling. Highly rated.",
+        "dishes": [
+          "Pastel de nata"
+        ],
+        "sponsored": false,
+        "at": 6
+      }
+    ],
+    "bestRating": 7.7,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Galvin La Chapelle",
+    "location": "Spitalfields",
+    "lat": 51.52014,
+    "lon": -0.0781,
+    "placeId": "ba6bb5afbf6e",
+    "mentions": [
+      {
+        "videoId": "LA_2xpsRfx4",
+        "videoTitle": "When 2 Michelin chef’s join forces at Galvin La Chapelle 🤌🏽",
+        "rating": 9.1,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Michelin star restaurant. Bite Twice were invited and visited with guest chef Tom Brown. They thoroughly reviewed the menu including duck liver parfait with spicy cherries and popcorn crumble, lobster toes, sea green with soy and radish, crab custard with heritage tomatoes and radish, lamb trio, and coconut parfait with honey and chamomile. They scored it 9.1 and called it one of the best meals they've had.",
+        "verdict": "One of the best meals they've had. Score 9.1.",
+        "dishes": [
+          "Duck liver parfait with spicy cherries and popcorn crumble",
+          "Lobster toes",
+          "Sea green with soy and radish",
+          "Crab custard with heritage tomatoes and radish",
+          "Lamb trio",
+          "Coconut parfait with honey and chamomile"
+        ],
+        "sponsored": false,
+        "at": 6
+      }
+    ],
+    "bestRating": 9.1,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Bentley's Oyster Bar & Grill",
+    "location": "Piccadilly",
+    "lat": 51.50962,
+    "lon": -0.13774,
+    "placeId": "d80f85b69216",
+    "mentions": [
+      {
+        "videoId": "cErMPX6RPBo",
+        "videoTitle": "Reviewing bougi fish and chips at one of London’s oldest oyster bars 🐠",
+        "rating": 10,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "One of London's oldest oyster bars and bougie fish and chip places, serving oysters for 150 years. Gerry and Paul visited on National Fish and Chip Day and praised the fish and chips extensively as some of the best they've ever had.",
+        "verdict": "Some of the best fish and chips I've ever had, ever.",
+        "dishes": [
+          "Fish and chips",
+          "Oysters",
+          "Whitebait",
+          "Scampi",
+          "Curry sauce"
+        ],
+        "sponsored": false,
+        "at": 6
+      }
+    ],
+    "bestRating": 10,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "SpudBros Express",
+    "location": "Oxford Circus",
+    "lat": 51.5146562,
+    "lon": -0.14265239999999998,
+    "placeId": null,
+    "mentions": [
+      {
+        "videoId": "zVkav6li3rU",
+        "videoTitle": "£5 for loaded Doritos worth it?",
+        "rating": 7,
+        "rating_out_of": 10,
+        "sentiment": "mixed",
+        "notes": "Gerry gave it 7.2/10, Paul gave it 6.8/10. They reviewed loaded Doritos nachos for £5. Gerry found it gimmicky but tasty and worth it occasionally; Paul thought it was fun and not expensive but somewhat trashy, with both appreciating the generous toppings and nice chili/cream sauce.",
+        "verdict": "Gimmicky but tasty loaded nachos, worth it occasionally",
+        "dishes": [
+          "loaded Doritos nachos",
+          "spicy Doritos",
+          "chili",
+          "cream sauce"
+        ],
+        "sponsored": false,
+        "at": 15
+      }
+    ],
+    "bestRating": 7,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Lagom by Elliot Cunningham",
+    "location": "Hackney",
+    "lat": 51.5482995,
+    "lon": -0.0685418,
+    "placeId": null,
+    "mentions": [
+      {
+        "videoId": "sgPEfU87BuE",
+        "videoTitle": "Is this London’s best burger? 🍔",
+        "rating": 9.3,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Bite Twice visited and extensively reviewed Lagom's signature burger, rating it 9.3/10. They highlighted the exceptional quality: high-end beef, exceptionally soft bun, distinctive dill vinegar that cuts through, juicy and buttery meat. Despite initial visual disappointment, the taste was outstanding. At £11, they found it exceptional value.",
+        "verdict": "Outstanding burger with high-end beef and soft bun.",
+        "dishes": [
+          "Lagom burger"
+        ],
+        "sponsored": false,
+        "at": 0
+      }
+    ],
+    "bestRating": 9.3,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Goldies",
+    "location": "off Carnaby Street",
+    "lat": 51.51268,
+    "lon": -0.13861,
+    "placeId": "7a840d92cf38",
+    "mentions": [
+      {
+        "videoId": "gTi9ZP1BpEI",
+        "videoTitle": "Is Goldies off Carnaby street worthy of the hype?",
+        "rating": 8.3,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Bite Twice visited and extensively reviewed elevated hot dogs, burgers and ribs. Paul gave the ribs a 9.8/10 rating as his favorite dish. Both reviewers praised the quality, with final scores of 8.5 (Gerry) and 8.1 (Paul).",
+        "verdict": "Excellent elevated comfort food, ribs are exceptional.",
+        "dishes": [
+          "Elevated hot dogs",
+          "Burgers",
+          "Ribs",
+          "Charred asparagus",
+          "Burnt ends"
+        ],
+        "sponsored": false,
+        "at": 0
+      }
+    ],
+    "bestRating": 8.3,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Czer",
+    "location": null,
+    "lat": 51.513322099999996,
+    "lon": -0.15423399999999998,
+    "placeId": null,
+    "mentions": [
+      {
+        "videoId": "mF16ivjswIU",
+        "videoTitle": "Is the viral Czer wrap worth the hour queue?",
+        "rating": 7.8,
+        "rating_out_of": 10,
+        "sentiment": "mixed",
+        "notes": "Viral Caesar chicken salad wrap. Fresh and crunchy but not worth the hour-long queue. Both presenters agreed it's essentially a salad in a wrap. Scored 7.8 and 6.4 respectively.",
+        "verdict": "Fresh but overrated; not worth the queue.",
+        "dishes": [
+          "chicken Caesar wrap"
+        ],
+        "sponsored": false,
+        "at": 0
+      }
+    ],
+    "bestRating": 7.8,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Benny's Broadway",
+    "location": "Broadway Market",
+    "lat": 51.5370579,
+    "lon": -0.0616365,
+    "placeId": null,
+    "mentions": [
+      {
+        "videoId": "lIzGAYvOaEU",
+        "videoTitle": "Does London have decent banana pudding? 🍌",
+        "rating": 7.8,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Reviewed their banana pudding. Gerry gave it 7.8/10, praising it as naturally banana-y and creamy, though noting it lacks chunks of banana. Paul gave it 6.6/10, finding it less authentic tasting and less satisfying than Magnolia Bakery in New York.",
+        "verdict": null,
+        "dishes": [],
+        "sponsored": false,
+        "at": null
+      }
+    ],
+    "bestRating": 7.8,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Udderlicious",
+    "location": "Upper Street",
+    "lat": 51.54233,
+    "lon": -0.1031,
+    "placeId": "92c7e57435dd",
+    "mentions": [
+      {
+        "videoId": "oFIVxqL_eJE",
+        "videoTitle": "Best ice cream in London?",
+        "rating": 8,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Bite Twice visited and both reviewers tried multiple flavours. Paul rated it 8/10, Gerry gave it 8.3/10. Praised for high-quality, clean ice cream made with love and not trying to be a traditional Italian gelateria.",
+        "verdict": "Excellent ice cream, creative flavours, 8-8.3/10",
+        "dishes": [
+          "Salted caramel",
+          "Oreo cheesecake",
+          "Raspberry cheesecake",
+          "Salted caramel cookie dough"
+        ],
+        "sponsored": false,
+        "at": 5
+      }
+    ],
+    "bestRating": 8,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Panadera",
+    "location": "Mayfair",
+    "lat": 51.5433,
+    "lon": -0.1419,
+    "placeId": "7dfe93642e7f",
+    "mentions": [
+      {
+        "videoId": "N3xttKm7PJE",
+        "videoTitle": "Is this viral London bakery worthy of the hype?",
+        "rating": 7.8,
+        "rating_out_of": 10,
+        "sentiment": "mixed",
+        "notes": "Viral Filipino bakery. Bite Twice reviewed the ube donut (8.2/10), miso cinnamon roll (7.4/10), sausage roll (7.3/10) and chicken Caesar wrap. The ube donut was excellent and creamy, but other items didn't fully live up to the hype due to dryness and lack of flavour.",
+        "verdict": "Good items but not entirely worthy of hype. 7.8/10",
+        "dishes": [
+          "Ube donut",
+          "Miso cinnamon roll",
+          "Sausage roll",
+          "Chicken Caesar wrap"
+        ],
+        "sponsored": false,
+        "at": 0
+      }
+    ],
+    "bestRating": 7.8,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Guinness Open Gate Brewery London",
+    "location": "Covent Garden",
+    "lat": 51.51318,
+    "lon": -0.12541,
+    "placeId": "853eb0e5478d",
+    "mentions": [
+      {
+        "videoId": "jOIfcaw04dk",
+        "videoTitle": "Is the Guinness pie at the Guinness brewery any good? 🥧",
+        "rating": 8.4,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Bite Twice reviewed the beef and Guinness pie with mash (£14). Gerry scored it 8.4/10, praising the tasty gravy, rich beef, and quality. Paul scored it 7.9/10, finding it good but noting the Guinness flavour was subtle and portion size small.",
+        "verdict": "Excellent pie with rich flavour and superb mash quality.",
+        "dishes": [
+          "Beef and Guinness pie with mash"
+        ],
+        "sponsored": false,
+        "at": 0
+      }
+    ],
+    "bestRating": 8.4,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Bancone Golden Square",
+    "location": "Central London",
+    "lat": 51.51136,
+    "lon": -0.13644,
+    "placeId": "9b7596bfad14",
+    "mentions": [
+      {
+        "videoId": "G50mnKykN2I",
+        "videoTitle": "Does Bancone really do the best pasta in a London? 🍝",
+        "rating": 8.3,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Bite Twice visited and tasted multiple pasta dishes, praising the carbonara as one of the best they've ever eaten. They were impressed by the visible pasta preparation, al dente fresh pasta, and creative dishes including nduja and artichokes, and maltagliati with rare breed beef.",
+        "verdict": "One of the best carbonaras ever eaten. Highly recommended.",
+        "dishes": [
+          "Carbonara",
+          "Creamy maltagliati with rare breed beef",
+          "Fried artichoke",
+          "nduja and artichokes pasta"
+        ],
+        "sponsored": false,
+        "at": null
+      }
+    ],
+    "bestRating": 8.3,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Claridge's",
+    "location": null,
+    "lat": 51.5124212,
+    "lon": -0.1478613,
+    "placeId": null,
+    "mentions": [
+      {
+        "videoId": "eTqgycOLzrk",
+        "videoTitle": "Is the Claridge’s club sandwich worth it? 🥪",
+        "rating": 6.7,
+        "rating_out_of": 10,
+        "sentiment": "negative",
+        "notes": "Bite Twice visited and reviewed their £40 club sandwich. They found it mediocre and poorly executed, with bland flavors, cheap-tasting bread, and underwhelming chips. They scored it 6.7 and concluded it was not worth the price.",
+        "verdict": "Mediocre club sandwich, not worth £40.",
+        "dishes": [
+          "Club sandwich",
+          "Chips"
+        ],
+        "sponsored": false,
+        "at": 0
+      }
+    ],
+    "bestRating": 6.7,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Viet Rest",
+    "location": "Deptford",
+    "lat": 51.47772,
+    "lon": -0.02601,
+    "placeId": "e33d376e98a1",
+    "mentions": [
+      {
+        "videoId": "PD63milBzOk",
+        "videoTitle": "Trying Pho for the first time 🍜",
+        "rating": 7.3,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Bite Twice reviewed pho for the first time in Little Hanoi, Deptford. Both Gerry and Paul ate chicken pho and rare beef pho, giving detailed opinions on the broth quality, meat texture, and herb flavours. Gerry scored 7/10, Paul scored 7.6/10.",
+        "verdict": "Clean, refreshing pho; tasty but not transformative.",
+        "dishes": [
+          "Chicken pho",
+          "Rare beef pho"
+        ],
+        "sponsored": false,
+        "at": 12
+      }
+    ],
+    "bestRating": 7.3,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Antonio Delicatessen",
+    "location": "Lewisham",
+    "lat": 51.46174,
+    "lon": -0.00962,
+    "placeId": "152f42c1a529",
+    "mentions": [
+      {
+        "videoId": "NSmZuNX3aRk",
+        "videoTitle": "Lewisham’s Italian deli 🇮🇹",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Italian deli formerly known as Gennaro's since 2007. Presenters visited as children and returned to review. They tried a bresaola sandwich with Parmesan, lettuce and tomatoes, finding it delicious with beautifully crunchy bread at good value (£6.50).",
+        "verdict": "Nostalgic gem with excellent quality ingredients, beautifully balanced.",
+        "dishes": [
+          "Bresaola sandwich with Parmesan, lettuce, tomatoes"
+        ],
+        "sponsored": false,
+        "at": 5
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "The Connaught Bar",
+    "location": null,
+    "lat": 51.51018,
+    "lon": -0.14969,
+    "placeId": "9356c0c22149",
+    "mentions": [
+      {
+        "videoId": "TFLTkei9qT8",
+        "videoTitle": "VIP treatment at the world famous Connaught bar 🍸",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Both Gerry and Paul visited and reviewed their cocktails extensively, praising the famous Connaught martini prepared by a bartender, along with old fashioned, Long Island Iced Tea, and various other cocktails. They described the drinks as exquisite, sophisticated, smooth, and delicious throughout their visit.",
+        "verdict": "World-famous martini bar with exquisite, sophisticated cocktails.",
+        "dishes": [
+          "Connaught martini",
+          "Old fashioned",
+          "Long Island Iced Tea",
+          "Local bomb",
+          "Amaretto sour",
+          "Bloody Mary"
+        ],
+        "sponsored": false,
+        "at": 0
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "The Apollo",
+    "location": "West London",
+    "lat": 51.52041,
+    "lon": -0.15556,
+    "placeId": "0e00fc9c5779",
+    "mentions": [
+      {
+        "videoId": "QHSqRsvlwPM",
+        "videoTitle": "Is this London’s coolest Greek restaurant ? 🇬🇷",
+        "rating": 9.1,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Bite Twice visited and reviewed extensively. They praised the bread as a litmus test for quality, enjoyed the spicy feta, calamari with chili jam mayo, yellowtail tuna, lamb belly that melts into a \"river of lamby goodness\", artichokes with burnt butter aioli, lamb chops that integrate into \"a swimming pool of fatty delightful goo\", and ribeye steak with bone marrow juice.",
+        "verdict": "Outstanding Greek restaurant. Gerry: 9.2, Paul: 9.0.",
+        "dishes": [
+          "Bread basket",
+          "Spicy feta",
+          "Tzatziki",
+          "Calamari",
+          "Artichokes",
+          "Yellowtail tuna",
+          "Lamb belly",
+          "Lamb chops",
+          "Ribeye steak with bone marrow juice"
+        ],
+        "sponsored": false,
+        "at": 6
+      }
+    ],
+    "bestRating": 9.1,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "The Kerfield Arms",
+    "location": "Camberwell, South London",
+    "lat": 51.4729489,
+    "lon": -0.0898573,
+    "placeId": null,
+    "mentions": [
+      {
+        "videoId": "Qc9rsOVRKzg",
+        "videoTitle": "Reviewing the Michelin starred pud in South London",
+        "rating": 8.55,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Michelin-starred pub offering an exceptional £15 lunch deal with main and drink. Bite Twice praised the excellent pork with buttery glaze, creamy parsley sauce, and fluffy bread with crispy exterior. They highlighted the unpretentious neighborhood boozer atmosphere and exceptional service. Both reviewers scored it highly (8.4 and 8.7) and expressed desire to return for a full in-depth review.",
+        "verdict": "Exceptional value Michelin-starred lunch at an unpretentious neighborhood pub.",
+        "dishes": [
+          "Pork with parsley sauce and potatoes",
+          "Bread and butter"
+        ],
+        "sponsored": false,
+        "at": null
+      }
+    ],
+    "bestRating": 8.55,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Meat Stop - Shoreditch",
+    "location": "Commercial Tavern (residency)",
+    "lat": 51.5216499,
+    "lon": -0.0756797,
+    "placeId": null,
+    "mentions": [
+      {
+        "videoId": "z0-DS4evEv8",
+        "videoTitle": "Is this London’s best burger? 🍔",
+        "rating": 9.3,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Gerry and Paul reviewed Meatstock's burgers at their new residency at Commercial Tavern. Gerry gave the classic burger 9.3/10, praising the buttery Essex farm meat and comparing it favourably to Popl in Copenhagen. Paul gave the Blue Magic burger (stilton and caramelized onions) 9.4/10, highlighting perfect seasoning and excellent texture.",
+        "verdict": "Exceptional burgers. Classic 9.3/10, Blue Magic 9.4/10.",
+        "dishes": [
+          "Classic burger",
+          "Blue Magic burger"
+        ],
+        "sponsored": false,
+        "at": 6
+      }
+    ],
+    "bestRating": 9.3,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Ginger Pig",
+    "location": "Borough Market",
+    "lat": 51.51495,
+    "lon": -0.20428,
+    "placeId": "4916a9bce431",
+    "mentions": [
+      {
+        "videoId": "eCi4yiN-REQ",
+        "videoTitle": "Reviewing scotch eggs in Borough Market 👀",
+        "rating": 7.5,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Bite Twice tried the Ginger Pig's Scotch egg (£5.50) at their Borough Market stall. They praised the quality of the meat and seasoning but felt it would have been better served hot rather than cold. Paul gave it 7.5/10 and Gerry gave it 7.4/10. They also recommended trying the sausage rolls.",
+        "verdict": "Great meat and seasoning, but should be hotter.",
+        "dishes": [
+          "Scotch egg",
+          "Sausage rolls"
+        ],
+        "sponsored": false,
+        "at": 6
+      },
+      {
+        "videoId": "4CKv39wwhmY",
+        "videoTitle": "reviewing the Ginger pig lamb sausage roll in Borough Market 🐖🌭😉",
+        "rating": 87,
+        "rating_out_of": 100,
+        "sentiment": "positive",
+        "notes": "Bite Twice returned to review the lamb sausage roll after previously trying the pork version. Both presenters found it incredibly spiced with herbs, with a fatty, meaty, spicy, salty, flaky, golden, buttery pastry. Paul suggested he preferred the lamb slightly to the pork version.",
+        "verdict": "Spicy, herby lamb sausage roll worth trying",
+        "dishes": [
+          "Lamb sausage roll"
+        ],
+        "sponsored": false,
+        "at": 0
+      }
+    ],
+    "bestRating": 87,
+    "bestRatingOutOf": 100
+  },
+  {
+    "name": "Little Pudding",
+    "location": "Covent Garden",
+    "lat": 51.5140531,
+    "lon": -0.1256333,
+    "placeId": null,
+    "mentions": [
+      {
+        "videoId": "hI1NVMFW_Ew",
+        "videoTitle": "Reviewing the viral Guinness cake for st Patrick’s day ☘️",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Bite Twice reviewed the viral Guinness pudding, praising it highly for its gooey texture, strong Guinness flavour, chocolate speckles, and balance of flavours. They rated it 8.2/10. They also tried a chocolate caramel ice cream dessert rated 8.1/10, noting it was good but not as good as the Guinness pudding.",
+        "verdict": "Excellent gooey Guinness pudding, highly recommended.",
+        "dishes": [
+          "Guinness pudding",
+          "Chocolate caramel ice cream"
+        ],
+        "sponsored": false,
+        "at": 12
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "The Colonel Fawcett",
+    "location": "Camden",
+    "lat": 51.54184,
+    "lon": -0.13602,
+    "placeId": "fa250cbcdfeb",
+    "mentions": [
+      {
+        "videoId": "5QB8FSYkwac",
+        "videoTitle": "Bling Tasting Irish stouts. Could you tell which one is Guiness? 🤔",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Bite Twice visited for a blind stout tasting on St Patrick's Day and tried an impressive selection of Irish dishes that surprised them more than expected. They praised the white pudding scotch egg as 'one of the better ones in London', the Cashel Blue croquettes as 'gooey' and 'excellent', Dublin Bay prawns with soda bread as 'fantastic', and the beef and Guinness stew as outstanding.",
+        "verdict": "Outstanding Irish food; stew rated 10/10, 8.7/10.",
+        "dishes": [
+          "White pudding scotch egg",
+          "Cashel Blue croquettes",
+          "Dublin Bay prawns with soda bread",
+          "Beef and Guinness stew with champ"
+        ],
+        "sponsored": false,
+        "at": 6
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Jolene Colebrooke Row",
+    "location": "Islington",
+    "lat": 51.53667,
+    "lon": -0.10103,
+    "placeId": "44c8d2d56d67",
+    "mentions": [
+      {
+        "videoId": "9R0OMsOkqQk",
+        "videoTitle": "North London’s best bakery?",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Bite Twice visited and tasted items from this bakery. They praised the rhubarb pastry for its delicious, well-balanced flavours and great texture from the nuts, though felt the pastry could be crunchier. They also enjoyed a savoury jalapeño pastry with good crunch and heat.",
+        "verdict": "Delicious flavours and texture, could be crunchier.",
+        "dishes": [
+          "Rhubarb pastry",
+          "Jalapeño pastry"
+        ],
+        "sponsored": false,
+        "at": 0
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Superette",
+    "location": "Abbey Street",
+    "lat": 51.54077,
+    "lon": -0.10282,
+    "placeId": "19501a07292b",
+    "mentions": [
+      {
+        "videoId": "D2FCULHf9MM",
+        "videoTitle": "Would you pay £11 for a cheese toastie?",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Reviewed their cheese toasty (£11, triple cheese with kimchi on Dusty Knuckle bread) and sausage roll (£5). The cheese toasty scored 8.2 and was highly praised as one of the better they've had - very gooey with nice crunch and flavourful kimchi. The sausage roll scored 7.5.",
+        "verdict": "Excellent cheese toasty, one of the better they've tried.",
+        "dishes": [
+          "Cheese toasty with triple cheese and kimchi (£11)",
+          "Sausage roll (£5)"
+        ],
+        "sponsored": false,
+        "at": 5
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Rock Steady Eddie's",
+    "location": "South London",
+    "lat": 51.47206,
+    "lon": -0.09341,
+    "placeId": "71c2ae2807f2",
+    "mentions": [
+      {
+        "videoId": "2SMWH-_WGzo",
+        "videoTitle": "South London full English brekkie",
+        "rating": 7.1,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Gerry and Paul reviewed a full English breakfast here. Gerry gave it a solid 7.1, Paul gave it 10.2. They praised the sausage, bacon, eggs, tomato, beans, and fried slice. The boss has been running the place for 36 years. They noted it feels homely and is full of local South Londoners. Paul would recommend it.",
+        "verdict": "Solid full English; homely local place; worth a visit.",
+        "dishes": [
+          "Full English breakfast",
+          "Sausage",
+          "Bacon",
+          "Eggs",
+          "Tomato",
+          "Beans",
+          "Fried slice",
+          "Black pudding"
+        ],
+        "sponsored": false,
+        "at": null
+      }
+    ],
+    "bestRating": 7.1,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Roe",
+    "location": null,
+    "lat": 51.46339,
+    "lon": -0.11226,
+    "placeId": "38c0bd55c5de",
+    "mentions": [
+      {
+        "videoId": "g9siPLkGCa4",
+        "videoTitle": "The £25 Pie Burger 🍔🥧",
+        "rating": 8.35,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Michelin-starred restaurant featuring creative pie-themed dishes. Presenters visited and ate several dishes including sourdough, chicken wings, cheeseburger pie, and venison pie. They praised the quality of meats and creative concepts, with some reservations about the bread. Both rated it highly (8.4 and 8.3), confirming the £25 pie burger was worth trying.",
+        "verdict": "Creative pie dishes and quality meats deserve an 8.3+",
+        "dishes": [
+          "Sourdough",
+          "Chicken wings",
+          "Cheeseburger pie",
+          "Venison pie",
+          "Lamb with rhubarb pie"
+        ],
+        "sponsored": false,
+        "at": 0
+      }
+    ],
+    "bestRating": 8.35,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Banh Mi & Son",
+    "location": "Clifton Street",
+    "lat": 51.521848899999995,
+    "lon": -0.08351549999999999,
+    "placeId": null,
+    "mentions": [
+      {
+        "videoId": "mmvjZezGf5A",
+        "videoTitle": "Is this London’s best banh mi? #food",
+        "rating": 8.4,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Bite Twice reviewed multiple banh mi sandwiches at this market vendor. The pork banh mi (£14) scored 8.4 for its juicy, roasted pork and unique pineapple, though they wanted crispier bread. The ox heart banh mi (£12) scored 8.6 for unusual ingredients and perfect juiciness despite chewy meat.",
+        "verdict": "Delicious banh mi with unusual ingredients, highly recommended.",
+        "dishes": [
+          "Pork banh mi",
+          "Ox heart banh mi"
+        ],
+        "sponsored": false,
+        "at": 5
+      }
+    ],
+    "bestRating": 8.4,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Manze's",
+    "location": "Peckham",
+    "lat": 51.47402,
+    "lon": -0.06874,
+    "placeId": "4562e6fef8e5",
+    "mentions": [
+      {
+        "videoId": "YjlyxSdCKVI",
+        "videoTitle": "It’s pie week so we went and ate £25 pie & mash Manze’s X Wolseley collab #pietime",
+        "rating": 10,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Bite Twice celebrated National Pie Week at Moorgate City with Manze's and The Wolseley for a £25 pie and mash collaboration. Both presenters gave glowing reviews, with one calling it 'probably the best pie I've ever eaten' and praising the deeply creamy mash, rich buttery gravy, and excellent pastry.",
+        "verdict": "Best pie ever: deeply creamy, rich, buttery, excellent pastry.",
+        "dishes": [
+          "Pie and mash (£25 Manze's X Wolseley collaboration)"
+        ],
+        "sponsored": false,
+        "at": 5
+      }
+    ],
+    "bestRating": 10,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Bunhead Bakery",
+    "location": "Herne Hill",
+    "lat": 51.43916,
+    "lon": -0.12333,
+    "placeId": "2dfcf3461dfc",
+    "mentions": [
+      {
+        "videoId": "4l9diyh8Tek",
+        "videoTitle": "Reviewing the South London Palestinian bakery #food #londoners",
+        "rating": 9.3,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Palestinian bakery with British baking fusion. Reviewers were extremely impressed with the cinnamon bun (juicy, soft, with unfamiliar but pleasant Palestinian flavors) and the chocolate sourdough pastry (not too sweet, excellent chocolate flavor). Gerry gave it 9.3/10.",
+        "verdict": "Outstanding cinnamon buns and chocolate pastries at 9.3/10",
+        "dishes": [
+          "Cinnamon bun",
+          "Chocolate sourdough pastry"
+        ],
+        "sponsored": false,
+        "at": 0
+      }
+    ],
+    "bestRating": 9.3,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Shawarma Hut",
+    "location": "Walworth Road, Camberwell",
+    "lat": 51.48701,
+    "lon": -0.09534,
+    "placeId": "db1e85e0d7d3",
+    "mentions": [
+      {
+        "videoId": "5rKXheKXNUM",
+        "videoTitle": "5p chicken shawarma in London 🤯",
+        "rating": 9,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Bite Twice visited and reviewed the 5p chicken shawarma special (normally £4.99). They praised the fresh, juicy, tender meat with charred bits, generous portions, and highlighted the owner's charitable work feeding homeless and families with no conditions.",
+        "verdict": "Fresh, juicy, tender, delicious. Amazing value and community work.",
+        "dishes": [
+          "5p chicken shawarma wrap",
+          "Chicken shawarma (normally £4.99 with chips and drink)"
+        ],
+        "sponsored": false,
+        "at": 12
+      }
+    ],
+    "bestRating": 9,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Molly Malone's",
+    "location": null,
+    "lat": 51.50442,
+    "lon": -0.10588,
+    "placeId": "8b7bc9189efe",
+    "mentions": [
+      {
+        "videoId": "IeSmIuJ-sTA",
+        "videoTitle": "Trying a Spice bag for the first time 🇮🇪",
+        "rating": 8,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Visited to try their spice bag (chicken for £14) for the first time. Gerry and Paul loved it, describing it as 'filthy', 'delicious', 'dodgy', 'salty', 'spicy' - a fusion of Chinese and Irish chippy food.",
+        "verdict": "Fusion spice bag: dirty, delicious, dodgy - absolutely loved it.",
+        "dishes": [
+          "Spice bag chicken"
+        ],
+        "sponsored": false,
+        "at": 5
+      }
+    ],
+    "bestRating": 8,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Behind",
+    "location": "London Fields",
+    "lat": 51.53937,
+    "lon": -0.05747,
+    "placeId": "737397a2f942",
+    "mentions": [
+      {
+        "videoId": "3CoWgwIUkak",
+        "videoTitle": "At £65 is this the cheapest Michelin starred tasting menu?",
+        "rating": 9.4,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Michelin-starred restaurant offering a £65 lunchtime tasting menu. Bite Twice visited and gave enthusiastic reviews throughout, describing it as excellent value with innovative seafood dishes.",
+        "verdict": "Outstanding value Michelin-starred meal. 9.4/10.",
+        "dishes": [
+          "Prawn consommé",
+          "Hand-dived scallops with kipper sauce",
+          "Sole",
+          "Red prawn",
+          "Mullet and mussels",
+          "Apple dessert",
+          "Rhubarb and ginger",
+          "Sorbet with buttery biscuit"
+        ],
+        "sponsored": false,
+        "at": 0
+      }
+    ],
+    "bestRating": 9.4,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Copains",
+    "location": "Covent Garden",
+    "lat": 51.51462,
+    "lon": -0.12589,
+    "placeId": "c21bc4185d09",
+    "mentions": [
+      {
+        "videoId": "6CXzEqJpauc",
+        "videoTitle": "£22 for two pastries 🤯",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "negative",
+        "notes": "Gluten-free French bakery. Gerry and Paul tasted two pastries costing £18.90 and £21.60. They found both extremely disappointing—dry, dull vanilla flavour with no distinctive character. Scored 2.2, 2.1, and 2.4 out of 10.",
+        "verdict": "Disappointingly dry pastries for premium prices.",
+        "dishes": [
+          "New York pastry (vanilla)",
+          "Cinnamon pastry"
+        ],
+        "sponsored": false,
+        "at": 6
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Slowburn",
+    "location": "Waltham Stow/East London",
+    "lat": 51.591405,
+    "lon": -0.0394735,
+    "placeId": null,
+    "mentions": [
+      {
+        "videoId": "FxUk9NO2d5g",
+        "videoTitle": "Did you know there is a restaurant in East London in a denim factory?",
+        "rating": 8.5,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Restaurant in a denim factory serving creative dishes like pumpkin with pomegranate dressing, oxtail with sweet potato, pasta with creamy fillings, Vietnamese spiced pork, and sticky toffee dessert. Presenters praised the food quality, textures, flavors, and pleasant environment.",
+        "verdict": null,
+        "dishes": [],
+        "sponsored": false,
+        "at": null
+      }
+    ],
+    "bestRating": 8.5,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Kipferl",
+    "location": "Islington",
+    "lat": 51.53517,
+    "lon": -0.10349,
+    "placeId": "bb1913936a96",
+    "mentions": [
+      {
+        "videoId": "4U86Sd_batc",
+        "videoTitle": "Eating at London’s only Austrian restaurant 🇦🇹",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Bite Twice visited this Austrian restaurant in Camden Passage, Islington and thoroughly reviewed multiple dishes. They praised the schnitzel, kipferl soup, Austrian meatballs, escalope, Kaiserschmarrn pancake, and Austrian macaroni and cheese. They recommended the place 'with absolute enthusiasm and vigor'.",
+        "verdict": "Excellent Austrian restaurant with outstanding traditional dishes.",
+        "dishes": [
+          "Schnitzel",
+          "Kipferl (Austrian ramen-style soup)",
+          "Austrian meatballs",
+          "Escalope",
+          "Kaiserschmarrn (pancake with compote)",
+          "Austrian macaroni and cheese",
+          "Palm (Austrian pastry)"
+        ],
+        "sponsored": false,
+        "at": 10
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Rise and Dine Cafe",
+    "location": "Lambeth",
+    "lat": 51.4949933,
+    "lon": -0.11680849999999998,
+    "placeId": null,
+    "mentions": [
+      {
+        "videoId": "APHSNla0gXg",
+        "videoTitle": "Londons cheapest eats! Meals for £5 or less",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Bite Twice visited and reviewed this café, praising their £5 fry-up breakfast. They described it as 'Master Chef of deals' and 'unbeatable for £5 in 2026' with quality sausage, runny egg, beans, mushrooms and chips.",
+        "verdict": "Master Chef of deals. Unbeatable for £5.",
+        "dishes": [
+          "£5 fry-up breakfast with sausage, egg, beans, mushrooms and chips"
+        ],
+        "sponsored": false,
+        "at": 33
+      },
+      {
+        "videoId": "APHSNla0gXg",
+        "videoTitle": "Londons cheapest eats! Meals for £5 or less",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Bite Twice visited and reviewed this Turkish tantuni restaurant with a single-item menu. They praised the double lamb wrap (50p) highly, calling it 'happy food' with 'flavor in abundance', luscious meat, and zingy spice and fresh herbs. They cycled 42 miles for it.",
+        "verdict": "Flavor in abundance. Luscious meat, zingy spice.",
+        "dishes": [
+          "Double lamb wrap with herbs, lemon zest, salad and chili (50p for thin wrap)"
+        ],
+        "sponsored": false,
+        "at": 456
+      },
+      {
+        "videoId": "APHSNla0gXg",
+        "videoTitle": "Londons cheapest eats! Meals for £5 or less",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Bite Twice visited and reviewed this 100-year-old family-run pie and mash shop (opened 1926). They praised it as 'comforting food', 'like a hug from your nan' with thick gravy, gluey mash, and hearty pies for £4.40. Still run by the same family.",
+        "verdict": "Comforting food, like a hug from your nan.",
+        "dishes": [
+          "Two pies and mash with gravy for £4.40"
+        ],
+        "sponsored": false,
+        "at": 622
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Fostok Halab Market",
+    "location": "Acton",
+    "lat": 51.50851,
+    "lon": -0.2774,
+    "placeId": "439761d3fa6b",
+    "mentions": [
+      {
+        "videoId": "APHSNla0gXg",
+        "videoTitle": "Londons cheapest eats! Meals for £5 or less",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Bite Twice visited and reviewed this shawarma shop at the back of a Syrian grocery store. They praised the £3.50 chicken wrap highly, describing it as 'sits at the top of the league. Amazing' with excellent flaky bread, tender charred meat, fresh salad and yogurt.",
+        "verdict": "Sits at the top of the league. Amazing.",
+        "dishes": [
+          "£3.50 chicken shawarma wrap with salad and yogurt"
+        ],
+        "sponsored": false,
+        "at": 228
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Bara Café",
+    "location": "Peckham",
+    "lat": 51.468038,
+    "lon": -0.06908689999999999,
+    "placeId": null,
+    "mentions": [
+      {
+        "videoId": "ipJ0rZsPP6s",
+        "videoTitle": "Reviewing London’s first Welsh bakery/cafe 🏴󠁧󠁢󠁷󠁬󠁳󠁿",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "London's first Welsh bakery/café that opened on soft launch. Bite Twice tried their birth cake (Welsh fruit loaf), miso cookie, and another cookie - all highly praised for being moist, well-baked, and having excellent texture and flavour.",
+        "verdict": "Highly recommended. Excellent moist bakes with great flavour.",
+        "dishes": [
+          "Birth cake (Welsh fruit loaf)",
+          "Miso cookie",
+          "Cookie"
+        ],
+        "sponsored": false,
+        "at": 5
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "August Bakery",
+    "location": "London",
+    "lat": 51.4611209,
+    "lon": -0.1628359,
+    "placeId": null,
+    "mentions": [
+      {
+        "videoId": "m6kUK_bmVuU",
+        "videoTitle": "Is the winner of the bakers dozen award really the best bakery in the UK?",
+        "rating": 9.1,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Gerry and Paul visited August Bakery and tasted multiple items: rhubarb pastry, cardamom bun, and serrano ham pastry with cheese and fennel seeds. They praised the pastries as outstanding and exceptional, highlighting light and crispy textures. They rated the coffee highly (9.1) for its silky, creamy foam. Both presenters agreed it's one of the best bakeries in London and were impressed it opened last year and already tops the Baker's Dozen rankings.",
+        "verdict": "Outstanding bakery with exceptional pastries and coffee.",
+        "dishes": [
+          "Rhubarb pastry",
+          "Cardamom bun",
+          "Serrano ham pastry with cheese and fennel seeds",
+          "Coffee"
+        ],
+        "sponsored": false,
+        "at": 0
+      }
+    ],
+    "bestRating": 9.1,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Hassos Doner",
+    "location": "Green Lanes, Haringey",
+    "lat": 51.57867,
+    "lon": -0.09914,
+    "placeId": "8e6fa4a93ea5",
+    "mentions": [
+      {
+        "videoId": "1n8VcFym0kE",
+        "videoTitle": "London’s best kebab?",
+        "rating": 7.85,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Bite Twice personally visited and reviewed the kebab. Outstanding quality kebab meat described as some of the best they've had, juicy with deep beefy flavour. £15.99 for two breads. Lacked sauce and they were eating on the street rather than inside. Both presenters gave it scores (7.9 and 7.8) and recommended eating in-house for a better experience. Highly recommended overall.",
+        "verdict": "Outstanding meat quality, pricey, eat inside.",
+        "dishes": [
+          "Hassos Doner Kebab"
+        ],
+        "sponsored": false,
+        "at": 5
+      }
+    ],
+    "bestRating": 7.85,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Coughlans Bakery",
+    "location": "Croydon",
+    "lat": 51.37235,
+    "lon": -0.09945,
+    "placeId": "344000fc8128",
+    "mentions": [
+      {
+        "videoId": "FYwaCHtAFX8",
+        "videoTitle": "Is Romesh Ranganathan’s bakery actually any good?",
+        "rating": 8.3,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Bite Twice visited and tried the crème brûlée croissant (£3.80), praising it as a masterclass in pastry filling with proper flavour balance, crunchy and creamy textures. They called it Offley's winner and highlighted it as a reason to visit Croydon. The bakery has been operating since 1937.",
+        "verdict": "Crème brûlée croissant is a masterclass pastry. Highly recommend.",
+        "dishes": [
+          "Crème brûlée croissant"
+        ],
+        "sponsored": false,
+        "at": 11
+      }
+    ],
+    "bestRating": 8.3,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Fred Bakery Oxford Circus",
+    "location": "Oxford Circus",
+    "lat": 51.51648,
+    "lon": -0.14149,
+    "placeId": "42a282c06696",
+    "mentions": [
+      {
+        "videoId": "NNzxbUYJgXc",
+        "videoTitle": "London’s best bakery?",
+        "rating": 8.25,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Gerry and Paul visited and tried multiple pastries. They praised the chocolate pastry (£5.50) as divine, creamy, and elegant with a well-balanced flavour. They also tried a pistachio and berry jam puff pastry (£7), finding it tasty and light with good pastry work, though one reviewer felt the price was steep. Both gave scores of 8.2 and 8.3 out of 10 and recommended it overall.",
+        "verdict": "Excellent pastries, 8.2-8.3/10, worth trying.",
+        "dishes": [
+          "Chocolate pastry (£5.50)",
+          "Pistachio and berry jam puff pastry (£7)"
+        ],
+        "sponsored": false,
+        "at": 6
+      }
+    ],
+    "bestRating": 8.25,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Onsu",
+    "location": "London",
+    "lat": 51.51249,
+    "lon": -0.13192,
+    "placeId": "0ef4df23cfc4",
+    "mentions": [
+      {
+        "videoId": "g1IGkbi0afY",
+        "videoTitle": "Is the 3 Michelin star bakery worthy of the hype?",
+        "rating": 4.4,
+        "rating_out_of": 10,
+        "sentiment": "negative",
+        "notes": "Japanese bakery by a three Michelin star chef. Bite Twice visited and tasted the purple yam bun (£4.90) which they found tasted like mashed potato in a bun, and the kumquat and lemon cheesecake (£6.50) which was overly sweet, acidic, and fell apart. Poor queue management and staff service detracted from the experience.",
+        "verdict": "Not worthy of the hype; poor experience from start to finish.",
+        "dishes": [
+          "Purple yam bun",
+          "Kumquat and lemon cheesecake"
+        ],
+        "sponsored": false,
+        "at": 6
+      }
+    ],
+    "bestRating": 4.4,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Cinder",
+    "location": null,
+    "lat": 51.54907,
+    "lon": -0.17187,
+    "placeId": "c1f9c708d4cd",
+    "mentions": [
+      {
+        "videoId": "jlTRpVzTeRw",
+        "videoTitle": "Is this London’s best value lunch? (£16)",
+        "rating": 9.55,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Bite Twice visited and gave their own enthusiastic review of both the cedar plank salmon and the Cinder burger (£16). They praised the burger's flame-grilled taste, charred exterior, perfectly seasoned meat, soft bun, and overall quality as excellent value.",
+        "verdict": "Exceptional value lunch, outstanding burger with vivid presentation.",
+        "dishes": [
+          "Cinder burger",
+          "Cedar plank salmon"
+        ],
+        "sponsored": false,
+        "at": 0
+      }
+    ],
+    "bestRating": 9.55,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Pescobar Seafood London",
+    "location": "Camden Market",
+    "lat": 51.54263,
+    "lon": -0.14817,
+    "placeId": "f5e6c4dff449",
+    "mentions": [
+      {
+        "videoId": "LJKrm6BhdF8",
+        "videoTitle": "The most disgusting food item in London 🤮",
+        "rating": 2.1,
+        "rating_out_of": 10,
+        "sentiment": "negative",
+        "notes": "Mobile food stall in Camden Market. Both Gerry and Paul reviewed the octopus kebab and fish and chips. They found it disgusting, describing the octopus as tasting like stale fish with an off, corrupting taste. The chips were vile with an overwhelmingly horrible flavor resembling the smell of seaside air. Described as overhyped and a waste of money.",
+        "verdict": "Disgusting, overhyped, waste of money.",
+        "dishes": [
+          "Octopus kebab",
+          "Fish and chips"
+        ],
+        "sponsored": false,
+        "at": 0
+      }
+    ],
+    "bestRating": 2.1,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Shawarma Bros",
+    "location": "Waterloo",
+    "lat": 51.50389,
+    "lon": -0.11191,
+    "placeId": "ac295941c117",
+    "mentions": [
+      {
+        "videoId": "ZSTTjAgWuwc",
+        "videoTitle": "Mid,expensive and small shawarma 👎🏼",
+        "rating": 6.1,
+        "rating_out_of": 10,
+        "sentiment": "negative",
+        "notes": "Chicken shawarma wrap for £8 was small and expensive. Bread was tough, salad fresh but sparse, not enough chicken. Sauce was too sweet and tangy. Found it underwhelming compared to other shawarma spots and would not recommend.",
+        "verdict": "Disappointing. Expensive, small, not elite level.",
+        "dishes": [
+          "Chicken shawarma wrap"
+        ],
+        "sponsored": false,
+        "at": 6
+      }
+    ],
+    "bestRating": 6.1,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Applebee's Fish",
+    "location": "Borough Market",
+    "lat": 51.50512,
+    "lon": -0.09092,
+    "placeId": "9686a4ad1e2e",
+    "mentions": [
+      {
+        "videoId": "_dARGLmzDIk",
+        "videoTitle": "part3 of reviewing viral food in Burrough market we try the fish and chips sandwich from Applebee's",
+        "rating": 5.2,
+        "rating_out_of": 10,
+        "sentiment": "negative",
+        "notes": "Bite Twice reviewed the fish finger baguette (£12) at Applebee's Fish stall in Borough Market. They found it disappointing: the bread was too thick, the fish was too thick, there was not enough sauce, and it was very dry. They suggested improvements including softer bread, thinner cut of fish, and more sauce.",
+        "verdict": "Disappointing. Bread too thick, fish too much, dry.",
+        "dishes": [
+          "Fish finger baguette"
+        ],
+        "sponsored": false,
+        "at": 6
+      }
+    ],
+    "bestRating": 5.2,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Cafe Paolo",
+    "location": "Acton",
+    "lat": 51.50679,
+    "lon": -0.24892,
+    "placeId": "8f9a3ab7778a",
+    "mentions": [
+      {
+        "videoId": "W5J5cNztBvw",
+        "videoTitle": "breakfast at Cafe Paolo in Acton 🍳🥓🤪",
+        "rating": 8.1,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Bite Twice visited and enjoyed a full English breakfast which they described as breathtaking and incredible. They praised the sausage (8/10), perfectly cooked eggs, bacon with maple syrup, black pudding, white pudding, beans, and grilled tomatoes. Coffee was also excellent.",
+        "verdict": "Excellent full English breakfast, highly satisfied with meal.",
+        "dishes": [
+          "Full English breakfast",
+          "Eggs",
+          "Bacon with maple syrup",
+          "Sausage",
+          "Black pudding",
+          "White pudding",
+          "Beans",
+          "Grilled tomatoes",
+          "Mushrooms",
+          "Coffee"
+        ],
+        "sponsored": false,
+        "at": 10
+      }
+    ],
+    "bestRating": 8.1,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "TOAD Bakery",
+    "location": "Camberwell",
+    "lat": 51.47361,
+    "lon": -0.08111,
+    "placeId": "ddeb5bcf5544",
+    "mentions": [
+      {
+        "videoId": "LCQmm8fT3BQ",
+        "videoTitle": "we try toad bakery Sadiq Khan's favourite bakery",
+        "rating": 8.15,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Sadiq Khan's favorite South London bakery. Bite Twice visited and tasted multiple items, praising the elevated pastry quality comparable to German, French and Italian standards. The bakery impressed both presenters with its attention to detail and flavor combinations.",
+        "verdict": "Outstanding elevated pastries, exceptional quality and flavors.",
+        "dishes": [
+          "Blueberry and custard Danish",
+          "Everything bagel croissant"
+        ],
+        "sponsored": false,
+        "at": 11
+      }
+    ],
+    "bestRating": 8.15,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "The Baguette King",
+    "location": "Bermondsey",
+    "lat": 51.49228,
+    "lon": -0.0617,
+    "placeId": "4ace0e022a30",
+    "mentions": [
+      {
+        "videoId": "CkhFsc8_qeI",
+        "videoTitle": "Is this the best Banh Mi in London? 🇻🇳",
+        "rating": 8.8,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Bite Twice visited and both reviewers tasted the banh mì. They praised the juicy barbecue pork, well-toasted crunchy bread, and perfect spice level. Scored 8.7-8.9, described as very close second to Lào Banh Mì and bigger for £9.",
+        "verdict": "Outstanding banh mì, very close second to Lào Banh Mì.",
+        "dishes": [
+          "Barbecue pork banh mì",
+          "Pork belly banh mì"
+        ],
+        "sponsored": false,
+        "at": 0
+      }
+    ],
+    "bestRating": 8.8,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Terry's Cafe",
+    "location": "Soho",
+    "lat": 51.50073,
+    "lon": -0.0984,
+    "placeId": "957ac3696edf",
+    "mentions": [
+      {
+        "videoId": "-3WJAl7O21Q",
+        "videoTitle": "Is this the best full English breakfast in London? 🍳 £16.50 paid in full",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Bite Twice visited and described this as the best full English breakfast in London. They praised the quality of the sausages, mushrooms, bacon, and black pudding. Both presenters were enthusiastic, calling it outstanding and worth every penny at £16.50 per person.",
+        "verdict": "Best full English breakfast they've had. Outstanding quality.",
+        "dishes": [
+          "Full English breakfast",
+          "Sausages",
+          "Bacon",
+          "Black pudding",
+          "Mushrooms"
+        ],
+        "sponsored": false,
+        "at": 6
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Lahore Karahi",
+    "location": "Tooting",
+    "lat": 51.42958,
+    "lon": -0.16617,
+    "placeId": "8113d52b72b7",
+    "mentions": [
+      {
+        "videoId": "Ak5Z8nP4SHU",
+        "videoTitle": "London’s cheap way final boss",
+        "rating": 9.8,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Gerry called this his favourite cheap eat in London. A legendary 2.50 kebab roll with fresh naan, lamb, vegetables and sauces with intense fragrant flavors and great sauces - exceptional value for money.",
+        "verdict": "Favourite cheap eat in London; rated 9.8/10.",
+        "dishes": [
+          "kebab roll (£2.50)"
+        ],
+        "sponsored": false,
+        "at": 6
+      }
+    ],
+    "bestRating": 9.8,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Afghan Kitchen",
+    "location": "Angel",
+    "lat": 51.53582,
+    "lon": -0.10303,
+    "placeId": "538637cdea42",
+    "mentions": [
+      {
+        "videoId": "XuORg8ejP2U",
+        "videoTitle": "Lilly Allen’s favourite London restaurant 👀",
+        "rating": 7.2,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Gerry and Paul visited and reviewed Afghan Kitchen, Lilly Allen's favourite restaurant. They praised the herbal flavours, swift service, and reasonable prices for hearty, comforting peasant-style food like lamb and potato dishes, though noted it's not overly spicy or complex.",
+        "verdict": "Good hearty food, reasonable prices, swift service.",
+        "dishes": [
+          "Lamb and potatoes",
+          "Spinach lamb",
+          "Doll (likely dhal)"
+        ],
+        "sponsored": false,
+        "at": 2
+      }
+    ],
+    "bestRating": 7.2,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Café Mondo",
+    "location": "Palm Road",
+    "lat": 51.54027,
+    "lon": 0.00248,
+    "placeId": "142ff55c78ad",
+    "mentions": [
+      {
+        "videoId": "CqT7M2dxAOI",
+        "videoTitle": "London’s best sandwich 🥪",
+        "rating": 9.1,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Reviewed a year after opening and found it even better. Makes pork buns and other substantial sandwiches in-house with meat roasted on-site and bread baked fresh.",
+        "verdict": "Even better than before; juicy, tender, spicy sandwiches; excellent.",
+        "dishes": [
+          "Pork buns",
+          "Sandwiches with roasted meat",
+          "Chicken sandwich"
+        ],
+        "sponsored": false,
+        "at": 6
+      }
+    ],
+    "bestRating": 9.1,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Robin's Ramen",
+    "location": "Notting Hill",
+    "lat": 51.5065924,
+    "lon": -0.208449,
+    "placeId": null,
+    "mentions": [
+      {
+        "videoId": "9k8qlRjaHdo",
+        "videoTitle": "£10 ramen at the back of a Notting Hill supermarket 🍜",
+        "rating": 8.1,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Located at the back of a supermarket in Notting Hill. Both presenters visited and ate £10 ramen, praising the charred pork belly, deep chicken broth, and wholemeal noodles. Gerry scored 8.2, Paul scored 8.0. Exceptional value.",
+        "verdict": "Outstanding ramen at exceptional value. Top three ramen in London.",
+        "dishes": [
+          "Pork Shio Ramen",
+          "Chicken Broth Ramen",
+          "Charred Pork Belly",
+          "Fermented Egg"
+        ],
+        "sponsored": false,
+        "at": 6
+      }
+    ],
+    "bestRating": 8.1,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Connie's Pizza",
+    "location": "Peckham",
+    "lat": 51.473669799999996,
+    "lon": -0.0574442,
+    "placeId": null,
+    "mentions": [
+      {
+        "videoId": "HDTsrOAvhIA",
+        "videoTitle": "Is London style pizza a thing?",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Bite Twice visited the pizzeria on opening day (26th) and reviewed the thin and crispy Neapolitan-style pizza. They praised the vodka pizza, pepperoni, and margarita for excellent bake, crispy crust, well-balanced flavors, and good cheese blend. The chef is a friend and top 50 Neapolitan pizza chef. Pizza prices £12-16.",
+        "verdict": "Excellent thin and crispy pizza from top Italian chef",
+        "dishes": [
+          "Vodka pizza",
+          "Pepperoni pizza",
+          "Margarita pizza"
+        ],
+        "sponsored": false,
+        "at": 5
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Porte Noire",
+    "location": "King's Cross",
+    "lat": 51.53621,
+    "lon": -0.12767,
+    "placeId": "764e4d234377",
+    "mentions": [
+      {
+        "videoId": "5Hn8uwT8tgU",
+        "videoTitle": "Idris Elba co-owns a restaurant… is it any good?",
+        "rating": 9.7,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Bite Twice visited Idris Elba's co-owned French restaurant and thoroughly enjoyed it. They were invited to review it and gave extensive positive feedback on the dishes including snails, pork belly, veal cordon bleu, and short ribs.",
+        "verdict": "Excellent French cuisine, one of best dining experiences",
+        "dishes": [
+          "Snails",
+          "Pork belly",
+          "Veal cordon bleu",
+          "Short ribs",
+          "Sticky toffee"
+        ],
+        "sponsored": false,
+        "at": 5
+      }
+    ],
+    "bestRating": 9.7,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Dave's Hot Chicken",
+    "location": "London",
+    "lat": 51.5426619,
+    "lon": -0.0061404,
+    "placeId": null,
+    "mentions": [
+      {
+        "videoId": "Q06-dzNhoIw",
+        "videoTitle": "Reviewing the Dave’s Hot Chicken X Fallout collab meal",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Gerry tried the Fallout collaboration meal with extra hot chicken burger, mac and cheese, and chips. Praised the chicken as moist, juicy and succulent with excellent coating. Mac and cheese was very cheesy and creamy. Found the spice level manageable and expressed interest in trying their reaper challenge.",
+        "verdict": "Excellent chicken; moist, juicy, succulent coating.",
+        "dishes": [
+          "Fallout collaboration meal",
+          "Extra hot chicken burger",
+          "Mac and cheese",
+          "Chips"
+        ],
+        "sponsored": false,
+        "at": 0
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "West Green Bagels and Juice",
+    "location": "Tottenham",
+    "lat": 51.58424,
+    "lon": -0.07568,
+    "placeId": "c8cf6d914912",
+    "mentions": [
+      {
+        "videoId": "FLF4S0v8MRo",
+        "videoTitle": "Best Caribbean take away in Tottenham? 🇯🇲",
+        "rating": 6.9,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "A Jewish deli serving jerk chicken bagels and Caribbean mac and cheese. Bite Twice walked in unannounced and were welcomed warmly by staff who follow their page. They praised the gorgeous herbal aroma, well-seasoned food, and friendly service. Nice establishment with character.",
+        "verdict": "Decent hearty Caribbean-Caribbean fusion food with genuine charm.",
+        "dishes": [
+          "Jerk chicken bagel",
+          "Caribbean mac and cheese",
+          "Beef patty",
+          "Cucumber juice"
+        ],
+        "sponsored": false,
+        "at": 7
+      }
+    ],
+    "bestRating": 6.9,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Morley's",
+    "location": "Sydenham",
+    "lat": 51.52732,
+    "lon": 0.06616,
+    "placeId": "ff24b5876010",
+    "mentions": [
+      {
+        "videoId": "tXXw7-ChEes",
+        "videoTitle": "11 January 2026",
+        "rating": 6.7,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Bite Twice visited the original Morley's in Sydenham (since 1985). They praised the juicy, beautifully seasoned chicken with warm peppery heat. The wings were surprisingly good and nicely cooked, though one reviewer found the sauce a bit too sweet. Scores: 6.7 and 5.4.",
+        "verdict": "Juicy, nicely cooked chicken with good flavor.",
+        "dishes": [
+          "Three ribs and four wings",
+          "Wings",
+          "Ribs"
+        ],
+        "sponsored": false,
+        "at": 0
+      }
+    ],
+    "bestRating": 6.7,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Morley's",
+    "location": "Deptford",
+    "lat": 51.48021,
+    "lon": -0.0263,
+    "placeId": "5fc1e997402e",
+    "mentions": [
+      {
+        "videoId": "ky7ZG6TTI94",
+        "videoTitle": "part 5 discovering lit food in Deptford Morley's",
+        "rating": 5.7,
+        "rating_out_of": 10,
+        "sentiment": "mixed",
+        "notes": "Gerry gave it 5.9/10, praising the burger's solid presentation and affordability but noting unmelted cheese and subpar bun. Paul gave it 5.5/10, finding the chicken well-cooked but uncertain about the sauce. Both agreed it's tasty and affordable, good for late night.",
+        "verdict": "Tasty and affordable; solid burgers but cheese not melted.",
+        "dishes": [
+          "Boss Man burger",
+          "Chicken burger"
+        ],
+        "sponsored": false,
+        "at": 5
+      }
+    ],
+    "bestRating": 5.7,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Honey's Caribbean Take Away",
+    "location": "Deptford",
+    "lat": 51.476965,
+    "lon": -0.026046,
+    "placeId": null,
+    "mentions": [
+      {
+        "videoId": "jj1kXlZBn88",
+        "videoTitle": "Part 4 discovering lit food in Deptford Honey's",
+        "rating": 7,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Caribbean food truck specializing in slow-cooked curries and stews, operating since the mid-1980s. Both presenters ordered goat curry with rice and peas, and oxtail stew. Gerry rated the goat curry 7/10, praising it as 'food for the soul' with beautiful slow cooking and nice spicing (ginger, chili). Paul also rated 7/10, finding it comforting and buttery. Both appreciated the friendly service and stated they would definitely return.",
+        "verdict": "Friendly service, delicious slow-cooked Caribbean curries, would return.",
+        "dishes": [
+          "Goat curry with rice and peas",
+          "Oxtail stew"
+        ],
+        "sponsored": false,
+        "at": 0
+      }
+    ],
+    "bestRating": 7,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Bread Ahead",
+    "location": "Borough Market",
+    "lat": 51.5305,
+    "lon": -0.12357,
+    "placeId": "b627bf5fa6ec",
+    "mentions": [
+      {
+        "videoId": "PC-B8lnT7ws",
+        "videoTitle": "part 5 of reviewing viral food in Borough Market bread ahead doughnuts",
+        "rating": 9.8,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Bite Twice visited and personally reviewed multiple doughnuts. Praised the cranberry/crème brûlée doughnut as 'quite possibly the naughtiest donut' with snapping creme brulee, sultry silky cream, and light fried doughnut with lashings of sugar. Also highly praised the black currant cheesecake doughnut (9.1 rating) as fluffy, sweet but not too sweet, and fulfilling.",
+        "verdict": "Best donuts in the world, 9.8 and 9.1 ratings.",
+        "dishes": [
+          "Cranberry doughnut",
+          "Black currant cheesecake doughnut"
+        ],
+        "sponsored": false,
+        "at": 0
+      }
+    ],
+    "bestRating": 9.8,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Kebab Kid",
+    "location": "Fulham",
+    "lat": 51.47227,
+    "lon": -0.20275,
+    "placeId": "05a44e7a2b84",
+    "mentions": [
+      {
+        "videoId": "w4E96SAExdE",
+        "videoTitle": "in a series discovering London institutions we visit Jamie Oliver's favourite kebab shop",
+        "rating": 7.5,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Gerry and Paul visited this old-fashioned London kebab institution. They tried chicken shawarma and lamb kebab with all salads and dressings. Both noted it's a local institution that hasn't changed since the 70s-80s, open until 1am daily. They rated it 7-7.5 out of 10 - tasty and fresh with good quality ingredients, but not exceptional. One presenter noted nostalgia and childhood memories with the place. They recommended it as a piece of London history.",
+        "verdict": "Classic kebab institution, tasty but not exceptional. Worth visiting.",
+        "dishes": [
+          "Chicken shawarma",
+          "Lamb kebab"
+        ],
+        "sponsored": false,
+        "at": 0
+      }
+    ],
+    "bestRating": 7.5,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Furness Oyster Bar",
+    "location": "Camden",
+    "lat": 51.505581799999995,
+    "lon": -0.0904328,
+    "placeId": null,
+    "mentions": [
+      {
+        "videoId": "vwbYD7yQ69U",
+        "videoTitle": "Part 4 of reviewing viral food in Borough Market we try the jumbo oysters from furness 🫠🦪😉",
+        "rating": 8.9,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "",
+        "verdict": null,
+        "dishes": [],
+        "sponsored": false,
+        "at": 168
+      }
+    ],
+    "bestRating": 8.9,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Wasuya",
+    "location": "Petty Coat Lane",
+    "lat": 51.5149526,
+    "lon": -0.0737817,
+    "placeId": null,
+    "mentions": [
+      {
+        "videoId": "YZKsWh6EikI",
+        "videoTitle": "£5 jerk shawarma wrap. reviewed!🍗🌯😗",
+        "rating": 6.7,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Paul and Gerry both visited and tasted the jerk chicken schwarma wrap. Paul scored it 6.6, Gerry 6.8. They praised the fresh chicken and salad, and appreciated the £5 value, though noted it lacked flavor punch compared to other shawarmas in London.",
+        "verdict": "Fresh jerk chicken, good value at £5, but lacks flavor punch.",
+        "dishes": [
+          "Jerk chicken schwarma wrap"
+        ],
+        "sponsored": false,
+        "at": 0
+      }
+    ],
+    "bestRating": 6.7,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Applebee's Fish",
+    "location": "Borough Market",
+    "lat": 51.50545,
+    "lon": -0.11822,
+    "placeId": "d985a0f90438",
+    "mentions": [
+      {
+        "videoId": "eP1sqikNtWE",
+        "videoTitle": "part3 of reviewing viral food in Burrough market 🫡 we try the fish and chips sandwich from Applebees",
+        "rating": 5.2,
+        "rating_out_of": 10,
+        "sentiment": "negative",
+        "notes": "Bite Twice ordered and reviewed the fish finger baguette (£12). They found it disappointing, criticising the overly thick bread, thick fish, lack of sauce, and dryness. They suggested it could have been better with softer bread, thinner fish, and more sauce.",
+        "verdict": "Disappointing execution despite promising concept.",
+        "dishes": [
+          "Fish finger baguette"
+        ],
+        "sponsored": false,
+        "at": 6
+      }
+    ],
+    "bestRating": 5.2,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Francesco's",
+    "location": "Camberwell",
+    "lat": 51.4738,
+    "lon": -0.08908,
+    "placeId": "ed00817e4a0e",
+    "mentions": [
+      {
+        "videoId": "aUephbK7uUw",
+        "videoTitle": "Can you get a good pizza for £5 ?! 🧐we visit rancesco's in Camberwell🍕🤪#food #pizza #londoncheapeats",
+        "rating": 6.6,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Five pound pizza spot open till 1-2am on weekends. Gerry and Paul praised the quality of the base and crust for the price, noting good bake and crisp despite salty toppings. They described it as 'junk pizza done well' and agreed it serves an important purpose in late-night London food culture.",
+        "verdict": "6.5-6.7 rating. Good quality for £5, serves its purpose.",
+        "dishes": [
+          "£5 pizza"
+        ],
+        "sponsored": false,
+        "at": 26
+      }
+    ],
+    "bestRating": 6.6,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Kappacasein Dairy",
+    "location": "Borough Market",
+    "lat": 51.50495,
+    "lon": -0.09068,
+    "placeId": "d83514295053",
+    "mentions": [
+      {
+        "videoId": "9PzF2hfoVjU",
+        "videoTitle": "part 2 of reviewing viral food in Borough Market. RACLETTE. 🧀🫠#food #raclette #boroughmarket",
+        "rating": 8.3,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Ogleshield cheese scraped onto new potatoes with pepper and pickled gherkins. Gerry rated it 8.3/10 for taste, creamy, wonderfully salty with perfectly cooked potatoes. Worth the viral hype.",
+        "verdict": "Creamy, salty cheese on potatoes. Worth the hype.",
+        "dishes": [
+          "Ogleshield cheese on new potatoes with pickled gherkins"
+        ],
+        "sponsored": false,
+        "at": 1
+      }
+    ],
+    "bestRating": 8.3,
+    "bestRatingOutOf": 10
+  },
+  {
+    "name": "Dough Hands East",
+    "location": null,
+    "lat": 51.5453747,
+    "lon": -0.0632078,
+    "placeId": null,
+    "mentions": [
+      {
+        "videoId": "7P5TW9pVowE",
+        "videoTitle": "London's best  🍕? Dough Hands review 🫠 #pizza #bitetwice",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Handmade pizza with nduja, burrata, flor di latte, and San Marzano. One of the best pizzas Bite Twice have tasted this year with perfect crust and ingredient balance.",
+        "verdict": "One of the best pizzas tasted this year.",
+        "dishes": [
+          "Pizza with nduja, burrata, flor di latte, and San Marzano"
+        ],
+        "sponsored": false,
+        "at": 0
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Wildflower",
+    "location": null,
+    "lat": 51.47075,
+    "lon": -0.06692,
+    "placeId": "23b931b9cc22",
+    "mentions": [
+      {
+        "videoId": "Vbu2AV8YDpw",
+        "videoTitle": "Wild Flour Pizza is a vibe ✨️🍕🎩 #pizza",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Bite Twice describe it as potentially the best kept secret in pizza they've visited, praising the meticulous attention to detail in ingredient selection and preparation, the massive oven weighing as much as three elephants, and the unique hybrid dough between bread and croissant.",
+        "verdict": "Best kept secret in pizza; incredible attention to detail.",
+        "dishes": [],
+        "sponsored": false,
+        "at": 0
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Vincenzo pizza",
+    "location": null,
+    "lat": 51.5248524,
+    "lon": -0.0713985,
+    "placeId": null,
+    "mentions": [
+      {
+        "videoId": "Nzplcs0m-K8",
+        "videoTitle": "Best New Haven Style 🍕 UK 🇬🇧",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Gerry and Paul visit Aonan and review Vincenzo's New Haven style pizza, describing it as some of the best pie in the world.",
+        "verdict": "Best pie in the world, Vincenzo slings excellence.",
+        "dishes": [
+          "New Haven style pizza"
+        ],
+        "sponsored": false,
+        "at": 5
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Crisp W1",
+    "location": "W6",
+    "lat": 51.5133863,
+    "lon": -0.15382469999999998,
+    "placeId": null,
+    "mentions": [
+      {
+        "videoId": "Nzplcs0m-K8",
+        "videoTitle": "Best New Haven Style 🍕 UK 🇬🇧",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Gerry and Paul visit and review Crispy, calling it everybody's favorite pizzeria with real New Haven style pizza that lives up to the hype.",
+        "verdict": "Everybody's favorite, real New Haven style pizza.",
+        "dishes": [
+          "New Haven style pizza"
+        ],
+        "sponsored": false,
+        "at": 11
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Gracie",
+    "location": null,
+    "lat": 51.51095,
+    "lon": -0.134,
+    "placeId": "adff752a3185",
+    "mentions": [
+      {
+        "videoId": "Nzplcs0m-K8",
+        "videoTitle": "Best New Haven Style 🍕 UK 🇬🇧",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Gerry and Paul visit the pizza power couple at Gracie, who started the New Haven pizza revolution in the UK and take it to high levels.",
+        "verdict": "Pizza power couple, started the New Haven revolution.",
+        "dishes": [
+          "New Haven style pizza"
+        ],
+        "sponsored": false,
+        "at": 17
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Grosvenor Arms",
+    "location": null,
+    "lat": 51.447353,
+    "lon": -0.1894889,
+    "placeId": null,
+    "mentions": [
+      {
+        "videoId": "Nzplcs0m-K8",
+        "videoTitle": "Best New Haven Style 🍕 UK 🇬🇧",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Gerry and Paul visit Groa, described as the new kids on the block with pizza that bangs.",
+        "verdict": "New kids on the block, their pizza bangs.",
+        "dishes": [
+          "New Haven style pizza"
+        ],
+        "sponsored": false,
+        "at": 23
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "The Black Pig",
+    "location": "Borough Market",
+    "lat": 51.50612,
+    "lon": -0.09099,
+    "placeId": "3f713136ee63",
+    "mentions": [
+      {
+        "videoId": "TrvI4pVTAhw",
+        "videoTitle": "The Christmas 🎄sandwich 🥪 you have to try! from The Black Pig @Borough_Market  #christmas2024",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Bite Twice visit The Black Pig at Borough Market and feature their Christmas sandwich, which they recommend trying.",
+        "verdict": "The ultimate Christmas sandwich you have to try.",
+        "dishes": [
+          "Christmas sandwich"
+        ],
+        "sponsored": false,
+        "at": null
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Patio Pizza",
+    "location": null,
+    "lat": 51.40844,
+    "lon": -0.28522,
+    "placeId": "9c5b080c2870",
+    "mentions": [
+      {
+        "videoId": "046vi203EwM",
+        "videoTitle": "we found a 🎄Christmas pudding burger 🍔",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "mixed",
+        "notes": "Bite Twice asked Alim from Patio Pizza about his best pizza and found a Christmas pudding burger there.",
+        "verdict": "Found Christmas pudding burger pizza here.",
+        "dishes": [
+          "Christmas pudding burger",
+          "pizza"
+        ],
+        "sponsored": false,
+        "at": null
+      },
+      {
+        "videoId": "bTDdprkTwqo",
+        "videoTitle": "Alim's best 🍕",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Alim, the owner of Patio Pizza, discusses his top three pizza spots in London, but these are recommendations from him, not Bite Twice's own reviews. Alim is not reviewing his own place, he's recommending pizza restaurants he likes.",
+        "verdict": null,
+        "dishes": [],
+        "sponsored": false,
+        "at": 0
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  }
+]
