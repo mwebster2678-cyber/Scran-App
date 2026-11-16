@@ -31,6 +31,16 @@ export const CREATORS = {
     colour: '#D35400',
     textColour: '#B34700',
   },
+  morefallow: {
+    name: 'More Fallow',
+    channel: 'MoreFallow',
+    source: 'transcript',
+    about: 'More Fallow is the YouTube channel of the chefs who run Fallow, a restaurant in St James\'s, London; they make long videos reviewing one or a few restaurants, sometimes outside London. Restaurants they run or work in themselves (e.g. Fallow, Roe) are never their reviews: drop them with reason "own_place".',
+    maxText: 80_000, // long videos: the places can come late
+    emoji: '🟢',
+    colour: '#2E7D32',
+    textColour: '#1B5E20',
+  },
 };
 
 // Reads the creator key from the command line, or exits with usage help.

@@ -1,0 +1,367 @@
+[
+ {
+  "name": "Crisp Pizza at The Marlborough",
+  "location": "Mayfair",
+  "lat": 51.51338,
+  "lon": -0.15381,
+  "placeId": "eff6529f9176",
+  "mentions": [
+   {
+    "videoId": "_AKsASERPIo",
+    "videoTitle": "Chefs Try London's Best Pizza",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "More Fallow visited this new pub serving crispy pizza and were extremely impressed. They praised how light and perfectly cooked the thick-crust pizza was, with one chef declaring it the best pizza they've ever tasted.",
+    "verdict": "Best pizza ever tasted; perfectly cooked despite thick crust.",
+    "dishes": [
+     "W6 crispy pie with andouille",
+     "Window pizza (Halloween-themed)"
+    ],
+    "sponsored": false,
+    "at": 0
+   },
+   {
+    "videoId": "lXtvn7sL1po",
+    "videoTitle": "Chefs Review the Best Pizza in the UK",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "More Fallow visited this new pub in Mayfair and praised Crisp pizza as the best in the UK and possibly the world. They highlighted the exceptional crispiness of the base, perfectly balanced flavors, and incredible cooking technique by pizzamaker Pedro.",
+    "verdict": "Best pizza in the UK, possibly the world.",
+    "dishes": [
+     "Crisp W6 pizza",
+     "Nduja pizza",
+     "Vecna pizza (grandma's style)",
+     "Grandma's pizza"
+    ],
+    "sponsored": false,
+    "at": 0
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "The Best Turkish Kebab",
+  "location": "Edgware Road",
+  "lat": 51.55611,
+  "lon": -0.07468,
+  "placeId": "a0094d71bb9d",
+  "mentions": [
+   {
+    "videoId": "iKSKroQoC8U",
+    "videoTitle": "Chefs Review London's Best Kebabs",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "They visited this place and spoke with the founder who opened it in 1982. Jack described it as 'the best kebab of my life' - very delicious, clean, not greasy, with uniform minced meat. The founder recommended eating it simply with just onion, chili sauce, and lemon juice.",
+    "verdict": "Best kebab of my life - clean, not greasy.",
+    "dishes": [
+     "Doner kebab (100% lamb shoulder, kufta style)"
+    ],
+    "sponsored": false,
+    "at": 388
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Gokyuzu",
+  "location": "Green Lanes",
+  "lat": 51.58054,
+  "lon": -0.0992,
+  "placeId": "4dfa67607585",
+  "mentions": [
+   {
+    "videoId": "iKSKroQoC8U",
+    "videoTitle": "Chefs Review London's Best Kebabs",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Their final kebab stop visited around 1 am where they tried chicken doner, veal doner, and lamb doner. The chicken doner was described as comforting and well-made with high-quality ingredients, though not as luxurious as the lamb and veal options. Will and Jack discussed the quality and textures of each.",
+    "verdict": "High-quality ingredients; chicken good but lamb/veal more luxurious.",
+    "dishes": [
+     "Chicken doner",
+     "Veal doner",
+     "Lamb doner"
+    ],
+    "sponsored": false,
+    "at": 965
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Pavyllon",
+  "location": "Central London",
+  "lat": 51.50417,
+  "lon": -0.14994,
+  "placeId": "f4bb6fedda36",
+  "mentions": [
+   {
+    "videoId": "Rn0f193-74Y",
+    "videoTitle": "Chefs Review One of London's Oldest Restaurants ft. Lagom Chef",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "More Fallow visited for breakfast and praised it as serving London's best eggs Benedict, croissants, full English breakfast, and French toast. Called it 'flawless' with no complaints.",
+    "verdict": "Flawless breakfast with the best eggs Benedict in London.",
+    "dishes": [
+     "Eggs Benedict",
+     "Croissants",
+     "Full English breakfast",
+     "French toast"
+    ],
+    "sponsored": false,
+    "at": 35
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Simpson's in the Strand",
+  "location": "The Strand",
+  "lat": 51.51068,
+  "lon": -0.12065,
+  "placeId": "d6c8a4f0ea2c",
+  "mentions": [
+   {
+    "videoId": "Rn0f193-74Y",
+    "videoTitle": "Chefs Review One of London's Oldest Restaurants ft. Lagom Chef",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Historic British restaurant opened in 1828, reopened by Jeremy King. More Fallow highly praised the food, particularly the roast beef which they called 'the best' and 'incredible', and noted the inspiring dining room atmosphere.",
+    "verdict": "Incredible roast beef at this historic 1828 institution.",
+    "dishes": [
+     "Roast beef"
+    ],
+    "sponsored": false,
+    "at": 745
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Nellie's Tavern",
+  "location": "Basement of Simpson's, The Strand",
+  "lat": 51.510625499999996,
+  "lon": -0.1205241,
+  "placeId": null,
+  "mentions": [
+   {
+    "videoId": "Rn0f193-74Y",
+    "videoTitle": "Chefs Review One of London's Oldest Restaurants ft. Lagom Chef",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Invitation-only basement bar at Simpson's. More Fallow visited and had Negroni cocktails in this night bar before heading home.",
+    "verdict": "Invitation-only basement bar with excellent Negroni cocktails.",
+    "dishes": [
+     "Negroni"
+    ],
+    "sponsored": false,
+    "at": 1149
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "The Ned London",
+  "location": "City of London",
+  "lat": 51.5136949,
+  "lon": -0.0901693,
+  "placeId": null,
+  "mentions": [
+   {
+    "videoId": "UGYh94dQdgo",
+    "videoTitle": "Chefs Review Michelin BBQ",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "mixed",
+    "notes": "More Fallow attended a Michelin BBQ collaboration from Texas featuring Interstellar BBQ x La Barbecue. They tasted and reviewed multiple dishes including brisket, ribs, pork belly, mac and cheese, sausages, and a Texas lamb sandwich.",
+    "verdict": "Exceptional barbecue collaboration; remarkably tender meat and bold flavors.",
+    "dishes": [
+     "USDA Prime beef brisket",
+     "Beef ribs",
+     "BBQ pork ribs",
+     "BBQ mac and cheese",
+     "Texas lamb sandwich",
+     "Pork belly with tea glaze",
+     "Chimichurri lamb shoulder",
+     "Banana pudding"
+    ],
+    "sponsored": false,
+    "at": 421
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Dorian",
+  "location": null,
+  "lat": 51.51658,
+  "lon": -0.20063,
+  "placeId": "271509fed8f8",
+  "mentions": [
+   {
+    "videoId": "IWDKi7qJZZs",
+    "videoTitle": "Chefs Review the Best Ever Seafood Meal",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Josh Niland's pop-up at Dorian. Will and Jack dined there and gave extensive, enthusiastic reviews of the entire meal, calling it one of the best seafood experiences they've had, with particular praise for the creativity, fish preparation, and dishes like the sea bass, blue mackerel, tuna Wellington, John Dory, and tuna cheeseburger.",
+    "verdict": "One of the best seafood meals ever tasted.",
+    "dishes": [
+     "Sea bass with egg and flour noodles",
+     "Cold Kiss sea bass with soba noodles",
+     "Tuna with sobrasada",
+     "Blue mackerel with garam and oil",
+     "Tuna Wellington",
+     "John Dory cooked on the bone",
+     "Tuna cheeseburger",
+     "Sea bass rib with muscovado and soy glaze",
+     "Tuna bone toffee"
+    ],
+    "sponsored": false,
+    "at": 0
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Kawan by Uncle Roger",
+  "location": "Chinatown",
+  "lat": 51.511976,
+  "lon": -0.1311794,
+  "placeId": null,
+  "mentions": [
+   {
+    "videoId": "f7wCP-F8DsY",
+    "videoTitle": "Chefs Review Uncle Roger's Newest Restaurant",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Uncle Roger's new fried rice restaurant. The chefs praised the rustic fried rice as 'probably one of the best in London', the curries as 'very, very tasty' and warming, and found the food delicious with good value pricing and cool atmosphere in central London.",
+    "verdict": "Probably the best fried rice in London; excellent curries and value.",
+    "dishes": [
+     "Rustic fried rice",
+     "Amber curry",
+     "Grilled wings with pandan, turmeric, fresh mango salad",
+     "Fried Wagyu beef",
+     "Chinatown fried rice with Chinese sausage and bacon",
+     "Tofu noodles with wok-fried beef, puffed rice, hawthorn and dates"
+    ],
+    "sponsored": false,
+    "at": 0
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Oudh 1722",
+  "location": "Borough Market",
+  "lat": 51.5041191,
+  "lon": -0.0949719,
+  "placeId": null,
+  "mentions": [
+   {
+    "videoId": "mKONvaXYr4A",
+    "videoTitle": "Chefs Review The Best New Indian Restaurant in the UK",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "Aktar Islam's new restaurant serving progressive Awadhi cuisine from Lucknow (1722-1900s). More Fallow visited and gave extensive praise: 'one of the best in London this year, if not all,' 'possibly the best Indian meal of my life,' highlighting exceptional food quality, Michelin-star level service, thoughtful nuanced dishes with sophisticated flavor balance, charcoal barbecuing, and impressive atmosphere.",
+    "verdict": "One of the best Indian restaurants in London",
+    "dishes": [
+     "Papad and chutneys",
+     "Lamb brain delicacy",
+     "Galavati kebab",
+     "Marinated lamb ribs and veal chops",
+     "Tandoori chicken with charcoal",
+     "Chicken biryani/pilaf",
+     "Dal Bukhara",
+     "Smoked butter chicken",
+     "Ras malai with pistachios",
+     "Gulab jamun"
+    ],
+    "sponsored": false,
+    "at": 2
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Blacklock Canary Wharf",
+  "location": "Canary Wharf",
+  "lat": 51.5059,
+  "lon": -0.02086,
+  "placeId": "f02043f8880b",
+  "mentions": [
+   {
+    "videoId": "Kb1wVpNrRWs",
+    "videoTitle": "Chefs Review the Best Steakhouse in the UK",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "More Fallow visited and praised it as probably the best steakhouse in the UK. They appreciated the excellent quality beef, lamb, and pork cooked using traditional iron-pressing methods over coal. They commended the meat sourcing, simplicity of menu, generous portions, outstanding sides (bone marrow, béarnaise, chips, salads), and fair pricing for the quality.",
+    "verdict": "Incredible steakhouse with exceptional meat quality and service.",
+    "dishes": [
+     "Filet mignon",
+     "Rump steak",
+     "Lamb T-bone",
+     "Pork chops",
+     "Bone marrow",
+     "Béarnaise sauce",
+     "Mushrooms on toast",
+     "Broccoli salad",
+     "White chocolate cheesecake"
+    ],
+    "sponsored": false,
+    "at": 10
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ },
+ {
+  "name": "Impala",
+  "location": "Soho",
+  "lat": 51.5147517,
+  "lon": -0.1331213,
+  "placeId": null,
+  "mentions": [
+   {
+    "videoId": "-uUNChhkbBo",
+    "videoTitle": "Chefs Review the UK's Best North African Restaurant",
+    "rating": null,
+    "rating_out_of": null,
+    "sentiment": "positive",
+    "notes": "New North African restaurant from Super Eight Group featuring Egyptian cuisine. The chefs visited and were impressed with authentic execution, quality of preparation, and balance of flavors. Will said 'possibly the best restaurant meal of my life' and predicted a Michelin star.",
+    "verdict": "Best North African cuisine experience of their life.",
+    "dishes": [
+     "Esh baladi (Egyptian bread)",
+     "Molokhia (stewed jute leaves)",
+     "Lamb chops",
+     "Galloway beef with pistachio muhammara",
+     "Pressed duck",
+     "Pistachio dessert with date puree"
+    ],
+    "sponsored": false,
+    "at": 1
+   }
+  ],
+  "bestRating": null,
+  "bestRatingOutOf": null
+ }
+]

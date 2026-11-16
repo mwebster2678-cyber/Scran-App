@@ -1,0 +1,370 @@
+[
+  {
+    "name": "Rock Steady Eddie's",
+    "location": "London",
+    "lat": 51.47206,
+    "lon": -0.09341,
+    "placeId": "71c2ae2807f2",
+    "mentions": [
+      {
+        "videoId": "UWSXoLGziVg",
+        "videoTitle": "Chefs Review Best Indian Meal",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "More Fallow visited and gave enthusiastic personal opinions. Described as probably the best Indian food in London with Lucknow-based cuisine. Praised exceptional papadums, two-Michelin star soup, lamb brains, and overall fantastic food and restaurant concept.",
+        "verdict": "Fantastic food, fantastic restaurant, fantastic concept.",
+        "dishes": [
+          "papadums",
+          "soup (two-Michelin star)",
+          "lamb brains",
+          "lime pickle martini"
+        ],
+        "sponsored": false,
+        "at": 0
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Best Kebab",
+    "location": "Edgware Road",
+    "lat": 51.51456,
+    "lon": -0.05677,
+    "placeId": "b8301c468226",
+    "mentions": [
+      {
+        "videoId": "iKSKroQoC8U",
+        "videoTitle": "Chefs Review London's Best Kebabs",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "They visited this place and spoke with the founder who opened it in 1982. Jack described it as 'the best kebab of my life' - very delicious, clean, not greasy, with uniform minced meat. The founder recommended eating it simply with just onion, chili sauce, and lemon juice.",
+        "verdict": "Best kebab of my life - clean, not greasy.",
+        "dishes": [
+          "Doner kebab (100% lamb shoulder, kufta style)"
+        ],
+        "sponsored": false,
+        "at": 388
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Superb",
+    "location": "Green Lanes",
+    "lat": 51.52857,
+    "lon": -0.4445,
+    "placeId": "e59734cfa8e6",
+    "mentions": [
+      {
+        "videoId": "iKSKroQoC8U",
+        "videoTitle": "Chefs Review London's Best Kebabs",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Their final kebab stop visited around 1 am where they tried chicken doner, veal doner, and lamb doner. The chicken doner was described as comforting and well-made with high-quality ingredients, though not as luxurious as the lamb and veal options. Will and Jack discussed the quality and textures of each.",
+        "verdict": "High-quality ingredients; chicken good but lamb/veal more luxurious.",
+        "dishes": [
+          "Chicken doner",
+          "Veal doner",
+          "Lamb doner"
+        ],
+        "sponsored": false,
+        "at": 965
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Bentley's Oyster Bar & Grill",
+    "location": "Piccadilly",
+    "lat": 51.50962,
+    "lon": -0.13774,
+    "placeId": "d80f85b69216",
+    "mentions": [
+      {
+        "videoId": "7d1IoStKqZc",
+        "videoTitle": "Chefs Compete for Best Oyster",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "More Fallow competed in Bentley's Oyster Festival as defending champions of 2026, creating multiple oyster dishes including one with ponzu sauce, truffle, nori and hazelnuts, and another with tuna, artichoke puree, and shiso.",
+        "verdict": "Won the oyster competition with innovative tuna and truffle dish.",
+        "dishes": [
+          "Oyster with ponzu sauce and truffle with mustard and nori",
+          "Oyster with tuna, artichoke puree, hazelnuts and shiso"
+        ],
+        "sponsored": false,
+        "at": 0
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Pavyllon",
+    "location": "Central London",
+    "lat": 51.50417,
+    "lon": -0.14994,
+    "placeId": "f4bb6fedda36",
+    "mentions": [
+      {
+        "videoId": "Rn0f193-74Y",
+        "videoTitle": "Chefs Review One of London's Oldest Restaurants ft. Lagom Chef",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "More Fallow visited for breakfast and praised it as serving London's best eggs Benedict, croissants, full English breakfast, and French toast. Called it 'flawless' with no complaints.",
+        "verdict": "Flawless breakfast with the best eggs Benedict in London.",
+        "dishes": [
+          "Eggs Benedict",
+          "Croissants",
+          "Full English breakfast",
+          "French toast"
+        ],
+        "sponsored": false,
+        "at": 35
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Dorian",
+    "location": null,
+    "lat": 51.51658,
+    "lon": -0.20063,
+    "placeId": "271509fed8f8",
+    "mentions": [
+      {
+        "videoId": "IWDKi7qJZZs",
+        "videoTitle": "Chefs Review the Best Ever Seafood Meal",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Josh Niland's pop-up at Dorian. Will and Jack dined there and gave extensive, enthusiastic reviews of the entire meal, calling it one of the best seafood experiences they've had, with particular praise for the creativity, fish preparation, and dishes like the sea bass, blue mackerel, tuna Wellington, John Dory, and tuna cheeseburger.",
+        "verdict": "One of the best seafood meals ever tasted.",
+        "dishes": [
+          "Sea bass with egg and flour noodles",
+          "Cold Kiss sea bass with soba noodles",
+          "Tuna with sobrasada",
+          "Blue mackerel with garam and oil",
+          "Tuna Wellington",
+          "John Dory cooked on the bone",
+          "Tuna cheeseburger",
+          "Sea bass rib with muscovado and soy glaze",
+          "Tuna bone toffee"
+        ],
+        "sponsored": false,
+        "at": 0
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "The Palomar",
+    "location": null,
+    "lat": 51.51121,
+    "lon": -0.13276,
+    "placeId": "2d678b84a898",
+    "mentions": [
+      {
+        "videoId": "77nWfpPzNP0",
+        "videoTitle": "Chefs Rank Top London Restaurants",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Mentioned as one of the five best restaurants in London alongside Legacy.",
+        "verdict": "One of the five best restaurants in London.",
+        "dishes": [],
+        "sponsored": false,
+        "at": 5
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Darby's",
+    "location": null,
+    "lat": 51.48224,
+    "lon": -0.13066,
+    "placeId": "d1011ce0e42e",
+    "mentions": [
+      {
+        "videoId": "77nWfpPzNP0",
+        "videoTitle": "Chefs Rank Top London Restaurants",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Ranked number three. More Fallow says they go there all the time and really like it, noting quality products.",
+        "verdict": "Quality products, goes there all the time.",
+        "dishes": [],
+        "sponsored": false,
+        "at": 21
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Maison François",
+    "location": null,
+    "lat": 51.50764,
+    "lon": -0.13816,
+    "placeId": "1a40248b4122",
+    "mentions": [
+      {
+        "videoId": "77nWfpPzNP0",
+        "videoTitle": "Chefs Rank Top London Restaurants",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Ranked number one. More Fallow says 'we go there for breakfast every Tuesday'.",
+        "verdict": "Breakfast destination visited every Tuesday.",
+        "dishes": [],
+        "sponsored": false,
+        "at": 31
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Golden Dragon",
+    "location": "Chinatown",
+    "lat": 51.59345,
+    "lon": -0.2592,
+    "placeId": "1c221255bce8",
+    "mentions": [
+      {
+        "videoId": "77nWfpPzNP0",
+        "videoTitle": "Chefs Rank Top London Restaurants",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Ranked fifth. More Fallow calls it 'really unexpected' and 'just a bomb'—a surprising pick.",
+        "verdict": "Really unexpected, just a bomb.",
+        "dishes": [],
+        "sponsored": false,
+        "at": 52
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Lahore Karahi",
+    "location": "Tooting",
+    "lat": 51.42958,
+    "lon": -0.16617,
+    "placeId": "8113d52b72b7",
+    "mentions": [
+      {
+        "videoId": "77nWfpPzNP0",
+        "videoTitle": "Chefs Rank Top London Restaurants",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Indian restaurant More Fallow goes to 'all the time'.",
+        "verdict": "Indian restaurant they go to all the time.",
+        "dishes": [],
+        "sponsored": false,
+        "at": 62
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "The Ritz",
+    "location": "St James's",
+    "lat": 51.52387,
+    "lon": -0.14387,
+    "placeId": "744731ab8958",
+    "mentions": [
+      {
+        "videoId": "UfGFW4lOdyw",
+        "videoTitle": "What Chef Techniques Are Actually Worth It?",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "More Fallow visited The Ritz for fine dining and personally experienced a pigeon dish cooked in a press with flambéed brandy/cognac and pan jus, which they described as incredibly romantic.",
+        "verdict": "Flambéed pigeon dish was incredibly romantic.",
+        "dishes": [
+          "Flambéed pigeon with cognac pan jus"
+        ],
+        "sponsored": false,
+        "at": 336
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Blacklock Shoreditch",
+    "location": "Canary Wharf",
+    "lat": 51.52591,
+    "lon": -0.08191,
+    "placeId": "67bb77151774",
+    "mentions": [
+      {
+        "videoId": "Kb1wVpNrRWs",
+        "videoTitle": "Chefs Review the Best Steakhouse in the UK",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "More Fallow visited and praised it as probably the best steakhouse in the UK. They appreciated the excellent quality beef, lamb, and pork cooked using traditional iron-pressing methods over coal. They commended the meat sourcing, simplicity of menu, generous portions, outstanding sides (bone marrow, béarnaise, chips, salads), and fair pricing for the quality.",
+        "verdict": "Incredible steakhouse with exceptional meat quality and service.",
+        "dishes": [
+          "Filet mignon",
+          "Rump steak",
+          "Lamb T-bone",
+          "Pork chops",
+          "Bone marrow",
+          "Béarnaise sauce",
+          "Mushrooms on toast",
+          "Broccoli salad",
+          "White chocolate cheesecake"
+        ],
+        "sponsored": false,
+        "at": 10
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  },
+  {
+    "name": "Crisp at The Marlborough",
+    "location": "Mayfair",
+    "lat": 51.51474,
+    "lon": -0.12234,
+    "placeId": "f718ef5223aa",
+    "mentions": [
+      {
+        "videoId": "lXtvn7sL1po",
+        "videoTitle": "Chefs Review the Best Pizza in the UK",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "More Fallow visited this new pub in Mayfair and praised Crisp pizza as the best in the UK and possibly the world. They highlighted the exceptional crispiness of the base, perfectly balanced flavors, and incredible cooking technique by pizzamaker Pedro.",
+        "verdict": "Best pizza in the UK, possibly the world.",
+        "dishes": [
+          "Crisp W6 pizza",
+          "Nduja pizza",
+          "Vecna pizza (grandma's style)",
+          "Grandma's pizza"
+        ],
+        "sponsored": false,
+        "at": 0
+      }
+    ],
+    "bestRating": null,
+    "bestRatingOutOf": null
+  }
+]

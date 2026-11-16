@@ -1,0 +1,1341 @@
+[
+  {
+    "videoId": "_AKsASERPIo",
+    "title": "Chefs Try London's Best Pizza",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "MAYFAIR, A NEW PUB",
+        "at": "0:01",
+        "matched": null
+      },
+      {
+        "text": "THAT'S SPECIAL",
+        "at": "0:02",
+        "matched": null
+      },
+      {
+        "text": "IN MAYFAIR",
+        "at": "0:04",
+        "matched": null
+      },
+      {
+        "text": "AND IT'S SERVING",
+        "at": "0:05",
+        "matched": null
+      },
+      {
+        "text": "CRISPY PIZZA",
+        "at": "0:06",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Mall Bro",
+        "location": "Mayfair",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "More Fallow visited this new pub serving crispy pizza and were extremely impressed. They praised how light and perfectly cooked the thick-crust pizza was, with one chef declaring it the best pizza they've ever tasted.",
+        "originalName": "Mall Bro",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Mayfair",
+        "address": null,
+        "moment": "0:00",
+        "verdict": "Best pizza ever tasted; perfectly cooked despite thick crust.",
+        "dishes": [
+          "W6 crispy pie with andouille",
+          "Window pizza (Halloween-themed)"
+        ],
+        "confident": false,
+        "why": "Mall Bro has no candidate place matches, so the name may be incorrect or the restaurant may not yet be on SCRAN; the transcript quality and name clarity are uncertain.",
+        "candidates": []
+      }
+    ]
+  },
+  {
+    "videoId": "iKSKroQoC8U",
+    "title": "Chefs Review London's Best Kebabs",
+    "sponsored": false,
+    "graphics": [],
+    "restaurants": [
+      {
+        "name": "Best Kebab",
+        "location": "Edgware Road",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "They visited this place and spoke with the founder who opened it in 1982. Jack described it as 'the best kebab of my life' - very delicious, clean, not greasy, with uniform minced meat. The founder recommended eating it simply with just onion, chili sauce, and lemon juice.",
+        "originalName": "Best Kebab",
+        "keep": true,
+        "reason": "own_review",
+        "moment": "6:28",
+        "placeId": "b8301c468226",
+        "area": "Edgware Road",
+        "address": null,
+        "confident": false,
+        "dishes": [
+          "Doner kebab (100% lamb shoulder, kufta style)"
+        ],
+        "verdict": "Best kebab of my life - clean, not greasy.",
+        "why": "More Fallow personally visited and Jack gave a detailed, enthusiastic first-hand review of the food.",
+        "candidates": [
+          {
+            "id": "75ec5aee176f",
+            "name": "The Best Kebab",
+            "address": "760 Barking Rd, E13 9PJ"
+          },
+          {
+            "id": "3ac6bf31b505",
+            "name": "Best Kebab",
+            "address": "150 High Road"
+          },
+          {
+            "id": "c66323aa37ea",
+            "name": "The Best Kebab",
+            "address": "2B Bittacy Hill, NW7 1LB"
+          },
+          {
+            "id": "b8301c468226",
+            "name": "Best Kebab",
+            "address": "275 Commercial Rd, E1 2PS"
+          },
+          {
+            "id": "46dc8e6ee589",
+            "name": "Best Kebab",
+            "address": "503 Cambridge Heath Rd, E2 9BU"
+          }
+        ]
+      },
+      {
+        "name": "Sinto",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Sinto",
+        "keep": false,
+        "reason": "not_a_place_to_eat",
+        "moment": "14:08",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "confident": false,
+        "dishes": [],
+        "verdict": "",
+        "why": "They only stopped here for cocktails (Negronis) before the final kebab stop; it was not a restaurant they reviewed for food.",
+        "candidates": [
+          {
+            "id": "916243d743c1",
+            "name": "Siam Pinto",
+            "address": "313A Ruislip Road East, UB6 9BG"
+          },
+          {
+            "id": "bbeae5fca552",
+            "name": "Intoku",
+            "address": "241 Old Brompton Rd, SW5 9HP"
+          },
+          {
+            "id": "1e75c7865347",
+            "name": "Incanto",
+            "address": "41 High Street, HA1 3HT"
+          },
+          {
+            "id": "ff7de884301b",
+            "name": "Mr Tinto",
+            "address": "Caithness Walk, CR0 9XF"
+          },
+          {
+            "id": "9b3f4b6930d7",
+            "name": "Thai Pinto",
+            "address": "36-38 High St, KT22 8AJ"
+          }
+        ]
+      },
+      {
+        "name": "Superb",
+        "location": "Green Lanes / Goswell Road",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Their final kebab stop visited around 1 am where they tried chicken doner, veal doner, and lamb doner. The chicken doner was described as comforting and well-made with high-quality ingredients, though not as luxurious as the lamb and veal options. Will and Jack discussed the quality and textures of each.",
+        "originalName": "Superb",
+        "keep": true,
+        "reason": "own_review",
+        "moment": "16:05",
+        "placeId": "e59734cfa8e6",
+        "area": "Green Lanes",
+        "address": null,
+        "confident": false,
+        "dishes": [
+          "Chicken doner",
+          "Veal doner",
+          "Lamb doner"
+        ],
+        "verdict": "High-quality ingredients; chicken good but lamb/veal more luxurious.",
+        "why": "More Fallow personally visited and tasted multiple kebab types, giving their own detailed comparative opinions.",
+        "candidates": [
+          {
+            "id": "e59734cfa8e6",
+            "name": "Super Bros",
+            "address": "6 Halls Terrace"
+          },
+          {
+            "id": "9e98c6dac83a",
+            "name": "Supermax",
+            "address": "14-18 Handyside St, N1C 4DN"
+          },
+          {
+            "id": "9754667ea8c0",
+            "name": "Superfry",
+            "address": "Superfry Fish Bar, 5 High St, BR8 8AE"
+          },
+          {
+            "id": "cf83d90c4457",
+            "name": "Super Wok",
+            "address": "147 Hermit Rd, E16 4LE"
+          },
+          {
+            "id": "bd414762fc5c",
+            "name": "Superbpizza",
+            "address": "6 Broadway, W7 3SS"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "videoId": "7d1IoStKqZc",
+    "title": "Chefs Compete for Best Oyster",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "BENTLEY'S",
+        "at": "0:01",
+        "matched": null
+      },
+      {
+        "text": "OYSTER FESTIVAL",
+        "at": "0:02",
+        "matched": "Bentley's Oyster Festival"
+      },
+      {
+        "text": "TO DEFEND OUR TITLE",
+        "at": "0:04",
+        "matched": null
+      },
+      {
+        "text": "CHAMPIONS",
+        "at": "0:05",
+        "matched": null
+      },
+      {
+        "text": "WE ARE",
+        "at": "0:08",
+        "matched": null
+      },
+      {
+        "text": "FALLOW",
+        "at": "0:09",
+        "matched": null
+      },
+      {
+        "text": "THE CHAMP",
+        "at": "0:10",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Bentley's Oyster Bar & Grill",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "More Fallow competed in Bentley's Oyster Festival as defending champions of 2026, creating multiple oyster dishes including one with ponzu sauce, truffle, nori and hazelnuts, and another with tuna, artichoke puree, and shiso.",
+        "originalName": "Bentley's Oyster Festival",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "d80f85b69216",
+        "area": "Piccadilly",
+        "address": null,
+        "moment": "0:00",
+        "verdict": "Won the oyster competition with innovative tuna and truffle dish.",
+        "dishes": [
+          "Oyster with ponzu sauce and truffle with mustard and nori",
+          "Oyster with tuna, artichoke puree, hazelnuts and shiso"
+        ],
+        "confident": true,
+        "why": "More Fallow personally competed at the festival and created dishes; this is their own event participation, not a restaurant review, but they visited and demonstrated their cooking skills there.",
+        "knownPlace": true,
+        "onScreen": "OYSTER FESTIVAL",
+        "onScreenAt": "0:02"
+      }
+    ]
+  },
+  {
+    "videoId": "Rn0f193-74Y",
+    "title": "Chefs Review One of London's Oldest Restaurants ft. Lagom Chef",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "PAVYLLON",
+        "at": "0:35",
+        "matched": "Pavyllon"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Pavyllon",
+        "location": "Central London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "More Fallow visited for breakfast and praised it as serving London's best eggs Benedict, croissants, full English breakfast, and French toast. Called it 'flawless' with no complaints.",
+        "originalName": "Pavyllon",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "f4bb6fedda36",
+        "area": "Central London",
+        "address": null,
+        "moment": "0:35",
+        "verdict": "Flawless breakfast with the best eggs Benedict in London.",
+        "dishes": [
+          "Eggs Benedict",
+          "Croissants",
+          "Full English breakfast",
+          "French toast"
+        ],
+        "confident": true,
+        "why": "More Fallow personally visited and gave their own positive opinion on the breakfast quality.",
+        "onScreen": "PAVYLLON",
+        "onScreenAt": "0:35"
+      },
+      {
+        "name": "Simpson's",
+        "location": "The Strand, Mayfair",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Historic British restaurant opened in 1828, reopened by Jeremy King. More Fallow highly praised the food, particularly the roast beef which they called 'the best' and 'incredible', and noted the inspiring dining room atmosphere.",
+        "originalName": "Simpson's",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "The Strand",
+        "address": null,
+        "moment": "12:25",
+        "verdict": "Incredible roast beef at this historic 1828 institution.",
+        "dishes": [
+          "Roast beef"
+        ],
+        "confident": false,
+        "why": "The candidate place 'Simpsons Tavern' at Cornhill is a different business from the Simpson's described as being on The Strand; the description suggests the Jeremy King-reopened fine dining restaurant rather than the Cornhill tavern.",
+        "candidates": [
+          {
+            "id": "17cb758854a9",
+            "name": "Simpsons Tavern",
+            "address": "38 1/2 Cornhill, EC3V 9DR"
+          },
+          {
+            "id": "490f4a67154a",
+            "name": "Simpsons Chicken",
+            "address": "3 Windsor St, KT16 8AY"
+          },
+          {
+            "id": "5eb3ec2cb901",
+            "name": "Jim Thompson's",
+            "address": "408 Upper Richmond Rd, SW15 6JP"
+          },
+          {
+            "id": "62de633d1fb5",
+            "name": "Jim Thompson's",
+            "address": "889 Green Lanes, N21 2QP"
+          },
+          {
+            "id": "edc2079f7a5f",
+            "name": "Climpson & Sons",
+            "address": "5 Helmsley Pl, E8 3SB"
+          }
+        ]
+      },
+      {
+        "name": "Nellie's Tavern",
+        "location": "Basement of Simpson's, The Strand",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Invitation-only basement bar at Simpson's. More Fallow visited and had Negroni cocktails in this night bar before heading home.",
+        "originalName": "Nellie's Tavern",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Basement of Simpson's, The Strand",
+        "address": null,
+        "moment": "19:09",
+        "verdict": "Invitation-only basement bar with excellent Negroni cocktails.",
+        "dishes": [
+          "Negroni"
+        ],
+        "confident": false,
+        "why": "Nellie's Tavern is described as a basement bar within Simpson's, not an independent venue; the candidate place 'Karellies' doesn't match and appears unrelated.",
+        "candidates": [
+          {
+            "id": "def8f2790935",
+            "name": "Karellies",
+            "address": "29 High St, TW19 5DA"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "videoId": "UGYh94dQdgo",
+    "title": "Chefs Review Michelin BBQ",
+    "sponsored": false,
+    "graphics": [],
+    "restaurants": [
+      {
+        "name": "The Ned",
+        "location": "St James's",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "mixed",
+        "notes": "More Fallow attended a Michelin BBQ collaboration from Texas featuring Interstellar BBQ x La Barbecue. They tasted and reviewed multiple dishes including brisket, ribs, pork belly, mac and cheese, sausages, and a Texas lamb sandwich.",
+        "originalName": "The Ned",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "City of London",
+        "address": null,
+        "moment": "7:01",
+        "verdict": "Exceptional barbecue collaboration; remarkably tender meat and bold flavors.",
+        "dishes": [
+          "USDA Prime beef brisket",
+          "Beef ribs",
+          "BBQ pork ribs",
+          "BBQ mac and cheese",
+          "Texas lamb sandwich",
+          "Pork belly with tea glaze",
+          "Chimichurri lamb shoulder",
+          "Banana pudding"
+        ],
+        "confident": false,
+        "why": "The candidate place 'Neds Bar' in Church Lane, NW9 is incorrect; The Ned is a historic luxury hotel and restaurant in the City of London, formerly Midland Bank, not a bar in northwest London.",
+        "candidates": [
+          {
+            "id": "86506820bf0c",
+            "name": "Neds Bar",
+            "address": "458 Church Ln, NW9 8UA"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "videoId": "IWDKi7qJZZs",
+    "title": "Chefs Review the Best Ever Seafood Meal",
+    "sponsored": false,
+    "graphics": [],
+    "restaurants": [
+      {
+        "name": "Dorian",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Josh Niland's pop-up at Dorian. Will and Jack dined there and gave extensive, enthusiastic reviews of the entire meal, calling it one of the best seafood experiences they've had, with particular praise for the creativity, fish preparation, and dishes like the sea bass, blue mackerel, tuna Wellington, John Dory, and tuna cheeseburger.",
+        "originalName": "Dorian",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "271509fed8f8",
+        "area": null,
+        "address": null,
+        "verdict": "One of the best seafood meals ever tasted.",
+        "dishes": [
+          "Sea bass with egg and flour noodles",
+          "Cold Kiss sea bass with soba noodles",
+          "Tuna with sobrasada",
+          "Blue mackerel with garam and oil",
+          "Tuna Wellington",
+          "John Dory cooked on the bone",
+          "Tuna cheeseburger",
+          "Sea bass rib with muscovado and soy glaze",
+          "Tuna bone toffee"
+        ],
+        "confident": true,
+        "moment": "0:00"
+      }
+    ]
+  },
+  {
+    "videoId": "brRP294CmQE",
+    "title": "Chefs 'Catch a Tuna' & Review the Best Fish Restaurant in the UK",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "ARGOE",
+        "at": "1:19",
+        "matched": "Argoe"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Argo",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Will's favourite restaurant where he took his team for dinner. They dined there in the evening, eating hyper-seasonal Cornish seafood including crawfish, lobsters, octopus, and other fish cooked over charcoal.",
+        "originalName": "Argoe",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Newlyn, Penzance, Cornwall",
+        "address": null,
+        "verdict": "Exceptional seafood restaurant, one of the best in Cornwall.",
+        "dishes": [
+          "Crawfish",
+          "Lobsters",
+          "Octopus",
+          "Fried stingray with aioli",
+          "Grilled peppers",
+          "Tomato salad",
+          "Monkfish",
+          "Lobster with lobster head sauce",
+          "Scallops"
+        ],
+        "confident": false,
+        "why": "The transcript clearly names 'Argo in Newlyn' and the chapter confirms 'Dining at Argo restaurant', but none of the candidate places match this restaurant (they appear to be London venues). The restaurant is in Newlyn, Cornwall, not London, and More Fallow personally visited and reviewed it.",
+        "moment": "1:04",
+        "candidates": [
+          {
+            "id": "4b563c942514",
+            "name": "Cargo",
+            "address": "86 Rivington Crescent, NW7 2LF"
+          },
+          {
+            "id": "b9d4181880db",
+            "name": "Bargo",
+            "address": "57 Orford Rd, E17 9NJ"
+          },
+          {
+            "id": "6e7f869c34f1",
+            "name": "Margot",
+            "address": "45 Great Queen Street, WC2B 5AA"
+          }
+        ],
+        "onScreen": "ARGOE",
+        "onScreenAt": "1:19"
+      }
+    ]
+  },
+  {
+    "videoId": "f7wCP-F8DsY",
+    "title": "Chefs Review Uncle Roger's Newest Restaurant",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "UNCLE ROGER'S TAKES ON BRITISH CLASSICS",
+        "at": "1:14",
+        "matched": null
+      },
+      {
+        "text": "FOR NIECE & NEPHEW",
+        "at": "1:14",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Kawan",
+        "location": "Chinatown",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Uncle Roger's new fried rice restaurant. The chefs praised the rustic fried rice as 'probably one of the best in London', the curries as 'very, very tasty' and warming, and found the food delicious with good value pricing and cool atmosphere in central London.",
+        "originalName": "Kawan",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Chinatown",
+        "address": null,
+        "moment": "0:00",
+        "verdict": "Probably the best fried rice in London; excellent curries and value.",
+        "dishes": [
+          "Rustic fried rice",
+          "Amber curry",
+          "Grilled wings with pandan, turmeric, fresh mango salad",
+          "Fried Wagyu beef",
+          "Chinatown fried rice with Chinese sausage and bacon",
+          "Tofu noodles with wok-fried beef, puffed rice, hawthorn and dates"
+        ],
+        "confident": false,
+        "why": "The transcript says 'Tawan' at the start but 'Kawan' in the description; none of the candidate places match a fried rice restaurant by Uncle Roger in Chinatown.",
+        "candidates": [
+          {
+            "id": "9e8439724362",
+            "name": "Awana",
+            "address": "85 Sloane Ave, SW3 3DX"
+          },
+          {
+            "id": "fbf4c87cfed2",
+            "name": "Mikawa",
+            "address": "11 Goldhawk Rd, W12 8QQ"
+          },
+          {
+            "id": "510bf81c2dc5",
+            "name": "Ask Away",
+            "address": "94 Askew Road, Shepards Bush, W12 9BL"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "videoId": "mKONvaXYr4A",
+    "title": "Chefs Review The Best New Indian Restaurant in the UK",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "OUDH 1722",
+        "at": "0:49",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Oudh 1722",
+        "location": "Borough Market",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Aktar Islam's new restaurant serving progressive Awadhi cuisine from Lucknow (1722-1900s). More Fallow visited and gave extensive praise: 'one of the best in London this year, if not all,' 'possibly the best Indian meal of my life,' highlighting exceptional food quality, Michelin-star level service, thoughtful nuanced dishes with sophisticated flavor balance, charcoal barbecuing, and impressive atmosphere.",
+        "originalName": "Oudh 1722",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Borough Market",
+        "address": null,
+        "moment": "0:02",
+        "verdict": "One of the best Indian restaurants in London",
+        "dishes": [
+          "Papad and chutneys",
+          "Lamb brain delicacy",
+          "Galavati kebab",
+          "Marinated lamb ribs and veal chops",
+          "Tandoori chicken with charcoal",
+          "Chicken biryani/pilaf",
+          "Dal Bukhara",
+          "Smoked butter chicken",
+          "Ras malai with pistachios",
+          "Gulab jamun"
+        ],
+        "confident": true,
+        "why": "More Fallow personally visited, ate extensively, and gave detailed first-hand opinions throughout the video."
+      },
+      {
+        "name": "Prime Mutton",
+        "location": null,
+        "rating": 7.5,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Prime Mutton",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "moment": "21:58",
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "Aidan (a guest chef) recommended this place for its Guinness; More Fallow did not independently review it as a restaurant.",
+        "candidates": [
+          {
+            "id": "f72e167aeaef",
+            "name": "The Cat & Mutton",
+            "address": "76 Broadway Market, E8 4QJ"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "videoId": "77nWfpPzNP0",
+    "title": "Chefs Rank Top London Restaurants",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "THE PALOMAR",
+        "at": "0:03",
+        "matched": "The Palomar"
+      },
+      {
+        "text": "MOUNTAIN",
+        "at": "0:09",
+        "matched": "Mountain"
+      },
+      {
+        "text": "GYMKHANA",
+        "at": "0:31",
+        "matched": null
+      },
+      {
+        "text": "MAISON FRANCOIS",
+        "at": "0:34",
+        "matched": "Maison Francois"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "The Palomar",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Mentioned as one of the five best restaurants in London alongside Legacy.",
+        "originalName": "The Palomar",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "2d678b84a898",
+        "address": null,
+        "area": null,
+        "moment": "0:05",
+        "dishes": [],
+        "verdict": "One of the five best restaurants in London.",
+        "confident": true,
+        "why": "More Fallow ranks it among their top five London restaurants and discusses it personally.",
+        "onScreen": "THE PALOMAR",
+        "onScreenAt": "0:03"
+      },
+      {
+        "name": "Mountain",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Ranked number two. Praised for incredible products prepared very simply.",
+        "originalName": "Mountain",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "address": null,
+        "area": null,
+        "moment": "0:10",
+        "dishes": [],
+        "verdict": "Incredible products prepared very simply.",
+        "confident": false,
+        "why": "Cannot match to candidate places—none appear to be a London restaurant called simply 'Mountain'.",
+        "candidates": [
+          {
+            "id": "924807386983",
+            "name": "Mountain View",
+            "address": "160 Trafalgar Road, SE10 9TZ"
+          },
+          {
+            "id": "2e5abcc25e55",
+            "name": "Blue Mountain",
+            "address": "201 Maple Road, SE20 8HU"
+          },
+          {
+            "id": "9086bed7d338",
+            "name": "Blue Mountain",
+            "address": "18 North Cross Road, SE22 9EU"
+          },
+          {
+            "id": "4d094e306d21",
+            "name": "The Mount",
+            "address": "30 Old Church Rd, E4 8DD"
+          },
+          {
+            "id": "bd512e452bd9",
+            "name": "Fountain and Ink",
+            "address": "52-54 Stamford St, SE1 9LX"
+          }
+        ],
+        "onScreen": "MOUNTAIN",
+        "onScreenAt": "0:09"
+      },
+      {
+        "name": "Darby's",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Ranked number three. More Fallow says they go there all the time and really like it, noting quality products.",
+        "originalName": "Darby's",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "d1011ce0e42e",
+        "address": null,
+        "area": null,
+        "moment": "0:21",
+        "dishes": [],
+        "verdict": "Quality products, goes there all the time.",
+        "confident": true,
+        "why": "More Fallow gives their own regular personal opinion of the restaurant."
+      },
+      {
+        "name": "Maison François",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Ranked number one. More Fallow says 'we go there for breakfast every Tuesday'.",
+        "originalName": "Maison Francois",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "1a40248b4122",
+        "address": null,
+        "area": null,
+        "moment": "0:31",
+        "dishes": [],
+        "verdict": "Breakfast destination visited every Tuesday.",
+        "confident": true,
+        "why": "More Fallow ranks it first and describes regular personal visits.",
+        "onScreen": "MAISON FRANCOIS",
+        "onScreenAt": "0:34"
+      },
+      {
+        "name": "Golden Dragon",
+        "location": "Chinatown",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Ranked fifth. More Fallow calls it 'really unexpected' and 'just a bomb'—a surprising pick.",
+        "originalName": "Golden Dragon",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "1c221255bce8",
+        "address": null,
+        "area": "Chinatown",
+        "moment": "0:52",
+        "dishes": [],
+        "verdict": "Really unexpected, just a bomb.",
+        "confident": false,
+        "why": "Transcript says Chinatown but candidate Golden Dragon at 399 Edgware Rd (NW9) is not in Chinatown proper; no Chinatown Golden Dragon in candidates.",
+        "candidates": [
+          {
+            "id": "e76f33ac59f4",
+            "name": "Golden Dragon",
+            "address": "302 Caledonian Rd, N1 1BB"
+          },
+          {
+            "id": "eef41626ad0c",
+            "name": "Golden Dragon",
+            "address": "202 Ripple Rd, IG11 7PR"
+          },
+          {
+            "id": "58bf4e74e2a7",
+            "name": "Golden Dragon",
+            "address": "294 Barking Rd Unit 2, E13 8HR"
+          },
+          {
+            "id": "f1b639e166bd",
+            "name": "Golden Dragon",
+            "address": "94 Pitshanger Ln., W5 1QX"
+          },
+          {
+            "id": "1c221255bce8",
+            "name": "Golden Dragon",
+            "address": "399 Edgware Rd, NW9 0FH"
+          }
+        ]
+      },
+      {
+        "name": "Lahore Karahi",
+        "location": "Tooting",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Indian restaurant More Fallow goes to 'all the time'.",
+        "originalName": "Lahore Karahi",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "8113d52b72b7",
+        "address": "1 Tooting High St, SW17 0SN",
+        "area": "Tooting",
+        "moment": "1:02",
+        "dishes": [],
+        "verdict": "Indian restaurant they go to all the time.",
+        "confident": true,
+        "why": "More Fallow gives their own regular personal opinion of this Tooting restaurant.",
+        "knownPlace": true
+      }
+    ]
+  },
+  {
+    "videoId": "UfGFW4lOdyw",
+    "title": "What Chef Techniques Are Actually Worth It?",
+    "sponsored": false,
+    "graphics": [],
+    "restaurants": [
+      {
+        "name": "Otto's",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Otto's",
+        "keep": false,
+        "reason": "only_mentioned",
+        "placeId": "680ad51f5fea",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "Otto's is mentioned only in passing as an example of a restaurant that does table side flambéing, without More Fallow reviewing it or eating there.",
+        "moment": "7:23",
+        "candidates": [
+          {
+            "id": "680ad51f5fea",
+            "name": "Otto",
+            "address": "8 Royal Parade, BR7 6NR"
+          },
+          {
+            "id": "70dbcb59f735",
+            "name": "Cotto",
+            "address": "89 Westminster Bridge Rd, SE1 7HR"
+          },
+          {
+            "id": "a9fe3aeb63e0",
+            "name": "Ritto's",
+            "address": "149 Ladbroke Grove, W10 6HJ"
+          },
+          {
+            "id": "33d843aeb0dd",
+            "name": "Sotto Scala",
+            "address": ""
+          },
+          {
+            "id": "27104079451c",
+            "name": "Cottons",
+            "address": "55 Chalk Farm Rd, NW1 8AN"
+          }
+        ]
+      },
+      {
+        "name": "The Ritz",
+        "location": "St James's",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "More Fallow visited The Ritz for fine dining and personally experienced a pigeon dish cooked in a press with flambéed brandy/cognac and pan jus, which they described as incredibly romantic.",
+        "originalName": "The Ritz",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "744731ab8958",
+        "area": "St James's",
+        "address": null,
+        "verdict": "Flambéed pigeon dish was incredibly romantic.",
+        "dishes": [
+          "Flambéed pigeon with cognac pan jus"
+        ],
+        "confident": true,
+        "why": "More Fallow personally visited and gave their own opinion of the flambéed pigeon dish as part of their discussion on flambéing techniques.",
+        "moment": "5:36"
+      },
+      {
+        "name": "Black Bear Burger",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Black Bear Burger",
+        "keep": false,
+        "reason": "only_mentioned",
+        "placeId": "50ceed44bfb8",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "Black Bear Burger is mentioned only as Jack's personal favorite burger restaurant, referenced for comparison but not reviewed by More Fallow.",
+        "moment": "10:06",
+        "knownPlace": true
+      },
+      {
+        "name": "Five Guys",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Five Guys",
+        "keep": false,
+        "reason": "only_mentioned",
+        "placeId": "c0ef49e6c5f0",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "Five Guys is mentioned as a burger option both hosts like, with discussion of possibly doing a live stream visit, but no actual review or visit occurred in the video.",
+        "moment": "10:11"
+      },
+      {
+        "name": "Shortleaf",
+        "location": "St James's",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Shortleaf",
+        "keep": false,
+        "reason": "guest_own_place",
+        "placeId": null,
+        "area": "St James's",
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "Shortleaf is Chef Mayo's own restaurant, mentioned to introduce the guest and their concept rather than as a More Fallow review. The candidate place found does not match (located in Twickenham, not St James's).",
+        "moment": "12:57",
+        "candidates": [
+          {
+            "id": "ba9e6567fa59",
+            "name": "Short Eats -Uk",
+            "address": "120 High St, TW3 1NA"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "videoId": "Kb1wVpNrRWs",
+    "title": "Chefs Review the Best Steakhouse in the UK",
+    "sponsored": false,
+    "graphics": [],
+    "restaurants": [
+      {
+        "name": "Blacklock Shoreditch",
+        "location": "Canary Wharf",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "More Fallow visited and praised it as probably the best steakhouse in the UK. They appreciated the excellent quality beef, lamb, and pork cooked using traditional iron-pressing methods over coal. They commended the meat sourcing, simplicity of menu, generous portions, outstanding sides (bone marrow, béarnaise, chips, salads), and fair pricing for the quality.",
+        "originalName": "Blacklock",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "67bb77151774",
+        "area": "Canary Wharf",
+        "address": null,
+        "moment": "0:10",
+        "verdict": "Incredible steakhouse with exceptional meat quality and service.",
+        "dishes": [
+          "Filet mignon",
+          "Rump steak",
+          "Lamb T-bone",
+          "Pork chops",
+          "Bone marrow",
+          "Béarnaise sauce",
+          "Mushrooms on toast",
+          "Broccoli salad",
+          "White chocolate cheesecake"
+        ],
+        "confident": true,
+        "why": "More Fallow personally visited, ate extensively, and gave detailed positive opinions about the food and experience; this is a clear own_review.",
+        "knownPlace": true
+      },
+      {
+        "name": "Soma",
+        "location": "Canary Wharf",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Soma",
+        "keep": false,
+        "reason": "only_mentioned",
+        "placeId": "13efa74a247f",
+        "area": "Canary Wharf",
+        "address": null,
+        "moment": "20:14",
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "Soma was only briefly mentioned as a cocktail bar they were heading to; they did not eat or review it, only took photos there.",
+        "candidates": [
+          {
+            "id": "4eed44013fdc",
+            "name": "OMA",
+            "address": "3 Bedale St, SE1 9AL"
+          },
+          {
+            "id": "b56b261c9900",
+            "name": "Loma",
+            "address": "131 Askew Rd, W12 9AU"
+          },
+          {
+            "id": "13efa74a247f",
+            "name": "SOMA Soho",
+            "address": "14 Denman Street, W1D 7HJ"
+          },
+          {
+            "id": "147fd557d599",
+            "name": "A Roma",
+            "address": "30 Church Road, KT4 7RA"
+          },
+          {
+            "id": "f3f5586d051d",
+            "name": "Somali Food",
+            "address": "Hanbury St, E1 5JL"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "videoId": "lXtvn7sL1po",
+    "title": "Chefs Review the Best Pizza in the UK",
+    "sponsored": false,
+    "graphics": [],
+    "restaurants": [
+      {
+        "name": "Crisp at The Marlborough",
+        "location": "Mayfair",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "More Fallow visited this new pub in Mayfair and praised Crisp pizza as the best in the UK and possibly the world. They highlighted the exceptional crispiness of the base, perfectly balanced flavors, and incredible cooking technique by pizzamaker Pedro.",
+        "originalName": "Crisp at The Marlborough",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "f718ef5223aa",
+        "area": "Mayfair",
+        "address": null,
+        "moment": "0:00",
+        "verdict": "Best pizza in the UK, possibly the world.",
+        "dishes": [
+          "Crisp W6 pizza",
+          "Nduja pizza",
+          "Vecna pizza (grandma's style)",
+          "Grandma's pizza"
+        ],
+        "confident": false,
+        "why": "The description mentions 'The Marlborough in Mayfair' but the transcript says 'Mulra, a new pub in Mayfair.' The candidate 'The Marlborough Head' at 36 Drury Ln is in London but not explicitly Mayfair; uncertain if this matches the location or if 'Mulra' is the correct name or a transcription error.",
+        "candidates": [
+          {
+            "id": "659a06e98fcd",
+            "name": "The Marlborough",
+            "address": "46 Friars Stile Rd, TW10 6NQ"
+          },
+          {
+            "id": "1470806b6cdc",
+            "name": "Marlborough Arms",
+            "address": "36 Torrington Pl, WC1E 7LY"
+          },
+          {
+            "id": "20a03b7bff4b",
+            "name": "Marlborough Head",
+            "address": "24 N Audley St, W1K 6WD"
+          },
+          {
+            "id": "f718ef5223aa",
+            "name": "The Marlborough Head",
+            "address": "36 Drury Ln, WC2B 5RR"
+          },
+          {
+            "id": "b6b40ecc5c45",
+            "name": "Marlborough Bakery",
+            "address": "64 Kimmeridge Road, SE9 4EB"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "videoId": "jRjhZwh2hJg",
+    "title": "POV: Grilling & Pizza Oven at a London Restaurant",
+    "sponsored": false,
+    "graphics": [],
+    "restaurants": [
+      {
+        "name": "Roe",
+        "location": "St James's",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Roe",
+        "keep": false,
+        "reason": "own_place",
+        "placeId": null,
+        "area": "St James's",
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "More Fallow runs or works at Roe; this is their own restaurant, not a review.",
+        "moment": null
+      }
+    ]
+  },
+  {
+    "videoId": "kujqedg0xt0",
+    "title": "POV: Bartender at a Top London Restaurant",
+    "sponsored": false,
+    "graphics": [],
+    "restaurants": [
+      {
+        "name": "Fallow",
+        "location": "St James's",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Fallow",
+        "keep": false,
+        "reason": "own_place",
+        "placeId": "69b681f0e0af",
+        "area": "St James's",
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "More Fallow runs Fallow restaurant; this is their own business, not a review of another establishment.",
+        "moment": "0:00"
+      }
+    ]
+  },
+  {
+    "videoId": "jDE7FK-5lAs",
+    "title": "POV: Head Chef at a Top London Restaurant",
+    "sponsored": false,
+    "graphics": [],
+    "restaurants": [
+      {
+        "name": "Fallow",
+        "location": "St James's",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Fallow",
+        "keep": false,
+        "reason": "own_place",
+        "placeId": "69b681f0e0af",
+        "area": "St James's",
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "More Fallow works at Fallow restaurant as head chef; this is their own place, not a review.",
+        "moment": null
+      }
+    ]
+  },
+  {
+    "videoId": "-uUNChhkbBo",
+    "title": "Chefs Review the UK's Best North African Restaurant",
+    "sponsored": false,
+    "graphics": [],
+    "restaurants": [
+      {
+        "name": "Impala",
+        "location": "Soho",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "New North African restaurant from Super Eight Group featuring Egyptian cuisine. The chefs visited and were impressed with authentic execution, quality of preparation, and balance of flavors. Will said 'possibly the best restaurant meal of my life' and predicted a Michelin star.",
+        "originalName": "Impala",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Soho",
+        "address": null,
+        "moment": "0:01",
+        "verdict": "Best North African cuisine experience of their life.",
+        "dishes": [
+          "Esh baladi (Egyptian bread)",
+          "Molokhia (stewed jute leaves)",
+          "Lamb chops",
+          "Galloway beef with pistachio muhammara",
+          "Pressed duck",
+          "Pistachio dessert with date puree"
+        ],
+        "confident": true
+      }
+    ]
+  },
+  {
+    "videoId": "pSbx74X1kko",
+    "title": "POV LIVE Chef Stream | Busy London Restaurant",
+    "sponsored": false,
+    "graphics": [],
+    "restaurants": [
+      {
+        "name": "Fallow",
+        "location": "St James's",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Fallow",
+        "keep": false,
+        "reason": "own_place",
+        "placeId": "69b681f0e0af",
+        "area": "St James's",
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "More Fallow runs this restaurant; it is their own place and not a review.",
+        "moment": null
+      }
+    ]
+  },
+  {
+    "videoId": "UWSXoLGziVg",
+    "title": "Chefs Review Best Indian Meal",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "AYAN ISLAM",
+        "at": "0:09",
+        "matched": null
+      },
+      {
+        "text": "AYAN ISLAM",
+        "at": "0:10",
+        "matched": null
+      },
+      {
+        "text": "AYAN ISLAM",
+        "at": "0:11",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "<UNKNOWN>",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "<UNKNOWN>",
+        "keep": false,
+        "reason": "only_mentioned",
+        "placeId": null,
+        "area": "London",
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "The restaurant is never named in the transcript, only described as serving Lucknow-based Indian cuisine. While More Fallow clearly reviewed it and praised it highly, the place's actual name is not stated, making it impossible to identify or record.",
+        "moment": "0:00",
+        "candidates": []
+      }
+    ]
+  }
+]

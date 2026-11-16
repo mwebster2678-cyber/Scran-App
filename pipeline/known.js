@@ -17,8 +17,10 @@ const sameArea = (a, b) => {
 // The confirmed place for a pick, matched on any of its names. Chains have several
 // confirmed branches, so a name that matches more than one place needs a matching area.
 export function findKnown(known, { name, originalName, area }) {
-  const keys = new Set([name, originalName].filter(Boolean).map(nameKey));
-  const matches = known.filter(k => k.names.some(n => keys.has(nameKey(n))));
+  // "<UNKNOWN>" is what Claude writes when no name was heard: it says nothing about the place
+  const real = n => n && !/^<.*>$/.test(n.trim());
+  const keys = new Set([name, originalName].filter(real).map(nameKey));
+  const matches = known.filter(k => k.names.some(n => real(n) && keys.has(nameKey(n))));
   const places = new Map(matches.map(k => [k.placeId || `${k.lat},${k.lon}`, k]));
   if (places.size === 1) return matches[0];
   return matches.find(k => sameArea(k.area, area)) || null;

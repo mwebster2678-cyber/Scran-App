@@ -16,5 +16,112 @@
    "dropReason": "temporary",
    "name": "Hawker House"
   }
+ },
+ {
+  "key": "morefallow:_AKsASERPIo:Mall Bro",
+  "why": "Crisp Pizza is inside The Marlborough pub, 24 N Audley St: one pin for all (you, 16 Nov)",
+  "set": {
+   "keep": true,
+   "name": "Crisp Pizza at The Marlborough",
+   "placeId": "eff6529f9176",
+   "lat": 51.51338,
+   "lon": -0.15381
+  }
+ },
+ {
+  "key": "morefallow:lXtvn7sL1po:Crisp at The Marlborough",
+  "why": "Crisp Pizza is inside The Marlborough pub, 24 N Audley St: one pin for all (you, 16 Nov)",
+  "set": {
+   "keep": true,
+   "name": "Crisp Pizza at The Marlborough",
+   "placeId": "eff6529f9176",
+   "lat": 51.51338,
+   "lon": -0.15381
+  }
+ },
+ {
+  "key": "bitetwice:Nzplcs0m-K8:Crisp",
+  "why": "Crisp Pizza is inside The Marlborough pub, 24 N Audley St: one pin for all (you, 16 Nov)",
+  "set": {
+   "keep": true,
+   "name": "Crisp Pizza at The Marlborough",
+   "placeId": "eff6529f9176",
+   "lat": 51.51338,
+   "lon": -0.15381
+  }
+ },
+ {
+  "key": "morefallow:Kb1wVpNrRWs:Blacklock",
+  "why": "Video says Canary Wharf, was linked to Blacklock Shoreditch (you, 16 Nov)",
+  "set": {
+   "keep": true,
+   "name": "Blacklock Canary Wharf",
+   "placeId": "f02043f8880b",
+   "lat": 51.5059,
+   "lon": -0.02086
+  }
+ },
+ {
+  "key": "morefallow:77nWfpPzNP0:The Palomar",
+  "why": "Only mentioned in passing, not visited (you, 16 Nov)",
+  "set": {
+   "keep": false,
+   "dropReason": "only_mentioned",
+   "name": "The Palomar"
+  }
+ },
+ {
+  "key": "morefallow:77nWfpPzNP0:Mountain",
+  "why": "Only mentioned in passing, not visited (you, 16 Nov)",
+  "set": {
+   "keep": false,
+   "dropReason": "only_mentioned",
+   "name": "Mountain"
+  }
+ },
+ {
+  "key": "morefallow:77nWfpPzNP0:Darby's",
+  "why": "Only mentioned in passing, not visited (you, 16 Nov)",
+  "set": {
+   "keep": false,
+   "dropReason": "only_mentioned",
+   "name": "Darby's"
+  }
+ },
+ {
+  "key": "morefallow:77nWfpPzNP0:Maison Francois",
+  "why": "Only mentioned in passing, not visited (you, 16 Nov)",
+  "set": {
+   "keep": false,
+   "dropReason": "only_mentioned",
+   "name": "Maison Fran\u00e7ois"
+  }
+ },
+ {
+  "key": "morefallow:77nWfpPzNP0:Golden Dragon",
+  "why": "Only mentioned in passing, not visited (you, 16 Nov)",
+  "set": {
+   "keep": false,
+   "dropReason": "only_mentioned",
+   "name": "Golden Dragon"
+  }
+ },
+ {
+  "key": "morefallow:77nWfpPzNP0:Lahore Karahi",
+  "why": "Only mentioned in passing, not visited (you, 16 Nov)",
+  "set": {
+   "keep": false,
+   "dropReason": "only_mentioned",
+   "name": "Lahore Karahi"
+  }
+ },
+ {
+  "key": "morefallow:UfGFW4lOdyw:The Ritz",
+  "why": "Only mentioned in passing, not visited (you, 16 Nov)",
+  "set": {
+   "keep": false,
+   "dropReason": "only_mentioned",
+   "name": "The Ritz"
+  }
  }
 ]

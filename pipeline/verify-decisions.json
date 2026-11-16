@@ -4963,10 +4963,10 @@
   "spot": false,
   "moved": false,
   "keep": true,
-  "name": "Crisp W1",
-  "placeId": null,
-  "lat": 51.5133863,
-  "lon": -0.15382469999999998,
+  "name": "Crisp Pizza at The Marlborough",
+  "placeId": "eff6529f9176",
+  "lat": 51.51338,
+  "lon": -0.15381,
   "address": "24 N Audley St, London W1K 6WD",
   "manual": null,
   "source": "google-top"
@@ -5568,5 +5568,461 @@
   "moved": false,
   "keep": false,
   "dropReason": "only_mentioned"
+ },
+ {
+  "creator": "morefallow",
+  "videoId": "_AKsASERPIo",
+  "originalName": "Mall Bro",
+  "area": "Mayfair",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Mall Bro",
+   "placeId": null
+  },
+  "suggested": "google-top",
+  "spot": false,
+  "moved": false,
+  "keep": true,
+  "name": "Crisp Pizza at The Marlborough",
+  "placeId": "eff6529f9176",
+  "lat": 51.51338,
+  "lon": -0.15381,
+  "address": null,
+  "manual": "The Marlborough",
+  "mapLink": "https://www.google.com/maps/place/The+Marlborough/@51.5133863,-0.1628369,1414m/data=!3m1!1e3!4m10!1m2!2m1!1sThe+Marlborough,+London!3m6!1s0x4876053297aa462b:0xaf339c6369d6caec!8m2!3d51.5133863!4d-0.1538247!15sChdUaGUgTWFybGJvcm91Z2gsIExvbmRvbloYIhZ0aGUgbWFybGJvcm91Z2ggbG9uZG9ukgEDcHVimgFEQ2k5RFFVbFJRVU52WkVOb2RIbGpSamx2VDIweFJWRXlOV2hVU0VadFYydDRibVJZY0haTlZVWjJUa2RHVkZsdVl4QULgAQD6AQQIABA2!16s%2Fg%2F1thd64dy?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D",
+  "source": "maplink"
+ },
+ {
+  "creator": "morefallow",
+  "videoId": "iKSKroQoC8U",
+  "originalName": "Best Kebab",
+  "area": "Edgware Road",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Best Kebab",
+   "placeId": "b8301c468226"
+  },
+  "suggested": "google-top",
+  "spot": false,
+  "moved": false,
+  "keep": true,
+  "name": "The Best Turkish Kebab",
+  "placeId": "a0094d71bb9d",
+  "lat": 51.55611,
+  "lon": -0.07468,
+  "address": "125 Stoke Newington Rd, N16 8BT",
+  "manual": null,
+  "source": "search"
+ },
+ {
+  "creator": "morefallow",
+  "videoId": "iKSKroQoC8U",
+  "originalName": "Sinto",
+  "area": null,
+  "claude": {
+   "keep": false,
+   "reason": "not_a_place_to_eat",
+   "name": "Sinto",
+   "placeId": null
+  },
+  "suggested": "google",
+  "spot": false,
+  "moved": false,
+  "keep": false,
+  "dropReason": "not_a_place_to_eat"
+ },
+ {
+  "creator": "morefallow",
+  "videoId": "iKSKroQoC8U",
+  "originalName": "Superb",
+  "area": "Green Lanes",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Superb",
+   "placeId": "e59734cfa8e6"
+  },
+  "suggested": "google-top",
+  "spot": false,
+  "moved": false,
+  "keep": true,
+  "name": "Gokyuzu",
+  "placeId": "4dfa67607585",
+  "lat": 51.58054,
+  "lon": -0.0992,
+  "address": "26-28 Grand Parade, Green Lanes, N4 1LG",
+  "manual": null,
+  "source": "search"
+ },
+ {
+  "creator": "morefallow",
+  "videoId": "lXtvn7sL1po",
+  "originalName": "Crisp at The Marlborough",
+  "area": "Mayfair",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Crisp at The Marlborough",
+   "placeId": "f718ef5223aa"
+  },
+  "suggested": "google-top",
+  "spot": false,
+  "moved": false,
+  "keep": true,
+  "name": "Crisp Pizza at The Marlborough",
+  "placeId": "eff6529f9176",
+  "lat": 51.51338,
+  "lon": -0.15381,
+  "address": "24 N Audley St, London W1K 6WD",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "morefallow",
+  "videoId": "Rn0f193-74Y",
+  "originalName": "Simpson's",
+  "area": "The Strand",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Simpson's",
+   "placeId": null
+  },
+  "suggested": "google-top",
+  "spot": false,
+  "moved": false,
+  "keep": true,
+  "name": "Simpson's in the Strand",
+  "placeId": "d6c8a4f0ea2c",
+  "lat": 51.51068,
+  "lon": -0.12065,
+  "address": "100 Strand, WC2R 0EW",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "morefallow",
+  "videoId": "Rn0f193-74Y",
+  "originalName": "Nellie's Tavern",
+  "area": "Basement of Simpson's, The Strand",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Nellie's Tavern",
+   "placeId": null
+  },
+  "suggested": "google-top",
+  "spot": false,
+  "moved": false,
+  "keep": true,
+  "name": "Nellie's Tavern",
+  "placeId": null,
+  "lat": 51.510625499999996,
+  "lon": -0.1205241,
+  "address": "100 Strand, London WC2R 0EZ",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "morefallow",
+  "videoId": "UGYh94dQdgo",
+  "originalName": "The Ned",
+  "area": "City of London",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "The Ned",
+   "placeId": null
+  },
+  "suggested": "google-top",
+  "spot": false,
+  "moved": false,
+  "keep": true,
+  "name": "The Ned London",
+  "placeId": null,
+  "lat": 51.5136949,
+  "lon": -0.0901693,
+  "address": "27 Poultry, London EC2R 8AJ",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "morefallow",
+  "videoId": "brRP294CmQE",
+  "originalName": "Argoe",
+  "area": "Newlyn, Penzance, Cornwall",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Argo",
+   "placeId": null
+  },
+  "suggested": null,
+  "spot": false,
+  "moved": false,
+  "keep": false,
+  "dropReason": "not_london"
+ },
+ {
+  "creator": "morefallow",
+  "videoId": "f7wCP-F8DsY",
+  "originalName": "Kawan",
+  "area": "Chinatown",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Kawan",
+   "placeId": null
+  },
+  "suggested": "google-top",
+  "spot": false,
+  "moved": false,
+  "keep": true,
+  "name": "Kawan by Uncle Roger",
+  "placeId": null,
+  "lat": 51.511976,
+  "lon": -0.1311794,
+  "address": "12 Macclesfield St, London W1D 5BP",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "morefallow",
+  "videoId": "mKONvaXYr4A",
+  "originalName": "Oudh 1722",
+  "area": "Borough Market",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Oudh 1722",
+   "placeId": null
+  },
+  "suggested": "google-top",
+  "spot": false,
+  "moved": false,
+  "keep": true,
+  "name": "Oudh 1722",
+  "placeId": null,
+  "lat": 51.5041191,
+  "lon": -0.0949719,
+  "address": "66 Union St, London SE1 1TD",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "morefallow",
+  "videoId": "mKONvaXYr4A",
+  "originalName": "Prime Mutton",
+  "area": null,
+  "claude": {
+   "keep": false,
+   "reason": "guest_recommendation",
+   "name": "Prime Mutton",
+   "placeId": null
+  },
+  "suggested": "candidate",
+  "spot": false,
+  "moved": false,
+  "keep": false,
+  "dropReason": "other"
+ },
+ {
+  "creator": "morefallow",
+  "videoId": "77nWfpPzNP0",
+  "originalName": "Mountain",
+  "area": null,
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Mountain",
+   "placeId": null
+  },
+  "suggested": "google-top",
+  "spot": false,
+  "moved": false,
+  "keep": false,
+  "dropReason": "only_mentioned",
+  "name": "Mountain"
+ },
+ {
+  "creator": "morefallow",
+  "videoId": "77nWfpPzNP0",
+  "originalName": "Golden Dragon",
+  "area": "Chinatown",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Golden Dragon",
+   "placeId": "1c221255bce8"
+  },
+  "suggested": "google-top",
+  "spot": false,
+  "moved": false,
+  "keep": false,
+  "dropReason": "only_mentioned",
+  "name": "Golden Dragon"
+ },
+ {
+  "creator": "morefallow",
+  "videoId": "UfGFW4lOdyw",
+  "originalName": "Otto's",
+  "area": "London",
+  "claude": {
+   "keep": false,
+   "reason": "only_mentioned",
+   "name": "Otto's",
+   "placeId": "680ad51f5fea"
+  },
+  "suggested": "claude",
+  "spot": false,
+  "moved": false,
+  "keep": false,
+  "dropReason": "only_mentioned"
+ },
+ {
+  "creator": "morefallow",
+  "videoId": "UfGFW4lOdyw",
+  "originalName": "Shortleaf",
+  "area": "St James's",
+  "claude": {
+   "keep": false,
+   "reason": "guest_own_place",
+   "name": "Shortleaf",
+   "placeId": null
+  },
+  "suggested": "google-top",
+  "spot": false,
+  "moved": false,
+  "keep": false,
+  "dropReason": "only_mentioned"
+ },
+ {
+  "creator": "morefallow",
+  "videoId": "Kb1wVpNrRWs",
+  "originalName": "Soma",
+  "area": "Canary Wharf",
+  "claude": {
+   "keep": false,
+   "reason": "only_mentioned",
+   "name": "Soma",
+   "placeId": "13efa74a247f"
+  },
+  "suggested": "google-top",
+  "spot": false,
+  "moved": false,
+  "keep": false,
+  "dropReason": "only_mentioned"
+ },
+ {
+  "creator": "morefallow",
+  "videoId": "-uUNChhkbBo",
+  "originalName": "Impala",
+  "area": "Soho",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Impala",
+   "placeId": null
+  },
+  "suggested": "google-top",
+  "spot": false,
+  "moved": false,
+  "keep": true,
+  "name": "Impala",
+  "placeId": null,
+  "lat": 51.5147517,
+  "lon": -0.1331213,
+  "address": "13-14 Dean St, London W1D 3RS",
+  "manual": null,
+  "source": "google-top"
+ },
+ {
+  "creator": "morefallow",
+  "videoId": "UWSXoLGziVg",
+  "originalName": "<UNKNOWN>",
+  "area": "London",
+  "claude": {
+   "keep": false,
+   "reason": "only_mentioned",
+   "name": "<UNKNOWN>",
+   "placeId": null
+  },
+  "suggested": null,
+  "spot": false,
+  "moved": false,
+  "keep": false,
+  "dropReason": "only_mentioned"
+ },
+ {
+  "creator": "morefallow",
+  "videoId": "7d1IoStKqZc",
+  "originalName": "Bentley's Oyster Festival",
+  "area": "Piccadilly",
+  "claude": {
+   "keep": true,
+   "reason": "own_review",
+   "name": "Bentley's Oyster Bar & Grill",
+   "placeId": "d80f85b69216"
+  },
+  "suggested": "claude",
+  "spot": true,
+  "moved": false,
+  "keep": false,
+  "dropReason": "temporary"
+ },
+ {
+  "creator": "morefallow",
+  "videoId": "UfGFW4lOdyw",
+  "originalName": "The Ritz",
+  "keep": false,
+  "name": "The Ritz",
+  "placeId": "3bb9d62c37b3",
+  "lat": 51.507,
+  "lon": -0.14181,
+  "dropReason": "only_mentioned"
+ },
+ {
+  "creator": "morefallow",
+  "videoId": "Kb1wVpNrRWs",
+  "originalName": "Blacklock",
+  "keep": true,
+  "name": "Blacklock Canary Wharf",
+  "placeId": "f02043f8880b",
+  "lat": 51.5059,
+  "lon": -0.02086
+ },
+ {
+  "creator": "morefallow",
+  "videoId": "77nWfpPzNP0",
+  "originalName": "The Palomar",
+  "keep": false,
+  "dropReason": "only_mentioned",
+  "name": "The Palomar"
+ },
+ {
+  "creator": "morefallow",
+  "videoId": "77nWfpPzNP0",
+  "originalName": "Darby's",
+  "keep": false,
+  "dropReason": "only_mentioned",
+  "name": "Darby's"
+ },
+ {
+  "creator": "morefallow",
+  "videoId": "77nWfpPzNP0",
+  "originalName": "Maison Francois",
+  "keep": false,
+  "dropReason": "only_mentioned",
+  "name": "Maison François"
+ },
+ {
+  "creator": "morefallow",
+  "videoId": "77nWfpPzNP0",
+  "originalName": "Lahore Karahi",
+  "keep": false,
+  "dropReason": "only_mentioned",
+  "name": "Lahore Karahi"
  }
 ]

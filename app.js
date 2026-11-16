@@ -952,6 +952,14 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       textColour: '#B34700',
       zIndexOffset: 480,
     },
+    {
+      key: 'morefallow',
+      name: 'More Fallow',
+      avatar: 'images/morefallow.jpg',
+      colour: '#2E7D32',
+      textColour: '#1B5E20',
+      zIndexOffset: 460,
+    },
   ].filter(c => !c.draft || PREVIEW);
 
   // Best overall score, falling back to the highest single-video score

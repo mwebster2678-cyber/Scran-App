@@ -29,11 +29,11 @@ import { saysWhere } from './comments.js';
 const MODEL          = 'claude-haiku-4-5-20251001';
 const PRICE          = { input: 1 / 1e6, output: 5 / 1e6 }; // US$ per token for MODEL
 const MAX_CALLS      = 400;    // hard stop, whatever happens
-const MAX_TRANSCRIPT = 60_000; // characters
 const YT_DLP         = process.env.YT_DLP || 'yt-dlp';
 const CACHE_DIR      = 'cache';
 
 const creator     = creatorFromArgs();
+const MAX_TRANSCRIPT = Math.max(creator.maxText || 0, 60_000); // characters
 const DRY_RUN     = process.argv.includes('--dry-run');
 const TRANSCRIPTS = process.argv.includes('--transcripts');
 const RECHECK     = process.argv.includes('--recheck');
@@ -210,7 +210,7 @@ function candidates(name, at) {
 // ─── Claude ─────────────────────────────────────────────────────────────────
 
 const REASONS = ['own_review', 'guest_recommendation', 'guest_own_place', 'event_stall',
-  'not_london', 'not_a_place_to_eat', 'only_mentioned'];
+  'not_london', 'not_a_place_to_eat', 'only_mentioned', 'own_place'];
 
 const TOOL = {
   name: 'record_checks',
@@ -266,6 +266,7 @@ For each restaurant listed, decide:
   - "not_london": outside London.
   - "not_a_place_to_eat": not a restaurant, café, bar, pub, bakery or food stall (e.g. a shop, cookery school, a person's home, a brand).
   - "only_mentioned": named in passing without being reviewed.
+  - "own_place": a restaurant ${creator.name} runs, owns or works in.
 - name: the restaurant's correct name. Names from speech are often misheard — correct them using the chapters, description, title and candidate places. Chapter titles usually spell the name correctly.
 - placeId: the id of the candidate place that is this restaurant (same business; the right branch if it has several), or null if none is.
 - sponsored (for the whole video): true if the title or description says ad, AD, #ad, (ad), paid partnership, sponsored, "in partnership with", or YouTube flags paid promotion.
@@ -280,11 +281,11 @@ Description:
 ${(details?.description || '(none)').slice(0, 4000)}
 ${chapterList?.length ? `\nChapters:\n${chapterList.map(c => `[${clock(c.start)}] ${c.title}`).join('\n')}\n` : ''}${commentList?.length ? `\nComments saying what or where a place is:\n${commentList.map(c => `- ${c.creator ? '[creator] ' : ''}${c.text}`).join('\n')}\n` : ''}${text ? `\nTranscript (automatic captions; no speaker names; [m:ss] marks the time):\n${text.slice(0, MAX_TRANSCRIPT)}\n` : ''}
 Restaurants extracted from this video:
-${picks.map((p, i) => `${i}. "${p.name}"${p.location ? ` (location given: ${p.location})` : ''}
+${picks.map((p, i) => `${i + 1}. "${p.name}"${p.location ? ` (location given: ${p.location})` : ''}
    Extracted notes: ${p.notes || '(none)'}
    Candidate places: ${JSON.stringify(p.candidates)}`).join('\n')}
 
-Record a check for every restaurant listed, using the record_checks tool.`;
+Record exactly one check for each restaurant listed above, with its number as index, using the record_checks tool. Don't add places that aren't listed.`;
 }
 
 // ─── Main ───────────────────────────────────────────────────────────────────
@@ -362,7 +363,7 @@ async function main() {
     if (!result?.restaurants) throw new Error(`No result for video ${video.videoId}`);
 
     const restaurants = picks.map((pick, index) => {
-        const check = result.restaurants.find(r => r.index === index);
+        const check = result.restaurants.find(r => r.index === index + 1);
         const { candidates, ...original } = pick;
         // A place you confirmed on the review page settles where it is (Claude still decides keep/drop)
         const confirmed = check && findKnown(known, { name: check.name, originalName: pick.name, area: check.area || pick.location });

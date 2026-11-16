@@ -16,7 +16,7 @@ const LIMIT    = +(process.argv[process.argv.indexOf('--limit') + 1]) || Infinit
 const YT_DLP   = process.env.YT_DLP || `${os.homedir()}/.local/bin/yt-dlp`;
 const OUTPUT   = creator.files.scraped;
 const MODEL    = 'claude-haiku-4-5-20251001';
-const MAX_TEXT = 15_000; // characters of captions per video
+const MAX_TEXT = creator.maxText || 15_000; // characters of captions per video
 
 async function ytGet(endpoint, params) {
   const url = new URL(`https://www.googleapis.com/youtube/v3/${endpoint}`);

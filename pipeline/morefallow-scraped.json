@@ -1,0 +1,611 @@
+[
+  {
+    "videoId": "TZBPE4JhBnM",
+    "title": "POV: Cooking Fish and Chips at the UK's Biggest Food Festival",
+    "published": "2026-11-06",
+    "restaurants": []
+  },
+  {
+    "videoId": "UWSXoLGziVg",
+    "title": "Chefs Review Best Indian Meal",
+    "published": "2026-11-05",
+    "restaurants": [
+      {
+        "name": "<UNKNOWN>",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Probably the best Indian food they've had in London. Described as fantastic food, fantastic restaurant with Lucknow-based cuisine. Notable dishes include exceptional papadums, a two-Michelin star soup, lamb brains, and other delicacies."
+      }
+    ]
+  },
+  {
+    "videoId": "_AKsASERPIo",
+    "title": "Chefs Try London's Best Pizza",
+    "published": "2026-10-29",
+    "restaurants": [
+      {
+        "name": "Mall Bro",
+        "location": "Mayfair",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "A new pub serving crispy pizza. The chefs were very impressed, with one stating it was the best pizza they've ever tasted. They praised how light and perfectly cooked the pizza was despite the thick crust."
+      }
+    ]
+  },
+  {
+    "videoId": "iKSKroQoC8U",
+    "title": "Chefs Review London's Best Kebabs",
+    "published": "2026-10-26",
+    "restaurants": [
+      {
+        "name": "Best Kebab",
+        "location": "Edgware Road",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "They visited this place and tried doner kebab made from 100% lamb shoulder. The founder opened it in 1982. Jack described it as 'the best kebab of my life' - very delicious, clean, not greasy, with uniform minced meat (kufta style rather than sliced yaprak)."
+      },
+      {
+        "name": "Sinto",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "They stopped here for Negronis before heading to their final kebab stop. Described as having a good cocktail list."
+      },
+      {
+        "name": "Superb",
+        "location": "Green Lanes / Goswell Road",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Their final kebab stop visited around 1 am where they tried chicken doner, veal doner, and lamb doner. The chicken doner was described as comforting and well-made with high-quality ingredients, though not as luxurious as the lamb and veal options."
+      }
+    ]
+  },
+  {
+    "videoId": "7d1IoStKqZc",
+    "title": "Chefs Compete for Best Oyster",
+    "published": "2026-10-19",
+    "restaurants": [
+      {
+        "name": "Bentley's Oyster Festival",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "More Fallow competed in the oyster festival competition, defending their 2026 champion title with creative oyster dishes featuring ponzu sauce, truffle, and other ingredients."
+      }
+    ]
+  },
+  {
+    "videoId": "Rn0f193-74Y",
+    "title": "Chefs Review One of London's Oldest Restaurants ft. Lagom Chef",
+    "published": "2026-10-09",
+    "restaurants": [
+      {
+        "name": "Pavyllon",
+        "location": "Central London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "One Michelin star restaurant by Yannick Alléno. They praised it as serving the best breakfast in London, with exceptional eggs Benedict, croissants, full English breakfast, and French toast. Called it 'flawless' with no complaints."
+      },
+      {
+        "name": "Simpson's",
+        "location": "The Strand, Mayfair",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Historic British restaurant opened in 1828, reopened by Jeremy King. They highly praised the food, particularly the roast beef which they called 'the best' and 'incredible', and noted the inspiring dining room atmosphere."
+      },
+      {
+        "name": "Nellie's Tavern",
+        "location": "Basement of Simpson's, The Strand",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Invitation-only basement bar at Simpson's where they had Negroni cocktails. Named after Mrs. Pavlova, it's a night bar where they spent time before heading home."
+      }
+    ]
+  },
+  {
+    "videoId": "YPPaCQbl7FA",
+    "title": "Chef Eats His Dream Meal",
+    "published": "2026-10-08",
+    "restaurants": [],
+    "noCaptions": true
+  },
+  {
+    "videoId": "UGYh94dQdgo",
+    "title": "Chefs Review Michelin BBQ",
+    "published": "2026-09-25",
+    "restaurants": [
+      {
+        "name": "The Ned",
+        "location": "St James's",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "mixed",
+        "notes": "Will and Jack dined here for a Michelin BBQ collaboration from Texas featuring Interstellar BBQ x La Barbecue."
+      }
+    ],
+    "noCaptions": true
+  },
+  {
+    "videoId": "IWDKi7qJZZs",
+    "title": "Chefs Review the Best Ever Seafood Meal",
+    "published": "2026-09-21",
+    "restaurants": [
+      {
+        "name": "Dorian",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Josh Niland's pop-up at Dorian. Described as a contemporary master of seafood who has 'changed the fish game' for good. Will and Jack dined here and reviewed it as the best ever seafood meal."
+      }
+    ],
+    "noCaptions": true
+  },
+  {
+    "videoId": "brRP294CmQE",
+    "title": "Chefs 'Catch a Tuna' & Review the Best Fish Restaurant in the UK",
+    "published": "2026-09-11",
+    "restaurants": [
+      {
+        "name": "Argoe",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Will's favourite restaurant where they dined with friends"
+      }
+    ],
+    "noCaptions": true
+  },
+  {
+    "videoId": "y7a2G7GQxUk",
+    "title": "Chefs Review The World's Best Burger",
+    "published": "2026-09-04",
+    "restaurants": [],
+    "noCaptions": true
+  },
+  {
+    "videoId": "Vvg2ozSN30o",
+    "title": "The Secret Ingredient Every Chef Must Know",
+    "published": "2026-09-02",
+    "restaurants": []
+  },
+  {
+    "videoId": "f7wCP-F8DsY",
+    "title": "Chefs Review Uncle Roger's Newest Restaurant",
+    "published": "2026-08-28",
+    "restaurants": [
+      {
+        "name": "Kawan",
+        "location": "Chinatown",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Uncle Roger's new fried rice restaurant in central London. The chefs praised the rustic fried rice as \"probably one of the best in London,\" the curries as \"very, very tasty\" and warming, and overall found the food \"delicious\" with good value pricing and a cool atmosphere."
+      }
+    ]
+  },
+  {
+    "videoId": "vrphBz0TFg0",
+    "title": "We Tried One of the UK's Newest Michelin Stars",
+    "published": "2026-08-28",
+    "restaurants": []
+  },
+  {
+    "videoId": "dHCKdxdp2ew",
+    "title": "Secret to Red Wine Sauce",
+    "published": "2026-08-26",
+    "restaurants": []
+  },
+  {
+    "videoId": "GxAbehKB8oc",
+    "title": "This Dessert Uses the Entire Banana",
+    "published": "2026-08-24",
+    "restaurants": []
+  },
+  {
+    "videoId": "PPDKF4wEBR4",
+    "title": "Science of Sashimi",
+    "published": "2026-08-23",
+    "restaurants": []
+  },
+  {
+    "videoId": "OKW3THhFmA0",
+    "title": "Is Grass Fed Beef Worth It?",
+    "published": "2026-08-22",
+    "restaurants": []
+  },
+  {
+    "videoId": "UHfc6B5dIuo",
+    "title": "Chefs React to Iconic TV Food Moments",
+    "published": "2026-08-21",
+    "restaurants": []
+  },
+  {
+    "videoId": "vSslQwGmZ50",
+    "title": "Chefs Review IKEA Meatballs",
+    "published": "2026-08-19",
+    "restaurants": []
+  },
+  {
+    "videoId": "8m2HmkotN9M",
+    "title": "You Should Use Fermented Chillies",
+    "published": "2026-08-18",
+    "restaurants": []
+  },
+  {
+    "videoId": "fMGhnEJTe38",
+    "title": "Truth of MSG",
+    "published": "2026-08-17",
+    "restaurants": []
+  },
+  {
+    "videoId": "8LOAdZivBoE",
+    "title": "Science of Charring",
+    "published": "2026-08-15",
+    "restaurants": []
+  },
+  {
+    "videoId": "mKONvaXYr4A",
+    "title": "Chefs Review The Best New Indian Restaurant in the UK",
+    "published": "2026-08-14",
+    "restaurants": [
+      {
+        "name": "Oudh 1722",
+        "location": "Borough Market",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Aktar Islam's new restaurant serving progressive Awadhi cuisine from Lucknow. The chefs praised it as \"one of the best in London this year, if not all\" and \"possibly the best Indian meal of my life,\" highlighting the incredible food quality, Michelin-star level service, and thoughtful, nuanced dishes with sophisticated balance of flavors."
+      },
+      {
+        "name": "Prime Mutton",
+        "location": null,
+        "rating": 7.5,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "A bar/pub known for serving what Aidan calls \"the best Guinness in London.\" The reviewer gave the creamy Guinness pint a solid 7.5 out of 10, praising it as \"really nice and creamy\" though not a legendary masterpiece."
+      }
+    ]
+  },
+  {
+    "videoId": "Y2Ixz-n-G1Y",
+    "title": "Stage Kitchen Nightmares",
+    "published": "2026-08-12",
+    "restaurants": []
+  },
+  {
+    "videoId": "gAHrOi0mi0Y",
+    "title": "Science of Ice Cream",
+    "published": "2026-08-11",
+    "restaurants": []
+  },
+  {
+    "videoId": "zmcnfu8Fx1E",
+    "title": "Best Use for Yesterday's Herbs",
+    "published": "2026-08-10",
+    "restaurants": []
+  },
+  {
+    "videoId": "GMVvG8H1vRE",
+    "title": "Why Pickles Work in Burgers",
+    "published": "2026-08-09",
+    "restaurants": []
+  },
+  {
+    "videoId": "77nWfpPzNP0",
+    "title": "Chefs Rank Top London Restaurants",
+    "published": "2026-08-08",
+    "restaurants": [
+      {
+        "name": "The Palomar",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Listed as one of the five best restaurants in London."
+      },
+      {
+        "name": "Mountain",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Ranked number two. 'There are incredible products there, prepared very simply.' 'So delicious.'"
+      },
+      {
+        "name": "Darby's",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Ranked number three. 'Quality products.' 'I go there all the time. I really like it there.'"
+      },
+      {
+        "name": "Maison Francois",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Ranked number one. 'We go there for breakfast every Tuesday.'"
+      },
+      {
+        "name": "Golden Dragon",
+        "location": "Chinatown",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Ranked fifth. 'Just a bomb.' Described as a surprising pick."
+      },
+      {
+        "name": "Lahore Karahi",
+        "location": "Tooting",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Indian restaurant. 'I also go to all the time.'"
+      }
+    ]
+  },
+  {
+    "videoId": "UfGFW4lOdyw",
+    "title": "What Chef Techniques Are Actually Worth It?",
+    "published": "2026-08-07",
+    "restaurants": [
+      {
+        "name": "Otto's",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Mentioned as doing a lot of table side flambéing. The hosts consider doing flambé there but note there's not enough space."
+      },
+      {
+        "name": "The Ritz",
+        "location": "St James's",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "They visited for fine dining and had a pigeon dish cooked in a press with flambéed brandy/cognac and pan jus. Described as incredibly romantic."
+      },
+      {
+        "name": "Black Bear Burger",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Jack's favorite burger restaurant. Has six chains and offers delivery. They reference it as a burger style they enjoy."
+      },
+      {
+        "name": "Five Guys",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Both hosts like Five Guys. They mention the possibility of doing a live stream visit there to order burgers."
+      },
+      {
+        "name": "Shortleaf",
+        "location": "St James's",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "South African restaurant in central London with about 80 seats. Chef Mayo does guest residencies at Fallow. Menu highlights include lamb head. First two seatings both sold out within weeks."
+      }
+    ]
+  },
+  {
+    "videoId": "_ZXvsYU_7ZY",
+    "title": "Why Texture Tastes So Good",
+    "published": "2026-08-06",
+    "restaurants": []
+  },
+  {
+    "videoId": "Yfwm7KEr0j8",
+    "title": "3 Ways to Use Turnips",
+    "published": "2026-08-05",
+    "restaurants": []
+  },
+  {
+    "videoId": "C1A8EGO-cCY",
+    "title": "Chef Techniques: Worth It or Gimmick?",
+    "published": "2026-08-04",
+    "restaurants": []
+  },
+  {
+    "videoId": "Kb1wVpNrRWs",
+    "title": "Chefs Review the Best Steakhouse in the UK",
+    "published": "2026-07-31",
+    "restaurants": [
+      {
+        "name": "Blacklock",
+        "location": "Canary Wharf",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "They praised it as probably the best steakhouse in the UK with excellent quality beef, lamb, and pork cooked using traditional methods. The chefs appreciated the meat sourcing, simplicity of menu, generous portions, and outstanding sides. They felt it was a fantastic experience with great service and reasonable pricing for the quality."
+      },
+      {
+        "name": "Soma",
+        "location": "Canary Wharf",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "They visited this cocktail bar in Canary Wharf (which also has a location in Soho) briefly. The description was brief, but they had a positive photo moment there with good views."
+      }
+    ]
+  },
+  {
+    "videoId": "tavIlebz2vw",
+    "title": "POV: Cooking in the World’s Largest Chicken Wing Festival",
+    "published": "2026-07-29",
+    "restaurants": []
+  },
+  {
+    "videoId": "wGyQj8CEGjc",
+    "title": "Chefs Rank European Cities",
+    "published": "2026-07-28",
+    "restaurants": []
+  },
+  {
+    "videoId": "lXtvn7sL1po",
+    "title": "Chefs Review the Best Pizza in the UK",
+    "published": "2026-07-23",
+    "restaurants": [
+      {
+        "name": "Crisp at The Marlborough",
+        "location": "Mayfair",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Chefs visited this new pub in Mayfair serving Crisp pizza made by David Portna. They praised the pizza as the best in the UK and possibly the world, noting the exceptional crispiness of the base, perfectly balanced flavors, and incredible technique. They ordered multiple styles including traditional and grandma's pizzas, all of which they rated extremely highly."
+      }
+    ]
+  },
+  {
+    "videoId": "rapN10PIEk8",
+    "title": "Chefs React to Their Own Viral POVs",
+    "published": "2026-07-19",
+    "restaurants": []
+  },
+  {
+    "videoId": "FI6XBLZ4FqE",
+    "title": "This Makes Every Sauce Better",
+    "published": "2026-07-15",
+    "restaurants": []
+  },
+  {
+    "videoId": "EZTLAYvpIOo",
+    "title": "Chefs Review One of the UK's Newest Michelin Stars",
+    "published": "2026-07-14",
+    "restaurants": []
+  },
+  {
+    "videoId": "hqD3J72UPZI",
+    "title": "The Big Caramelised Onions Mistake",
+    "published": "2026-07-09",
+    "restaurants": []
+  },
+  {
+    "videoId": "jRjhZwh2hJg",
+    "title": "POV: Grilling & Pizza Oven at a London Restaurant",
+    "published": "2026-07-07",
+    "restaurants": [
+      {
+        "name": "Roe",
+        "location": "St James's",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "More Fallow's own restaurant where they work - excluded per instructions (own_place)."
+      }
+    ]
+  },
+  {
+    "videoId": "HkgNO0lkFlY",
+    "title": "When You're The Uncultured Friend",
+    "published": "2026-07-01",
+    "restaurants": [],
+    "noCaptions": true
+  },
+  {
+    "videoId": "kujqedg0xt0",
+    "title": "POV: Bartender at a Top London Restaurant",
+    "published": "2026-06-28",
+    "restaurants": [
+      {
+        "name": "Fallow",
+        "location": "St James's",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Video features JC working as a bartender at Fallow restaurant, showcasing their signature cocktails and the bar experience. The creators highlight the craft and technique behind their drinks with detailed explanations of ingredients and preparation methods."
+      }
+    ]
+  },
+  {
+    "videoId": "_FaN4Yzfjjs",
+    "title": "Why Restaurant Sauce is so Much Better",
+    "published": "2026-06-23",
+    "restaurants": []
+  },
+  {
+    "videoId": "jDE7FK-5lAs",
+    "title": "POV: Head Chef at a Top London Restaurant",
+    "published": "2026-06-21",
+    "restaurants": [
+      {
+        "name": "Fallow",
+        "location": "St James's",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Own place - More Fallow works at Fallow restaurant. Video shows them working the pass during service with various dishes including leek Caesar, beef ribs, corn ribs, mussels, cod head, and parfaits."
+      }
+    ]
+  },
+  {
+    "videoId": "8Nq_5mIvWaI",
+    "title": "The Lobsters Most Chefs Don't Use?!",
+    "published": "2026-06-20",
+    "restaurants": []
+  },
+  {
+    "videoId": "-uUNChhkbBo",
+    "title": "Chefs Review the UK's Best North African Restaurant",
+    "published": "2026-06-19",
+    "restaurants": [
+      {
+        "name": "Impala",
+        "location": "Soho",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "New North African restaurant from Crazy Eight Group featuring Egyptian cuisine. The chefs were incredibly impressed with the authentic execution, quality of preparation, and balance of flavors across dishes including molokhia, lamb chops, Galloway beef, and pressed duck. Will said it was 'possibly the best restaurant meal of my life' and predicted a Michelin star."
+      }
+    ]
+  },
+  {
+    "videoId": "pSbx74X1kko",
+    "title": "POV LIVE Chef Stream | Busy London Restaurant",
+    "published": "2026-06-19",
+    "restaurants": [
+      {
+        "name": "Fallow",
+        "location": "St James's",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Own restaurant where More Fallow works, featured in this live stream video of service on the pass. No review given as this is their own place."
+      }
+    ]
+  },
+  {
+    "videoId": "dUk9rYfVZ_w",
+    "title": "This Spice Scared Me",
+    "published": "2026-06-16",
+    "restaurants": []
+  },
+  {
+    "videoId": "dwt7MTqx06k",
+    "title": "POV: Head Chef at London's Busiest Restaurant",
+    "published": "2026-06-12",
+    "restaurants": []
+  },
+  {
+    "videoId": "fQIJhn9AIHE",
+    "title": "Chicken Skin is the Best Part",
+    "published": "2026-06-11",
+    "restaurants": []
+  }
+]
