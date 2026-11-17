@@ -55,7 +55,7 @@ function item(key, creator, video, pick, why) {
     originalName: pick.originalName, name: pick.name, area: pick.area || pick.location || null,
     keep: pick.keep, reasonKey: pick.reason, reason: REASON_LABELS[pick.reason] || pick.reason, why,
     verdict: pick.verdict, notes: pick.notes, comments: commentsFor(video.videoId),
-    address: pick.address || null, onScreen: pick.onScreen || null,
+    address: pick.address || null, onScreen: pick.onScreen || null, onScreenAt: pick.onScreenAt || null,
     options, guessed: !!guess, specificArea: !!(pick.address || (pick.area && !/^(central |north |south |east |west )?london$/i.test(pick.area))),
   };
 }
@@ -431,7 +431,7 @@ function buildCard(r, n) {
       <span class="decision \${r.keep ? 'keep' : 'drop'}">\${r.keep ? 'Keep' : 'Drop'}</span> — \${esc(r.reason)}
       <div class="why">\${esc(r.why)}</div>
       \${r.verdict ? '<div class="verdict">“' + esc(r.verdict) + '”</div>' : ''}
-      \${r.onScreen ? '<div class="why"><b>On screen:</b> ' + esc(r.onScreen) + '</div>' : ''}
+      \${r.onScreen ? '<div class="why"><b>On screen:</b> ' + esc(r.onScreen) + (r.onScreenAt ? ' at ' + esc(r.onScreenAt) : '') + '</div>' : ''}
       \${r.address ? '<div class="why"><b>Address mentioned:</b> ' + esc(r.address) + '</div>' : ''}
     </div>
     \${r.comments.length ? \`<div class="comments">
@@ -521,16 +521,16 @@ function buildCard(r, n) {
     if (r.onScreen && nameFit([r.name, r.originalName], r.onScreen) < 1) queries.push(r.onScreen + (where ? ' ' + where : '') + ', London');
     try {
       const found = [];
-      for (const q of queries) for (const g of await googleSearch(q)) {
-        if (!found.some(f => Math.abs(f.lat - g.lat) < 1e-5 && Math.abs(f.lon - g.lon) < 1e-5)) found.push(g);
+      for (const [qi, q] of queries.entries()) for (const g of await googleSearch(q)) {
+        if (!found.some(f => Math.abs(f.lat - g.lat) < 1e-5 && Math.abs(f.lon - g.lon) < 1e-5)) found.push({ ...g, fromScreen: qi > 0 });
       }
       const query = queries.map(q => '“' + q + '”').join(' and ');
       note.textContent = found.length ? 'Searched Google for ' + query : 'Google found nothing for ' + query;
       const places = [];
       for (const g of found) {
         const p = await scranPlaceFor(g);
-        places.push(p ? { id: p.id, name: p.name, address: p.address || g.address, lat: p.lat, lon: p.lon }
-                      : { id: null, name: g.name, address: g.address, lat: g.lat, lon: g.lon });
+        places.push(p ? { id: p.id, name: p.name, address: p.address || g.address, lat: p.lat, lon: p.lon, fromScreen: g.fromScreen }
+                      : { id: null, name: g.name, address: g.address, lat: g.lat, lon: g.lon, fromScreen: g.fromScreen });
       }
       googleTop = places[0] || null;
       const names = [r.name, r.originalName, r.onScreen].filter(Boolean);
@@ -551,7 +551,8 @@ function buildCard(r, n) {
       const added = [];
       [...nearby].reverse().forEach(place => added.unshift(addOption(place, 'Same name nearby', false, true, 'nearby')));
       [...places.entries()].reverse().forEach(([k, place]) =>
-        added.unshift(addOption(place, k === 0 ? "Google's top match" : 'Google', false, true, k === 0 ? 'google-top' : 'google')));
+        added.unshift(place.fromScreen ? addOption(place, 'Google, for the on-screen name', false, true, 'google-screen')
+          : addOption(place, k === 0 ? "Google's top match" : 'Google', false, true, k === 0 ? 'google-top' : 'google')));
       if (tick) {
         // Tick the best name fit, Google's order breaking ties
         const all = [...places, ...nearby];

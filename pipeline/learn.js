@@ -9,6 +9,7 @@ import fs from 'fs';
 import os from 'os';
 import path from 'path';
 import { KNOWN_FILE } from './known.js';
+import { soundsLike } from './link.js';
 
 const DECISIONS = 'verify-decisions.json';
 
@@ -110,6 +111,24 @@ const spot = withContext.filter(d => d.spot);
 if (spot.length) {
   console.log(`\nSpot check (picks Claude was sure about): right ${pct(spot.filter(claudeRight).length, spot.length)}`);
   spot.filter(d => !claudeRight(d)).forEach(d => console.log(`  wrong: "${d.originalName}" → Claude: ${d.claude.keep ? `"${d.claude.name}"` : `drop (${d.claude.reason})`} → you: ${d.keep ? `"${d.name}"` : `drop (${d.dropReason})`}`));
+}
+
+// On-screen names (verify.js --frames) against your answers
+const picksByKey = new Map();
+for (const c of new Set(decisions.map(d => d.creator))) {
+  if (!fs.existsSync(`${c}-verified.json`)) continue;
+  for (const v of JSON.parse(fs.readFileSync(`${c}-verified.json`, 'utf8'))) {
+    for (const r of v.restaurants) picksByKey.set(`${c}:${v.videoId}:${r.originalName}`, r);
+  }
+}
+const shown = withContext.filter(d => d.keep && picksByKey.get(keyOf(d))?.onScreen);
+if (shown.length) {
+  const right = list => list.filter(d => soundsLike(picksByKey.get(keyOf(d)).onScreen, d.name) >= 0.6).length;
+  const differs = shown.filter(d => picksByKey.get(keyOf(d)).onScreenDiffers);
+  const agrees = shown.filter(d => !picksByKey.get(keyOf(d)).onScreenDiffers);
+  console.log(`\nOn-screen name was your answer:`);
+  console.log(`  agreed with Claude's name       ${pct(right(agrees), agrees.length)}`);
+  console.log(`  suggested a different name      ${pct(right(differs), differs.length)}`);
 }
 
 // Mistakes by kind: what you dropped that Claude kept, and Claude's drop reasons you overruled

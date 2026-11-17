@@ -12,7 +12,10 @@
 //        node verify.js <creator> --recheck     check again the videos that have unsure picks
 //        node verify.js <creator> --only <id,id> check again just these videos
 //        add --transcripts to also read video transcripts and chapters (needs a working yt-dlp)
-//        add --frames to also show Claude video frames around each pick (on-screen name graphics)
+//        add --frames to also read on-screen names (title cards, signs, menus) from video frames
+//          around each pick. With ffmpeg (~/.local/bin/ffmpeg) these are full-size frames around
+//          the moments found by the last check, so run once without --frames first; without
+//          ffmpeg, or for picks with no moment yet, YouTube's small storyboard frames.
 //
 // Reads <creator>-scraped.json (+ -geocoded.json for current locations) → writes <creator>-verified.json,
 // which geocode.js then uses instead of the scraped file.
@@ -22,7 +25,8 @@ import { promisify } from 'util';
 import Anthropic from '@anthropic-ai/sdk';
 import { creatorFromArgs, addressInText, nameKey, tidyName } from './shared.js';
 import { PLACES_FILE, squash, similarity, metres, sameName } from './link.js';
-import { matchGraphics } from './graphics.js';
+import { matchGraphics, seconds } from './graphics.js';
+import { readText, hasFfmpeg, matchOnScreen } from './frames.js';
 import { loadKnown, findKnown } from './known.js';
 import { saysWhere } from './comments.js';
 
@@ -254,7 +258,7 @@ const TOOL = {
   },
 };
 
-function prompt(video, details, text, chapterList, commentList, picks) {
+function prompt(video, details, text, chapterList, commentList, picks, onScreenList) {
   return `You are checking restaurant picks taken from a YouTube video by ${creator.name} (@${creator.channel}), a London food creator.${creator.about ? ' ' + creator.about : ''} The picks were extracted automatically and may be wrong. SCRAN, a restaurant map, will show the kept ones under ${creator.name}'s name, so only ${creator.name}'s own first-hand opinions may be kept.
 
 For each restaurant listed, decide:
@@ -264,28 +268,41 @@ For each restaurant listed, decide:
   - "guest_own_place": it's the guest's own restaurant, mentioned to introduce them, not reviewed by ${creator.name}.
   - "event_stall": a stall at an event, festival or market that ${creator.name} organised or runs. Stalls at a permanent food hall or market reviewed by ${creator.name} are "own_review".
   - "not_london": outside London.
-  - "not_a_place_to_eat": not a restaurant, café, bar, pub, bakery or food stall (e.g. a shop, cookery school, a person's home, a brand).
+  - "not_a_place_to_eat": not a restaurant, café, bar, pub, bakery or food stall (e.g. a shop, cookery school, a person's home, a brand). A market or food hall where ${creator.name} eats at a stall isn't this: keep it, named after the stall.
   - "only_mentioned": named in passing without being reviewed.
   - "own_place": a restaurant ${creator.name} runs, owns or works in.
-- name: the restaurant's correct name. Names from speech are often misheard — correct them using the chapters, description, title and candidate places. Chapter titles usually spell the name correctly.
+- name: the restaurant's correct name. If it's a stall, counter or kitchen inside a market, food hall or pub (e.g. a stall in Seven Dials Market, a pizza kitchen in a pub), name the stall, not the market or venue, from the on-screen text, transcript or description; if the stall's name isn't given anywhere, keep the venue's name and set confident = false. Names from speech are often misheard — correct them using the chapters, description, title and candidate places. Chapter titles usually spell the name correctly.
 - placeId: the id of the candidate place that is this restaurant (same business; the right branch if it has several), or null if none is.
 - sponsored (for the whole video): true if the title or description says ad, AD, #ad, (ad), paid partnership, sponsored, "in partnership with", or YouTube flags paid promotion.
 - confident = false whenever you are unsure about keep, the name or the placeId.
 - Video frames (if attached, each labelled with its time): list in graphics every on-screen text graphic naming a restaurant (e.g. "CANAL RESTAURANT"), with its frame time. They're matched to the restaurants separately, so don't rename restaurants from them. The frames are small: copy only text you can read with certainty, and never guess or fill in blurry or partly readable text (small address lines usually are). A wrong name or address is far worse than none.
 - Comments: viewers saying what or where a place is. Use them to correct names and find the right place, but as hints: viewers can be wrong or name somewhere else entirely. Comments marked [creator] are from ${creator.name}.
 - moment: the [m:ss] marker in the transcript just before the creator talks about the restaurant, so a person can jump to it.
+- On-screen text (if listed): names read from full-size video frames, with their times. They are often not the restaurant: the video's own title card, a neighbouring shop, a market or street name, another stop in the video, or now and then a misread. A name counts for a restaurant only when it appears while ${creator.name} is at or talking about that restaurant (arriving, ordering, eating, reviewing it); then it's strong evidence for the name.
 
 Video title: ${video.title}
 YouTube paid promotion flag: ${details?.paidPromotion ? 'yes' : 'no'}
 Description:
 ${(details?.description || '(none)').slice(0, 4000)}
-${chapterList?.length ? `\nChapters:\n${chapterList.map(c => `[${clock(c.start)}] ${c.title}`).join('\n')}\n` : ''}${commentList?.length ? `\nComments saying what or where a place is:\n${commentList.map(c => `- ${c.creator ? '[creator] ' : ''}${c.text}`).join('\n')}\n` : ''}${text ? `\nTranscript (automatic captions; no speaker names; [m:ss] marks the time):\n${text.slice(0, MAX_TRANSCRIPT)}\n` : ''}
+${chapterList?.length ? `\nChapters:\n${chapterList.map(c => `[${clock(c.start)}] ${c.title}`).join('\n')}\n` : ''}${commentList?.length ? `\nComments saying what or where a place is:\n${commentList.map(c => `- ${c.creator ? '[creator] ' : ''}${c.text}`).join('\n')}\n` : ''}${text ? `\nTranscript (automatic captions; no speaker names; [m:ss] marks the time):\n${text.slice(0, MAX_TRANSCRIPT)}\n` : ''}${onScreenList?.length ? `\nOn-screen text read from video frames ([m:ss] kind: text):\n${onScreenList.map(n => `[${clock(n.at)}] ${n.kind}: ${n.text}`).join('\n')}\n` : ''}
 Restaurants extracted from this video:
 ${picks.map((p, i) => `${i + 1}. "${p.name}"${p.location ? ` (location given: ${p.location})` : ''}
    Extracted notes: ${p.notes || '(none)'}
    Candidate places: ${JSON.stringify(p.candidates)}`).join('\n')}
 
 Record exactly one check for each restaurant listed above, with its number as index, using the record_checks tool. Don't add places that aren't listed.`;
+}
+
+// The on-screen name of a pick (frames.js matchOnScreen), kept as evidence beside Claude's name.
+// A different name on screen (misheard, or only the market or venue named) sends the pick to
+// review, where Google is searched for it too, but never replaces the name: in long videos the
+// screen shows plenty of other places, and in a test it was wrong there as often as right.
+// A dropped pick with a different name on screen (e.g. dropped as a market when they ate at a
+// stall in it) goes to review too, rather than disappearing.
+function applyOnScreen(r, match) {
+  Object.assign(r, { onScreen: match.text, onScreenAt: clock(match.at), onScreenDiffers: match.relation === 'better_name' });
+  if (match.relation !== 'better_name') return;
+  Object.assign(r, { confident: false, why: `${r.why} On screen at ${clock(match.at)}: "${match.text}" (${match.why})` });
 }
 
 // ─── Main ───────────────────────────────────────────────────────────────────
@@ -301,6 +318,10 @@ async function main() {
     return [v.videoId, (unsure.length ? unsure : v.restaurants).map(r => String(r.moment || '').match(/^(\d+):(\d{2})$/))
       .filter(Boolean).map(m => +m[1] * 60 + +m[2])];
   }));
+  // Each pick's moment, for reading on-screen text around it from full-size frames
+  const pickMoments = new Map(done.map(v => [v.videoId,
+    new Map(v.restaurants.filter(r => seconds(r.moment) != null).map(r => [r.originalName, seconds(r.moment)]))]));
+  const fullFrames = FRAMES && hasFfmpeg();
   if (RECHECK) done = done.filter(v => v.restaurants.every(r => r.confident));
   if (ONLY) done = done.filter(v => !ONLY.includes(v.videoId));
   const doneIds = new Set(done.map(v => v.videoId));
@@ -317,7 +338,9 @@ async function main() {
   console.log(`${videos.length} ${creator.name} videos with picks; ${done.length} already checked; ${todo.length} to check now.`);
   const details = await videoDetails(todo.map(v => v.videoId));
 
+  const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
   const prompts = [];
+  let readingCost = 0, readings = 0;
   for (const video of todo) {
     const picks = video.restaurants.filter(r => r.name && r.name !== 'null').map(r => ({
       ...r, candidates: candidates(r.name, located.get(nameKey(r.name))),
@@ -325,8 +348,26 @@ async function main() {
     const text = TRANSCRIPTS ? await transcript(video.videoId) : null;
     const chapterList = TRANSCRIPTS ? await chapters(video.videoId) : null;
     const commentList = (await comments(video.videoId)).filter(c => saysWhere(c.text));
-    const sheets = FRAMES ? await storyboard(video.videoId, moments.get(video.videoId) || []) : [];
-    const instructions = prompt(video, details[video.videoId], text, chapterList, commentList, picks);
+    // On-screen names around each pick's moment (moments a few seconds apart share their frames)
+    const before = pickMoments.get(video.videoId) || new Map();
+    // No moments yet (first check): the start, which is all of a Short and a long video's title card
+    const at = [...new Set(before.size ? before.values() : [0])].sort((a, b) => a - b)
+      .filter((t, i, all) => i === 0 || t - all[i - 1] > 20);
+    let onScreenList = [];
+    if (fullFrames && at.length && !DRY_RUN) {
+      for (const t of at) {
+        try {
+          const { names, cost } = await readText(anthropic, video.videoId, t);
+          readingCost += cost;
+          onScreenList.push(...names);
+        } catch (err) { console.log(`  no frames for ${video.videoId} at ${clock(t)}: ${err.message.split('\n')[0].slice(0, 80)}`); }
+      }
+      onScreenList = onScreenList.filter((n, i) => onScreenList.findIndex(m => m.text === n.text && m.at === n.at) === i)
+        .sort((a, b) => a.at - b.at);
+    }
+    readings += fullFrames ? at.length : 0;
+    const sheets = FRAMES && !(fullFrames && at.length) ? await storyboard(video.videoId, moments.get(video.videoId) || []) : [];
+    const instructions = prompt(video, details[video.videoId], text, chapterList, commentList, picks, onScreenList);
     const content = sheets.length ? [{ type: 'text', text: instructions }, ...sheets.flatMap(sh => [
       { type: 'text', text: `Video frames (3×3, left to right, top to bottom) at ${
         Array.from({ length: 9 }, (_, k) => clock(Math.round(sh.start + k * (sh.end - sh.start) / 9))).join(', ')}:` },
@@ -334,22 +375,22 @@ async function main() {
     ])] : instructions;
     // Everything the video says, to check Claude's addresses came from it
     const evidence = [details[video.videoId]?.description, text, ...(chapterList || []).map(c => c.title), ...commentList.map(c => c.text)].join('\n');
-    prompts.push({ video, picks, content, evidence, sheets: sheets.length });
+    prompts.push({ video, picks, content, evidence, sheets: sheets.length, onScreenList, before, text });
   }
 
   // ~4 characters per token; output is roughly 150 tokens per restaurant
   const textOf = c => typeof c === 'string' ? c : c.filter(b => b.type === 'text').map(b => b.text).join('');
   const estInput  = prompts.reduce((n, p) => n + textOf(p.content).length / 4 + 900 + 700 * p.sheets, 0);
   const estOutput = prompts.reduce((n, p) => n + 150 * p.picks.length + 50, 0);
+  if (readings) console.log(`Reading on-screen text at ${readings} moments: about $${(readings * 0.011).toFixed(2)}${DRY_RUN ? '' : ` (spent $${readingCost.toFixed(2)})`}`);
   console.log(`Estimated cost: about $${(estInput * PRICE.input + estOutput * PRICE.output).toFixed(2)} ` +
     `(${Math.round(estInput / 1000)}k input + ${Math.round(estOutput / 1000)}k output tokens, ${MODEL})`);
   if (DRY_RUN) return;
   if (prompts.length > MAX_CALLS) throw new Error(`${prompts.length} calls is over the ${MAX_CALLS} limit`);
 
   const known = loadKnown();
-  const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
-  let spent = 0;
-  for (const [i, { video, picks, content, evidence }] of prompts.entries()) {
+  let spent = readingCost;
+  for (const [i, { video, picks, content, evidence, onScreenList, before, text }] of prompts.entries()) {
     process.stdout.write(`[${i + 1}/${prompts.length}] ${video.title.slice(0, 60)}… `);
     const res = await anthropic.messages.create({
       model: MODEL,
@@ -376,9 +417,19 @@ async function main() {
           ? { ...original, originalName: pick.name, ...check, index: undefined, ...(check.confident ? {} : { candidates }) }
           : { ...original, originalName: pick.name, keep: false, reason: 'only_mentioned', confident: false, why: 'Claude returned no check for this pick', candidates };
       });
-    const graphics = matchGraphics(restaurants, result.graphics);
+    let graphics;
+    if (onScreenList.length) {
+      for (const r of restaurants) {
+        const at = seconds(r.moment) ?? before.get(r.originalName) ?? 0;
+        const { match, cost } = await matchOnScreen(anthropic, { creatorName: creator.name, heard: r.originalName, name: r.name, at, transcript: text, list: onScreenList });
+        spent += cost;
+        if (match) applyOnScreen(r, match);
+      }
+      graphics = onScreenList.map(n => ({ text: n.text, at: clock(n.at), kind: n.kind,
+        matched: restaurants.find(r => r.onScreen === n.text && r.onScreenAt === clock(n.at))?.originalName ?? null }));
+    } else graphics = matchGraphics(restaurants, result.graphics);
     // An address the video never gives is a guess (often the guessed place's own address)
-    const said = evidence + '\n' + (result.graphics || []).map(g => g.text).join('\n');
+    const said = evidence + '\n' + [...(result.graphics || []), ...onScreenList].map(g => g.text).join('\n');
     for (const r of restaurants) if (r.address && !addressInText(r.address, said)) r.address = null;
     done.push({ videoId: video.videoId, title: video.title, sponsored: result.sponsored, graphics, restaurants });
     fs.writeFileSync(OUTPUT, JSON.stringify(done, null, 2)); // saved after every video
