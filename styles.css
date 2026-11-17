@@ -711,6 +711,64 @@ html, body {
   z-index: 2;
   pointer-events: none;
 }
+.pin-score-badge.score-high,
+.pin-score-badge.score-mid,
+.pin-score-badge.score-low { color: #fff; }
+.pin-score-badge.score-high { background: var(--green); }
+.pin-score-badge.score-mid  { background: var(--yellow); }
+.pin-score-badge.score-low  { background: var(--red); }
+
+/* Place names under pins, only when zoomed right in (CONFIG.minZoomForNames) */
+.pin-name {
+  display: none;
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1A1A1A;
+  background: rgba(255,255,255,0.92);
+  padding: 1px 5px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  pointer-events: none;
+}
+.show-names .pin-name { display: block; }
+
+/* Names under the plain place dots (CONFIG.minZoomForDotNames): quieter than the pins' */
+.leaflet-tooltip.dot-name {
+  padding: 0 4px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #444;
+  background: rgba(255,255,255,0.8);
+  border: none;
+  border-radius: 3px;
+  box-shadow: none;
+  white-space: nowrap;
+}
+.leaflet-tooltip.dot-name::before { display: none; }
+
+/* Your own rated places: bigger, in the colour of their kind (restaurant, pub, café) with a
+   white ring, and your photo */
+.map-pin.pin-mine { width: 40px; height: 52px; }
+.map-pin.pin-mine::before {
+  height: 40px;
+  background: var(--kind-colour);
+  border: 2.5px solid #fff;
+  box-sizing: border-box;
+  box-shadow: 0 0 0 2px var(--kind-colour), 0 3px 8px rgba(0,0,0,0.4);
+}
+.map-pin.pin-mine::after { background: var(--kind-colour); }
+.map-pin.pin-mine .pin-avatar { top: 5px; width: 28px; height: 28px; border: none; }
+.map-pin.pin-mine .person-initial {
+  display: flex; align-items: center; justify-content: center;
+  background: #fff; color: var(--kind-colour); font-weight: 800; font-size: 13px;
+}
+.map-pin.pin-mine .pin-score-badge { top: -6px; right: -8px; font-size: 10px; padding: 2px 4px; }
 .pin-low::before        { background: var(--red); }
 .pin-low::after         { background: var(--red); }
 .pin-mid::before        { background: var(--yellow); }

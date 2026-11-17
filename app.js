@@ -35,6 +35,8 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     defaultZoom: 13,
     minZoom: 10,
     minZoomForAllPlaces: 16, // below this, only creator picks and your own places show
+    minZoomForNames: 18,     // from here, pins show the place's name underneath
+    minZoomForDotNames: 19,  // and from here, the plain place dots do too
     placesUrl: 'data/places.json',
     // Browser key — public by design; restricted to SCRAN's web addresses in Google Cloud
     googleMapsKey: 'AIzaSyAP7wkccKRKXO1DhpUbfghTcvW5pH5N7V8',
@@ -378,8 +380,9 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
   // ─────────────────────────────────────────
   // Unrated places are small canvas dots (fast for thousands); rated or
   // bookmarked places get a full pin.
+  const KIND_COLOURS = { eat: '#8E44AD', pub: '#A0522D', cafe: '#E67E22' }; // restaurants, pubs, cafés
+
   const MarkerManager = (() => {
-    const KIND_COLOURS = { eat: '#8E44AD', pub: '#A0522D', cafe: '#E67E22' };
     const markers = new Map(); // place id → marker
     let _map      = null;
     let _renderer = null;
@@ -395,16 +398,9 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       _renderer = L.canvas({ padding: 0.5 });
     }
 
-    function _pinIcon(id) {
+    function _pinIcon(id, name, kind) {
       const stored = Storage.get(PLACE_TYPE, id);
-      if (stored) {
-        const cls = stored.rating >= 8 ? 'pin-high' : stored.rating >= 4 ? 'pin-mid' : 'pin-low';
-        return L.divIcon({
-          className: '',
-          html: `<div class="map-pin ${cls} pin-rated"><span class="pin-rating">${stored.rating}</span></div>`,
-          iconSize: [34, 44], iconAnchor: [17, 44], popupAnchor: [0, -46],
-        });
-      }
+      if (stored) return myPinIcon(stored.rating, name, kind);
       if (BookmarkStorage.get(PLACE_TYPE, id)) {
         return L.divIcon({
           className: '',
@@ -416,7 +412,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     }
 
     function _createMarker(place) {
-      const icon = _pinIcon(place.id);
+      const icon = _pinIcon(place.id, place.name, place.kind);
       const marker = icon
         ? L.marker([place.lat, place.lon], { icon, riseOnHover: true })
         : L.circleMarker([place.lat, place.lon], {
@@ -443,6 +439,22 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         if (!wanted.has(id)) { marker.remove(); markers.delete(id); }
       });
       places.forEach(p => { if (!markers.has(p.id)) markers.set(p.id, _createMarker(p)); });
+      _nameDots(zoom >= CONFIG.minZoomForDotNames);
+    }
+
+    // Names under the plain dots, only when zoomed right in
+    function _nameDots(on) {
+      markers.forEach((marker, id) => {
+        if (!(marker instanceof L.CircleMarker)) return;
+        if (on && !marker.getTooltip()) {
+          const name = Places.get(id)?.name;
+          if (name) marker.bindTooltip(escapeHtml(shortName(name)), {
+            permanent: true, direction: 'bottom', offset: [0, 4], className: 'dot-name', interactive: false,
+          });
+        } else if (!on && marker.getTooltip()) {
+          marker.unbindTooltip();
+        }
+      });
     }
 
     // Swap dot ↔ pin after a rating or bookmark changes
@@ -454,8 +466,48 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       markers.set(id, _createMarker(place));
     }
 
-    return { init, show, refreshMarkerIcon };
+    // Rebuild every pin, e.g. once your photo is known after signing in
+    function refreshAll() {
+      markers.forEach((marker, id) => refreshMarkerIcon(PLACE_TYPE, id));
+    }
+
+    return { init, show, refreshMarkerIcon, refreshAll };
   })();
+
+  // The place's name under a pin, shown only when zoomed right in (see .show-names), and cut
+  // short at a word break so long names don't crowd the map
+  const PIN_NAME_MAX = 20;
+  function pinName(name) {
+    return name ? `<span class="pin-name" title="${escapeHtml(name)}">${escapeHtml(shortName(name))}</span>` : '';
+  }
+
+  function shortName(name) {
+    let short = name;
+    if (name.length > PIN_NAME_MAX) {
+      const cut = name.slice(0, PIN_NAME_MAX + 1);
+      const space = cut.lastIndexOf(' ');
+      short = space > PIN_NAME_MAX / 2 ? cut.slice(0, space) : cut.slice(0, PIN_NAME_MAX);
+      // don't end on a joining word or symbol ("Crisp Pizza at The…" → "Crisp Pizza…")
+      while (/(\s(at|the|and|of|in|on|by|&|-|–|—)|[\s,:(])$/i.test(short)) short = short.replace(/(\s(at|the|and|of|in|on|by|&|-|–|—)|[\s,:(])$/i, '');
+      short += '…';
+    }
+    return short;
+  }
+
+  // Your own rated places: your photo on a bigger, outlined pin in the colour of its kind
+  // (restaurant, pub, café), with your score in a corner badge coloured by how high it is
+  const scoreBadgeClass = rating => rating >= 8 ? 'score-high' : rating >= 4 ? 'score-mid' : 'score-low';
+
+  function myPinIcon(rating, name, kind) {
+    const cls = scoreBadgeClass(rating);
+    const meta = Auth.currentUser()?.user_metadata || {};
+    const photo = personAvatar({ name: meta.full_name || meta.name || 'Me', avatar_url: meta.avatar_url || meta.picture }, 'pin-avatar');
+    return L.divIcon({
+      className: '',
+      html: `<div class="map-pin pin-mine" style="--kind-colour:${KIND_COLOURS[kind] || KIND_COLOURS.eat}">${photo}<span class="pin-score-badge ${cls}">${rating}</span>${pinName(name)}</div>`,
+      iconSize: [40, 52], iconAnchor: [20, 52], popupAnchor: [0, -54],
+    });
+  }
 
   // ─────────────────────────────────────────
   // 6. GOOGLE PLACE INFO (Places API: rating, opening hours, a photo)
@@ -756,15 +808,8 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     let _active  = false;
     let _entries = []; // [{ marker, key }]
 
-    function _buildIcon(rating) {
-      if (rating != null) {
-        const cls = rating >= 8 ? 'pin-high' : rating >= 4 ? 'pin-mid' : 'pin-low';
-        return L.divIcon({
-          className: '',
-          html: `<div class="map-pin ${cls} pin-rated"><span class="pin-rating">${rating}</span></div>`,
-          iconSize: [34, 44], iconAnchor: [17, 44], popupAnchor: [0, -46],
-        });
-      }
+    function _buildIcon(rating, name, kind) {
+      if (rating != null) return myPinIcon(rating, name, kind);
       return L.divIcon({
         className: '',
         html: `<div class="map-pin pin-bookmarked pin-rated"><span class="pin-rating" style="font-size:13px">★</span></div>`,
@@ -780,7 +825,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         if (!data.lat || !data.lon) return;
         if (cuisineLc && !(data.cuisine || []).some(c => c.toLowerCase() === cuisineLc)) return;
         const [type, id] = key.split('/');
-        const marker = L.marker([data.lat, data.lon], { icon: _buildIcon(data.rating), zIndexOffset: 510 });
+        const marker = L.marker([data.lat, data.lon], { icon: _buildIcon(data.rating, data.name, Places.get(id)?.kind), zIndexOffset: 510 });
         marker.on('click', (e) => {
           L.DomEvent.stopPropagation(e);
           RatingPanel.open({ type, id, name: data.name, cuisine: data.cuisine || [], lat: data.lat, lon: data.lon });
@@ -1093,7 +1138,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       const badge = rating != null ? `<span class="pin-score-badge">${rating}</span>` : '';
       return L.divIcon({
         className: '',
-        html: `<div class="map-pin pin-creator pin-rated" style="--creator-colour:${creator.colour}"><img class="pin-avatar" src="${creator.avatar}" alt="${creator.name}">${badge}</div>`,
+        html: `<div class="map-pin pin-creator pin-rated" style="--creator-colour:${creator.colour}"><img class="pin-avatar" src="${creator.avatar}" alt="${creator.name}">${badge}${pinName(restaurant.name)}</div>`,
         iconSize: [34, 44],
         iconAnchor: [17, 44],
         popupAnchor: [0, -46],
@@ -1440,15 +1485,19 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
             name: r.restaurant_name, lat: r.lat, lon: r.lon, cuisine: r.cuisine || [], type: r.osm_type, id: r.osm_id });
         });
       }
+      try { await Places.load(); } catch { /* pins fall back to the restaurant colour */ }
       _draw();
     }
 
     function _icon(entries) {
       const first = entries[0];
       const more = entries.length > 1 ? `<span class="pin-people-count">+${entries.length - 1}</span>` : '';
+      // Like your own pins (kind colour, coloured score, name when zoomed in), but creator-sized
+      // and without the white ring, so yours still stand out
+      const colour = KIND_COLOURS[Places.get(first.id)?.kind] || KIND_COLOURS.eat;
       return L.divIcon({
         className: '',
-        html: `<div class="map-pin pin-creator pin-rated" style="--creator-colour:var(--primary)">${personAvatar(first.person, 'pin-avatar')}<span class="pin-score-badge">${first.rating}</span>${more}</div>`,
+        html: `<div class="map-pin pin-creator pin-rated" style="--creator-colour:${colour}">${personAvatar(first.person, 'pin-avatar')}<span class="pin-score-badge ${scoreBadgeClass(first.rating)}">${first.rating}</span>${more}${pinName(first.name)}</div>`,
         iconSize: [34, 44], iconAnchor: [17, 44], popupAnchor: [0, -46],
       });
     }
@@ -1771,6 +1820,10 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         interactive: false,
       }).addTo(_map);
 
+      const showNames = () => _map.getContainer().classList.toggle('show-names', _map.getZoom() >= CONFIG.minZoomForNames);
+      _map.on('zoomend', showNames);
+      showNames();
+
       MarkerManager.init(_map);
       const creatorPins = creatorPinGroup().addTo(_map);
       creatorLayers.forEach(layer => layer.init(creatorPins, _showPlacesInView));
@@ -1861,6 +1914,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
           try { localStorage.setItem(CONFIG.accountKey, _currentUser.id); } catch {}
         }
       }
+      MarkerManager.refreshAll();
       MyListManager.refresh();
       Views.reload();
     }
