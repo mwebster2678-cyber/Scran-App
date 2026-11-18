@@ -1450,7 +1450,15 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       return { person, ratings: ratings || [], followers: followers.count || 0, following: following.count || 0 };
     }
 
-    return { load, setCreator, setPerson, isFollowing, findPeople, profile };
+    // "Suggest a creator" in Explore: read on the pipeline review page (Suggestions tab)
+    async function suggestCreator(text) {
+      if (!_user()) return false;
+      const { error } = await sbClient.from('creator_suggestions').insert({ suggestion: text.slice(0, 300) });
+      if (error) { console.warn('Suggestion not sent:', error.message); return false; }
+      return true;
+    }
+
+    return { load, setCreator, setPerson, isFollowing, findPeople, profile, suggestCreator };
   })();
 
   // Small round photo for a person, or their initial if they have none
@@ -1556,7 +1564,8 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     let _exploreOn = new Set(CREATORS.map(c => c.key)); // creators switched on in Explore
     let _counts    = {};                                // picks per creator, once loaded
     let _suggested = null;                              // people to follow, once loaded
-    let _search    = { text: '', results: null };       // Explore's people search, kept across redraws
+    let _search    = { text: '', results: null };       // Following's people search, kept across redraws
+    let _suggest   = { text: '', message: '' };         // Explore's "Suggest a creator" box
     let _ready     = false;
 
     function _mineCount() {
@@ -1611,12 +1620,15 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
             `<button class="sheet-btn${followed ? ' followed' : ''}" data-follow="${c.key}">${followed ? 'Following' : 'Follow'}</button>` +
             _switch(_exploreOn.has(c.key), `data-creator="${c.key}" aria-label="Show ${escapeHtml(c.name)} on the map"`));
         }).join('')
-          + '<div class="sheet-title">People</div>'
+          + '<div class="sheet-title">Suggest a creator</div>'
           + (Auth.currentUser()
-            ? `<input id="people-search" type="search" placeholder="Search people on SCRAN by name" autocomplete="off"
-                value="${escapeHtml(_search.text)}">
-              <div id="people-results">${_searchResultsHtml()}</div>`
-            : '<div class="sheet-empty">Sign in to search for people and follow them. <button class="sheet-link" data-signin>Sign in</button></div>');
+            ? `<form id="suggest-form">
+                <input id="suggest-input" type="text" maxlength="300" autocomplete="off"
+                  placeholder="Their name or a link (YouTube, Instagram, TikTok)" value="${escapeHtml(_suggest.text)}">
+                <button type="submit" class="sheet-btn follow">Send</button>
+              </form>
+              ${_suggest.message ? `<div class="sheet-empty">${escapeHtml(_suggest.message)}</div>` : ''}`
+            : '<div class="sheet-empty">Sign in to suggest a creator for SCRAN. <button class="sheet-link" data-signin>Sign in</button></div>');
         return;
       }
       const signedIn = !!Auth.currentUser();
@@ -1627,7 +1639,10 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
             _switch(FOLLOWING.me, 'data-me aria-label="Show your places on the map"'))
         + '<div class="sheet-title">People</div>'
         + (signedIn
-          ? (_people(FOLLOWING.people) || '<div class="sheet-empty">You&rsquo;re not following anyone yet. Search for people in Explore.</div>')
+          ? `<input id="people-search" type="search" placeholder="Search people on SCRAN by name" autocomplete="off"
+              value="${escapeHtml(_search.text)}">
+            <div id="people-results">${_searchResultsHtml()}</div>`
+            + (_people(FOLLOWING.people) || '<div class="sheet-empty">You&rsquo;re not following anyone yet. Search for people above.</div>')
           : '<div class="sheet-empty">Sign in to follow people and see their ratings on the map.</div>')
         + '<div class="sheet-title">Creators</div>'
         + (creators.map(c => _creatorRow(c, `<button class="sheet-btn" data-follow="${c.key}">Unfollow</button>`)).join('')
@@ -1688,7 +1703,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         const b = e.target.closest('button');
         const row = e.target.closest('[data-person]');
         if (!b && row) { ProfilePanel.open(row.dataset.person); return; }
-        if (!b) return;
+        if (!b || b.closest('#suggest-form')) return; // Send in "Suggest a creator": the form's submit handles it
         const { creator, follow, personFollow } = b.dataset;
         if ('signin' in b.dataset) { AuthDialog.open(); return; }
         if (follow && !requireSignIn('Sign in to follow creators.')) return;
@@ -1702,7 +1717,18 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         }
         refresh();
       });
+      body.addEventListener('submit', async (e) => {
+        if (e.target.id !== 'suggest-form') return;
+        e.preventDefault();
+        const text = _suggest.text.trim();
+        if (!text) return;
+        const sent = await Social.suggestCreator(text);
+        _suggest = sent ? { text: '', message: 'Thanks! We’ll take a look.' }
+                        : { text, message: 'Couldn’t send that. Try again later.' };
+        _render();
+      });
       body.addEventListener('input', (e) => {
+        if (e.target.id === 'suggest-input') { _suggest.text = e.target.value; return; }
         if (e.target.id !== 'people-search') return;
         clearTimeout(_searchTimer);
         const text = e.target.value.trim();

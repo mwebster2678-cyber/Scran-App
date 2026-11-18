@@ -25,7 +25,12 @@ const REASON_LABELS = {
 };
 
 // The app's browser key: Google accepts it from pages on http://localhost:8000
-const GOOGLE_KEY = fs.readFileSync('../app.js', 'utf8').match(/googleMapsKey:\s*'([^']+)'/)?.[1] || '';
+const APP_JS = fs.readFileSync('../app.js', 'utf8');
+const GOOGLE_KEY = APP_JS.match(/googleMapsKey:\s*'([^']+)'/)?.[1] || '';
+// Same Supabase project and publishable key as the app: on localhost:8000 the page shares the
+// app's sign-in, so the Suggestions tab can read creator suggestions when you're an admin
+const SUPABASE_URL = APP_JS.match(/SUPABASE_URL = '([^']+)'/)?.[1] || '';
+const SUPABASE_KEY = APP_JS.match(/SUPABASE_KEY = '([^']+)'/)?.[1] || '';
 
 const { places } = JSON.parse(fs.readFileSync(PLACES_FILE, 'utf8'));
 const placeById = new Map(places.map(([id, name, lat, lon, , , address]) => [id, { id, name, lat, lon, address }]));
@@ -208,6 +213,13 @@ function buildHtml(items) {
   .comment { font-size: 0.78rem; color: #444; line-height: 1.4; margin-bottom: 4px; }
   .spot { display: inline-block; font-size: 0.68rem; font-weight: 700; color: #6C3483; border: 1px solid #6C3483; border-radius: 10px; padding: 0 7px; margin-left: 4px; }
   .status { font-size: 0.72rem; font-weight: 700; color: #888; }
+  #suggestions { max-width: 720px; margin: 0 auto; padding: 0 16px 40px; }
+  .suggestion { display: flex; gap: 12px; align-items: center; background: #fff; border-radius: 12px; padding: 12px 16px; margin-bottom: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+  .suggestion-text { flex: 1; min-width: 0; overflow-wrap: anywhere; font-size: 0.9rem; }
+  .suggestion-meta { font-size: 0.72rem; color: #888; margin-top: 2px; }
+  .suggestion button { padding: 6px 12px; border-radius: 16px; border: 1.5px solid rgba(0,0,0,0.15); background: none; cursor: pointer; font-weight: 600; font-size: 0.75rem; }
+  body.suggestions-view #creator-tabs, body.suggestions-view #status-tabs, body.suggestions-view #export-btn,
+  body.suggestions-view .progress-text, body.suggestions-view .help, body.suggestions-view #grid { display: none; }
 </style>
 </head>
 <body>
@@ -219,6 +231,7 @@ function buildHtml(items) {
     <button class="tab active" data-kind="unsure">Unsure</button>
     <button class="tab" data-kind="spot">Spot check</button>
     <button class="tab" data-kind="pins">Pin check</button>
+    <button class="tab" data-kind="suggestions">Creator suggestions</button>
   </div>
   <div class="tabs" id="creator-tabs"></div>
   <div class="tabs" id="status-tabs">
@@ -232,7 +245,9 @@ function buildHtml(items) {
 <p class="help"><b>Pin check:</b> map pins that are far from Google's place with the same name, usually a place that has moved. Move the pin to Google's location, leave it, paste the right Google Maps link, or remove it if the place has closed (Google often finds a different place then). <b>Spot check</b> has a random few of the picks Claude was sure about, to see how often it's wrong. <b>Unsure:</b> Claude wasn't sure about these. Watch the moment in the video, choose the right place (Claude's best guess or Google's top match is ticked) or type its name to search, then <b>Keep</b> or <b>Drop</b>. Your choices are saved in this browser. When you're done, Export and save <code>${DECISIONS}</code> in the pipeline folder.</p>
 
 <div class="grid" id="grid"></div>
+<div id="suggestions" hidden></div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
 <script>
 const DATA = ${JSON.stringify(items).replace(/</g, '\\u003c')};
 const STORE = 'scran-verify-review';
@@ -704,8 +719,48 @@ creators.forEach(([key, label], i) => {
 });
 document.querySelectorAll('#kind-tabs .tab').forEach(b => b.addEventListener('click', () => {
   document.querySelectorAll('#kind-tabs .tab').forEach(t => t.classList.remove('active'));
-  b.classList.add('active'); kindFilter = b.dataset.kind; refresh();
+  b.classList.add('active');
+  const suggestions = b.dataset.kind === 'suggestions';
+  document.body.classList.toggle('suggestions-view', suggestions);
+  document.getElementById('suggestions').hidden = !suggestions;
+  if (suggestions) { loadSuggestions(); return; }
+  kindFilter = b.dataset.kind; refresh();
 }));
+
+// "Suggest a creator" from the app's Explore sheet. Needs you signed in to SCRAN in this browser
+// (the app at http://localhost:8000) with an account listed in the admins table.
+const sb = window.supabase && '${SUPABASE_URL}' ? window.supabase.createClient('${SUPABASE_URL}', '${SUPABASE_KEY}') : null;
+async function loadSuggestions() {
+  const box = document.getElementById('suggestions');
+  if (!sb) { box.innerHTML = '<p class="help">Supabase didn’t load.</p>'; return; }
+  box.innerHTML = '<p class="help">Loading…</p>';
+  const { data: { session } } = await sb.auth.getSession();
+  if (!session) {
+    box.innerHTML = '<p class="help">Sign in to SCRAN at <a href="http://localhost:8000">http://localhost:8000</a> in this browser, then come back to this tab.</p>';
+    return;
+  }
+  const { data, error } = await sb.from('creator_suggestions')
+    .select('id, suggestion, created_at, profiles(name)').order('created_at', { ascending: false });
+  if (error) { box.innerHTML = '<p class="help">Couldn’t load suggestions: ' + esc(error.message) + '</p>'; return; }
+  if (!data.length) {
+    box.innerHTML = '<p class="help">No suggestions yet. (If you know there are some, check your account is in the <code>admins</code> table: see supabase/creator-suggestions.sql.)</p>';
+    return;
+  }
+  box.innerHTML = '<p class="help">' + data.length + ' suggestion' + (data.length === 1 ? '' : 's') + ', newest first. <b>Done</b> removes one.</p>' + data.map(s => {
+    const text = /^https?:$/.test(s.suggestion.split('//')[0])
+      ? '<a href="' + esc(s.suggestion) + '" target="_blank" rel="noopener">' + esc(s.suggestion) + '</a>' : esc(s.suggestion);
+    return '<div class="suggestion"><div class="suggestion-text">' + text +
+      '<div class="suggestion-meta">' + esc(s.profiles?.name || 'Someone') + ' · ' + new Date(s.created_at).toLocaleDateString('en-GB') + '</div></div>' +
+      '<button data-done="' + s.id + '">Done</button></div>';
+  }).join('');
+}
+document.getElementById('suggestions').addEventListener('click', async e => {
+  const id = e.target.closest('[data-done]')?.dataset.done;
+  if (!id) return;
+  const { error } = await sb.from('creator_suggestions').delete().eq('id', id);
+  if (error) alert('Couldn’t remove it: ' + error.message);
+  loadSuggestions();
+});
 document.querySelectorAll('#status-tabs .tab').forEach(b => b.addEventListener('click', () => {
   document.querySelectorAll('#status-tabs .tab').forEach(t => t.classList.remove('active'));
   b.classList.add('active'); statusFilter = b.dataset.status; refresh();
