@@ -1005,16 +1005,12 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         });
       });
 
+      // Areas only move the map there; they don't hide anything ("All London" zooms back out)
       document.querySelectorAll('.fs-chip[data-filter="area"]').forEach(btn => {
+        btn.classList.remove('selected');
         btn.addEventListener('click', () => {
-          _selectedArea = btn.dataset.value;
-          _highlight('area', _selectedArea);
-          if (_selectedArea && AREA_COORDS[_selectedArea]) {
-            const [lat, lon] = AREA_COORDS[_selectedArea];
-            _onArea(lat, lon);
-          } else {
-            _onArea(null, null);
-          }
+          const at = AREA_COORDS[btn.dataset.value];
+          _onArea(at ? at[0] : null, at ? at[1] : null);
         });
       });
 
@@ -2211,7 +2207,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       FilterBar.init(
         (lat, lon) => {
           if (lat && lon) _map.flyTo([lat, lon], 15, { duration: 1.0 });
-          creatorLayers.forEach(layer => layer.filter(FilterBar.getArea(), FilterBar.getCuisine()));
+          else _map.flyTo(CONFIG.mapCenter, CONFIG.defaultZoom, { duration: 1.0 });
         },
         (cuisine) => {
           _showPlacesInView();
