@@ -1540,7 +1540,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     let _map     = null;
     let _active  = false;
     let _byPlace = new Map(); // 'type/id' → [{ person, rating, note, name, lat, lon, cuisine, type, id }]
-    let _markers = [];
+    let _group   = null; // nearby pins merge into a numbered bubble until street level
 
     async function load() {
       const people = new Map(FOLLOWING.people.map(p => [p.id, p]));
@@ -1576,9 +1576,22 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     }
 
     function _draw() {
-      _markers.forEach(m => m.remove());
-      _markers = [];
+      if (_group) { _group.remove(); _group = null; }
       if (!_active || !_map) return;
+      _group = L.markerClusterGroup({
+        maxClusterRadius: 45,
+        disableClusteringAtZoom: CONFIG.minZoomForAllPlaces,
+        showCoverageOnHover: false,
+        iconCreateFunction(cluster) {
+          const count = cluster.getChildCount();
+          const size = count < 10 ? 34 : count < 50 ? 40 : 46;
+          return L.divIcon({
+            className: '',
+            html: `<div class="creator-cluster people-cluster" style="width:${size}px;height:${size}px">${count}</div>`,
+            iconSize: [size, size],
+          });
+        },
+      });
       _byPlace.forEach(entries => {
         const { type, id, name, cuisine } = entries[0];
         const current = type === PLACE_TYPE ? Places.get(id) : null; // its current pin
@@ -1588,9 +1601,9 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
           const place = type === PLACE_TYPE ? Places.get(id) : null;
           RatingPanel.open(place ? placeRef(place) : { type, id, name, cuisine, lat: entries[0].lat, lon: entries[0].lon });
         });
-        marker.addTo(_map);
-        _markers.push(marker);
+        _group.addLayer(marker);
       });
+      _group.addTo(_map);
     }
 
     function setActive(active) { _active = active; _draw(); }
