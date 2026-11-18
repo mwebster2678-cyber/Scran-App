@@ -1847,7 +1847,14 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         const place = id && Places.get(id);
         if (!place) return;
         close();
-        _map.flyTo([place.lat, place.lon], Math.max(_map.getZoom(), 18), { duration: 0.8 });
+        // Put the place in the middle of the map left visible between the header and the place
+        // card (at most 60% of the screen, see #rating-panel), not behind the card
+        const zoom = Math.max(_map.getZoom(), 18);
+        const h = _map.getSize().y;
+        const header = document.getElementById('header').offsetHeight;
+        const shift = h / 2 - (header + h * 0.4) / 2;
+        const centre = _map.unproject(_map.project([place.lat, place.lon], zoom).add([0, shift]), zoom);
+        _map.flyTo(centre, zoom, { duration: 0.8 });
         RatingPanel.open(placeRef(place));
       });
     }

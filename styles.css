@@ -514,7 +514,7 @@ body.adding-place #sheet, body.adding-place #sheet-toggle { visibility: hidden; 
 }
 
 #rating-panel.open { transform: translateY(0); }
-#rating-panel { max-height: 85vh; overflow-y: auto; }
+#rating-panel { max-height: 60vh; overflow-y: auto; } /* keeps the top of the map in view (see PlaceSearch) */
 #rating-panel.hidden { display: none; }
 
 .panel-handle {
