@@ -2046,17 +2046,22 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       const [[s, w], [n, e]] = CONFIG.m25Bounds;
       if (lat < s || lat > n || lng < w || lng > e) { UI.showError('SCRAN only covers London inside the M25.'); return; }
       if (_editing) {
+        let place;
         try {
-          const place = await Places.update(_editing.id, { name, kind: _kind, lat: +lat.toFixed(6), lon: +lng.toFixed(6) });
-          stop();
-          MarkerManager.refreshMarkerIcon(PLACE_TYPE, place.id);
-          _onAdded();
-          MyListManager.refresh();
-          RatingPanel.open(placeRef(place));
-          UI.showSuccess('Saved for everyone.');
-        } catch {
-          UI.showError('Couldn’t save it. Check you’re signed in as an admin.');
+          place = await Places.update(_editing.id, { name, kind: _kind, lat: +lat.toFixed(6), lon: +lng.toFixed(6) });
+        } catch (e) {
+          console.warn('[SCRAN] edit not saved:', e);
+          UI.showError(e.message === 'not_allowed'
+            ? 'Supabase didn’t allow the edit: run supabase/added-places.sql again so admins can edit.'
+            : 'Couldn’t save it: ' + e.message);
+          return;
         }
+        stop();
+        MarkerManager.refreshMarkerIcon(PLACE_TYPE, place.id);
+        _onAdded();
+        MyListManager.refresh();
+        RatingPanel.open(placeRef(place));
+        UI.showSuccess('Saved for everyone.');
         return;
       }
       // Already on SCRAN? Same name within 75 m: open that instead of adding it twice
