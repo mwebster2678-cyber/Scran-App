@@ -27,6 +27,10 @@ create policy "Add places as yourself" on added_places for insert to authenticat
   with check (auth.uid() = added_by);
 create policy "Remove your own added places" on added_places for delete to authenticated
   using (auth.uid() = added_by or public.is_admin());
+-- Admins can fix a name, type or pin (Edit place on the card in the app)
+drop policy if exists "Admins edit added places" on added_places;
+create policy "Admins edit added places" on added_places for update to authenticated
+  using (public.is_admin()) with check (public.is_admin());
 
 -- At most 20 added places per person per day
 create or replace function public.limit_added_places() returns trigger

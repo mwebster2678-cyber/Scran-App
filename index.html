@@ -59,7 +59,7 @@
 </div>
 <div id="add-place-pin" hidden><div class="map-pin pin-adding"></div></div>
 <div id="add-place" hidden>
-  <div class="add-place-title">Add a missing place</div>
+  <div class="add-place-title" id="add-place-title">Add a missing place</div>
   <div class="add-place-help">In Google Maps, open the place and tap Share &rarr; Copy link, then paste it here. Or just move the map so the pin sits on it.</div>
   <input id="add-place-link" type="url" placeholder="Paste a Google Maps link" autocomplete="off">
   <div id="add-place-status"></div>
@@ -285,6 +285,7 @@
       <button id="share-btn">&#x1F517; Share</button>
       <button id="clear-rating-btn">Clear Rating</button>
     </div>
+    <button id="edit-place-btn" hidden>&#x270E; Edit place (admin)</button>
   </div>
 </div>
 

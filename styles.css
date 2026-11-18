@@ -208,7 +208,7 @@ html, body {
 
 /* ── Add a missing place: a fixed pin in the middle of the map, and a bar to name it ── */
 #add-place-pin {
-  position: fixed; left: 50%; top: 50%;
+  position: fixed; left: 50%; top: 50%; /* top is set by AddPlace: midway between header and bar */
   z-index: 995; pointer-events: none;
   transform: translate(-50%, -100%);
 }
@@ -1601,3 +1601,12 @@ body.adding-place #sheet, body.adding-place #sheet-toggle { visibility: hidden; 
   cursor: pointer;
 }
 #update-banner[hidden] { display: none; }
+
+/* Admins: fix an added place's name, type or pin */
+#edit-place-btn {
+  width: 100%; margin-top: 8px; padding: 10px;
+  border: 1.5px dashed var(--primary); border-radius: 10px;
+  background: transparent; color: var(--primary);
+  font-family: inherit; font-size: 0.85rem; font-weight: 600; cursor: pointer;
+}
+#edit-place-btn[hidden] { display: none; }

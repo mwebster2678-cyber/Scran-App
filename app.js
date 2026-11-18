@@ -377,6 +377,17 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       return p;
     }
 
+    // Admins: change an added place's name, type or pin, for everyone
+    async function update(id, { name, kind, lat, lon }) {
+      const { data, error } = await sbClient.from('added_places')
+        .update({ name, kind, lat, lon }).eq('id', Number(String(id).slice(2))).select('id');
+      if (error) throw error;
+      if (!data.length) throw new Error('not_allowed');
+      Object.assign(_byId.get(id), { name, kind, lat, lon });
+      _words = null; // names changed, so search re-reads them
+      return _byId.get(id);
+    }
+
     // Places within `metres` of a point, nearest first
     function near(lat, lon, metres) {
       const d = p => Math.hypot(p.lat - lat, (p.lon - lon) * 0.62) * 111000;
@@ -413,7 +424,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         .map(r => r.p);
     }
 
-    return { load, query, get, add, near, search, norm: _norm };
+    return { load, query, get, add, update, near, search, norm: _norm };
   })();
 
   // What the rating panel and storage need to know about a place
@@ -717,6 +728,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     const bookmarkBtn = document.getElementById('bookmark-btn');
     const shareBtn    = document.getElementById('share-btn');
     const noteEl      = document.getElementById('panel-note');
+    const editBtn     = document.getElementById('edit-place-btn');
 
     let _current   = null; // { type, id, name, cuisine, lat, lon }
     let _noteTimer = null;
@@ -774,6 +786,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       });
       peopleEl.innerHTML = peopleVerdictsHtml(PeopleLayer.forPlace(type, id));
       GooglePlaceInfo.show({ key: `${type}/${id}`, name, lat, lon });
+      editBtn.hidden = !(Admin.is() && type === PLACE_TYPE && String(id).startsWith('a-'));
 
       panel.classList.remove('hidden');
       panel.getBoundingClientRect();
@@ -827,6 +840,13 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       MyListManager.refresh();
     });
 
+    editBtn.addEventListener('click', () => {
+      const place = _current && Places.get(_current.id);
+      if (!place) return;
+      close();
+      AddPlace.edit(place);
+    });
+
     shareBtn.addEventListener('click', () => {
       if (!_current) return;
       const { type, id, name, lat, lon } = _current;
@@ -872,10 +892,11 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         if (!data.lat || !data.lon) return;
         if (cuisineLc && !(data.cuisine || []).some(c => c.toLowerCase() === cuisineLc)) return;
         const [type, id] = key.split('/');
-        const marker = L.marker([data.lat, data.lon], { icon: _buildIcon(data.rating, data.name, Places.get(id)?.kind), zIndexOffset: 510 });
+        const place = type === PLACE_TYPE ? Places.get(id) : null; // its current name and pin
+        const marker = L.marker([place?.lat ?? data.lat, place?.lon ?? data.lon], { icon: _buildIcon(data.rating, place?.name ?? data.name, place?.kind), zIndexOffset: 510 });
         marker.on('click', (e) => {
           L.DomEvent.stopPropagation(e);
-          RatingPanel.open({ type, id, name: data.name, cuisine: data.cuisine || [], lat: data.lat, lon: data.lon });
+          RatingPanel.open(place ? placeRef(place) : { type, id, name: data.name, cuisine: data.cuisine || [], lat: data.lat, lon: data.lon });
         });
         marker.addTo(_map);
         _entries.push({ marker, key });
@@ -887,10 +908,11 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         if (!data.lat || !data.lon) return;
         if (cuisineLc && !(data.cuisine || []).some(c => c.toLowerCase() === cuisineLc)) return;
         const [type, id] = key.split('/');
-        const marker = L.marker([data.lat, data.lon], { icon: _buildIcon(null), zIndexOffset: 505 });
+        const place = type === PLACE_TYPE ? Places.get(id) : null;
+        const marker = L.marker([place?.lat ?? data.lat, place?.lon ?? data.lon], { icon: _buildIcon(null), zIndexOffset: 505 });
         marker.on('click', (e) => {
           L.DomEvent.stopPropagation(e);
-          RatingPanel.open({ type, id, name: data.name, cuisine: data.cuisine || [], lat: data.lat, lon: data.lon });
+          RatingPanel.open(place ? placeRef(place) : { type, id, name: data.name, cuisine: data.cuisine || [], lat: data.lat, lon: data.lon });
         });
         marker.addTo(_map);
         _entries.push({ marker, key });
@@ -1562,12 +1584,13 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       _markers = [];
       if (!_active || !_map) return;
       _byPlace.forEach(entries => {
-        const { type, id, name, lat, lon, cuisine } = entries[0];
-        const marker = L.marker([lat, lon], { icon: _icon(entries), zIndexOffset: 515 });
+        const { type, id, name, cuisine } = entries[0];
+        const current = type === PLACE_TYPE ? Places.get(id) : null; // its current pin
+        const marker = L.marker([current?.lat ?? entries[0].lat, current?.lon ?? entries[0].lon], { icon: _icon(entries), zIndexOffset: 515 });
         marker.on('click', (e) => {
           L.DomEvent.stopPropagation(e);
           const place = type === PLACE_TYPE ? Places.get(id) : null;
-          RatingPanel.open(place ? placeRef(place) : { type, id, name, cuisine, lat, lon });
+          RatingPanel.open(place ? placeRef(place) : { type, id, name, cuisine, lat: entries[0].lat, lon: entries[0].lon });
         });
         marker.addTo(_map);
         _markers.push(marker);
@@ -1914,6 +1937,18 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     return { read };
   })();
 
+  // Whether you're a SCRAN admin (supabase/creator-suggestions.sql: admins table), checked at sign-in
+  const Admin = (() => {
+    let _is = false;
+    async function check() {
+      _is = false;
+      if (!Auth.currentUser()) return;
+      const { data } = await sbClient.rpc('is_admin');
+      _is = data === true;
+    }
+    return { check, is: () => _is };
+  })();
+
   const AddPlace = (() => {
     const bar      = document.getElementById('add-place');
     const pin      = document.getElementById('add-place-pin');
@@ -1921,31 +1956,65 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     const statusEl = document.getElementById('add-place-status');
     const nameEl   = document.getElementById('add-place-name');
     const kinds    = document.getElementById('add-place-kinds');
+    const titleEl  = document.getElementById('add-place-title');
+    const okBtn    = document.getElementById('add-place-ok');
     let _map = null;
     let _kind = 'eat';
     let _address = null;
+    let _editing = null; // the added place an admin is editing, or null when adding
     let _onAdded = () => {};
+
+    // The pin sits midway between the header and this bar, in the part of the map you can see,
+    // and the place goes where its tip is
+    function _pinPoint() {
+      const top = document.getElementById('header').offsetHeight;
+      const bottom = bar.hidden ? _map.getSize().y : bar.getBoundingClientRect().top;
+      return L.point(_map.getSize().x / 2, Math.round((top + bottom) / 2));
+    }
+    function _placePin() { if (!bar.hidden) pin.style.top = _pinPoint().y + 'px'; }
+    // Move the map so this spot is under the pin
+    function _showAt(lat, lon, zoom) {
+      const shift = _map.getSize().y / 2 - _pinPoint().y;
+      _map.setView(_map.unproject(_map.project([lat, lon], zoom).add([0, shift]), zoom), zoom, { animate: false });
+    }
 
     function _setKind(kind) {
       _kind = kind;
       kinds.querySelectorAll('button').forEach(b => b.classList.toggle('selected', b.dataset.kind === kind));
     }
-    const _status = (text, bad) => { statusEl.textContent = text; statusEl.classList.toggle('bad', !!bad); };
+    const _status = (text, bad) => { statusEl.textContent = text; statusEl.classList.toggle('bad', !!bad); _placePin(); };
+
+    function _open({ title, ok, name, kind, address }) {
+      RatingPanel.close();
+      Views.setSheet(false);
+      titleEl.textContent = title;
+      okBtn.textContent = ok;
+      linkEl.value = '';
+      nameEl.value = name;
+      _address = address;
+      _setKind(kind);
+      bar.hidden = false;
+      pin.hidden = false;
+      _status('');
+      document.body.classList.add('adding-place');
+    }
 
     function start(name = '') {
       if (!requireSignIn('Sign in to add a place.')) return;
-      RatingPanel.close();
-      Views.setSheet(false);
-      linkEl.value = '';
-      nameEl.value = name;
-      _address = null;
-      _status('');
-      _setKind('eat');
-      if (_map.getZoom() < 17) _map.setZoom(17);
-      bar.hidden = false;
-      pin.hidden = false;
-      document.body.classList.add('adding-place');
+      _editing = null;
+      const at = _map.getCenter();
+      _open({ title: 'Add a missing place', ok: 'Add and rate', name, kind: 'eat', address: null });
+      _showAt(at.lat, at.lng, Math.max(_map.getZoom(), 17)); // what was in the middle stays under the pin
       linkEl.focus();
+    }
+
+    // Admins: fix an added place's name, type or pin. Paste a link or move the map to move it.
+    function edit(place) {
+      if (!Admin.is()) return;
+      _editing = place;
+      _open({ title: 'Edit place', ok: 'Save', name: place.name, kind: place.kind, address: place.address || null });
+      _showAt(place.lat, place.lon, Math.max(_map.getZoom(), 18));
+      _status('Move the map to move the pin, or change the name or type.');
     }
 
     function stop() {
@@ -1963,7 +2032,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         if (found.name) nameEl.value = found.name;
         _address = found.address;
         if (found.lat == null) { _status('No location in that link. Move the map so the pin sits on the place.', true); return; }
-        _map.setView([found.lat, found.lon], 19);
+        _showAt(found.lat, found.lon, 19);
         _status(found.rough ? `Near ${found.postcode}. Move the map so the pin sits right on it.` : 'Found it. Check the pin is on the place.');
       } catch (e) {
         _status(e.message, true);
@@ -1973,9 +2042,23 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     async function _add() {
       const name = nameEl.value.trim().slice(0, 200);
       if (!name) { UI.showError('Type the place’s name.'); nameEl.focus(); return; }
-      const { lat, lng } = _map.getCenter();
+      const { lat, lng } = _map.containerPointToLatLng(_pinPoint());
       const [[s, w], [n, e]] = CONFIG.m25Bounds;
       if (lat < s || lat > n || lng < w || lng > e) { UI.showError('SCRAN only covers London inside the M25.'); return; }
+      if (_editing) {
+        try {
+          const place = await Places.update(_editing.id, { name, kind: _kind, lat: +lat.toFixed(6), lon: +lng.toFixed(6) });
+          stop();
+          MarkerManager.refreshMarkerIcon(PLACE_TYPE, place.id);
+          _onAdded();
+          MyListManager.refresh();
+          RatingPanel.open(placeRef(place));
+          UI.showSuccess('Saved for everyone.');
+        } catch {
+          UI.showError('Couldn’t save it. Check you’re signed in as an admin.');
+        }
+        return;
+      }
       // Already on SCRAN? Same name within 75 m: open that instead of adding it twice
       const key = Places.norm(name);
       const same = Places.near(lat, lng, 75).find(p => {
@@ -2003,11 +2086,12 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       linkEl.addEventListener('paste', () => setTimeout(_readLink, 0));
       linkEl.addEventListener('change', _readLink);
       document.getElementById('add-place-cancel').addEventListener('click', stop);
-      document.getElementById('add-place-ok').addEventListener('click', _add);
+      okBtn.addEventListener('click', _add);
+      window.addEventListener('resize', _placePin);
       nameEl.addEventListener('keydown', e => { if (e.key === 'Enter') _add(); if (e.key === 'Escape') stop(); });
     }
 
-    return { init, start, stop };
+    return { init, start, edit, stop };
   })();
 
   // ─────────────────────────────────────────
@@ -2218,9 +2302,11 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         else if (session) setTimeout(() => AuthDialog.signedIn());
         const id = session?.user.id || null;
         if (id === syncedFor) return;
+        setTimeout(() => Admin.check());
         const signedOut = !!syncedFor && !id;
         syncedFor = id;
         setTimeout(() => _accountChanged(signedOut)); // Supabase asks for no awaits inside this callback
+        setTimeout(() => Admin.check());
       });
 
       signinBtn.addEventListener('click', () => AuthDialog.open());
