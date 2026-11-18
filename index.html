@@ -36,6 +36,11 @@
     <span id="status-dot"></span>
     <span id="status-msg"></span>
   </div>
+  <button id="search-btn" aria-label="Search places">
+    <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/>
+    </svg>
+  </button>
   <button id="profile-btn" aria-label="My profile">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <circle cx="12" cy="8" r="4"/>
@@ -44,6 +49,27 @@
   </button>
 </header>
 
+<!-- Search places by name, or add one SCRAN doesn't have (PlaceSearch / AddPlace in app.js) -->
+<div id="search-panel" hidden>
+  <div class="search-row">
+    <input id="search-input" type="search" placeholder="Search places by name" autocomplete="off" enterkeyhint="search">
+    <button id="search-close" aria-label="Close search">&#x2715;</button>
+  </div>
+  <div id="search-results"></div>
+</div>
+<div id="add-place-pin" hidden><div class="map-pin pin-adding"></div></div>
+<div id="add-place" hidden>
+  <div class="add-place-title">Add a missing place</div>
+  <div class="add-place-help">In Google Maps, open the place and tap Share &rarr; Copy link, then paste it here. Or just move the map so the pin sits on it.</div>
+  <input id="add-place-link" type="url" placeholder="Paste a Google Maps link" autocomplete="off">
+  <div id="add-place-status"></div>
+  <input id="add-place-name" type="text" maxlength="200" placeholder="Name" autocomplete="off">
+  <div id="add-place-kinds"></div>
+  <div class="add-place-actions">
+    <button id="add-place-cancel" type="button">Cancel</button>
+    <button id="add-place-ok" type="button">Add and rate</button>
+  </div>
+</div>
 <div id="filter-sidebar">
   <button id="fs-collapse" aria-label="Show or hide filters" aria-expanded="true">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">

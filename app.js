@@ -351,9 +351,36 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
               ({ id, name, lat, lon, kind, cuisine: cuisine.map(i => data.cuisines[i]), address }));
             _byId = new Map(_places.map(p => [p.id, p]));
           })
+          .then(_loadAdded)
           .catch(e => { _loaded = null; throw e; });
       }
       return _loaded;
+    }
+
+    // Places people added because they weren't in the file ("Can't find it? Add it"), shared
+    // with everyone from Supabase's added_places table; their ids are 'a-<number>'
+    const _addedPlace = r => ({ id: `a-${r.id}`, name: r.name, lat: r.lat, lon: r.lon, kind: r.kind,
+      cuisine: [], address: r.address || '', added: true });
+
+    async function _loadAdded() {
+      const { data, error } = await sbClient.from('added_places').select('id, name, kind, lat, lon, address');
+      if (error) { console.warn('[SCRAN] added places not loaded:', error.message); return; }
+      data.forEach(r => { const p = _addedPlace(r); _places.push(p); _byId.set(p.id, p); });
+    }
+
+    async function add({ name, kind, lat, lon, address }) {
+      const { data, error } = await sbClient.from('added_places')
+        .insert({ name, kind, lat, lon, address: address || null }).select('id, name, kind, lat, lon, address').single();
+      if (error) throw error;
+      const p = _addedPlace(data);
+      _places.push(p); _byId.set(p.id, p);
+      return p;
+    }
+
+    // Places within `metres` of a point, nearest first
+    function near(lat, lon, metres) {
+      const d = p => Math.hypot(p.lat - lat, (p.lon - lon) * 0.62) * 111000;
+      return _places.filter(p => d(p) <= metres).sort((a, b) => d(a) - d(b));
     }
 
     // Places inside `bounds` matching the kind ('eat' | 'pub' | 'cafe') and cuisine filters
@@ -366,7 +393,27 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
     function get(id) { return _byId.get(id) || null; }
 
-    return { load, query, get };
+    // Name search: every word you type must start a word of the name ("rog sar" finds
+    // "Rogue Sarnies"); names that start with what you typed first, then the nearest to `near`
+    const _norm = t => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
+      .replace(/&/g, ' and ').replace(/['’`.]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
+    let _words = null; // normalised name of each place, worked out on the first search
+    function search(text, near, limit = 8) {
+      const q = _norm(text);
+      if (!q) return [];
+      const parts = q.split(' ');
+      if (!_words || _words.length !== _places.length) _words = _places.map(p => ' ' + _norm(p.name));
+      const all = _places.map((p, i) => [p, _words[i]]);
+      const dist = p => (p.lat - near.lat) ** 2 + ((p.lon - near.lng) * 0.62) ** 2;
+      return all
+        .filter(([, w]) => parts.every(part => w.includes(' ' + part)))
+        .map(([p, w]) => ({ p, starts: w.startsWith(' ' + q) ? 0 : 1, d: dist(p) }))
+        .sort((a, b) => a.starts - b.starts || a.d - b.d)
+        .slice(0, limit)
+        .map(r => r.p);
+    }
+
+    return { load, query, get, add, near, search, norm: _norm };
   })();
 
   // What the rating panel and storage need to know about a place
@@ -1752,6 +1799,211 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
   })();
 
   // ─────────────────────────────────────────
+  // 11e. PLACE SEARCH and ADD A MISSING PLACE
+  // ─────────────────────────────────────────
+  const KIND_LABELS = { eat: 'Restaurant', pub: 'Pub or bar', cafe: 'Café' };
+
+  const PlaceSearch = (() => {
+    const btn     = document.getElementById('search-btn');
+    const panel   = document.getElementById('search-panel');
+    const input   = document.getElementById('search-input');
+    const results = document.getElementById('search-results');
+    let _map = null;
+    let _timer = null;
+
+    function open() {
+      panel.hidden = false;
+      input.focus();
+      Places.load().catch(() => {});
+    }
+    function close() { panel.hidden = true; }
+
+    async function _show() {
+      const text = input.value.trim();
+      if (!text) { results.innerHTML = ''; return; }
+      try { await Places.load(); } catch { results.innerHTML = '<div class="search-empty">Couldn’t load places. Check your connection.</div>'; return; }
+      const found = Places.search(text, _map.getCenter());
+      results.innerHTML = found.map(p => `
+        <button class="search-result" data-id="${escapeHtml(p.id)}">
+          <span class="kind-dot kind-${p.kind}"></span>
+          <span class="search-result-text">
+            <span class="search-result-name">${escapeHtml(p.name)}</span>
+            <span class="search-result-sub">${escapeHtml(p.address || KIND_LABELS[p.kind] || '')}</span>
+          </span>
+        </button>`).join('')
+        + (found.length ? '' : '<div class="search-empty">Nothing on SCRAN by that name.</div>')
+        + `<button class="search-add" id="search-add">Can’t find it? <b>Add it to the map</b></button>`;
+    }
+
+    function init(map) {
+      _map = map;
+      btn.addEventListener('click', () => panel.hidden ? open() : close());
+      document.getElementById('search-close').addEventListener('click', close);
+      input.addEventListener('input', () => { clearTimeout(_timer); _timer = setTimeout(_show, 150); });
+      input.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+      results.addEventListener('click', e => {
+        if (e.target.closest('#search-add')) { close(); AddPlace.start(input.value.trim()); return; }
+        const id = e.target.closest('[data-id]')?.dataset.id;
+        const place = id && Places.get(id);
+        if (!place) return;
+        close();
+        _map.flyTo([place.lat, place.lon], Math.max(_map.getZoom(), 18), { duration: 0.8 });
+        RatingPanel.open(placeRef(place));
+      });
+    }
+
+    return { init, open, close };
+  })();
+
+  // Add a place SCRAN doesn't have, for everyone: paste its Google Maps link (or just move the map).
+  // A full link has the exact spot; a phone share link (maps.app.goo.gl) only has the name and
+  // address, so the map jumps to the postcode (postcodes.io, open data) and you nudge the pin
+  // onto the place. The coordinates are never Google's, so they can be kept.
+  const MapsLink = (() => {
+    const isShort = text => /^https:\/\/(maps\.app\.goo\.gl|goo\.gl\/maps)\//.test(text);
+
+    // { name, address, postcode, lat, lon } from a full Google Maps link; anything missing is null
+    function parse(url) {
+      let u;
+      try { u = new URL(url); } catch { return null; }
+      if (!/(^|\.)google\.[a-z.]+$/.test(u.hostname) || !(u.pathname.startsWith('/maps') || u.searchParams.has('q'))) return null;
+      const text = decodeURIComponent(u.href);
+      const at = text.match(/!3d(-?\d+\.\d+)!4d(-?\d+\.\d+)/) || text.match(/@(-?\d+\.\d+),(-?\d+\.\d+)/);
+      const q = u.searchParams.get('q') || u.searchParams.get('query') || '';
+      const qAt = q.match(/^\s*(-?\d+\.\d+),\s*(-?\d+\.\d+)\s*$/);
+      const coords = at || qAt;
+      const placeName = u.pathname.match(/\/maps\/place\/([^/]+)/)?.[1];
+      const [first, ...rest] = (qAt ? '' : q).split(',').map(t => t.trim()).filter(Boolean);
+      const name = (placeName ? decodeURIComponent(placeName.replace(/\+/g, ' ')).split(',')[0] : first) || null;
+      const address = rest.join(', ') || (placeName ? decodeURIComponent(placeName.replace(/\+/g, ' ')).split(',').slice(1).join(',').trim() : '') || null;
+      const postcode = (address || '').match(/\b([A-Z]{1,2}\d[A-Z\d]?)\s*(\d[A-Z]{2})\b/i);
+      return {
+        name,
+        address: (address || '').split(',').map(t => t.replace(/\b(London|United Kingdom|UK)\b/gi, '').trim()).filter(Boolean).join(', ') || null,
+        postcode: postcode ? `${postcode[1]} ${postcode[2]}`.toUpperCase() : null,
+        lat: coords ? +coords[1] : null, lon: coords ? +coords[2] : null,
+      };
+    }
+
+    async function read(text) {
+      text = text.trim();
+      if (isShort(text)) {
+        const r = await fetch('/api/maps-link?url=' + encodeURIComponent(text)).catch(() => null);
+        if (!r || !r.ok) throw new Error(location.hostname === 'localhost'
+          ? 'Share links only work on the live site. Paste the full link from your browser’s address bar.'
+          : 'Couldn’t open that link. Try again, or move the map yourself.');
+        text = (await r.json()).url;
+      }
+      const found = parse(text);
+      if (!found) throw new Error('That isn’t a Google Maps link.');
+      if (found.lat == null && found.postcode) {
+        const r = await fetch('https://api.postcodes.io/postcodes/' + encodeURIComponent(found.postcode)).catch(() => null);
+        const result = r?.ok ? (await r.json()).result : null;
+        if (result) Object.assign(found, { lat: result.latitude, lon: result.longitude, rough: true });
+      }
+      return found;
+    }
+
+    return { read };
+  })();
+
+  const AddPlace = (() => {
+    const bar      = document.getElementById('add-place');
+    const pin      = document.getElementById('add-place-pin');
+    const linkEl   = document.getElementById('add-place-link');
+    const statusEl = document.getElementById('add-place-status');
+    const nameEl   = document.getElementById('add-place-name');
+    const kinds    = document.getElementById('add-place-kinds');
+    let _map = null;
+    let _kind = 'eat';
+    let _address = null;
+    let _onAdded = () => {};
+
+    function _setKind(kind) {
+      _kind = kind;
+      kinds.querySelectorAll('button').forEach(b => b.classList.toggle('selected', b.dataset.kind === kind));
+    }
+    const _status = (text, bad) => { statusEl.textContent = text; statusEl.classList.toggle('bad', !!bad); };
+
+    function start(name = '') {
+      if (!requireSignIn('Sign in to add a place.')) return;
+      RatingPanel.close();
+      Views.setSheet(false);
+      linkEl.value = '';
+      nameEl.value = name;
+      _address = null;
+      _status('');
+      _setKind('eat');
+      if (_map.getZoom() < 17) _map.setZoom(17);
+      bar.hidden = false;
+      pin.hidden = false;
+      document.body.classList.add('adding-place');
+      linkEl.focus();
+    }
+
+    function stop() {
+      bar.hidden = true;
+      pin.hidden = true;
+      document.body.classList.remove('adding-place');
+    }
+
+    async function _readLink() {
+      const text = linkEl.value.trim();
+      if (!text) { _status(''); return; }
+      _status('Reading the link…');
+      try {
+        const found = await MapsLink.read(text);
+        if (found.name) nameEl.value = found.name;
+        _address = found.address;
+        if (found.lat == null) { _status('No location in that link. Move the map so the pin sits on the place.', true); return; }
+        _map.setView([found.lat, found.lon], 19);
+        _status(found.rough ? `Near ${found.postcode}. Move the map so the pin sits right on it.` : 'Found it. Check the pin is on the place.');
+      } catch (e) {
+        _status(e.message, true);
+      }
+    }
+
+    async function _add() {
+      const name = nameEl.value.trim().slice(0, 200);
+      if (!name) { UI.showError('Type the place’s name.'); nameEl.focus(); return; }
+      const { lat, lng } = _map.getCenter();
+      const [[s, w], [n, e]] = CONFIG.m25Bounds;
+      if (lat < s || lat > n || lng < w || lng > e) { UI.showError('SCRAN only covers London inside the M25.'); return; }
+      // Already on SCRAN? Same name within 75 m: open that instead of adding it twice
+      const key = Places.norm(name);
+      const same = Places.near(lat, lng, 75).find(p => {
+        const other = Places.norm(p.name);
+        return other.includes(key) || key.includes(other);
+      });
+      if (same) { stop(); RatingPanel.open(placeRef(same)); UI.showSuccess(`${same.name} is already on SCRAN.`); return; }
+      try {
+        const place = await Places.add({ name, kind: _kind, lat: +lat.toFixed(6), lon: +lng.toFixed(6), address: _address });
+        stop();
+        _onAdded();
+        RatingPanel.open(placeRef(place));
+        UI.showSuccess('Added to SCRAN for everyone.');
+      } catch (e) {
+        UI.showError(/Too many/.test(e.message) ? 'You’ve added a lot of places today. Try again tomorrow.' : 'Couldn’t add it. Try again.');
+      }
+    }
+
+    function init(map, onAdded) {
+      _map = map;
+      _onAdded = onAdded;
+      kinds.innerHTML = Object.entries(KIND_LABELS).map(([k, label]) =>
+        `<button type="button" data-kind="${k}"><span class="kind-dot kind-${k}"></span>${label}</button>`).join('');
+      kinds.addEventListener('click', e => { const k = e.target.closest('[data-kind]')?.dataset.kind; if (k) _setKind(k); });
+      linkEl.addEventListener('paste', () => setTimeout(_readLink, 0));
+      linkEl.addEventListener('change', _readLink);
+      document.getElementById('add-place-cancel').addEventListener('click', stop);
+      document.getElementById('add-place-ok').addEventListener('click', _add);
+      nameEl.addEventListener('keydown', e => { if (e.key === 'Enter') _add(); if (e.key === 'Escape') stop(); });
+    }
+
+    return { init, start, stop };
+  })();
+
+  // ─────────────────────────────────────────
   // 12. APP (main controller)
   // ─────────────────────────────────────────
   const App = (() => {
@@ -1856,6 +2108,8 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       MyListManager.init(_map);
       PeopleLayer.init(_map);
       Views.init(creatorLayers);
+      PlaceSearch.init(_map);
+      AddPlace.init(_map, _showPlacesInView);
       UI.updateStatsCount();
 
       FilterBar.init(
@@ -1878,11 +2132,11 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       _map.on('moveend', _showPlacesInView);
 
       // Close panel on map click
-      _map.on('click', () => { RatingPanel.close(); Views.setSheet(false); });
+      _map.on('click', () => { RatingPanel.close(); Views.setSheet(false); PlaceSearch.close(); });
 
       // Keyboard — close panel on Escape, block browser zoom shortcuts
       document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') RatingPanel.close();
+        if (e.key === 'Escape') { RatingPanel.close(); PlaceSearch.close(); AddPlace.stop(); }
         if ((e.ctrlKey || e.metaKey) && ['+', '-', '=', '0'].includes(e.key)) {
           e.preventDefault();
         }

@@ -232,6 +232,7 @@ function buildHtml(items) {
     <button class="tab" data-kind="spot">Spot check</button>
     <button class="tab" data-kind="pins">Pin check</button>
     <button class="tab" data-kind="suggestions">Creator suggestions</button>
+    <button class="tab" data-kind="added">Added places</button>
   </div>
   <div class="tabs" id="creator-tabs"></div>
   <div class="tabs" id="status-tabs">
@@ -720,10 +721,11 @@ creators.forEach(([key, label], i) => {
 document.querySelectorAll('#kind-tabs .tab').forEach(b => b.addEventListener('click', () => {
   document.querySelectorAll('#kind-tabs .tab').forEach(t => t.classList.remove('active'));
   b.classList.add('active');
-  const suggestions = b.dataset.kind === 'suggestions';
-  document.body.classList.toggle('suggestions-view', suggestions);
-  document.getElementById('suggestions').hidden = !suggestions;
-  if (suggestions) { loadSuggestions(); return; }
+  const other = b.dataset.kind === 'suggestions' || b.dataset.kind === 'added';
+  document.body.classList.toggle('suggestions-view', other);
+  document.getElementById('suggestions').hidden = !other;
+  if (b.dataset.kind === 'suggestions') { loadSuggestions(); return; }
+  if (b.dataset.kind === 'added') { loadAdded(); return; }
   kindFilter = b.dataset.kind; refresh();
 }));
 
@@ -755,12 +757,46 @@ async function loadSuggestions() {
   }).join('');
 }
 document.getElementById('suggestions').addEventListener('click', async e => {
-  const id = e.target.closest('[data-done]')?.dataset.done;
-  if (!id) return;
-  const { error } = await sb.from('creator_suggestions').delete().eq('id', id);
-  if (error) alert('Couldn’t remove it: ' + error.message);
-  loadSuggestions();
+  const done = e.target.closest('[data-done]')?.dataset.done;
+  const del = e.target.closest('[data-delete-place]')?.dataset.deletePlace;
+  if (done) {
+    const { error } = await sb.from('creator_suggestions').delete().eq('id', done);
+    if (error) alert('Couldn’t remove it: ' + error.message);
+    loadSuggestions();
+  } else if (del) {
+    const name = e.target.closest('.suggestion').querySelector('b').textContent;
+    if (!confirm('Delete ' + name + ' from SCRAN for everyone? People’s ratings of it stay in their accounts but lose the pin.')) return;
+    const { data, error } = await sb.from('added_places').delete().eq('id', del).select('id');
+    if (error || !data.length) alert('Couldn’t delete it' + (error ? ': ' + error.message : '. Check your account is in the admins table.'));
+    loadAdded();
+  }
 });
+
+// Places people added in the app ("Can't find it? Add it"), newest first, so you can delete junk
+const KINDS = { eat: 'Restaurant', pub: 'Pub or bar', cafe: 'Café' };
+async function loadAdded() {
+  const box = document.getElementById('suggestions');
+  if (!sb) { box.innerHTML = '<p class="help">Supabase didn’t load.</p>'; return; }
+  box.innerHTML = '<p class="help">Loading…</p>';
+  const { data: { session } } = await sb.auth.getSession();
+  if (!session) {
+    box.innerHTML = '<p class="help">Sign in to SCRAN at <a href="http://localhost:8000">http://localhost:8000</a> in this browser, then come back to this tab.</p>';
+    return;
+  }
+  const { data, error } = await sb.from('added_places')
+    .select('id, name, kind, lat, lon, address, created_at, profiles(name)').order('created_at', { ascending: false });
+  if (error) { box.innerHTML = '<p class="help">Couldn’t load added places: ' + esc(error.message) + '</p>'; return; }
+  if (!data.length) { box.innerHTML = '<p class="help">No one has added a place yet.</p>'; return; }
+  box.innerHTML = '<p class="help">' + data.length + ' added place' + (data.length === 1 ? '' : 's') + ', newest first. Everyone sees these on the map. <b>Delete</b> removes one for everyone.</p>' + data.map(p => {
+    const google = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(p.name + ', ' + (p.address || 'London'));
+    const scran = 'http://localhost:8000/?lat=' + p.lat + '&lon=' + p.lon + '&type=place&id=a-' + p.id + '&name=' + encodeURIComponent(p.name);
+    return '<div class="suggestion"><div class="suggestion-text"><b>' + esc(p.name) + '</b> · ' + esc(KINDS[p.kind] || p.kind) +
+      (p.address ? '<div class="suggestion-meta">' + esc(p.address) + '</div>' : '') +
+      '<div class="suggestion-meta">Added by ' + esc(p.profiles?.name || 'someone who has left') + ' · ' + new Date(p.created_at).toLocaleDateString('en-GB') +
+      ' · <a href="' + scran + '" target="_blank" rel="noopener">On SCRAN</a> · <a href="' + google + '" target="_blank" rel="noopener">Google Maps</a></div></div>' +
+      '<button data-delete-place="' + p.id + '">Delete</button></div>';
+  }).join('');
+}
 document.querySelectorAll('#status-tabs .tab').forEach(b => b.addEventListener('click', () => {
   document.querySelectorAll('#status-tabs .tab').forEach(t => t.classList.remove('active'));
   b.classList.add('active'); statusFilter = b.dataset.status; refresh();
