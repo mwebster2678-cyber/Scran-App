@@ -1585,3 +1585,19 @@ body.adding-place #sheet, body.adding-place #sheet-toggle { visibility: hidden; 
   .panel-inner, .profile-body { padding-left: 18px; padding-right: 18px; }
   #auth-form input { font-size: 16px; } /* iPhones zoom in on smaller text fields */
 }
+
+/* "SCRAN has been updated", shown when a resumed app is running old code (UpdateCheck) */
+#update-banner {
+  position: fixed;
+  top: calc(64px + env(safe-area-inset-top, 0px));
+  left: 50%; transform: translateX(-50%);
+  z-index: 1600;
+  max-width: calc(100% - 32px);
+  padding: 10px 16px;
+  border: none; border-radius: 20px;
+  background: var(--primary); color: #fff;
+  font-family: inherit; font-size: 0.85rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  cursor: pointer;
+}
+#update-banner[hidden] { display: none; }

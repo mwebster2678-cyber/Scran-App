@@ -2362,6 +2362,39 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
   Auth.init();
   App.init();
 
+  // ── New version? ──
+  // A home-screen app on iPhone resumes where it left off instead of reloading, so it can run
+  // old code for days. Each time SCRAN comes back on screen, check whether the app's files have
+  // changed since it loaded, and if so offer a refresh.
+  const UpdateCheck = (() => {
+    const FILES = ['index.html', 'app.js', 'styles.css'];
+    const banner = document.getElementById('update-banner');
+    let _loaded = null;    // the files' versions when this page loaded
+    let _lastCheck = 0;
+
+    async function _versions() {
+      const tags = await Promise.all(FILES.map(f =>
+        fetch(f, { method: 'HEAD', cache: 'no-store' })
+          .then(r => r.ok ? (r.headers.get('etag') || r.headers.get('last-modified') || '') : null)
+          .catch(() => null)));
+      return tags.includes(null) ? null : tags.join('|'); // offline or a failed check: don't compare
+    }
+
+    async function check() {
+      if (Date.now() - _lastCheck < 60 * 1000) return;
+      _lastCheck = Date.now();
+      const now = await _versions();
+      if (!now) return;
+      if (_loaded == null) { _loaded = now; return; }
+      if (now !== _loaded) banner.hidden = false;
+    }
+
+    banner.addEventListener('click', () => location.reload());
+    document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') check(); });
+    window.addEventListener('pageshow', e => { if (e.persisted) check(); });
+    check();
+  })();
+
   // ── Profile panel: your ratings, or another person's (ProfilePanel.open(id)) ──
   const ProfilePanel = (() => {
     const panel         = document.getElementById('profile-panel');
