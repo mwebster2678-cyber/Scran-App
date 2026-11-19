@@ -1602,7 +1602,8 @@ body.adding-place #sheet, body.adding-place #sheet-toggle { visibility: hidden; 
 }
 
 /* "SCRAN has been updated", shown when a resumed app is running old code (UpdateCheck) */
-#update-banner {
+/* …and "Sam rated Rogue Sarnies", for new ratings from people you follow */
+#update-banner, #friends-banner {
   position: fixed;
   top: calc(var(--header-h, 104px) + 10px);
   left: 50%; transform: translateX(-50%);
@@ -1615,7 +1616,7 @@ body.adding-place #sheet, body.adding-place #sheet-toggle { visibility: hidden; 
   box-shadow: 0 4px 16px rgba(0,0,0,0.25);
   cursor: pointer;
 }
-#update-banner[hidden] { display: none; }
+#update-banner[hidden], #friends-banner[hidden] { display: none; }
 
 /* Admins: fix an added place's name, type or pin */
 #edit-place-btn {

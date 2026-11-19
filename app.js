@@ -1576,23 +1576,59 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     let _byPlace = new Map(); // 'type/id' → [{ person, rating, note, name, lat, lon, cuisine, type, id }]
     let _group   = null; // nearby pins merge into a numbered bubble until street level
 
-    async function load() {
+    // Every rating by the people you follow, grouped by place. null if it couldn't be fetched.
+    async function _fetch() {
       const people = new Map(FOLLOWING.people.map(p => [p.id, p]));
-      _byPlace = new Map();
-      if (people.size) {
-        const { data, error } = await sbClient.from('ratings')
-          .select('user_id, osm_type, osm_id, restaurant_name, lat, lon, cuisine, rating, note')
-          .in('user_id', [...people.keys()]);
-        if (error) cloudError(error);
-        (data || []).forEach(r => {
-          if (!r.lat || !r.lon) return;
-          const key = `${r.osm_type}/${r.osm_id}`;
-          if (!_byPlace.has(key)) _byPlace.set(key, []);
-          _byPlace.get(key).push({ person: people.get(r.user_id), rating: r.rating, note: r.note,
-            name: r.restaurant_name, lat: r.lat, lon: r.lon, cuisine: r.cuisine || [], type: r.osm_type, id: r.osm_id });
-        });
-      }
+      const byPlace = new Map();
+      if (!people.size) return byPlace;
+      const { data, error } = await sbClient.from('ratings')
+        .select('user_id, osm_type, osm_id, restaurant_name, lat, lon, cuisine, rating, note')
+        .in('user_id', [...people.keys()]);
+      if (error) { cloudError(error); return null; }
+      (data || []).forEach(r => {
+        if (!r.lat || !r.lon || !people.has(r.user_id)) return;
+        const key = `${r.osm_type}/${r.osm_id}`;
+        if (!byPlace.has(key)) byPlace.set(key, []);
+        byPlace.get(key).push({ person: people.get(r.user_id), rating: r.rating, note: r.note,
+          name: r.restaurant_name, lat: r.lat, lon: r.lon, cuisine: r.cuisine || [], type: r.osm_type, id: r.osm_id });
+      });
+      return byPlace;
+    }
+
+    let _loaded = false; // whether _byPlace holds a successful fetch to compare against
+    async function load() {
+      const fresh = await _fetch();
+      _loaded = !!fresh;
+      _byPlace = fresh || new Map();
+      _pending = null;
       try { await Places.load(); } catch { /* pins fall back to the restaurant colour */ }
+      _draw();
+    }
+
+    // Ratings fetched by checkNew() but not shown yet, until you tap the banner (apply())
+    let _pending = null;
+    const _sig = e => `${e.rating}|${e.note || ''}`;
+
+    // Fetch again and list what's new or changed since the pins were drawn:
+    // [{ person, name, type, id, lat, lon }], newest information only, one per person and place
+    async function checkNew() {
+      if (!_loaded) return [];
+      const fresh = await _fetch();
+      if (!fresh) return [];
+      const before = new Map();
+      _byPlace.forEach((entries, key) => entries.forEach(e => before.set(`${key}|${e.person.id}`, _sig(e))));
+      const changes = [];
+      fresh.forEach((entries, key) => entries.forEach(e => {
+        if (before.get(`${key}|${e.person.id}`) !== _sig(e)) changes.push(e);
+      }));
+      _pending = changes.length ? fresh : null;
+      return changes;
+    }
+
+    function apply() {
+      if (!_pending) return;
+      _byPlace = _pending;
+      _pending = null;
       _draw();
     }
 
@@ -1647,7 +1683,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     function forPlace(type, id) { return _byPlace.get(`${type}/${id}`) || []; }
     function init(map) { _map = map; }
 
-    return { init, load, setActive, forPlace, filter: _draw };
+    return { init, load, checkNew, apply, setActive, forPlace, filter: _draw };
   })();
 
   // What the people you follow said, on the place card
@@ -1934,6 +1970,16 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     else window.addEventListener('resize', set);
   })();
 
+  // Fly to a spot so it sits in the middle of the map left visible between the header and the
+  // place card (at most 60% of the screen, see #rating-panel), not behind the card
+  function flyAboveCard(map, lat, lon) {
+    const zoom = Math.max(map.getZoom(), 18);
+    const h = map.getSize().y;
+    const header = document.getElementById('header').offsetHeight;
+    const shift = h / 2 - (header + h * 0.4) / 2;
+    map.flyTo(map.unproject(map.project([lat, lon], zoom).add([0, shift]), zoom), zoom, { duration: 0.8 });
+  }
+
   const PlaceSearch = (() => {
     const panel   = document.getElementById('search-panel');
     const input   = document.getElementById('search-input');
@@ -1978,14 +2024,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         const place = id && Places.get(id);
         if (!place) return;
         _done();
-        // Put the place in the middle of the map left visible between the header and the place
-        // card (at most 60% of the screen, see #rating-panel), not behind the card
-        const zoom = Math.max(_map.getZoom(), 18);
-        const h = _map.getSize().y;
-        const header = document.getElementById('header').offsetHeight;
-        const shift = h / 2 - (header + h * 0.4) / 2;
-        const centre = _map.unproject(_map.project([place.lat, place.lon], zoom).add([0, shift]), zoom);
-        _map.flyTo(centre, zoom, { duration: 0.8 });
+        flyAboveCard(_map, place.lat, place.lon);
         RatingPanel.open(placeRef(place));
       });
     }
@@ -2348,7 +2387,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       });
     }
 
-    return { init };
+    return { init, map: () => _map };
   })();
 
   // ─────────────────────────────────────────
@@ -2600,6 +2639,44 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') check(); });
     window.addEventListener('pageshow', e => { if (e.persisted) check(); });
     check();
+  })();
+
+  // ── New ratings from people you follow? ──
+  // Same idea as UpdateCheck: each time SCRAN comes back on screen (at most once a minute), look
+  // for ratings your friends added or changed since their pins were drawn, and offer to show them.
+  (() => {
+    const banner = document.getElementById('friends-banner');
+    const updateBanner = document.getElementById('update-banner');
+    let _lastCheck = Date.now(); // the pins were just loaded
+    let _changes = [];
+
+    async function check() {
+      if (Date.now() - _lastCheck < 60 * 1000) return;
+      if (!Auth.currentUser() || !FOLLOWING.people.length || !updateBanner.hidden) return;
+      _lastCheck = Date.now();
+      _changes = await PeopleLayer.checkNew();
+      if (!_changes.length || !updateBanner.hidden) return; // a refresh would load them anyway
+      const first = _changes[0];
+      const names = [...new Set(_changes.map(c => c.person.name.split(' ')[0]))];
+      banner.innerHTML = _changes.length === 1
+        ? `${escapeHtml(names[0])} rated ${escapeHtml(first.name)}. <b>Tap to see</b>`
+        : `${_changes.length} new ratings from ${names.length === 1 ? escapeHtml(names[0]) : 'friends'}. <b>Tap to see</b>`;
+      banner.hidden = false;
+    }
+
+    banner.addEventListener('click', () => {
+      banner.hidden = true;
+      PeopleLayer.apply();
+      Views.show('following'); // friends' pins show in My reviews and following
+      if (_changes.length === 1) {
+        const c = _changes[0];
+        const place = c.type === PLACE_TYPE ? Places.get(c.id) : null;
+        flyAboveCard(App.map(), place?.lat ?? c.lat, place?.lon ?? c.lon);
+        RatingPanel.open(place ? placeRef(place) : { type: c.type, id: c.id, name: c.name, cuisine: c.cuisine, lat: c.lat, lon: c.lon });
+      }
+    });
+    document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') check(); });
+    window.addEventListener('pageshow', e => { if (e.persisted) check(); });
   })();
 
   // ── Profile panel: your ratings, or another person's (ProfilePanel.open(id)) ──
