@@ -2632,7 +2632,10 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       const now = await _versions();
       if (!now) return;
       if (_loaded == null) { _loaded = now; return; }
-      if (now !== _loaded) banner.hidden = false;
+      if (now !== _loaded) {
+        banner.hidden = false;
+        document.getElementById('friends-banner').hidden = true; // same spot; refreshing loads new ratings too
+      }
     }
 
     banner.addEventListener('click', () => location.reload());
