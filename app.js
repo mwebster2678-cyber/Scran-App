@@ -1592,9 +1592,12 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
           });
         },
       });
+      const cuisineLc = (FilterBar.getCuisine() || '').toLowerCase();
       _byPlace.forEach(entries => {
         const { type, id, name, cuisine } = entries[0];
         const current = type === PLACE_TYPE ? Places.get(id) : null; // its current pin
+        // Same cuisine filter as your own pins, using the saved cuisine or the place's current one
+        if (cuisineLc && ![...cuisine, ...(current?.cuisine || [])].some(c => String(c).toLowerCase() === cuisineLc)) return;
         const marker = L.marker([current?.lat ?? entries[0].lat, current?.lon ?? entries[0].lon], { icon: _icon(entries), zIndexOffset: 515 });
         marker.on('click', (e) => {
           L.DomEvent.stopPropagation(e);
@@ -1610,7 +1613,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     function forPlace(type, id) { return _byPlace.get(`${type}/${id}`) || []; }
     function init(map) { _map = map; }
 
-    return { init, load, setActive, forPlace };
+    return { init, load, setActive, forPlace, filter: _draw };
   })();
 
   // What the people you follow said, on the place card
@@ -2226,6 +2229,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
           _showPlacesInView();
           creatorLayers.forEach(layer => layer.filter(FilterBar.getArea(), cuisine));
           MyListManager.filter(cuisine);
+          PeopleLayer.filter();
         },
         () => _showPlacesInView()
       );
