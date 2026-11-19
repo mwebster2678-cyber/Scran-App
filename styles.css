@@ -1221,6 +1221,10 @@ body.adding-place #sheet, body.adding-place #sheet-toggle { visibility: hidden; 
   cursor: pointer;
 }
 
+/* A bigger invisible area around the small tab, so it's easy to catch with a thumb when swiping */
+#sheet-toggle::before { content: ''; position: absolute; inset: -14px -24px -6px; }
+#sheet-toggle { touch-action: none; }
+
 #sheet-toggle svg { transition: transform 0.3s; }
 #sheet.open #sheet-toggle svg { transform: rotate(180deg); }
 

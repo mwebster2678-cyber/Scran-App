@@ -1766,6 +1766,54 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       refresh();
     }
 
+    // Swipe the arrow up to open the sheet and down to close it. The sheet follows your finger.
+    // While open you can also swipe down anywhere on it, once its list is scrolled to the top.
+    let _dragged = false;
+    function _initSwipe() {
+      let startY = 0, lastY = 0, lastT = 0, speed = 0, height = 0, wasOpen = false, dragging = false, tracking = false, onTab = false;
+
+      const begin = (e, fromToggle) => {
+        wasOpen = sheet.classList.contains('open');
+        if (!fromToggle && (!wasOpen || body.scrollTop > 0)) return; // let the list scroll
+        tracking = true; dragging = false; onTab = fromToggle;
+        startY = lastY = e.touches[0].clientY; lastT = e.timeStamp; speed = 0;
+        height = sheet.offsetHeight;
+      };
+      const move = (e) => {
+        if (!tracking) return;
+        const y = e.touches[0].clientY;
+        const dy = y - startY;
+        if (!dragging) {
+          if (Math.abs(dy) < 6) return;
+          if (!wasOpen && dy > 0) { tracking = false; return; } // already closed
+          if (wasOpen && dy < 0 && !onTab) { tracking = false; return; } // scrolling the list
+          dragging = true;
+          sheet.style.transition = 'none';
+        }
+        e.preventDefault();
+        const offset = Math.min(height, Math.max(0, (wasOpen ? 0 : height) + dy));
+        sheet.style.transform = `translate(-50%, ${offset}px)`;
+        speed = (y - lastY) / Math.max(1, e.timeStamp - lastT); lastY = y; lastT = e.timeStamp;
+      };
+      const end = () => {
+        if (!tracking) return;
+        tracking = false;
+        if (!dragging) return;
+        _dragged = true; setTimeout(() => { _dragged = false; }, 400);
+        sheet.style.transition = ''; sheet.style.transform = '';
+        const moved = lastY - startY;
+        // a quick flick decides it, otherwise whether it was dragged past a third of the way
+        const open = Math.abs(speed) > 0.4 ? speed < 0 : (wasOpen ? moved < height / 3 : -moved > height / 3);
+        if (open !== wasOpen) setSheet(open);
+      };
+
+      // the tab sits inside the sheet, so the sheet's listeners also catch touches on the tab
+      sheet.addEventListener('touchstart', e => begin(e, toggle.contains(e.target)), { passive: true });
+      sheet.addEventListener('touchmove', move, { passive: false });
+      sheet.addEventListener('touchend', end);
+      sheet.addEventListener('touchcancel', end);
+    }
+
     // After sign-in or sign-out: reload who you follow and their ratings
     async function reload() {
       _suggested = null;
@@ -1780,7 +1828,11 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       _layers = creatorLayers;
       _ready = true;
       buttons.forEach(b => b.addEventListener('click', () => show(b.dataset.view)));
-      toggle.addEventListener('click', () => setSheet(!sheet.classList.contains('open')));
+      toggle.addEventListener('click', () => {
+        if (_dragged) { _dragged = false; return; } // a swipe already opened or closed it
+        setSheet(!sheet.classList.contains('open'));
+      });
+      _initSwipe();
       body.addEventListener('click', async (e) => {
         const b = e.target.closest('button');
         const row = e.target.closest('[data-person]');
