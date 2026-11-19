@@ -152,20 +152,25 @@ html, body {
 
 #profile-btn:hover { background: rgba(108,52,131,0.1); }
 
-#search-btn {
-  margin-left: auto;
-  background: none; border: none; cursor: pointer; padding: 0;
-  width: 34px; height: 34px; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+/* The search bar: its own row along the bottom of the header */
+#header { flex-wrap: wrap; row-gap: 8px; }
+#status-text[hidden] { display: none; }
+#search-bar {
+  flex: 1 0 100%;
+  display: flex; align-items: center; gap: 8px;
+  padding: 0 12px;
+  background: #fff;
+  border: 1.5px solid rgba(0,0,0,0.1); border-radius: 12px;
   color: var(--primary);
+  cursor: text;
 }
-#search-btn:hover { background: rgba(108,52,131,0.1); }
-#search-btn + #profile-btn { margin-left: 0; }
+#search-bar:focus-within { border-color: var(--primary); }
+#search-bar svg { flex-shrink: 0; }
 
 /* ── Place search, under the header ── */
 #search-panel {
   position: fixed;
-  top: calc(60px + env(safe-area-inset-top, 0px));
+  top: calc(var(--header-h, 104px) + 6px);
   left: 12px; right: 12px;
   max-width: 460px;
   margin: 0 auto;
@@ -174,21 +179,18 @@ html, body {
   border-radius: 14px;
   box-shadow: 0 6px 28px rgba(0,0,0,0.18);
   padding: 10px;
-  max-height: calc(100vh - 140px - env(safe-area-inset-top, 0px) - var(--nav-h));
+  max-height: calc(100vh - var(--header-h, 104px) - 30px - var(--nav-h) - env(safe-area-inset-bottom, 0px));
   overflow-y: auto;
 }
 #search-panel[hidden] { display: none; }
-.search-row { display: flex; gap: 8px; align-items: center; }
 #search-input {
   flex: 1; min-width: 0;
-  padding: 10px 12px;
-  border: 1.5px solid rgba(0,0,0,0.12); border-radius: 10px;
+  padding: 9px 0;
+  border: none; outline: none; background: none;
   font-family: inherit; font-size: 1rem; /* 16px stops iPhone zooming in */
-  background: #fff; outline: none;
+  color: var(--text);
 }
-#search-input:focus { border-color: var(--primary); }
-#search-close { background: none; border: none; font-size: 1rem; color: var(--text-muted); cursor: pointer; padding: 6px; }
-#search-results:not(:empty) { margin-top: 6px; }
+#search-input::placeholder { color: var(--text-muted); text-overflow: ellipsis; }
 .search-result {
   display: flex; align-items: center; gap: 10px; width: 100%;
   padding: 9px 6px; background: none; border: none; border-bottom: 1px solid rgba(0,0,0,0.06);
@@ -966,7 +968,7 @@ body.adding-place #sheet, body.adding-place #sheet-toggle { visibility: hidden; 
 /* ── Filter Sidebar ── */
 #filter-sidebar {
   position: fixed;
-  top: calc(52px + env(safe-area-inset-top, 0px));
+  top: var(--header-h, 104px);
   right: 0;
   bottom: calc(var(--nav-h) + env(safe-area-inset-bottom, 0px));
   width: 130px;
@@ -1603,7 +1605,7 @@ body.adding-place #sheet, body.adding-place #sheet-toggle { visibility: hidden; 
 /* "SCRAN has been updated", shown when a resumed app is running old code (UpdateCheck) */
 #update-banner {
   position: fixed;
-  top: calc(64px + env(safe-area-inset-top, 0px));
+  top: calc(var(--header-h, 104px) + 10px);
   left: 50%; transform: translateX(-50%);
   z-index: 1600;
   max-width: calc(100% - 32px);

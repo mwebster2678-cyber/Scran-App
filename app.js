@@ -1924,23 +1924,34 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
   // ─────────────────────────────────────────
   const KIND_LABELS = { eat: 'Restaurant', pub: 'Pub or bar', cafe: 'Café' };
 
+  // The header's height (it grows with the search bar and the iPhone notch) as --header-h, for
+  // the things that sit just under it: search results, the filter sidebar, the update banner
+  (() => {
+    const header = document.getElementById('header');
+    const set = () => document.documentElement.style.setProperty('--header-h', header.offsetHeight + 'px');
+    set();
+    if (window.ResizeObserver) new ResizeObserver(set).observe(header);
+    else window.addEventListener('resize', set);
+  })();
+
   const PlaceSearch = (() => {
-    const btn     = document.getElementById('search-btn');
     const panel   = document.getElementById('search-panel');
     const input   = document.getElementById('search-input');
     const results = document.getElementById('search-results');
     let _map = null;
     let _timer = null;
 
+    // The results show under the header's search bar while you're typing in it
     function open() {
-      panel.hidden = false;
-      input.focus();
+      panel.hidden = !input.value.trim();
       Places.load().catch(() => {});
     }
-    function close() { panel.hidden = true; }
+    function close() { panel.hidden = true; input.blur(); }
+    function _done() { input.value = ''; results.innerHTML = ''; close(); }
 
     async function _show() {
       const text = input.value.trim();
+      panel.hidden = !text;
       if (!text) { results.innerHTML = ''; return; }
       try { await Places.load(); } catch { results.innerHTML = '<div class="search-empty">Couldn’t load places. Check your connection.</div>'; return; }
       const found = Places.search(text, _map.getCenter());
@@ -1958,16 +1969,15 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
     function init(map) {
       _map = map;
-      btn.addEventListener('click', () => panel.hidden ? open() : close());
-      document.getElementById('search-close').addEventListener('click', close);
+      input.addEventListener('focus', open);
       input.addEventListener('input', () => { clearTimeout(_timer); _timer = setTimeout(_show, 150); });
       input.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
       results.addEventListener('click', e => {
-        if (e.target.closest('#search-add')) { close(); AddPlace.start(input.value.trim()); return; }
+        if (e.target.closest('#search-add')) { const name = input.value.trim(); _done(); AddPlace.start(name); return; }
         const id = e.target.closest('[data-id]')?.dataset.id;
         const place = id && Places.get(id);
         if (!place) return;
-        close();
+        _done();
         // Put the place in the middle of the map left visible between the header and the place
         // card (at most 60% of the screen, see #rating-panel), not behind the card
         const zoom = Math.max(_map.getZoom(), 18);
@@ -2227,7 +2237,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         .filter(p => !_hasCreatorPin(p.id));
       if (!zoomedIn) places = places.filter(p => Storage.get(PLACE_TYPE, p.id) || BookmarkStorage.get(PLACE_TYPE, p.id));
       MarkerManager.show(places);
-      UI.setLoading(false, zoomedIn ? `${places.length.toLocaleString()} places in view` : 'Zoom in to see all places');
+      UI.setLoading(false);
       _openPendingShare();
     }
 
