@@ -1179,14 +1179,14 @@ body.adding-place #sheet, body.adding-place #sheet-toggle { visibility: hidden; 
 }
 
 #bottom-nav button:hover { color: var(--text); }
-/* The selected tab is inverted: a solid pill in the primary colour with white text */
+/* The selected tab sits on a pale pill of the primary colour, with its text and icon in that colour */
 #bottom-nav button {
   margin: 6px 8px;
   border-radius: 14px;
   transition: background 0.2s, color 0.2s;
 }
-#bottom-nav button.active { background: var(--primary); color: #fff; font-weight: 700; }
-#bottom-nav button.active:hover { color: #fff; }
+#bottom-nav button.active { background: rgba(108, 52, 131, 0.13); color: var(--primary); font-weight: 700; }
+#bottom-nav button.active:hover { color: var(--primary); }
 
 /* ── Half-screen sheet above the nav: creators in Explore, who you follow in Following ── */
 #sheet {
