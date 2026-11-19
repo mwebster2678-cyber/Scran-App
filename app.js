@@ -2657,7 +2657,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       _changes = await PeopleLayer.checkNew();
       if (!_changes.length || !updateBanner.hidden) return; // a refresh would load them anyway
       const first = _changes[0];
-      const names = [...new Set(_changes.map(c => c.person.name.split(' ')[0]))];
+      const names = [...new Set(_changes.map(c => (c.person.name || 'Someone').split(' ')[0]))];
       banner.innerHTML = _changes.length === 1
         ? `${escapeHtml(names[0])} rated ${escapeHtml(first.name)}. <b>Tap to see</b>`
         : `${_changes.length} new ratings from ${names.length === 1 ? escapeHtml(names[0]) : 'friends'}. <b>Tap to see</b>`;
