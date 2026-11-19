@@ -152,20 +152,19 @@ html, body {
 
 #profile-btn:hover { background: rgba(108,52,131,0.1); }
 
-/* The search bar: its own row along the bottom of the header */
-#header { flex-wrap: wrap; row-gap: 8px; }
+/* The search bar: fills the header between the logo (and sign-in) and the profile button */
 #status-text[hidden] { display: none; }
 #search-bar {
-  flex: 1 0 100%;
-  display: flex; align-items: center; gap: 8px;
-  padding: 0 12px;
+  flex: 1 1 auto; min-width: 0;
+  display: flex; align-items: center; gap: 6px;
+  padding: 0 10px;
   background: #fff;
   border: 1.5px solid rgba(0,0,0,0.1); border-radius: 12px;
   color: var(--primary);
   cursor: text;
 }
 #search-bar:focus-within { border-color: var(--primary); }
-#search-bar svg { flex-shrink: 0; }
+#search-bar svg { flex-shrink: 0; width: 16px; height: 16px; }
 
 /* ── Place search, under the header ── */
 #search-panel {
@@ -185,7 +184,7 @@ html, body {
 #search-panel[hidden] { display: none; }
 #search-input {
   flex: 1; min-width: 0;
-  padding: 9px 0;
+  padding: 6px 0;
   border: none; outline: none; background: none;
   font-family: inherit; font-size: 1rem; /* 16px stops iPhone zooming in */
   color: var(--text);

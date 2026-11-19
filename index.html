@@ -36,19 +36,19 @@
     <span id="status-dot"></span>
     <span id="status-msg"></span>
   </div>
+  <!-- Search places by name, or add one SCRAN doesn't have (PlaceSearch / AddPlace in app.js) -->
+  <label id="search-bar">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/>
+    </svg>
+    <input id="search-input" type="search" placeholder="Find or add a place" aria-label="Find or add places" autocomplete="off" enterkeyhint="search">
+  </label>
   <button id="profile-btn" aria-label="My profile">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <circle cx="12" cy="8" r="4"/>
       <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
     </svg>
   </button>
-  <!-- Search places by name, or add one SCRAN doesn't have (PlaceSearch / AddPlace in app.js) -->
-  <label id="search-bar">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/>
-    </svg>
-    <input id="search-input" type="search" placeholder="Find or add your favourite places to the map" aria-label="Find or add places" autocomplete="off" enterkeyhint="search">
-  </label>
 </header>
 
 <!-- Search results, under the header's search bar -->
