@@ -1179,7 +1179,14 @@ body.adding-place #sheet, body.adding-place #sheet-toggle { visibility: hidden; 
 }
 
 #bottom-nav button:hover { color: var(--text); }
-#bottom-nav button.active { color: var(--primary); }
+/* The selected tab is inverted: a solid pill in the primary colour with white text */
+#bottom-nav button {
+  margin: 6px 8px;
+  border-radius: 14px;
+  transition: background 0.2s, color 0.2s;
+}
+#bottom-nav button.active { background: var(--primary); color: #fff; font-weight: 700; }
+#bottom-nav button.active:hover { color: #fff; }
 
 /* ── Half-screen sheet above the nav: creators in Explore, who you follow in Following ── */
 #sheet {
