@@ -1424,6 +1424,9 @@ button.profile-restaurant-row:last-child { border-bottom: none; }
 
 .profile-who { display: flex; align-items: center; gap: 12px; min-width: 0; flex: 1; }
 .profile-avatar { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; display: block; }
+/* a letter instead of a photo: keep it centred (display: block above would undo .person-initial) */
+.header-avatar.person-initial, .profile-avatar.person-initial { display: flex; }
+.profile-avatar.person-initial { font-size: 1.3rem; }
 .profile-follow-counts { font-size: 0.75rem; color: var(--text-muted); margin-top: 3px; }
 .profile-follow-counts:empty { display: none; }
 #profile-follow-btn { margin-right: 10px; }
