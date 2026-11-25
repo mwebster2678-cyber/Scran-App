@@ -440,6 +440,15 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
   // bookmarked places get a full pin.
   const KIND_COLOURS = { eat: '#8E44AD', pub: '#A0522D', cafe: '#E67E22' }; // restaurants, pubs, cafés
 
+  // Want-to-visit pin: gold with a white star
+  function wantPinIcon() {
+    return L.divIcon({
+      className: '',
+      html: '<div class="map-pin pin-bookmarked pin-rated"><span class="pin-rating" style="font-size:13px">★</span></div>',
+      iconSize: [34, 44], iconAnchor: [17, 44], popupAnchor: [0, -46],
+    });
+  }
+
   const MarkerManager = (() => {
     const markers = new Map(); // place id → marker
     let _map      = null;
@@ -459,13 +468,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     function _pinIcon(id, name, kind) {
       const stored = Storage.get(PLACE_TYPE, id);
       if (stored) return myPinIcon(stored.rating, name, kind);
-      if (BookmarkStorage.get(PLACE_TYPE, id)) {
-        return L.divIcon({
-          className: '',
-          html: '<div class="map-pin pin-bookmarked"></div>',
-          iconSize: [28, 36], iconAnchor: [14, 36], popupAnchor: [0, -38],
-        });
-      }
+      if (BookmarkStorage.get(PLACE_TYPE, id)) return wantPinIcon();
       return null;
     }
 
@@ -795,6 +798,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     function _updateStatusBtns(type, id) {
       const isBookmarked = BookmarkStorage.get(type, id);
       bookmarkBtn.classList.toggle('bookmarked', isBookmarked);
+      bookmarkBtn.querySelector('.bookmark-star').textContent = isBookmarked ? '★' : '☆';
     }
 
     let _hideTimer = null;
@@ -913,11 +917,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
     function _buildIcon(rating, name, kind) {
       if (rating != null) return myPinIcon(rating, name, kind);
-      return L.divIcon({
-        className: '',
-        html: `<div class="map-pin pin-bookmarked pin-rated"><span class="pin-rating" style="font-size:13px">★</span></div>`,
-        iconSize: [34, 44], iconAnchor: [17, 44], popupAnchor: [0, -46],
-      });
+      return wantPinIcon();
     }
 
     function _addPins(cuisine) {
@@ -2702,6 +2702,8 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     const emailEl       = document.getElementById('profile-email');
     const signoutBtn    = document.getElementById('profile-signout-btn');
     const deleteBtn     = document.getElementById('profile-delete-btn');
+    const wantsEl       = document.getElementById('profile-wants');
+    const wantsListEl   = document.getElementById('profile-wants-list');
 
     let _person = null; // the profile on show when it isn't yours
 
@@ -2774,6 +2776,34 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       followBtn.classList.toggle('follow', !followed);
     }
 
+    // Your want-to-visit places, newest first (bookmarks are private, so only on your own profile)
+    let _wants = [];
+    function _buildWants(show) {
+      _wants = show ? Object.entries(BookmarkStorage.getAll())
+        .filter(([k]) => !Storage.get(...splitKey(k))) // rated since: it's on the ratings list
+        .sort((a, b) => (b[1].timestamp || 0) - (a[1].timestamp || 0)) : [];
+      wantsEl.hidden = !_wants.length;
+      wantsListEl.innerHTML = _wants.map(([, b], i) => `
+        <button class="profile-restaurant-row" data-want="${i}">
+          <span class="profile-want-star">★</span>
+          <span class="profile-restaurant-name">${escapeHtml(b.name || 'Unknown')}</span>
+          <span class="profile-want-go">›</span>
+        </button>`).join('');
+    }
+
+    // Tap one: close the profile, fly there and open its card
+    wantsListEl.addEventListener('click', (e) => {
+      const row = e.target.closest('[data-want]');
+      if (!row) return;
+      const [key, b] = _wants[row.dataset.want];
+      const [type, id] = splitKey(key);
+      const place = type === PLACE_TYPE ? Places.get(id) : null;
+      const ref = place ? placeRef(place) : { type, id, name: b.name, cuisine: b.cuisine || [], lat: b.lat, lon: b.lon };
+      close();
+      if (ref.lat && ref.lon) flyAboveCard(App.map(), ref.lat, ref.lon);
+      RatingPanel.open(ref);
+    });
+
     // No id, or your own: your ratings from this browser
     async function open(id = null) {
       if (!requireSignIn('Sign in to see profiles and keep your own ratings.')) return;
@@ -2789,12 +2819,14 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         userEl.style.display = user ? 'flex' : 'none';
         deleteBtn.hidden = !user;
         _build(Object.values(Storage.getAll()).filter(e => e.rating != null));
+        _buildWants(true);
       } else {
         titleEl.textContent = '';
         avatarEl.innerHTML = '';
         userEl.style.display = 'none';
         deleteBtn.hidden = true;
         _build([]);
+        _buildWants(false);
       }
       _showFollow();
       panel.classList.add('open');

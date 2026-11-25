@@ -9,6 +9,8 @@
   --text-muted: #666;
   --yellow: #F39C12;
   --green: #27AE60;
+  --gold: #D4A017;       /* want-to-visit */
+  --gold-dark: #9A7410;  /* gold text on light backgrounds */
   --panel-radius: 20px;
   --nav-h: 56px; /* bottom nav, not counting the phone's home-bar inset */
 }
@@ -407,6 +409,15 @@ body.adding-place #sheet, body.adding-place #sheet-toggle { visibility: hidden; 
 
 .profile-restaurant-row:last-child { border-bottom: none; }
 
+/* Want-to-visit rows open the place */
+button.profile-restaurant-row {
+  width: 100%; background: none; border: none; border-bottom: 1px solid rgba(0,0,0,0.06);
+  font: inherit; text-align: left; cursor: pointer;
+}
+button.profile-restaurant-row:last-child { border-bottom: none; }
+.profile-want-star { color: var(--gold); font-size: 1rem; flex-shrink: 0; margin-right: 8px; }
+.profile-want-go { color: var(--text-muted); flex-shrink: 0; }
+
 .profile-restaurant-name {
   font-size: 0.85rem;
   color: var(--text);
@@ -689,13 +700,17 @@ body.adding-place #sheet, body.adding-place #sheet-toggle { visibility: hidden; 
   font-family: inherit;
 }
 
+#bookmark-btn .bookmark-star { font-size: 1rem; line-height: 1; }
+
 #bookmark-btn.bookmarked {
-  background: rgba(41, 128, 185, 0.1);
-  border-color: #2980B9;
-  color: #2980B9;
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #fff;
 }
 
-#bookmark-btn:hover { border-color: #2980B9; color: #2980B9; }
+@media (hover: hover) {
+  #bookmark-btn:not(.bookmarked):hover { border-color: var(--gold); color: var(--gold-dark); }
+}
 
 #panel-note {
   width: 100%;
@@ -794,8 +809,8 @@ body.adding-place #sheet, body.adding-place #sheet-toggle { visibility: hidden; 
   letter-spacing: -0.5px;
 }
 
-.pin-bookmarked::before { background: #2980B9; }
-.pin-bookmarked::after  { background: #2980B9; }
+.pin-bookmarked::before { background: var(--gold); }
+.pin-bookmarked::after  { background: var(--gold); }
 .pin-creator::before    { background: var(--creator-colour); }
 .pin-creator::after     { background: var(--creator-colour); }
 .pin-avatar {
