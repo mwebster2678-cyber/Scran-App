@@ -567,13 +567,14 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
   // (restaurant, pub, café), with your score in a corner badge coloured by how high it is
   const scoreBadgeClass = rating => rating >= 8 ? 'score-high' : rating >= 4 ? 'score-mid' : 'score-low';
 
-  function myPinIcon(rating, name, kind) {
+  // split: a friend rated this place too, so your pin leans left and theirs right, from the same point
+  function myPinIcon(rating, name, kind, split = false) {
     const cls = scoreBadgeClass(rating);
     const meta = Auth.currentUser()?.user_metadata || {};
     const photo = personAvatar({ name: meta.full_name || meta.name || 'Me', avatar_url: meta.avatar_url || meta.picture }, 'pin-avatar');
     return L.divIcon({
       className: '',
-      html: `<div class="map-pin pin-mine" style="--kind-colour:${KIND_COLOURS[kind] || KIND_COLOURS.eat}">${photo}<span class="pin-score-badge ${cls}">${rating}</span>${pinName(name)}</div>`,
+      html: `<div class="map-pin pin-mine${split ? ' pin-split-left' : ''}" style="--kind-colour:${KIND_COLOURS[kind] || KIND_COLOURS.eat}">${photo}<span class="pin-score-badge ${cls}">${rating}</span>${pinName(name)}</div>`,
       iconSize: [40, 52], iconAnchor: [20, 52], popupAnchor: [0, -54],
     });
   }
@@ -954,8 +955,8 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       return _group;
     }
 
-    function _buildIcon(rating, name, kind) {
-      if (rating != null) return myPinIcon(rating, name, kind);
+    function _buildIcon(rating, name, kind, split) {
+      if (rating != null) return myPinIcon(rating, name, kind, split);
       return wantPinIcon();
     }
 
@@ -968,7 +969,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         if (cuisineLc && !(data.cuisine || []).some(c => c.toLowerCase() === cuisineLc)) return;
         const [type, id] = key.split('/');
         const place = type === PLACE_TYPE ? Places.get(id) : null; // its current name and pin
-        const marker = L.marker([place?.lat ?? data.lat, place?.lon ?? data.lon], { icon: _buildIcon(data.rating, place?.name ?? data.name, place?.kind), zIndexOffset: 510, wanted: isWanted(type, id) });
+        const marker = L.marker([place?.lat ?? data.lat, place?.lon ?? data.lon], { icon: _buildIcon(data.rating, place?.name ?? data.name, place?.kind, PeopleLayer.covers(type, id)), zIndexOffset: 510, wanted: isWanted(type, id) });
         marker.on('click', (e) => {
           L.DomEvent.stopPropagation(e);
           RatingPanel.open(place ? placeRef(place) : { type, id, name: data.name, cuisine: data.cuisine || [], lat: data.lat, lon: data.lon });
@@ -992,7 +993,15 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         _entries.push({ marker, key });
       });
       _groupLayer().addLayers(_entries.map(e => e.marker));
+
+      // Places you and a friend both rated: their pin leans the other way, so redraw theirs if that set
+      // changed (their redraw refreshes this once more, with the same set, so it stops there)
+      const shared = Object.keys(Storage.getAll()).filter(k => PeopleLayer.covers(...splitKey(k))).sort().join(',');
+      if (shared !== _shared) { _shared = shared; PeopleLayer.filter(); }
     }
+    let _shared = '';
+    // Your rated pin is on the map for this place (a friend's pin there leans right)
+    function showsRating(type, id) { return _active && !!Storage.get(type, id); }
 
     function _removePins() {
       if (_group) _group.clearLayers();
@@ -1016,11 +1025,12 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       _active = active;
       _active ? _addPins(FilterBar.getCuisine()) : _removePins();
       MarkerManager.refreshAll(); // saved places' stars move between here and the dots layer
+      if (!_active) { _shared = ''; PeopleLayer.filter(); } // friends' pins stop leaning
     }
 
     function init(map) { _map = map; }
 
-    return { init, refresh, filter, setActive, isActive: () => _active };
+    return { init, refresh, filter, setActive, isActive: () => _active, showsRating };
   })();
 
   // 9. FILTER BAR
@@ -1688,9 +1698,10 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       // Like your own pins (kind colour, coloured score, name when zoomed in), but creator-sized
       // and without the white ring, so yours still stand out
       const colour = KIND_COLOURS[Places.get(first.id)?.kind] || KIND_COLOURS.eat;
+      const split = MyListManager.showsRating(first.type, first.id) ? ' pin-split-right' : '';
       return L.divIcon({
         className: '',
-        html: `<div class="map-pin pin-creator pin-rated" style="--creator-colour:${colour}">${personAvatar(first.person, 'pin-avatar')}<span class="pin-score-badge ${scoreBadgeClass(first.rating)}">${first.rating}</span>${wantBadge(first.type, first.id)}${more}${pinName(first.name)}</div>`,
+        html: `<div class="map-pin pin-creator pin-rated${split}" style="--creator-colour:${colour}">${personAvatar(first.person, 'pin-avatar')}<span class="pin-score-badge ${scoreBadgeClass(first.rating)}">${first.rating}</span>${wantBadge(first.type, first.id)}${more}${pinName(first.name)}</div>`,
         iconSize: [34, 44], iconAnchor: [17, 44], popupAnchor: [0, -46],
       });
     }

@@ -875,6 +875,18 @@ button.profile-restaurant-row:last-child { border-bottom: none; }
 }
 .show-names .pin-name { display: block; }
 
+/* You and a friend rated the same place: both pins lean out from the one point */
+.map-pin.pin-split-left, .map-pin.pin-split-right { transform-origin: 50% 100%; }
+.map-pin.pin-split-left  { transform: rotate(-35deg); }
+.map-pin.pin-split-right { transform: rotate(35deg); }
+.pin-split-left .pin-name { transform: translateX(-50%) rotate(35deg); transform-origin: 50% 0; }
+.pin-split-right .pin-name { display: none !important; } /* one name for the pair, under yours */
+/* photos and badges stay upright */
+.pin-split-left .pin-avatar  { transform: translateX(-50%) rotate(35deg); }
+.pin-split-right .pin-avatar { transform: translateX(-50%) rotate(-35deg); }
+.pin-split-left :is(.pin-score-badge, .pin-want-badge, .pin-people-count)  { transform: rotate(35deg); }
+.pin-split-right :is(.pin-score-badge, .pin-want-badge, .pin-people-count) { transform: rotate(-35deg); }
+
 /* Names under the plain place dots (CONFIG.minZoomForDotNames): quieter than the pins' */
 .leaflet-tooltip.dot-name {
   padding: 0 4px;
