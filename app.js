@@ -474,10 +474,10 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       _renderer = L.canvas({ padding: 0.5 });
     }
 
-    // Want-to-visit places get a pin. Your rated places don't: they're on the map only under
-    // My reviews and following (MyListManager), so Explore shows just the creators.
+    // Your rated and want-to-visit pins are MyListManager's (grouped into bubbles), so this
+    // draws only the plain dots; with your places switched off, saved ones still get a star.
     function _pinIcon(id) {
-      return BookmarkStorage.get(PLACE_TYPE, id) ? wantPinIcon() : null;
+      return !MyListManager.isActive() && BookmarkStorage.get(PLACE_TYPE, id) ? wantPinIcon() : null;
     }
 
     function _createMarker(place) {
@@ -919,10 +919,40 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
   // ─────────────────────────────────────────
   // 8. MY RESTAURANTS MANAGER
   // ─────────────────────────────────────────
+  // Your pins (ratings and want-to-visit), in both views: Explore always, My reviews and following
+  // when "your places" is switched on. Nearby ones merge into a bubble with your photo until street level.
   const MyListManager = (() => {
     let _map     = null;
     let _active  = false;
     let _entries = []; // [{ marker, key }]
+    let _group   = null;
+
+    function _clusterIcon(cluster) {
+      const children = cluster.getAllChildMarkers();
+      const count = children.length;
+      const size = count < 10 ? 38 : count < 50 ? 44 : 50;
+      const meta = Auth.currentUser()?.user_metadata || {};
+      const photo = personAvatar({ name: meta.full_name || meta.name || 'Me', avatar_url: meta.avatar_url || meta.picture }, 'mine-cluster-photo');
+      const want = children.some(m => m.options.wanted) ? WANT_BADGE : '';
+      return L.divIcon({
+        className: '',
+        html: `<div class="mine-cluster" style="width:${size}px;height:${size}px">${photo}<span class="mine-cluster-count">${count}</span>${want}</div>`,
+        iconSize: [size, size],
+      });
+    }
+
+    function _groupLayer() {
+      if (!_group) {
+        _group = L.markerClusterGroup({
+          maxClusterRadius: 45,
+          disableClusteringAtZoom: CONFIG.minZoomForAllPlaces,
+          showCoverageOnHover: false,
+          iconCreateFunction: _clusterIcon,
+        });
+      }
+      if (!_map.hasLayer(_group)) _group.addTo(_map);
+      return _group;
+    }
 
     function _buildIcon(rating, name, kind) {
       if (rating != null) return myPinIcon(rating, name, kind);
@@ -938,12 +968,11 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         if (cuisineLc && !(data.cuisine || []).some(c => c.toLowerCase() === cuisineLc)) return;
         const [type, id] = key.split('/');
         const place = type === PLACE_TYPE ? Places.get(id) : null; // its current name and pin
-        const marker = L.marker([place?.lat ?? data.lat, place?.lon ?? data.lon], { icon: _buildIcon(data.rating, place?.name ?? data.name, place?.kind), zIndexOffset: 510 });
+        const marker = L.marker([place?.lat ?? data.lat, place?.lon ?? data.lon], { icon: _buildIcon(data.rating, place?.name ?? data.name, place?.kind), zIndexOffset: 510, wanted: isWanted(type, id) });
         marker.on('click', (e) => {
           L.DomEvent.stopPropagation(e);
           RatingPanel.open(place ? placeRef(place) : { type, id, name: data.name, cuisine: data.cuisine || [], lat: data.lat, lon: data.lon });
         });
-        marker.addTo(_map);
         _entries.push({ marker, key });
       });
 
@@ -955,18 +984,18 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         if (cuisineLc && !(data.cuisine || []).some(c => c.toLowerCase() === cuisineLc)) return;
         const [type, id] = key.split('/');
         const place = type === PLACE_TYPE ? Places.get(id) : null;
-        const marker = L.marker([place?.lat ?? data.lat, place?.lon ?? data.lon], { icon: _buildIcon(null), zIndexOffset: 505 });
+        const marker = L.marker([place?.lat ?? data.lat, place?.lon ?? data.lon], { icon: _buildIcon(null), zIndexOffset: 505, wanted: true });
         marker.on('click', (e) => {
           L.DomEvent.stopPropagation(e);
           RatingPanel.open(place ? placeRef(place) : { type, id, name: data.name, cuisine: data.cuisine || [], lat: data.lat, lon: data.lon });
         });
-        marker.addTo(_map);
         _entries.push({ marker, key });
       });
+      _groupLayer().addLayers(_entries.map(e => e.marker));
     }
 
     function _removePins() {
-      _entries.forEach(e => e.marker.remove());
+      if (_group) _group.clearLayers();
       _entries = [];
     }
 
@@ -986,6 +1015,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       if (active === _active) return;
       _active = active;
       _active ? _addPins(FilterBar.getCuisine()) : _removePins();
+      MarkerManager.refreshAll(); // saved places' stars move between here and the dots layer
     }
 
     function init(map) { _map = map; }
@@ -1843,7 +1873,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         const on = following ? FOLLOWING.creators.includes(layer.key) : _exploreOn.has(layer.key);
         if (on !== layer.isActive()) layer.setActive(on);
       });
-      MyListManager.setActive(following && FOLLOWING.me);
+      MyListManager.setActive(!following || FOLLOWING.me);
       PeopleLayer.setActive(following);
       emptyEl.hidden = !(following && !sheet.classList.contains('open') && _followingIsEmpty());
       _render();
@@ -2319,7 +2349,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       let places = Places.query(_map.getBounds(), { kind: FilterBar.getKind(), cuisine: FilterBar.getCuisine() })
         .filter(p => !_hasCreatorPin(p.id))
         .filter(p => !PeopleLayer.covers(PLACE_TYPE, p.id)) // under a friend's pin: no dot, the star goes on their pin
-        .filter(p => !(MyListManager.isActive() && Storage.get(PLACE_TYPE, p.id))); // no dot under your own pin
+        .filter(p => !(MyListManager.isActive() && (Storage.get(PLACE_TYPE, p.id) || BookmarkStorage.get(PLACE_TYPE, p.id)))); // no dot under your own pin
       if (!zoomedIn) places = places.filter(p => BookmarkStorage.get(PLACE_TYPE, p.id));
       MarkerManager.show(places);
       UI.setLoading(false);
