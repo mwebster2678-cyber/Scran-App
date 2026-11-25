@@ -1599,14 +1599,18 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       return (data || []).filter(p => p.id !== me && (text || !isFollowing(p.id)));
     }
 
+    // Their saved places come back only if you follow them (supabase/bookmarks-followers.sql)
     async function profile(id) {
-      const [{ data: person }, { data: ratings }, followers, following] = await Promise.all([
+      const [{ data: person }, { data: ratings }, followers, following, { data: wants }] = await Promise.all([
         sbClient.from('profiles').select(PROFILE).eq('id', id).maybeSingle(),
         sbClient.from('ratings').select('osm_type, osm_id, restaurant_name, lat, lon, cuisine, rating, note').eq('user_id', id),
         sbClient.from('follows').select('*', { count: 'exact', head: true }).eq('followee_id', id),
         sbClient.from('follows').select('*', { count: 'exact', head: true }).eq('follower_id', id).not('followee_id', 'is', null),
+        sbClient.from('bookmarks').select('place_type, place_id, name, lat, lon, cuisine, created_at').eq('user_id', id)
+          .order('created_at', { ascending: false }),
       ]);
-      return { person, ratings: ratings || [], followers: followers.count || 0, following: following.count || 0 };
+      return { person, ratings: ratings || [], followers: followers.count || 0, following: following.count || 0,
+        wants: (wants || []).map(b => ({ type: b.place_type, id: b.place_id, name: b.name, lat: b.lat, lon: b.lon, cuisine: b.cuisine || [] })) };
     }
 
     // "Suggest a creator" in Explore: read on the pipeline review page (Suggestions tab)
@@ -2861,14 +2865,13 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       followBtn.classList.toggle('follow', !followed);
     }
 
-    // Your want-to-visit places, newest first (bookmarks are private, so only on your own profile)
+    // Want-to-visit places, newest first: yours, or a friend's if you follow them
+    // (supabase/bookmarks-followers.sql). [{ type, id, name, lat, lon, cuisine }]; note = text shown instead
     let _wants = [];
-    function _buildWants(show) {
-      _wants = show ? Object.entries(BookmarkStorage.getAll())
-        .filter(([k]) => !Storage.get(...splitKey(k))) // rated since: it's on the ratings list
-        .sort((a, b) => (b[1].timestamp || 0) - (a[1].timestamp || 0)) : [];
-      wantsEl.hidden = !_wants.length;
-      wantsListEl.innerHTML = _wants.map(([, b], i) => `
+    function _buildWants(list, note = '') {
+      _wants = list;
+      wantsEl.hidden = !list.length && !note;
+      wantsListEl.innerHTML = note ? `<p class="profile-wants-note">${escapeHtml(note)}</p>` : list.map((b, i) => `
         <button class="profile-restaurant-row" data-want="${i}">
           <span class="profile-want-star">★</span>
           <span class="profile-restaurant-name">${escapeHtml(b.name || 'Unknown')}</span>
@@ -2876,12 +2879,26 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         </button>`).join('');
     }
 
+    function _myWants() {
+      return Object.entries(BookmarkStorage.getAll())
+        .filter(([k]) => !Storage.get(...splitKey(k))) // rated since: it's on the ratings list
+        .sort((a, b) => (b[1].timestamp || 0) - (a[1].timestamp || 0))
+        .map(([k, b]) => { const [type, id] = splitKey(k); return { ...b, type, id }; });
+    }
+
+    // A friend's, leaving out ones they've rated since
+    function _theirWants(p) {
+      if (!Social.isFollowing(p.person.id)) return _buildWants([], `Follow ${p.person.name} to see places they want to visit.`);
+      const rated = new Set(p.ratings.map(r => `${r.osm_type}/${r.osm_id}`));
+      _buildWants(p.wants.filter(w => !rated.has(`${w.type}/${w.id}`)));
+    }
+
     // Tap one: close the profile, fly there and open its card
     wantsListEl.addEventListener('click', (e) => {
       const row = e.target.closest('[data-want]');
       if (!row) return;
-      const [key, b] = _wants[row.dataset.want];
-      const [type, id] = splitKey(key);
+      const b = _wants[row.dataset.want];
+      const { type, id } = b;
       const place = type === PLACE_TYPE ? Places.get(id) : null;
       const ref = place ? placeRef(place) : { type, id, name: b.name, cuisine: b.cuisine || [], lat: b.lat, lon: b.lon };
       close();
@@ -2904,14 +2921,14 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         userEl.style.display = user ? 'flex' : 'none';
         deleteBtn.hidden = !user;
         _build(Object.values(Storage.getAll()).filter(e => e.rating != null));
-        _buildWants(true);
+        _buildWants(_myWants());
       } else {
         titleEl.textContent = '';
         avatarEl.innerHTML = '';
         userEl.style.display = 'none';
         deleteBtn.hidden = true;
         _build([]);
-        _buildWants(false);
+        _buildWants([]);
       }
       _showFollow();
       panel.classList.add('open');
@@ -2924,6 +2941,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       titleEl.textContent = p.person.name;
       avatarEl.innerHTML = personAvatar(p.person, 'profile-avatar');
       _build(p.ratings.map(r => ({ name: r.restaurant_name, rating: r.rating })));
+      _theirWants(p);
       _showFollow();
     }
 
@@ -2934,6 +2952,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       _showFollow();
       const p = await Social.profile(_person.id);
       countsEl.textContent = _counts(p.followers, p.following);
+      _theirWants(p); // following shows their saved places, unfollowing hides them
       await PeopleLayer.load();
       Views.refresh();
     });

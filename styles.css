@@ -417,6 +417,7 @@ button.profile-restaurant-row {
 button.profile-restaurant-row:last-child { border-bottom: none; }
 .profile-want-star { color: var(--gold); font-size: 1rem; flex-shrink: 0; margin-right: 8px; }
 .profile-want-go { color: var(--text-muted); flex-shrink: 0; }
+.profile-wants-note { font-size: 0.8rem; color: var(--text-muted); margin: 0; }
 
 .profile-restaurant-name {
   font-size: 0.85rem;
