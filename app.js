@@ -440,14 +440,21 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
   // bookmarked places get a full pin.
   const KIND_COLOURS = { eat: '#8E44AD', pub: '#A0522D', cafe: '#E67E22' }; // restaurants, pubs, cafés
 
-  // Want-to-visit pin: gold with a white star
+  // Want-to-visit pin: a gold star centred on the place
+  const STAR_PATH = 'M12 1.5l3.1 6.6 7.2.9-5.3 5 1.4 7.1L12 17.6l-6.4 3.5 1.4-7.1-5.3-5 7.2-.9z';
   function wantPinIcon() {
     return L.divIcon({
       className: '',
-      html: '<div class="map-pin pin-bookmarked pin-rated"><span class="pin-rating" style="font-size:13px">★</span></div>',
-      iconSize: [34, 44], iconAnchor: [17, 44], popupAnchor: [0, -46],
+      html: `<svg class="want-pin" viewBox="0 0 24 24" aria-label="Want to visit"><path d="${STAR_PATH}"/></svg>`,
+      iconSize: [36, 36], iconAnchor: [18, 18], popupAnchor: [0, -18],
     });
   }
+
+  // On someone else's pin (creator or friend) for a place you want to visit: a gold star top left
+  // (bubbles too, when any pin in them is one)
+  const isWanted = (type, id) => BookmarkStorage.get(type, id);
+  const WANT_BADGE = `<svg class="pin-want-badge" viewBox="0 0 24 24"><path d="${STAR_PATH}"/></svg>`;
+  const wantBadge = (type, id) => isWanted(type, id) ? WANT_BADGE : '';
 
   const MarkerManager = (() => {
     const markers = new Map(); // place id → marker
@@ -878,6 +885,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       _updateStatusBtns(type, id);
       MarkerManager.refreshMarkerIcon(type, id);
       MyListManager.refresh();
+      App.wantChanged(type, id);
     });
 
     editBtn.addEventListener('click', () => {
@@ -942,6 +950,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       Object.entries(BookmarkStorage.getAll()).forEach(([key, data]) => {
         if (ratedKeys.has(key)) return;
         if (!data.lat || !data.lon) return;
+        if (App.covered(...splitKey(key))) return; // a creator's or friend's pin shows the star instead
         if (cuisineLc && !(data.cuisine || []).some(c => c.toLowerCase() === cuisineLc)) return;
         const [type, id] = key.split('/');
         const place = type === PLACE_TYPE ? Places.get(id) : null;
@@ -1131,9 +1140,10 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         const colour = colours.size === 1 ? [...colours][0] : 'var(--primary)';
         const count = children.length;
         const size = count < 10 ? 34 : count < 50 ? 40 : 46;
+        const want = children.some(m => isWanted(PLACE_TYPE, m.options.placeId)) ? WANT_BADGE : '';
         return L.divIcon({
           className: '',
-          html: `<div class="creator-cluster" style="--cluster-colour:${colour};width:${size}px;height:${size}px">${count}</div>`,
+          html: `<div class="creator-cluster" style="--cluster-colour:${colour};width:${size}px;height:${size}px">${count}${want}</div>`,
           iconSize: [size, size],
         });
       },
@@ -1239,7 +1249,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       const badge = rating != null ? `<span class="pin-score-badge">${rating}</span>` : '';
       return L.divIcon({
         className: '',
-        html: `<div class="map-pin pin-creator pin-rated" style="--creator-colour:${creator.colour}"><img class="pin-avatar" src="${creator.avatar}" alt="${creator.name}">${badge}${pinName(restaurant.name)}</div>`,
+        html: `<div class="map-pin pin-creator pin-rated" style="--creator-colour:${creator.colour}"><img class="pin-avatar" src="${creator.avatar}" alt="${creator.name}">${badge}${wantBadge(PLACE_TYPE, restaurant.id)}${pinName(restaurant.name)}</div>`,
         iconSize: [34, 44],
         iconAnchor: [17, 44],
         popupAnchor: [0, -46],
@@ -1254,6 +1264,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
           icon: _icon(restaurant),
           zIndexOffset: creator.zIndexOffset,
           creatorColour: creator.colour, // read by creatorPinGroup's bubbles
+          placeId: restaurant.id,        // so a bubble can show a want-to-visit star
         });
         marker.on('click', (e) => {
           L.DomEvent.stopPropagation(e);
@@ -1306,7 +1317,13 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       _setActive(true);
     }
 
-    return { key: creator.key, init, filter, setActive: _setActive, isActive: () => _active };
+    // After a want-to-visit change: redraw this place's pin (and the bubble it may sit in)
+    function refreshPlace(id) {
+      _entries.forEach(({ marker, restaurant }) => { if (restaurant.id === id) marker.setIcon(_icon(restaurant)); });
+      if (_active) _pins.refreshClusters();
+    }
+
+    return { key: creator.key, init, filter, setActive: _setActive, isActive: () => _active, refreshPlace };
   }
 
   // ─────────────────────────────────────────
@@ -1642,12 +1659,16 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       const colour = KIND_COLOURS[Places.get(first.id)?.kind] || KIND_COLOURS.eat;
       return L.divIcon({
         className: '',
-        html: `<div class="map-pin pin-creator pin-rated" style="--creator-colour:${colour}">${personAvatar(first.person, 'pin-avatar')}<span class="pin-score-badge ${scoreBadgeClass(first.rating)}">${first.rating}</span>${more}${pinName(first.name)}</div>`,
+        html: `<div class="map-pin pin-creator pin-rated" style="--creator-colour:${colour}">${personAvatar(first.person, 'pin-avatar')}<span class="pin-score-badge ${scoreBadgeClass(first.rating)}">${first.rating}</span>${wantBadge(first.type, first.id)}${more}${pinName(first.name)}</div>`,
         iconSize: [34, 44], iconAnchor: [17, 44], popupAnchor: [0, -46],
       });
     }
 
     function _draw() {
+      _drawPins();
+      App.othersChanged(); // want-to-visit stars hide under friends' pins
+    }
+    function _drawPins() {
       if (_group) { _group.remove(); _group = null; }
       if (!_active || !_map) return;
       _group = L.markerClusterGroup({
@@ -1659,7 +1680,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
           const size = count < 10 ? 34 : count < 50 ? 40 : 46;
           return L.divIcon({
             className: '',
-            html: `<div class="creator-cluster people-cluster" style="width:${size}px;height:${size}px">${count}</div>`,
+            html: `<div class="creator-cluster people-cluster" style="width:${size}px;height:${size}px">${count}${cluster.getAllChildMarkers().some(m => m.options.wanted) ? WANT_BADGE : ''}</div>`,
             iconSize: [size, size],
           });
         },
@@ -1670,7 +1691,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         const current = type === PLACE_TYPE ? Places.get(id) : null; // its current pin
         // Same cuisine filter as your own pins, using the saved cuisine or the place's current one
         if (cuisineLc && ![...cuisine, ...(current?.cuisine || [])].some(c => String(c).toLowerCase() === cuisineLc)) return;
-        const marker = L.marker([current?.lat ?? entries[0].lat, current?.lon ?? entries[0].lon], { icon: _icon(entries), zIndexOffset: 515 });
+        const marker = L.marker([current?.lat ?? entries[0].lat, current?.lon ?? entries[0].lon], { icon: _icon(entries), zIndexOffset: 515, wanted: isWanted(type, id) });
         marker.on('click', (e) => {
           L.DomEvent.stopPropagation(e);
           const place = type === PLACE_TYPE ? Places.get(id) : null;
@@ -1683,9 +1704,11 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
     function setActive(active) { _active = active; _draw(); }
     function forPlace(type, id) { return _byPlace.get(`${type}/${id}`) || []; }
+    // A friend's pin is on the map for this place
+    function covers(type, id) { return _active && _byPlace.has(`${type}/${id}`); }
     function init(map) { _map = map; }
 
-    return { init, load, checkNew, apply, setActive, forPlace, filter: _draw };
+    return { init, load, checkNew, apply, setActive, forPlace, covers, filter: _draw };
   })();
 
   // What the people you follow said, on the place card
@@ -2262,6 +2285,24 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         creatorLayers.find(layer => layer.key === creator.key).isActive());
     }
 
+    // Someone else's pin (an active creator's, or a friend's) is on the map for this place
+    function covered(type, id) {
+      return (type === PLACE_TYPE && _hasCreatorPin(id)) || PeopleLayer.covers(type, id);
+    }
+
+    // Creator or friend pins came or went: redraw your own pins and the dots under them
+    function othersChanged() {
+      if (!_map) return;
+      _showPlacesInView();
+      MyListManager.refresh();
+    }
+
+    // You added or removed a want-to-visit place: the star moves between its own pin and others' pins
+    function wantChanged(type, id) {
+      if (type === PLACE_TYPE) creatorLayers.forEach(layer => layer.refreshPlace(id));
+      PeopleLayer.filter(); // redraws friends' pins, then othersChanged()
+    }
+
     async function _showPlacesInView() {
       try {
         UI.setLoading(true);
@@ -2275,7 +2316,9 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       // Zoomed out, the 50k places would bury the creator picks: show only ones you've rated or saved
       const zoomedIn = _map.getZoom() >= CONFIG.minZoomForAllPlaces;
       let places = Places.query(_map.getBounds(), { kind: FilterBar.getKind(), cuisine: FilterBar.getCuisine() })
-        .filter(p => !_hasCreatorPin(p.id));
+        .filter(p => !_hasCreatorPin(p.id))
+        // under a friend's pin: no dot, and the star goes on their pin, but your own score pin stays
+        .filter(p => !PeopleLayer.covers(PLACE_TYPE, p.id) || Storage.get(PLACE_TYPE, p.id));
       if (!zoomedIn) places = places.filter(p => Storage.get(PLACE_TYPE, p.id) || BookmarkStorage.get(PLACE_TYPE, p.id));
       MarkerManager.show(places);
       UI.setLoading(false);
@@ -2349,7 +2392,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
       MarkerManager.init(_map);
       const creatorPins = creatorPinGroup().addTo(_map);
-      creatorLayers.forEach(layer => layer.init(creatorPins, _showPlacesInView));
+      creatorLayers.forEach(layer => layer.init(creatorPins, othersChanged));
       MyListManager.init(_map);
       PeopleLayer.init(_map);
       Views.init(creatorLayers);
@@ -2389,7 +2432,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       });
     }
 
-    return { init, map: () => _map };
+    return { init, map: () => _map, covered, othersChanged, wantChanged };
   })();
 
   // ─────────────────────────────────────────
