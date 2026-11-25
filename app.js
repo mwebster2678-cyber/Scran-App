@@ -712,6 +712,40 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     return { show, hide };
   })();
 
+  // Swipe a bottom panel down to close it, like the sheet. Starts only once the panel is scrolled to
+  // its top, so swiping inside a long panel still scrolls it; not from text boxes.
+  function swipeDownToClose(panel, close) {
+    let startY = 0, lastY = 0, lastT = 0, speed = 0, tracking = false, dragging = false;
+    panel.addEventListener('touchstart', (e) => {
+      tracking = panel.classList.contains('open') && panel.scrollTop <= 0 && !e.target.closest('textarea, input');
+      dragging = false;
+      startY = lastY = e.touches[0].clientY; lastT = e.timeStamp; speed = 0;
+    }, { passive: true });
+    panel.addEventListener('touchmove', (e) => {
+      if (!tracking) return;
+      const y = e.touches[0].clientY, dy = y - startY;
+      if (!dragging) {
+        if (Math.abs(dy) < 6) return;
+        if (dy < 0) { tracking = false; return; } // swiping up scrolls the card
+        dragging = true;
+        panel.style.transition = 'none';
+      }
+      e.preventDefault();
+      panel.style.transform = `translateY(${Math.max(0, dy)}px)`;
+      speed = (y - lastY) / Math.max(1, e.timeStamp - lastT); lastY = y; lastT = e.timeStamp;
+    }, { passive: false });
+    const end = () => {
+      if (!tracking) return;
+      tracking = false;
+      if (!dragging) return;
+      panel.style.transition = ''; panel.style.transform = '';
+      // a quick flick down, or dragged past a quarter of the card, closes it; otherwise it springs back
+      if (speed > 0.4 || lastY - startY > panel.offsetHeight / 4) close();
+    };
+    panel.addEventListener('touchend', end);
+    panel.addEventListener('touchcancel', end);
+  }
+
   // ─────────────────────────────────────────
   // 7. RATING PANEL
   // ─────────────────────────────────────────
@@ -802,39 +836,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
     closeBtn.addEventListener('click', close);
 
-    // Swipe the card down to close it, like the sheet. Starts only once the card is scrolled to
-    // its top, so swiping inside a long card still scrolls it; not from the note box.
-    (() => {
-      let startY = 0, lastY = 0, lastT = 0, speed = 0, tracking = false, dragging = false;
-      panel.addEventListener('touchstart', (e) => {
-        tracking = panel.classList.contains('open') && panel.scrollTop <= 0 && !e.target.closest('textarea, input');
-        dragging = false;
-        startY = lastY = e.touches[0].clientY; lastT = e.timeStamp; speed = 0;
-      }, { passive: true });
-      panel.addEventListener('touchmove', (e) => {
-        if (!tracking) return;
-        const y = e.touches[0].clientY, dy = y - startY;
-        if (!dragging) {
-          if (Math.abs(dy) < 6) return;
-          if (dy < 0) { tracking = false; return; } // swiping up scrolls the card
-          dragging = true;
-          panel.style.transition = 'none';
-        }
-        e.preventDefault();
-        panel.style.transform = `translateY(${Math.max(0, dy)}px)`;
-        speed = (y - lastY) / Math.max(1, e.timeStamp - lastT); lastY = y; lastT = e.timeStamp;
-      }, { passive: false });
-      const end = () => {
-        if (!tracking) return;
-        tracking = false;
-        if (!dragging) return;
-        panel.style.transition = ''; panel.style.transform = '';
-        // a quick flick down, or dragged past a quarter of the card, closes it; otherwise it springs back
-        if (speed > 0.4 || lastY - startY > panel.offsetHeight / 4) close();
-      };
-      panel.addEventListener('touchend', end);
-      panel.addEventListener('touchcancel', end);
-    })();
+    swipeDownToClose(panel, close);
 
     peopleEl.addEventListener('click', (e) => {
       const row = e.target.closest('[data-person]');
@@ -2834,6 +2836,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
     const close = () => panel.classList.remove('open');
     closeBtn.addEventListener('click', close);
+    swipeDownToClose(panel, close);
 
     return { open, close };
   })();
