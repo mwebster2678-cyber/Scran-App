@@ -440,20 +440,22 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
   // bookmarked places get a full pin.
   const KIND_COLOURS = { eat: '#8E44AD', pub: '#A0522D', cafe: '#E67E22' }; // restaurants, pubs, cafés
 
-  // Want-to-visit pin: a gold star centred on the place
+  // Want-to-visit pin: gold, with a big white star in its head
   const STAR_PATH = 'M12 1.5l3.1 6.6 7.2.9-5.3 5 1.4 7.1L12 17.6l-6.4 3.5 1.4-7.1-5.3-5 7.2-.9z';
+  const STAR_SVG = `<svg class="want-star" viewBox="0 0 24 24"><path d="${STAR_PATH}"/></svg>`;
   function wantPinIcon() {
     return L.divIcon({
       className: '',
-      html: `<svg class="want-pin" viewBox="0 0 24 24" aria-label="Want to visit"><path d="${STAR_PATH}"/></svg>`,
-      iconSize: [36, 36], iconAnchor: [18, 18], popupAnchor: [0, -18],
+      html: `<div class="map-pin pin-bookmarked pin-rated" aria-label="Want to visit">${STAR_SVG}</div>`,
+      iconSize: [34, 44], iconAnchor: [17, 44], popupAnchor: [0, -46],
     });
   }
 
   // On someone else's pin (creator or friend) for a place you want to visit: a gold star top left
   // (bubbles too, when any pin in them is one)
   const isWanted = (type, id) => BookmarkStorage.get(type, id);
-  const WANT_BADGE = `<svg class="pin-want-badge" viewBox="0 0 24 24"><path d="${STAR_PATH}"/></svg>`;
+  // the same gold pin with a white star, in miniature
+  const WANT_BADGE = `<svg class="pin-want-badge" viewBox="0 0 24 30"><path class="want-badge-pin" d="M12 29C12 29 1 18.5 1 12a11 11 0 0 1 22 0c0 6.5-11 17-11 17z"/><path class="want-badge-star" transform="translate(5.5 5.3) scale(0.54)" d="${STAR_PATH}"/></svg>`;
   const wantBadge = (type, id) => isWanted(type, id) ? WANT_BADGE : '';
 
   const MarkerManager = (() => {
