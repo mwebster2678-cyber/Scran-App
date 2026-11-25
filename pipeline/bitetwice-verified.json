@@ -10343,5 +10343,532 @@
         "candidates": []
       }
     ]
+  },
+  {
+    "videoId": "NHpnRcRZ3sk",
+    "title": "Is this London's best chicken burger?",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "Todd's Festive Feast",
+        "at": "0:08",
+        "kind": "other",
+        "matched": "Eating with Tod (Festive Feast)"
+      },
+      {
+        "text": "ODD'S FESTIVE FEAST",
+        "at": "0:20",
+        "kind": "sign",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Todd's Festive Feast",
+        "location": null,
+        "rating": 8.8,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Bite Twice reviewed a two-Michelin-starred chicken burger collaboration with Chef Magma at Todd's Festive Feast. They praised its juiciness, complexity of flavors, Asian influences, and crunch, with champagne vinegar-marinated pickles and potato bun.",
+        "originalName": "Eating with Tod (Festive Feast)",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "moment": "0:07",
+        "verdict": "Spectacular chicken burger with incredible complexity; 8.8/10.",
+        "dishes": [
+          "two-Michelin-starred chicken burger"
+        ],
+        "confident": false,
+        "why": "Todd's Festive Feast appears to be a temporary event or pop-up (described as holiday/Christmas market collaboration), making it difficult to identify as a permanent establishment in SCRAN, though Bite Twice clearly reviewed and rated it.",
+        "candidates": [],
+        "onScreen": "Todd's Festive Feast",
+        "onScreenAt": "0:08",
+        "onScreenDiffers": false
+      }
+    ]
+  },
+  {
+    "videoId": "tiHZYGT35Kw",
+    "title": "THe Best Soulfood in London 🇯🇲🍲",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "PIG'S PIZZAS",
+        "at": "0:04",
+        "kind": "other",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Caribbean soul food stall at Shepherd's Bush Market",
+        "location": "Shepherd's Bush Market",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Bite Twice praised the jerk chicken, fish curry with rice and peas, plantain, vegetable stew, melon punch and ginger drink as exceptional and authentic. Called it 'a real gem of West London' and 'beyond ratings.'",
+        "originalName": "<UNKNOWN>",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Shepherd's Bush",
+        "address": null,
+        "verdict": "Exceptional authentic Caribbean soul food, genuine gem.",
+        "dishes": [
+          "jerk chicken",
+          "fish curry with rice and peas",
+          "plantain",
+          "vegetable stew",
+          "melon punch",
+          "ginger drink"
+        ],
+        "confident": false,
+        "why": "No stall name provided anywhere; the stall is unnamed so venue name used with low confidence.",
+        "moment": null,
+        "candidates": []
+      }
+    ]
+  },
+  {
+    "videoId": "m79h7RJLP_g",
+    "title": "Afghan kitchen 🇦🇫 when Islington institution 🤪",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "Afghan Kitchen",
+        "at": "0:00",
+        "kind": "title_card",
+        "matched": "Afghan Kitchen"
+      },
+      {
+        "text": "Afghan Kitchen",
+        "at": "0:20",
+        "kind": "menu",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Afghan Kitchen",
+        "location": "Angel, Islington",
+        "rating": 8,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Gerry and Paul praised the delicious, hearty Afghan food, particularly the chicken in yogurt and lamb dishes. They noted fast service and thought it was worth the restaurant's popularity.",
+        "originalName": "Afghan Kitchen",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "538637cdea42",
+        "area": "Angel, Islington",
+        "address": null,
+        "verdict": "Delicious, hearty Afghan food. Rating around 8/10.",
+        "dishes": [
+          "chicken in yogurt",
+          "lamb dishes"
+        ],
+        "confident": true,
+        "why": "Bite Twice visited and gave their own opinions of the restaurant in this video.",
+        "moment": null,
+        "onScreen": "Afghan Kitchen",
+        "onScreenAt": "0:00",
+        "onScreenDiffers": false
+      }
+    ]
+  },
+  {
+    "videoId": "2bhJrvFL5MQ",
+    "title": "We review Dave's hot chicken 🍗🤪",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "DAVE'S HOT CHICKEN",
+        "at": "0:00",
+        "kind": "other",
+        "matched": "Dave's Hot Chicken"
+      },
+      {
+        "text": "DAVE'S HOT CHICKEN",
+        "at": "0:12",
+        "kind": "sign",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Dave's Hot Chicken",
+        "location": "Shaftesbury Avenue, Soho",
+        "rating": 7.8,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Bite Twice were pleasantly surprised by the fried chicken quality. The breading was excellent and not greasy, with a unique taste compared to UK offerings. The sliders scored 7.5 and the tenders scored 8.2.",
+        "originalName": "Dave's Hot Chicken",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Soho",
+        "address": null,
+        "verdict": "Excellent chicken quality; sliders 7.5/10, tenders 8.2/10.",
+        "dishes": [
+          "Sliders",
+          "Tenders"
+        ],
+        "confident": true,
+        "why": "Bite Twice visited and reviewed the restaurant themselves, with detailed scoring of the food.",
+        "moment": null,
+        "knownPlace": true,
+        "onScreen": "DAVE'S HOT CHICKEN",
+        "onScreenAt": "0:00",
+        "onScreenDiffers": false
+      }
+    ]
+  },
+  {
+    "videoId": "keHrllDXsvo",
+    "title": "reviewing Jay rayner's favourite sandwich shop 🥪",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "Jerry's Subs",
+        "at": "0:08",
+        "kind": "sign",
+        "matched": "Jerry Subs"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Gerry's Hot Subs",
+        "location": null,
+        "rating": 8.2,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Bite Twice reviewed Jay Rayner's favourite Philly cheesesteak sandwich. They praised it as wonderful, soft and tender with juicy meat, cheese and gravy. Paul gave it 8/10, noting it was very tasty but the beef could be better and it's quite expensive at £14.",
+        "originalName": "Jerry Subs",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "3f1c18e6a09f",
+        "area": null,
+        "address": null,
+        "verdict": "Wonderful soft sandwich, 8/10, very tasty but pricey.",
+        "dishes": [
+          "Philly cheesesteak sandwich"
+        ],
+        "confident": false,
+        "moment": null,
+        "why": "Bite Twice personally visited and reviewed this restaurant, giving their own opinions on the food. On screen at 0:08: \"Jerry's Subs\" (The on-screen sign reads \"Jerry's Subs\" which is the actual place name, correcting the mishearing of \"Gerry's Hot Subs\".)",
+        "onScreen": "Jerry's Subs",
+        "onScreenAt": "0:08",
+        "onScreenDiffers": true
+      }
+    ]
+  },
+  {
+    "videoId": "UQtJz4WDT3g",
+    "title": "Desserts spots of London",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "GARAVAGGIO",
+        "at": "0:08",
+        "kind": "sign",
+        "matched": "Caravaggio"
+      },
+      {
+        "text": "CARMY'S",
+        "at": "0:12",
+        "kind": "other",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Garavaggio",
+        "location": "Camberwell Green",
+        "rating": 8.4,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Dessert shop with freshly made ice cream and warm desserts like Belgian apple pie, high-quality baklava and chocolate fondant with creamy ice cream.",
+        "originalName": "Caravaggio",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "0a610c683c8d",
+        "area": null,
+        "address": null,
+        "verdict": "Great location and quality, worth visiting.",
+        "dishes": [
+          "Belgian apple pie",
+          "baklava",
+          "chocolate fondant with ice cream"
+        ],
+        "confident": false,
+        "why": "The on-screen text reads 'GARAVAGGIO' but the name appears misspelled; the closest match is Caravana on Camberwell which fits the location, but the spelling discrepancy and lack of transcript confirmation create uncertainty.",
+        "moment": null,
+        "candidates": [
+          {
+            "id": "eb334d76b9dc",
+            "name": "Caravan",
+            "address": "11-13 Exmouth Market, EC1R 4QD"
+          },
+          {
+            "id": "d1fc7ea2c5b1",
+            "name": "Caravan",
+            "address": "30 Great Guildford St, SE1 0HS"
+          },
+          {
+            "id": "de95bfe65d56",
+            "name": "Miraggio",
+            "address": "510 Fulham Rd, SW6 5NJ"
+          },
+          {
+            "id": "0a610c683c8d",
+            "name": "Caravana",
+            "address": "332 CAMBERWELL, SE50RW"
+          },
+          {
+            "id": "686b3aafd4de",
+            "name": "Pizza Caravan",
+            "address": "119 Carlton Ave, TW14 0EJ"
+          }
+        ],
+        "onScreen": "GARAVAGGIO",
+        "onScreenAt": "0:08",
+        "onScreenDiffers": false
+      }
+    ]
+  },
+  {
+    "videoId": "ysaIOg1JEMA",
+    "title": "do you know a lunch deal in London better than this? 🤨",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "Reviewing The £2.49 kebab roll in South London",
+        "at": "0:00",
+        "kind": "title_card",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Dawat",
+        "location": "Tooting",
+        "rating": 8,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Kebab rolls for £2.49 with fresh homemade naan, well-cooked meat, and excellent yogurt-mint sauce. Presenters were impressed by the quality and value for the price.",
+        "originalName": "Dawat",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "61689d55175e",
+        "area": "Tooting",
+        "address": null,
+        "moment": "0:05",
+        "verdict": "Exceptional value kebab rolls at £2.49 in Tooting.",
+        "dishes": [
+          "Kebab roll with homemade naan",
+          "Yogurt-mint sauce"
+        ],
+        "confident": true,
+        "why": "Bite Twice visited, ate and gave their own detailed opinion of the kebab rolls and sauces, praising the quality and value.",
+        "knownPlace": true
+      }
+    ]
+  },
+  {
+    "videoId": "ppk3p0F7uP0",
+    "title": "have you ever had a Jerk burrito? 🍗🌯",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "SUYA",
+        "at": "0:08",
+        "kind": "menu",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Suya",
+        "location": "Petticoat Lane",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Jerk chicken shawarma stall run by Paul's aunt. Fresh chicken and salad, welcoming service. £5 for shawarma with hot sauce, coleslaw and vegetables.",
+        "originalName": "<UNKNOWN>",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Petticoat Lane",
+        "address": null,
+        "verdict": "Great value lunch option; Gerry 9/10, Paul 6.8/10.",
+        "dishes": [
+          "Jerk chicken shawarma"
+        ],
+        "confident": false,
+        "why": "The on-screen graphic shows 'SUYA' but the restaurant name isn't explicitly confirmed in the transcript; placeId cannot be verified without location details.",
+        "moment": "0:06",
+        "candidates": []
+      }
+    ]
+  },
+  {
+    "videoId": "5aDKaRfuLv4",
+    "title": "Eating with the Bus Drivers 🚍🍳",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "THE BUS CAFE",
+        "at": "0:00",
+        "kind": "title_card",
+        "matched": "Busman's Cafe"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Busman's Cafe",
+        "location": "Waterloo bus station, Southwark",
+        "rating": 6,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Bite Twice had a traditional English breakfast for £7. They rated it 6/10: sausages were acceptable, bacon was well-cooked, mushrooms were fresh (not tinned), and tea was well-made. Not elite but a good affordable option.",
+        "originalName": "Busman's Cafe",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Waterloo bus station, Southwark",
+        "address": null,
+        "moment": "0:00",
+        "verdict": "Decent affordable breakfast, solid 6/10.",
+        "dishes": [
+          "English breakfast",
+          "sausages",
+          "bacon",
+          "mushrooms",
+          "beans",
+          "tea"
+        ],
+        "confident": false,
+        "why": "Bite Twice personally visited and gave their own review with a rating. On screen at 0:00: \"THE BUS CAFE\" (The on-screen title card \"THE BUS CAFE\" names the place more accurately than the heard \"Busman's Cafe,\" matching the Waterloo bus station cafe they're reviewing.)",
+        "onScreen": "THE BUS CAFE",
+        "onScreenAt": "0:00",
+        "onScreenDiffers": true
+      },
+      {
+        "name": "Terry's Cafe",
+        "location": "Southwark",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Terry's",
+        "keep": false,
+        "reason": "only_mentioned",
+        "placeId": "957ac3696edf",
+        "area": "Southwark",
+        "address": null,
+        "moment": "2:58",
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "Terry's was only mentioned in passing as an elite breakfast destination; Bite Twice did not visit or review it.",
+        "knownPlace": true
+      }
+    ]
+  },
+  {
+    "videoId": "inkUDFN4S0k",
+    "title": "we took our duty to review the New Jersey Mike's! 🥪😐",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "LDN Jersey Mike",
+        "at": "0:00",
+        "kind": "title_card",
+        "matched": null
+      },
+      {
+        "text": "Jersey Mike's",
+        "at": "0:24",
+        "kind": "other",
+        "matched": null
+      },
+      {
+        "text": "Jersey Mike's Sub",
+        "at": "0:36",
+        "kind": "sign",
+        "matched": "Jersey Mike's"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Jersey Mike's",
+        "location": "Soho",
+        "rating": 5.3,
+        "rating_out_of": 10,
+        "sentiment": "negative",
+        "notes": "Gerry and Paul visited the newly opened Jersey Mike's and tried the Club Sub, Giant Mike's Way, Cheesesteak and Philadelphia Cheesesteak. They found it an improved Subway with fresh ingredients but criticized the dry bun, dry provolone, tasteless meat, soggy bread and vinegar-heavy flavours. They waited 30-40 minutes and wouldn't recommend it.",
+        "originalName": "Jersey Mike's",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Soho",
+        "address": null,
+        "moment": "0:05",
+        "verdict": "Not worth the wait; disappointing sandwich quality.",
+        "dishes": [
+          "Club Sub",
+          "Giant Mike's Way",
+          "Cheesesteak",
+          "Philadelphia Cheesesteak"
+        ],
+        "confident": true,
+        "why": "Bite Twice clearly visited, ordered, ate and gave detailed negative opinions on multiple items.",
+        "onScreen": "Jersey Mike's Sub",
+        "onScreenAt": "0:36",
+        "onScreenDiffers": false
+      }
+    ]
+  },
+  {
+    "videoId": "Nvwx7kNhdQ4",
+    "title": "we heard about a place on aholloway road serving tiramisu out of an old cash point  🤓",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "COCCOLE",
+        "at": "0:12",
+        "kind": "sign",
+        "matched": "Tiramisu ATM (Holloway Road)"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Coccole",
+        "location": "Holloway Road",
+        "rating": 4.5,
+        "rating_out_of": 10,
+        "sentiment": "negative",
+        "notes": "Bite Twice reviewed tiramisu sold from an old ATM window. The tiramisu hadn't set properly—biscuits were crispy instead of soaked, cream was too runny, and it lacked sufficient coffee flavoring. While the flavors were acceptable, the execution was poor and they would not return.",
+        "originalName": "Tiramisu ATM (Holloway Road)",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Holloway Road",
+        "address": null,
+        "verdict": "Tiramisu not properly set; crispy biscuits, runny cream.",
+        "dishes": [
+          "Tiramisu (traditional)",
+          "Almond tiramisu"
+        ],
+        "confident": true,
+        "why": "The on-screen graphic clearly shows 'COCCOLE' at 0:12, confirming this is the restaurant name. Bite Twice personally visited, tried the tiramisu, and gave their own detailed opinion.",
+        "moment": "0:00",
+        "onScreen": "COCCOLE",
+        "onScreenAt": "0:12",
+        "onScreenDiffers": false
+      }
+    ]
   }
 ]

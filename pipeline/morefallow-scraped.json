@@ -607,5 +607,57 @@
     "title": "Chicken Skin is the Best Part",
     "published": "2026-06-11",
     "restaurants": []
+  },
+  {
+    "videoId": "zXLHXlQqwJA",
+    "title": "Chef vs Wine Expert at London's Best Wine Restaurant ft. Tom Gilbey",
+    "published": "2026-11-20",
+    "restaurants": [
+      {
+        "name": "Noble Rot",
+        "location": "Shepherd's Market, Mayfair",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Premier wine restaurant in London. Exceptional food quality and wine pairing experience. Incredible service and menu. Will and Jack competed in a wine pairing challenge with wine expert Tom Gilbey, trying dishes including smoked eel, langoustines, cod, hare cavatelli, tuna belly, and partridge."
+      }
+    ]
+  },
+  {
+    "videoId": "a4tAE4MSu_8",
+    "title": "Chefs Kebab Crawl Through London",
+    "published": "2026-11-19",
+    "restaurants": [
+      {
+        "name": "Londonets",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Gas and wood fire kebab shop serving Londoner kebab. Praised for quality slicing technique and the most popular item. Reviewers impressed with the lamb and veal fat and overall execution."
+      },
+      {
+        "name": "Best Kebab",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Now using automatic slicers. 100% lamb shoulder meat made in-house. Doner praised for not being oily despite being juicy, with simple quality ingredients: meat, onion, chili sauce, and lemon."
+      },
+      {
+        "name": "<UNKNOWN>",
+        "location": "Green Lanes",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Chef's special dish featuring fried chicken kebab roll. Noted for convenient packaging and roll, recognizable fried chicken fat taste, and high quality ingredients including lettuce and parsley."
+      }
+    ]
+  },
+  {
+    "videoId": "J5whFhBi3XA",
+    "title": "Chefs Review New York's Best Pizza",
+    "published": "2026-11-16",
+    "restaurants": []
   }
 ]

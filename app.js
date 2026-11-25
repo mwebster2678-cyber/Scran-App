@@ -471,7 +471,8 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
     function init(map) {
       _map = map;
-      _renderer = L.canvas({ padding: 0.5 });
+      // On touch screens a dot answers taps up to 10 px outside it: they're only ~10 px across
+      _renderer = L.canvas({ padding: 0.5, tolerance: L.Browser.touch ? 10 : 0 });
     }
 
     // Your rated and want-to-visit pins are MyListManager's (grouped into bubbles), so this
@@ -517,8 +518,9 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         if (!(marker instanceof L.CircleMarker)) return;
         if (on && !marker.getTooltip()) {
           const name = Places.get(id)?.name;
+          // interactive: a tap on the name counts as a tap on its dot (Leaflet passes it on)
           if (name) marker.bindTooltip(escapeHtml(shortName(name)), {
-            permanent: true, direction: 'bottom', offset: [0, 4], className: 'dot-name', interactive: false,
+            permanent: true, direction: 'bottom', offset: [0, 4], className: 'dot-name', interactive: true,
           });
         } else if (!on && marker.getTooltip()) {
           marker.unbindTooltip();
@@ -2400,6 +2402,8 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         maxBounds: CONFIG.m25Bounds,
         maxBoundsViscosity: 1.0,
         zoomControl: false,
+        // a fingertip wobbles a few pixels while tapping; Leaflet's default 3 px turned some taps into drags
+        clickTolerance: L.Browser.touch ? 8 : 3,
       });
 
       document.getElementById('zoom-in').addEventListener('click', () => _map.zoomIn());

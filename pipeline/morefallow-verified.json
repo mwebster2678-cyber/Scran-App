@@ -1337,5 +1337,167 @@
         "candidates": []
       }
     ]
+  },
+  {
+    "videoId": "zXLHXlQqwJA",
+    "title": "Chef vs Wine Expert at London's Best Wine Restaurant ft. Tom Gilbey",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "GUINNESS",
+        "at": "0:04",
+        "kind": "other",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Noble Rot Mayfair",
+        "location": "Shepherd's Market, Mayfair",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "More Fallow (Will and Jack) dined at Noble Rot in a separate dining room, competing in a wine pairing challenge with wine expert Tom Gilbey across appetisers, mains and dessert. They praised the exceptional food quality, the wine list, service, and expertise of the sommelier.",
+        "originalName": "Noble Rot",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "94e65fbec132",
+        "area": "Mayfair",
+        "address": null,
+        "verdict": "Premier London wine restaurant with exceptional food and wine.",
+        "dishes": [
+          "smoked eel with prunes and horseradish croutons",
+          "surf clams with Sauternes",
+          "grilled langoustines with rosemary butter",
+          "cavatelli with hare stew",
+          "wild mushrooms San Sebastiano style with egg yolk",
+          "grilled tuna belly with kohlrabi and ginger",
+          "fried cod with saffron purée and shrimp croutons",
+          "gnocchi with roasted potatoes and pumpkin",
+          "partridge with bacon and apricots",
+          "guinea fowl"
+        ],
+        "confident": true,
+        "why": "More Fallow ate and reviewed the restaurant in depth, spending most of the video there with detailed commentary on food and wine pairings.",
+        "moment": "0:07"
+      }
+    ]
+  },
+  {
+    "videoId": "a4tAE4MSu_8",
+    "title": "Chefs Kebab Crawl Through London",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "THE BEST TURKISH",
+        "at": "0:40",
+        "kind": "sign",
+        "matched": null
+      },
+      {
+        "text": "BEST KEBAB",
+        "at": "0:40",
+        "kind": "sign",
+        "matched": "Londonets"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Londonets",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Londonets",
+        "keep": false,
+        "reason": "only_mentioned",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "The name is mentioned and described but appears to be misheard from the transcript ('Londoner' kebab, not a restaurant name); no restaurant called Londonets appears to exist and the transcript is unclear about the actual place name.",
+        "moment": "0:05",
+        "candidates": [
+          {
+            "id": "0decca3c88eb",
+            "name": "8 at The Londoner",
+            "address": "38 Leicester Square, WC2H 7DX"
+          },
+          {
+            "id": "db6a42f3ab2f",
+            "name": "Tapetelondon",
+            "address": "119 Grove Ln, SE5 8BG"
+          },
+          {
+            "id": "3c9419f6f533",
+            "name": "OatLondon",
+            "address": "22 High Street, N8 7PB"
+          },
+          {
+            "id": "74bdf6aa58ee",
+            "name": "042London",
+            "address": "7C Advent Way, N18 3AH"
+          },
+          {
+            "id": "a92d8b6f6b30",
+            "name": "Jzslondon",
+            "address": "156 Maple Road, SE20 8JB"
+          }
+        ],
+        "onScreen": "BEST KEBAB",
+        "onScreenAt": "0:40",
+        "onScreenDiffers": false
+      },
+      {
+        "name": "The Best Turkish Kebab",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "More Fallow visited and praised the 100% lamb shoulder doner made in-house for its juicy quality without being oily, with simple ingredients: meat, onion, chili sauce, and lemon. Noted the new automatic slicers.",
+        "originalName": "Best Kebab",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "a0094d71bb9d",
+        "area": null,
+        "address": null,
+        "verdict": "Luxurious, juicy lamb doner without the oily aftertaste.",
+        "dishes": [
+          "Doner kebab with lamb shoulder"
+        ],
+        "confident": true,
+        "why": "More Fallow personally visited, tasted the kebab, and gave detailed opinions on the quality and taste; on-screen text confirms 'BEST KEBAB' at 0:40.",
+        "moment": "0:39",
+        "knownPlace": true,
+        "onScreen": "BEST KEBAB",
+        "onScreenAt": "0:40",
+        "onScreenDiffers": false
+      },
+      {
+        "name": "Green Lanes",
+        "location": "Green Lanes",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Chef's special fried chicken kebab roll praised for convenient packaging and high quality ingredients. More Fallow noted the recognizable fried chicken fat taste and quality of lettuce and parsley.",
+        "originalName": "<UNKNOWN>",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Green Lanes",
+        "address": null,
+        "verdict": "High quality fried chicken roll with convenient packaging.",
+        "dishes": [
+          "Fried chicken kebab roll"
+        ],
+        "confident": false,
+        "why": "More Fallow visited and reviewed the food, but the exact restaurant name on Green Lanes is not provided in the transcript or on-screen text, making confident identification impossible.",
+        "moment": "1:13",
+        "candidates": []
+      }
+    ]
   }
 ]

@@ -1813,5 +1813,184 @@
       }
     ],
     "noCaptions": true
+  },
+  {
+    "videoId": "NHpnRcRZ3sk",
+    "title": "Is this London's best chicken burger?",
+    "published": "2026-11-23",
+    "restaurants": [
+      {
+        "name": "Eating with Tod (Festive Feast)",
+        "location": null,
+        "rating": 8.8,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "They reviewed a two-Michelin-starred chicken burger collaboration with Chef Magma. The burger featured an Asian-flavored crispy chicken with champagne vinegar-marinated pickles on a potato bun, priced at £15. They praised its incredible juiciness, complexity of flavors, and crunch."
+      }
+    ]
+  },
+  {
+    "videoId": "tiHZYGT35Kw",
+    "title": "THe Best Soulfood in London 🇯🇲🍲",
+    "published": "2026-11-23",
+    "restaurants": [
+      {
+        "name": "<UNKNOWN>",
+        "location": "Shepherd's Bush Market",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Caribbean soul food stall in Shepherd's Bush Market. Open Fridays and Saturdays, cash only. They praised the jerk chicken, fish curry with rice and peas, plantain, vegetable stew, melon punch and ginger drink as exceptional, authentic, and delicious. Described it as 'a real gem of West London' and 'beyond ratings.'"
+      }
+    ]
+  },
+  {
+    "videoId": "m79h7RJLP_g",
+    "title": "Afghan kitchen 🇦🇫 when Islington institution 🤪",
+    "published": "2026-11-23",
+    "restaurants": [
+      {
+        "name": "Afghan Kitchen",
+        "location": "Angel, Islington",
+        "rating": 8,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Gerry and Paul praised the delicious, hearty Afghan food, particularly the chicken in yogurt and lamb dishes. They noted fast service and thought it was worth the restaurant's popularity, rating it around 8/10."
+      }
+    ]
+  },
+  {
+    "videoId": "2bhJrvFL5MQ",
+    "title": "We review Dave's hot chicken 🍗🤪",
+    "published": "2026-11-23",
+    "restaurants": [
+      {
+        "name": "Dave's Hot Chicken",
+        "location": "Shaftesbury Avenue, Soho",
+        "rating": 7.8,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "They were pleasantly surprised by the fried chicken quality. The breading was excellent and not greasy, with a unique taste compared to UK offerings. The sliders scored 7.5 and the tenders scored 8.2. Gerry gave it 7.6/10 overall, Paul gave the tenders a solid 8.2/10, finding them juicy, tender and with a pleasant level of spiciness."
+      }
+    ]
+  },
+  {
+    "videoId": "keHrllDXsvo",
+    "title": "reviewing Jay rayner's favourite sandwich shop 🥪",
+    "published": "2026-11-23",
+    "restaurants": [
+      {
+        "name": "Jerry Subs",
+        "location": null,
+        "rating": 8.2,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Gerry and Paul reviewed Jay Rayner's favourite Philly cheesesteak sandwich. They praised it as a wonderful, soft, tender sandwich with juicy meat, cheese, and gravy on a soft bun. Paul gave it 8/10, noting it was very tasty but the beef could be better and it's quite expensive at £14."
+      }
+    ]
+  },
+  {
+    "videoId": "UQtJz4WDT3g",
+    "title": "Desserts spots of London",
+    "published": "2026-11-23",
+    "restaurants": [
+      {
+        "name": "Caravaggio",
+        "location": "Camberwell Green",
+        "rating": 8.4,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Dessert shop with freshly made ice cream and warm desserts like Belgian apple pie. They offer high-quality baklava and chocolate fondant with creamy ice cream. Great location and excellent quality, with one reviewer giving it 8/10."
+      }
+    ]
+  },
+  {
+    "videoId": "ysaIOg1JEMA",
+    "title": "do you know a lunch deal in London better than this? 🤨",
+    "published": "2026-11-23",
+    "restaurants": [
+      {
+        "name": "Dawat",
+        "location": "Tooting",
+        "rating": 8,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Kebab rolls for £2.49 with fresh homemade naan, well-cooked meat, and excellent yogurt-mint sauce. Presenters were impressed by the quality and value, finding it exceptional for the price in London."
+      }
+    ]
+  },
+  {
+    "videoId": "ppk3p0F7uP0",
+    "title": "have you ever had a Jerk burrito? 🍗🌯",
+    "published": "2026-11-17",
+    "restaurants": [
+      {
+        "name": "<UNKNOWN>",
+        "location": "Petticoat Lane",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Jerk chicken shawarma stall. Fresh chicken and salad, welcoming service. £5 for a shawarma with hot sauce, coleslaw and vegetables. Gerry rated it 9/10, Paul rated it 6.8/10 for being slightly lacking in flavor brightness but good value lunch option."
+      }
+    ]
+  },
+  {
+    "videoId": "5aDKaRfuLv4",
+    "title": "Eating with the Bus Drivers 🚍🍳",
+    "published": "2026-11-16",
+    "restaurants": [
+      {
+        "name": "Busman's Cafe",
+        "location": "Waterloo bus station, Southwark",
+        "rating": 6,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "They had a traditional English breakfast for £7. The sausages were acceptable, the bacon was well-cooked, mushrooms were fresh (not tinned), and the tea was well-made. Not in the elite breakfast league but a good affordable option."
+      },
+      {
+        "name": "Terry's",
+        "location": "Southwark",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Mentioned as an elite breakfast destination in the Southwark area, though they did not visit or review it in this video."
+      }
+    ]
+  },
+  {
+    "videoId": "inkUDFN4S0k",
+    "title": "we took our duty to review the New Jersey Mike's! 🥪😐",
+    "published": "2026-11-14",
+    "restaurants": [
+      {
+        "name": "Jersey Mike's",
+        "location": "Soho",
+        "rating": 5.3,
+        "rating_out_of": 10,
+        "sentiment": "negative",
+        "notes": "Presenters found the sandwich overpriced and disappointing. The bread was dry and soggy, meat was tasteless, and the experience of waiting 30-40 minutes was not worth it. They felt it was an 'improved Subway' at best but ultimately not recommended, especially if hungry with no queue elsewhere."
+      }
+    ]
+  },
+  {
+    "videoId": "Nvwx7kNhdQ4",
+    "title": "we heard about a place on aholloway road serving tiramisu out of an old cash point  🤓",
+    "published": "2026-11-14",
+    "restaurants": [
+      {
+        "name": "Tiramisu ATM (Holloway Road)",
+        "location": "Holloway Road",
+        "rating": 4.5,
+        "rating_out_of": 10,
+        "sentiment": "negative",
+        "notes": "They reviewed tiramisu sold from an old ATM window. The tiramisu hadn't set properly - biscuits were crispy instead of soaked, cream was too runny, and it lacked sufficient coffee flavoring. While the flavors were okay, the execution was poor and they wouldn't return."
+      }
+    ]
+  },
+  {
+    "videoId": "Ewn2w7vfiVo",
+    "title": "reviewing Sonia's jerk in Nassau, Bahamas. 🇧🇸🍗",
+    "published": "2026-11-11",
+    "restaurants": []
   }
 ]

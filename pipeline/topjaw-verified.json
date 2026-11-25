@@ -10289,5 +10289,4704 @@
         "why": "Topjaw visited, ate the pizza and gave positive opinions. Home Slice at Neal's Yard is the well-known London pizza chain matching the description."
       }
     ]
+  },
+  {
+    "videoId": "JbmuPE8LkW4",
+    "title": "Making Angela Hartnett laugh like this is one of the best experiences of my life 😂😂😂",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "beurre",
+        "at": "0:00",
+        "kind": "other",
+        "matched": null
+      },
+      {
+        "text": "beurre",
+        "at": "0:08",
+        "kind": "other",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Dish",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Angela Hartnett's Michelin-starred restaurant. Topjaw visited to promote their Michelin star show and had a great day filming together.",
+        "originalName": "Dish",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "45ab76af9c45",
+        "area": null,
+        "address": null,
+        "verdict": "Great day filming with Angela Hartnett.",
+        "dishes": [],
+        "confident": true,
+        "why": "Topjaw visited Angela Hartnett's restaurant and filmed content there, giving their own experience.",
+        "moment": null
+      }
+    ]
+  },
+  {
+    "videoId": "JrB10PPRToM",
+    "title": "I Took Angela Hartnett To My Favourite London Restaurant",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "ANGELA HARTNETT",
+        "at": "0:04",
+        "kind": "title_card",
+        "matched": null
+      },
+      {
+        "text": "Dish",
+        "at": "0:24",
+        "kind": "other",
+        "matched": null
+      },
+      {
+        "text": "DONIA",
+        "at": "0:32",
+        "kind": "other",
+        "matched": "Donia"
+      },
+      {
+        "text": "beurre",
+        "at": "0:48",
+        "kind": "other",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Donia",
+        "location": "Soho, London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw took Michelin-starred chef Angela Hartnett to Donia to introduce her to Filipino cuisine. Angela was impressed with the bright, bold flavors and sophisticated sauces, calling it her favorite food.",
+        "originalName": "Donia",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "dafcbe494ce6",
+        "area": "Soho",
+        "address": null,
+        "moment": "0:32",
+        "verdict": "Angela Hartnett approved; bright, bold flavors impressed.",
+        "dishes": [],
+        "confident": true,
+        "why": "Topjaw visited Donia with Angela Hartnett and both ate there, with Topjaw giving his own review of the restaurant and cuisine.",
+        "onScreen": "DONIA",
+        "onScreenAt": "0:32",
+        "onScreenDiffers": false
+      }
+    ]
+  },
+  {
+    "videoId": "u8TJzE0OJp8",
+    "title": "Warning; do not go to this pub...",
+    "sponsored": false,
+    "graphics": [],
+    "restaurants": [
+      {
+        "name": "The Horses",
+        "location": "Clerkenwell",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Newest pub from the team behind Fat Badger, The Hero, The Pelican, and The Hart. Exceptional seafood-focused menu. Creator describes it as their favourite from this pub group, praising the food quality—nothing overcooked, oversalted, or too greasy.",
+        "originalName": "The Horses",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Clerkenwell",
+        "address": "26-28 Ray St, London EC1R 3DJ",
+        "verdict": "Exceptional seafood menu; favourite from this pub group.",
+        "dishes": [
+          "Mackerel & Horseradish",
+          "Fillet o' Fish",
+          "John Dory with Peppercorn Sauce",
+          "The Peas",
+          "Fish Pie with Hot Sauce & Langoustine Bisque",
+          "Onglet Steak & Shallots"
+        ],
+        "confident": false,
+        "why": "None of the candidate places match; the correct location is 26-28 Ray St, not in the candidate list.",
+        "moment": null,
+        "candidates": [
+          {
+            "id": "90a0f531001a",
+            "name": "The Horseshoe",
+            "address": "5 Farleigh Rd, CR6 9EG"
+          },
+          {
+            "id": "f034041fe03b",
+            "name": "The Horseshoe",
+            "address": "24 Clerkenwell Close, EC1R 0AG"
+          },
+          {
+            "id": "b7da76f38f73",
+            "name": "The Horseshoe",
+            "address": "28 Heath St, NW3 6TE"
+          },
+          {
+            "id": "3f3271aa7c49",
+            "name": "Cart and Horses",
+            "address": "1 Maryland Point, E15 1PF"
+          },
+          {
+            "id": "03bb4c2a7020",
+            "name": "Coach & Horses",
+            "address": "High Road, UB10 8LJ"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "videoId": "s2GTovXF-O8",
+    "title": "Trouble booking a festive group table? I’ve got you. 5 perfect spots, with space! 🍻🎄🍾",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "THE DRAPERS ARMS",
+        "at": "0:12",
+        "kind": "sign",
+        "matched": "Draper's Arms"
+      },
+      {
+        "text": "THE HOUND",
+        "at": "0:52",
+        "kind": "other",
+        "matched": "The Hound"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "The Drapers Arms",
+        "location": "Islington",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Gastropub-style food with top notch quality, huge wine list, great for long dinners.",
+        "originalName": "Draper's Arms",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "1af2336dbe5b",
+        "area": "Islington",
+        "address": null,
+        "moment": null,
+        "verdict": "Top notch quality, huge wine list, great for groups.",
+        "dishes": [],
+        "confident": true,
+        "why": "On-screen text at 0:12 confirms the name as THE DRAPERS ARMS; Topjaw reviewed it with his own opinion about the food and service.",
+        "onScreen": "THE DRAPERS ARMS",
+        "onScreenAt": "0:12",
+        "onScreenDiffers": false
+      },
+      {
+        "name": "Darjeeling Express",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Moved to a bigger space with lots of capacity. Features Christmas chicken chaap curry, prawn malai curry, and kosha mangsho.",
+        "originalName": "Darjeeling Express by Asma Khan",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "f78a045aa362",
+        "area": null,
+        "address": null,
+        "moment": null,
+        "verdict": "Bigger space with great capacity for festive group dining.",
+        "dishes": [
+          "Christmas chicken chaap curry",
+          "prawn malai curry",
+          "kosha mangsho"
+        ],
+        "confident": true,
+        "why": "Topjaw reviewed this restaurant with his own opinions about the new space and dishes.",
+        "knownPlace": true
+      },
+      {
+        "name": "The Hound",
+        "location": "Chiswick",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "British pub classic with warm and welcoming service. Great beer selection and cocktails comparable to cocktail bars. Has a dartboard.",
+        "originalName": "The Hound",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "27055129557c",
+        "area": "Chiswick",
+        "address": null,
+        "moment": null,
+        "verdict": "Warm welcome, great beer and cocktails, fun atmosphere.",
+        "dishes": [],
+        "confident": true,
+        "why": "On-screen text at 0:52 confirms THE HOUND; Topjaw reviewed it with his own opinions about the service, drinks, and atmosphere.",
+        "onScreen": "THE HOUND",
+        "onScreenAt": "0:52",
+        "onScreenDiffers": false
+      },
+      {
+        "name": "Cue Point Barbecue",
+        "location": "Ladywell Grove",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Afghan recipes meet Texas barbecue. Outstanding brisket. Seating inside with large covered and heated outdoor area.",
+        "originalName": "Cue Point Barbecue",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Ladywell Grove",
+        "address": null,
+        "moment": null,
+        "verdict": "Outstanding brisket, great for groups with outdoor space.",
+        "dishes": [
+          "brisket",
+          "braised lamb shoulder"
+        ],
+        "confident": false,
+        "why": "No placeId matched; the candidate places don't match the name or location description given, so this may need verification. On screen at 0:12: \"THE DRAPERS ARMS\" (The on-screen sign shows the actual establishment name, while \"Cue Point Barbecue\" appears to be a mishearing or alternate reference.)",
+        "candidates": [
+          {
+            "id": "f43712cb7c15",
+            "name": "Ezo Barbecue",
+            "address": "254 High St, BR1 1PG"
+          },
+          {
+            "id": "bf5f68fbcc3f",
+            "name": "Barbecue Island",
+            "address": "7 Lyon Rd, SW19 2RL"
+          }
+        ],
+        "onScreen": "THE DRAPERS ARMS",
+        "onScreenAt": "0:12",
+        "onScreenDiffers": true
+      },
+      {
+        "name": "Phoenix Palace",
+        "location": "Baker Street",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Cantonese restaurant with lively atmosphere and festive red interior. Large round tables with revolving trays for groups. Specializes in dim sum.",
+        "originalName": "Phoenix Palace",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "84639db940f4",
+        "area": "Baker Street",
+        "address": null,
+        "moment": null,
+        "verdict": "Perfect for festive group dining with revolving trays.",
+        "dishes": [
+          "crispy lobster dumplings with mango sauce",
+          "boiled chicken with sesame and peanuts",
+          "roasted duck",
+          "soft-shell crab"
+        ],
+        "confident": false,
+        "why": "Topjaw reviewed this restaurant with his own detailed opinions about the atmosphere, service style, and dishes suitable for groups. On screen at 0:12: \"THE DRAPERS ARMS\" (The sign shows the actual venue name \"THE DRAPERS ARMS\" while the audio reference to \"Phoenix Palace\" appears to be a mishearing or misidentification.)",
+        "onScreen": "THE DRAPERS ARMS",
+        "onScreenAt": "0:12",
+        "onScreenDiffers": true
+      }
+    ]
+  },
+  {
+    "videoId": "jdbAyu0Dkgg",
+    "title": "They say ‘never meet your idols’… unless it’s Danny De Vito. What a hero 🙌🫶",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "ROUTE 66",
+        "at": "0:04",
+        "kind": "other",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Wolf's Den",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Wolf's Den",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "Danny DeVito described this restaurant but Topjaw did not visit or eat there themselves.",
+        "moment": null,
+        "candidates": [
+          {
+            "id": "ccd0ef75a250",
+            "name": "WOLF",
+            "address": "110 Stoke Newington High Street, N16 7NY"
+          },
+          {
+            "id": "8b3a4d8886b8",
+            "name": "Wolfs Cake",
+            "address": "136 Blenheim Road, HA2 7AA"
+          }
+        ]
+      },
+      {
+        "name": "Jersey Mike's",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Jersey Mike's",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "Danny DeVito ate here and mentioned it, but Topjaw did not visit or review it themselves.",
+        "moment": null,
+        "candidates": []
+      },
+      {
+        "name": "Canter's",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Canter's",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "Danny DeVito described this restaurant and his favourite sandwich there, but Topjaw did not visit or review it themselves.",
+        "moment": null,
+        "candidates": [
+          {
+            "id": "31421e4545ab",
+            "name": "Manteca",
+            "address": "58-59 Great Marlborough St, W1F 7HQ"
+          },
+          {
+            "id": "676f48367f67",
+            "name": "Carters",
+            "address": "74 High St, SE25 6EB"
+          },
+          {
+            "id": "3bfb21a795d4",
+            "name": "Lantern",
+            "address": "21 Clerkenwell Rd, EC1M 5RD"
+          },
+          {
+            "id": "ff3523437d5b",
+            "name": "manteca",
+            "address": "49-51 Curtain Rd, EC2A 3PT"
+          },
+          {
+            "id": "95261a4baaf9",
+            "name": "O Picante",
+            "address": "3-4, Sudbury Heights Ave, UB6 0NA"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "videoId": "_UL8vvGkuNg",
+    "title": "Never heard of this kind of commitment to a Chinese takeaway Ashley Walters 😂",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "Tasty House",
+        "at": "0:24",
+        "kind": "other",
+        "matched": "Tasty House"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Tasty House",
+        "location": "Mark Hill, south-east London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "A guest (Ashley Walters) raved about their fried chicken, fried duck on fried rice with egg, and special barbecue sauce—so committed they had it delivered by taxi even after moving away from London, spending £150-200 per delivery.",
+        "originalName": "Tasty House",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "fd790a890c07",
+        "area": "Camberwell/Peckham area",
+        "address": null,
+        "verdict": "",
+        "dishes": [
+          "Fried chicken",
+          "Fried duck on fried rice with egg",
+          "Special barbecue sauce",
+          "Chili oil"
+        ],
+        "confident": true,
+        "why": "This is a guest's personal recommendation and testimony about their own favourite place, not Topjaw's own first-hand review.",
+        "moment": null,
+        "onScreen": "Tasty House",
+        "onScreenAt": "0:24",
+        "onScreenDiffers": false
+      }
+    ]
+  },
+  {
+    "videoId": "en-GHKs7YS4",
+    "title": "Gemma Chan with her Best of #London",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "YO-CHI",
+        "at": "0:28",
+        "kind": "sign",
+        "matched": "Equal Parts"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "A. Wong",
+        "location": null,
+        "rating": 10,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Topjaw was taken to this restaurant and reviews it as the best in London. They had a 10-course dim sum lunch with unexpected, delicious dishes including a dessert that looks like mahjong tiles.",
+        "originalName": "A.Wong",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "eaa8992f1269",
+        "area": null,
+        "address": null,
+        "verdict": "Best restaurant in London with outstanding dim sum.",
+        "dishes": [
+          "10-course dim sum lunch"
+        ],
+        "confident": true,
+        "why": "Clear first-hand review by Topjaw of a restaurant they visited.",
+        "moment": null
+      },
+      {
+        "name": "Hearth",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw reviews this place as having the best burger (technically called a meat roll). They praise the great quality that makes you salivate.",
+        "originalName": "The Heart",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "457a74f9fe44",
+        "area": null,
+        "address": null,
+        "verdict": "Best burger/meat roll, excellent quality.",
+        "dishes": [
+          "meat roll/burger"
+        ],
+        "confident": false,
+        "why": "Extracted name 'The Heart' likely refers to 'Hearth'; confident place matches but name extraction may be inaccurate.",
+        "moment": null,
+        "candidates": [
+          {
+            "id": "457a74f9fe44",
+            "name": "Hearth",
+            "address": "Unit 30, 86B Wallis Rd, E9 5LN"
+          },
+          {
+            "id": "7d71b5ede24a",
+            "name": "Earth",
+            "address": ""
+          },
+          {
+            "id": "1543ef140aa7",
+            "name": "Cake Art",
+            "address": "240 Worple Rd, TW18 1HE"
+          },
+          {
+            "id": "dbf83c8d7f3c",
+            "name": "Safe Art",
+            "address": "181 Uxbridge Road, W13 8"
+          },
+          {
+            "id": "1890b5897d77",
+            "name": "The Golden Heart",
+            "address": "110 Commercial St, E1 6LZ"
+          }
+        ]
+      },
+      {
+        "name": "Le Swine",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw reviews this place as known for their great bacon sandwich, worth standing in line for.",
+        "originalName": "Swine",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "1b6e328c5439",
+        "area": null,
+        "address": null,
+        "verdict": "Best bacon sandwich, worth queuing for.",
+        "dishes": [
+          "bacon sandwich"
+        ],
+        "confident": true,
+        "why": "Clear first-hand review of a restaurant Topjaw visited.",
+        "moment": null
+      },
+      {
+        "name": "Imperial China",
+        "location": "Lyle Street",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw reviews this family dim sum spot as the most underrated, unpretentious with no frills and great food.",
+        "originalName": "Imperial China",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "b6fea3cba335",
+        "area": null,
+        "address": null,
+        "verdict": "Most underrated, unpretentious family dim sum spot.",
+        "dishes": [
+          "family dim sum"
+        ],
+        "confident": false,
+        "why": "Location given as Lyle Street but candidate place is on Lisle St; may be different branch or location mismatch.",
+        "moment": null,
+        "candidates": [
+          {
+            "id": "2c2281e427fc",
+            "name": "Imperial China",
+            "address": "196-198 Stanley Rd, TW11 8UE"
+          },
+          {
+            "id": "b6fea3cba335",
+            "name": "Imperial China",
+            "address": "25a White Bear Yard, Lisle St, WC2H 7BA"
+          },
+          {
+            "id": "3311e5335f91",
+            "name": "Imperial Chef",
+            "address": "34 Brookwood Road, SW18 5BP"
+          },
+          {
+            "id": "6537231cde6b",
+            "name": "The Imperial",
+            "address": "5 Leicester St, WC2H 7BL"
+          },
+          {
+            "id": "30cfce4cea0b",
+            "name": "Imperial Cafe",
+            "address": "238 Imperial Dr, HA2 7HJ"
+          }
+        ]
+      },
+      {
+        "name": "Equal Parts",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw reviews this speakeasy bar as having great cocktails, an amazing vinyl collection, and a bartender who chooses the music himself.",
+        "originalName": "Equal Parts",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "b71ef3bb8f8a",
+        "area": null,
+        "address": null,
+        "verdict": "Great cocktails, amazing vinyl, bartender-curated music.",
+        "dishes": [
+          "cocktails"
+        ],
+        "confident": false,
+        "why": "Clear first-hand review of a bar Topjaw visited. On screen at 0:28: \"YO-CHI\" (The on-screen sign \"YO-CHI\" at 0:28 is a specific business name that directly identifies the place being reviewed, whereas \"Equal Parts\" appears to be a mishearing or alternate reference.)",
+        "moment": null,
+        "onScreen": "YO-CHI",
+        "onScreenAt": "0:28",
+        "onScreenDiffers": true
+      },
+      {
+        "name": "Sushisamba",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw reviews this as the best date in London with a pleasant, romantic and calm atmosphere that is not pretentious.",
+        "originalName": "SUSHISAMBA",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "e7331102f456",
+        "area": null,
+        "address": null,
+        "verdict": "Best date spot, romantic, calm, unpretentious.",
+        "dishes": [],
+        "confident": true,
+        "why": "Clear first-hand review of a restaurant Topjaw visited.",
+        "moment": null
+      },
+      {
+        "name": "Blanchette",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw reviews this as the best place to eat alone, with olives and dry sausage made in the style of their mother's kitchen in Normandy.",
+        "originalName": "Blanchette",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "61754c3eab6b",
+        "area": null,
+        "address": null,
+        "verdict": "Best place to eat alone, Normandy-style food.",
+        "dishes": [
+          "olives",
+          "dry sausage"
+        ],
+        "confident": false,
+        "why": "Clear first-hand review of a restaurant Topjaw visited. On screen at 0:28: \"YO-CHI\" (The sign \"YO-CHI\" shown at 0:28 is the actual place name, which is the better name than the heard \"Blanchette.\")",
+        "moment": null,
+        "onScreen": "YO-CHI",
+        "onScreenAt": "0:28",
+        "onScreenDiffers": true
+      },
+      {
+        "name": "Dumpling Shack",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw reviews this as the best price, with four xiaolongbao for £6.50, describing them as probably humanity's best invention in the field of food.",
+        "originalName": "Dumpling Shack",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "26d3c7358d25",
+        "area": null,
+        "address": null,
+        "verdict": "Best price, exceptional xiaolongbao value.",
+        "dishes": [
+          "xiaolongbao"
+        ],
+        "confident": true,
+        "why": "Clear first-hand review of a restaurant Topjaw visited.",
+        "moment": null
+      }
+    ]
+  },
+  {
+    "videoId": "rznMG28ZuBI",
+    "title": "Declaring war on google reviews, one mindless rating at a time.",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "SPILLBOAT BAR",
+        "at": "0:00",
+        "kind": "sign",
+        "matched": "Speedboat Bar"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Speedboat Bar",
+        "location": "Soho",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw highly praised the Bangkok-style Thai-Chinese cuisine (Yaowarat Street style), defending it against a negative one-star review. He highlighted the complex, flavorful dishes and authentic textures.",
+        "originalName": "Speedboat Bar",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "5122baae3ac8",
+        "area": "Soho",
+        "address": "30 Rupert Street, Soho, London, W1D 6DL",
+        "verdict": "Incredible Bangkok-style Thai cuisine defending against bad Google review.",
+        "dishes": [
+          "Prawn Ceviche",
+          "Sweetcorn Fritters",
+          "Crispy Pork with Prik Nam Som",
+          "Tom Yam Mama Noodles with Squid, Pork & Prawn",
+          "Crispy Egg Noodles",
+          "Seafood with Chilli Jam",
+          "Minced Beef with Holy Basil",
+          "Fried Eggs",
+          "Beer Tower"
+        ],
+        "confident": false,
+        "why": "Topjaw personally visited, ate multiple dishes, and gave detailed praise for the restaurant in response to a poor Google review. On screen at 0:00: \"SPILLBOAT BAR\" (The sign shows the actual name is \"Spillboat Bar\" (not \"Speedboat Bar\" as heard), which is a direct name for this place.)",
+        "moment": null,
+        "onScreen": "SPILLBOAT BAR",
+        "onScreenAt": "0:00",
+        "onScreenDiffers": true
+      }
+    ]
+  },
+  {
+    "videoId": "ZLMF2yyncog",
+    "title": "@gordonramsay  on Bourdain and his rarely spoken about failures. Bourdain, the 🐐",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "Smithfield Market",
+        "at": "0:52",
+        "kind": "other",
+        "matched": "Smithfield Market"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Smithfield Market",
+        "location": "Smithfield",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Smithfield Market",
+        "keep": false,
+        "reason": "only_mentioned",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "Gordon Ramsay mentions having breakfast at Smithfield Market with Anthony Bourdain, but this is his anecdote about Bourdain, not Topjaw's own review of the market. Topjaw is not the creator of this video.",
+        "moment": "0:49",
+        "onScreen": "Smithfield Market",
+        "onScreenAt": "0:52",
+        "onScreenDiffers": false
+      }
+    ]
+  },
+  {
+    "videoId": "59hRoXClRNY",
+    "title": "The first in our series of lobbing darts at the map, to then try and find that cuisine in London.",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "Karibuni Zanzibar",
+        "at": "0:24",
+        "kind": "sign",
+        "matched": "Karibuni Zanzibar"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Karibuni Zanzibar",
+        "location": "Barking",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw visited and was genuinely impressed with the authentic Zanzibar cuisine. He praised the owner Salem and particularly the lamb biryani.",
+        "originalName": "Karibuni Zanzibar",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Barking",
+        "address": "2-4 East St, Barking, IG11 8EU",
+        "verdict": "Genuine discovery with impressive authentic Zanzibar cuisine.",
+        "dishes": [
+          "lamb biryani",
+          "grilled chicken",
+          "urojo soup",
+          "chapati"
+        ],
+        "confident": true,
+        "why": "Topjaw personally visited, ate and gave his own positive first-hand opinion; the address in the description matches the on-screen text.",
+        "moment": null,
+        "onScreen": "Karibuni Zanzibar",
+        "onScreenAt": "0:24",
+        "onScreenDiffers": false
+      }
+    ]
+  },
+  {
+    "videoId": "_EKxnPRcQUA",
+    "title": "Father & son working together to serve delicious Japanese cuisine for quite unbelievable value.",
+    "sponsored": false,
+    "graphics": [],
+    "restaurants": [
+      {
+        "name": "SASA",
+        "location": "St John St",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Father and son serving delicious Japanese cuisine for unbelievable value.",
+        "originalName": "SASA",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": null,
+        "address": "370 St John St, London EC1V 4NN",
+        "verdict": "Excellent value Japanese cuisine run by father and son.",
+        "dishes": [],
+        "confident": true,
+        "why": "The video title and description focus on Topjaw's own experience at this specific restaurant with the address provided in the description.",
+        "moment": null
+      }
+    ]
+  },
+  {
+    "videoId": "c2BhQqrQyfo",
+    "title": "Asma Khan cooks the food of Kolkata & her Mughlai family heritage. A ‘curry house’ this spot is not.",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "FAUZANA KHAN",
+        "at": "0:44",
+        "kind": "title_card",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Darjeeling Express",
+        "location": "36-40 Rupert St, Soho",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw visits this restaurant run by Asma Khan to explore the food of Kolkata and Mughlai family heritage. The video describes it as a tribute to the women across India who preserved family recipes, and emphasizes it is not a typical curry house.",
+        "originalName": "Darjeeling Express",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "f78a045aa362",
+        "area": null,
+        "address": "36-40 Rupert St, W1D 6DW",
+        "verdict": "Beautiful tribute to Indian women and family recipes.",
+        "dishes": [],
+        "confident": true,
+        "why": "Topjaw's own video focuses on visiting Darjeeling Express with Asma Khan cooking and discussing her restaurant and heritage cuisine.",
+        "moment": null,
+        "knownPlace": true
+      }
+    ]
+  },
+  {
+    "videoId": "Bi6ZoveuF6I",
+    "title": "Everyone’s gonna be talking about Saawaros. Phenomenal Thai food in a hidden space.",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "THE ALBERT ARMS",
+        "at": "0:12",
+        "kind": "sign",
+        "matched": "Saawaros"
+      },
+      {
+        "text": "Pad Kra Pao",
+        "at": "0:36",
+        "kind": "other",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Saawaros",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw reviews phenomenal Thai food in a hidden space with essential dishes including Thai dressed oyster, chicken toast & satay dip, fish sauce caramel glazed XL wings, Northern Thai beef tartare, Thai herb dressed crispy egg salad, crispy pork belly with wok-fried garlic & chilli, and pad krapao glazed beef short rib.",
+        "originalName": "Saawaros",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "moment": null,
+        "verdict": "Phenomenal Thai food in a hidden space.",
+        "dishes": [
+          "Thai dressed oyster",
+          "Chicken toast & satay dip",
+          "Fish sauce caramel glazed XL wings",
+          "Northern Thai beef tartare",
+          "Thai herb dressed crispy egg salad",
+          "Crispy pork belly, wok-fried garlic & chilli",
+          "Pad krapao glazed beef short rib"
+        ],
+        "confident": false,
+        "why": "No candidate places match Saawaros; the on-screen graphics show The Albert Arms and Pad Kra Pao but these don't match the restaurant name or the candidates provided.",
+        "candidates": [
+          {
+            "id": "e65aa5c038a8",
+            "name": "Tia Rosa",
+            "address": "118 King's Cross Rd, WC1X 9DS"
+          },
+          {
+            "id": "3afb19526909",
+            "name": "Barossa",
+            "address": "277 New Kings Rd., SW6 4RD"
+          }
+        ],
+        "onScreen": "THE ALBERT ARMS",
+        "onScreenAt": "0:12",
+        "onScreenDiffers": false
+      }
+    ]
+  },
+  {
+    "videoId": "biiLudgAQN4",
+    "title": "You could easily walk past this place and never know the magic that lies within.",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "Grace Dent on Topjaw",
+        "at": "0:04",
+        "kind": "other",
+        "matched": null
+      },
+      {
+        "text": "AXOR",
+        "at": "0:52",
+        "kind": "sign",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Akoko",
+        "location": "Fitzrovia",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw describes it as one of their favourite meals of the year. The video emphasizes it's a place easily walked past that holds special magic within.",
+        "originalName": "Akoko",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "b2dad827cf1a",
+        "area": "Fitzrovia",
+        "address": "21 Berners St, W1T 3LP",
+        "verdict": "One of Topjaw's favourite meals of the year.",
+        "dishes": [],
+        "confident": true,
+        "why": "Topjaw gives their own first-hand opinion of this restaurant they visited.",
+        "moment": null
+      }
+    ]
+  },
+  {
+    "videoId": "Z8ivg4lfdpQ",
+    "title": "Probably the most embarrassed I’ve ever felt while filming…",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "APHRODITE TAVERNA",
+        "at": "0:16",
+        "kind": "sign",
+        "matched": "Aphrodite Taverna"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Aphrodite Taverna",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Pantelis himself serves big portions of Greek classics. The creator felt embarrassed while filming there but describes it as a wonderful spot.",
+        "originalName": "Aphrodite Taverna",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "b786927fc9fd",
+        "area": null,
+        "address": null,
+        "verdict": "Wonderful spot with big portions of Greek classics.",
+        "dishes": [
+          "Greek classics"
+        ],
+        "confident": true,
+        "why": "Topjaw personally visited and reviewed the restaurant, with the name confirmed by the on-screen text and candidate place match.",
+        "moment": null,
+        "onScreen": "APHRODITE TAVERNA",
+        "onScreenAt": "0:16",
+        "onScreenDiffers": false
+      }
+    ]
+  },
+  {
+    "videoId": "-VYZeAksjMM",
+    "title": "London’s best hotel room?",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "Claridge's",
+        "at": "0:00",
+        "kind": "other",
+        "matched": "Claridges Hotel"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Claridge's Hotel",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Claridges Hotel",
+        "keep": false,
+        "reason": "not_a_place_to_eat",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "A hotel room is not a place to eat; the video reviews a luxury bedroom, not a restaurant or food venue.",
+        "moment": null,
+        "onScreen": "Claridge's",
+        "onScreenAt": "0:00",
+        "onScreenDiffers": false
+      }
+    ]
+  },
+  {
+    "videoId": "zAjWz5f4Ivs",
+    "title": "Show me another pub that’s producing food as exceptional as The Red Lion & Sun.",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "pancetta and bone",
+        "at": "0:12",
+        "kind": "other",
+        "matched": null
+      },
+      {
+        "text": "Run by the lovely Heath,",
+        "at": "0:32",
+        "kind": "other",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Red Lion and Sun",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Run by Heath for 20 years with meticulous attention to detail. Topjaw recommends the Sticky Iberico Pork Ribs, Beef cheek Pancetta & Bone Marrow Pie, and Chicken Schnitzel.",
+        "originalName": "The Red Lion & Sun",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "b776c3fea342",
+        "area": null,
+        "address": null,
+        "verdict": "Exceptional food, proper publican with keen eye for detail.",
+        "dishes": [
+          "Sticky Iberico Pork Ribs",
+          "Beef cheek, Pancetta & Bone Marrow Pie",
+          "Chicken Schnitzel",
+          "Frozen Margs"
+        ],
+        "confident": true,
+        "why": "The video is Topjaw's own review of this pub, featured in the title and description with specific dish recommendations.",
+        "moment": null
+      }
+    ]
+  },
+  {
+    "videoId": "ecL1QPZG7Hw",
+    "title": "London is lucky to have Asma Khan’s Darjeeling Express. Authentic Indian home cooking.",
+    "sponsored": false,
+    "graphics": [],
+    "restaurants": [
+      {
+        "name": "Darjeeling Express",
+        "location": "Rupert St",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw reviewed Asma Khan's authentic Indian home cooking restaurant. Loved multiple dishes including Prawn Malaikari, Kosha Mangsho, Chicken Chaap, Badami Banian, Matira Curry, Chicken Butter Masala Toastie, and Pan Fried Momos.",
+        "originalName": "Darjeeling Express",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "f78a045aa362",
+        "area": null,
+        "address": "36-40 Rupert St, W1D 6DW",
+        "moment": null,
+        "verdict": "Authentic Indian home cooking, excellent dishes.",
+        "dishes": [
+          "Prawn Malaikari",
+          "Kosha Mangsho",
+          "Chicken Chaap",
+          "Badami Banian",
+          "Matira Curry",
+          "Chicken Butter Masala Toastie",
+          "Pan Fried Momos"
+        ],
+        "confident": true,
+        "why": "Description and title clearly indicate Topjaw reviewed this restaurant. Address in description matches the first candidate place exactly.",
+        "knownPlace": true
+      }
+    ]
+  },
+  {
+    "videoId": "BPPzCgNdFdU",
+    "title": "Head Chef at Half Cut Market, Aidan Richardson-Dawkins, with his Best of #London",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "Ikoyi, The Strand",
+        "at": "0:44",
+        "kind": "other",
+        "matched": null
+      },
+      {
+        "text": "Pepper & Spice, Dalston",
+        "at": "0:52",
+        "kind": "other",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Half Cut Market",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Half Cut Market",
+        "keep": false,
+        "reason": "not_a_place_to_eat",
+        "placeId": "fec53d4dd511",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "Half Cut Market is an event or market venue, not a restaurant where Topjaw ate and reviewed food.",
+        "moment": null
+      }
+    ]
+  },
+  {
+    "videoId": "cRZdl4skg9E",
+    "title": "📍 Triple Hot Spicy, 20 Strutton Ground, London, SW1P 2HP",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "esianf",
+        "at": "0:08",
+        "kind": "sign",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Triple Hot Spicy",
+        "location": "Strutton Ground, SW1P 2HP",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw visited and praised the food. The owner explained customers fall in love with his cooking once they try it.",
+        "originalName": "Triple Hot Spicy",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": null,
+        "address": "20 Strutton Ground, London, SW1P 2HP",
+        "verdict": "Beef rendang, ayam penet, and soto are outstanding.",
+        "dishes": [
+          "Beef rendang curry",
+          "Ayam penet (Fried Chicken Mango Chilli)",
+          "Soto (Chicken and rice soup)"
+        ],
+        "confident": false,
+        "why": "The video title and description give a specific address (20 Strutton Ground) that doesn't match either candidate place; the candidates may be outdated or wrong branches, so placeId cannot be confirmed.",
+        "moment": null,
+        "candidates": [
+          {
+            "id": "8fb21a818273",
+            "name": "Triple Hot Spicy",
+            "address": "23-25 Queensway, W2 4QJ"
+          },
+          {
+            "id": "3e4615c64f85",
+            "name": "Hot 'n' Spicy",
+            "address": "72 Coldharbour Ln, UB3 3ES"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "videoId": "FPLTsVTDo0U",
+    "title": "The people’s champ @dinnerbyben  with his Best of #London",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "Brut's",
+        "at": "0:00",
+        "kind": "other",
+        "matched": null
+      },
+      {
+        "text": "Brut's Research Team",
+        "at": "0:04",
+        "kind": "other",
+        "matched": null
+      },
+      {
+        "text": "Quo Vadis, Soho",
+        "at": "0:44",
+        "kind": "other",
+        "matched": null
+      },
+      {
+        "text": "40 Maltby Street, Bermondsey",
+        "at": "0:52",
+        "kind": "other",
+        "matched": "Dinner by Ben"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Dinner by Ben",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Dinner by Ben",
+        "keep": false,
+        "reason": "guest_own_place",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "The video title references '@dinnerbyben' as 'the people's champ' suggesting this is the guest's own restaurant being introduced, not Topjaw's own review. On screen at 0:52: \"40 Maltby Street, Bermondsey\" (The address provides the specific location of \"Dinner by Ben\" at Maltby Street, which is better than the brand name \"Brut's\".)",
+        "moment": null,
+        "candidates": [
+          {
+            "id": "7b8915bf9f50",
+            "name": "Dinner Box",
+            "address": "584 Longbridge Rd, RM8 2AR"
+          },
+          {
+            "id": "f5ffa0dabbe2",
+            "name": "Dinner Box",
+            "address": "25 Pound Ln, KT19 8RY"
+          },
+          {
+            "id": "c0660a6b4492",
+            "name": "The Dinner Box",
+            "address": "28 Trinity Road, SW17 7RE"
+          },
+          {
+            "id": "11ee5c90b4df",
+            "name": "The Diners Inn",
+            "address": "206 High St, BR1 1PW"
+          },
+          {
+            "id": "8d0faff53c12",
+            "name": "Winner",
+            "address": "3 Westmoreland Rd, SE17 2AX"
+          }
+        ],
+        "onScreen": "40 Maltby Street, Bermondsey",
+        "onScreenAt": "0:52",
+        "onScreenDiffers": true
+      }
+    ]
+  },
+  {
+    "videoId": "pu2NQApezCg",
+    "title": "I Took Chef Adam Byatt to 3 Italian Restaurants in London",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "LECARE",
+        "at": "0:40",
+        "kind": "title_card",
+        "matched": "Legare"
+      },
+      {
+        "text": "3IG SHAD THAMES",
+        "at": "0:40",
+        "kind": "title_card",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Legare",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "mixed",
+        "notes": "Topjaw's contemporary choice for the trio of Italian restaurants. Adam Byatt was taken here as the first stop to review this contemporary Italian approach.",
+        "originalName": "Legare",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "5863d7363e50",
+        "area": "Tower Bridge",
+        "address": "31G Shad Thames, SE1 2YR",
+        "moment": "0:33",
+        "verdict": "Contemporary Italian restaurant visited with chef Adam Byatt.",
+        "dishes": [],
+        "confident": true,
+        "why": "Topjaw visited and reviewed the restaurant with chef guest Adam Byatt; on-screen text confirms address (31G Shad Thames).",
+        "onScreen": "LECARE",
+        "onScreenAt": "0:40",
+        "onScreenDiffers": false
+      },
+      {
+        "name": "Osteria Angelina",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "mixed",
+        "notes": "Described as the wildcard option among the three very different approaches to Italian food. Adam Byatt was taken here as the second stop.",
+        "originalName": "Osteria Angelina",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "36f48fb0b65e",
+        "area": null,
+        "address": null,
+        "moment": "6:52",
+        "verdict": "Wildcard Italian restaurant with unconventional approach visited together.",
+        "dishes": [],
+        "confident": true,
+        "why": "Topjaw visited and reviewed the restaurant with chef guest Adam Byatt; described in chapters as the wildcard stop."
+      },
+      {
+        "name": "2 Veneti",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "mixed",
+        "notes": "Traditional Italian restaurant chosen as the more traditional approach to Italian cuisine. Adam Byatt was taken here as the final stop.",
+        "originalName": "2 Veneti",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "80d5fe49f6c8",
+        "area": null,
+        "address": null,
+        "moment": "14:14",
+        "verdict": "Traditional Venetian cuisine restaurant visited as final stop.",
+        "dishes": [],
+        "confident": true,
+        "why": "Topjaw visited and reviewed the restaurant with chef guest Adam Byatt; described in chapters as traditional Venetian stop."
+      }
+    ]
+  },
+  {
+    "videoId": "pQNYq7irrJ4",
+    "title": "Guess who’s back… Knife Edge, Season 2, is streaming on @appletv now!",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "PHUCKIN",
+        "at": "0:32",
+        "kind": "other",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Knife Edge",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Knife Edge",
+        "keep": false,
+        "reason": "only_mentioned",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "The video is a promotional trailer for a TV show, not a food review. Topjaw is not reviewing this restaurant but promoting the streaming series.",
+        "moment": null,
+        "candidates": [
+          {
+            "id": "0f85d0d0b20d",
+            "name": "Knife",
+            "address": "160 Clapham Park Rd, SW4 7DE"
+          },
+          {
+            "id": "550a3f4fa40b",
+            "name": "The Edge",
+            "address": "11 Soho Sq, W1D 3QE"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "videoId": "jtFMLPZIwZ4",
+    "title": "I Took Gordon Ramsay To My Favourite Restaurant in London",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "CAMILLE",
+        "at": "0:16",
+        "kind": "title_card",
+        "matched": "Camille"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Camille",
+        "location": "Borough Market",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw describes it as one of their favourite restaurants in London. French-inspired bistro led by chef Elliot Hashtroudi, featuring rustic, seasonal, produce-led cooking with an ever-changing specials board and nose-to-tail cuisine.",
+        "originalName": "Camille",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "a4402b9a4f8d",
+        "area": "Borough Market",
+        "address": "2 Stoney St, SE1 9AA",
+        "verdict": "One of Topjaw's favourite London restaurants; excellent food.",
+        "dishes": [
+          "oysters",
+          "eel",
+          "brains",
+          "hearts",
+          "sweetbreads"
+        ],
+        "confident": true,
+        "why": "Topjaw personally visited with Gordon Ramsay and gave their own detailed opinion throughout the video of this restaurant they love.",
+        "moment": "0:00",
+        "onScreen": "CAMILLE",
+        "onScreenAt": "0:16",
+        "onScreenDiffers": false
+      }
+    ]
+  },
+  {
+    "videoId": "tyNzSJqeAzQ",
+    "title": "Kismet is bringing the magic of Istanbul’s meyhane culture to London.",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "Kismet",
+        "at": "0:08",
+        "kind": "other",
+        "matched": "Kismet"
+      },
+      {
+        "text": "ROUGH + ORE",
+        "at": "0:16",
+        "kind": "sign",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Kismet",
+        "location": "Bedale Street, SE1",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Turkish meyhane bringing Istanbul's culture to London with slow smoked kebabs and generous feasting. Run by Chef Keiran and Dom Hamdy.",
+        "originalName": "Kismet",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": null,
+        "address": "8 Bedale St, London, SE1 9AL",
+        "verdict": "Turkish meyhane with slow smoked kebabs, generous feasting.",
+        "dishes": [
+          "slow smoked kebabs"
+        ],
+        "confident": true,
+        "why": "Topjaw visited and reviewed Kismet directly, as evidenced by the on-screen branding and description of the food and atmosphere.",
+        "moment": null,
+        "onScreen": "Kismet",
+        "onScreenAt": "0:08",
+        "onScreenDiffers": false
+      }
+    ]
+  },
+  {
+    "videoId": "ie___09buJ8",
+    "title": "Head Chef & Owner of Homies on Donkeys, Smokey Bautista, with his Best of #London",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "The Flowerpot, Walthamstow",
+        "at": "0:12",
+        "kind": "title_card",
+        "matched": "Homies on Donkeys"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Homies on Donkeys",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Homies on Donkeys",
+        "keep": false,
+        "reason": "guest_own_place",
+        "placeId": "c83f4bd9415e",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "The video features Smokey Bautista, the Head Chef & Owner of Homies on Donkeys, being introduced through the restaurant he owns rather than Topjaw reviewing it. On screen at 0:12: \"The Flowerpot, Walthamstow\" (The on-screen title card shows the actual name of the place, which is different from what was heard (\"Homies on Donkeys\"), revealing the true establishment being reviewed.)",
+        "moment": null,
+        "onScreen": "The Flowerpot, Walthamstow",
+        "onScreenAt": "0:12",
+        "onScreenDiffers": true
+      }
+    ]
+  },
+  {
+    "videoId": "p_qPH5WAoUs",
+    "title": "London has a new Indian restaurant… and this one’s different.",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "Gulnar",
+        "at": "0:08",
+        "kind": "other",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Oudh 1722",
+        "location": "Borough",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Chef Atkar Islam's new Indian restaurant following his 2 Michelin Star success at Opheem in Birmingham. Topjaw recommends the poppadoms, Malai murgh, Lasooni jinga, and the Gulnar curry.",
+        "originalName": "Oudh 1722",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Borough",
+        "address": "66 Union St, London SE1 1TD",
+        "verdict": "New Indian restaurant with essential dishes.",
+        "dishes": [
+          "poppadoms",
+          "Malai murgh",
+          "Lasooni jinga",
+          "Gulnar curry"
+        ],
+        "confident": true,
+        "why": "No candidate places provided; cannot verify placeId or confirm if Topjaw visited and ate there personally without seeing the video content.",
+        "moment": null,
+        "knownPlace": true
+      }
+    ]
+  },
+  {
+    "videoId": "LbgMY6Xu2jI",
+    "title": "London’s Best Food Deliveries: Where Chefs Eat",
+    "sponsored": true,
+    "graphics": [
+      {
+        "text": "FOOD HALL",
+        "at": "0:08",
+        "kind": "sign",
+        "matched": null
+      },
+      {
+        "text": "MUSE",
+        "at": "0:36",
+        "kind": "title_card",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Aphrodite Taverna",
+        "location": "Notting Hill",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tom Aikens' recommended delivery order. Topjaw visited, tried multiple dishes including halloumi, moussaka, and whole grilled sea bass. Greek taverna established 31 years ago with authentic atmosphere.",
+        "originalName": "Aphrodite",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "b786927fc9fd",
+        "area": "Notting Hill",
+        "address": null,
+        "verdict": "Excellent authentic Greek classics and warm atmosphere.",
+        "dishes": [
+          "Halloumi",
+          "Moussaka",
+          "Whole grilled sea bass",
+          "Taramosalata",
+          "Tzatziki",
+          "Radish"
+        ],
+        "confident": true,
+        "why": "Topjaw personally visited and ate here, giving detailed descriptions of multiple dishes. Identified from candidate place matching the name and location.",
+        "moment": "0:54"
+      },
+      {
+        "name": "Tau Tau Jou",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Knox Majozi's favourite takeaway. Topjaw visited for first time and tried handmade dim sum including xiaolongbao, har gow, siu mai, char siu buns, XO turnip paste, and cheung fun. Opened in 2011 by Knox's parents.",
+        "originalName": "Tau Tau Jou",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "verdict": "Exceptional handmade dim sum, some of the best in London.",
+        "dishes": [
+          "Xiaolongbao (soup dumplings)",
+          "Har gow (prawn dumplings)",
+          "Siu mai",
+          "Char siu buns",
+          "XO turnip paste",
+          "Cheung fun with dough stick"
+        ],
+        "confident": false,
+        "why": "No candidate place found in the system; name from transcript is phonetically spelled but Topjaw clearly visited and reviewed it in detail with Knox.",
+        "moment": "4:46",
+        "candidates": []
+      },
+      {
+        "name": "Chelo",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Kavi Thakrar's choice for best delivery meal. Topjaw visited and ate Persian classics including Olivier salad, smoked aubergine, tahchin rice bake, koobideh kebabs, and lamb shoulder dishes. Run by Amir. Authentic Iranian preparation methods.",
+        "originalName": "Chello",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "dde9aaa00ef8",
+        "area": null,
+        "address": null,
+        "verdict": "Fantastic Persian food with authentic Iranian preparation methods.",
+        "dishes": [
+          "Olivier salad",
+          "Smoked aubergine",
+          "Tahchin (saffron rice bake)",
+          "Koobideh kebabs",
+          "Lamb shoulder",
+          "Lamb breast"
+        ],
+        "confident": true,
+        "why": "Topjaw personally visited, ate multiple dishes, and gave detailed descriptions. Matched to candidate 'Chelo' on Lauderdale Road.",
+        "moment": "7:47"
+      },
+      {
+        "name": "Babo Yemen",
+        "location": "Fulham",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "AJ Tracey's choice for meal-for-life. Topjaw visited and tried Yemeni cuisine including lamb soup, lamb over rice (mandi), fahsah meat stew (£13), Yemeni shakshuka, lamb zubaran, and muzhbac bread. Offers both table and floor seating.",
+        "originalName": "Babo Yemen",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Fulham",
+        "address": null,
+        "verdict": "Authentic Yemeni food with excellent value and passionate approach.",
+        "dishes": [
+          "Lamb soup",
+          "Mandi (lamb over rice)",
+          "Fahsah (lamb meat stew)",
+          "Yemeni shakshuka",
+          "Lamb zubaran",
+          "Muzhbac (bread stuffed with vegetables)"
+        ],
+        "confident": false,
+        "why": "No candidate place found; Topjaw clearly visited and reviewed it personally, but cannot confirm exact name or find match in system.",
+        "moment": "11:39",
+        "candidates": []
+      }
+    ]
+  },
+  {
+    "videoId": "B52dc8FpYLQ",
+    "title": "@NiallHoran likes eating so much, he’s written an album about it. Best of #London",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "แกงคั่นเป็ด",
+        "at": "0:08",
+        "kind": "menu",
+        "matched": null
+      },
+      {
+        "text": "Red Curry of D... with Makr... & Chilli (Gaeng-Kua-B... £19",
+        "at": "0:08",
+        "kind": "menu",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Kiln",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Niall loves the smoky flavor of coals and the vibe. He appreciates that it's not too big and recalls it being a hot restaurant when he first went there.",
+        "originalName": "Kiln",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "90842ba5a7e6",
+        "area": null,
+        "address": null,
+        "moment": "0:00",
+        "verdict": "Loves the smoky flavor and intimate vibe.",
+        "dishes": [],
+        "confident": true,
+        "why": "Niall gives his own opinion of a restaurant he has visited."
+      },
+      {
+        "name": "Memories of India",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Niall's favorite curry place. The owner has played his music and he has stayed there, saying 'the food is that good.'",
+        "originalName": "Memories of India",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "2dd691ad4c20",
+        "area": null,
+        "address": null,
+        "moment": "0:15",
+        "verdict": "Best curry place; food is excellent.",
+        "dishes": [],
+        "confident": false,
+        "why": "Niall gives his opinion but multiple candidate places exist; placeId chosen based on London location likelihood but needs verification.",
+        "candidates": [
+          {
+            "id": "007adec8bd90",
+            "name": "Memories of India",
+            "address": "160-162 Thornbury Road, TW7 4"
+          },
+          {
+            "id": "2dd691ad4c20",
+            "name": "Memories of India",
+            "address": "18 Gloucester Rd, SW7 4RB"
+          },
+          {
+            "id": "535abfebd8ca",
+            "name": "Empress of India",
+            "address": "42 Church Rd, UB5 5AB"
+          },
+          {
+            "id": "c6f32da0eda6",
+            "name": "Memories",
+            "address": "117 Beulah Rd, CR7 8JJ"
+          },
+          {
+            "id": "330451be6b4d",
+            "name": "Princess of India",
+            "address": "10 London Road, SM4 5"
+          }
+        ]
+      },
+      {
+        "name": "Sexy Fish",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "negative",
+        "notes": "Niall considers this the most overrated restaurant in London. He went for a work dinner and didn't feel it was sexy or fishy.",
+        "originalName": "Sexy Fish",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "6ca3ffe5ed71",
+        "area": null,
+        "address": null,
+        "moment": "0:30",
+        "verdict": "Most overrated in London; disappointing.",
+        "dishes": [],
+        "confident": true,
+        "why": "Niall gives his own negative opinion from a visit."
+      },
+      {
+        "name": "Speedboat",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Niall thinks this Thai place doesn't get talked about enough. They do very simple Thai dishes really well.",
+        "originalName": "Speedboat",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "5122baae3ac8",
+        "area": null,
+        "address": null,
+        "moment": "0:42",
+        "verdict": "Underrated Thai place; simple dishes done well.",
+        "dishes": [
+          "Thai dishes"
+        ],
+        "confident": false,
+        "why": "Niall gives opinion but two candidate Speedboats exist; placeId chosen but needs verification.",
+        "candidates": [
+          {
+            "id": "5122baae3ac8",
+            "name": "Speedboat Bar",
+            "address": "30 Rupert St, W1D 6DL"
+          },
+          {
+            "id": "67b7093e4155",
+            "name": "Speedboat Bar at The Electric",
+            "address": "191 Portobello Rd, W11 2ED"
+          }
+        ]
+      },
+      {
+        "name": "The Cow",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Niall's favorite bottle pub. It's old school with tankards hanging from the roof and circus vibes. They do amazing Guinness, prawns, seafood tower, and crab spaghetti.",
+        "originalName": "The Cow",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "c89cf58f2c11",
+        "area": null,
+        "address": null,
+        "moment": "1:04",
+        "verdict": "Best bottle pub; old school charm with great seafood.",
+        "dishes": [
+          "pint of Guinness",
+          "pint of prawns",
+          "seafood tower",
+          "crab spaghetti"
+        ],
+        "confident": true,
+        "why": "Niall gives detailed personal opinion of a pub he has visited."
+      },
+      {
+        "name": "The Waterman's Arms",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Best cocktail spot according to Niall. They do a unique take on an espresso martini with Bailey's that he describes as beautiful.",
+        "originalName": "The Waterman's Arms",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "d02d1a736b02",
+        "area": null,
+        "address": null,
+        "moment": "1:36",
+        "verdict": "Best cocktail spot; Bailey's espresso martini is beautiful.",
+        "dishes": [
+          "espresso martini with Bailey's"
+        ],
+        "confident": false,
+        "why": "Niall gives opinion but multiple candidate places exist; placeId chosen but needs verification.",
+        "candidates": [
+          {
+            "id": "d02d1a736b02",
+            "name": "The Waterman's Arms",
+            "address": "1 Glenaffric Ave, E14 3BW"
+          },
+          {
+            "id": "b7dfb4e56078",
+            "name": "The Watermans Arms",
+            "address": "1 Queens Rd, KT12 5LT"
+          },
+          {
+            "id": "932b1f2fab40",
+            "name": "The Watermans Arms",
+            "address": "1 Ferry Ln, TW8 0AW"
+          },
+          {
+            "id": "4470618faf8a",
+            "name": "The Waterman’s Arms",
+            "address": "375 Lonsdale Rd, SW13 9PY"
+          },
+          {
+            "id": "5b05831c9e36",
+            "name": "Watermans Richmond",
+            "address": "10 Water Ln, TW9 1TJ"
+          }
+        ]
+      },
+      {
+        "name": "Maureen's Kitchen",
+        "location": "Brixton",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "A jerk chicken place operating from someone's backyard. Niall is desperate to try it and appreciates the old school, mom and pop concept.",
+        "originalName": "Maureen's Kitchen",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "3090b2a06fee",
+        "area": "Brixton",
+        "address": null,
+        "moment": "1:51",
+        "verdict": "Desperate to try; old school jerk chicken.",
+        "dishes": [
+          "jerk chicken"
+        ],
+        "confident": true,
+        "why": "Niall expresses strong desire to visit based on concept; Maureen's Brixton Kitchen matches location given."
+      },
+      {
+        "name": "The Ivy",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "negative",
+        "notes": "Niall identifies this as the worst tourist trap in London.",
+        "originalName": "The Ivy",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "87b144635fbf",
+        "area": null,
+        "address": null,
+        "moment": "2:17",
+        "verdict": "Worst tourist trap in London.",
+        "dishes": [],
+        "confident": true,
+        "why": "Niall gives his own opinion calling it the worst tourist trap."
+      }
+    ]
+  },
+  {
+    "videoId": "QpUy4VXF6FA",
+    "title": "It’s been a long time coming, Chef Hasan Semay finally with his Best of #London",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "TOPJAW",
+        "at": "0:16",
+        "kind": "other",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Perilla",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Perilla",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "7481a4a7bf61",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "Chef Hasan Semay recommends it as his best restaurant but Topjaw doesn't review it themselves.",
+        "moment": "0:00"
+      },
+      {
+        "name": "As Above, So Below",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "As Above, So Below",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "Chef Hasan Semay recommends it; Topjaw doesn't visit or review it. No matching candidate place found.",
+        "moment": "0:05",
+        "candidates": [
+          {
+            "id": "71f1d99da431",
+            "name": "Levels Above The Rest",
+            "address": "Riverside Campus Secondary School Address:, Renwick Rd, IG11 0FU"
+          }
+        ]
+      },
+      {
+        "name": "Berenjak",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Berenjak",
+        "keep": false,
+        "reason": "only_mentioned",
+        "placeId": "67c828369322",
+        "area": "Soho",
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "Hasan says he is desperate to try it but hasn't been there yet; it's only mentioned, not reviewed.",
+        "moment": "0:26"
+      },
+      {
+        "name": "Padella",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "negative",
+        "notes": "",
+        "originalName": "Padella",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "a65d819ec29f",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "Chef Hasan Semay gives an opinion on this place but doesn't eat there in the video; it's his recommendation about an overrated restaurant.",
+        "moment": "0:37"
+      },
+      {
+        "name": "Tehrani",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Tehrani",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "4c2a511f1d7b",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "Chef Hasan Semay recommends it; Topjaw doesn't visit or review it. Candidate place is in Walton-on-Thames, not London.",
+        "moment": "0:58",
+        "candidates": [
+          {
+            "id": "4c2a511f1d7b",
+            "name": "Tehran Grill",
+            "address": "114 Oatlands Dr, KT13 9HL"
+          }
+        ]
+      },
+      {
+        "name": "Do Hands",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "mixed",
+        "notes": "",
+        "originalName": "Do Hands",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": null,
+        "area": "SW6",
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "Chef Hasan Semay mentions he queued but couldn't get pizza; Topjaw doesn't eat there or review it. No clear candidate match.",
+        "moment": "1:16",
+        "candidates": [
+          {
+            "id": "4f1ab1f8f0c7",
+            "name": "The Chandos",
+            "address": "29 St Martin's Ln, WC2N 4ER"
+          },
+          {
+            "id": "2ef99b8cbe5a",
+            "name": "The Chandos",
+            "address": "56 Brockley Rise, SE23 1LN"
+          },
+          {
+            "id": "61621ceccaf4",
+            "name": "Hand and Spear",
+            "address": "Old Heath Rd, KT13 8TX"
+          },
+          {
+            "id": "2290fb576e70",
+            "name": "Haandi",
+            "address": "HA8 7AX"
+          },
+          {
+            "id": "87a17bae28e0",
+            "name": "Hand and shears",
+            "address": "1 Middle St, EC1A 7JA"
+          }
+        ]
+      },
+      {
+        "name": "Yard Sale Pizza",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Yard Sale",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "3a7c82d6f957",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "Chef Hasan Semay recommends it as best pizza; Topjaw doesn't eat there or give their own opinion in the video.",
+        "moment": "1:21"
+      }
+    ]
+  },
+  {
+    "videoId": "5qBWFUxFtqY",
+    "title": "London’s Best Thai Restaurant with Niall Horan",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "PLAZA",
+        "at": "0:00",
+        "kind": "sign",
+        "matched": null
+      },
+      {
+        "text": "NIALL HORAN",
+        "at": "0:16",
+        "kind": "title_card",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Plaza Khao Gaeng",
+        "location": null,
+        "rating": 10,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Topjaw took Niall Horan to this Thai restaurant hidden on the first floor above a food court. It has a Michelin Bib Gourmand award for exceptional cooking at reasonable price. They ordered the Deep South Menu and other dishes including seabass.",
+        "originalName": "Plaza Khao Gaeng",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "d777ae8beccf",
+        "area": "Tottenham Court Road",
+        "address": null,
+        "moment": "0:17",
+        "verdict": "One of London's best Thai restaurants, beef massaman curry a masterpiece.",
+        "dishes": [
+          "Deep South Menu",
+          "Beef Massaman Curry",
+          "Khua Kling Muu",
+          "Morning Glory",
+          "Glass Noodles",
+          "Seabass"
+        ],
+        "confident": true,
+        "why": "Topjaw personally visited, ate the food, described dishes in detail, and gave his own opinion. Description and transcript confirm this is Plaza Khao Gaeng, and the on-screen text shows 'PLAZA'. The closest candidate place is the Tottenham Court Road branch on New Oxford Street."
+      }
+    ]
+  },
+  {
+    "videoId": "07-2arHKARc",
+    "title": "36 HOURS IN CLARIDGE'S HOTEL - Access All Areas Tour",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "CLARIDGES",
+        "at": "0:00",
+        "kind": "sign",
+        "matched": null
+      },
+      {
+        "text": "CLARIDGES",
+        "at": "0:40",
+        "kind": "sign",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Claridge's Bakery",
+        "location": "Claridge's Hotel, Mayfair",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw visited the bakery at Claridge's and sampled their classic British baked goods including Belgian buns with and without raisins, Marmite cheese cakes with seeds and fennel, and French fancies. He praised the quality and balance of flavors throughout.",
+        "originalName": "Claridge's Bakery",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Mayfair",
+        "address": null,
+        "moment": "1:49",
+        "verdict": "Excellent classic British baked goods with outstanding balance.",
+        "dishes": [
+          "Belgian buns",
+          "Marmite cheese cakes",
+          "French fancies"
+        ],
+        "confident": true,
+        "why": "Topjaw personally visited, ate items, and gave detailed opinions on the bakery during the 36-hour Claridge's access experience."
+      },
+      {
+        "name": "Dante",
+        "location": "Claridge's Hotel",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw dined at Dante, Claridge's restaurant, which collaborated with Dante from New York. He praised the standout dishes including tuna sashimi, veal Milanese, and buttery truffle pasta, noting that hotel restaurants rarely have such remarkably good food.",
+        "originalName": "Dante",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Mayfair",
+        "address": null,
+        "moment": "17:09",
+        "verdict": "Remarkably good food for a hotel restaurant; standouts excellent.",
+        "dishes": [
+          "Tuna sashimi",
+          "Veal Milanese",
+          "Truffle pasta"
+        ],
+        "confident": false,
+        "why": "Dante is confirmed as Claridge's restaurant in the transcript, but the candidate places provided (The Attendant, Dan Thai) do not match Dante at Claridge's; the correct placeId cannot be identified from the given candidates.",
+        "candidates": [
+          {
+            "id": "94f66977a6cd",
+            "name": "The Attendant",
+            "address": "27a Foley St, W1W 6DY"
+          },
+          {
+            "id": "7543fd455c3b",
+            "name": "Attendant",
+            "address": "55 Duke St, W1K 5NR"
+          },
+          {
+            "id": "06981b65e097",
+            "name": "Attendant",
+            "address": "E C4N"
+          },
+          {
+            "id": "087ddc5cc068",
+            "name": "The Attendant",
+            "address": "74 Great Eastern St, EC2A 3JL"
+          },
+          {
+            "id": "52a45801add2",
+            "name": "Dan Thai",
+            "address": "17 Purley Road, CR8 2HA"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "videoId": "AQXeO_v4Y_w",
+    "title": "Actor Charithra Chandran gives us her Best of #London",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "Lanzhou Lamian Noodle Bar, Covent Garden",
+        "at": "0:16",
+        "kind": "title_card",
+        "matched": "Lanzhou Lamian Noodle Bar"
+      },
+      {
+        "text": "Hoppers",
+        "at": "0:32",
+        "kind": "title_card",
+        "matched": "Hoppers"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Hoppers",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "mixed",
+        "notes": "",
+        "originalName": "Hoppers",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "f107f49a6c68",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "Charithra is recommending her favorite restaurant, not Topjaw reviewing his own visit.",
+        "moment": "0:00",
+        "onScreen": "Hoppers",
+        "onScreenAt": "0:32",
+        "onScreenDiffers": false
+      },
+      {
+        "name": "Roti King",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Roti King",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "d9404ecd512b",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "Charithra is recommending this for value, not Topjaw reviewing his own visit.",
+        "moment": "0:14"
+      },
+      {
+        "name": "Lanzhou Lamian Noodle Bar",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Lanzhou Lamian Noodle Bar",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "adef989681d1",
+        "area": "Covent Garden",
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "Charithra is recommending this, not Topjaw reviewing his own visit.",
+        "moment": "0:16",
+        "knownPlace": true,
+        "onScreen": "Lanzhou Lamian Noodle Bar, Covent Garden",
+        "onScreenAt": "0:16",
+        "onScreenDiffers": false
+      },
+      {
+        "name": "Artesian",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Artesian at The Langham",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "918455ad8b4c",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "Charithra is recommending her best cocktail spot, not Topjaw reviewing his own visit.",
+        "moment": "0:37"
+      },
+      {
+        "name": "The Secret Bar",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "The secret bar under the Hippodrome",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "515481fd794f",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "Charithra is recommending the secret bar under the Hippodrome; placeId is uncertain as it may not be the right location.",
+        "moment": "0:42",
+        "candidates": [
+          {
+            "id": "515481fd794f",
+            "name": "The Secret Bar",
+            "address": "28 Totterdown Street, SW17 8TA"
+          }
+        ]
+      },
+      {
+        "name": "Kricket",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Kricket",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "c0e623e796c1",
+        "area": "Soho",
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "Charithra is giving curry recommendations/shout-outs, not Topjaw reviewing his own visit.",
+        "moment": "1:03"
+      },
+      {
+        "name": "Darjeeling Express",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Darjeeling Limited Express",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "f78a045aa362",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "Charithra is giving curry recommendations/shout-outs, not Topjaw reviewing his own visit.",
+        "moment": "1:09",
+        "knownPlace": true
+      },
+      {
+        "name": "Madhu's",
+        "location": "Southall",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Madhu's",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "2d889c3d9679",
+        "area": "Southall",
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "Charithra is recommending where she personally goes; not Topjaw reviewing his own visit.",
+        "moment": "1:19"
+      },
+      {
+        "name": "Akub",
+        "location": "Kensington",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Akub",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": null,
+        "area": "Kensington",
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "Charithra states she desperately wants to try this Palestinian restaurant; she hasn't eaten there, so not Topjaw's review.",
+        "moment": "1:24",
+        "candidates": [
+          {
+            "id": "2967dc617ab3",
+            "name": "Taku",
+            "address": "36 Albemarle St, W1S 4JE"
+          },
+          {
+            "id": "94f1ff84c157",
+            "name": "Baku Bistro",
+            "address": "22-24 Lansdowne Row, W1J 8QL"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "videoId": "bW4T9Ns2oXM",
+    "title": "London, there’s a new pizza in town and it’s a GOOD ONE…",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "UGO GALELLI",
+        "at": "0:16",
+        "kind": "other",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Short Road Pizza",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw visited and personally reviewed the pizza. He praised the crispy base, individually dressed squares with no bad bites, and tried multiple pizzas including Marinara, hot pep Darren style, and 'nduja honey ricotta.",
+        "originalName": "Short Road Pizza",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "verdict": "Fantastic crispy pizza, every bite is carefully dressed.",
+        "dishes": [
+          "Marinara",
+          "Hot pep Darren style pizza",
+          "'nduja honey pizza with lemon zest ricotta"
+        ],
+        "confident": false,
+        "why": "No candidate places provided; cannot verify the correct business location or exact name spelling.",
+        "candidates": []
+      }
+    ]
+  },
+  {
+    "videoId": "XwXmGh2SwoQ",
+    "title": "Head Chef of The Fat Badger George Williams with his Best of #London",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "Pizza Express",
+        "at": "0:12",
+        "kind": "other",
+        "matched": "Pizza Express"
+      },
+      {
+        "text": "fabric, Farringdon",
+        "at": "0:28",
+        "kind": "other",
+        "matched": null
+      },
+      {
+        "text": "Crisp, Mayfair",
+        "at": "0:32",
+        "kind": "other",
+        "matched": "Crisp"
+      },
+      {
+        "text": "Royal China",
+        "at": "0:52",
+        "kind": "other",
+        "matched": "Royal China"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Quay",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Quay",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "This is Sydney's Quay (Australia), not London. George Williams (a guest) recommends it but Topjaw doesn't review it.",
+        "moment": "0:00",
+        "candidates": []
+      },
+      {
+        "name": "Pizza Express",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "negative",
+        "notes": "",
+        "originalName": "Pizza Express",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "George Williams criticises it but as a guest recommendation, not Topjaw's own review.",
+        "moment": "0:11",
+        "onScreen": "Pizza Express",
+        "onScreenAt": "0:12",
+        "onScreenDiffers": false
+      },
+      {
+        "name": "Sessions Arts Club",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Sessions Arts Club",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "ed8acb1a8ba1",
+        "area": "Clerkenwell",
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "George Williams recommends it for date night but Topjaw doesn't eat there or give their own opinion.",
+        "moment": "0:21"
+      },
+      {
+        "name": "Crisp Pizza at The Marlborough",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Crisp",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "eff6529f9176",
+        "area": "Mayfair",
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "George Williams praises it but Topjaw doesn't eat there or give their own review. No matching candidate place despite on-screen text showing \"Crisp, Mayfair\".",
+        "moment": "0:31",
+        "knownPlace": true,
+        "candidates": [
+          {
+            "id": "6b85fec0c8f5",
+            "name": "Crispin",
+            "address": "Pavilion on The Corner, White's Row, E1 7NF"
+          },
+          {
+            "id": "f95e58dd1726",
+            "name": "Crispy Cod",
+            "address": "114-116 High St., BR6 0JT"
+          },
+          {
+            "id": "df29ab707ae5",
+            "name": "Crispy Duck",
+            "address": "141-147 High St, TW18 4PA"
+          },
+          {
+            "id": "36bad31f1f82",
+            "name": "Crispy Dosa",
+            "address": "136 High St, WD17 2EN"
+          },
+          {
+            "id": "fe45806f7665",
+            "name": "Crispy Town",
+            "address": "218 Portobello Rd, W11 1LJ"
+          }
+        ],
+        "onScreen": "Crisp, Mayfair",
+        "onScreenAt": "0:32",
+        "onScreenDiffers": false
+      },
+      {
+        "name": "Speedboat",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Speedboat",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "5122baae3ac8",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [
+          "beef tendon and tongue curry"
+        ],
+        "confident": true,
+        "why": "George Williams recommends the beef tendon and tongue curry but Topjaw doesn't eat there or give their own opinion.",
+        "moment": "0:42"
+      },
+      {
+        "name": "Royal China",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Royal China",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "3b28d38d5038",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [
+          "xiaolongbao"
+        ],
+        "confident": false,
+        "why": "George Williams recommends it for dim sum but Topjaw doesn't eat there or give their own opinion. Multiple candidates; Baker St location is most central.",
+        "moment": "0:49",
+        "candidates": [
+          {
+            "id": "98cc5569441e",
+            "name": "Royal China",
+            "address": "148-150 Station Rd, HA1 2RH"
+          },
+          {
+            "id": "52507c23c243",
+            "name": "Royal China",
+            "address": "129 High St, SM7 2NS"
+          },
+          {
+            "id": "38a17c7fb2d4",
+            "name": "Royal China",
+            "address": "68 Queens Grove Unit 1, NW8 6ER"
+          },
+          {
+            "id": "3b28d38d5038",
+            "name": "Royal China",
+            "address": "24-26 Baker St, W1U 3BZ"
+          },
+          {
+            "id": "08018692df77",
+            "name": "The Royal China",
+            "address": "The Royal China, 491 London Rd, SM3 8JW"
+          }
+        ],
+        "onScreen": "Royal China",
+        "onScreenAt": "0:52",
+        "onScreenDiffers": false
+      },
+      {
+        "name": "River Café",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "River Cafe",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "6b63745525b9",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "George Williams defends it against criticism but doesn't describe eating there himself, and Topjaw doesn't review it.",
+        "moment": "1:00",
+        "candidates": [
+          {
+            "id": "a8ba79cc33bf",
+            "name": "River Café",
+            "address": "Unit 10, Barking Business Centre, Thames Rd, IG11 0JP"
+          },
+          {
+            "id": "545fd2203eff",
+            "name": "River Cafe",
+            "address": "35 Cambridge Rd, KT1 3NQ"
+          },
+          {
+            "id": "6b63745525b9",
+            "name": "The River Cafe",
+            "address": "Thames Wharf, Rainville Rd, W6 9HA"
+          },
+          {
+            "id": "7f2deb59e9b7",
+            "name": "The River Cafe",
+            "address": "1 Fulham Rd., SW6 3UH"
+          },
+          {
+            "id": "f41ed04b551b",
+            "name": "River Cafe.",
+            "address": "1A Station Approach, SW6 3UH"
+          }
+        ]
+      },
+      {
+        "name": "Thai 101",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Thai 101",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "41ebe18540e0",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "George Williams calls it amazing but Topjaw doesn't eat there or give their own opinion. Candidate place is 101 Thai Kitchen.",
+        "moment": "1:06",
+        "candidates": [
+          {
+            "id": "41ebe18540e0",
+            "name": "101 Thai Kitchen",
+            "address": "352 King St, W6 0RX"
+          }
+        ]
+      },
+      {
+        "name": "Behesht",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "mixed",
+        "notes": "",
+        "originalName": "Behesht",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "f7f51de3b40e",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [
+          "kebab and rice"
+        ],
+        "confident": true,
+        "why": "George Williams praises it for value but Topjaw doesn't eat there or give their own opinion.",
+        "moment": "1:11"
+      },
+      {
+        "name": "Joe & the Juice",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Joe & the Juice",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "aa1af28a16ae",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [
+          "spicy tuna sandwich"
+        ],
+        "confident": false,
+        "why": "George Williams recommends it for breakfast but Topjaw doesn't eat there or give their own opinion. Multiple candidates available.",
+        "moment": "1:27",
+        "candidates": [
+          {
+            "id": "aa1af28a16ae",
+            "name": "Joe & The Juice",
+            "address": "27 Chalk Farm Rd"
+          },
+          {
+            "id": "46e743ef78e4",
+            "name": "Joe & The Juice",
+            "address": "Unit 1198, Coal Drops Yard, London N1C 4DQ, N1C 4DQ"
+          },
+          {
+            "id": "6f0a99c9b0f0",
+            "name": "Joe & The Juice",
+            "address": "Unit 18, 1 Paddington Sq"
+          },
+          {
+            "id": "9d3fac581a23",
+            "name": "Joe & The Juice",
+            "address": "23 Eastcheap"
+          },
+          {
+            "id": "7c3bf18001c8",
+            "name": "Joe & The Juice",
+            "address": "18, Sayer Street"
+          }
+        ]
+      },
+      {
+        "name": "The Plimsoll",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Plimsoll",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "35c2907da25f",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [
+          "burger"
+        ],
+        "confident": true,
+        "why": "George Williams calls it the best burger factory but Topjaw doesn't eat there or give their own opinion.",
+        "moment": "1:40"
+      }
+    ]
+  },
+  {
+    "videoId": "n89Ny0k4E-o",
+    "title": "Mexican Seoul serves award-winning dishes inspired by the flavours of South Korea & Mexico.",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "Mexican Seoul",
+        "at": "0:24",
+        "kind": "other",
+        "matched": "Mexican Seoul"
+      },
+      {
+        "text": "Bristol Wine Fest 2022 Judge's Choice Best Wild Wine",
+        "at": "0:28",
+        "kind": "receipt_or_packaging",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Mexican Seoul",
+        "location": "Bow Wharf, Grove Rd, E3",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw visited and reviewed Mexican Seoul's award-winning Korean-Mexican fusion wings. Owner Ashley quit his job after winning second place at Wingfest. Topjaw tasted multiple wing dishes and praised them, particularly the gochujang wings as \"really exceptional.\"",
+        "originalName": "Mexican Seoul",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "227f6701c606",
+        "area": null,
+        "address": "221 Grove Rd, London E3 5SN",
+        "verdict": "Exceptional gochujang wings; crispy, juicy chicken. Very good.",
+        "dishes": [
+          "Gochu-Gang Wings",
+          "Soy Garlic Butter Wings",
+          "Honey Buffalo Wings",
+          "Ensenada Fish Tacos",
+          "Kimchi Burger"
+        ],
+        "confident": false,
+        "why": "Topjaw personally visited, ate multiple dishes, and gave detailed first-hand opinions throughout the video. On screen at 0:24: \"Mexican Seoul\" (The on-screen text \"Mexican Seoul\" appears at [0:24] while Topjaw is at the place eating and reviewing the wings, but the actual name of the restaurant is \"Mexican Soul\" (heard in the captions), not \"Mexican Seoul.\")",
+        "moment": "0:00",
+        "onScreen": "Mexican Seoul",
+        "onScreenAt": "0:24",
+        "onScreenDiffers": true
+      }
+    ]
+  },
+  {
+    "videoId": "SMucujTUN8M",
+    "title": "The most played artist in the Topjaw studio: @jrakz with his Best of London",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "The Palm Tree, Mile End",
+        "at": "0:08",
+        "kind": "title_card",
+        "matched": "The Palm Tree"
+      },
+      {
+        "text": "Mildreds",
+        "at": "0:28",
+        "kind": "title_card",
+        "matched": "Mildreds"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Kartuli",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Kartuli",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "f6c0ae86d8cf",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "Jordan (the guest) recommends Kartuli as the best restaurant in London, but Topjaw does not visit or eat there in the video.",
+        "moment": "0:00"
+      },
+      {
+        "name": "The Palm Tree",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "The Palm Tree",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "b68225670c25",
+        "area": "Mile End",
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "Jordan recommends The Palm Tree as the best pub/bar, but Topjaw does not visit or eat there in the video.",
+        "moment": "0:06",
+        "onScreen": "The Palm Tree, Mile End",
+        "onScreenAt": "0:08",
+        "onScreenDiffers": false
+      },
+      {
+        "name": "Mildreds",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "negative",
+        "notes": "",
+        "originalName": "Mildreds",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "158a3a7b93cb",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "Jordan describes Mildreds as overrated based on his own experience, but Topjaw does not visit or eat there in the video.",
+        "moment": "0:24",
+        "onScreen": "Mildreds",
+        "onScreenAt": "0:28",
+        "onScreenDiffers": false
+      },
+      {
+        "name": "Kricket",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Kricket",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "c0e623e796c1",
+        "area": "Soho",
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "Jordan recommends Kricket as the best curry restaurant, but Topjaw does not visit or eat there in the video.",
+        "moment": "0:45"
+      },
+      {
+        "name": "Dishoom",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Dishoom",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "80093fb4d559",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "Jordan recommends Dishoom's biryani as his favorite curry dish, but Topjaw does not visit or eat there in the video. Multiple Dishoom locations exist.",
+        "moment": "0:50",
+        "candidates": [
+          {
+            "id": "abee13272bca",
+            "name": "Dishoom",
+            "address": "Battersea Power Station, SW11 8BJ"
+          },
+          {
+            "id": "45ab76af9c45",
+            "name": "Dish",
+            "address": "3 Bridge Rd, KT8 9EU"
+          },
+          {
+            "id": "80093fb4d559",
+            "name": "Dishoom Carnaby",
+            "address": "22 Kingly St, W1B 5QP"
+          },
+          {
+            "id": "665cb6c7808f",
+            "name": "The Showroom",
+            "address": "79 Dalyell Road, SW9 9SA"
+          },
+          {
+            "id": "98476cdc1aed",
+            "name": "Dhoom",
+            "address": "108 Heath Road, TW1 4BW"
+          }
+        ]
+      },
+      {
+        "name": "Franco Manca",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Franco Manca",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "404e8ddb8c27",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "Jordan recommends Franco Manca as best pizza, but Topjaw does not visit or eat there in the video. Multiple Franco Manca locations exist.",
+        "moment": "1:05",
+        "candidates": [
+          {
+            "id": "404e8ddb8c27",
+            "name": "Franco Manca",
+            "address": "98 Tottenham Court Rd, W1T 4TR"
+          },
+          {
+            "id": "2e1df1b41321",
+            "name": "Franco Manca",
+            "address": "337 Kentish Town Rd, NW5 2TJ"
+          },
+          {
+            "id": "e5ea39c8d265",
+            "name": "Franco Manca",
+            "address": "278 Muswell Hill Broadway, N10 2QR"
+          },
+          {
+            "id": "390261f3a199",
+            "name": "Franco Manca",
+            "address": "62-68 York Wy, N1 9FA"
+          },
+          {
+            "id": "615d08247e05",
+            "name": "Franco Manca",
+            "address": "4 Bernard St, Russell Sq, WC1N 1LJ"
+          }
+        ]
+      },
+      {
+        "name": "Go Go Pocha",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Go Go Pocha",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "ea22ff69cfab",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "Jordan recommends Go Go Pocha as underrated based on his own podcast visits, but Topjaw does not visit or eat there in the video.",
+        "moment": "1:15",
+        "candidates": [
+          {
+            "id": "6cdb13a4e781",
+            "name": "Gogo Pocha",
+            "address": "SW11 1HW"
+          },
+          {
+            "id": "ea22ff69cfab",
+            "name": "Gogo Pocha",
+            "address": "30 Lower Marsh, SE1 7RG"
+          },
+          {
+            "id": "348d384a5237",
+            "name": "Po Cha",
+            "address": "30 Lower Marsh, SE1"
+          },
+          {
+            "id": "ad30aa6be239",
+            "name": "Poche",
+            "address": "177 Henderson Dr, DA1 5LD"
+          },
+          {
+            "id": "3d0e3cbdbc02",
+            "name": "Pochi",
+            "address": "The Borough Market Kitchen, Winchester Walk, Jubilee, SE1 9AG"
+          }
+        ]
+      },
+      {
+        "name": "Discount Suit Company",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Discount Suit Company",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "8d4a1e81f9eb",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "Jordan recommends Discount Suit Company as the best cocktail spot, but Topjaw does not visit or eat there in the video.",
+        "moment": "1:37"
+      },
+      {
+        "name": "Hawksmoor",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Hawksmoor",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "2443384ff7a5",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "Jordan recommends Hawksmoor as a date night spot for his wife, but Topjaw does not visit or eat there in the video. Multiple Hawksmoor locations exist.",
+        "moment": "2:02",
+        "candidates": [
+          {
+            "id": "2443384ff7a5",
+            "name": "Hawksmoor Air Street",
+            "address": "5A Air St, W1J 0AD",
+            "metresFromPin": 0
+          },
+          {
+            "id": "d740d143f0fe",
+            "name": "The Hawkesmore",
+            "address": "35 Earlham Street, WC2H 9LD",
+            "metresFromPin": 817
+          },
+          {
+            "id": "5069d2570677",
+            "name": "Hawksmoor Borough",
+            "address": "16 Winchester Walk, SE1 9AQ",
+            "metresFromPin": 3138
+          },
+          {
+            "id": "c4289933e52c",
+            "name": "Hawksmoor Wood Wharf",
+            "address": "1 Water St, E14 5GX",
+            "metresFromPin": 8436
+          },
+          {
+            "id": "0ef1e8ca629d",
+            "name": "Hawksmoor Guildhall",
+            "address": "10 Basinghall St, EC2V 5BQ",
+            "metresFromPin": 3199
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "videoId": "MmIq0UCHf_I",
+    "title": "London’s best Caribbean food is a Brixton garden BBQ & we’re all invited, Maureen you’re fantastic.",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "the jerk chicken",
+        "at": "0:20",
+        "kind": "other",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Maureen's Brixton Kitchen",
+        "location": "Brixton",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw visited this legendary Caribbean food spot operating from a house garden and praised it as some of the best Caribbean food in London. He highlighted the excellent quality and value across multiple dishes.",
+        "originalName": "Maureen's Brixton Kitchen",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "3090b2a06fee",
+        "area": "Brixton",
+        "address": "52 Railton Rd, SE24 0LF",
+        "verdict": "Some of London's best Caribbean food, outstanding value.",
+        "dishes": [
+          "Fried Chicken",
+          "Curried Goat",
+          "Stewed Chicken",
+          "Pepper Steak",
+          "Jerk Chicken",
+          "BBQ Oxtail",
+          "Mac & Cheese",
+          "Rice & Peas"
+        ],
+        "confident": true,
+        "why": "Topjaw visited, ate extensively, and gave detailed personal opinion of the food and experience.",
+        "moment": "0:00"
+      }
+    ]
+  },
+  {
+    "videoId": "xlp3EQr5hv8",
+    "title": "This type of place makes London what it is and should be protected at all costs. 🙏",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "DELIZIE D'ITALIA DELI",
+        "at": "0:48",
+        "kind": "sign",
+        "matched": "Delizie D'Italia"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Delizie D'Italia",
+        "location": "Pimlico",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw visited this authentic Italian deli operating for 36 years and praised its chunky packed sandwiches, pistachio cannoli, and meatball sandwich at great value (£9). He appreciates the consistency and passionate staff who care for their locals.",
+        "originalName": "Delizie D'Italia",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "3ba84fe7e735",
+        "area": "Pimlico",
+        "address": "70 Lupus St, SW1V 3EJ",
+        "verdict": "Excellent deli with great value sandwiches and consistent quality.",
+        "dishes": [
+          "pistachio cannoli",
+          "meatball sandwich",
+          "mortadella, artichoke, rocket on focaccia"
+        ],
+        "confident": true,
+        "why": "Topjaw personally visited, ate multiple items, and gave his own detailed review.",
+        "moment": "0:00",
+        "onScreen": "DELIZIE D'ITALIA DELI",
+        "onScreenAt": "0:48",
+        "onScreenDiffers": false
+      }
+    ]
+  },
+  {
+    "videoId": "e0VppgtxqvA",
+    "title": "THE Steve Carell on eating an ACTUAL coffee filter and Charly Clive discovers the world is round… 🌎",
+    "sponsored": false,
+    "graphics": [],
+    "restaurants": [
+      {
+        "name": "Natura",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Natura",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "b94cb2426d7b",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "Charly Clive recommends it as the best Italian restaurant with the best lasagna in London, but Topjaw does not review it themselves.",
+        "moment": "0:23"
+      }
+    ]
+  },
+  {
+    "videoId": "wnDSkveFKCs",
+    "title": "Hidden below The Jackalope pub in Marylebone you’ll find the delicious flavours of Chongqing.",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "The Jackalope",
+        "at": "0:40",
+        "kind": "other",
+        "matched": "LIU Xiaomian"
+      },
+      {
+        "text": "THE JACKALOPE",
+        "at": "0:48",
+        "kind": "sign",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "LIU Xiaomian",
+        "location": "Marylebone",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Hidden on the lower ground floor of The Jackalope pub. Founded by Charlene and Linda, two women from Chongqing who met online and initially served food at Brick Lane Market before getting a residency at The Jackalope. Topjaw praised the authentic Chongqing flavours, handmade wontons with complex broth, thick glass noodles with great texture, and generous portions at £10-15 per dish.",
+        "originalName": "LIU Xiaomian",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "f02c7222c0ad",
+        "area": "Marylebone",
+        "address": "43 Weymouth Mews, W1G 7EQ",
+        "verdict": "Authentic Chongqing cuisine with amazing texture and flavour.",
+        "dishes": [
+          "Numbing Wontons",
+          "Hot & Sour Glass Noodles with Pork",
+          "Chongqing Xiaomian with Pork & Chickpea"
+        ],
+        "confident": false,
+        "why": "Topjaw personally visited, ate multiple dishes and gave detailed own opinion praising the food, texture and value. On screen at 0:40: \"The Jackalope\" (The sign shows \"THE JACKALOPE\" is the actual venue name, while \"Liu Xiaomian\" or \"Liu Zhao Mian\" refers to the food/stall operating within it.)",
+        "moment": "0:00",
+        "onScreen": "The Jackalope",
+        "onScreenAt": "0:40",
+        "onScreenDiffers": true
+      }
+    ]
+  },
+  {
+    "videoId": "0WMpsksFFPk",
+    "title": "JEFF GOLDBLUM Reveals His Favourite Restaurant In The World",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "BEST RESTAURANT IN THE WORLD?",
+        "at": "0:00",
+        "kind": "title_card",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "River Café",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "River Cafe",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "6b63745525b9",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "Jeff Goldblum recommends it as his favourite restaurant in the world, but Topjaw does not visit or review it themselves.",
+        "moment": "0:00"
+      },
+      {
+        "name": "Dishoom",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Dishoom",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "80093fb4d559",
+        "area": "Carnaby",
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "Jeff Goldblum recommends it as somewhere he loves to eat in London, but Topjaw does not visit or review it themselves.",
+        "moment": "3:59"
+      },
+      {
+        "name": "CLAP London",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Clap",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "6639c2571ea2",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "Jeff Goldblum mentions this sushi restaurant but does not appear to visit it; Topjaw does not review it.",
+        "moment": "7:17",
+        "candidates": [
+          {
+            "id": "f9bf64ddd480",
+            "name": "Claw",
+            "address": "35 Earlham St, WC2H 9AT"
+          },
+          {
+            "id": "a28506546510",
+            "name": "The Clapham Tap",
+            "address": "128 Clapham Manor St, SW4 6ED"
+          },
+          {
+            "id": "6639c2571ea2",
+            "name": "CLAP London",
+            "address": "Sixth and seventh Floor, 12-14 Basil St, SW3 1AJ"
+          }
+        ]
+      },
+      {
+        "name": "Sasa",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Sasa",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "Topjaw recommends it and describes the sushi platter, but does not visit or eat there in the video; it's mentioned as a recommendation only.",
+        "moment": "7:23",
+        "candidates": [
+          {
+            "id": "5248673c551c",
+            "name": "Sarasas",
+            "address": "158, 160 High St, HA4 8LJ"
+          },
+          {
+            "id": "c04c6a5cf14d",
+            "name": "Sarasas",
+            "address": "630-634 Uxbridge Rd, UB4 0RY"
+          },
+          {
+            "id": "e41baa765113",
+            "name": "KASA",
+            "address": "30, The, 30 Market Pl, NW11 6JJ"
+          },
+          {
+            "id": "191d57a63403",
+            "name": "Masa",
+            "address": "24-26 Headstone Dr, HA3 5QH"
+          },
+          {
+            "id": "3770ef6330fd",
+            "name": "Assa",
+            "address": "23 Romilly St, W1D 5AQ"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "videoId": "td1ie6l-S-4",
+    "title": "The original pie king himself Will Lewis from Willy's Pies with his Best of #London",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "BEST RESTAURANT INLONDON?",
+        "at": "0:00",
+        "kind": "title_card",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Khan G Kababish London",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Khanji Kababish",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "182de5bab48e",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "Will Lewis (the guest) recommends this as the best restaurant in London, but Topjaw doesn't review it themselves.",
+        "moment": "0:00"
+      },
+      {
+        "name": "Kura",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Kura",
+        "keep": false,
+        "reason": "only_mentioned",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "Mentioned in passing but unclear what this place is or if it's a restaurant; likely a misheard word or unclear reference.",
+        "moment": "0:05",
+        "candidates": [
+          {
+            "id": "d119454c1670",
+            "name": "Kura",
+            "address": "3 Park Close, SW1X 7"
+          },
+          {
+            "id": "956a49742a0f",
+            "name": "Sakura",
+            "address": "20A Addington Road, BR4 9BS"
+          },
+          {
+            "id": "cb3b504f2644",
+            "name": "Aura",
+            "address": "98 Field End Rd,  HA5"
+          },
+          {
+            "id": "ee4f97542676",
+            "name": "Sakura-do",
+            "address": "14 Gloucester Rd, SW7 4RB"
+          },
+          {
+            "id": "d958961972fa",
+            "name": "Na-Pura",
+            "address": "30 Nunhead Green, SE15 3QF"
+          }
+        ]
+      },
+      {
+        "name": "Adam's Naan",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Adam's naan",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "Will Lewis recommends this for most outrageous value with shawarma and Iraqi honey, but Topjaw doesn't review it themselves.",
+        "moment": "0:11",
+        "candidates": [
+          {
+            "id": "f84778f31a96",
+            "name": "Kanada-Ya",
+            "address": "35 Upper St, N1 0PN"
+          },
+          {
+            "id": "9d82f538e60b",
+            "name": "Kanada-Ya",
+            "address": "64 St Giles High St, WC2H 8LE"
+          },
+          {
+            "id": "10b8c9280819",
+            "name": "Kanada-Ya",
+            "address": "28 Foubert's Pl, W1F 7PR"
+          },
+          {
+            "id": "9e57f0ed3586",
+            "name": "Kanada-Ya",
+            "address": "3 Panton St, SW1Y 4DL"
+          },
+          {
+            "id": "0b2238a7f187",
+            "name": "Kanada-Ya",
+            "address": "Unit 12, Filmworks Walk, W5 5FA"
+          }
+        ]
+      },
+      {
+        "name": "St. John",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "St. John's",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "7946170346bf",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "Will Lewis recommends the madeleines at St. John for best dessert, but Topjaw doesn't review it themselves.",
+        "moment": "0:36"
+      },
+      {
+        "name": "The Plimsoll",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Plimsoll",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "35c2907da25f",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "Will Lewis recommends this for best burger and pub, but Topjaw doesn't review it themselves.",
+        "moment": "0:41"
+      },
+      {
+        "name": "Song Que Cafe",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Song Que",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "bf4b35440b5b",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "Will Lewis recommends this for solo dining with pho, but Topjaw doesn't review it themselves.",
+        "moment": "0:46"
+      },
+      {
+        "name": "Dough Hands East",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Dough Hands",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "Will Lewis recommends this pizza place (tuna pizza), but Topjaw doesn't review it themselves; exact restaurant unclear.",
+        "moment": "0:56",
+        "knownPlace": true,
+        "candidates": [
+          {
+            "id": "5ed763ccfe56",
+            "name": "Van Dough Pizza",
+            "address": "22 Vancouver Rd, SE23 2AF"
+          },
+          {
+            "id": "75196bb6ed4a",
+            "name": "The Green Dough",
+            "address": "54-56 Camden Lock Pl, NW1"
+          },
+          {
+            "id": "283ea0c21ae5",
+            "name": "The Dough Shack",
+            "address": "KT8 9LE"
+          },
+          {
+            "id": "6153e794eaf4",
+            "name": "The Dough Shack",
+            "address": ""
+          },
+          {
+            "id": "d54ad4fb7fce",
+            "name": "Dough Bro",
+            "address": "Southbank Centre, Belvedere Road, SE1 8XX"
+          }
+        ]
+      },
+      {
+        "name": "Brat",
+        "location": "Climpson's Arch",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Brat at Climpson's Arch",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": null,
+        "area": "Climpson's Arch",
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "Will Lewis recommends Brat at Climpson's Arch for date night, but Topjaw doesn't review it themselves.",
+        "moment": "1:18",
+        "candidates": [
+          {
+            "id": "2ac07164df24",
+            "name": "Climpson's Coffee Bar",
+            "address": "Heathfield Spitalfields, 53 Commercial St, E1 6BD"
+          }
+        ]
+      },
+      {
+        "name": "Forno",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Forno",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "a2df5ec6212e",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "Will Lewis recommends this for best bakery with baked goods and pizza, but Topjaw doesn't review it themselves.",
+        "moment": "1:39"
+      }
+    ]
+  },
+  {
+    "videoId": "OgzCZHeltbs",
+    "title": "Would you eat with your hands straight off the counter? It's liberating tbh.",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "Mam Lam",
+        "at": "0:32",
+        "kind": "sign",
+        "matched": null
+      },
+      {
+        "text": "PING WINES",
+        "at": "0:32",
+        "kind": "sign",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Kebab Queen",
+        "location": "Mercer Walk, WC2H 9FA",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw visited this speak-easy style counter restaurant where food is served directly on a heated counter to eat with hands. He praised dishes including butter flatbread with 28-day dry-aged lamb, rolled zucchini flowers, 13-hour slow cooked ox cheek dumplings, and monkfish tail wrapped in chicken skin, describing the experience as playful and interactive.",
+        "originalName": "Kebab Queen",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "328d446d688a",
+        "area": null,
+        "address": "4 Mercer Walk, WC2H 9FA",
+        "moment": "0:00",
+        "verdict": "Aggressively delicious fine dining kebab, counter service only.",
+        "dishes": [
+          "Butter flatbread with 28-day dry-aged lamb",
+          "Rolled zucchini flowers",
+          "13-hour slow cooked ox cheek in Turkish dumpling",
+          "Monkfish tail wrapped in chicken skin"
+        ],
+        "confident": true,
+        "why": "Topjaw personally visited and gave detailed first-hand opinions throughout the video, with the address confirmed in the description."
+      }
+    ]
+  },
+  {
+    "videoId": "chx5-AyWjTU",
+    "title": "British food is bad? Reinventing iconic classic British dishes - the brand new Teal open now!",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "TEAL",
+        "at": "0:12",
+        "kind": "sign",
+        "matched": "Teal"
+      },
+      {
+        "text": "Charlbury",
+        "at": "0:32",
+        "kind": "other",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Teal",
+        "location": "Wilton Way, E8",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Teal",
+        "keep": false,
+        "reason": "guest_own_place",
+        "placeId": null,
+        "area": null,
+        "address": "52 Wilton Way, E8 1BG",
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "This is Sally Abé's own restaurant that she has just opened; Topjaw is there to introduce her and her new place, not to review it as a guest.",
+        "moment": "0:06",
+        "candidates": [
+          {
+            "id": "c350325ff7bb",
+            "name": "So Real",
+            "address": "43C Oldhill St, N16 6LR"
+          }
+        ],
+        "onScreen": "TEAL",
+        "onScreenAt": "0:12",
+        "onScreenDiffers": false
+      }
+    ]
+  },
+  {
+    "videoId": "857hc8Xy6F0",
+    "title": "No patatas bravas here… Open fire cooking at ALTA, celebrating the food of Spain.",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "ALTA",
+        "at": "0:00",
+        "matched": "ALTA"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "ALTA",
+        "location": "Soho",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw visited and reviewed this Spanish restaurant in detail. Chef Rob brings Mediterranean expertise from 10 years in Spain and experience at El Bulli. High energy open fire cooking featuring squid sagatelli, cured cecina, venison with beetroot sauce, cheese doughnuts with spicy honey, chistorra sausage, and muhammara.",
+        "originalName": "ALTA",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Soho",
+        "address": null,
+        "verdict": "Phenomenal Spanish restaurant with exceptional dishes.",
+        "dishes": [
+          "squid sagatelli",
+          "cecina",
+          "venison with beetroot sauce",
+          "cheese doughnuts with spicy honey",
+          "chistorra sausage",
+          "muhammara"
+        ],
+        "confident": false,
+        "why": "No matching candidate place found in the provided list; restaurant name and location clear but placeId cannot be confirmed.",
+        "moment": "0:00",
+        "candidates": [
+          {
+            "id": "fa8ad0b644fa",
+            "name": "Waltar",
+            "address": "21 Chapel Market, N1 9EZ"
+          },
+          {
+            "id": "69c8b55c114d",
+            "name": "SALT",
+            "address": "20-21 Leicester Sq, WC2H 7JX"
+          },
+          {
+            "id": "0e16a409253a",
+            "name": "Tell Tale",
+            "address": "69 Westow Hill, SE19 1TX"
+          },
+          {
+            "id": "eb05e4a38f7d",
+            "name": "Alsultan",
+            "address": "151 The Vale, W3 7RH"
+          },
+          {
+            "id": "ec86a4d40e8f",
+            "name": "Caffè Malta",
+            "address": "54 High Street, KT1 1HN"
+          }
+        ],
+        "onScreen": "ALTA",
+        "onScreenAt": "0:00"
+      }
+    ]
+  },
+  {
+    "videoId": "n8cVZC6LLQc",
+    "title": "London’s best cocktail bars? Here’s a bunch to add to your list. They’ll take good care of you. 🍸",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "Albers, Dalston",
+        "at": "0:04",
+        "kind": "other",
+        "matched": "Albers"
+      },
+      {
+        "text": "The Dover, Mayfair",
+        "at": "0:12",
+        "kind": "other",
+        "matched": null
+      },
+      {
+        "text": "The Sun Tavern, Bethnal Green",
+        "at": "0:36",
+        "kind": "other",
+        "matched": "Satan's Tavern"
+      },
+      {
+        "text": "Claridges (the red room??)",
+        "at": "0:48",
+        "kind": "other",
+        "matched": null
+      },
+      {
+        "text": "DUKES, Mayfair",
+        "at": "0:52",
+        "kind": "other",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Albers",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw praised their unbelievable cocktails, particularly their spicy margarita.",
+        "originalName": "Albers",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Dalston",
+        "address": null,
+        "moment": "0:00",
+        "verdict": "Unbelievable cocktails, spicy margarita excellent.",
+        "dishes": [
+          "spicy margarita"
+        ],
+        "confident": false,
+        "why": "On-screen text shows Albers in Dalston, but no matching candidate place found and Albers is usually a pub chain.",
+        "candidates": [
+          {
+            "id": "ed787c69b561",
+            "name": "The Albert",
+            "address": "57 Kingston Hill, KT2 7PX"
+          },
+          {
+            "id": "bd63cca4595c",
+            "name": "The Albert",
+            "address": "11 Princess Rd, NW1 8JR"
+          },
+          {
+            "id": "d69136ec5feb",
+            "name": "The Albert",
+            "address": "52 Victoria St, SW1H 0NP"
+          },
+          {
+            "id": "2ec9ad1f849a",
+            "name": "The Albert",
+            "address": "WD6 4PR"
+          },
+          {
+            "id": "75bd95de387c",
+            "name": "Small Beer",
+            "address": "22 Topsfield Parade, N8 8PT"
+          }
+        ],
+        "onScreen": "Albers, Dalston",
+        "onScreenAt": "0:04",
+        "onScreenDiffers": false
+      },
+      {
+        "name": "The Experimental Cocktail Club",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw likes the speakeasy-style entrance with a bouncer outside and praises the cocktails and atmosphere.",
+        "originalName": "The Experimental Cocktail Club",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "1e52d849b4e7",
+        "area": null,
+        "address": null,
+        "moment": "0:21",
+        "verdict": "Great cocktails, speakeasy style entrance very appealing.",
+        "dishes": [],
+        "confident": true,
+        "why": "Topjaw gave their own opinion about the venue atmosphere and cocktails."
+      },
+      {
+        "name": "Satan's Tavern",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "mixed",
+        "notes": "",
+        "originalName": "Satan's Tavern",
+        "keep": false,
+        "reason": "only_mentioned",
+        "placeId": "74aa16a449c3",
+        "area": null,
+        "address": null,
+        "moment": "0:32",
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "Topjaw only briefly mentioned it in passing with a dismissive tone without reviewing it properly. On screen at 0:36: \"The Sun Tavern, Bethnal Green\" (The on-screen caption shows the actual name \"The Sun Tavern, Bethnal Green\" while the audio transcript has what sounds like \"Satan's Tavern\" at 0:32, which appears to be a mishearing of \"Sun Tavern.\")",
+        "onScreen": "The Sun Tavern, Bethnal Green",
+        "onScreenAt": "0:36",
+        "onScreenDiffers": true
+      },
+      {
+        "name": "Stone Nest",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw endorsed it for cocktails and dancing, mentioning the red room (Painter's Room) with beautiful martini options.",
+        "originalName": "Stone Nest",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "0cb5455f128f",
+        "area": "Chinatown",
+        "address": null,
+        "moment": "0:38",
+        "verdict": "Great for cocktails and dancing, beautiful martinis.",
+        "dishes": [
+          "martini"
+        ],
+        "confident": true,
+        "why": "Topjaw gave their own positive opinion about the venue and drinks."
+      },
+      {
+        "name": "Scarf's Bar at the Rosewood",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw appreciated the old school service style that isn't overly formal.",
+        "originalName": "Scarf's Bar at the Rosewood",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "moment": "0:56",
+        "verdict": "Old school service, polished but not stiff.",
+        "dishes": [],
+        "confident": true,
+        "why": "Topjaw gave their own opinion on the service and venue."
+      },
+      {
+        "name": "Elementary",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw praised the bold and innovative cocktails, noting something new each visit, with a sultry and cozy atmosphere.",
+        "originalName": "Elementary",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "fdb819694037",
+        "area": null,
+        "address": null,
+        "moment": "1:08",
+        "verdict": "Bold, innovative cocktails always new, sultry atmosphere.",
+        "dishes": [],
+        "confident": true,
+        "why": "Topjaw expressed their own enthusiasm for the cocktails and atmosphere."
+      },
+      {
+        "name": "Duck Soup",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw stated they always enjoy whatever cocktail is featured, researching their current menu before visiting.",
+        "originalName": "Duck Soup",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "3a57ff3919cf",
+        "area": null,
+        "address": null,
+        "moment": "1:13",
+        "verdict": "Always excellent cocktails, worth checking current menu.",
+        "dishes": [
+          "cocktails"
+        ],
+        "confident": true,
+        "why": "Topjaw gave their own positive opinion and demonstrated familiarity with the venue."
+      }
+    ]
+  },
+  {
+    "videoId": "0ZhGASMFynU",
+    "title": "The feasting at Berenjak is exceptional, every time. Koobideh that will live in your head forever.",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "MICHELIN",
+        "at": "0:20",
+        "kind": "sign",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Berenjak Soho",
+        "location": "Soho",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw describes the feasting as exceptional and the koobideh as unforgettable. They consider it one of their favourites and question whether there's a better Persian restaurant in London.",
+        "originalName": "Berenjak",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "67c828369322",
+        "area": "Soho",
+        "address": null,
+        "verdict": "Exceptional feasting and koobideh that lives in your head.",
+        "dishes": [
+          "Koobideh"
+        ],
+        "confident": true,
+        "why": "Topjaw personally visited and gave their own opinion, clearly stating it's one of their favourites and asking if there's a better Persian restaurant in London.",
+        "moment": "0:00"
+      }
+    ]
+  },
+  {
+    "videoId": "tjqkR29PD_k",
+    "title": "DAVE FRANCO’S: Best Restaurants In The World",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "Primrose Hill",
+        "at": "0:40",
+        "kind": "other",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "ARVO Cafe",
+        "location": "Primrose Hill",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Dave Franco recommends this cafe for delicious food, great coffee and great vibes, but Topjaw doesn't review it themselves.",
+        "originalName": "Arvo",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "48aa0ead81c3",
+        "area": "Primrose Hill",
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "Dave Franco recommends it; Topjaw doesn't visit or eat there.",
+        "moment": "0:35"
+      },
+      {
+        "name": "Kiln",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw has eaten at Kiln and loves it. They praise the excellent chicken, pork noodles, and especially the crab clay pot noodles at around £9, which they consider exceptional value.",
+        "originalName": "Kiln",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "90842ba5a7e6",
+        "area": null,
+        "address": null,
+        "verdict": "Incredible value with delicious chicken and noodles.",
+        "dishes": [
+          "chicken",
+          "pork noodles",
+          "crab clay pot noodles"
+        ],
+        "confident": true,
+        "why": "Topjaw shows photos of their meal and personally reviews the food and value.",
+        "moment": "0:57"
+      },
+      {
+        "name": "Smoking Goat",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Dave Franco praises the unique crusted chicken wings described as almost confectionery-like, but Topjaw doesn't review it themselves.",
+        "originalName": "Smoking Goat",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "8128c7b55d2d",
+        "area": "Shoreditch",
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "Dave Franco recommends it; Topjaw doesn't visit or eat there.",
+        "moment": "1:02"
+      },
+      {
+        "name": "Arang",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Dave Franco recommends this restaurant for adventurous organ meats and says it makes you want to cry, but Topjaw doesn't review it themselves.",
+        "originalName": "Arang Jack",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "0eea99782fa6",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "Dave Franco recommends it; Topjaw doesn't visit or eat there. Name slightly unclear from transcript ('Arang Jack').",
+        "moment": "1:28",
+        "candidates": [
+          {
+            "id": "0eea99782fa6",
+            "name": "Arang",
+            "address": "9 Golden Square, W1F 9HZ"
+          },
+          {
+            "id": "8698de7742d4",
+            "name": "Sarang",
+            "address": "887 Finchley Rd, NW11 8RR"
+          },
+          {
+            "id": "ca54235d0fdd",
+            "name": "Urban Jack",
+            "address": "9,10 Culvert Place, Parkfield Industrial Estate, Battersea"
+          }
+        ]
+      },
+      {
+        "name": "Camille",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "mixed",
+        "notes": "Dave Franco orders organ meats here (cow udders, duck neck sausage), but Topjaw indicates this type of food isn't for them and doesn't review it.",
+        "originalName": "Camille",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "a4402b9a4f8d",
+        "area": "Borough Market",
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "Dave Franco recommends it; Topjaw doesn't visit or eat there.",
+        "moment": "1:39",
+        "candidates": [
+          {
+            "id": "dd2c3fed4d35",
+            "name": "The Miller",
+            "address": "96 Snowsfields, SE1 3SS",
+            "metresFromPin": 398
+          },
+          {
+            "id": "a4402b9a4f8d",
+            "name": "Camille - Borough Market",
+            "address": "2 Stoney St",
+            "metresFromPin": 0
+          },
+          {
+            "id": "07433391412e",
+            "name": "Camile",
+            "address": "326 Balham High Road, SW17 7AA",
+            "metresFromPin": 9022
+          },
+          {
+            "id": "ab995e27d623",
+            "name": "Owens Camille",
+            "address": "6 Victoria Road, N9 9",
+            "metresFromPin": 13340
+          },
+          {
+            "id": "8cc25b244b2c",
+            "name": "Millers",
+            "address": "19 Caledonian Rd, N1 9DX",
+            "metresFromPin": 3631
+          },
+          {
+            "id": "33954f487170",
+            "name": "The Mill",
+            "address": "1 Tolpuddle Street, N1 0XT",
+            "metresFromPin": 3534
+          }
+        ]
+      },
+      {
+        "name": "Ambassadors Clubhouse",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Dave Franco recommends this Indian Punjabi restaurant as serving spicy, hot, hearty cuisine. Recently opened, been open about a year. Topjaw doesn't visit or eat there.",
+        "originalName": "Ambassador's Clubhouse",
+        "keep": false,
+        "reason": "guest_recommendation",
+        "placeId": "a8da8ee74b9c",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "Dave Franco recommends it; Topjaw doesn't visit or eat there.",
+        "moment": "4:59"
+      }
+    ]
+  },
+  {
+    "videoId": "7gzXsa7iFGU",
+    "title": "After 10 years as COO of Soho House, Martin felt it was finally time for him to do his own thing.",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "The Dover, Mayair",
+        "at": "0:04",
+        "kind": "other",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "The Dover",
+        "location": "Mayfair",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw visited and tasted multiple dishes. Founder Martin, former COO of Soho House, opened this Italian/New York comfort food restaurant 2 years ago with emphasis on traditional hospitality and bespoke design.",
+        "originalName": "The Dover",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "eb73c7d04e5a",
+        "area": "Mayfair",
+        "address": "33 Dover St, W1S 4NF",
+        "verdict": "Sumptuous, romantic, flawless hospitality with excellent food.",
+        "dishes": [
+          "spaghetti meatballs",
+          "prawn cocktail",
+          "beef arrosto",
+          "New York hot dog"
+        ],
+        "confident": true,
+        "why": "Topjaw personally visited, ate dishes, and gave detailed own opinions throughout the video.",
+        "moment": "0:00"
+      }
+    ]
+  },
+  {
+    "videoId": "GZhzFYxtTgg",
+    "title": "Natty Can Cook wants to win the first Michelin Star for Caribbean food.",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "Fish, Wings and Tings, Brixton",
+        "at": "0:32",
+        "kind": "title_card",
+        "matched": "Six by Nico"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Six by Nico",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw visited for a date night and found it's 10 courses, not 6. Strong gin cocktails served one per course.",
+        "originalName": "Six by Nico",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "a9c01d2ddb2b",
+        "area": null,
+        "address": null,
+        "moment": "0:00",
+        "verdict": "10 courses, strong cocktails, interesting concept.",
+        "dishes": [
+          "gin cocktails"
+        ],
+        "confident": true,
+        "why": "Topjaw gave their own first-hand opinion of their date night experience there.",
+        "onScreen": "Fish, Wings and Tings, Brixton",
+        "onScreenAt": "0:32",
+        "onScreenDiffers": false
+      },
+      {
+        "name": "Five Guys",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "negative",
+        "notes": "",
+        "originalName": "Five Guys",
+        "keep": false,
+        "reason": "only_mentioned",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "moment": "0:21",
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "Five Guys was only mentioned as an example of an overrated chain, not reviewed by Topjaw.",
+        "onScreen": "Fish, Wings and Tings, Brixton",
+        "onScreenAt": "0:32",
+        "onScreenDiffers": false
+      },
+      {
+        "name": "Fish, Wings and Tings",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Topjaw recommended as most underrated spot. Food and drinks are excellent. They have jerk chicken and other Caribbean dishes with Trinidadian and Guyanese influences with similar DNA but different preparations.",
+        "originalName": "Fish wings and tings",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "d67024f9cf4e",
+        "area": "Brixton",
+        "address": null,
+        "moment": "0:29",
+        "verdict": "Underrated Caribbean spot with banging food and drinks.",
+        "dishes": [
+          "jerk chicken"
+        ],
+        "confident": true,
+        "why": "Topjaw gave their own recommendation and positive review of this underrated restaurant.",
+        "onScreen": "Fish, Wings and Tings, Brixton",
+        "onScreenAt": "0:32",
+        "onScreenDiffers": false
+      },
+      {
+        "name": "Jumbi",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Best cocktail spot according to Topjaw. You can buy a magnum there, which made Topjaw feel alive.",
+        "originalName": "Jumbi",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "496d838d210d",
+        "area": null,
+        "address": null,
+        "moment": "0:47",
+        "verdict": "Best cocktail spot; magnum cocktails are exceptional.",
+        "dishes": [],
+        "confident": false,
+        "why": "Topjaw gave their own recommendation and positive opinion of this cocktail venue. On screen at 0:32: \"Fish, Wings and Tings, Brixton\" (The on-screen title card \"Fish, Wings and Tings, Brixton\" shows the actual name of the place, correcting what was heard as \"Jumbi\" in the audio.)",
+        "onScreen": "Fish, Wings and Tings, Brixton",
+        "onScreenAt": "0:32",
+        "onScreenDiffers": true
+      },
+      {
+        "name": "Poach",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Best breakfast spot. They serve deconstructed breakfasts with nice micro herbs, showing effort and love in their preparation.",
+        "originalName": "Poach",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "a2a0e6f13f83",
+        "area": null,
+        "address": null,
+        "moment": "0:53",
+        "verdict": "Best breakfast with effort and love in preparation.",
+        "dishes": [
+          "deconstructed breakfast"
+        ],
+        "confident": false,
+        "why": "Candidate place is 'Poached' not 'Poach'; name may be slightly different.",
+        "candidates": [
+          {
+            "id": "a2a0e6f13f83",
+            "name": "Poached",
+            "address": "43 Grove Vale, SE22 8EQ"
+          }
+        ]
+      },
+      {
+        "name": "The Waverley Arms",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Recommended for Sunday lunch. Topjaw described it as a nice little spot.",
+        "originalName": "The Waverly Arms",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "bfbae03b97cc",
+        "area": null,
+        "address": null,
+        "moment": "1:05",
+        "verdict": "Nice little spot for Sunday lunch.",
+        "dishes": [],
+        "confident": true,
+        "why": "Topjaw gave their own recommendation and positive opinion of this Sunday lunch venue."
+      },
+      {
+        "name": "22:10",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "22:10",
+        "keep": false,
+        "reason": "only_mentioned",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "moment": "1:11",
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "22:10 was only mentioned in passing; no candidate place found and unclear if it's a restaurant.",
+        "candidates": []
+      }
+    ]
   }
 ]

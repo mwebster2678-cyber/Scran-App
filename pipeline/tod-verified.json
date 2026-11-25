@@ -5192,5 +5192,4186 @@
         ]
       }
     ]
+  },
+  {
+    "videoId": "Qg1q8Ztoqao",
+    "title": "EVERY DISH IS UNDER £20 💰 ✅  this is agora, borough market #london #cheapeats #foodie #cheap (gift)",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "SPREAD",
+        "at": "0:24",
+        "kind": "sign",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Agora",
+        "location": "Borough Market",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod features Agora at Borough Market, highlighting that every dish is under £20.",
+        "originalName": "Agora",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Borough Market",
+        "address": null,
+        "verdict": "Every dish is under £20.",
+        "dishes": [],
+        "confident": false,
+        "why": "Agora at Borough Market is the subject of the video, but the candidate places don't include the Borough Market location; the first candidate (76063fe01521) is in Bromley, not London's Borough Market.",
+        "moment": null,
+        "candidates": [
+          {
+            "id": "76063fe01521",
+            "name": "Agora",
+            "address": "66 High St, BR3 1ED"
+          },
+          {
+            "id": "bcba00dfd242",
+            "name": "Lord Dragon",
+            "address": "391 Kilburn High Rd, NW6 7QE"
+          },
+          {
+            "id": "f5e82a471144",
+            "name": "Pittagoras",
+            "address": "Unit 65, 29 Tooting High St, SW17 0SP"
+          },
+          {
+            "id": "170ec234facb",
+            "name": "Paragon",
+            "address": "35 Burnt Oak Broadway, HA8 5JZ"
+          },
+          {
+            "id": "7c3a4ad28929",
+            "name": "Dragon Inn",
+            "address": "10-12 S End Rd, RM13 7XH"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "videoId": "lZYix3fTi6o",
+    "title": "CRAZIEST JAPANESE RESTAURANT IN LONDON 🍱 #london #japanesefood #japan #food AD",
+    "sponsored": true,
+    "graphics": [
+      {
+        "text": "NEW CRAZY JAPANESE TUNA RESTAURANT IN LONDON",
+        "at": "0:00",
+        "kind": "title_card",
+        "matched": null
+      },
+      {
+        "text": "ke n mate",
+        "at": "0:12",
+        "kind": "other",
+        "matched": "<UNKNOWN>"
+      },
+      {
+        "text": "ke n mate",
+        "at": "0:32",
+        "kind": "other",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Ke N Mate",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "A Japanese tuna restaurant described as the 'craziest' in London. Tod features and reviews this restaurant in the video.",
+        "originalName": "<UNKNOWN>",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "verdict": "Craziest Japanese tuna restaurant in London.",
+        "dishes": [],
+        "confident": false,
+        "why": "The on-screen text shows 'ke n mate' but no candidate places were provided to verify the correct name, spelling or location. On screen at 0:12: \"ke n mate\" (The on-screen text at 0:12 and 0:32 appears to be the actual place name, shown while at or reviewing the restaurant itself, as opposed to the generic title card at 0:00.)",
+        "moment": null,
+        "candidates": [],
+        "onScreen": "ke n mate",
+        "onScreenAt": "0:12",
+        "onScreenDiffers": true
+      }
+    ]
+  },
+  {
+    "videoId": "wHwgbO9jKGA",
+    "title": "Who said British food was boring!?  #roast #stalbins #foodie #britishfood #foodie",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "GUINNESS",
+        "at": "0:04",
+        "kind": "other",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Stalbins",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Stalbins",
+        "keep": false,
+        "reason": "only_mentioned",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "The restaurant name cannot be reliably matched to the candidates provided, and there is insufficient information to confirm it was personally reviewed by Tod rather than only mentioned.",
+        "moment": null,
+        "candidates": [
+          {
+            "id": "d1a63b400e89",
+            "name": "Albina",
+            "address": "239 Barking Rd, E13 8EQ"
+          },
+          {
+            "id": "310df8a53bf1",
+            "name": "Albion's Restaurant",
+            "address": "117 Kentish Town Rd, NW1 8PB"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "videoId": "UCwkNU9BAQc",
+    "title": "I tried a three Michelin star sandwich 🌟 🌟 🌟 #london #foodie #food #michelin AD",
+    "sponsored": true,
+    "graphics": [
+      {
+        "text": "UK'S MOST FAMOUS SANDWICH SHOP",
+        "at": "0:00",
+        "kind": "title_card",
+        "matched": "<UNKNOWN>"
+      },
+      {
+        "text": "GREAT PICNIC",
+        "at": "0:24",
+        "kind": "sign",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "<UNKNOWN>",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "<UNKNOWN>",
+        "keep": false,
+        "reason": "only_mentioned",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "No restaurant name is clearly identified in the extracted information; the title references a Michelin-star sandwich but no specific establishment is named. On screen at 0:00: \"UK'S MOST FAMOUS SANDWICH SHOP\" (The title card at 0:00 describes the place as \"UK's most famous sandwich shop,\" which is the actual identity/name of the establishment being reviewed.)",
+        "moment": null,
+        "candidates": [],
+        "onScreen": "UK'S MOST FAMOUS SANDWICH SHOP",
+        "onScreenAt": "0:00",
+        "onScreenDiffers": true
+      }
+    ]
+  },
+  {
+    "videoId": "rBq_lA7frTc",
+    "title": "I’ve been gate keeping this London steakhouse for too long #london #steak #foodie #food",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "Bricco e bacco",
+        "at": "0:08",
+        "kind": "other",
+        "matched": "<UNKNOWN>"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Bricco e Banca",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod's personal favorite Italian steakhouse, calling it the best in London. Family-run Sicilian steakhouse run by Italian butchers since 2003, known for varieties of red meat including Sashi from Finland and Rubia Gallega from Spain. Recommends A5 Wagyu, carbonara, tagliatelle with truffle, and steaks served on hot salt blocks.",
+        "originalName": "<UNKNOWN>",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Fitzrovia",
+        "address": null,
+        "verdict": "Best Italian steakhouse in London; competes with San Sebastian.",
+        "dishes": [
+          "A5 Wagyu Nara with homemade Wagyu Accarino cheese",
+          "Tagliatelle with butter, cheese, and fresh truffle",
+          "Steaks (Sashi from Finland, Rubia Gallega from Spain)"
+        ],
+        "confident": true,
+        "why": "Tod personally visited, ate multiple dishes, and gave enthusiastic own review calling it the best steakhouse in London.",
+        "moment": "0:00",
+        "onScreen": "Bricco e bacco",
+        "onScreenAt": "0:08",
+        "onScreenDiffers": false
+      }
+    ]
+  },
+  {
+    "videoId": "kWaKaEflDoY",
+    "title": "New Turkish Meyhane in borough market #borough #london #londonfood # Turkish #turkishfood",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "KISMET",
+        "at": "0:00",
+        "kind": "sign",
+        "matched": null
+      },
+      {
+        "text": "KISMET",
+        "at": "0:52",
+        "kind": "sign",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Kismet",
+        "location": "Borough Market",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod visited the new Turkish meyhane in Borough Market, located upstairs behind the stairs in the Globe pub. He tried their £50 tasting menu featuring meze with five sauces, smoky vegetables and bulgur kefte, assorted kebabs, sheftalia (Cypriot cutlet), French fries, and baklava.",
+        "originalName": "New Turkish Meyhane",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "verdict": "Incredible flavors and aromas, sheftalia was best. Worth the £50 tasting menu.",
+        "dishes": [
+          "meze with five sauces",
+          "smoky vegetables and bulgur kefte",
+          "assorted kebabs",
+          "sheftalia (Cypriot cutlet)",
+          "French fries",
+          "baklava"
+        ],
+        "confident": false,
+        "why": "The video title says 'New Turkish Meyhane in borough market' and on-screen text shows 'KISMET', but the extracted name 'New Turkish Meyhane' appears to be a description rather than the actual restaurant name. The transcript and on-screen graphics confirm it's called Kismet. No matching placeId found in candidates (Hatch Meyhane is in Chiswick, not Borough Market).",
+        "moment": "0:00",
+        "candidates": [
+          {
+            "id": "57a7e276f0dc",
+            "name": "Hatch Meyhane",
+            "address": "4 Chiswick High Rd., W4 1TH"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "videoId": "vVfe2oYBKxY",
+    "title": "24 HOURS IN LONDON'S BUSIEST RESTAURANT (FALLOW)",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "FALLOW ST JAMES",
+        "at": "0:04",
+        "kind": "sign",
+        "matched": null
+      },
+      {
+        "text": "Fallow",
+        "at": "0:20",
+        "kind": "title_card",
+        "matched": "Fallow"
+      },
+      {
+        "text": "FALLOW ST JAMES",
+        "at": "0:40",
+        "kind": "sign",
+        "matched": null
+      },
+      {
+        "text": "FALLOW ST JAMES",
+        "at": "0:48",
+        "kind": "sign",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Fallow",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod spends a full 24 hours behind the scenes at Fallow, London's busiest restaurant, experiencing breakfast, lunch and dinner service. He tries dishes from across the menu including the Royale, mushroom parfait, corn ribs, beef ribs, pig's head, cod's head, English Wagyu steak, Iberico pork chop, and desserts. He also visits sister restaurant Fowl for their fried chicken and hot wing challenge.",
+        "originalName": "Fallow",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "69b681f0e0af",
+        "area": "St James",
+        "address": null,
+        "moment": "0:00",
+        "verdict": "Incredible operation, stunning food, highly technical execution.",
+        "dishes": [
+          "Royale (croissant muffin with sausage, egg, cheese)",
+          "Black pudding Benedict",
+          "Corn ribs",
+          "Mushroom parfait",
+          "Beef ribs",
+          "Potato waffle with Bloody Mary ketchup",
+          "Pig's head",
+          "Cod's head with sriracha butter",
+          "English Wagyu steak",
+          "Iberico pork chop",
+          "Chelsea tart",
+          "Baron Bigod cheese on waffle"
+        ],
+        "confident": true,
+        "why": "Tod personally visited and ate extensively throughout the full 24-hour period at this restaurant, giving detailed commentary on the food, operation, and philosophy. This is his primary focus.",
+        "onScreen": "Fallow",
+        "onScreenAt": "0:20",
+        "onScreenDiffers": false
+      }
+    ]
+  },
+  {
+    "videoId": "kDe_RWdzPLk",
+    "title": "NEW INTERNATIONAL CHICKEN FESTIVAL IN LONDON (ticket link in bio) #london #festival #foodie #food",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "The Pecking House",
+        "at": "0:12",
+        "kind": "other",
+        "matched": null
+      },
+      {
+        "text": "Best Broasted",
+        "at": "0:28",
+        "kind": "other",
+        "matched": null
+      },
+      {
+        "text": "Rubin's",
+        "at": "0:44",
+        "kind": "other",
+        "matched": null
+      },
+      {
+        "text": "Chicken Baptizer",
+        "at": "0:52",
+        "kind": "other",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "International Chicken Festival",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "International Chicken Festival",
+        "keep": false,
+        "reason": "event_stall",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "This is a festival event at Allianz Stadium in Twickenham where multiple food stalls will appear, not a restaurant Tod reviewed.",
+        "moment": "0:01",
+        "candidates": [
+          {
+            "id": "39563a23e358",
+            "name": "Celestyn International",
+            "address": "9 Westminster Close, TW14 9XD"
+          },
+          {
+            "id": "6a728fced74f",
+            "name": "Kingston International Cafe",
+            "address": "234a Canbury Park Road, KT2 6LF"
+          },
+          {
+            "id": "a5c675c71c4c",
+            "name": "Sutton International Cafe",
+            "address": "316 High Street, SM1 1PR"
+          },
+          {
+            "id": "d75d5a9abd1f",
+            "name": "INSOL International",
+            "address": "Mezzanine Floor, 6-7 Queen Street, 6-7 Queen Street, EC4N 1SP"
+          },
+          {
+            "id": "8b33603fda88",
+            "name": "Sugar rush international",
+            "address": "275 Bexley Road, DA8 3EX"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "videoId": "z_1VS2ipfug",
+    "title": "UPDATE: Struggling roti shop with no customers 🥹🥹🥹 #london #supportlocal #foodie ad/gift",
+    "sponsored": true,
+    "graphics": [
+      {
+        "text": "UMANA YANA",
+        "at": "0:52",
+        "kind": "receipt_or_packaging",
+        "matched": "<UNKNOWN>"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Umana Yana",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "negative",
+        "notes": "Tod revisits this struggling roti shop that was making only £20 a day due to phone boxes blocking its entrance. The shop has since received support from Flat Pack with a £5,000 cheque, and now has significantly more customers.",
+        "originalName": "<UNKNOWN>",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "verdict": "Struggling but now getting support and customers.",
+        "dishes": [
+          "roti"
+        ],
+        "confident": false,
+        "why": "No candidate place found; placeId cannot be verified.",
+        "moment": "0:00",
+        "candidates": [],
+        "onScreen": "UMANA YANA",
+        "onScreenAt": "0:52",
+        "onScreenDiffers": false
+      }
+    ]
+  },
+  {
+    "videoId": "5bjMugFXeUg",
+    "title": "NEW EGYPTIAN SANDWICHES IN NORTH LONDON 🥪 🇪🇬",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "SAMIE SOCIAL",
+        "at": "0:08",
+        "kind": "other",
+        "matched": "<UNKNOWN>"
+      },
+      {
+        "text": "CRISPY ARTOIS",
+        "at": "0:32",
+        "kind": "other",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Sonny Social",
+        "location": "North London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Egyptian sandwich bar opened by owner Seif, a former corporate baker. Tod tries beef ribs with dates and chimichurri, and fried chicken sandwich (top three of all time). Also mentions their triple chocolate peanut butter molasses cookies.",
+        "originalName": "<UNKNOWN>",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Islington, North London",
+        "address": null,
+        "moment": "0:00",
+        "verdict": "Exceptional Egyptian sandwiches; fried chicken in top three ever.",
+        "dishes": [
+          "Beef ribs sandwich with dates and chimichurri",
+          "Fried chicken sandwich with habanero sauce",
+          "Triple chocolate salted peanut butter molasses cookies"
+        ],
+        "confident": false,
+        "why": "On-screen text reads 'SAMIE SOCIAL' but transcript consistently says 'Sonny Social'; name discrepancy requires verification. On screen at 0:08: \"SAMIE SOCIAL\" (The on-screen text \"SAMIE SOCIAL\" appears at 0:08 while Tod is at the place, naming it more accurately than the heard \"Sonny Social\".)",
+        "candidates": [],
+        "onScreen": "SAMIE SOCIAL",
+        "onScreenAt": "0:08",
+        "onScreenDiffers": true
+      }
+    ]
+  },
+  {
+    "videoId": "jwTa426lzl4",
+    "title": "HELPING STRUGGLING FAMILY BUSINESS WHICH IS CLOSING 🇮🇳 🥹 #indianfood #food #supportlocal",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "STRUGGLING FAMILY RESTAURANT",
+        "at": "0:00",
+        "kind": "title_card",
+        "matched": null
+      },
+      {
+        "text": "Makhanza's Story",
+        "at": "0:08",
+        "kind": "other",
+        "matched": null
+      },
+      {
+        "text": "MAKHANZA - Pan Indian Kitchen",
+        "at": "0:12",
+        "kind": "sign",
+        "matched": "<UNKNOWN>"
+      },
+      {
+        "text": "MAKHANZA",
+        "at": "0:44",
+        "kind": "sign",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Makhanza - Pan Indian Kitchen",
+        "location": "London",
+        "rating": 10,
+        "rating_out_of": 10,
+        "sentiment": "positive",
+        "notes": "Tod visited to support this family-run Indian restaurant on the verge of closing. The owners were positive and made all dishes fresh to order using family recipes. Tod praised the homemade onion bhajis (crispy, made to order), pani puri, chef's lamb curry (described as 10/10 with deep aromatics and tender lamb, served with flaky roti), and butter chicken (ranked in top three ever had).",
+        "originalName": "<UNKNOWN>",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "moment": "0:00",
+        "verdict": "Family recipes, fresh-made dishes, exceptional curries and breads.",
+        "dishes": [
+          "Chef's lamb curry",
+          "Onion bhajis",
+          "Pani puri",
+          "Butter chicken",
+          "Chicken tikka bites",
+          "Roti"
+        ],
+        "confident": true,
+        "why": "On-screen text clearly shows \"MAKHANZA - Pan Indian Kitchen\" and Tod personally visited, ate, and gave his own detailed opinion of multiple dishes.",
+        "onScreen": "MAKHANZA - Pan Indian Kitchen",
+        "onScreenAt": "0:12",
+        "onScreenDiffers": false
+      }
+    ]
+  },
+  {
+    "videoId": "spyMG56oC3M",
+    "title": "£6.50 BEST NASHVILLE FRIED CHICKEN SANDWICH 🥪 🌶️ #nashville #friedchicken #london #cheap",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "MARKET PLACE",
+        "at": "0:00",
+        "kind": "sign",
+        "matched": null
+      },
+      {
+        "text": "WHY PRIDE",
+        "at": "0:00",
+        "kind": "sign",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Hot Bird",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod reviewed Hot Bird's Nashville fried chicken sandwich (£6.50), praising their secret double-bread technique, spicy Nashville-style oil, and homemade spicy mayonnaise. He also noted their huge chicken chop for £4 and mentioned they're competing at this year's Roost Festival.",
+        "originalName": "<UNKNOWN>",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "verdict": "Best Nashville fried chicken sandwich in London for the price.",
+        "dishes": [
+          "Nashville fried chicken sandwich",
+          "Chicken chop"
+        ],
+        "confident": false,
+        "why": "Tod gave a detailed personal review of Hot Bird's food, but the restaurant name isn't visible in the frames and no candidate place is available to confirm it exists.",
+        "moment": "0:00",
+        "candidates": []
+      }
+    ]
+  },
+  {
+    "videoId": "3VMbZDhcOS0",
+    "title": "NYC’S most famous chicken is coming to London - tickets in bio ❤️",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "PECKING HOUSE",
+        "at": "0:00",
+        "kind": "sign",
+        "matched": null
+      },
+      {
+        "text": "PECKING HOUSE",
+        "at": "0:36",
+        "kind": "sign",
+        "matched": "Roost"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Roost",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Roost",
+        "keep": false,
+        "reason": "event_stall",
+        "placeId": null,
+        "area": "London",
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "Roost is a chicken festival event where Pecking House and other traders compete; it's not a permanent restaurant to eat at. On screen at 0:36: \"PECKING HOUSE\" (The sign \"PECKING HOUSE\" shown at [0:36] is the actual place name, which is better than the casual reference to \"Roost\" at [0:50] that refers to the chicken festival event rather than the specific vendor being reviewed.)",
+        "moment": "0:50",
+        "onScreen": "PECKING HOUSE",
+        "onScreenAt": "0:36",
+        "onScreenDiffers": true
+      }
+    ]
+  },
+  {
+    "videoId": "FpS2xmxNrAU",
+    "title": "Best Indian restaurant in London? #indianfood #london #londonfood #india",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "BRASS FRUIT",
+        "at": "0:36",
+        "kind": "other",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Aauja",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod visited this new opening from two Michelin star chef Aktar Islam and gave extensive personal review. He highlighted the exceptional quality across multiple dishes: fire-roasted king prawns, lamb chops cooked over charcoal, malai murgh chicken leg, butter chicken, oxtail biryani, and lamb shoulder in pastry. Called it 'one of the best openings to ever happen in London.'",
+        "originalName": "Aauja",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "verdict": "Exceptional Awadhi cuisine; potentially best Indian in London.",
+        "dishes": [
+          "poppadoms",
+          "golgappa",
+          "fire roasted king prawn",
+          "lamb chop",
+          "malai murgh chicken leg",
+          "butter chicken",
+          "oxtail biryani",
+          "lamb shoulder in pastry"
+        ],
+        "confident": true,
+        "why": "Tod personally visited, ate multiple dishes, and gave detailed first-hand opinion calling it exceptional.",
+        "moment": "0:06"
+      },
+      {
+        "name": "Gymkhana",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Gymkhana",
+        "keep": false,
+        "reason": "only_mentioned",
+        "placeId": "bc4c655e0826",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "Tod only mentioned Gymkhana in passing as his previously favorite Indian restaurant, without reviewing it in this video.",
+        "moment": "1:31",
+        "knownPlace": true
+      }
+    ]
+  },
+  {
+    "videoId": "IfWAdKBkerY",
+    "title": "A FULL DAY EATING A EUROPE'S BIGGEST BBQ FESTIVAL! (What Was The Best?!)",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "ALEX HOLLAND CO-FOUNDER OF",
+        "at": "0:12",
+        "kind": "title_card",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "FUME",
+        "location": "West London, outside the England Rugby stadium",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "FUME",
+        "keep": false,
+        "reason": "event_stall",
+        "placeId": null,
+        "area": "West London, Twickenham",
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "FUME is a BBQ festival/competition event that Tod co-founded and organised, not a permanent restaurant. While Tod ate at various stalls within the festival, the event itself is not a place to eat — it's a festival he runs.",
+        "moment": "0:00"
+      }
+    ]
+  },
+  {
+    "videoId": "tsbnu_Hft8o",
+    "title": "She needs your help to survive ❤️ #brixton #londonfood #familybusiness (gift/ad)",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "Amand Yana",
+        "at": "0:16",
+        "kind": "sign",
+        "matched": "Debbie's Roti Shop"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Umana Yana",
+        "location": "Brixton",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Debbie runs this family roti shop serving homemade curries (12 fresh daily), cod fish fritters, and homemade roti she's been perfecting since age 9. The shop faces difficulties after council installed telegram boxes blocking the storefront view, impacting sales.",
+        "originalName": "Debbie's Roti Shop",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Brixton",
+        "address": "294 Croxted Road, London, SE24 9DA",
+        "verdict": "Excellent fritters and curries; supportive community.",
+        "dishes": [
+          "cod fish fritters",
+          "homemade curries",
+          "homemade roti"
+        ],
+        "confident": false,
+        "why": "The on-screen text reads 'Amand Yana' (misread or corrupted), but the comment confirms this is Umana Yana; Tod visited and reviewed the food personally. On screen at 0:16: \"Amand Yana\" (The on-screen sign shows \"Amand Yana\" which appears to be the actual name of Debbie's roti shop stall, correcting the mishearing of \"Debbie's Roti Shop\" and the initial notation of \"Umana Yana\".)",
+        "moment": "0:00",
+        "candidates": [
+          {
+            "id": "287544fee53e",
+            "name": "Roti Shoti",
+            "address": "3 Langton Way, TW20 8DS"
+          }
+        ],
+        "onScreen": "Amand Yana",
+        "onScreenAt": "0:16",
+        "onScreenDiffers": true
+      }
+    ]
+  },
+  {
+    "videoId": "QQSYNsfciDM",
+    "title": "I Cooked the FIRST EVER WHOLE Wagyu Cow Over Life Fire! (Worth £30,000!)",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "WIHA SAKOI SHIRE LTD",
+        "at": "0:12",
+        "kind": "sign",
+        "matched": null
+      },
+      {
+        "text": "ENTIRE",
+        "at": "0:28",
+        "kind": "title_card",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "After Hours",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "After Hours",
+        "keep": false,
+        "reason": "event_stall",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "Tod encountered 'After Hours' at the Feud Festival event, which he was attending as an event participant/host, not as a restaurant reviewer. The mention was during the festival setup and overnight cook, not a restaurant visit.",
+        "moment": "9:45"
+      }
+    ]
+  },
+  {
+    "videoId": "0HCA_tHEENc",
+    "title": "Southern or Nothern chippies? Ft Tom Aspinal #mma #fishandchips #foodie",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "Rock & Sole Place",
+        "at": "0:08",
+        "kind": "sign",
+        "matched": "Rock and Sole"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Rock and Sole Plaice",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod visited this 150-year-old London chippy (oldest in London, survived two world wars) and reviewed their battered cod, battered sausage, and London sides including pickles, coleslaw, and pickled egg with guest Tom Aspinal.",
+        "originalName": "Rock and Sole",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "c730a722a4f5",
+        "area": null,
+        "address": null,
+        "verdict": "Northern chippies better than southern; tried their cod and sausage.",
+        "dishes": [
+          "battered cod",
+          "battered sausage",
+          "pickles",
+          "coleslaw",
+          "pickled egg"
+        ],
+        "confident": true,
+        "why": "Tod personally visited, ate multiple dishes, and gave his opinion on the food and comparison between northern and southern chippies.",
+        "moment": "0:05",
+        "onScreen": "Rock & Sole Place",
+        "onScreenAt": "0:08",
+        "onScreenDiffers": false
+      }
+    ]
+  },
+  {
+    "videoId": "bEFDiRn2Zqw",
+    "title": "LONDON’S newest French bistro #foodie #bistro #london #frenchfood",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "LONDON'S NEWEST FRENCH BISTRO",
+        "at": "0:00",
+        "kind": "title_card",
+        "matched": null
+      },
+      {
+        "text": "chez Rose",
+        "at": "0:36",
+        "kind": "sign",
+        "matched": "Chez Bruno"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Chez Bruce",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod visited this French bistro opened by Spencer, a two-Michelin-star chef. He praised the hand-dived scallops with Café de Paris butter, the steak au poivre, and especially the sharing chocolate souffle, rating it among London's elite restaurants.",
+        "originalName": "Chez Bruno",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "0a4beab1333c",
+        "area": null,
+        "address": null,
+        "moment": "0:10",
+        "verdict": "Exceptional French bistro; elite London dining.",
+        "dishes": [
+          "hand-dived scallops with Café de Paris butter",
+          "steak au poivre",
+          "triple-cooked Hasselback potatoes",
+          "chicken with morel mushroom",
+          "sharing chocolate souffle"
+        ],
+        "confident": false,
+        "why": "The transcript clearly names 'Chez Bruno' but the on-screen graphic at 0:36 reads 'chez Rose', creating uncertainty about the correct name; Chez Bruce is the most likely match among candidates. On screen at 0:36: \"chez Rose\" (The sign shown at 0:36 displays \"chez Rose,\" which is the actual restaurant name, correcting the mishearing of \"Chez Bruno.\")",
+        "candidates": [
+          {
+            "id": "0a4beab1333c",
+            "name": "Chez Bruce",
+            "address": "2 Bellevue Rd, SW17 7EG"
+          },
+          {
+            "id": "1b929c432a26",
+            "name": "Bruno’s",
+            "address": "172 Shepherdess Walk, N1 7JL"
+          },
+          {
+            "id": "e9ca94b13d43",
+            "name": "Brunch",
+            "address": "78 Portway, E15 3QJ"
+          },
+          {
+            "id": "c18b55517028",
+            "name": "Brunch",
+            "address": "a, a"
+          },
+          {
+            "id": "00644161ef10",
+            "name": "Brunch & Co.",
+            "address": "180 Kentish Town Road, NW5 2AE"
+          }
+        ],
+        "onScreen": "chez Rose",
+        "onScreenAt": "0:36",
+        "onScreenDiffers": true
+      }
+    ]
+  },
+  {
+    "videoId": "_RFSUz1Ktdk",
+    "title": "This spot in Soho serves pasta until 1am from £10 #pasta #soho #london #foodie",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "CHEAP PASTA SERVED UNTIL 1AM IN SOHO",
+        "at": "0:00",
+        "kind": "title_card",
+        "matched": null
+      },
+      {
+        "text": "27 Old Compton st",
+        "at": "0:04",
+        "kind": "other",
+        "matched": "27 Old Compton Street"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "27 Old Compton Street",
+        "location": "Soho",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Late night Italian restaurant serving pasta until 1am. Owner makes fresh pasta downstairs, Chef Bruno upstairs. Tod tried mushroom and truffle lasagna, pistachio carbonara (traditional with egg yolk and pistachio paste), vodka pasta, beef ragu, and complimentary pistachio deep-fried gnocchi balls.",
+        "originalName": "27 Old Compton Street",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "442370ce1c6d",
+        "area": "Soho",
+        "address": "27 Old Compton St, W1D 5JP",
+        "moment": "0:00",
+        "verdict": "Exceptional pasta quality, must-visit late night spot.",
+        "dishes": [
+          "Pistachio carbonara",
+          "Mushroom and truffle lasagna",
+          "Vodka pasta",
+          "Beef ragu",
+          "Pistachio deep-fried gnocchi balls"
+        ],
+        "confident": true,
+        "why": "Tod visited, ate multiple dishes, gave detailed personal opinions with high praise. Address confirmed in transcript and on-screen text.",
+        "onScreen": "27 Old Compton st",
+        "onScreenAt": "0:04",
+        "onScreenDiffers": false
+      }
+    ]
+  },
+  {
+    "videoId": "_3LYBnLtCT0",
+    "title": "Is London’s Best Restaurant Worth £1250?!",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "THE BEST DINING EXPERIENCE",
+        "at": "0:04",
+        "kind": "title_card",
+        "matched": null
+      },
+      {
+        "text": "5 SAVILE ROW",
+        "at": "0:52",
+        "kind": "sign",
+        "matched": "Roan 5"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Roan 5",
+        "location": "Savile Row",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod visited and experienced the full tasting menu. He praised it as one of the best meals he's ever had, highlighting the two Michelin star achievement, luxurious ambiance, exceptional sourcing (bluefin tuna from Spain/Cornwall, hand-dived scallops from Orkney Islands, Shizuka Crown melons at £85 each), and meticulous service. The £250 tasting menu features multiple courses including oysters, tuna, scallops, lobster, venison, caviar courses, and desserts.",
+        "originalName": "Roan 5",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": null,
+        "address": "5 Savile Row",
+        "dishes": [
+          "Cheese and onion snack with Périgord truffle jelly",
+          "Louis oysters from Carlingford with caviar and bergamot gel",
+          "Bluefin tuna atoro with yuzu kosho and ponzu cream",
+          "Hand-dived scallop course steamed at 38°C with sake and green shiso",
+          "Lobster with Singapore chili sauce and lobster bisque",
+          "Venison sika deer with hoisin sauce",
+          "Caviar course with crème cru mousseline",
+          "Potato dish with butter and caviar",
+          "Melon granita with vanilla ice cream"
+        ],
+        "confident": false,
+        "verdict": "One of the best meals I've ever had in my life.",
+        "why": "The name in the transcript is inconsistent ('Roan 5' vs 'Row on 5'), on-screen text shows '5 SAVILE ROW', and no matching candidate place was found, so confidence is reduced despite Tod clearly visiting and reviewing it. On screen at 0:52: \"5 SAVILE ROW\" (The sign shows the actual street address of the restaurant, which is a more precise and official name than the phonetically heard \"Roan 5\".)",
+        "moment": "0:00",
+        "candidates": [
+          {
+            "id": "b5ffc7a3b8ec",
+            "name": "JOAN",
+            "address": "Bethnal Green Rd, E1 6JX"
+          }
+        ],
+        "onScreen": "5 SAVILE ROW",
+        "onScreenAt": "0:52",
+        "onScreenDiffers": true
+      }
+    ]
+  },
+  {
+    "videoId": "a4ZWWl16GiE",
+    "title": "Update: Struggling Gelato Business + HUGE SURPRISE #london #londonfood #gelato #supportlocal ad",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "Bertolii",
+        "at": "0:36",
+        "kind": "sign",
+        "matched": "Struggling Gelato Business"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Struggling Gelato Business",
+        "location": "Hammersmith",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Struggling Gelato Business",
+        "keep": false,
+        "reason": "own_place",
+        "placeId": null,
+        "area": "Hammersmith",
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "This appears to be a business the creator is involved with, not a third-party restaurant being reviewed. On screen at 0:36: \"Bertolii\" (The sign shows \"Bertolii\" which is the actual name of this gelato business in Hammersmith.)",
+        "moment": "0:00",
+        "candidates": [
+          {
+            "id": "5abcbe5a5216",
+            "name": "Angel Business Club",
+            "address": "359 Goswell Road, EC1V 7JL"
+          }
+        ],
+        "onScreen": "Bertolii",
+        "onScreenAt": "0:36",
+        "onScreenDiffers": true
+      }
+    ]
+  },
+  {
+    "videoId": "dVpjszfJ-lA",
+    "title": "UK’s biggest potato 🥔 #potato #spud #britishfood",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "SPUD TRUCK",
+        "at": "0:24",
+        "kind": "other",
+        "matched": "Spud Hut"
+      },
+      {
+        "text": "Chicken For People",
+        "at": "0:52",
+        "kind": "other",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Spud Hut",
+        "location": "London Bridge",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod visited and was impressed by the UK's biggest jacket potatoes at £5 each with toppings (butter, cheese, beans, tuna), though the cheese could have been more melted.",
+        "originalName": "Spud Hut",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "London Bridge",
+        "address": null,
+        "verdict": "Impressive size but cheese could be more melted.",
+        "dishes": [
+          "jacket potato with butter, cheese, beans, tuna"
+        ],
+        "confident": false,
+        "why": "Spud Hut at London Bridge doesn't match the candidate places (a pub in UB8 and a food hut in Stratford); the on-screen text says 'SPUD TRUCK' suggesting it may be a food truck, not a permanent location. On screen at 0:24: \"SPUD TRUCK\" (The on-screen text shows \"SPUD TRUCK\" at 0:24 while Tod is at the place ordering and eating, which is the actual name rather than the mishearing \"Spud Hut\".)",
+        "moment": "0:05",
+        "candidates": [
+          {
+            "id": "da380f93fa4e",
+            "name": "The Hut Pub",
+            "address": "2 Old Orchard Cl, UB8 3LH"
+          },
+          {
+            "id": "7d7843d5e101",
+            "name": "The Food Hut",
+            "address": "Unit 19, Market Villa The, stratford centre, 70-73 The Mall, E15 1XQ"
+          }
+        ],
+        "onScreen": "SPUD TRUCK",
+        "onScreenAt": "0:24",
+        "onScreenDiffers": true
+      }
+    ]
+  },
+  {
+    "videoId": "UWY_CiFmY4M",
+    "title": "We created a New chicken festival in London 🐔 #london #chicken #foodie #shorts",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "ROOST",
+        "at": "0:04",
+        "kind": "other",
+        "matched": null
+      },
+      {
+        "text": "Maureen's Kitchen",
+        "at": "0:16",
+        "kind": "other",
+        "matched": "Maureen's Kitchen"
+      },
+      {
+        "text": "Rack City",
+        "at": "0:24",
+        "kind": "other",
+        "matched": "Brat City"
+      },
+      {
+        "text": "Pork Pit",
+        "at": "0:24",
+        "kind": "other",
+        "matched": null
+      },
+      {
+        "text": "Ginger Wings",
+        "at": "0:40",
+        "kind": "other",
+        "matched": "Ginger Wings"
+      },
+      {
+        "text": "Chicken George",
+        "at": "0:44",
+        "kind": "other",
+        "matched": "Chicken George"
+      },
+      {
+        "text": "Cockfighter",
+        "at": "0:48",
+        "kind": "other",
+        "matched": "Coop Fighter"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Maureen's Kitchen",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Maureen's Kitchen",
+        "keep": false,
+        "reason": "event_stall",
+        "placeId": "3090b2a06fee",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "A stall at Roost, the chicken festival event that Tod created or organized.",
+        "moment": "0:16",
+        "onScreen": "Maureen's Kitchen",
+        "onScreenAt": "0:16",
+        "onScreenDiffers": false
+      },
+      {
+        "name": "Brat City",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Brat City",
+        "keep": false,
+        "reason": "event_stall",
+        "placeId": "dcbbbc5d03c4",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "A collaboration at the Roost festival; the extracted name 'Brat City' may be incorrect (on-screen shows 'Rack City'), but it's a stall at an event Tod created. On screen at 0:24: \"Rack City\" (The on-screen text \"Rack City\" at [0:24] is shown while discussing the place heard as \"Brat City\" and is the actual correct name of the stall/vendor.)",
+        "moment": "0:22",
+        "candidates": [
+          {
+            "id": "dcbbbc5d03c4",
+            "name": "Brat",
+            "address": "374 Helmsley Pl, E8 3SB"
+          },
+          {
+            "id": "0acfb4223c45",
+            "name": "Chatora - The City",
+            "address": "4 Great St Thomas Apostle, EC4V 2BH"
+          },
+          {
+            "id": "f9f6f21af0f4",
+            "name": "wrap city",
+            "address": "318 Vaughan Bridge Road, SW1V 1AA"
+          },
+          {
+            "id": "a4827b5d363c",
+            "name": "Yauatcha City",
+            "address": "1 Broadgate, EC2M 2QS"
+          },
+          {
+            "id": "dbd6834bd237",
+            "name": "STRATFORD CITY",
+            "address": "Waitrose, The Arcade, Westfield Stratford City, E20 1EH"
+          }
+        ],
+        "onScreen": "Rack City",
+        "onScreenAt": "0:24",
+        "onScreenDiffers": true
+      },
+      {
+        "name": "The Chicken Baptizer",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "The Chicken Baptizer",
+        "keep": false,
+        "reason": "event_stall",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "A stall at Roost festival serving peach cobbler southern fried chicken.",
+        "moment": "0:27"
+      },
+      {
+        "name": "Ginger Wings",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Ginger Wings",
+        "keep": false,
+        "reason": "event_stall",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "A stall at Roost festival competing in the chicken championship.",
+        "moment": "0:33",
+        "onScreen": "Ginger Wings",
+        "onScreenAt": "0:40",
+        "onScreenDiffers": false
+      },
+      {
+        "name": "Chicken George",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Chicken George",
+        "keep": false,
+        "reason": "event_stall",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "A stall at Roost festival returning with specials.",
+        "moment": "0:39",
+        "onScreen": "Chicken George",
+        "onScreenAt": "0:44",
+        "onScreenDiffers": false
+      },
+      {
+        "name": "Coop Fighter",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Coop Fighter",
+        "keep": false,
+        "reason": "event_stall",
+        "placeId": "0ac1366904d8",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "A stall at Roost festival; on-screen text shows 'Cockfighter' but this may refer to Coqfighter, a London vendor at the event. On screen at 0:48: \"Cockfighter\" (\"Coop Fighter\" was heard but the on-screen text shows the actual place name as \"Cockfighter\".)",
+        "moment": "0:45",
+        "candidates": [
+          {
+            "id": "723f9a90dc2c",
+            "name": "Coqfighter",
+            "address": "71-73 Torriano Ave"
+          },
+          {
+            "id": "0ac1366904d8",
+            "name": "Coqfighter",
+            "address": "38 Wells Terrace, N4 3FP"
+          },
+          {
+            "id": "baadd7178069",
+            "name": "Coqfighter",
+            "address": "3 Caledonian Rd, N1 9DX"
+          },
+          {
+            "id": "11cc00676e0e",
+            "name": "Coqfighter",
+            "address": "Boxpark Retail Mall Unit 42, N11 2UT"
+          },
+          {
+            "id": "c0657f3d8647",
+            "name": "Coqfighter",
+            "address": "75 Beak St, W1F 9SS"
+          }
+        ],
+        "onScreen": "Cockfighter",
+        "onScreenAt": "0:48",
+        "onScreenDiffers": true
+      },
+      {
+        "name": "Schnitzel Heaven",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Schnitzel Heaven",
+        "keep": false,
+        "reason": "event_stall",
+        "placeId": "c4050539b178",
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "A stall at Roost festival serving chicken schnitzels for the first time.",
+        "moment": "0:55"
+      },
+      {
+        "name": "Hot Birds",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Hot Birds",
+        "keep": false,
+        "reason": "event_stall",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "A stall at Roost festival serving Nashville hot chicken.",
+        "moment": "1:06"
+      },
+      {
+        "name": "Hungry Boys",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Hungry Boys",
+        "keep": false,
+        "reason": "event_stall",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "A stall at Roost festival returning with bone marrow spicy buffalo wings.",
+        "moment": "1:11"
+      }
+    ]
+  },
+  {
+    "videoId": "mUj59qA7GOU",
+    "title": "New Texas bbq in London #bbq #london #foodie #shorts",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "NEW TEXAS BBQ POP UP IN LONDON",
+        "at": "0:00",
+        "kind": "title_card",
+        "matched": null
+      },
+      {
+        "text": "CAMPFIRE",
+        "at": "0:08",
+        "kind": "sign",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Meat Market barbecue",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod visited this new Texas-style barbecue pop-up and tried multiple dishes including 40-lb Wagyu beef shin, clod/beef shoulder, smoked beef cheeks, and roasted pork slice. He expressed strong enthusiasm, comparing the experience to being back in Texas and praising the texture and smokiness of the meat.",
+        "originalName": "Meat Market barbecue",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "moment": "0:00",
+        "verdict": "Incredible new Texas barbecue bringing fresh London scene vibrancy.",
+        "dishes": [
+          "40-lb Wagyu beef shin",
+          "clod/beef shoulder",
+          "smoked beef cheeks",
+          "roasted pork slice"
+        ],
+        "confident": false,
+        "why": "It's a temporary pop-up with no established business listing in SCRAN candidates, and location details are minimal; Tod clearly reviewed it firsthand but the place may not persist as a fixed restaurant.",
+        "candidates": [
+          {
+            "id": "8ebab5a21889",
+            "name": "Bin Bin Q Barbecue Market",
+            "address": "161 Drummond Street, NW1 2"
+          },
+          {
+            "id": "b508c29fe7ac",
+            "name": "The Meat Bar",
+            "address": "301 West End Lane, NW6 1RD"
+          },
+          {
+            "id": "f43712cb7c15",
+            "name": "Ezo Barbecue",
+            "address": "254 High St, BR1 1PG"
+          },
+          {
+            "id": "27078bebc49b",
+            "name": "Anatolia Barbecue",
+            "address": "12 Woodthorpe Rd, TW15 2RY"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "videoId": "gSOPGMNUgGs",
+    "title": "VIRAL REAL FRUIT SOBETS IN LONDON 🇬🇧 🥭 #london #foodie #icecream #dessert",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "VIRAL REAL FRUIT SOBETS IN LONDON",
+        "at": "0:00",
+        "kind": "title_card",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Fruttini",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod tried the viral real fruit French sorbets. He praised the natural flavors popping off with the pineapple, the whole mango variety, the passion fruit as people's favorite with visible pulp, and the cacao bean as his standout favorite.",
+        "originalName": "Fruttini",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "London",
+        "address": null,
+        "verdict": "Viral real fruit sorbets with excellent natural flavors.",
+        "dishes": [
+          "pineapple sorbet in fruit",
+          "mango sorbet in fruit",
+          "passion fruit sorbet in fruit",
+          "cacao bean sorbet in fruit"
+        ],
+        "confident": false,
+        "why": "Fruttini has no candidate places yet; a newly opened London business may not be fully indexed in SCRAN.",
+        "moment": "0:00",
+        "candidates": []
+      }
+    ]
+  },
+  {
+    "videoId": "7HyqOU2onCQ",
+    "title": "I Ate Every Food in London’s Little India (Ultimate Southall Guide)",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "SHAHANSHAH",
+        "at": "0:00",
+        "kind": "sign",
+        "matched": null
+      },
+      {
+        "text": "SHAHANSHAH VEGETARIAN TAKE AWAY RESTAURANT SWEET CENTRE",
+        "at": "0:00",
+        "kind": "sign",
+        "matched": null
+      },
+      {
+        "text": "THE ORIGINAL SHAHANSHAH",
+        "at": "0:00",
+        "kind": "sign",
+        "matched": null
+      },
+      {
+        "text": "SOUTHALL SHOPPING CENTRE",
+        "at": "0:20",
+        "kind": "sign",
+        "matched": null
+      },
+      {
+        "text": "KA CORNER",
+        "at": "0:40",
+        "kind": "sign",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Shahanshah",
+        "location": "Southall",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod visited with Dan and personally ate and reviewed their famous samosas (75p each). Vegetarian Sikh Punjabi restaurant known for consistent, well-made samosas with generous filling and fresh oil changed throughout the day. Also serves dal makhani and tarka dal.",
+        "originalName": "Shezan Shah",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "647900077e82",
+        "area": "Southall",
+        "address": "60 North Rd., UB1 2JL",
+        "moment": "1:14",
+        "verdict": "Most iconic and consistent samosas in the UK.",
+        "dishes": [
+          "samosas",
+          "dal makhani",
+          "tarka dal"
+        ],
+        "confident": true,
+        "why": "Chapter title confirms \"Shahen Sha\" (phonetic variant of Shahanshah). On-screen text reads \"SHAHANSHAH\". Candidate place matches location and name. Tod ate the samosas and gave his detailed opinion."
+      },
+      {
+        "name": "Rita's Chaat House",
+        "location": "Southall",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod and Dan visited this street food spot. Tod ate chaat, Amritsari fried fish (pollock with gram flour coating), and chicken tikka wrap. The chaat is praised for balanced sweet, salty, spicy, tangy flavors with good texture that absorbs sauce without disintegrating.",
+        "originalName": "Rita's Chaat House",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Southall",
+        "address": null,
+        "moment": "6:12",
+        "verdict": "Excellent chaat and street food; Indian version of crisps.",
+        "dishes": [
+          "chaat",
+          "Amritsari fried fish",
+          "chicken tikka wrap",
+          "mixed kulcha thali",
+          "chole bhature"
+        ],
+        "confident": false,
+        "why": "Chapter confirms \"Street food at Rita's\" and transcript mentions \"Rita's Chaat House\". No candidate place found with exact match for Rita's Chaat House. Candidate \"Rita's Curry House\" is at a different address (Regina Road vs Ealing Rd area). Tod ate and reviewed the food but restaurant identity is uncertain.",
+        "candidates": [
+          {
+            "id": "d78fa8933b37",
+            "name": "Ashoka chaat house",
+            "address": "105A Ealing Rd, HA0 4BP"
+          },
+          {
+            "id": "12c58fcc0590",
+            "name": "Chatako Chaat House",
+            "address": "Unit 1-2, 105B Ealing Rd, HA0 4BP"
+          },
+          {
+            "id": "e6e33ba60044",
+            "name": "Rita's Curry House",
+            "address": "9-11 Regina Road, UB2 5"
+          },
+          {
+            "id": "466fc3a6f1f7",
+            "name": "Chaatit",
+            "address": ""
+          }
+        ]
+      },
+      {
+        "name": "Chadka Corner",
+        "location": "Southall Broadway",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod and Dan visited this bhel puri stall, established in 2012 as Southall Broadway's first roadside bhel puri stand. Tod ordered and ate a spicy bhel puri, describing the mint as particularly strong and the texture as impressive. Dan explained it as the originator that inspired others along Broadway.",
+        "originalName": "Chadka Corner",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "41c73faca267",
+        "area": "Southall Broadway",
+        "address": null,
+        "moment": "11:56",
+        "verdict": "Best bhel puri in Southall; mint flavor particularly strong.",
+        "dishes": [
+          "bhel puri"
+        ],
+        "confident": true,
+        "why": "Chapter title \"Spices and pani puri\" and transcript clearly name it. On-screen sign visible in video reading \"Southall Broadway's first bhel puri stall, established in 2012\". Todd ate the food and gave his own detailed opinion about the mint and texture."
+      }
+    ]
+  },
+  {
+    "videoId": "ZRUk37QDF5M",
+    "title": "Last 10% of tickets be quick! #bbq #london #londonfood",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "MEAT CASTLE",
+        "at": "0:20",
+        "kind": "receipt_or_packaging",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Fume",
+        "location": "Allianz Stadium, Twickenham",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Fume",
+        "keep": false,
+        "reason": "event_stall",
+        "placeId": null,
+        "area": "Allianz Stadium, Twickenham",
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "This is a barbecue festival/competition event that Tod organized or runs, not a restaurant to visit and eat at normally.",
+        "moment": "0:00"
+      }
+    ]
+  },
+  {
+    "videoId": "EUI1vrPAOwE",
+    "title": "Best of London guide for under £15 #london #londonfood #cheap #cheapeats",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "Pophams",
+        "at": "0:04",
+        "kind": "packaging",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Shawarma Hut",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod visited and personally enjoyed their shawarma at 15p during their daily 11am promotion (first 200). Everything made fresh to order and sliced directly off the spit.",
+        "originalName": "Shawarma Hut",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "db1e85e0d7d3",
+        "area": null,
+        "address": null,
+        "verdict": "15p shawarma is an incredible bargain deal.",
+        "dishes": [
+          "Shawarma"
+        ],
+        "confident": true,
+        "why": "Tod personally visited and gave his own opinion about the shawarma experience.",
+        "moment": "0:05",
+        "knownPlace": true
+      },
+      {
+        "name": "Dishoom",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod calls Dishoom's breakfast naan wraps his low-key favorite breakfast in London, starting from £10. Features full English breakfast inside naan finished with sweet chili jam.",
+        "originalName": "Dishoom",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "80093fb4d559",
+        "area": "Carnaby",
+        "address": null,
+        "verdict": "Best breakfast in London, naan wraps with full English.",
+        "dishes": [
+          "Breakfast naan wraps"
+        ],
+        "confident": false,
+        "why": "Tod reviewed it but multiple Dishoom locations exist; placeId is Carnaby which is a known location, but cannot confirm which one Tod visited.",
+        "moment": "0:16",
+        "candidates": [
+          {
+            "id": "abee13272bca",
+            "name": "Dishoom",
+            "address": "Battersea Power Station, SW11 8BJ"
+          },
+          {
+            "id": "45ab76af9c45",
+            "name": "Dish",
+            "address": "3 Bridge Rd, KT8 9EU"
+          },
+          {
+            "id": "80093fb4d559",
+            "name": "Dishoom Carnaby",
+            "address": "22 Kingly St, W1B 5QP"
+          },
+          {
+            "id": "665cb6c7808f",
+            "name": "The Showroom",
+            "address": "79 Dalyell Road, SW9 9SA"
+          },
+          {
+            "id": "98476cdc1aed",
+            "name": "Dhoom",
+            "address": "108 Heath Road, TW1 4BW"
+          }
+        ]
+      },
+      {
+        "name": "Fortitude Bakehouse",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod calls the beignets 'unbeaten', describing how they drizzle melted chocolate, add coffee cream, and dip it in chocolate.",
+        "originalName": "Fortitude Bakehouse",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "b64630e1fed9",
+        "area": null,
+        "address": null,
+        "verdict": "Beignets are still unbeaten; chocolate drizzle and dip.",
+        "dishes": [
+          "Beignets"
+        ],
+        "confident": true,
+        "why": "Tod personally reviewed the beignet and gave his own enthusiastic opinion.",
+        "moment": "0:32"
+      },
+      {
+        "name": "Durrant & Son",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod visited and praised their T&S (Turkish sandwich) for £4.50, made fresh to order with lamb mince, herbs and spices. He calls it arguably the best bite in London for under £5.",
+        "originalName": "Durrant & Son",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "verdict": "Best bite under £5: T&S with fresh lamb and spices.",
+        "dishes": [
+          "T&S (Turkish sandwich)"
+        ],
+        "confident": false,
+        "why": "Tod personally reviewed it but no matching place was found in candidates.",
+        "moment": "0:44",
+        "candidates": []
+      },
+      {
+        "name": "The Mayflower",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod's favorite drink spot where you can people watch for days. Notes that the river bursts its banks during high tide and the outdoor area submerges with water.",
+        "originalName": "The Mayflower",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "8eb0da1462b5",
+        "area": null,
+        "address": null,
+        "verdict": "Great people watching; outdoor area floods at high tide.",
+        "dishes": [],
+        "confident": true,
+        "why": "Tod personally visited and gave his own opinion about the pub experience.",
+        "moment": "0:56"
+      },
+      {
+        "name": "Noodle Inn",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod visited before it was busy and was blown away by their oil spill beef short rib wide noodles for less than £20, calling it a bargain.",
+        "originalName": "Noodle Inn",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "verdict": "Oil spill beef short rib noodles are a bargain.",
+        "dishes": [
+          "Oil spill beef short rib wide noodles"
+        ],
+        "confident": false,
+        "why": "Tod personally reviewed it but no matching place was found in candidates.",
+        "moment": "1:08",
+        "candidates": []
+      },
+      {
+        "name": "Beigel Bake",
+        "location": "Brick Lane",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod calls it a London staple, open 24/7 with everything made to order, packed with meat for £6.50.",
+        "originalName": "Beigel Bake",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "ca32905b898a",
+        "area": "Brick Lane",
+        "address": "159 Brick Ln, E1 6SB",
+        "verdict": "24/7 London staple, made to order, meat-packed.",
+        "dishes": [
+          "Beigel"
+        ],
+        "confident": true,
+        "why": "Tod personally reviewed the beigel at this established Brick Lane location.",
+        "moment": "1:14"
+      },
+      {
+        "name": "Hot Bird",
+        "location": "Hounslow",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod visited and praised their Nashville fried chicken prepared to order for £7.50. He describes the spice blend as transporting his mind to a new dimension, and calls the value for money 'obscene'.",
+        "originalName": "Hot Bird",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Hounslow",
+        "address": null,
+        "verdict": "Nashville fried chicken, insane value, mind-blowing spice.",
+        "dishes": [
+          "Nashville fried chicken"
+        ],
+        "confident": false,
+        "why": "Tod personally reviewed it but candidate places don't include a Hounslow location; no matching placeId found.",
+        "moment": "1:21",
+        "candidates": [
+          {
+            "id": "f6eb6eab9cac",
+            "name": "Bird",
+            "address": "Wharf Kitchen, Jubilee Place, E14 5NY"
+          },
+          {
+            "id": "ff2df29c7349",
+            "name": "BIRD",
+            "address": "42-44 Kingsland Rd, E2 8DA"
+          },
+          {
+            "id": "20b723cca359",
+            "name": "The Birds",
+            "address": "692 High Road Leytonstone, E11 3AA"
+          },
+          {
+            "id": "88d2abe0f1c9",
+            "name": "Bird and Tie",
+            "address": "3 The Pavement, SW4 0HY"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "videoId": "G8eHaAhMY8A",
+    "title": "I tried London’s OLDEST Backyard Restaurant (INSANE £20 Jamaican Platter)",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "Maureen's Brixton Kitchen",
+        "at": "0:04",
+        "kind": "title_card",
+        "matched": "Maureen's Kitchen"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Maureen's Brixton Kitchen",
+        "location": "Brixton, Railton Road",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod visited and personally tasted multiple dishes. He praised it as some of the best Caribbean food he's eaten outside of Jamaica, calling it authentic Jamaican with dishes cooked traditionally using tire rims and charcoal.",
+        "originalName": "Maureen's Kitchen",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "3090b2a06fee",
+        "area": "Brixton",
+        "address": "52 Railton Rd, SE24 0LF",
+        "verdict": "Exceptional Caribbean food, best in London. Authentic.",
+        "dishes": [
+          "curried goat",
+          "oxtail",
+          "jerk chicken",
+          "fried chicken",
+          "pepper steak",
+          "rice and peas",
+          "macaroni cheese",
+          "steamed cabbage",
+          "plantain"
+        ],
+        "confident": true,
+        "why": "Tod visited, ate, and gave extensive first-hand opinions of the food and restaurant throughout the video.",
+        "moment": "0:00",
+        "onScreen": "Maureen's Brixton Kitchen",
+        "onScreenAt": "0:04",
+        "onScreenDiffers": false
+      }
+    ]
+  },
+  {
+    "videoId": "yVixVfJVVKA",
+    "title": "Trying the viral chopped Caesar Wrap #london #londonfood #viralfood #shorts l",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "ODEY",
+        "at": "0:08",
+        "kind": "other",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Julius Caesar's",
+        "location": "Mayfair",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Viral chopped chicken Caesar wrap at the back of a convenience store in Mayfair, established 1981. Tod ate both the classic Caesar and spicy picante versions, praising the structural integrity and favorable comparison to New York version.",
+        "originalName": "Julius Caesar's",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Mayfair",
+        "address": null,
+        "verdict": "Excellent wrap, on par with or better than New York.",
+        "dishes": [
+          "Chopped Chicken Caesar Wrap",
+          "Picante Wrap with flaming hot crisps"
+        ],
+        "confident": false,
+        "why": "The candidate place doesn't match (Caesars Palace in N13, not a convenience store in Mayfair), and the exact name and placeId cannot be confirmed from available information.",
+        "moment": "0:00",
+        "candidates": [
+          {
+            "id": "8c4ea6de3559",
+            "name": "Caesars Palace",
+            "address": "7a Clock House Parade, n13 6bg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "videoId": "Ia2KbYP2gLA",
+    "title": "I Discovered London’s Craziest Hidden Restaurant",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "Food Plus",
+        "at": "0:36",
+        "kind": "sign",
+        "matched": null
+      },
+      {
+        "text": "Southern Kitchen",
+        "at": "0:36",
+        "kind": "sign",
+        "matched": null
+      },
+      {
+        "text": "Peri Peri Marle",
+        "at": "0:36",
+        "kind": "sign",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Streatham Kitchen",
+        "location": "Streatham",
+        "rating": 4.8,
+        "rating_out_of": 5,
+        "sentiment": "positive",
+        "notes": "Tod's favourite restaurant and a major hidden gem. Owner Kai is self-taught and evolved the restaurant from a food truck in Crystal Palace to a family-run establishment over 8 years. Tod ate and reviewed multiple dishes including carabineros prawns, scallops, Spanish octopus, and suckling pig.",
+        "originalName": "Streatham Kitchen",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "2a01c7d19ab7",
+        "area": "Streatham",
+        "address": null,
+        "moment": "0:52",
+        "verdict": "One of London's biggest hidden gems. Best suckling pig and prawn dishes.",
+        "dishes": [
+          "Carabineros prawns",
+          "Scallops",
+          "Spanish octopus (4kg Galician)",
+          "Suckling pig (Segovian, pre-order £230)",
+          "Global meat platter (£80)",
+          "Rosemary spiced potatoes"
+        ],
+        "confident": true,
+        "why": "Tod personally visited, ate multiple courses, and gave detailed reviews throughout the video. The name matches the description and candidate place exactly."
+      }
+    ]
+  },
+  {
+    "videoId": "uJvEVtT87Dw",
+    "title": "LONDON’s NEW SECRET RESTAURANT IN ITALIAN BUTCHERY & DELI 🇮🇹  #clapham #londonfood #italianfood",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "SECRET RESTAURANT IN NEW ITALIAN DELI & BUTCHERY",
+        "at": "0:00",
+        "kind": "title_card",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Grappelli Deli & Butchery",
+        "location": "Clapham",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod visited this secret Italian deli and butchery owned by chef Alessandro Galapini. Features rotisserie chicken described as top three in London, dry-aged Italian steaks served Tuscan style with buttered thyme, in-house pasta making, and butchery with Italian meats.",
+        "originalName": "Alessandro Galapini",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Clapham",
+        "address": "41 Northcote Road, London, SW11 1NJ",
+        "moment": "0:00",
+        "verdict": "Rotisserie chicken easily top three in London; excellent Tuscan steaks.",
+        "dishes": [
+          "Rotisserie chicken with 48-hour reduced chicken broth gravy",
+          "Chicken sandwiches",
+          "Dry-aged Italian steaks served Tuscan style with buttered thyme",
+          "In-house made pasta"
+        ],
+        "confident": true,
+        "why": "Tod personally visited, ate and reviewed multiple dishes, giving detailed opinions. The name is confirmed in the YouTube comments."
+      }
+    ]
+  },
+  {
+    "videoId": "kAwo6NCSIOc",
+    "title": "There’s not many places like this left #london #cafe #thaifood #londonfood #shorts",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "THE PIF CRUST CAFE",
+        "at": "0:04",
+        "kind": "sign",
+        "matched": "<UNKNOWN>"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "The Pie Crust",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "42-year-old Thai cafe run by owners who have lived upstairs for 42 years. Homemade food at very cheap prices (mostly under £10), with £2 corkage. Owner Sujan DJs between courses. Tod praised the prawn pad Thai (£10), pineapple rice, and fish curry highly.",
+        "originalName": "<UNKNOWN>",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": null,
+        "address": "273 High St, London E15 2TF",
+        "verdict": "Exceptional Thai food, amazing value, must visit.",
+        "dishes": [
+          "prawn pad Thai",
+          "pineapple rice",
+          "fish curry"
+        ],
+        "confident": false,
+        "why": "Tod personally visited, ate multiple dishes, and gave detailed enthusiastic first-hand opinions. Address and name confirmed from comment and on-screen graphic. On screen at 0:04: \"THE PIF CRUST CAFE\" (The sign shows \"THE PIF CRUST CAFE\" which appears to be a misreading of the actual cafe name, likely \"The Pie Crust Cafe,\" but this on-screen text is the visible sign identifying this specific Thai restaurant location.)",
+        "moment": "0:00",
+        "onScreen": "THE PIF CRUST CAFE",
+        "onScreenAt": "0:04",
+        "onScreenDiffers": true
+      }
+    ]
+  },
+  {
+    "videoId": "UEI_oPR3J4A",
+    "title": "I created a BBQ festival (tickets at fumefestival.com) #londonfood #foodfestival #bbq #bbqfood",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "Allianz Stadium",
+        "at": "0:08",
+        "kind": "sign",
+        "matched": null
+      },
+      {
+        "text": "FUME",
+        "at": "0:12",
+        "kind": "other",
+        "matched": null
+      },
+      {
+        "text": "Ember",
+        "at": "0:40",
+        "kind": "other",
+        "matched": null
+      },
+      {
+        "text": "Farzi",
+        "at": "0:44",
+        "kind": "other",
+        "matched": "Fazeli"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Boring Burger",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Boring Burger",
+        "keep": false,
+        "reason": "event_stall",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "A stall at the Fume festival, an event that Tod organises and runs.",
+        "moment": "0:51"
+      },
+      {
+        "name": "Farzi",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Fazeli",
+        "keep": false,
+        "reason": "event_stall",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "A stall at the Fume festival, an event that Tod organises and runs.",
+        "moment": "0:40",
+        "onScreen": "Farzi",
+        "onScreenAt": "0:44",
+        "onScreenDiffers": false
+      },
+      {
+        "name": "Texas",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Texas",
+        "keep": false,
+        "reason": "event_stall",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": true,
+        "why": "A stall at the Fume festival, an event that Tod organises and runs.",
+        "moment": "0:51"
+      }
+    ]
+  },
+  {
+    "videoId": "1ya8rx5Njn0",
+    "title": "HELPING A “DYING” RESTAURANT WITH JUST 3 MONTHS UNTIL CLOSURE 🇨🇳 #edinburgh #foodie #chinese",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "La Yu",
+        "at": "0:12",
+        "kind": "sign",
+        "matched": null
+      },
+      {
+        "text": "scoffable",
+        "at": "0:28",
+        "kind": "sign",
+        "matched": null
+      },
+      {
+        "text": "scoffable",
+        "at": "0:32",
+        "kind": "sign",
+        "matched": null
+      },
+      {
+        "text": "CHINA STAR",
+        "at": "0:48",
+        "kind": "menu",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "China Star",
+        "location": "Edinburgh",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod visited this Chinese restaurant to help support its owner Lisa's mom during a difficult period. He praised the crispy duck (shredded table side), homemade dumplings, sizzling fillet of beef, and signature Hong Kong chicken with fresh curry sauce made daily.",
+        "originalName": "China Star",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Edinburgh",
+        "address": null,
+        "verdict": "Amazing family, great food, worth supporting.",
+        "dishes": [
+          "crispy duck",
+          "homemade dumplings",
+          "sizzling fillet of beef",
+          "Hong Kong chicken"
+        ],
+        "confident": false,
+        "why": "Video is set in Edinburgh; none of the candidate places are in Edinburgh—the first candidate is in EN8 (Hertfordshire) and others are in London postcodes. Likely a different China Star in Edinburgh not in the SCRAN database.",
+        "moment": "0:07",
+        "candidates": [
+          {
+            "id": "bb026d2b0f0a",
+            "name": "China Star",
+            "address": "104 Turners Hill, EN8 9BN"
+          },
+          {
+            "id": "2020168b3cc9",
+            "name": "China's Taste",
+            "address": "18 Highbury Park, N5 2AB"
+          },
+          {
+            "id": "9302c9f17e81",
+            "name": "Taste Of China",
+            "address": "799 Field End Rd, HA4 0QL"
+          },
+          {
+            "id": "baadbe1f021b",
+            "name": "Taste of China",
+            "address": "84 Southampton Row, WC1B 4BB"
+          },
+          {
+            "id": "328edc5e5bfd",
+            "name": "Taste of China",
+            "address": "174 Station Rd, HA1 2RH"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "videoId": "wrcE1cm4WBM",
+    "title": "Sushi push pops in London #sushi #london #viralfood #shorts",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "SUSHI PUSH POPS IN LONDON",
+        "at": "0:00",
+        "kind": "title_card",
+        "matched": "Sushi Pops"
+      },
+      {
+        "text": "sushi",
+        "at": "0:20",
+        "kind": "sign",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Sushi Pops",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod reviewed multiple sushi push pop options including Devon spicy tuna roll with orange tapioca balls, tempura king prawn with avocado, and roast Yorkshire beef option. He praised the fresh rice, miso clotted cream, and pickled rhubarb, noting the fun novelty factor.",
+        "originalName": "Sushi Pops",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "verdict": "Fun sushi push pops; fresh rice, miso clotted cream, pickled rhubarb.",
+        "dishes": [
+          "Devon spicy tuna roll",
+          "tempura king prawn with avocado",
+          "roast Yorkshire beef option"
+        ],
+        "confident": false,
+        "why": "The business name appears to be 'Sushi Pops' from the transcript, but none of the candidate places match this new startup; the two owners only quit their jobs a month ago to set it up, so it may not be in SCRAN yet.",
+        "moment": "0:00",
+        "candidates": [
+          {
+            "id": "b7869ac05dbc",
+            "name": "Sushi Point",
+            "address": "7 London Rd, TW1 3SX"
+          },
+          {
+            "id": "7244ae84e7fe",
+            "name": "Sushi Point",
+            "address": "226 Fulham Rd., SW10 9NB"
+          },
+          {
+            "id": "82e640edb6d9",
+            "name": "Sushi",
+            "address": "Greenwich Market, SE10 9HZ"
+          },
+          {
+            "id": "19738893b483",
+            "name": "Nippon Sushi",
+            "address": "135 Crossbrook Street, EN8 8LY"
+          },
+          {
+            "id": "290dfb051484",
+            "name": "PO PO Sushi Bar",
+            "address": "142 Holloway Rd, N7 8DD"
+          }
+        ],
+        "onScreen": "SUSHI PUSH POPS IN LONDON",
+        "onScreenAt": "0:00",
+        "onScreenDiffers": false
+      }
+    ]
+  },
+  {
+    "videoId": "No_62gGJ9QM",
+    "title": "Hunting for LONDON’S best roast dinner #roast #london #foodie #roastbeef #sundayroast",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "Rubin",
+        "at": "0:00",
+        "kind": "sign",
+        "matched": null
+      },
+      {
+        "text": "Rubin",
+        "at": "0:20",
+        "kind": "other",
+        "matched": null
+      },
+      {
+        "text": "Rubin",
+        "at": "0:36",
+        "kind": "other",
+        "matched": null
+      },
+      {
+        "text": "Rubin",
+        "at": "0:40",
+        "kind": "other",
+        "matched": null
+      },
+      {
+        "text": "Rubin",
+        "at": "0:44",
+        "kind": "other",
+        "matched": null
+      },
+      {
+        "text": "Rubin",
+        "at": "0:48",
+        "kind": "other",
+        "matched": null
+      },
+      {
+        "text": "Rubin",
+        "at": "0:52",
+        "kind": "other",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Island",
+        "location": "May Street Market",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod visited Island in May Street Market and ate their sharing roast platter (£36/person) featuring four meats including porquetta, dry-aged roast beef, char grilled roast chicken, and beef cheat. Also tried their sharing T-bone steak roast and sticky beef jus with chocolate cake.",
+        "originalName": "Island",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "dabcf0576853",
+        "area": "May Street Market",
+        "address": null,
+        "moment": "0:00",
+        "verdict": "Best roast in London with exceptional quality meats.",
+        "dishes": [
+          "Lobster and wagyu lasagna",
+          "Sharing roast platter with porquetta, dry-aged roast beef, char grilled roast chicken, beef cheat",
+          "Sharing T-bone steak roast",
+          "Sticky beef jus",
+          "Chocolate cake"
+        ],
+        "confident": true,
+        "why": "Tod personally visited, ate multiple dishes, and gave detailed praise for the roast experience; located in May Street Market as stated in transcript."
+      }
+    ]
+  },
+  {
+    "videoId": "ZsamTVmYji8",
+    "title": "LONDON’S most underrated market #foodie #london #londonmarket #cheapeats",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "ARCH",
+        "at": "0:40",
+        "kind": "other",
+        "matched": "Archie's Doubles"
+      },
+      {
+        "text": "ARCH",
+        "at": "0:44",
+        "kind": "sign",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Archie's Doubles",
+        "location": "Shepherd's Bush Market",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod visited and tasted hot doubles made fresh to order topped with chickpea curry and mutton with homemade sauces. Trinidadian food described as exceptional at £3.50.",
+        "originalName": "Archie's Doubles",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Shepherd's Bush Market",
+        "address": null,
+        "moment": "0:17",
+        "verdict": "Fresh, affordable Trinidadian doubles at its finest.",
+        "dishes": [
+          "hot doubles with chickpea curry and mutton"
+        ],
+        "confident": false,
+        "why": "Stall in market with no placeId match; name partially confirmed by on-screen text 'ARCH' but full name inferred from transcript. On screen at 0:40: \"ARCH\" (The on-screen sign showing \"ARCH\" at 0:40-0:44 is the stall's own signage, which is a better name than the market; it's the beginning of \"Archie's Doubles\" and appears while Tod is at the stall ordering and eating.)",
+        "candidates": [
+          {
+            "id": "78db141c34bd",
+            "name": "DD’s Doubles",
+            "address": "Unit 1, darwin house, 1120 Harrow Rd, NW10 5NA"
+          },
+          {
+            "id": "ade656c349ec",
+            "name": "Archie's",
+            "address": "36 Highgate Hl, N19 5NL"
+          },
+          {
+            "id": "73b11ff6b5f7",
+            "name": "Archie's Bar",
+            "address": "Arch 12, Deptford Market Yard, SE8 4BX"
+          }
+        ],
+        "onScreen": "ARCH",
+        "onScreenAt": "0:40",
+        "onScreenDiffers": true
+      },
+      {
+        "name": "King Greens",
+        "location": "Shepherd's Bush Market",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod visited and tried the King sandwich with mint beef, egg, Algerian sausage, and chips in local bread with multiple sauces. Described as phenomenal at £8. Prices haven't increased in four years.",
+        "originalName": "Sam's Algerian Sandwiches",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Shepherd's Bush Market",
+        "address": null,
+        "moment": "0:42",
+        "verdict": "Phenomenal Algerian sandwiches, unchanged prices for four years.",
+        "dishes": [
+          "King brings a mint beef, egg, Algerian sausage, and chips sandwich"
+        ],
+        "confident": false,
+        "why": "Chapter title shows 'King Greens' but transcript refers to 'Sam's Algerian sandwiches'. The 'King' refers to the signature sandwich. No placeId found; stall in market.",
+        "candidates": [
+          {
+            "id": "8807f238c31a",
+            "name": "Red Dog American Sandwiches",
+            "address": "37a Hoxton Sq, N1 6NN"
+          },
+          {
+            "id": "f3f44fb6ec21",
+            "name": "Bloom Sandwiches",
+            "address": "2 Chessington Parade, Leatherhead Road, KT9 2PH"
+          },
+          {
+            "id": "8625e7841718",
+            "name": "Harrington Sandwiches",
+            "address": "109 The St, KT22 9RD"
+          },
+          {
+            "id": "4b14cdb0e9fb",
+            "name": "Birley Sandwiches",
+            "address": "New Street Sq"
+          },
+          {
+            "id": "c6940e9bfb60",
+            "name": "Birley Sandwiches",
+            "address": "Units 12-13, 2 Churchill Place, E14 5RB"
+          }
+        ]
+      },
+      {
+        "name": "Brothers and Cousins",
+        "location": "Shepherd's Bush Market",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod visited this fishmonger where he could buy fresh catch and have it grilled by the grill master (22 years at market). Charges £10 per kilo, served with chips and salad. Prawns described as absolutely insane.",
+        "originalName": "Brothers and Cousins",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Shepherd's Bush Market",
+        "address": null,
+        "moment": "0:54",
+        "verdict": "Fresh-grilled fish and prawns from long-established market grill master.",
+        "dishes": [
+          "prawns grilled over chimney grill with chips and salad"
+        ],
+        "confident": false,
+        "why": "Stall in market; no placeId match found among candidates; name inferred from chapter.",
+        "candidates": [
+          {
+            "id": "2bdede8a47b0",
+            "name": "Brother's Corner",
+            "address": "53 The Roundway, N17 7"
+          },
+          {
+            "id": "7f716a2cf1c6",
+            "name": "Brothers Cafe",
+            "address": "Thames Rd, IG11 0HB"
+          },
+          {
+            "id": "aa3f67fa9613",
+            "name": "Jusu Brothers",
+            "address": "147-149 Westbourne Grove, W11 2RS"
+          },
+          {
+            "id": "17957620864e",
+            "name": "BBrothers",
+            "address": "Newington Green Road, N1 4QU"
+          },
+          {
+            "id": "496b6e92d142",
+            "name": "The Brothers Coffee Bar",
+            "address": "14 Ashfield Parade, N14 5AB"
+          }
+        ]
+      },
+      {
+        "name": "Delina",
+        "location": "Shepherd's Bush Market",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod visited and tasted Ethiopian food with made-to-order ingredients including fermented injera bread and vegetables. Described as 'my favorite bite of the day' with vegetables having exceptional flavor.",
+        "originalName": "Delina",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "e90763a5ac9c",
+        "area": "Shepherd's Bush Market",
+        "address": null,
+        "moment": "1:14",
+        "verdict": "Favorite Ethiopian food with incredible vegetable flavor and injera.",
+        "dishes": [
+          "Ethiopian food with vegetables and fermented injera bread"
+        ],
+        "confident": true,
+        "why": "Exact placeId match found with correct address at Shepherd's Bush Market."
+      },
+      {
+        "name": "Mr Dumpling",
+        "location": "Shepherd's Bush Market",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod visited and tried fresh dumplings made to order in the window. Favorites were crispy dumplings and oil splash dumplings, plus bowls of noodles cut fresh to order by a noodle machine with deep rich flavor broths.",
+        "originalName": "Mr. Dumpling",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Shepherd's Bush Market",
+        "address": null,
+        "moment": "1:26",
+        "verdict": "Fresh dumplings and hand-cut noodles with rich, deep broths.",
+        "dishes": [
+          "crispy dumplings",
+          "oil splash dumplings",
+          "bowls of noodles"
+        ],
+        "confident": false,
+        "why": "Stall in market; no placeId match found; name inferred from chapter title.",
+        "candidates": [
+          {
+            "id": "411414549e23",
+            "name": "Dumpling Farm",
+            "address": ""
+          },
+          {
+            "id": "6805ae93df4c",
+            "name": "Ugly Dumpling",
+            "address": "30 Rathbone Place, W1T 1JG"
+          },
+          {
+            "id": "7a3ceeac48ad",
+            "name": "Sugar Dumplin",
+            "address": "London Designer Outlet, HA9 0WS"
+          },
+          {
+            "id": "72f1c33ae650",
+            "name": "Ugly Dumpling",
+            "address": "1 Newburgh St, W1F 7RB"
+          },
+          {
+            "id": "38b98f407ef7",
+            "name": "Dumpling King",
+            "address": "China Town"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "videoId": "U0DP2YMbUrE",
+    "title": "I Tried Every Food Trader At London’s Most Underrated Market",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "ARCHIE",
+        "at": "0:12",
+        "kind": "other",
+        "matched": null
+      },
+      {
+        "text": "Falafel Hut",
+        "at": "0:28",
+        "kind": "sign",
+        "matched": null
+      },
+      {
+        "text": "QUALITY FRUIT & VEG @ W12",
+        "at": "0:48",
+        "kind": "sign",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Sam's Sandwiches",
+        "location": "Shepherd's Bush Market",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Algerian street food stall. Tod tried beef and merguez sausage sandwich; praised the crispy toasted bread, multiple sauces, and flavor explosion. Noted prices haven't increased in 4 years and you can get double filling for £8.",
+        "originalName": "Sam's Sandwiches",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Shepherd's Bush Market",
+        "address": null,
+        "verdict": "Contender for best sandwich in London.",
+        "dishes": [
+          "Beef and merguez sausage sandwich"
+        ],
+        "confident": true,
+        "why": "Tod visited, ate, and gave his own detailed opinion on the food.",
+        "moment": "1:21"
+      },
+      {
+        "name": "Brothers & Cousin's Fishmongers",
+        "location": "Shepherd's Bush Market",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Fishmonger that pairs with Grillmaster for cooking. Tod bought prawns and had them grilled for £10 per kilo, served with chips and salad. Praised the size and quality of the prawns and the charred flavor from the coal-fire grill.",
+        "originalName": "Brothers & Cousin's Fishmongers",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Shepherd's Bush Market",
+        "address": null,
+        "verdict": "Fantastic partnership; delicious jumbo prawns with perfect smoke.",
+        "dishes": [
+          "Grilled prawns with chips and salad",
+          "Jumbo prawns"
+        ],
+        "confident": false,
+        "why": "The name 'Brothers & Cousin's' cannot be confirmed from graphics or transcript; it's inferred from the description. No candidate place matches exactly.",
+        "moment": "3:33",
+        "candidates": [
+          {
+            "id": "897b8d7cb4fb",
+            "name": "Two Brothers Fish House",
+            "address": "20 Church Rd, TW15 2UY"
+          },
+          {
+            "id": "d31e2fe24c06",
+            "name": "Bourne's Fishmongers",
+            "address": "31 Belsize Ln, NW3 5AS"
+          },
+          {
+            "id": "7bf131c39c7d",
+            "name": "The Brothers Fish Bar",
+            "address": "7 Cameron Rd, IG3 8LG"
+          },
+          {
+            "id": "76210eff5261",
+            "name": "Brothers Fish Bar",
+            "address": "122 Wood St, E17 3HX"
+          },
+          {
+            "id": "f171f02baad1",
+            "name": "Brothers Fish & Chips",
+            "address": "112 High Rd, WD23 1GE"
+          }
+        ]
+      },
+      {
+        "name": "The Grill Master",
+        "location": "Shepherd's Bush Market",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Coal-fire grill at Shepherd's Bush Market where Tod grilled the prawns from Brothers & Cousin's. Known for falafel and halloumi wraps. Tod focused on the grilled prawns experience.",
+        "originalName": "Grillmaster",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "28b19d66b947",
+        "area": "Shepherd's Bush Market",
+        "address": null,
+        "verdict": "Expert grilling with perfect charred flavor from coal fire.",
+        "dishes": [
+          "Grilled prawns",
+          "Falafel wraps",
+          "Halloumi wraps"
+        ],
+        "confident": true,
+        "why": "Candidate place matches the address given in search results for a grill master at Shepherd's Bush Market.",
+        "moment": "4:10"
+      },
+      {
+        "name": "Awrice's Juice",
+        "location": "Shepherd's Bush Market",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Juice stall run by two brothers with over 16 juices on the menu. Tod tried their beetroot, pomegranate, pineapple, orange, and lime juice with ginger. Praised the punch of ginger, pomegranate flavor, and reasonable pricing at £4.",
+        "originalName": "Oasis Juice",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Shepherd's Bush Market",
+        "address": null,
+        "verdict": "Amazing fresh juice at great value and punchy flavors.",
+        "dishes": [
+          "Beetroot, pomegranate, pineapple, orange, lime and ginger juice"
+        ],
+        "confident": true,
+        "why": "Tod visited, sampled the juice, and gave his own detailed opinion. The name 'Awrice's Juice' comes from the transcript where the stall owner corrects Tod.",
+        "moment": "6:24"
+      },
+      {
+        "name": "Onigiri",
+        "location": "Shepherd's Bush Market",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Japanese stall making fresh onigiri (rice balls) daily. Owner cooks rice with gas and makes different flavors fresh each day. Tod tried miso potato soup onigiri and truffle onigiri; praised the fluffy, perfectly cooked rice and balanced flavors.",
+        "originalName": "Onigiri",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Shepherd's Bush Market",
+        "address": null,
+        "verdict": "Fresh, perfectly cooked rice; little taste of Japan in London.",
+        "dishes": [
+          "Miso potato soup onigiri",
+          "Truffle onigiri"
+        ],
+        "confident": true,
+        "why": "Tod visited, ate, and gave his own opinion on the food and rice quality.",
+        "moment": "8:28"
+      },
+      {
+        "name": "Archie's Doubles",
+        "location": "Shepherd's Bush Market",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Caribbean stall serving doubles (bara filled with chana and meat). Owner from Trinidad and Tobago makes fresh bara daily. Tod praised the authentic flavors, spices, sauces, and value at £3.50 for a double or £5 for a large.",
+        "originalName": "Archie's Doubles",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Shepherd's Bush Market",
+        "address": null,
+        "verdict": "Authentic, properly cooked Trinidad food with great value.",
+        "dishes": [
+          "Beef and sausage doubles",
+          "Double cheese doubles"
+        ],
+        "confident": true,
+        "why": "Tod visited, ate, and gave his own detailed opinion on the authentic Caribbean flavors and value.",
+        "moment": "10:14"
+      },
+      {
+        "name": "Falafel Hut",
+        "location": "Shepherd's Bush Market",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Falafel stall in market with 24 years history. Owner claims famous customers including Mo Salah. Tod praised the falafel but especially the perfectly confit aubergine with natural sweetness. £5 for full sandwich.",
+        "originalName": "Falafel Hut",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "f5a02e298a36",
+        "area": "Shepherd's Bush Market",
+        "address": "49 Shepherd's Bush Market, W12 8DG",
+        "verdict": "Famous falafel; exceptional confit aubergine makes it special.",
+        "dishes": [
+          "Falafel sandwich"
+        ],
+        "confident": true,
+        "why": "Tod visited, ate, and gave his own opinion. Candidate place matches the address at Shepherd's Bush Market.",
+        "moment": "14:32"
+      },
+      {
+        "name": "Delina",
+        "location": "Shepherd's Bush Market",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Ethiopian restaurant in market. Owner started as market stall trader, now runs cooking classes and coffee place. Makes injera fresh daily. Tod tried spiced crispy bread and vegetarian platter with beef; praised the fermented bread, balanced spices, and soul food quality.",
+        "originalName": "Delina",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "e90763a5ac9c",
+        "area": "Shepherd's Bush Market",
+        "address": null,
+        "verdict": "Soul food with amazing fermented bread; first Ethiopian experience transformed.",
+        "dishes": [
+          "Spiced injera bread",
+          "Vegetarian platter with beef",
+          "Honey wine"
+        ],
+        "confident": true,
+        "why": "Tod visited, ate, and gave his own detailed opinion on the Ethiopian food and bread. Candidate place matches the address.",
+        "moment": "16:14"
+      },
+      {
+        "name": "Mr Dumpling",
+        "location": "Shepherd's Bush Market",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Dumpling stall at Shepherd's Bush Market with three ladies making dumplings fresh in window. Tod saw them making potsticker and oil-splashed dumplings and watched noodle-making machine in kitchen. Tried oil-splashed dumplings with prawn and pork, potsticker dumplings with beef, and braised beef shin noodles.",
+        "originalName": "Mr Dumpling",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Shepherd's Bush Market",
+        "address": null,
+        "verdict": "Among the best noodle spots in London; game-changing oil-splashed dumplings.",
+        "dishes": [
+          "Oil-splashed dumplings with prawn and pork",
+          "Beef potsticker dumplings",
+          "Braised beef shin noodles"
+        ],
+        "confident": false,
+        "why": "No candidate place matches 'Mr Dumpling' at Shepherd's Bush Market; none of the candidates are at that location.",
+        "moment": "21:04",
+        "candidates": [
+          {
+            "id": "411414549e23",
+            "name": "Dumpling Farm",
+            "address": ""
+          },
+          {
+            "id": "6805ae93df4c",
+            "name": "Ugly Dumpling",
+            "address": "30 Rathbone Place, W1T 1JG"
+          },
+          {
+            "id": "7a3ceeac48ad",
+            "name": "Sugar Dumplin",
+            "address": "London Designer Outlet, HA9 0WS"
+          },
+          {
+            "id": "72f1c33ae650",
+            "name": "Ugly Dumpling",
+            "address": "1 Newburgh St, W1F 7RB"
+          },
+          {
+            "id": "38b98f407ef7",
+            "name": "Dumpling King",
+            "address": "China Town"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "videoId": "He0B9iNvVFs",
+    "title": "Best food Persian food? #persian #london #londonfood #kebabs",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "BEST PERSIAN RESTAURANT IN LONDON?",
+        "at": "0:00",
+        "kind": "title_card",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Berenjak Mayfair",
+        "location": "Mayfair",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod visited and was extremely enthusiastic about the Persian cuisine. Praised the exceptional kebabs cooked over charcoal, Michelin star-quality hummus with black chickpea and walnut, char-grilled lamb chops, and crispy tadig with saffron rice as superior to anywhere else in London.",
+        "originalName": "Berenjak",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "cc7eec502e6f",
+        "area": "Mayfair",
+        "address": null,
+        "verdict": "Exceptional kebabs and hummus; best Persian in London.",
+        "dishes": [
+          "kubideh kebab platter (chicken, lamb, beef)",
+          "char-grilled double lamb chops",
+          "hummus with black chickpea and walnut",
+          "crispy tadig with saffron rice",
+          "red prawns and calamari with red pepper dip",
+          "barbari bread"
+        ],
+        "confident": true,
+        "why": "Tod personally visited, ate multiple dishes, and gave detailed, enthusiastic review of the food quality. Location matches Mayfair mentioned in transcript.",
+        "moment": "0:00"
+      }
+    ]
+  },
+  {
+    "videoId": "3wYMSbT5KWc",
+    "title": "Famous spicy basil rice has landed in UK #london #thaifood #popup",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "MOST FAMOUS SPICY BASIL RICE BOWL",
+        "at": "0:00",
+        "kind": "title_card",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Phed Mark",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Famous spicy basil rice popup from Bangkok now in London. Tod visited and praised the duck egg dishes with chicken and beef options, highlighting the bubbly crispy egg white texture and creamy yolk with simple garlic, chili and basil flavors evoking authentic Thai street food.",
+        "originalName": "Fed Mark",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": null,
+        "address": "15 Greek St, London W1D 4DP",
+        "verdict": "Amazing duck eggs with spicy basil rice; authentic Thai flavors.",
+        "dishes": [
+          "spicy basil rice with duck eggs and chicken",
+          "spicy basil rice with duck eggs and beef"
+        ],
+        "confident": true,
+        "why": "Tod personally visited and ate the food, giving detailed first-hand opinions of multiple dishes. Comment confirms the place name and London address.",
+        "moment": "0:00"
+      }
+    ]
+  },
+  {
+    "videoId": "EZvHX_U74MY",
+    "title": "Best Burger In London?",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "COMMERCIAL TAVERN",
+        "at": "0:32",
+        "kind": "sign",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Meat Stop",
+        "location": "The Commercial Tavern, Shoreditch",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod visited and gave his own detailed review. He called it \"one of the best burgers I've ever put in my mouth\" and praised the thick juicy beef patties with caramelized crust, gooey cheese, fresh pickles, and brioche bun wrapped in paper parcels. He considers Ben's burgers at the top of London's burger scene.",
+        "originalName": "Meat Stop",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Shoreditch",
+        "address": null,
+        "verdict": "One of the best burgers ever: thick, juicy, caramelized, gooey cheese.",
+        "dishes": [
+          "Classic burger",
+          "Original Nutter (peanut butter, chili jam)",
+          "Blue cheese burger (Stilton with caramelized onions)",
+          "In-house smashed potatoes"
+        ],
+        "confident": false,
+        "why": "Meat Stop is a stall/kitchen at The Commercial Tavern, not a standalone restaurant, so it doesn't match any of the candidate places which are all separate establishments. The candidates appear to be generic venue names unrelated to this burger stall.",
+        "moment": "5:28",
+        "candidates": [
+          {
+            "id": "8147bc6c19e6",
+            "name": "TOP EAT",
+            "address": "11 Little Newport St, WC2H 7JJ"
+          },
+          {
+            "id": "8ffc77d1be92",
+            "name": "Eatopia",
+            "address": "8 Great Russell St, WC1B 3NH"
+          },
+          {
+            "id": "1148ef507d20",
+            "name": "The Pitstop",
+            "address": "56 The Burroughs, NW4 4HE"
+          },
+          {
+            "id": "4e812c86b0c8",
+            "name": "The Stop",
+            "address": "48 High St, KT22 8AJ"
+          },
+          {
+            "id": "a2b6c3bbe879",
+            "name": "Last Stop",
+            "address": "Dock Road, TW8 8AG"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "videoId": "x79k2Xgf3CI",
+    "title": "LONDON’S most authentic Filipino bakery - WOW #london #bakery #filipino #shorts",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "LONDON'S BEST BAKERY?",
+        "at": "0:00",
+        "kind": "title_card",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Mamasons bakery",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod visited and tried multiple pastries including chin-apple double-baked croissant, Milo pastry, ginger creme brulee Danish, sambal bacon and cheese pan sweet, and vanilla cream ensaymada. He was very impressed, calling Filipino bakeries 'the goats of bakeries' and said he could spend all week there.",
+        "originalName": "LONDON's most authentic Filipino bakery",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Battersea",
+        "address": null,
+        "verdict": "Exceptional Filipino bakery, could become a local very quickly.",
+        "dishes": [
+          "chin-apple double-baked croissant",
+          "Milo pastry",
+          "ginger creme brulee Danish",
+          "sambal bacon and cheese pan sweet",
+          "vanilla cream ensaymada"
+        ],
+        "confident": true,
+        "why": "Tod personally visited, ate multiple items, and gave enthusiastic first-hand review. The name Mamasons is stated clearly in the transcript at 0:05.",
+        "moment": "0:00"
+      }
+    ]
+  },
+  {
+    "videoId": "3WbTfkUC8TA",
+    "title": "I Tried No.1 rated steak in the world (But was it THAT GOOD?)",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "DON JULIO",
+        "at": "0:08",
+        "kind": "title_card",
+        "matched": null
+      },
+      {
+        "text": "PARRILLA",
+        "at": "0:08",
+        "kind": "title_card",
+        "matched": null
+      },
+      {
+        "text": "BUENOS AIRES",
+        "at": "0:08",
+        "kind": "title_card",
+        "matched": null
+      },
+      {
+        "text": "DON JULIO",
+        "at": "0:12",
+        "kind": "sign",
+        "matched": null
+      },
+      {
+        "text": "CASA JULIAN",
+        "at": "0:32",
+        "kind": "sign",
+        "matched": null
+      },
+      {
+        "text": "DON JULIO",
+        "at": "0:40",
+        "kind": "sign",
+        "matched": "<UNKNOWN>"
+      },
+      {
+        "text": "PARRILLA DON JULIO",
+        "at": "0:44",
+        "kind": "other",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Don Julio",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "mixed",
+        "notes": "Tod visited this Michelin-guided parrilla, ranked the world's best steakhouse, and experienced the full farm-to-fork operation including the farm, butchery, and restaurant. He tasted multiple cuts including T-bone, ribeye, and short ribs, finding the steak exceptionally clean and well-flavored, though he personally prefers some funkiness from dry-aged beef.",
+        "originalName": "<UNKNOWN>",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Buenos Aires",
+        "address": null,
+        "verdict": "Best clean-cut steak ever, though he prefers funkier dry-aged beef.",
+        "dishes": [
+          "T-bone steak",
+          "Ribeye",
+          "Short ribs",
+          "Tomahawk steak",
+          "Beef skirt",
+          "Sweetbreads",
+          "Grilled provolone cheese",
+          "Sausages",
+          "Cecina in pastry",
+          "Pumpkin carpaccio",
+          "Tomatoes",
+          "Green beans"
+        ],
+        "confident": true,
+        "why": "Tod personally visited, ate extensively, and gave detailed opinions on the food and restaurant experience throughout the video.",
+        "moment": "0:34",
+        "onScreen": "DON JULIO",
+        "onScreenAt": "0:40",
+        "onScreenDiffers": false
+      }
+    ]
+  },
+  {
+    "videoId": "N7WmNIzzztk",
+    "title": "I Tried London Most Expensive Steakhouse (Is Salt Bae FINISHED?!)",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "Nusr-Et",
+        "at": "0:32",
+        "kind": "sign",
+        "matched": null
+      },
+      {
+        "text": "All in gates PIZZA",
+        "at": "0:36",
+        "kind": "other",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Don Carne Asados",
+        "location": "Bermondsey",
+        "rating": 4.2,
+        "rating_out_of": 5,
+        "sentiment": "positive",
+        "notes": "Tod reviewed the unlimited Brazilian meat platter at £35.99 with beef ribs, pork belly, chicken wings, chicken hearts, sausage and 10+ sides totalling over 3kg. He praised the tender, perfectly seasoned meat with beautiful crust, the incredible selection, and authentic Brazilian vibe. Noted the owners opened due to his previous visit bringing them customers.",
+        "originalName": "Don Carne Asados",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Bermondsey",
+        "address": null,
+        "moment": "0:51",
+        "verdict": "Incredible value, tender meat, authentic Brazilian vibe",
+        "dishes": [
+          "Unlimited meat platter (£35.99)",
+          "Tomahawk steak",
+          "Steak skewer",
+          "Picanha",
+          "Chicken hearts",
+          "Homemade garlic sauce"
+        ],
+        "confident": true,
+        "why": "Tod personally visited, ate extensively, and gave detailed ratings across all criteria (taste 4/5, tenderness 4/5, sides 4/5, value 5/5, vibe 4/5)."
+      },
+      {
+        "name": "Beast and Field",
+        "location": "Mayfair (at Mercato)",
+        "rating": 3.4,
+        "rating_out_of": 5,
+        "sentiment": "mixed",
+        "notes": "Tod reviewed the bavette steak combo platter at £30 (or £10 Mon-Thu deal for half bavette) in a converted church setting. He found the steak had good smoky grill flavor and chimichurri, though the meat was slightly tough as expected from the bavette cut. Praised the elevated salad with pomegranate and cheese, though fries were salty.",
+        "originalName": "Beast and Field",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "2b674a59690e",
+        "area": "Mayfair (at Mercato)",
+        "address": null,
+        "moment": "5:05",
+        "verdict": "Good value, smoky grill flavor, tough bavette cut",
+        "dishes": [
+          "Bavette steak combo platter (£30)",
+          "Bavette with chimichurri (£10 Mon-Thu)",
+          "Salad with pomegranate and cheese",
+          "Chips"
+        ],
+        "confident": true,
+        "why": "Tod personally ate there, gave detailed ratings (taste 3/5, tenderness 2.5/5, sides 3/5, value 4/5, vibe 4/5), and the candidate place matches the description perfectly."
+      },
+      {
+        "name": "A. Bue",
+        "location": "Mayfair",
+        "rating": 5,
+        "rating_out_of": 5,
+        "sentiment": "positive",
+        "notes": "Tod reviewed multiple premium steaks here, calling it his favorite steakhouse on planet Earth. He ate Galician Blonde (dry-aged 60 days, £5-7 per gram, retired dairy cow with hazelnut/foie gras notes), Black Angus T-bone (1kg, £120/kg from Spain), fillet steak, and cocobay. He praised the perfect charcoal cooking method (9 on-off cycles), incredible flavor, tender fillet, cacio e pepe dip, and unique beef fat chips.",
+        "originalName": "a bue",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Mayfair",
+        "address": null,
+        "moment": "8:44",
+        "verdict": "Perfect steakhouse, incredible flavor, tender meat, top vibe",
+        "dishes": [
+          "Galician Blonde (60-day dry-aged)",
+          "Black Angus T-bone (£120/kg)",
+          "Fillet steak",
+          "Cocobay",
+          "Cacio e pepe dip",
+          "Beef fat chips"
+        ],
+        "confident": false,
+        "why": "The restaurant name appears to be 'A. Bue' or similar based on context, but no on-screen graphic confirms it and no matching candidate places provided. Transcript shows Nemanja as 'Mr. Chuleta' and co-owner of 'Lurra, Donostia, and now a buy' — this may be 'Aboy' or another spelling. Tod gave perfect scores (5/5 for taste, tenderness, sides, value; 5/5 vibe) and stated it's his favorite steakhouse on Earth.",
+        "candidates": []
+      },
+      {
+        "name": "Nusr-Et",
+        "location": "Mayfair",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "negative",
+        "notes": "Tod reviewed the most expensive steak on the menu: 680-pound Australian Wagyu loin. The steak arrived cold inside despite impressive presentation with heavy salting. After complaining, restaurant provided a hot plate for Tod to cook it himself. Tod found the flavor adequate but not exceptional for the price, criticizing the lack of sauce and the premium charged purely for the name rather than quality.",
+        "originalName": "Salt Bae",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Mayfair",
+        "address": null,
+        "moment": "14:52",
+        "verdict": "Cold service, adequate flavor, paying for name not quality",
+        "dishes": [
+          "Australian Wagyu loin (£680)",
+          "Spinach (£12)",
+          "Various salt presentations"
+        ],
+        "confident": false,
+        "why": "On-screen text shows 'Nusr-Et' at 0:32, but no candidate places provided match Nusr-Et/Salt Bae (all candidates were 'Salt' variants). The description and transcript confirm this is Salt Bae's London restaurant in Mayfair. Tod gave poor ratings (taste 3/5, tenderness 4/5, sides 1/5, value 2/5, vibe 4.5/5) and rated it his least favorite overall.",
+        "candidates": [
+          {
+            "id": "69c8b55c114d",
+            "name": "SALT",
+            "address": "20-21 Leicester Sq, WC2H 7JX"
+          },
+          {
+            "id": "3c34ccb9cc27",
+            "name": "Salt & Batter",
+            "address": "67 Hadlow Rd, DA16 1AX"
+          },
+          {
+            "id": "a876556d043d",
+            "name": "The Salt Beef Bar",
+            "address": "2, Monkville Parade, NW11 0AL"
+          },
+          {
+            "id": "68685c3be3c1",
+            "name": "B&K Salt Beef Bar",
+            "address": "353 Uxbridge Rd, HA5 4JN"
+          },
+          {
+            "id": "5a7cffac2701",
+            "name": "B & K Salt Beef Bar",
+            "address": "11 Lanson House, HA8 6NL"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "videoId": "t97NYngz8pw",
+    "title": "This video never gets old 😂😂 #londonpub #flood #funny #london",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "RIVERSIDE BAR",
+        "at": "0:32",
+        "kind": "sign",
+        "matched": null
+      },
+      {
+        "text": "THE WHITE CROSS",
+        "at": "0:44",
+        "kind": "sign",
+        "matched": "The White Cross"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "The White Cross",
+        "location": "Richmond",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "A unique pub in Richmond that floods during high tide. Tod praised the Yorkshire puddings and fish and chips, and noted they serve roast dinners on Sundays.",
+        "originalName": "The White Cross",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": "5d8f638cb37a",
+        "area": "Richmond",
+        "address": null,
+        "verdict": "Praised Yorkshire puddings and fish and chips.",
+        "dishes": [
+          "roast dinners",
+          "fish and chips",
+          "Yorkshire puddings"
+        ],
+        "confident": true,
+        "why": "Tod visited the pub, ate there, and gave his own opinion on the food.",
+        "moment": "0:44",
+        "onScreen": "THE WHITE CROSS",
+        "onScreenAt": "0:44",
+        "onScreenDiffers": false
+      }
+    ]
+  },
+  {
+    "videoId": "XISIk5ABWQg",
+    "title": "First time trying Nigerian street food in Peckham 🇳🇬 #nigerian #streetfood #london",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "K&K BUTCHERS & GROCERS",
+        "at": "0:00",
+        "kind": "sign",
+        "matched": "<UNKNOWN>"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "K&K Butchers & Grocers",
+        "location": "Peckham",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "<UNKNOWN>",
+        "keep": false,
+        "reason": "not_a_place_to_eat",
+        "placeId": null,
+        "area": "Peckham",
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "K&K Butchers & Grocers is a butcher shop and grocery store, not a restaurant or food stall where Tod ate.",
+        "moment": null,
+        "candidates": [],
+        "onScreen": "K&K BUTCHERS & GROCERS",
+        "onScreenAt": "0:00",
+        "onScreenDiffers": false
+      }
+    ]
+  },
+  {
+    "videoId": "wzC-7ot-HGE",
+    "title": "50 YEARS OF HISTORY, DONT LET THIS PLACE CLOSE :( 🐟 🍟 #foodie #fishandchips #supportlocal #food",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "Superfish",
+        "at": "0:12",
+        "kind": "sign",
+        "matched": "<UNKNOWN>"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Superfish",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod highlights this 50-year-old fish and chips establishment to support it and prevent it from closing.",
+        "originalName": "<UNKNOWN>",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "verdict": "Historic fish and chips place worth supporting.",
+        "dishes": [],
+        "confident": true,
+        "why": "Tod is featuring and reviewing this establishment as the main subject of the video.",
+        "moment": null,
+        "onScreen": "Superfish",
+        "onScreenAt": "0:12",
+        "onScreenDiffers": false
+      }
+    ]
+  },
+  {
+    "videoId": "ppqw80s2RtA",
+    "title": "FAMOUS ROAST MEAT IN CHINATOWN #london #chinese #chinesefood #foodie #food AD with Uber",
+    "sponsored": true,
+    "graphics": [
+      {
+        "text": "MOST FAMOUS ROASTED MEATS IN CHINATOWN",
+        "at": "0:00",
+        "kind": "title_card",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Four Seasons Restaurant",
+        "location": "Chinatown",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod visits the basement kitchen and reviews their famous roast meats including Peking duck cooked by Chef Fang over 30 years, pork belly, and char siu with honey glaze. He states he comes here once a month.",
+        "originalName": "<UNKNOWN>",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Chinatown",
+        "address": null,
+        "verdict": "Incredible roast meats; crispy skin and juicy meat throughout.",
+        "dishes": [
+          "Peking duck",
+          "pork belly",
+          "char siu"
+        ],
+        "confident": false,
+        "why": "No placeId found; Four Seasons is a common name and there may be multiple candidates or the specific Chinatown location may not be in the database.",
+        "moment": "0:00",
+        "candidates": []
+      }
+    ]
+  },
+  {
+    "videoId": "Q-rhRAGLwOE",
+    "title": "London’s OLDEST chop house - dating back to 1869 🥩 #roastdinner #londonfood #sundayroast #foodie",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "SUNDAY ROAST LONDON'S OLDEST CHOP HOUSE",
+        "at": "0:00",
+        "kind": "title_card",
+        "matched": null
+      },
+      {
+        "text": "The Quality Chop House",
+        "at": "0:04",
+        "kind": "other",
+        "matched": "<UNKNOWN>"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "The Quality Chop House",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod visited for Sunday lunch and gave detailed personal reviews of multiple dishes. He praised the roast beef with bone marrow gravy as a 10 out of 10, the chicken as his favourite, and especially highlighted the confit potatoes cooked in beef fat for 24 hours.",
+        "originalName": "<UNKNOWN>",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "moment": "0:00",
+        "verdict": "Exceptional roast beef and chicken; world-class confit potatoes and gravy.",
+        "dishes": [
+          "Roast beef with bone marrow gravy",
+          "Chicken",
+          "Confit potatoes",
+          "Roasted saddleback pork",
+          "Pâté in pastry",
+          "Pork shoulder croquettes with anchovy-butter béarnaise"
+        ],
+        "confident": true,
+        "why": "Tod personally visited, ate multiple dishes and gave detailed first-hand opinions. The restaurant is clearly named in both the transcript and on-screen text.",
+        "onScreen": "The Quality Chop House",
+        "onScreenAt": "0:04",
+        "onScreenDiffers": false
+      }
+    ]
+  },
+  {
+    "videoId": "Z0JJLlSsLok",
+    "title": "Please support yogi ❤️ #london #supportlocal #homeless",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "Yogi's Sri Lankan Kitchen",
+        "at": "0:00",
+        "kind": "other",
+        "matched": "<UNKNOWN>"
+      },
+      {
+        "text": "CAMDEN PASSAGE",
+        "at": "0:16",
+        "kind": "sign",
+        "matched": null
+      },
+      {
+        "text": "TRAMPOLINE",
+        "at": "0:16",
+        "kind": "sign",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Yogi's Sri Lankan Kitchen",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod visited Yogi's first restaurant to support him. He ordered rotis with lamb (£5) and praised the Sri Lankan tea as the best he's ever tasted. He also tried a £15 plate with four types of curries and biryani. Tod was impressed by Yogi's generosity—despite barely making ends meet, Yogi feeds homeless people for free.",
+        "originalName": "<UNKNOWN>",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "moment": "0:00",
+        "verdict": "Incredible food, amazing person, inspiring story.",
+        "dishes": [
+          "rotis with lamb",
+          "Sri Lankan tea",
+          "curries and biryani plate"
+        ],
+        "confident": true,
+        "why": "Tod personally visited, ate there, and gave his own positive review of the food and Yogi's character.",
+        "onScreen": "Yogi's Sri Lankan Kitchen",
+        "onScreenAt": "0:00",
+        "onScreenDiffers": false
+      }
+    ]
+  },
+  {
+    "videoId": "CHONx0V0dY4",
+    "title": "UNDER £10 UNLIMITED NOODS IN LONDON 🍜 #london #chinatown #foodie",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "take a mate",
+        "at": "0:04",
+        "kind": "other",
+        "matched": null
+      },
+      {
+        "text": "take a mate",
+        "at": "0:48",
+        "kind": "other",
+        "matched": null
+      },
+      {
+        "text": "FOOD CLUB",
+        "at": "0:48",
+        "kind": "other",
+        "matched": "<UNKNOWN>"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Funky Noodle",
+        "location": "Chinatown",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod reviewed unlimited noodles under £10 (though commenters note beef noodles are £20 and 'all you can eat' means top-ups of plain noodles).",
+        "originalName": "<UNKNOWN>",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Chinatown, Soho",
+        "address": "Charing Cross Road",
+        "verdict": "Unlimited noodles under £10 in Chinatown.",
+        "dishes": [
+          "Unlimited noodles"
+        ],
+        "confident": false,
+        "why": "Viewer comments clearly identify this as Funky Noodle on Charing Cross Road where Tod ate and reviewed the dish. On screen at 0:48: \"FOOD CLUB\" (FOOD CLUB appears on-screen at 0:48 and is a specific place name, better than the mishearing \"Funky Noodle.\")",
+        "moment": null,
+        "onScreen": "FOOD CLUB",
+        "onScreenAt": "0:48",
+        "onScreenDiffers": true
+      }
+    ]
+  },
+  {
+    "videoId": "cxrKZaVw6TU",
+    "title": "Trying london’s new cinnabun bakery #bakery #london #cinnamonroll #foodie",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "LONDON'S NEWEST CINNABON BAKERY",
+        "at": "0:00",
+        "kind": "title_card",
+        "matched": "London's new cinnabun bakery"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Rise & Bun",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod visited this new cinnamon roll bakery in London to try their offerings.",
+        "originalName": "London's new cinnabun bakery",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Golden Square",
+        "address": null,
+        "verdict": "New cinnamon roll bakery in London.",
+        "dishes": [],
+        "confident": false,
+        "why": "The comment suggests the name is Rise & Bun at Golden Square, but no candidate places match; this appears to be a recently opened business not yet in the database. On screen at 0:00: \"LONDON'S NEWEST CINNABON BAKERY\" (The title card describes what the place is rather than naming it specifically as \"Rise & Bun\".)",
+        "moment": null,
+        "candidates": [
+          {
+            "id": "6ccd1c013fdd",
+            "name": "London's Bakery Shop",
+            "address": "London's Bakery Shop, Cathedral St, London SE1 9DE, United Kingdom, SE1"
+          },
+          {
+            "id": "dea6c3b46ded",
+            "name": "New Capital Kebab London",
+            "address": "2 Turnpike Ln, N8 0PX"
+          }
+        ],
+        "onScreen": "LONDON'S NEWEST CINNABON BAKERY",
+        "onScreenAt": "0:00",
+        "onScreenDiffers": true
+      }
+    ]
+  },
+  {
+    "videoId": "p1ajSCP823w",
+    "title": "Update: struggling pie and mash shop with no customers #foodie #london #support",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "THE PIE DEN",
+        "at": "0:04",
+        "kind": "sign",
+        "matched": "<UNKNOWN>"
+      },
+      {
+        "text": "TRADITIONAL PIE MASH & LIQUOR",
+        "at": "0:04",
+        "kind": "sign",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "The Pie Den",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "negative",
+        "notes": "Tod visited to support this pie and mash shop, which had been struggling with no customers. Since his previous video, the shop has expanded with more seating, tables, and a tent, now busy with customers.",
+        "originalName": "<UNKNOWN>",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Bermondsey",
+        "address": null,
+        "verdict": "Shop thriving after Tod's support; great comeback story.",
+        "dishes": [
+          "pie and mash"
+        ],
+        "confident": true,
+        "why": "Tod personally visited and filmed the follow-up to his earlier video, documenting the shop's improvement and giving his support.",
+        "moment": "0:00",
+        "onScreen": "THE PIE DEN",
+        "onScreenAt": "0:04",
+        "onScreenDiffers": false
+      }
+    ]
+  },
+  {
+    "videoId": "gDcOdfxwhmY",
+    "title": "Hunting for LONDON’S best mixed grill #foodie #indianfood #food #tooting AD",
+    "sponsored": true,
+    "graphics": [
+      {
+        "text": "take a plate",
+        "at": "0:36",
+        "kind": "other",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Tooting Mixed Grill",
+        "location": "Tooting",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Tooting Mixed Grill",
+        "keep": false,
+        "reason": "only_mentioned",
+        "placeId": null,
+        "area": "Tooting",
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "The restaurant is extracted from the title but there is no evidence in the video content that Tod visited it or gave their own review. The candidate place 'Chicago Grill Tooting' does not match the extracted name 'Tooting Mixed Grill', and without clear evidence of Tod eating there and reviewing it, this should not be kept.",
+        "moment": null,
+        "candidates": [
+          {
+            "id": "9ce3a119eb56",
+            "name": "Chicago Grill Tooting",
+            "address": "178 Tooting High Street, SW17 0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "videoId": "4dNxWXFj2pY",
+    "title": "Helping a struggling pie and mash shop with 7 customers #london #pieandmash #supportlocal #foodie ad",
+    "sponsored": true,
+    "graphics": [
+      {
+        "text": "THE PIE DEN",
+        "at": "0:04",
+        "kind": "sign",
+        "matched": "<UNKNOWN>"
+      },
+      {
+        "text": "TRADITIONAL PIE MASH & LIQUOR",
+        "at": "0:04",
+        "kind": "sign",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "The Pie Den",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod visited Dennis's struggling pie shop and gave his detailed personal opinion of the pie, mash and gravy (£7.50). He praised the crunch of the dough, the beef fat, the vinegar and gravy, calling it \"incredible\" and \"the best mashed potato pie I've ever had.\" The video focuses on Tod helping the struggling business by securing £3,000 of kitchen equipment sponsorship from Flat-Pack.",
+        "originalName": "<UNKNOWN>",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Bermondsey",
+        "address": "The Blue Market, Market Place (off Southwark Park Road), London, SE16 3UQ",
+        "verdict": "Incredible pie and mash; best he's had.",
+        "dishes": [
+          "Pie, mash and gravy",
+          "Mashed potato pie"
+        ],
+        "confident": true,
+        "why": "Tod personally visited, ate, and gave extensive first-hand praise for the food. Clear name from on-screen graphics and creator comment with full address.",
+        "moment": "0:00",
+        "onScreen": "THE PIE DEN",
+        "onScreenAt": "0:04",
+        "onScreenDiffers": false
+      }
+    ]
+  },
+  {
+    "videoId": "dX2-wVcmmHE",
+    "title": "HELP save this incredible neighbourhood restaurant #london #foodie #support",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "Cinder margarita",
+        "at": "0:16",
+        "kind": "menu",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Sinder",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod visited this restaurant facing closure and was impressed by the tasting menu (£40), highlighting dishes including grilled squid with café de Paris butter, giant shrimp, T-bone steak with marrow, braised beef ribs with chimichurri, and cedar plank salmon. The owner Jake is noted for his obsession with quality produce and even grows herbs on the roof.",
+        "originalName": "<UNKNOWN>",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "moment": "0:05",
+        "verdict": "Best salmon ever had in a restaurant; stellar dishes.",
+        "dishes": [
+          "grilled squid with café de Paris butter",
+          "giant shrimp cooked over fire with coconut oil and chili",
+          "T-bone steak with beef sauce and marrow",
+          "braised beef ribs with chimichurri",
+          "cedar plank salmon"
+        ],
+        "confident": false,
+        "why": "The restaurant name appears as 'Cinder margarita' in the on-screen text, but Tod pronounces it 'Sinder' in the transcript; the correct name and placeId need verification.",
+        "candidates": []
+      }
+    ]
+  },
+  {
+    "videoId": "5kSlw2wXdFE",
+    "title": "2 Michelin star bbq pop up in London #bbq #london #foodie",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "2 MICHELIN STAR TEXAS BBQ POP UP IN LONDON",
+        "at": "0:00",
+        "kind": "title_card",
+        "matched": null
+      },
+      {
+        "text": "LA Barbecue",
+        "at": "0:12",
+        "kind": "other",
+        "matched": "<UNKNOWN>"
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "LA Barbecue",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "<UNKNOWN>",
+        "keep": false,
+        "reason": "only_mentioned",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "LA Barbecue is a Texas restaurant, not a London establishment. The video shows a pop-up event, but without evidence that Tod ate there and gave his own review, this appears to be only mentioned.",
+        "moment": null,
+        "candidates": [],
+        "onScreen": "LA Barbecue",
+        "onScreenAt": "0:12",
+        "onScreenDiffers": false
+      }
+    ]
+  },
+  {
+    "videoId": "jN7ZeZhu4LE",
+    "title": "We ate a baby pig #london #foodie #spanishfood #food",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "Marc & Halen's",
+        "at": "0:00",
+        "kind": "other",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Sabor",
+        "location": null,
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod visited this Michelin-starred Spanish restaurant and personally reviewed multiple dishes including octopus, tortilla, and suckling pig.",
+        "originalName": "<UNKNOWN>",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "moment": "0:05",
+        "verdict": "Authentic Spanish food, generous portions at one Michelin star.",
+        "dishes": [
+          "octopus",
+          "tortilla",
+          "suckling pig"
+        ],
+        "confident": false,
+        "why": "No placeId found in candidates and confirmed name from transcript rather than on-screen text; confident is false due to missing placeId.",
+        "candidates": []
+      }
+    ]
+  },
+  {
+    "videoId": "2GVPx0KdIJQ",
+    "title": "Cheapest Italian restaurant in London #london #foodie #pasta #tooting #cheapeats",
+    "sponsored": false,
+    "graphics": [
+      {
+        "text": "CHEAPEST ITALIAN RESTAURANT IN LONDON",
+        "at": "0:00",
+        "kind": "title_card",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Vermicelli",
+        "location": "Tooting",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "Tod reviewed this as the cheapest Italian restaurant in London, focusing on affordable pasta options.",
+        "originalName": "<UNKNOWN>",
+        "keep": true,
+        "reason": "own_review",
+        "placeId": null,
+        "area": "Tooting",
+        "address": "Unit 11 Tooting High St, London SW17 0SN",
+        "verdict": "Cheapest Italian restaurant in London.",
+        "dishes": [],
+        "confident": true,
+        "why": "Tod's own review of this restaurant as the cheapest Italian in London, with the location confirmed by a viewer comment.",
+        "moment": null
+      }
+    ]
+  },
+  {
+    "videoId": "UHv3dCDkHkM",
+    "title": "WORLD’S MOST FAMOUS BRAZILIAN CHURRASCO EXPERIENCE WITH UNLIMITED MEAT?! 🇧🇷🥩 #london #foodie ad",
+    "sponsored": true,
+    "graphics": [
+      {
+        "text": "MOST FAMOUS BRAZILIAN CHURRASCO UNLIMITED MEAT",
+        "at": "0:00",
+        "kind": "title_card",
+        "matched": null
+      }
+    ],
+    "restaurants": [
+      {
+        "name": "Plataforma",
+        "location": "London",
+        "rating": null,
+        "rating_out_of": null,
+        "sentiment": "positive",
+        "notes": "",
+        "originalName": "Plataforma",
+        "keep": false,
+        "reason": "only_mentioned",
+        "placeId": null,
+        "area": null,
+        "address": null,
+        "verdict": "",
+        "dishes": [],
+        "confident": false,
+        "why": "The extraction incorrectly identified 'Plataforma' but the video clearly discusses 'Fogo de Chão' throughout. The transcript consistently names 'Fogo de Chão' as the Brazilian steakhouse being reviewed, mentioning it was formerly known as Fazenda. The extracted name does not match the actual restaurant discussed in the video.",
+        "moment": "0:05",
+        "candidates": [
+          {
+            "id": "2c57e034c028",
+            "name": "Platform",
+            "address": "2b Worship St, EC2A 2AH"
+          },
+          {
+            "id": "02e12c0fa985",
+            "name": "Platform 3",
+            "address": "69 Whitton Rd, TW3 2DG"
+          },
+          {
+            "id": "eb1590a5022d",
+            "name": "Platform 7",
+            "address": "East Croydon Railway Station (ECR), RM14 2TD"
+          },
+          {
+            "id": "a25e8ca1f200",
+            "name": "The Platform Cafe",
+            "address": "2 Ridgway Rd, SW9 7AH"
+          },
+          {
+            "id": "0679d9e9761c",
+            "name": "Platterform",
+            "address": "291 Mare Street, E8 1EJ"
+          }
+        ]
+      }
+    ]
   }
 ]

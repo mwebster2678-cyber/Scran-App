@@ -13,7 +13,7 @@ export const CREATORS = {
     source: 'transcript',
     emoji: '⭐',
     colour: '#C2185B',
-    textColour: '#A07D00',
+    textColour: '#AD1457',
   },
   topjaw: {
     name: 'Topjaw',
