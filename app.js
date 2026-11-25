@@ -2378,7 +2378,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       _map.on('moveend', _showPlacesInView);
 
       // Close panel on map click
-      _map.on('click', () => { RatingPanel.close(); Views.setSheet(false); PlaceSearch.close(); });
+      _map.on('click', () => { RatingPanel.close(); Views.setSheet(false); PlaceSearch.close(); FilterColumn.closeOnPhone(); });
 
       // Keyboard — close panel on Escape, block browser zoom shortcuts
       document.addEventListener('keydown', (e) => {
@@ -2842,20 +2842,24 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
   })();
 
   // ── Collapsible filter column: starts closed on phones, where it would cover the map ──
-  (function () {
+  const FilterColumn = (function () {
     const sidebar = document.getElementById('filter-sidebar');
     const toggle  = document.getElementById('fs-collapse');
     function setOpen(open) {
       sidebar.classList.toggle('closed', !open);
       toggle.setAttribute('aria-expanded', open);
     }
-    setOpen(!window.matchMedia('(max-width: 700px)').matches);
+    const isPhone = () => window.matchMedia('(max-width: 700px)').matches;
+    setOpen(!isPhone());
     toggle.addEventListener('click', () => setOpen(sidebar.classList.contains('closed')));
     // A dot on the tab shows a filter is on while the column is hidden
     sidebar.addEventListener('click', () => {
       const filtered = [...sidebar.querySelectorAll('.fs-chip.selected')].some(c => c.dataset.value);
       toggle.classList.toggle('filtered', filtered);
     });
+    // On phones a tap on the map closes it, like the other panels
+    const closeOnPhone = () => { if (isPhone()) setOpen(false); };
+    return { closeOnPhone };
   })();
 
   // ── Collapsible sidebar sections ──
