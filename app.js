@@ -474,15 +474,14 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       _renderer = L.canvas({ padding: 0.5 });
     }
 
-    function _pinIcon(id, name, kind) {
-      const stored = Storage.get(PLACE_TYPE, id);
-      if (stored) return myPinIcon(stored.rating, name, kind);
-      if (BookmarkStorage.get(PLACE_TYPE, id)) return wantPinIcon();
-      return null;
+    // Want-to-visit places get a pin. Your rated places don't: they're on the map only under
+    // My reviews and following (MyListManager), so Explore shows just the creators.
+    function _pinIcon(id) {
+      return BookmarkStorage.get(PLACE_TYPE, id) ? wantPinIcon() : null;
     }
 
     function _createMarker(place) {
-      const icon = _pinIcon(place.id, place.name, place.kind);
+      const icon = _pinIcon(place.id);
       const marker = icon
         ? L.marker([place.lat, place.lon], { icon, riseOnHover: true })
         : L.circleMarker([place.lat, place.lon], {
@@ -991,7 +990,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
     function init(map) { _map = map; }
 
-    return { init, refresh, filter, setActive };
+    return { init, refresh, filter, setActive, isActive: () => _active };
   })();
 
   // 9. FILTER BAR
@@ -2315,13 +2314,13 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         UI.showError('Could not load restaurants — check your connection and try again.');
         return;
       }
-      // Zoomed out, the 50k places would bury the creator picks: show only ones you've rated or saved
+      // Zoomed out, the 50k places would bury the creator picks: show only ones you've saved
       const zoomedIn = _map.getZoom() >= CONFIG.minZoomForAllPlaces;
       let places = Places.query(_map.getBounds(), { kind: FilterBar.getKind(), cuisine: FilterBar.getCuisine() })
         .filter(p => !_hasCreatorPin(p.id))
-        // under a friend's pin: no dot, and the star goes on their pin, but your own score pin stays
-        .filter(p => !PeopleLayer.covers(PLACE_TYPE, p.id) || Storage.get(PLACE_TYPE, p.id));
-      if (!zoomedIn) places = places.filter(p => Storage.get(PLACE_TYPE, p.id) || BookmarkStorage.get(PLACE_TYPE, p.id));
+        .filter(p => !PeopleLayer.covers(PLACE_TYPE, p.id)) // under a friend's pin: no dot, the star goes on their pin
+        .filter(p => !(MyListManager.isActive() && Storage.get(PLACE_TYPE, p.id))); // no dot under your own pin
+      if (!zoomedIn) places = places.filter(p => BookmarkStorage.get(PLACE_TYPE, p.id));
       MarkerManager.show(places);
       UI.setLoading(false);
       _openPendingShare();
