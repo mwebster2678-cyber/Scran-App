@@ -1097,8 +1097,8 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       key: 'tod',
       name: 'Tod',
       avatar: 'images/tod.jpg',
-      colour: '#D4AC0D',
-      textColour: '#A07D00',
+      colour: '#C2185B',
+      textColour: '#AD1457',
       zIndexOffset: 500,
     },
     {

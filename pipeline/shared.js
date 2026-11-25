@@ -12,7 +12,7 @@ export const CREATORS = {
     channel: 'eatingwithtod',
     source: 'transcript',
     emoji: '⭐',
-    colour: '#D4AC0D',
+    colour: '#C2185B',
     textColour: '#A07D00',
   },
   topjaw: {
