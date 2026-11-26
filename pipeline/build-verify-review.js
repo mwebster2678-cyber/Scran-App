@@ -656,13 +656,33 @@ function buildCard(r, n) {
       const anchor = googleTop || options.find(o => o.lat) || null; // where the video is, roughly
       const found = await searchPlaces(query, anchor);
       if (search.value.trim() !== query) return;
-      results.innerHTML = found.length
-        ? found.map((p, i) => \`<button class="result" data-i="\${i}"><b>\${esc(p.name)}</b> <span>\${esc(p.address || '')}</span></button>\`).join('')
-        : '<div class="option-address">Not in our places list.</div>';
-      results.querySelectorAll('.result').forEach(b => b.addEventListener('click', () => {
-        addOption(found[+b.dataset.i]);
-        results.innerHTML = '';
-      }));
+      const show = (list, more) => {
+        results.innerHTML = (list.length
+          ? list.map((p, i) => \`<button class="result" data-i="\${i}"><b>\${esc(p.name)}</b> <span>\${esc(p.address || '')}\${p.google ? ' · Google' : ''}</span></button>\`).join('')
+          : '') + (more ? '<div class="option-address">' + more + '</div>' : '');
+        results.querySelectorAll('.result').forEach(b => b.addEventListener('click', () => {
+          const p = list[+b.dataset.i];
+          addOption(p, p.google ? 'Google, your search' : 'Your search', true, false, p.google ? 'google-search' : 'search');
+          results.innerHTML = '';
+        }));
+      };
+      show(found, GOOGLE_KEY && query.length >= 3 ? 'Searching Google too…' : found.length ? '' : 'Not in our places list.');
+      if (!GOOGLE_KEY || query.length < 3) return;
+      // Google as well, once typing pauses (each search is saved, so retyping costs nothing)
+      await new Promise(res => setTimeout(res, 600));
+      if (search.value.trim() !== query) return;
+      let fromGoogle = [];
+      try {
+        for (const g of await googleSearch(/london/i.test(query) ? query : query + ', London')) {
+          const p = await scranPlaceFor(g);
+          fromGoogle.push(p ? { id: p.id, name: p.name, address: p.address || g.address, lat: p.lat, lon: p.lon, google: true }
+                            : { id: null, name: g.name, address: g.address, lat: g.lat, lon: g.lon, google: true });
+        }
+      } catch (e) { if (search.value.trim() === query) show(found, e.message); return; }
+      if (search.value.trim() !== query) return;
+      fromGoogle = fromGoogle.filter(g => !found.some(f => same(f, g)));
+      const all = [...found, ...fromGoogle];
+      show(all, all.length ? '' : 'Not found in our places list or on Google.');
     }, 150);
   });
 
