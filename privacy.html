@@ -24,11 +24,20 @@
     ul { padding-left: 20px; }
     .updated { color: var(--text-muted); font-size: 0.9rem; margin: 0 0 20px; }
     a { color: var(--primary); }
+    .topbar { position: sticky; top: 0; background: var(--surface); padding: calc(10px + env(safe-area-inset-top, 0px)) 16px 10px;
+      border-bottom: 1px solid rgba(0,0,0,0.07); display: flex; align-items: center; gap: 14px; z-index: 1; }
+    .back { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 20px; background: var(--primary);
+      color: #fff; text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+    .topbar .logo { margin-left: auto; font-size: 1.3rem; }
   </style>
 </head>
 <body>
+<!-- In the home-screen app there's no browser back button, so the page brings its own -->
+<div class="topbar">
+  <a class="back" href="/" id="back">&#x2190; Back to SCRAN</a>
+  <span class="logo">SCRAN</span>
+</div>
 <main>
-  <a class="logo" href="/">SCRAN</a>
   <h1>Privacy</h1>
   <p class="updated">Last updated 25 November 2026</p>
 
@@ -79,5 +88,14 @@
   <h2>Contact</h2>
   <p><a href="mailto:mwebster2678@gmail.com">mwebster2678@gmail.com</a></p>
 </main>
+<script>
+  // Came from the app: go back to it as it was (open sheet, map position); otherwise the link opens it fresh
+  document.getElementById('back').addEventListener('click', (e) => {
+    if (document.referrer && new URL(document.referrer).origin === location.origin && history.length > 1) {
+      e.preventDefault();
+      history.back();
+    }
+  });
+</script>
 </body>
 </html>
