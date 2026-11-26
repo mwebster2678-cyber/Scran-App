@@ -820,13 +820,14 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     const btnsEl      = document.getElementById('rating-buttons');
     const closeBtn    = document.getElementById('panel-close');
     const clearBtn    = document.getElementById('clear-rating-btn');
+    const submitBtn   = document.getElementById('submit-rating-btn');
     const bookmarkBtn = document.getElementById('bookmark-btn');
     const shareBtn    = document.getElementById('share-btn');
     const noteEl      = document.getElementById('panel-note');
     const editBtn     = document.getElementById('edit-place-btn');
 
     let _current   = null; // { type, id, name, cuisine, lat, lon }
-    let _noteTimer = null;
+    let _pending = null; // score picked but not submitted yet
 
     function _renderRatingButtons(currentRating) {
       btnsEl.innerHTML = '';
@@ -843,15 +844,38 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       }
     }
 
+    // Picking a score is a draft: it's saved (and the pin added) only by Submit
     function _handleRatingClick(value) {
       if (!_current) return;
-      Storage.set(_current.type, _current.id, value, _current.name, _current.lat, _current.lon, _current.cuisine, noteEl.value.trim());
+      _pending = value;
+      _renderRatingButtons(value);
+      _updateSubmit();
+    }
+
+    // Submit lights up when the picked score or the note differs from what's saved
+    function _updateSubmit() {
+      if (!_current) return;
+      const stored = Storage.get(_current.type, _current.id);
+      const score = _pending ?? stored?.rating ?? null;
+      const changed = score != null && (score !== stored?.rating || noteEl.value.trim() !== (stored?.note || ''));
+      submitBtn.disabled = !changed;
+      submitBtn.textContent = changed ? (stored ? 'Update rating' : 'Submit rating') : stored ? 'Rating saved ✓' : 'Submit rating';
+    }
+
+    submitBtn.addEventListener('click', () => {
+      if (!_current) return;
+      const stored = Storage.get(_current.type, _current.id);
+      const score = _pending ?? stored?.rating;
+      if (score == null) return;
+      Storage.set(_current.type, _current.id, score, _current.name, _current.lat, _current.lon, _current.cuisine, noteEl.value.trim());
+      _pending = null;
       MarkerManager.refreshMarkerIcon(_current.type, _current.id);
       UI.updateStatsCount();
       MyListManager.refresh();
-      _renderRatingButtons(value);
+      _renderRatingButtons(score);
+      _updateSubmit();
       if (navigator.vibrate) navigator.vibrate(30);
-    }
+    });
 
     function _updateStatusBtns(type, id) {
       const isBookmarked = BookmarkStorage.get(type, id);
@@ -878,8 +902,10 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       cuisineEl.innerHTML = cuisine.slice(-2)
         .map(c => `<span class="cuisine-tag">${escapeHtml(c)}</span>`).join('');
       const stored = Storage.get(type, id);
+      _pending = null; // an unsubmitted score on the last place is dropped
       _renderRatingButtons(stored ? stored.rating : null);
       noteEl.value = stored?.note || '';
+      _updateSubmit();
       _updateStatusBtns(type, id);
       creatorsEl.innerHTML = '';
       CreatorPicks.load().then(() => {
@@ -913,13 +939,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       ProfilePanel.open(row.dataset.person);
     });
 
-    noteEl.addEventListener('input', () => {
-      if (!_current) return;
-      clearTimeout(_noteTimer);
-      _noteTimer = setTimeout(() => {
-        Storage.setNote(_current.type, _current.id, noteEl.value.trim());
-      }, 600);
-    });
+    noteEl.addEventListener('input', _updateSubmit); // saved with Submit
 
     clearBtn.addEventListener('click', () => {
       if (!_current) return;
@@ -927,8 +947,10 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       MarkerManager.refreshMarkerIcon(_current.type, _current.id);
       UI.updateStatsCount();
       MyListManager.refresh();
+      _pending = null;
       _renderRatingButtons(null);
       noteEl.value = '';
+      _updateSubmit();
     });
 
     bookmarkBtn.addEventListener('click', () => {

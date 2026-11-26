@@ -766,6 +766,15 @@ button.profile-restaurant-row:last-child { border-bottom: none; }
 
 #clear-rating-btn:hover { background: rgba(0,0,0,0.04); }
 
+/* Lights up once a score is picked (or the note changed); nothing is saved until it's pressed */
+#submit-rating-btn {
+  display: block; width: 100%; margin: 10px 0 4px; padding: 12px; border-radius: 10px; border: none;
+  background: var(--primary); color: #fff; font: inherit; font-weight: 700; font-size: 0.95rem; cursor: pointer;
+  transition: background 0.15s, color 0.15s, transform 0.1s;
+}
+#submit-rating-btn:active:not(:disabled) { transform: scale(0.98); }
+#submit-rating-btn:disabled { background: rgba(0,0,0,0.06); color: var(--text-muted); cursor: default; }
+
 /* ── Map Pins ── */
 .map-pin {
   width: 28px;
