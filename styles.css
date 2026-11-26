@@ -1509,6 +1509,26 @@ button.profile-restaurant-row:last-child { border-bottom: none; }
   z-index: 2;
 }
 
+/* Profile tabs: count over label, like a profile page */
+.profile-tabs {
+  position: sticky; top: 0; z-index: 2; background: var(--surface);
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  margin: 0 -24px 16px; padding: 0 12px; border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.profile-tabs button {
+  background: none; border: none; font-family: inherit; cursor: pointer; color: var(--text-muted);
+  padding: 10px 2px 9px; border-bottom: 2.5px solid transparent; margin-bottom: -1px;
+  display: flex; flex-direction: column; align-items: center; gap: 1px; min-width: 0;
+}
+.profile-tabs button b { font-size: 1.05rem; color: var(--text); font-weight: 800; }
+.profile-tabs button span { font-size: 0.72rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+.profile-tabs button.active { color: var(--primary); border-bottom-color: var(--primary); }
+.profile-tabs button.active b { color: var(--primary); }
+.profile-pane[hidden] { display: none; }
+.profile-empty { font-size: 0.85rem; color: var(--text-muted); margin: 6px 0; }
+.profile-pane .sheet-row[data-open-person] .sheet-row-text { cursor: pointer; }
+.profile-pane .sheet-row[data-open-person] .sheet-row-sub { color: var(--primary); }
+
 .profile-footer {
   display: flex;
   align-items: center;

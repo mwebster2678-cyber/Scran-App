@@ -1603,15 +1603,21 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
     // Their saved places come back only if you follow them (supabase/bookmarks-followers.sql)
     async function profile(id) {
-      const [{ data: person }, { data: ratings }, followers, following, { data: wants }] = await Promise.all([
+      const [{ data: person }, { data: ratings }, { data: followers }, { data: following }, { data: wants }] = await Promise.all([
         sbClient.from('profiles').select(PROFILE).eq('id', id).maybeSingle(),
         sbClient.from('ratings').select('osm_type, osm_id, restaurant_name, lat, lon, cuisine, rating, note').eq('user_id', id),
-        sbClient.from('follows').select('*', { count: 'exact', head: true }).eq('followee_id', id),
-        sbClient.from('follows').select('*', { count: 'exact', head: true }).eq('follower_id', id).not('followee_id', 'is', null),
+        sbClient.from('follows').select(`follower:profiles!follows_follower_id_fkey(${PROFILE})`).eq('followee_id', id)
+          .order('created_at', { ascending: false }),
+        sbClient.from('follows').select(`creator_key, followee:profiles!follows_followee_id_fkey(${PROFILE})`).eq('follower_id', id)
+          .order('created_at', { ascending: false }),
         sbClient.from('bookmarks').select('place_type, place_id, name, lat, lon, cuisine, created_at').eq('user_id', id)
           .order('created_at', { ascending: false }),
       ]);
-      return { person, ratings: ratings || [], followers: followers.count || 0, following: following.count || 0,
+      // followers: people; following: people, and creators by key
+      const followersList = (followers || []).map(f => f.follower).filter(Boolean);
+      const followingPeople = (following || []).map(f => f.followee).filter(Boolean);
+      const followingCreators = (following || []).map(f => f.creator_key).filter(Boolean);
+      return { person, ratings: ratings || [], followers: followersList, followingPeople, followingCreators,
         wants: (wants || []).map(b => ({ type: b.place_type, id: b.place_id, name: b.name, lat: b.lat, lon: b.lon, cuisine: b.cuisine || [] })) };
     }
 
@@ -2784,7 +2790,9 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     const closeBtn      = document.getElementById('profile-close');
     const titleEl       = document.getElementById('profile-title');
     const avatarEl      = document.getElementById('profile-avatar');
-    const countsEl      = document.getElementById('profile-follow-counts');
+    const tabsEl        = panel.querySelector('.profile-tabs');
+    const followersEl   = document.getElementById('profile-followers');
+    const followingEl   = document.getElementById('profile-following');
     const followBtn     = document.getElementById('profile-follow-btn');
     const totalEl       = document.getElementById('profile-total');
     const avgEl         = document.getElementById('profile-avg');
@@ -2795,8 +2803,8 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     const emailEl       = document.getElementById('profile-email');
     const signoutBtn    = document.getElementById('profile-signout-btn');
     const deleteBtn     = document.getElementById('profile-delete-btn');
-    const wantsEl       = document.getElementById('profile-wants');
     const wantsListEl   = document.getElementById('profile-wants-list');
+    const tabCount = (tab, n) => { document.getElementById(`tab-n-${tab}`).textContent = n; };
 
     let _person = null; // the profile on show when it isn't yours
 
@@ -2816,6 +2824,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       const n = entries.length;
 
       totalEl.textContent = n;
+      tabCount('ratings', n);
 
       if (n === 0) {
         avgEl.textContent = '—';
@@ -2858,8 +2867,68 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         </div>`).join('');
     }
 
-    const _counts = (followers, following) =>
-      `${followers} follower${followers === 1 ? '' : 's'} · ${following} following`;
+    // Tabs: Ratings, Want to visit, Followers, Following
+    function _showTab(tab) {
+      tabsEl.querySelectorAll('[data-tab]').forEach(b => {
+        b.classList.toggle('active', b.dataset.tab === tab);
+        b.setAttribute('aria-selected', b.dataset.tab === tab);
+      });
+      panel.querySelectorAll('.profile-pane').forEach(p => { p.hidden = p.dataset.pane !== tab; });
+    }
+    tabsEl.addEventListener('click', (e) => {
+      const b = e.target.closest('[data-tab]');
+      if (b) _showTab(b.dataset.tab);
+    });
+
+    // A person in Followers / Following: tap to open their profile; Follow button unless it's you
+    function _personRow(p) {
+      const me = Auth.currentUser()?.id;
+      const followed = Social.isFollowing(p.id);
+      const btn = p.id === me ? '' :
+        `<button class="sheet-btn${followed ? '' : ' follow'}" data-person-follow="${p.id}">${followed ? 'Unfollow' : 'Follow'}</button>`;
+      return `<div class="sheet-row" style="--creator-colour:var(--primary)" data-open-person="${p.id}">
+        ${personAvatar(p, 'sheet-avatar')}
+        <div class="sheet-row-text"><div class="sheet-row-name">${escapeHtml(p.name)}</div>
+          <div class="sheet-row-sub">${p.id === me ? 'You' : 'View profile'}</div></div>${btn}</div>`;
+    }
+    function _creatorRow(key) {
+      const c = CREATORS.find(x => x.key === key);
+      if (!c) return '';
+      return `<div class="sheet-row" style="--creator-colour:${c.colour}">
+        <img class="sheet-avatar" src="${c.avatar}" alt="">
+        <div class="sheet-row-text"><div class="sheet-row-name">${escapeHtml(c.name)}</div>
+          <div class="sheet-row-sub">Creator</div></div></div>`;
+    }
+
+    let _people = new Map(); // id → person, for the Follow buttons
+    function _buildPeople(p, name) {
+      _people = new Map([...p.followers, ...p.followingPeople].map(x => [x.id, x]));
+      tabCount('followers', p.followers.length);
+      tabCount('following', p.followingPeople.length + p.followingCreators.length);
+      followersEl.innerHTML = p.followers.map(_personRow).join('')
+        || `<p class="profile-empty">${name ? `Nobody follows ${escapeHtml(name)} yet.` : 'Nobody follows you yet.'}</p>`;
+      followingEl.innerHTML = p.followingPeople.map(_personRow).join('') + p.followingCreators.map(_creatorRow).join('')
+        || `<p class="profile-empty">${name ? `${escapeHtml(name)} isn&rsquo;t following anyone yet.` : 'You&rsquo;re not following anyone yet.'}</p>`;
+    }
+    function _clearPeople() {
+      _people = new Map();
+      tabCount('followers', '–'); tabCount('following', '–');
+      followersEl.innerHTML = followingEl.innerHTML = '<p class="profile-empty">Loading…</p>';
+    }
+
+    [followersEl, followingEl].forEach(el => el.addEventListener('click', async (e) => {
+      const fb = e.target.closest('[data-person-follow]');
+      if (fb) {
+        const person = _people.get(fb.dataset.personFollow);
+        if (!person || !await Social.setPerson(person, !Social.isFollowing(person.id))) return;
+        await _reload();
+        await PeopleLayer.load();
+        Views.refresh();
+        return;
+      }
+      const row = e.target.closest('[data-open-person]');
+      if (row) open(row.dataset.openPerson);
+    }));
 
     function _showFollow() {
       followBtn.hidden = !_person;
@@ -2874,8 +2943,9 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     let _wants = [];
     function _buildWants(list, note = '') {
       _wants = list;
-      wantsEl.hidden = !list.length && !note;
-      wantsListEl.innerHTML = note ? `<p class="profile-wants-note">${escapeHtml(note)}</p>` : list.map((b, i) => `
+      tabCount('wants', note ? '–' : list.length);
+      wantsListEl.innerHTML = note ? `<p class="profile-empty">${escapeHtml(note)}</p>`
+        : !list.length ? '<p class="profile-empty">No places saved yet. Tap ☆ Want to Visit on a place card.</p>' : list.map((b, i) => `
         <button class="profile-restaurant-row" data-want="${i}">
           <span class="profile-want-star">★</span>
           <span class="profile-restaurant-name">${escapeHtml(b.name || 'Unknown')}</span>
@@ -2910,13 +2980,27 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       RatingPanel.open(ref);
     });
 
+    let _shownId = null; // whose profile is on show
+
+    // Refetch the profile on show (after following or unfollowing someone in it)
+    async function _reload() {
+      if (!_shownId) return;
+      const mine = _shownId === Auth.currentUser()?.id;
+      const p = await Social.profile(_shownId);
+      _buildPeople(p, mine ? '' : p.person?.name);
+      if (!mine && p.person) { _theirWants(p); _showFollow(); }
+    }
+
     // No id, or your own: your ratings from this browser
     async function open(id = null) {
       if (!requireSignIn('Sign in to see profiles and keep your own ratings.')) return;
       const user = Auth.currentUser();
       const mine = !id || id === user?.id;
       _person = null;
-      countsEl.textContent = '';
+      _shownId = mine ? user?.id : id;
+      _showTab('ratings');
+      _clearPeople();
+      panel.scrollTop = 0;
       if (mine) {
         const meta = user?.user_metadata || {};
         titleEl.textContent = 'My Ratings';
@@ -2939,7 +3023,8 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
       if (mine && !user) return;
       const p = await Social.profile(mine ? user.id : id);
-      countsEl.textContent = _counts(p.followers, p.following);
+      if (_shownId !== (mine ? user.id : id)) return; // another profile was opened meanwhile
+      _buildPeople(p, mine ? '' : p.person?.name);
       if (mine || !p.person) return;
       _person = p.person;
       titleEl.textContent = p.person.name;
@@ -2954,9 +3039,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       const follow = !Social.isFollowing(_person.id);
       if (!await Social.setPerson(_person, follow)) return;
       _showFollow();
-      const p = await Social.profile(_person.id);
-      countsEl.textContent = _counts(p.followers, p.following);
-      _theirWants(p); // following shows their saved places, unfollowing hides them
+      await _reload(); // following shows their saved places and adds you to Followers
       await PeopleLayer.load();
       Views.refresh();
     });

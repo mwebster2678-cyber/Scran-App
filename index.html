@@ -155,10 +155,7 @@
   <div class="profile-header">
     <div class="profile-who">
       <span id="profile-avatar"></span>
-      <div>
-        <div class="profile-title" id="profile-title">My Ratings</div>
-        <div class="profile-follow-counts" id="profile-follow-counts"></div>
-      </div>
+      <div class="profile-title" id="profile-title">My Ratings</div>
     </div>
     <button id="profile-follow-btn" class="sheet-btn" hidden>Follow</button>
     <button id="profile-close" aria-label="Close">&#x2715;</button>
@@ -168,6 +165,13 @@
       <div id="profile-email" style="font-size:0.82rem;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;"></div>
       <button id="profile-signout-btn" style="margin-left:12px;flex-shrink:0;background:none;border:1px solid rgba(0,0,0,0.15);border-radius:20px;padding:4px 10px;font-size:0.75rem;color:var(--text-muted);cursor:pointer;font-family:inherit;">Sign out</button>
     </div>
+    <div class="profile-tabs" role="tablist">
+      <button role="tab" data-tab="ratings" class="active"><b id="tab-n-ratings">0</b><span>Ratings</span></button>
+      <button role="tab" data-tab="wants"><b id="tab-n-wants">0</b><span>Want to visit</span></button>
+      <button role="tab" data-tab="followers"><b id="tab-n-followers">–</b><span>Followers</span></button>
+      <button role="tab" data-tab="following"><b id="tab-n-following">–</b><span>Following</span></button>
+    </div>
+    <div class="profile-pane" data-pane="ratings">
     <div class="profile-stats">
       <div class="profile-stat">
         <div class="profile-stat-value" id="profile-total">0</div>
@@ -182,14 +186,14 @@
         <div class="profile-stat-label">Top score</div>
       </div>
     </div>
-    <div id="profile-wants" hidden>
-      <div class="profile-list-title">&#x2605; Want to visit</div>
-      <div id="profile-wants-list"></div>
-    </div>
     <div class="profile-breakdown-title">Breakdown by score</div>
     <div id="profile-bars"></div>
     <div class="profile-list-title">All rated restaurants</div>
     <div id="profile-list"></div>
+    </div>
+    <div class="profile-pane" data-pane="wants" hidden><div id="profile-wants-list"></div></div>
+    <div class="profile-pane" data-pane="followers" hidden><div id="profile-followers"></div></div>
+    <div class="profile-pane" data-pane="following" hidden><div id="profile-following"></div></div>
     <div class="profile-footer">
       <button id="profile-delete-btn" hidden>Delete my account</button>
       <a href="privacy.html" target="_blank" rel="noopener">Privacy</a>
