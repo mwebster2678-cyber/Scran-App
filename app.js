@@ -527,10 +527,13 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       _nameDots(zoom >= CONFIG.minZoomForDotNames);
     }
 
-    // Names under the plain dots, only when zoomed right in
+    // Names under the plain dots, only when zoomed right in; not under the place whose card is
+    // open, which has the Spotlight's name instead (muteName)
+    let _muted = null;
     function _nameDots(on) {
       markers.forEach((marker, id) => {
         if (!(marker instanceof L.CircleMarker)) return;
+        if (id === _muted) { if (marker.getTooltip()) marker.unbindTooltip(); return; }
         if (on && !marker.getTooltip()) {
           const name = Places.get(id)?.name;
           // interactive: a tap on the name counts as a tap on its dot (Leaflet passes it on)
@@ -557,7 +560,12 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       markers.forEach((marker, id) => refreshMarkerIcon(PLACE_TYPE, id));
     }
 
-    return { init, show, refreshMarkerIcon, refreshAll };
+    function muteName(id) {
+      _muted = id;
+      if (_map) _nameDots(_map.getZoom() >= CONFIG.minZoomForDotNames);
+    }
+
+    return { init, show, refreshMarkerIcon, refreshAll, muteName };
   })();
 
   // The place's name under a pin, shown only when zoomed right in (see .show-names), and cut
@@ -790,8 +798,12 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         icon: L.divIcon({ className: '', html: `<div class="spotlight">${label}</div>`, iconSize: [30, 30], iconAnchor: [15, 15] }),
         interactive: false, keyboard: false, zIndexOffset: -1000,
       }).addTo(App.map());
+      if (label && type === PLACE_TYPE) MarkerManager.muteName(id); // one name, not two, when zoomed right in
     }
-    function hide() { if (_marker) { _marker.remove(); _marker = null; } }
+    function hide() {
+      if (_marker) { _marker.remove(); _marker = null; }
+      MarkerManager.muteName(null);
+    }
     return { show, hide };
   })();
 
