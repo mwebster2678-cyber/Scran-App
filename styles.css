@@ -919,6 +919,12 @@ button.profile-restaurant-row:last-child { border-bottom: none; }
   box-shadow: 0 0 0 3px rgba(255,255,255,0.9), 0 2px 8px rgba(0,0,0,0.3);
   animation: spotlight-in 0.35s ease-out;
 }
+/* a solid centre, so a place with no dot of its own (e.g. an unlinked creator pick with that creator
+   switched off) still shows a spot */
+.spotlight::after {
+  content: ''; position: absolute; left: 50%; top: 50%; width: 10px; height: 10px; margin: -5px 0 0 -5px;
+  border-radius: 50%; background: var(--primary); border: 1.5px solid #fff;
+}
 @keyframes spotlight-in { from { transform: scale(2.2); opacity: 0; } to { transform: scale(1); opacity: 1; } }
 .spotlight-name {
   position: absolute; top: calc(100% + 5px); left: 50%; transform: translateX(-50%);
