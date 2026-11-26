@@ -6271,7 +6271,7 @@
         ],
         "confident": false,
         "verdict": "One of the best meals I've ever had in my life.",
-        "why": "The name in the transcript is inconsistent ('Roan 5' vs 'Row on 5'), on-screen text shows '5 SAVILE ROW', and no matching candidate place was found, so confidence is reduced despite Tod clearly visiting and reviewing it. On screen at 0:52: \"5 SAVILE ROW\" (The sign shows the actual street address of the restaurant, which is a more precise and official name than the phonetically heard \"Roan 5\".)",
+        "why": "The name in the transcript is inconsistent ('Roan 5' vs 'Row on 5'), on-screen text shows '5 SAVILE ROW', and no matching candidate place was found, so confidence is reduced despite Tod clearly visiting and reviewing it. On screen at 0:52: \"5 SAVILE ROW\" (The sign shows the actual street address of the restaurant, which is a more precise and official name than the phonetically heard \"Roan 5\".) The title or description spells it \"Row on 5\".",
         "moment": "0:00",
         "candidates": [
           {
@@ -6282,7 +6282,8 @@
         ],
         "onScreen": "5 SAVILE ROW",
         "onScreenAt": "0:52",
-        "onScreenDiffers": true
+        "onScreenDiffers": true,
+        "writtenAs": "Row on 5"
       }
     ]
   },

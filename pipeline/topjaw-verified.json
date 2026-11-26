@@ -8709,11 +8709,12 @@
           "Pineapple curry",
           "Lap chum (cured Chinese sausage)"
         ],
-        "confident": true,
-        "why": "Cannot confirm exact placeId as none of the candidate places match Mama Pen/Mamapen; the venue appears to be a residency within another establishment (13 Cannons) rather than a standalone restaurant.",
+        "confident": false,
+        "why": "Cannot confirm exact placeId as none of the candidate places match Mama Pen/Mamapen; the venue appears to be a residency within another establishment (13 Cannons) rather than a standalone restaurant. The title or description spells it \"Mamapen\".",
         "knownPlace": true,
         "onScreen": "MAMAPEN",
-        "onScreenAt": "0:01"
+        "onScreenAt": "0:01",
+        "writtenAs": "Mamapen"
       }
     ]
   },
@@ -8934,9 +8935,10 @@
           "Khmer BBQ Chicken",
           "Caramelised Braised Pork Belly"
         ],
-        "confident": true,
-        "why": "No matching Mamapen candidate place found in the list provided; the restaurant appears to be newer or not yet indexed, though the video and transcript clearly identify it as 'mamen' (Mamapen).",
-        "knownPlace": true
+        "confident": false,
+        "why": "No matching Mamapen candidate place found in the list provided; the restaurant appears to be newer or not yet indexed, though the video and transcript clearly identify it as 'mamen' (Mamapen). The title or description spells it \"Mamapen\".",
+        "knownPlace": true,
+        "writtenAs": "Mamapen"
       }
     ]
   },

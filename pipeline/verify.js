@@ -29,6 +29,7 @@ import { matchGraphics, seconds } from './graphics.js';
 import { readText, hasFfmpeg, matchOnScreen } from './frames.js';
 import { loadKnown, findKnown } from './known.js';
 import { saysWhere } from './comments.js';
+import { flagSpelling } from './spelling.js';
 
 const MODEL          = 'claude-haiku-4-5-20251001';
 const PRICE          = { input: 1 / 1e6, output: 5 / 1e6 }; // US$ per token for MODEL
@@ -191,6 +192,7 @@ function captionText(vtt) {
 // ─── Candidate places from places.json ──────────────────────────────────────
 
 const { places } = JSON.parse(fs.readFileSync(PLACES_FILE, 'utf8'));
+const placeName = id => placeRows.find(p => p.id === id)?.name;
 const placeRows = places.map(([id, name, lat, lon, , , address]) => ({ id, name, lat, lon, address, key: squash(name) }));
 
 // Real places the pick might be: similar names near its current location, plus the
@@ -375,7 +377,7 @@ async function main() {
     ])] : instructions;
     // Everything the video says, to check Claude's addresses came from it
     const evidence = [details[video.videoId]?.description, text, ...(chapterList || []).map(c => c.title), ...commentList.map(c => c.text)].join('\n');
-    prompts.push({ video, picks, content, evidence, sheets: sheets.length, onScreenList, before, text });
+    prompts.push({ video, picks, content, evidence, sheets: sheets.length, onScreenList, before, text, chapterList });
   }
 
   // ~4 characters per token; output is roughly 150 tokens per restaurant
@@ -390,7 +392,7 @@ async function main() {
 
   const known = loadKnown();
   let spent = readingCost;
-  for (const [i, { video, picks, content, evidence, onScreenList, before, text }] of prompts.entries()) {
+  for (const [i, { video, picks, content, evidence, onScreenList, before, text, chapterList }] of prompts.entries()) {
     process.stdout.write(`[${i + 1}/${prompts.length}] ${video.title.slice(0, 60)}… `);
     const res = await anthropic.messages.create({
       model: MODEL,
@@ -431,6 +433,8 @@ async function main() {
     // An address the video never gives is a guess (often the guessed place's own address)
     const said = evidence + '\n' + [...(result.graphics || []), ...onScreenList].map(g => g.text).join('\n');
     for (const r of restaurants) if (r.address && !addressInText(r.address, said)) r.address = null;
+    // A name the title or description spells differently (e.g. heard "Roan 5", written "Row on 5") is reviewed
+    for (const r of restaurants) flagSpelling(r, [video.title, details[video.videoId]?.description, ...(chapterList || []).map(c => c.title)], placeName(r.placeId), sameName);
     done.push({ videoId: video.videoId, title: video.title, sponsored: result.sponsored, graphics, restaurants });
     fs.writeFileSync(OUTPUT, JSON.stringify(done, null, 2)); // saved after every video
     const kept = done.at(-1).restaurants.filter(r => r.keep).length;

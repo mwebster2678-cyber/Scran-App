@@ -60,7 +60,7 @@ function item(key, creator, video, pick, why) {
     originalName: pick.originalName, name: pick.name, area: pick.area || pick.location || null,
     keep: pick.keep, reasonKey: pick.reason, reason: REASON_LABELS[pick.reason] || pick.reason, why,
     verdict: pick.verdict, notes: pick.notes, comments: commentsFor(video.videoId),
-    address: pick.address || null, onScreen: pick.onScreen || null, onScreenAt: pick.onScreenAt || null,
+    address: pick.address || null, writtenAs: pick.writtenAs || null, onScreen: pick.onScreen || null, onScreenAt: pick.onScreenAt || null,
     options, guessed: !!guess, specificArea: !!(pick.address || (pick.area && !/^(central |north |south |east |west )?london$/i.test(pick.area))),
   };
 }
@@ -351,13 +351,51 @@ async function scranPlaceFor(g) {
   return best?.p || null;
 }
 
-// Coordinates from a pasted Google Maps address (the place's own pin if it has one)
-function coordsFrom(text) {
+// Coordinates from a pasted Google Maps address (the place's own pin if it has one).
+// Links with only a place name are looked up on Google by name (see lookUpLink).
+const linkFound = {};
+function coordsFrom(raw) {
+  if (raw in linkFound) return linkFound[raw];
+  let text = raw;
+  try { text = decodeURIComponent(raw); } catch {}
   const m = text.match(/!3d(-?\\d+\\.\\d+)!4d(-?\\d+\\.\\d+)/) || text.match(/@(-?\\d+\\.\\d+),(-?\\d+\\.\\d+)/)
-    || text.match(/[?&](?:q|query|ll)=(-?\\d+\\.\\d+),\\s*(-?\\d+\\.\\d+)/) || text.match(/^\\s*(-?\\d+\\.\\d+),\\s*(-?\\d+\\.\\d+)\\s*$/);
+    || text.match(/[?&](?:q|query|ll|center|destination)=(-?\\d+\\.\\d+),\\s*(-?\\d+\\.\\d+)/) || text.match(/^\\s*(-?\\d+\\.\\d+),\\s*(-?\\d+\\.\\d+)\\s*$/);
   if (!m) return null;
   const lat = +m[1], lon = +m[2];
-  return lat > 51.2 && lat < 51.75 && lon > -0.55 && lon < 0.35 ? { lat, lon } : null;
+  return inLondon(lat, lon) ? { lat, lon } : null;
+}
+const inLondon = (lat, lon) => lat > 51.2 && lat < 51.75 && lon > -0.55 && lon < 0.35;
+// The place name in a link, e.g. /maps/place/Meat+Stop/… or ?q=Meat+Stop
+function nameFrom(raw) {
+  let text = raw;
+  try { text = decodeURIComponent(raw.replace(/\\+/g, ' ')); } catch {}
+  const m = text.match(/\\/maps\\/place\\/([^/@?]+)/) || text.match(/[?&](?:q|query)=([^&]+)/);
+  const name = m && m[1].trim();
+  return name && !/^-?\\d+\\.\\d+,\\s*-?\\d+\\.\\d+$/.test(name) ? name : null;
+}
+// Why a link has no location, for the status line
+function linkProblem(raw) {
+  if (/maps\\.app\\.goo\\.gl|goo\\.gl\\/maps/.test(raw)) return "That's a share link, which hides the location. Open it, then copy the address from the browser bar.";
+  let text = raw; try { text = decodeURIComponent(raw); } catch {}
+  const m = text.match(/!3d(-?\\d+\\.\\d+)!4d(-?\\d+\\.\\d+)/) || text.match(/@(-?\\d+\\.\\d+),(-?\\d+\\.\\d+)/);
+  if (m && !inLondon(+m[1], +m[2])) return 'That link points outside London.';
+  return 'No location or place name in that link.';
+}
+// Fills linkFound for a name-only link; calls done() when it's known either way
+async function lookUpLink(raw, done) {
+  const name = nameFrom(raw);
+  if (!name || raw in linkFound) return done();
+  done('Looking up “' + name + '” on Google…');
+  try {
+    const top = (await googleSearch(name.includes('London') ? name : name + ', London'))[0];
+    linkFound[raw] = top ? { lat: top.lat, lon: top.lon, name: top.name, address: top.address } : null;
+  } catch (e) { return done(e.message); }
+  done();
+}
+function linkStatusText(raw, at, found) {
+  if (!raw.trim()) return '';
+  if (at) return '✓ Pin found' + (at.name ? ': ' + at.name + (at.address ? ', ' + at.address : '') : '') + found;
+  return raw in linkFound ? "Google couldn't find that place." : linkProblem(raw);
 }
 
 const pinLink = at => 'https://www.google.com/maps/search/?api=1&query=' + at.lat + ',' + at.lon;
@@ -398,10 +436,14 @@ function buildPinCard(r) {
   const linkStatus = card.querySelector('[data-loc-status]');
   const base = { kind: 'pin', creator: r.creator, name: r.name, placeId: r.placeId, from: r.pin, keep: true };
   const decide = d => { state[r.id] = { ...base, ...d }; save(); refresh(); };
-  link.addEventListener('input', () => {
+  const showLink = busy => {
     const at = coordsFrom(link.value);
-    linkStatus.textContent = !link.value.trim() ? '' : at ? '✓ Pin found: press Move pin to use it' : 'No location in that link. Use the full address from the browser bar, not a share link.';
-    linkStatus.style.color = at ? '#27AE60' : '#c0392b';
+    linkStatus.textContent = busy || linkStatusText(link.value, at, '. Press Move pin to use it');
+    linkStatus.style.color = busy ? '#888' : at ? '#27AE60' : '#c0392b';
+  };
+  link.addEventListener('input', () => {
+    showLink();
+    if (link.value.trim() && !coordsFrom(link.value)) lookUpLink(link.value, showLink);
   });
   // Moves to your pasted link if there is one, otherwise to Google's location
   card.querySelector('[data-move]').addEventListener('click', () => {
@@ -534,6 +576,8 @@ function buildCard(r, n) {
     const where = r.address || (r.area && !/^(central |north |south |east |west )?london$/i.test(r.area) ? r.area : '');
     const queries = [r.name + (where ? ' ' + where : '') + ', London'];
     // The on-screen name too, when it differs from Claude's (it may fix a misheard name)
+    // The title or description's spelling first, when it differs (e.g. heard "Roan 5", written "Row on 5")
+    if (r.writtenAs) queries.unshift(r.writtenAs + (where ? ' ' + where : '') + ', London');
     if (r.onScreen && nameFit([r.name, r.originalName], r.onScreen) < 1) queries.push(r.onScreen + (where ? ' ' + where : '') + ', London');
     try {
       const found = [];
@@ -590,14 +634,17 @@ function buildCard(r, n) {
     card.querySelector('[data-manual-name]').textContent = '“' + name + '”';
     card.querySelector('[data-manual-search]').href = mapLink({ name, address: 'London' });
   };
-  const showLocation = () => {
+  const showLocation = busy => {
     const at = coordsFrom(mapLinkInput.value);
-    locStatus.textContent = !mapLinkInput.value.trim() ? '' : at ? '✓ Pin found' : 'No location in that link. Use the full address from the browser bar, not a share link.';
-    locStatus.style.color = at ? '#27AE60' : '#c0392b';
+    locStatus.textContent = busy || linkStatusText(mapLinkInput.value, at, '');
+    locStatus.style.color = busy ? '#888' : at ? '#27AE60' : '#c0392b';
     return at;
   };
   mapLinkInput.addEventListener('focus', () => select('manual'));
-  mapLinkInput.addEventListener('input', () => { select('manual'); showLocation(); });
+  mapLinkInput.addEventListener('input', () => {
+    select('manual');
+    if (!showLocation() && mapLinkInput.value.trim()) lookUpLink(mapLinkInput.value, showLocation);
+  });
 
   let timer;
   search.addEventListener('input', () => {
@@ -623,6 +670,7 @@ function buildCard(r, n) {
   if (s?.keep && (s.placeId || (s.lat && !s.manual))) addOption({ id: s.placeId, name: s.name, address: s.address, lat: s.lat, lon: s.lon }, 'Your choice', true, false, s.source || 'unknown');
   else if (s?.keep && s.manual) {
     search.value = s.manual; showManual(s.manual);
+    if (s.mapLink && s.lat != null && !coordsFrom(s.mapLink)) linkFound[s.mapLink] = { lat: s.lat, lon: s.lon, address: s.address };
     mapLinkInput.value = s.mapLink || ''; showLocation();
     select('manual');
   }
@@ -650,7 +698,7 @@ function buildCard(r, n) {
       if (!at && !confirm(name + ' has no pin yet, so it won\\'t be on the map. Keep it anyway?')) { mapLinkInput.focus(); return; }
       state[r.id] = {
         ...context(), keep: true,
-        name, placeId: null, lat: at?.lat ?? null, lon: at?.lon ?? null, address: null,
+        name, placeId: null, lat: at?.lat ?? null, lon: at?.lon ?? null, address: at?.address ?? null,
         manual: name, mapLink: mapLinkInput.value.trim() || null, source: at ? 'maplink' : 'typed-no-pin',
       };
     } else {
