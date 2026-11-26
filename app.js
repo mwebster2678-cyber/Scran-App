@@ -3007,13 +3007,13 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       _buildWants(p.wants.filter(w => !rated.has(`${w.type}/${w.id}`)));
     }
 
-    // Tap a place (want to visit or rated): close the profile, fly there and open its card
+    // Tap a place (want to visit or rated): fly there and open its card on top of the profile,
+    // which stays open underneath at the same scroll position: swipe the card away to carry on
     function _openPlace(b) {
       if (!b?.type || b.id == null) return;
       const { type, id } = b;
       const place = type === PLACE_TYPE ? Places.get(id) : null;
       const ref = place ? placeRef(place) : { type, id, name: b.name, cuisine: b.cuisine || [], lat: b.lat, lon: b.lon };
-      close();
       if (ref.lat && ref.lon) flyAboveCard(App.map(), ref.lat, ref.lon);
       RatingPanel.open(ref);
     }

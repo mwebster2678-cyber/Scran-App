@@ -525,7 +525,7 @@ button.profile-restaurant-row:last-child { border-bottom: none; }
 #rating-panel {
   position: fixed;
   bottom: 0; left: 0; right: 0;
-  z-index: 1500;
+  z-index: 1550; /* above the profile (1500): a place opened from a profile covers it until swiped away */
   background: var(--surface);
   border-radius: var(--panel-radius) var(--panel-radius) 0 0;
   box-shadow: 0 -4px 30px rgba(0,0,0,0.15);
