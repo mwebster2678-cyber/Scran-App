@@ -352,6 +352,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
             _byId = new Map(_places.map(p => [p.id, p]));
           })
           .then(_loadAdded)
+          .then(_loadPicks)
           .catch(e => { _loaded = null; throw e; });
       }
       return _loaded;
@@ -366,6 +367,20 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       const { data, error } = await sbClient.from('added_places').select('id, name, kind, lat, lon, address');
       if (error) { console.warn('[SCRAN] added places not loaded:', error.message); return; }
       data.forEach(r => { const p = _addedPlace(r); _places.push(p); _byId.set(p.id, p); });
+    }
+
+    // Creator picks the pipeline couldn't link to a place in the file (stalls, residencies, new
+    // openings; ids 'pick-…', see CreatorPicks) become places too, so they get a dot, show up in
+    // search and can be rated like any other, whichever creators are switched on. Picks in future
+    // data files are included automatically.
+    async function _loadPicks() {
+      const picks = await CreatorPicks.load();
+      Object.values(picks).flat().forEach(r => {
+        if (_byId.has(r.id) || !r.lat || !r.lon) return; // linked to the file, or already added
+        const p = { id: r.id, name: r.name, lat: r.lat, lon: r.lon, kind: 'eat', cuisine: [],
+          address: r.location || '', pick: true };
+        _places.push(p); _byId.set(p.id, p);
+      });
     }
 
     async function add({ name, kind, lat, lon, address }) {
