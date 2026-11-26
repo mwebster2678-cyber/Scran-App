@@ -421,6 +421,7 @@ button.profile-restaurant-row {
   font: inherit; text-align: left; cursor: pointer;
 }
 button.profile-restaurant-row:last-child { border-bottom: none; }
+.profile-score + .profile-want-go { margin-left: 10px; }
 .profile-want-star { color: var(--gold); font-size: 1rem; flex-shrink: 0; margin-right: 8px; }
 .profile-want-go { color: var(--text-muted); flex-shrink: 0; }
 .profile-wants-note { font-size: 0.8rem; color: var(--text-muted); margin: 0; }

@@ -2819,7 +2819,8 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     const scoreClass = score =>
       score >= 7 ? 'score-high' : score >= 4 ? 'score-mid' : 'score-low';
 
-    // entries: [{ name, rating }]
+    // entries: [{ name, rating, type, id, lat, lon, cuisine }]
+    let _rated = [];
     function _build(entries) {
       const n = entries.length;
 
@@ -2859,12 +2860,13 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       }).join('');
 
       // Sorted list
-      const sorted = entries.slice().sort((a, b) => b.rating - a.rating);
-      listEl.innerHTML = sorted.map(e => `
-        <div class="profile-restaurant-row">
-          <div class="profile-restaurant-name">${escapeHtml(e.name || 'Unknown')}</div>
-          <div class="profile-score ${scoreClass(e.rating)}">${e.rating}</div>
-        </div>`).join('');
+      _rated = entries.slice().sort((a, b) => b.rating - a.rating);
+      listEl.innerHTML = _rated.map((e, i) => `
+        <button class="profile-restaurant-row" data-rated="${i}">
+          <span class="profile-restaurant-name">${escapeHtml(e.name || 'Unknown')}</span>
+          <span class="profile-score ${scoreClass(e.rating)}">${e.rating}</span>
+          <span class="profile-want-go">›</span>
+        </button>`).join('');
     }
 
     // Tabs: Ratings, Want to visit, Followers, Following
@@ -2967,17 +2969,23 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       _buildWants(p.wants.filter(w => !rated.has(`${w.type}/${w.id}`)));
     }
 
-    // Tap one: close the profile, fly there and open its card
-    wantsListEl.addEventListener('click', (e) => {
-      const row = e.target.closest('[data-want]');
-      if (!row) return;
-      const b = _wants[row.dataset.want];
+    // Tap a place (want to visit or rated): close the profile, fly there and open its card
+    function _openPlace(b) {
+      if (!b?.type || b.id == null) return;
       const { type, id } = b;
       const place = type === PLACE_TYPE ? Places.get(id) : null;
       const ref = place ? placeRef(place) : { type, id, name: b.name, cuisine: b.cuisine || [], lat: b.lat, lon: b.lon };
       close();
       if (ref.lat && ref.lon) flyAboveCard(App.map(), ref.lat, ref.lon);
       RatingPanel.open(ref);
+    }
+    wantsListEl.addEventListener('click', (e) => {
+      const row = e.target.closest('[data-want]');
+      if (row) _openPlace(_wants[row.dataset.want]);
+    });
+    listEl.addEventListener('click', (e) => {
+      const row = e.target.closest('[data-rated]');
+      if (row) _openPlace(_rated[row.dataset.rated]);
     });
 
     let _shownId = null; // whose profile is on show
@@ -3008,7 +3016,8 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         emailEl.textContent = user?.email || '';
         userEl.style.display = user ? 'flex' : 'none';
         deleteBtn.hidden = !user;
-        _build(Object.values(Storage.getAll()).filter(e => e.rating != null));
+        _build(Object.entries(Storage.getAll()).filter(([, e]) => e.rating != null)
+          .map(([k, e]) => { const [type, id] = splitKey(k); return { ...e, type, id }; }));
         _buildWants(_myWants());
       } else {
         titleEl.textContent = '';
@@ -3029,7 +3038,8 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       _person = p.person;
       titleEl.textContent = p.person.name;
       avatarEl.innerHTML = personAvatar(p.person, 'profile-avatar');
-      _build(p.ratings.map(r => ({ name: r.restaurant_name, rating: r.rating })));
+      _build(p.ratings.map(r => ({ name: r.restaurant_name, rating: r.rating, type: r.osm_type, id: r.osm_id,
+        lat: r.lat, lon: r.lon, cuisine: r.cuisine || [] })));
       _theirWants(p);
       _showFollow();
     }
