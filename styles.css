@@ -280,6 +280,9 @@ body.adding-place #sheet, body.adding-place #sheet-toggle { visibility: hidden; 
      whichever tab is showing; long lists scroll inside */
   height: calc(50vh + var(--nav-h) + env(safe-area-inset-bottom, 0px));
   overflow-y: auto;
+  overflow-x: hidden;           /* nothing should scroll sideways, even if a row is a touch too wide */
+  overscroll-behavior: contain; /* scrolling the profile doesn't drag the map behind it */
+  touch-action: pan-y;
 }
 
 #profile-panel.open { transform: translateY(0); }
@@ -293,6 +296,7 @@ body.adding-place #sheet, body.adding-place #sheet-toggle { visibility: hidden; 
 }
 
 .profile-title {
+  min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
   font-family: Georgia, serif;
   font-size: 1.1rem;
   color: var(--text);
@@ -1685,6 +1689,7 @@ button.profile-restaurant-row:last-child { border-bottom: none; }
   .leaflet-bottom.leaflet-left { left: 0; }
   .leaflet-control-attribution { font-size: 9px; }
   .panel-inner, .profile-body { padding-left: 18px; padding-right: 18px; }
+  .profile-tabs { margin-left: -18px; margin-right: -18px; } /* full width against the narrower padding */
   #auth-form input { font-size: 16px; } /* iPhones zoom in on smaller text fields */
 }
 
