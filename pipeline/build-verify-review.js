@@ -729,6 +729,7 @@ function buildCard(r, n) {
         source: sources[+chosen],
       };
     }
+    shareWithTwins(r);
     save(); refresh();
   });
   // Dropping always asks why (Claude's reason highlighted), so learn.js can spot repeated mistakes
@@ -737,6 +738,27 @@ function buildCard(r, n) {
   card.querySelector('.btn-drop').addEventListener('click', () => { reasons.hidden = !reasons.hidden; });
   reasons.querySelectorAll('button').forEach(b => b.addEventListener('click', () => drop(b.dataset.reason)));
   return card;
+}
+
+// The same restaurant in another of the creator's videos (long videos are often cut into Shorts):
+// keeping one fills in the other's place too, if it's still to do and Claude kept it there.
+// It's marked source 'twin', so you can change it and learn.js can tell it apart.
+const twinKey = n => (n || '').toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g, '')
+  .replace(/^the\\s+/, '').replace(/\\s(&|and)\\s/g, ' ').replace(/['’]s\\b/g, 's').replace(/[^a-z0-9]/g, '').replace(/s$/, '');
+const twinKeys = r => [r.name, r.originalName].map(twinKey).filter(k => k.length >= 3 && k !== 'unknown');
+function shareWithTwins(r) {
+  const d = state[r.id];
+  if (!d?.keep) return;
+  const keys = twinKeys(r);
+  for (const t of DATA) {
+    if (t === r || t.kind === 'pin' || t.creator !== r.creator || t.videoId === r.videoId || !t.keep || state[t.id]) continue;
+    if (!twinKeys(t).some(k => keys.includes(k))) continue;
+    state[t.id] = { ...d, videoId: t.videoId, originalName: t.originalName, area: t.area,
+      claude: { keep: t.keep, reason: t.reasonKey, name: t.name, placeId: t.guessed ? t.options[0].id : null },
+      suggested: null, spot: !!t.spot, moved: false, source: 'twin', twinOf: r.id };
+    const old = grid.querySelector('.card[data-id="' + CSS.escape(t.id) + '"]');
+    if (old) old.replaceWith(buildCard(t, DATA.indexOf(t)));
+  }
 }
 
 function statusOf(id) { const s = state[id]; return !s ? 'pending' : s.keep ? 'kept' : 'dropped'; }
@@ -750,7 +772,7 @@ function refresh() {
     card.classList.toggle('kept', status === 'kept');
     card.classList.toggle('dropped', status === 'dropped');
     card.querySelector('.status').textContent = s?.kind === 'pin' ? (s.remove ? 'Closed: removed from the map' : s.move ? (s.source === 'maplink' ? 'Moved to your link' : 'Moved to Google’s location') : 'Pin left as it is')
-      : status === 'kept' ? 'Kept: ' + s.name
+      : status === 'kept' ? 'Kept: ' + s.name + (s.twinOf ? ' (your answer from its other video)' : '')
       : status === 'dropped' ? 'Dropped' + (s.dropReason && DROP_REASONS[s.dropReason] ? ': ' + DROP_REASONS[s.dropReason] : '') : '';
     card.classList.toggle('hidden',
       card.dataset.kind !== kindFilter ||
