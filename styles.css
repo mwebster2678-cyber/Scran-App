@@ -912,6 +912,20 @@ button.profile-restaurant-row:last-child { border-bottom: none; }
 }
 .leaflet-tooltip.dot-name::before { display: none; }
 
+/* The place whose card is open (Spotlight in app.js): a ring, plus its name if it's only a dot */
+.spotlight {
+  width: 30px; height: 30px; border-radius: 50%; position: relative; pointer-events: none;
+  border: 3px solid var(--primary); background: rgba(108,52,131,0.15);
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.9), 0 2px 8px rgba(0,0,0,0.3);
+  animation: spotlight-in 0.35s ease-out;
+}
+@keyframes spotlight-in { from { transform: scale(2.2); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+.spotlight-name {
+  position: absolute; top: calc(100% + 5px); left: 50%; transform: translateX(-50%);
+  white-space: nowrap; font-size: 12px; font-weight: 700; line-height: 1.2; color: #fff;
+  background: var(--primary); padding: 2px 7px; border-radius: 5px; box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
 /* Names answer taps a little outside their label too: they're only ~14 px tall */
 .leaflet-tooltip.dot-name::after,
 .pin-name::after { content: ''; position: absolute; inset: -8px; }

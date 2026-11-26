@@ -760,6 +760,26 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     panel.addEventListener('touchcancel', end);
   }
 
+  // The place whose card is open: a ring on the map, and its name under it when it's only a plain
+  // dot (pins already show their names when zoomed in), so it's easy to find above the card
+  const Spotlight = (() => {
+    let _marker = null;
+    function show({ type, id, name, lat, lon }) {
+      hide();
+      if (!lat || !lon || typeof App === 'undefined' || !App.map()) return;
+      const place = type === PLACE_TYPE ? Places.get(id) : null;
+      const hasPin = App.covered(type, id)
+        || (MyListManager.isActive() && (Storage.get(type, id) || BookmarkStorage.get(type, id)));
+      const label = hasPin ? '' : `<span class="spotlight-name">${escapeHtml(shortName(place?.name ?? name ?? ''))}</span>`;
+      _marker = L.marker([place?.lat ?? lat, place?.lon ?? lon], {
+        icon: L.divIcon({ className: '', html: `<div class="spotlight">${label}</div>`, iconSize: [30, 30], iconAnchor: [15, 15] }),
+        interactive: false, keyboard: false, zIndexOffset: -1000,
+      }).addTo(App.map());
+    }
+    function hide() { if (_marker) { _marker.remove(); _marker = null; } }
+    return { show, hide };
+  })();
+
   // ─────────────────────────────────────────
   // 7. RATING PANEL
   // ─────────────────────────────────────────
@@ -820,6 +840,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       clearTimeout(_hideTimer);
 
       _current = { type, id, name, cuisine, lat, lon };
+      Spotlight.show(_current);
       nameEl.textContent = name;
       addressEl.textContent = address || '';
       // Cuisines run general → specific (European, Italian, Pizza); show the specific end
@@ -847,6 +868,7 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
       _hideTimer = setTimeout(() => panel.classList.add('hidden'), 400);
       _current = null;
       GooglePlaceInfo.hide();
+      Spotlight.hide();
     }
 
     closeBtn.addEventListener('click', close);
