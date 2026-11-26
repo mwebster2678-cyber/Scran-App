@@ -13,6 +13,8 @@
   --gold-dark: #9A7410;  /* gold text on light backgrounds */
   --panel-radius: 20px;
   --nav-h: 56px; /* bottom nav, not counting the phone's home-bar inset */
+  /* Place card and profile: up to the same line as the open My reviews and following sheet (50vh above the nav) */
+  --panel-h: calc(50vh + var(--nav-h) + env(safe-area-inset-bottom, 0px));
 }
 
 html, body {
@@ -278,7 +280,7 @@ body.adding-place #sheet, body.adding-place #sheet-toggle { visibility: hidden; 
   transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1);
   /* Same top edge as the open My reviews and following sheet (#sheet: 50vh above the nav),
      whichever tab is showing; long lists scroll inside */
-  height: calc(50vh + var(--nav-h) + env(safe-area-inset-bottom, 0px));
+  height: var(--panel-h);
   overflow-y: auto;
   overflow-x: hidden;           /* nothing should scroll sideways, even if a row is a touch too wide */
   overscroll-behavior: contain; /* scrolling the profile doesn't drag the map behind it */
@@ -534,7 +536,8 @@ button.profile-restaurant-row:last-child { border-bottom: none; }
 }
 
 #rating-panel.open { transform: translateY(0); }
-#rating-panel { max-height: 60vh; overflow-y: auto; } /* keeps the top of the map in view (see PlaceSearch) */
+/* Same height as the profile, whatever the card holds; the place sits in the map above it (flyAboveCard) */
+#rating-panel { height: var(--panel-h); overflow-y: auto; overflow-x: hidden; overscroll-behavior: contain; }
 #rating-panel.hidden { display: none; }
 
 .panel-handle {

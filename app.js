@@ -2050,12 +2050,13 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
   })();
 
   // Fly to a spot so it sits in the middle of the map left visible between the header and the
-  // place card (at most 60% of the screen, see #rating-panel), not behind the card
+  // place card (--panel-h, see #rating-panel), not behind the card
   function flyAboveCard(map, lat, lon) {
     const zoom = Math.max(map.getZoom(), 18);
     const h = map.getSize().y;
     const header = document.getElementById('header').offsetHeight;
-    const shift = h / 2 - (header + h * 0.4) / 2;
+    const card = document.getElementById('rating-panel').offsetHeight || h * 0.6;
+    const shift = h / 2 - (header + (h - card)) / 2;
     map.flyTo(map.unproject(map.project([lat, lon], zoom).add([0, shift]), zoom), zoom, { duration: 0.8 });
   }
 
