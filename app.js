@@ -868,6 +868,10 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
       _current = { type, id, name, cuisine, lat, lon };
       Spotlight.show(_current);
+      if (typeof App !== 'undefined' && App.map()) {
+        const place = type === PLACE_TYPE ? Places.get(id) : null;
+        centreAboveCard(App.map(), place?.lat ?? lat, place?.lon ?? lon);
+      }
       nameEl.textContent = name;
       addressEl.textContent = address || '';
       // Cuisines run general → specific (European, Italian, Pizza); show the specific end
@@ -2100,13 +2104,31 @@ const sbClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
   // Fly to a spot so it sits in the middle of the map left visible between the header and the
   // place card (--panel-h, see #rating-panel), not behind the card
+  let _flyingAboveCard = false; // a flyAboveCard is under way, so centreAboveCard leaves the map alone
   function flyAboveCard(map, lat, lon) {
+    _flyingAboveCard = true;
+    const done = () => { _flyingAboveCard = false; };
+    map.once('moveend', done);
+    setTimeout(done, 1500); // in case the map was already there and never moved
     const zoom = Math.max(map.getZoom(), 18);
     const h = map.getSize().y;
     const header = document.getElementById('header').offsetHeight;
     const card = document.getElementById('rating-panel').offsetHeight || h * 0.6;
     const shift = h / 2 - (header + (h - card)) / 2;
     map.flyTo(map.unproject(map.project([lat, lon], zoom).add([0, shift]), zoom), zoom, { duration: 0.8 });
+  }
+
+  // A place tapped on the map: glide it to the middle of the map left visible between the header
+  // and the place card, at the same zoom
+  function centreAboveCard(map, lat, lon) {
+    if (_flyingAboveCard || !lat || !lon) return;
+    const size = map.getSize();
+    const header = document.getElementById('header').offsetHeight;
+    const card = document.getElementById('rating-panel').offsetHeight || size.y * 0.6;
+    const target = L.point(size.x / 2, (header + (size.y - card)) / 2);
+    const now = map.latLngToContainerPoint([lat, lon]);
+    const d = now.subtract(target);
+    if (Math.abs(d.x) > 4 || Math.abs(d.y) > 4) map.panBy(d, { duration: 0.35 });
   }
 
   const PlaceSearch = (() => {
